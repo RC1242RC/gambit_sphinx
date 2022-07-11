@@ -1,0 +1,53 @@
+name: Rebuild documentation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+      
+      - name: Cache pip packages
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+          cache-dependency-path: '**/setup.py'
+          cache: 'pip'
+      
+      - name: Install pip dependencies
+        run: pip install Sphinx 
+          && pip install sphinx_rtd_theme 
+          && pip install breathe
+
+      - name: Install doxygen
+        run: sudo apt-get install doxygen
+
+      - name: Generate doxygen-breathe-sphinx documentation
+        run: cd doxygen_breathe_sphinx 
+          && rm -r xml
+          && rm -r documentation
+          && mkdir documentation
+          && doxygen 
+          && sphinx-build -b html . documentation
+
+      - name: Push generated html to site repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        with:
+          source-directory: 'doxygen_breathe_sphinx/documentation'
+          destination-github-username: 'RC1242RC'
+          destination-repository-name: 'RC1242RC.github.io'
+          user-email: r.clark1242@gmail.com
+          target-branch: master
+          target-directory: content/en/documentation
+      
+      - name: Trigger site rebuild
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.PUBLIC_REPO }}
+          repository: RC1242RC/RC1242RC.github.io
+          event-type: documentation_rebuilt
