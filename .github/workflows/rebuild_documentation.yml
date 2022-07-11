@@ -38,7 +38,7 @@ jobs:
         env:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         with:
-          source-directory: 'doxygen_breathe_sphinx/documentation'
+          source-directory: 'doxygen_breathe_sphinx/html'
           destination-github-username: 'RC1242RC'
           destination-repository-name: 'RC1242RC.github.io'
           user-email: r.clark1242@gmail.com
