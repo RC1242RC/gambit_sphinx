@@ -35,7 +35,9 @@ jobs:
           && sphinx-build -b html . documentation
       
       - name: Commit changes
-        run: git add --all
+        run: git config --local user.email "test@github.com"
+          && git config --local user.name "GitHub Action test"
+          && git add --all
           && git commit -m "Rebuilt documentation"
           && git push
 
