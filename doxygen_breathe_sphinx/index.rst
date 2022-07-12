@@ -6,7 +6,6 @@ Welcome to GAMBIT's Documentation!
    :hidden:
    
    colliderbit
-   cosmobit
    genindex
 
 Here you will find documentation for each ``Bit`` that makes up GAMBIT.
