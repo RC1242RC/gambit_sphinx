@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File Analysis_Covariance.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File Analysis_Covariance.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-analysis-covariance-cpp">
+<span id="program-listing-file-colliderbit-src-analyses-analysis-covariance-cpp"></span><h1>Program Listing for File Analysis_Covariance.cpp<a class="headerlink" href="#program-listing-for-file-analysis-covariance-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_analyses_Analysis_Covariance.cpp.html#file-colliderbit-src-analyses-analysis-covariance-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/analyses/Analysis_Covariance.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/Analysis.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/ATLASEfficiencies.hpp&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="nf">AnalysisData::pythonize_me</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">done</span><span class="p">;</span><span class="w"> </span><span class="c1">// Only want this printed out once for each analysis</span>
+<span class="w">          </span><span class="k">if</span><span class="p">(</span><span class="n">done</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">analysis_name</span><span class="p">)</span><span class="o">==</span><span class="n">done</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">             </span><span class="n">done</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">analysis_name</span><span class="p">);</span><span class="w"></span>
+<span class="w">             </span><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="w"> </span><span class="n">SR_names</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="w"> </span><span class="n">SR_n</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="w"> </span><span class="n">SR_b</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="w"> </span><span class="n">SR_b_sys</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="w"> </span><span class="n">SR_s_sys</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="w"> </span><span class="n">SR_s</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">SR_names</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a.SR_names = [&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">SR_n</span><span class="w">     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a.SR_n     = [&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">SR_b</span><span class="w">     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a.SR_b     = [&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">SR_b_sys</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a.SR_b_sys = [&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="c1">//SR_s_sys &lt;&lt; &quot;a.SR_s_sys = [&quot;;</span>
+<span class="w">             </span><span class="c1">//SR_s     &lt;&lt; &quot;a.SR_s     = [&quot;;</span>
+<span class="w">             </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">srd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">begin</span><span class="p">();</span><span class="w"> </span><span class="n">srd</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">end</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">srd</span><span class="p">,</span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">             </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">SR_names</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">srd</span><span class="o">-&gt;</span><span class="n">sr_label</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;__i&quot;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">, &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="n">SR_n</span><span class="w">     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">srd</span><span class="o">-&gt;</span><span class="n">n_obs</span><span class="w">     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="n">SR_b</span><span class="w">     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">srd</span><span class="o">-&gt;</span><span class="n">n_bkg</span><span class="w">   </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="n">SR_b_sys</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">srd</span><span class="o">-&gt;</span><span class="n">n_bkg_err</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="c1">//SR_s_sys &lt;&lt; srd-&gt;n_sig_MC_sys     &lt;&lt; &quot;, &quot;;</span>
+<span class="w">                </span><span class="c1">//SR_s     &lt;&lt; srd-&gt;n_sig_MC       &lt;&lt; &quot;, &quot;;</span>
+<span class="w">             </span><span class="p">}</span><span class="w"></span>
+<span class="w">             </span><span class="n">SR_names</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">SR_n</span><span class="w">     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">SR_b</span><span class="w">     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">SR_b_sys</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="c1">//SR_s_sys &lt;&lt; &quot;]&quot;;</span>
+<span class="w">             </span><span class="c1">//SR_s     &lt;&lt; &quot;]&quot;;</span>
+<span class="w">             </span><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="w"> </span><span class="n">full</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">full</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a = Analysis(</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="o">&lt;&lt;</span><span class="n">analysis_name</span><span class="o">&lt;&lt;</span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">)&quot;</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">full</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">SR_names</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">full</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">SR_n</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w">     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">full</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">SR_b</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w">     </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">full</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">SR_b_sys</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="c1">//full &lt;&lt; SR_s_sys.str() &lt;&lt; std::endl;</span>
+<span class="w">             </span><span class="c1">//full &lt;&lt; SR_s.str()     &lt;&lt; std::endl;</span>
+<span class="w">             </span><span class="k">if</span><span class="p">(</span><span class="n">hasCorrs</span><span class="p">())</span><span class="w"></span>
+<span class="w">             </span><span class="p">{</span><span class="w"></span>
+<span class="w">                 </span><span class="n">full</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a.cov = &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">                 </span><span class="n">Eigen</span><span class="o">::</span><span class="n">IOFormat</span><span class="w"> </span><span class="n">PythonFmt</span><span class="p">(</span><span class="n">Eigen</span><span class="o">::</span><span class="n">FullPrecision</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;,</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">                 </span><span class="n">full</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">srcov</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">PythonFmt</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="p">}</span><span class="w"></span>
+<span class="w">             </span><span class="n">full</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;a.N_SR = len(a.SR_names)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="k">if</span><span class="p">(</span><span class="n">hasCorrs</span><span class="p">())</span><span class="w"></span>
+<span class="w">             </span><span class="p">{</span><span class="w"></span>
+<span class="w">                 </span><span class="n">full</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;if allow_corr: &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="p">}</span><span class="w"></span>
+<span class="w">             </span><span class="n">full</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;analyses += [a]&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">full</span><span class="p">.</span><span class="n">str</span><span class="p">();</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Analysis_Covariance</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Analysis</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Variables that holds the number of events passing</span>
+<span class="w">      </span><span class="c1">// signal region cuts</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">_numSR</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Required detector sim</span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ATLAS&quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">Analysis_Covariance</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">set_analysis_name</span><span class="p">(</span><span class="s">&quot;Covariance&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">set_luminosity</span><span class="p">(</span><span class="mf">30.</span><span class="p">);</span><span class="w"> </span><span class="c1">// fb</span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">run</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">combine</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Analysis</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">collect_results</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Now fill a results object with the result for two signal regions</span>
+
+<span class="w">        </span><span class="c1">// add_result(SignalRegionData(&quot;SR label&quot;, n_obs, {n_sig_MC, n_sig_MC_sys}, {n_bkg, n_bkg_err}));</span>
+<span class="w">        </span><span class="c1">// Note: n_sig_MC is usually incremented in the analysis code -- here we just hardcoded a value</span>
+
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="s">&quot;SR1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mf">95.</span><span class="p">,</span><span class="w"> </span><span class="mf">9.5</span><span class="p">}));</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="s">&quot;SR2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10.</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mf">9.</span><span class="p">,</span><span class="w"> </span><span class="mf">4.</span><span class="p">}));</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Hard-code a covariance matrix  between these (representing the bkg sys values above, rotated by 30 deg)</span>
+<span class="w">        </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="w"> </span><span class="nf">cov</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">cov</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mf">71.6875</span><span class="p">,</span><span class="w"> </span><span class="mf">32.1512</span><span class="p">,</span><span class="w"></span>
+<span class="w">               </span><span class="mf">32.1512</span><span class="p">,</span><span class="w"> </span><span class="mf">34.5625</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">set_covariance</span><span class="p">(</span><span class="n">cov</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">analysis_specific_reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">_numSR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+
+
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">DEFINE_ANALYSIS_FACTORY</span><span class="p">(</span><span class="n">Covariance</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

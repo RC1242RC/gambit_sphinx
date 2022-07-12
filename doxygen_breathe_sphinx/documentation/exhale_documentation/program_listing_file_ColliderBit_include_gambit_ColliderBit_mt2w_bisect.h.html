@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File mt2w_bisect.h &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File mt2w_bisect.h</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-mt2w-bisect-h">
+<span id="program-listing-file-colliderbit-include-gambit-colliderbit-mt2w-bisect-h"></span><h1>Program Listing for File mt2w_bisect.h<a class="headerlink" href="#program-listing-for-file-mt2w-bisect-h" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_include_gambit_ColliderBit_mt2w_bisect.h.html#file-colliderbit-include-gambit-colliderbit-mt2w-bisect-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/include/gambit/ColliderBit/mt2w_bisect.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/***********************************************************************/</span><span class="w"></span>
+<span class="cm">/*                                                                     */</span><span class="w"></span>
+<span class="cm">/*              Finding MT2W                                           */</span><span class="w"></span>
+<span class="cm">/*              Reference:  arXiv:1203.4813 [hep-ph]                   */</span><span class="w"></span>
+<span class="cm">/*              Authors: Yang Bai, Hsin-Chia Cheng,                    */</span><span class="w"></span>
+<span class="cm">/*                       Jason Gallicchio, Jiayin Gu                   */</span><span class="w"></span>
+<span class="cm">/*              Based on MT2 by: Hsin-Chia Cheng, Zhenyu Han           */</span><span class="w"></span>
+<span class="cm">/*              May 8, 2012, v1.00a                                    */</span><span class="w"></span>
+<span class="cm">/*                                                                     */</span><span class="w"></span>
+<span class="cm">/***********************************************************************/</span><span class="w"></span>
+
+<span class="cp">#ifndef MT2W_BISECT_H</span>
+<span class="cp">#define MT2W_BISECT_H</span>
+
+
+<span class="cm">/*The user can change the desired precision below, the larger one of the following two definitions is used. Relative precision less than 0.00001 is not guaranteed to be achievable--use with caution*/</span><span class="w"></span>
+
+<span class="cp">#define RELATIVE_PRECISION 0.00001 </span><span class="c1">//defined as precision = RELATIVE_PRECISION * scale, where scale = max{Ea, Eb}</span>
+<span class="cp">#define ABSOLUTE_PRECISION 0.0     </span><span class="c1">//absolute precision for mt2w, unused by default</span>
+
+
+<span class="c1">//Reserved for expert</span>
+<span class="cp">#define MIN_MASS  0.1   </span><span class="c1">//if ma&lt;MINMASS and mb&lt;MINMASS, use massless code</span>
+<span class="cp">#define ZERO_MASS 0.000 </span><span class="c1">//give massless particles a small mass</span>
+<span class="cp">#define SCANSTEP 0.1</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">mt2w_bisect</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">mt2w</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">mt2w</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">upper_bound</span><span class="o">=</span><span class="mf">500.0</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">error_value</span><span class="o">=</span><span class="mf">499.0</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">scan_step</span><span class="o">=</span><span class="mf">0.5</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Constructor where:</span>
+<span class="w">      </span><span class="c1">//    upper_bound:  the upper bound of search for MT2W, default value is 500 GeV</span>
+<span class="w">      </span><span class="c1">//    error_value:  if we couldn&#39;t find any compatible region below upper_bound, this value gets returned.</span>
+<span class="w">      </span><span class="c1">//                  -1.0 is a reasonable to indicate error, but upper_bound-1.0 allows a simple greater-than cut for signal</span>
+<span class="w">      </span><span class="c1">//    scan_step:    if we need to scan to find the compatible region, this is the step of the scan</span>
+<span class="w">      </span><span class="kt">void</span><span class="w">   </span><span class="nf">set_momenta</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">pl0</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">pb10</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">pb20</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">pmiss0</span><span class="p">);</span><span class="w">  </span><span class="c1">//b1 pairs with l</span>
+<span class="w">      </span><span class="kt">void</span><span class="w">   </span><span class="nf">set_momenta</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">El</span><span class="p">,</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">plx</span><span class="p">,</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">ply</span><span class="p">,</span><span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">plz</span><span class="p">,</span><span class="w"></span>
+<span class="w">                         </span><span class="kt">double</span><span class="w"> </span><span class="n">Eb1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pb1x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pb1y</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pb1z</span><span class="p">,</span><span class="w"></span>
+<span class="w">                         </span><span class="kt">double</span><span class="w"> </span><span class="n">Eb2</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pb2x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pb2y</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pb2z</span><span class="p">,</span><span class="w"></span>
+<span class="w">                         </span><span class="kt">double</span><span class="w"> </span><span class="n">pmissx</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pmissy</span><span class="p">);</span><span class="w">  </span><span class="c1">// Same as above without pointers/arrays</span>
+<span class="w">      </span><span class="c1">// Where the input 4-vector information represents:</span>
+<span class="w">      </span><span class="c1">//    l is the visible lepton</span>
+<span class="w">      </span><span class="c1">//    b1 is the bottom on the same side as the visible lepton</span>
+<span class="w">      </span><span class="c1">//    b2 is the other bottom (paired with the invisible W)</span>
+<span class="w">      </span><span class="c1">//    pmiss is missing momentum with only x and y components.</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_mt2w</span><span class="p">();</span><span class="w">  </span><span class="c1">// Calculates result, which is cached until set_momenta is called.</span>
+<span class="w">      </span><span class="kt">void</span><span class="w">   </span><span class="nf">print</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="kt">void</span><span class="w">   </span><span class="n">mt2w_bisect</span><span class="p">();</span><span class="w">  </span><span class="c1">// The real work is done here.</span>
+
+<span class="w">   </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">      </span><span class="kt">bool</span><span class="w">   </span><span class="n">solved</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">bool</span><span class="w">   </span><span class="n">momenta_set</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">upper_bound</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">error_value</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">scan_step</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">mt2w_b</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="kt">int</span><span class="w">    </span><span class="nf">teco</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">mtop</span><span class="p">);</span><span class="w">   </span><span class="c1">// test the compatibility of a given trial top mass mtop</span>
+<span class="w">      </span><span class="kr">inline</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="nf">signchange_n</span><span class="p">(</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t2</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t3</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t4</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t5</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="kr">inline</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="nf">signchange_p</span><span class="p">(</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t2</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t3</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t4</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t5</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">//data members</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">plx</span><span class="p">,</span><span class="w"> </span><span class="n">ply</span><span class="p">,</span><span class="w"> </span><span class="n">plz</span><span class="p">,</span><span class="w"> </span><span class="n">ml</span><span class="p">,</span><span class="w"> </span><span class="n">El</span><span class="p">;</span><span class="w">      </span><span class="c1">// l is the visible lepton</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">pb1x</span><span class="p">,</span><span class="w"> </span><span class="n">pb1y</span><span class="p">,</span><span class="w"> </span><span class="n">pb1z</span><span class="p">,</span><span class="w"> </span><span class="n">mb1</span><span class="p">,</span><span class="w"> </span><span class="n">Eb1</span><span class="p">;</span><span class="w">   </span><span class="c1">// b1 is the bottom on the same side as the visible lepton</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">pb2x</span><span class="p">,</span><span class="w"> </span><span class="n">pb2y</span><span class="p">,</span><span class="w"> </span><span class="n">pb2z</span><span class="p">,</span><span class="w"> </span><span class="n">mb2</span><span class="p">,</span><span class="w"> </span><span class="n">Eb2</span><span class="p">;</span><span class="w">   </span><span class="c1">// b2 is the other bottom</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">pmissx</span><span class="p">,</span><span class="w"> </span><span class="n">pmissy</span><span class="p">;</span><span class="w">              </span><span class="c1">// x and y component of missing p_T</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">mv</span><span class="p">,</span><span class="n">mw</span><span class="p">;</span><span class="w">           </span><span class="c1">//mass of neutrino and W-boson</span>
+
+<span class="w">      </span><span class="c1">//auxiliary definitions</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">mlsq</span><span class="p">,</span><span class="w"> </span><span class="n">Elsq</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">mb1sq</span><span class="p">,</span><span class="w"> </span><span class="n">Eb1sq</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">mb2sq</span><span class="p">,</span><span class="w"> </span><span class="n">Eb2sq</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">//auxiliary coefficients</span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">a1</span><span class="p">,</span><span class="w"> </span><span class="n">b1</span><span class="p">,</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">a2</span><span class="p">,</span><span class="w"> </span><span class="n">b2</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="p">,</span><span class="w"> </span><span class="n">d1</span><span class="p">,</span><span class="w"> </span><span class="n">e1</span><span class="p">,</span><span class="w"> </span><span class="n">f1</span><span class="p">,</span><span class="w"> </span><span class="n">d2</span><span class="p">,</span><span class="w"> </span><span class="n">e2</span><span class="p">,</span><span class="w"> </span><span class="n">f2</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">d2o</span><span class="p">,</span><span class="w"> </span><span class="n">e2o</span><span class="p">,</span><span class="w"> </span><span class="n">f2o</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">precision</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="p">}</span><span class="c1">//end namespace mt2w_bisect</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

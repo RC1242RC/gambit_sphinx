@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File Py8EventConversions.hpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File Py8EventConversions.hpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-py8eventconversions-hpp">
+<span id="program-listing-file-colliderbit-include-gambit-colliderbit-colliders-pythia8-py8eventconversions-hpp"></span><h1>Program Listing for File Py8EventConversions.hpp<a class="headerlink" href="#program-listing-for-file-py8eventconversions-hpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_include_gambit_ColliderBit_colliders_Pythia8_Py8EventConversions.hpp.html#file-colliderbit-include-gambit-colliderbit-colliders-pythia8-py8eventconversions-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/include/gambit/ColliderBit/colliders/Pythia8/Py8EventConversions.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//   GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">//  *********************************************</span>
+
+<span class="cp">#pragma once</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/colliders/EventConversionUtils.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">//#define COLLIDERBIT_DEBUG</span>
+
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">EventConversion</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">EventT</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">convertParticleEvent</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">EventT</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pevt</span><span class="p">,</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">antiktR</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">jet_pt_min</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FJNS</span><span class="o">::</span><span class="n">PseudoJet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bhadrons</span><span class="p">;</span><span class="w"> </span><span class="c1">//&lt; for input to FastJet b-tagging</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bpartons</span><span class="p">,</span><span class="w"> </span><span class="n">cpartons</span><span class="p">,</span><span class="w"> </span><span class="n">tauCandidates</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="w"> </span><span class="n">pout</span><span class="p">;</span><span class="w"> </span><span class="c1">//&lt; Sum of momenta outside acceptance</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FJNS</span><span class="o">::</span><span class="n">PseudoJet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">jetparticles</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">decltype</span><span class="p">(</span><span class="n">pevt</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pevt</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pevt</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_unified_pid</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">apid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">pid</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="w"> </span><span class="n">p4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_unified_momentum</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">//b, c and tau idenitification:</span>
+
+<span class="w">        </span><span class="c1">// Find last b-hadrons in b decay chains as the best proxy for b-tagging</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">apid</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="kt">bool</span><span class="w"> </span><span class="n">isGoodB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">childIDs</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">get_unified_child_ids</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">pevt</span><span class="p">,</span><span class="w"> </span><span class="n">childIDs</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">childID</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">childIDs</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">childID</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="n">isGoodB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isGoodB</span><span class="p">)</span><span class="w"> </span><span class="n">bpartons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="p">(</span><span class="n">p4</span><span class="p">,</span><span class="n">pid</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Find last c-hadrons in decay chains as the best proxy for c-tagging</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">apid</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="kt">bool</span><span class="w"> </span><span class="n">isGoodC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">childIDs</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">get_unified_child_ids</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">pevt</span><span class="p">,</span><span class="w"> </span><span class="n">childIDs</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">childID</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">childIDs</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">childID</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="n">isGoodC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isGoodC</span><span class="p">)</span><span class="w"> </span><span class="n">cpartons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="p">(</span><span class="n">p4</span><span class="p">,</span><span class="n">pid</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Find tau candidates</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">apid</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">TAU</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="kt">bool</span><span class="w"> </span><span class="n">isGoodTau</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">childIDs</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">get_unified_child_ids</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">pevt</span><span class="p">,</span><span class="w"> </span><span class="n">childIDs</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">abschildID</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">childID</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">childIDs</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Veto leptonic taus</span>
+<span class="w">            </span><span class="n">abschildID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">childID</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">abschildID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">ELECTRON</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">abschildID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">MUON</span><span class="w"> </span><span class="o">||</span><span class="w"></span>
+<span class="w">                </span><span class="n">abschildID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">WPLUSBOSON</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">abschildID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">TAU</span><span class="p">)</span><span class="w"></span>
+<span class="w">              </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">isGoodTau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">              </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isGoodTau</span><span class="p">)</span><span class="w"> </span><span class="n">tauCandidates</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="p">(</span><span class="n">p4</span><span class="p">,</span><span class="w"> </span><span class="n">pid</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">//We only want final state particles:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">get_unified_isFinal</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">//Check there&#39;s no partons.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pid</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">21</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="w"> </span><span class="n">sid</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="kt">bool</span><span class="w"> </span><span class="n">gotmother</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="c1">//HepMC seems to have no equivalent of the .mother1, .mother2 call, so the HepMC3 mother function will just</span>
+<span class="w">          </span><span class="c1">//return 0, and gotmother will always be false - which means it won&#39;t try to print non-existent event info.</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">get_unified_mother1</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">){</span><span class="n">gotmother</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="n">sid</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">get_unified_mother1_pid</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">pevt</span><span class="p">);}</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">get_unified_mother2</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">){</span><span class="n">gotmother</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="n">sid</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">get_unified_mother2_pid</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">pevt</span><span class="p">);}</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gotmother</span><span class="p">)</span><span class="w"> </span><span class="n">sid</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; -&gt; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">sid</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pid</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">forced_throw</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Found final-state parton &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sid</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; in particle-level event converter: &quot;</span><span class="w"></span>
+<span class="w">              </span><span class="s">&quot;reconfigure your generator to include hadronization, or Gambit to use the partonic event converter.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Add particle outside ATLAS/CMS acceptance to MET and then ignore said particle.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">get_unified_eta</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5.0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">pout</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">p4</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Promptness: for leptons and photons we&#39;re only interested if they don&#39;t come from hadron/tau decays</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">get_unified_fromHadron</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">pevt</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">visible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">isStrongInteracting</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">isEMInteracting</span><span class="p">(</span><span class="n">pid</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Add prompt and invisible particles as individual particles</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">prompt</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">visible</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="p">(</span><span class="n">p4</span><span class="p">,</span><span class="w"> </span><span class="n">pid</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">gp</span><span class="o">-&gt;</span><span class="n">set_prompt</span><span class="p">();</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">add_particle</span><span class="p">(</span><span class="n">gp</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// All particles other than invisibles and muons are jet constituents</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">visible</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">apid</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">MUON</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">jetparticles</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">get_unified_pseudojet</span><span class="p">(</span><span class="n">p</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">FJNS</span><span class="o">::</span><span class="n">JetDefinition</span><span class="w"> </span><span class="n">jet_def</span><span class="p">(</span><span class="n">FJNS</span><span class="o">::</span><span class="n">antikt_algorithm</span><span class="p">,</span><span class="w"> </span><span class="n">antiktR</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">FJNS</span><span class="o">::</span><span class="n">ClusterSequence</span><span class="w"> </span><span class="nf">cseq</span><span class="p">(</span><span class="n">jetparticles</span><span class="p">,</span><span class="w"> </span><span class="n">jet_def</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FJNS</span><span class="o">::</span><span class="n">PseudoJet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pjets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sorted_by_pt</span><span class="p">(</span><span class="n">cseq</span><span class="p">.</span><span class="n">inclusive_jets</span><span class="p">(</span><span class="n">jet_pt_min</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pj</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pjets</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="w"> </span><span class="n">jetMom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">mk_p4</span><span class="p">(</span><span class="n">pj</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">isB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pb</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">bpartons</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jetMom</span><span class="p">.</span><span class="n">deltaR_eta</span><span class="p">(</span><span class="n">pb</span><span class="p">.</span><span class="n">mom</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.4</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">isB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">isC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pc</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">cpartons</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jetMom</span><span class="p">.</span><span class="n">deltaR_eta</span><span class="p">(</span><span class="n">pc</span><span class="p">.</span><span class="n">mom</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.4</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">isC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">isTau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ptau</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">tauCandidates</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jetMom</span><span class="p">.</span><span class="n">deltaR_eta</span><span class="p">(</span><span class="n">ptau</span><span class="p">.</span><span class="n">mom</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">isTau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Add to the event (use jet momentum for tau)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isTau</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">mk_p4</span><span class="p">(</span><span class="n">pj</span><span class="p">),</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">TAU</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">gp</span><span class="o">-&gt;</span><span class="n">set_prompt</span><span class="p">();</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">add_particle</span><span class="p">(</span><span class="n">gp</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">add_jet</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">mk_p4</span><span class="p">(</span><span class="n">pj</span><span class="p">),</span><span class="w"> </span><span class="n">isB</span><span class="p">,</span><span class="w"> </span><span class="n">isC</span><span class="p">));</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">//</span>
+<span class="w">      </span><span class="c1">// From balance of all visible momenta (requires isolation)</span>
+<span class="w">      </span><span class="c1">// const std::vector&lt;Particle*&gt; visibles = result.visible_particles();</span>
+<span class="w">      </span><span class="c1">// HEPUtils::P4 pvis;</span>
+<span class="w">      </span><span class="c1">// for (size_t i = 0; i &lt; visibles.size(); ++i)</span>
+<span class="w">      </span><span class="c1">// {</span>
+<span class="w">      </span><span class="c1">//   pvis += visibles[i]-&gt;mom();</span>
+<span class="w">      </span><span class="c1">// }</span>
+<span class="w">      </span><span class="c1">// for (size_t i = 0; i &lt; result.jets.size(); ++i)</span>
+<span class="w">      </span><span class="c1">// {</span>
+<span class="w">      </span><span class="c1">//   pvis += result.jets[i]-&gt;mom();</span>
+<span class="w">      </span><span class="c1">// }</span>
+<span class="w">      </span><span class="c1">// set_missingmom(-pvis);</span>
+<span class="w">      </span><span class="c1">//</span>
+<span class="w">      </span><span class="c1">// From sum of invisibles, including those out of range</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">invisible_particles</span><span class="p">().</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">pout</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">invisible_particles</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">set_missingmom</span><span class="p">(</span><span class="n">pout</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">        </span><span class="c1">// Print event summary</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  MET  = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">met</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; GeV&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  #e   = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">electrons</span><span class="p">().</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  #mu  = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">muons</span><span class="p">().</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  #tau = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">taus</span><span class="p">().</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  #jet = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">jets</span><span class="p">().</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  #pho  = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">photons</span><span class="p">().</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#endif</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">EventT</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">convertPartonEvent</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">EventT</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pevt</span><span class="p">,</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">antiktR</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">jet_pt_min</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tauCandidates</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Make a first pass of non-final particles to gather taus</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pevt</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pevt</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Find last tau in prompt tau replica chains as a proxy for tau-tagging</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">idAbs</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">TAU</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tauDaughterList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">daughterList</span><span class="p">();</span><span class="w"></span>
+<span class="w">          </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="w"> </span><span class="n">tmpMomentum</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="kt">bool</span><span class="w"> </span><span class="n">isGoodTau</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">daughter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">daughter</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">tauDaughterList</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">daughter</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pDaughter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pevt</span><span class="p">[</span><span class="n">tauDaughterList</span><span class="p">[</span><span class="n">daughter</span><span class="p">]];</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">daughterID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pDaughter</span><span class="p">.</span><span class="n">idAbs</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">daughterID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">ELECTRON</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">daughterID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">MUON</span><span class="w"> </span><span class="o">||</span><span class="w"></span>
+<span class="w">                </span><span class="n">daughterID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">WPLUSBOSON</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">daughterID</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">TAU</span><span class="p">)</span><span class="w"></span>
+<span class="w">              </span><span class="n">isGoodTau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">daughterID</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">TAU</span><span class="p">)</span><span class="w"> </span><span class="n">tmpMomentum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">mk_p4</span><span class="p">(</span><span class="n">pDaughter</span><span class="p">.</span><span class="n">p</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isGoodTau</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">tauCandidates</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="p">(</span><span class="n">mk_p4</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">p</span><span class="p">()),</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">()));</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FJNS</span><span class="o">::</span><span class="n">PseudoJet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">jetparticles</span><span class="p">;</span><span class="w"> </span><span class="c1">//&lt; Pseudojets for input to FastJet</span>
+<span class="w">      </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="w"> </span><span class="n">pout</span><span class="p">;</span><span class="w"> </span><span class="c1">//&lt; Sum of momenta outside acceptance</span>
+
+<span class="w">      </span><span class="c1">// Make a single pass over the event to gather final leptons, partons, and photons</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pevt</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pevt</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// We only use &quot;final&quot; partons, i.e. those with no children. So Py8 must have hadronization disabled</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">p</span><span class="p">.</span><span class="n">isFinal</span><span class="p">())</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Only consider partons within ATLAS/CMS acceptance</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">eta</span><span class="p">())</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5.0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">pout</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">mk_p4</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">p</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Find electrons/muons/taus/photons to be treated as prompt (+ invisibles)</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isFinalPhoton</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">pevt</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">isFinalLepton</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">pevt</span><span class="p">));</span><span class="w"> </span><span class="c1">// &amp;&amp; std::abs(p.id()) != MCUtils::PID::TAU);</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">visible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">isStrongInteracting</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">())</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">isEMInteracting</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">prompt</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">visible</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="p">(</span><span class="n">mk_p4</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">p</span><span class="p">()),</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="n">gp</span><span class="o">-&gt;</span><span class="n">set_prompt</span><span class="p">();</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">add_particle</span><span class="p">(</span><span class="n">gp</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Everything other than invisibles and muons, including taus &amp; partons are jet constituents</span>
+<span class="w">        </span><span class="c1">// if (visible &amp;&amp; (isFinalParton(i, pevt) || isFinalTau(i, pevt))) {</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">visible</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">idAbs</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">MUON</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">FJNS</span><span class="o">::</span><span class="n">PseudoJet</span><span class="w"> </span><span class="n">pj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_pseudojet</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">p</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="c1">//pj.set_user_index(std::abs(p.id()));</span>
+<span class="w">          </span><span class="n">jetparticles</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">pj</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">FJNS</span><span class="o">::</span><span class="n">JetDefinition</span><span class="w"> </span><span class="n">jet_def</span><span class="p">(</span><span class="n">FJNS</span><span class="o">::</span><span class="n">antikt_algorithm</span><span class="p">,</span><span class="w"> </span><span class="n">antiktR</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">FJNS</span><span class="o">::</span><span class="n">ClusterSequence</span><span class="w"> </span><span class="nf">cseq</span><span class="p">(</span><span class="n">jetparticles</span><span class="p">,</span><span class="w"> </span><span class="n">jet_def</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FJNS</span><span class="o">::</span><span class="n">PseudoJet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pjets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sorted_by_pt</span><span class="p">(</span><span class="n">cseq</span><span class="p">.</span><span class="n">inclusive_jets</span><span class="p">(</span><span class="n">jet_pt_min</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Add to the event, with b-tagging info&quot;</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FJNS</span><span class="o">::</span><span class="n">PseudoJet</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pj</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pjets</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Do jet b-tagging, etc. by looking for b quark constituents (i.e. user index = |parton ID| = 5)</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">any</span><span class="p">(</span><span class="n">pj</span><span class="p">.</span><span class="n">constituents</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                 </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">FJNS</span><span class="o">::</span><span class="n">PseudoJet</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">user_index</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">BQUARK</span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">any</span><span class="p">(</span><span class="n">pj</span><span class="p">.</span><span class="n">constituents</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                 </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">FJNS</span><span class="o">::</span><span class="n">PseudoJet</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">user_index</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">CQUARK</span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">add_jet</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">mk_p4</span><span class="p">(</span><span class="n">pj</span><span class="p">),</span><span class="w"> </span><span class="n">isB</span><span class="p">,</span><span class="w"> </span><span class="n">isC</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">isTau</span><span class="o">=</span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ptau</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">tauCandidates</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="w"> </span><span class="n">jetMom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">mk_p4</span><span class="p">(</span><span class="n">pj</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jetMom</span><span class="p">.</span><span class="n">deltaR_eta</span><span class="p">(</span><span class="n">ptau</span><span class="p">.</span><span class="n">mom</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">isTau</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Add to the event (use jet momentum for tau)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isTau</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">mk_p4</span><span class="p">(</span><span class="n">pj</span><span class="p">),</span><span class="w"> </span><span class="n">MCUtils</span><span class="o">::</span><span class="n">PID</span><span class="o">::</span><span class="n">TAU</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">gp</span><span class="o">-&gt;</span><span class="n">set_prompt</span><span class="p">();</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">add_particle</span><span class="p">(</span><span class="n">gp</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">//</span>
+<span class="w">      </span><span class="c1">// From balance of all visible momenta (requires isolation)</span>
+<span class="w">      </span><span class="c1">// const std::vector&lt;Particle*&gt; visibles = result.visible_particles();</span>
+<span class="w">      </span><span class="c1">// HEPUtils::P4 pvis;</span>
+<span class="w">      </span><span class="c1">// for (size_t i = 0; i &lt; visibles.size(); ++i) {</span>
+<span class="w">      </span><span class="c1">//   pvis += visibles[i]-&gt;mom();</span>
+<span class="w">      </span><span class="c1">// }</span>
+<span class="w">      </span><span class="c1">// for (size_t i = 0; i &lt; result.jets.size(); ++i) {</span>
+<span class="w">      </span><span class="c1">//   pvis += result.jets[i]-&gt;mom();</span>
+<span class="w">      </span><span class="c1">// }</span>
+<span class="w">      </span><span class="c1">// set_missingmom(-pvis);</span>
+<span class="w">      </span><span class="c1">//</span>
+<span class="w">      </span><span class="c1">// From sum of invisibles, including those out of range</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">invisible_particles</span><span class="p">())</span><span class="w"> </span><span class="n">pout</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">set_missingmom</span><span class="p">(</span><span class="n">pout</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

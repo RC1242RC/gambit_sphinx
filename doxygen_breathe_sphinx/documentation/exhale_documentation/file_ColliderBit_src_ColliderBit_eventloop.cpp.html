@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File ColliderBit_eventloop.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>File ColliderBit_eventloop.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-colliderbit-eventloop-cpp">
+<span id="file-colliderbit-src-colliderbit-eventloop-cpp"></span><h1>File ColliderBit_eventloop.cpp<a class="headerlink" href="#file-colliderbit-eventloop-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="dir_ColliderBit_src.html#dir-colliderbit-src"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-colliderbit-src-colliderbit-eventloop-cpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/ColliderBit_eventloop.cpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#detailed-description" id="id2">Detailed Description</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id3">Includes</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id5">Functions</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id6">Defines</a></p></li>
+</ul>
+</div>
+<section id="definition-colliderbit-src-colliderbit-eventloop-cpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/ColliderBit_eventloop.cpp</span></code>)<a class="headerlink" href="#definition-colliderbit-src-colliderbit-eventloop-cpp" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file_ColliderBit_src_ColliderBit_eventloop.cpp.html">Program Listing for File ColliderBit_eventloop.cpp</a></li>
+</ul>
+</div>
+</section>
+<section id="detailed-description">
+<h2>Detailed Description<a class="headerlink" href="#detailed-description" title="Permalink to this headline"></a></h2>
+<p>Functions of ColliderBit event loop.</p>
+<p>Authors (add name and date if you modify):</p>
+<p>Abram Krislock (<a class="reference external" href="mailto:a&#46;m&#46;b&#46;krislock&#37;&#52;&#48;fys&#46;uio&#46;no">a<span>&#46;</span>m<span>&#46;</span>b<span>&#46;</span>krislock<span>&#64;</span>fys<span>&#46;</span>uio<span>&#46;</span>no</a>)</p>
+<p>Aldo Saavedra</p>
+<p>Andy Buckley</p>
+<p>Chris Rogan (<a class="reference external" href="mailto:crogan&#37;&#52;&#48;cern&#46;ch">crogan<span>&#64;</span>cern<span>&#46;</span>ch</a>)</p>
+<p>2014 Aug</p>
+<p>2015 May</p>
+<p>Pat Scott (<a class="reference external" href="mailto:p&#46;scott&#37;&#52;&#48;imperial&#46;ac&#46;uk">p<span>&#46;</span>scott<span>&#64;</span>imperial<span>&#46;</span>ac<span>&#46;</span>uk</a>)</p>
+<p>2015 Jul</p>
+<p>2018 Jan</p>
+<p>2019 Jan</p>
+<p>Anders Kvellestad (<a class="reference external" href="mailto:anders&#46;kvellestad&#37;&#52;&#48;fys&#46;uio&#46;no">anders<span>&#46;</span>kvellestad<span>&#64;</span>fys<span>&#46;</span>uio<span>&#46;</span>no</a>)</p>
+<p>2017 March</p>
+<p>2018 Jan</p>
+<p>2018 May</p>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gambit/ColliderBit/ColliderBit_eventloop.hpp</span></code> (<a class="reference internal" href="file_ColliderBit_include_gambit_ColliderBit_ColliderBit_eventloop.hpp.html#file-colliderbit-include-gambit-colliderbit-colliderbit-eventloop-hpp"><span class="std std-ref">File ColliderBit_eventloop.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gambit/Elements/gambit_module_headers.hpp</span></code></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_Gambit.html#namespace-gambit"><span class="std std-ref">Namespace Gambit</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_Gambit__ColliderBit.html#namespace-gambit-colliderbit"><span class="std std-ref">Namespace Gambit::ColliderBit</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_ColliderBit__eventloop_8cpp_1af5bd300bc1e749fb377602573b391d34.html#exhale-function-colliderbit-eventloop-8cpp-1af5bd300bc1e749fb377602573b391d34"><span class="std std-ref">Function Gambit::ColliderBit::CollectAnalyses</span></a></p></li>
+<li><p><a class="reference internal" href="function_ColliderBit__eventloop_8cpp_1a132440e55b40d46ed297b3d8de3e72df.html#exhale-function-colliderbit-eventloop-8cpp-1a132440e55b40d46ed297b3d8de3e72df"><span class="std std-ref">Function Gambit::ColliderBit::getLHCEventLoopInfo</span></a></p></li>
+<li><p><a class="reference internal" href="function_ColliderBit__eventloop_8cpp_1ac3e5caa6762666779fa7980190de2207.html#exhale-function-colliderbit-eventloop-8cpp-1ac3e5caa6762666779fa7980190de2207"><span class="std std-ref">Function Gambit::ColliderBit::operateLHCLoop</span></a></p></li>
+</ul>
+</section>
+<section id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="define_ColliderBit__eventloop_8cpp_1a1c9d15f8ccd4a52a7f0bf4f24db139bd.html#exhale-define-colliderbit-eventloop-8cpp-1a1c9d15f8ccd4a52a7f0bf4f24db139bd"><span class="std std-ref">Define DEBUG_PREFIX</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

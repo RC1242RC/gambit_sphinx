@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File generateEventPy8Collider.hpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File generateEventPy8Collider.hpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-generateeventpy8collider-hpp">
+<span id="program-listing-file-colliderbit-include-gambit-colliderbit-generateeventpy8collider-hpp"></span><h1>Program Listing for File generateEventPy8Collider.hpp<a class="headerlink" href="#program-listing-for-file-generateeventpy8collider-hpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_include_gambit_ColliderBit_generateEventPy8Collider.hpp.html#file-colliderbit-include-gambit-colliderbit-generateeventpy8collider-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//   GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">//   *********************************************</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/ColliderBit_eventloop.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/colliders/Pythia8/Py8EventConversions.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// #define COLLIDERBIT_DEBUG</span>
+<span class="cp">#define DEBUG_PREFIX &quot;DEBUG: OMP thread &quot; &lt;&lt; omp_get_thread_num() &lt;&lt; &quot;:  &quot;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="cp">#ifndef EXCLUDE_HEPMC</span>
+<span class="w">      </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">PythiaT</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">hepmc_writerT</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">dropHepMCEventPy8Collider</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">PythiaT</span><span class="o">*</span><span class="w"> </span><span class="n">Pythia</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">safe_ptr</span><span class="o">&lt;</span><span class="n">Options</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">runOptions</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Write event to HepMC file</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">drop_HepMC2_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;drop_HepMC2_file&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">drop_HepMC3_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;drop_HepMC3_file&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">drop_HepMC2_file</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">drop_HepMC3_file</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">thread_local</span><span class="w"> </span><span class="n">hepmc_writerT</span><span class="w"> </span><span class="n">hepmc_writer</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="k">thread_local</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">str</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;GAMBIT_collider_events.omp_thread_&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">filename</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">omp_get_thread_num</span><span class="p">());</span><span class="w"></span>
+<span class="w">            </span><span class="n">filename</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;.hepmc&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">hepmc_writer</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">drop_HepMC2_file</span><span class="p">,</span><span class="w"> </span><span class="n">drop_HepMC3_file</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">          </span><span class="k">if</span><span class="p">(</span><span class="n">drop_HepMC2_file</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">hepmc_writer</span><span class="p">.</span><span class="n">write_event_HepMC2</span><span class="p">(</span><span class="k">const_cast</span><span class="o">&lt;</span><span class="n">PythiaT</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">Pythia</span><span class="p">));</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="p">(</span><span class="n">drop_HepMC3_file</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">hepmc_writer</span><span class="p">.</span><span class="n">write_event_HepMC3</span><span class="p">(</span><span class="k">const_cast</span><span class="o">&lt;</span><span class="n">PythiaT</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">Pythia</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="cp">#endif</span>
+
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">PythiaT</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">EventT</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">hepmc_writerT</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">generateEventPy8Collider</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="n">MCLoopInfo</span><span class="o">&amp;</span><span class="w"> </span><span class="n">RunMC</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="n">Py8Collider</span><span class="o">&lt;</span><span class="n">PythiaT</span><span class="p">,</span><span class="n">EventT</span><span class="p">,</span><span class="n">hepmc_writerT</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">HardScatteringSim</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="n">EventWeighterFunctionType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">EventWeighterFunction</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">iteration</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                  </span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="n">wrapup</span><span class="p">)(),</span><span class="w"></span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="n">safe_ptr</span><span class="o">&lt;</span><span class="n">Options</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">runOptions</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nFailedEvents</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">thread_local</span><span class="w"> </span><span class="n">EventT</span><span class="w"> </span><span class="n">pythia_event</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">jet_pt_min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;jet_pt_min&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// If the event loop has not been entered yet, reset the counter for the number of failed events</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BASE_INIT</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Although BASE_INIT should never be called in parallel, we do this in omp_critical just in case.</span>
+<span class="w">        </span><span class="cp">#pragma omp critical (pythia_event_failure)</span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">nFailedEvents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// If in any other special iteration, do nothing</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BASE_INIT</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Reset the Pythia and HEPUtils events</span>
+<span class="w">      </span><span class="n">pythia_event</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="n">event</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Attempt (possibly repeatedly) to generate an event</span>
+<span class="w">      </span><span class="k">while</span><span class="p">(</span><span class="n">nFailedEvents</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">RunMC</span><span class="p">.</span><span class="n">current_maxFailedEvents</span><span class="p">())</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">try</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Will now call HardScatteringSim.nextEvent(pythia_event)...&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#endif</span>
+
+<span class="w">          </span><span class="n">HardScatteringSim</span><span class="p">.</span><span class="n">nextEvent</span><span class="p">(</span><span class="n">pythia_event</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">typename</span><span class="w"> </span><span class="nc">Py8Collider</span><span class="o">&lt;</span><span class="n">PythiaT</span><span class="p">,</span><span class="n">EventT</span><span class="p">,</span><span class="n">hepmc_writerT</span><span class="o">&gt;::</span><span class="n">EventGenerationError</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Py8Collider::EventGenerationError caught in generateEventPy8Collider. Check the ColliderBit log for event details.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#endif</span>
+<span class="w">          </span><span class="cp">#pragma omp critical (pythia_event_failure)</span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Update global counter</span>
+<span class="w">            </span><span class="n">nFailedEvents</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Store Pythia event record in the logs</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">ss</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">pythia_event</span><span class="p">.</span><span class="n">list</span><span class="p">(</span><span class="n">ss</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">logger</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">LogTags</span><span class="o">::</span><span class="n">debug</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Py8Collider::EventGenerationError error caught in generateEventPy8Collider. Pythia record for event that failed:</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOM</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Wrap up event loop if too many events fail.</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">nFailedEvents</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">RunMC</span><span class="p">.</span><span class="n">current_maxFailedEvents</span><span class="p">())</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Tell the MCLoopInfo instance that we have exceeded maxFailedEvents</span>
+<span class="w">        </span><span class="n">RunMC</span><span class="p">.</span><span class="n">report_exceeded_maxFailedEvents</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">RunMC</span><span class="p">.</span><span class="n">current_invalidate_failed_points</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">&quot;exceeded maxFailedEvents&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">wrapup</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="cp">#ifndef EXCLUDE_HEPMC</span>
+<span class="w">        </span><span class="n">dropHepMCEventPy8Collider</span><span class="o">&lt;</span><span class="n">PythiaT</span><span class="p">,</span><span class="n">hepmc_writerT</span><span class="o">&gt;</span><span class="p">(</span><span class="n">HardScatteringSim</span><span class="p">.</span><span class="n">pythia</span><span class="p">(),</span><span class="w"> </span><span class="n">runOptions</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#endif</span>
+
+
+<span class="w">      </span><span class="c1">// Attempt to convert the Pythia event to a HEPUtils event</span>
+<span class="w">      </span><span class="k">try</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">HardScatteringSim</span><span class="p">.</span><span class="n">partonOnly</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="n">convertPartonEvent</span><span class="p">(</span><span class="n">pythia_event</span><span class="p">,</span><span class="w"> </span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">HardScatteringSim</span><span class="p">.</span><span class="n">antiktR</span><span class="p">,</span><span class="w"> </span><span class="n">jet_pt_min</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">          </span><span class="n">convertParticleEvent</span><span class="p">(</span><span class="n">pythia_event</span><span class="p">,</span><span class="w"> </span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">HardScatteringSim</span><span class="p">.</span><span class="n">antiktR</span><span class="p">,</span><span class="w"> </span><span class="n">jet_pt_min</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// No good.</span>
+<span class="w">      </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Gambit</span><span class="o">::</span><span class="n">exception</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Gambit::exception caught during event conversion in generateEventPy8Collider. Check the ColliderBit log for details.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+
+<span class="w">        </span><span class="cp">#pragma omp critical (event_conversion_error)</span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Store Pythia event record in the logs</span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">ss</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">pythia_event</span><span class="p">.</span><span class="n">list</span><span class="p">(</span><span class="n">ss</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">logger</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">LogTags</span><span class="o">::</span><span class="n">debug</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Gambit::exception caught in generateEventPy8Collider. Pythia record for event that failed:</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOM</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="n">errmsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bad point: generateEventPy8Collider caught the following runtime error: &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">errmsg</span><span class="w">    </span><span class="o">+=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">what</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="n">errmsg</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">wrapup</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Assign weight to event</span>
+<span class="w">      </span><span class="n">EventWeighterFunction</span><span class="p">(</span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">HardScatteringSim</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="cp">#define GET_PYTHIA_EVENT(NAME)                               \</span>
+<span class="cp">    void NAME(HEPUtils::Event&amp; result)                           \</span>
+<span class="cp">    {                                                            \</span>
+<span class="cp">      using namespace Pipes::NAME;                               \</span>
+<span class="cp">      generateEventPy8Collider(result, *Dep::RunMC,              \</span>
+<span class="cp">       *Dep::HardScatteringSim, *Dep::EventWeighterFunction,     \</span>
+<span class="cp">       *Loop::iteration, Loop::wrapup,runOptions);               \</span>
+<span class="cp">    }</span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

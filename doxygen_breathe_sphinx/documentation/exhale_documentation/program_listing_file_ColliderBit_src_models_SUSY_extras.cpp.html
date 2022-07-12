@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File SUSY_extras.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File SUSY_extras.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-susy-extras-cpp">
+<span id="program-listing-file-colliderbit-src-models-susy-extras-cpp"></span><h1>Program Listing for File SUSY_extras.cpp<a class="headerlink" href="#program-listing-for-file-susy-extras-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_models_SUSY_extras.cpp.html#file-colliderbit-src-models-susy-extras-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/models/SUSY_extras.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//   GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">//   *********************************************</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/getPy8Collider.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/generateEventPy8Collider.hpp&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Get Monte Carlo event generator from SLHA file input</span>
+<span class="w">    </span><span class="n">GET_SPECIFIC_PYTHIA_SLHA</span><span class="p">(</span><span class="n">getPythia_SLHA</span><span class="p">,</span><span class="w"> </span><span class="n">Pythia_default</span><span class="p">,</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="c1">// Get next SLHA file path and content (for use with model ColliderBit_SLHA_file_model)</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">getNextSLHAFileNameAndContent</span><span class="p">(</span><span class="n">pair_str_SLHAstruct</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pipes</span><span class="o">::</span><span class="nn">getNextSLHAFileNameAndContent</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">hasKey</span><span class="p">(</span><span class="s">&quot;SLHA_filenames&quot;</span><span class="p">))</span><span class="w"> </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="s">&quot;Expected YAML file option &#39;SLHA_filenames&#39; (a list of SLHA filenames) not found.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="n">filenames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;SLHA_filenames&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">counter</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">filenames</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">invalid_point</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="s">&quot;No more SLHA files. My work is done.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SLHAstruct</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">filenames</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">counter</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">read_SLHA</span><span class="p">(</span><span class="n">filename</span><span class="p">));</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">counter</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="c1">// Read a single SLHA file and update some entries for each scan point</span>
+<span class="w">    </span><span class="c1">// (for use with model ColliderBit_SLHA_scan_model)</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">getAndReplaceSLHAContent</span><span class="p">(</span><span class="n">pair_str_SLHAstruct</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pipes</span><span class="o">::</span><span class="nn">getAndReplaceSLHAContent</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">filename</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">SLHAstruct</span><span class="w"> </span><span class="n">file_content</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">YAML</span><span class="o">::</span><span class="n">Node</span><span class="w"> </span><span class="n">keysNode</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">Options</span><span class="w"> </span><span class="n">keysOptions</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">str</span><span class="p">,</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SLHAkey_to_parname</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Do the variable initialization only once</span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">hasKey</span><span class="p">(</span><span class="s">&quot;SLHA_filename&quot;</span><span class="p">))</span><span class="w"> </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="s">&quot;Expected YAML file option &#39;SLHA_filename&#39; (a single SLHA filename) not found.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">hasKey</span><span class="p">(</span><span class="s">&quot;replace_SLHA_keys&quot;</span><span class="p">))</span><span class="w"> </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="s">&quot;Expected YAML file option &#39;replace_SLHA_keys&#39; (a list of strings in the SLHAea key format, e.g. &#39;MASS;1000022;1&#39;) not found.&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Get filename of base SLHA file</span>
+<span class="w">        </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;SLHA_filename&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Read the original SLHA file once</span>
+<span class="w">        </span><span class="n">file_content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_SLHA</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Get the YAML options under &#39;replace_SLHA_keys&#39;</span>
+<span class="w">        </span><span class="n">keysNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">YAML</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;replace_SLHA_keys&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">keysOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Options</span><span class="p">(</span><span class="n">keysNode</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Construct a map from SLHA keys to scan model parameters</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">parname</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">keysOptions</span><span class="p">.</span><span class="n">getNames</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="n">slhakeys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">keysOptions</span><span class="p">.</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="p">(</span><span class="n">parname</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">slhakey</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">slhakeys</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">SLHAkey_to_parname</span><span class="p">[</span><span class="n">slhakey</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parname</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Generate new SLHA content by replacing SLHA elements with scan parameters</span>
+<span class="w">      </span><span class="n">SLHAstruct</span><span class="w"> </span><span class="n">new_content</span><span class="p">(</span><span class="n">file_content</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">precision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key_param_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">SLHAkey_to_parname</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">new_content</span><span class="p">.</span><span class="n">field</span><span class="p">(</span><span class="n">key_param_pair</span><span class="p">.</span><span class="n">first</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SLHAea</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="o">*</span><span class="n">Param</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">key_param_pair</span><span class="p">.</span><span class="n">second</span><span class="p">),</span><span class="w"> </span><span class="n">precision</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Construct a dummy name for the SLHA &quot;file&quot; we pass around as a SLHAea object</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">filename_mod_ss</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">filename_mod_ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;.point&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">counter</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Save result as a pair_str_SLHAstruct</span>
+<span class="w">      </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">filename_mod_ss</span><span class="p">.</span><span class="n">str</span><span class="p">(),</span><span class="w"> </span><span class="n">new_content</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="w">      </span><span class="n">counter</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+
+<span class="w">    </span><span class="c1">// Extract SLHA file elements (for use with model ColliderBit_SLHA_file_model)</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">getSLHAFileElements</span><span class="p">(</span><span class="n">map_str_dbl</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pipes</span><span class="o">::</span><span class="nn">getSLHAFileElements</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Split the required SLHAFileNameAndContent pair</span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">SLHAFileNameAndContent</span><span class="o">-&gt;</span><span class="n">first</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">SLHAstruct</span><span class="o">&amp;</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">SLHAFileNameAndContent</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Should missing elements be replaced by a default value?</span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">use_missing_element_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">hasKey</span><span class="p">(</span><span class="s">&quot;value_for_missing_elements&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">missing_element_value</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Check that the required YAML option &quot;SLHA_keys&quot; is present</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">hasKey</span><span class="p">(</span><span class="s">&quot;SLHA_keys&quot;</span><span class="p">))</span><span class="w"> </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="s">&quot;Expected YAML file option &#39;SLHA_keys&#39; (a list of strings in the SLHAea key format, e.g. &#39;MASS;1000022;1&#39;) not found.&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Read default value for missing elements;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">use_missing_element_value</span><span class="p">)</span><span class="w"> </span><span class="n">missing_element_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;value_for_missing_elements&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Read the list of SLHA element keys</span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="n">slha_element_keys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;SLHA_keys&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Loop through the list of SLHA keys and grab the corresponding elements from the SLHA content</span>
+<span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">key_str</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">slha_element_keys</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Construct a SLHAea::Key from the key string</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">SLHAea</span><span class="o">::</span><span class="n">Key</span><span class="w"> </span><span class="nf">key</span><span class="p">(</span><span class="n">key_str</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Grab the correct entryand store in the results map</span>
+<span class="w">        </span><span class="k">try</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">[</span><span class="n">key_str</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SLHAea</span><span class="o">::</span><span class="n">to</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="n">content</span><span class="p">.</span><span class="n">field</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">out_of_range</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">errmsg_ss</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">errmsg_ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Could not find SLHA element &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">key_str</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; in file &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">filename</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">use_missing_element_value</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">logger</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">errmsg_ss</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOM</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">result</span><span class="p">[</span><span class="n">key_str</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">missing_element_value</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="k">else</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="w"> </span><span class="n">errmsg_ss</span><span class="p">.</span><span class="n">str</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="c1">// Extract an SLHAstruct with the specturm, either from the MSSM_spectrum</span>
+<span class="w">    </span><span class="c1">// capability (for MSSM models), or simply from the SLHAFileNameAndContent</span>
+<span class="w">    </span><span class="c1">// capability (for ColliderBit_SLHA_file_model, ColliderBit_SLHA_scan_model)</span>
+
+<span class="w">    </span><span class="c1">// @todo Should we perform some kind of SLHA1 vs SLHA2 check when used with the</span>
+<span class="w">    </span><span class="c1">//       ColliderBit_SLHA_* models below? For these models we currently just trust</span>
+<span class="w">    </span><span class="c1">//       the user to supply SLHA info in the appropriate format.</span>
+
+<span class="w">    </span><span class="c1">// @todo Should we unify these two functions into a single module function that just</span>
+<span class="w">    </span><span class="c1">//       provides a std::function instance that can be called with an</span>
+<span class="w">    </span><span class="c1">//       int argument = 1 or 2 and returns the appropriate SLHA1 or SLHA2 struct?</span>
+
+<span class="w">    </span><span class="c1">// SLHA1</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">getSLHA1Spectrum</span><span class="p">(</span><span class="n">SLHAstruct</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pipes</span><span class="o">::</span><span class="nn">getSLHA1Spectrum</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">write_summary_to_log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;write_summary_to_log&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;MSSM63atQ&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;MSSM63atMGUT&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="o">||</span><span class="w"> </span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;MSSM63atQ_mA&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;MSSM63atMGUT_mA&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">MSSM_spectrum</span><span class="o">-&gt;</span><span class="n">getSLHAea</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;ColliderBit_SLHA_file_model&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;ColliderBit_SLHA_scan_model&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">SLHAFileNameAndContent</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// This can only happen if the ALLOW_MODELS list in SUSY.hpp has been changed</span>
+<span class="w">        </span><span class="c1">// without also changing this function</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">errmsg_ss</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">errmsg_ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Unknown model! And that makes it a bit hard to return an SLHA1 spectrum... &quot;</span><span class="w"></span>
+<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Please expand the function getSLHA1Spectrum if you want to use it with for new models.!&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="w"> </span><span class="n">errmsg_ss</span><span class="p">.</span><span class="n">str</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">write_summary_to_log</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">SLHA_log_output</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">SLHA_log_output</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;getSLHA1Spectrum:</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">logger</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">SLHA_log_output</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOM</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// SLHA2</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">getSLHA2Spectrum</span><span class="p">(</span><span class="n">SLHAstruct</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pipes</span><span class="o">::</span><span class="nn">getSLHA2Spectrum</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">write_summary_to_log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;write_summary_to_log&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;MSSM63atQ&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;MSSM63atMGUT&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="o">||</span><span class="w"> </span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;MSSM63atQ_mA&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;MSSM63atMGUT_mA&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">MSSM_spectrum</span><span class="o">-&gt;</span><span class="n">getSLHAea</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;ColliderBit_SLHA_file_model&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ModelInUse</span><span class="p">(</span><span class="s">&quot;ColliderBit_SLHA_scan_model&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">SLHAFileNameAndContent</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// This can only happen if the ALLOW_MODELS list in SUSY.hpp has been changed</span>
+<span class="w">        </span><span class="c1">// without also changing this function</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">errmsg_ss</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">errmsg_ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Unknown model! And that makes it a bit hard to return an SLHA1 spectrum... &quot;</span><span class="w"></span>
+<span class="w">                  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Please expand the function getSLHA2Spectrum if you want to use it with for new models.!&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="w"> </span><span class="n">errmsg_ss</span><span class="p">.</span><span class="n">str</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">write_summary_to_log</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">SLHA_log_output</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">SLHA_log_output</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;getSLHA2Spectrum:</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">logger</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">SLHA_log_output</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOM</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="c1">// Advanced mass-cuts to aid SUSY scans</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">calc_susy_spectrum_scan_guide</span><span class="p">(</span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pipes</span><span class="o">::</span><span class="nn">calc_susy_spectrum_scan_guide</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">bool</span><span class="w"> </span><span class="n">discard_point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Get masses</span>
+<span class="w">      </span><span class="n">mass_es_pseudonyms</span><span class="w"> </span><span class="n">psn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">Dep</span><span class="o">::</span><span class="n">SLHA_pseudonyms</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">Spectrum</span><span class="o">&amp;</span><span class="w"> </span><span class="n">spec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">Dep</span><span class="o">::</span><span class="n">MSSM_spectrum</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">m_N1_signed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spec</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">Par</span><span class="o">::</span><span class="n">Pole_Mass</span><span class="p">,</span><span class="s">&quot;~chi0_1&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">m_N1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">m_N1_signed</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// const double m_C1_signed = spec.get(Par::Pole_Mass,&quot;~chi+_1&quot;);</span>
+<span class="w">      </span><span class="c1">// const double m_C1 = abs(m_C1_signed);</span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">m_st1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spec</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">Par</span><span class="o">::</span><span class="n">Pole_Mass</span><span class="p">,</span><span class="w"> </span><span class="n">psn</span><span class="p">.</span><span class="n">ist1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Define cuts</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m_N1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">250.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">m_st1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">750.</span><span class="p">)</span><span class="w">  </span><span class="n">discard_point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m_N1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">600.</span><span class="p">)</span><span class="w">  </span><span class="n">discard_point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m_st1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1100.</span><span class="p">)</span><span class="w">  </span><span class="n">discard_point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Discard point?</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">discard_point</span><span class="p">)</span><span class="w"> </span><span class="n">invalid_point</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="s">&quot;Point discarded by susy_spectrum_scan_guide.&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File mainEWinos_bino_winos_higgsinos.cc &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File mainEWinos_bino_winos_higgsinos.cc</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-mainewinos-bino-winos-higgsinos-cc">
+<span id="program-listing-file-colliderbit-examples-hepmc-example-mainewinos-bino-winos-higgsinos-cc"></span><h1>Program Listing for File mainEWinos_bino_winos_higgsinos.cc<a class="headerlink" href="#program-listing-for-file-mainewinos-bino-winos-higgsinos-cc" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_examples_HepMC_example_mainEWinos_bino_winos_higgsinos.cc.html#file-colliderbit-examples-hepmc-example-mainewinos-bino-winos-higgsinos-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/examples/HepMC_example/mainEWinos_bino_winos_higgsinos.cc</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// mainEwinos_bino_winos_higgsinos.cc.</span>
+
+<span class="c1">// Author: Tomas Gonzalo (tomas.gonzalo@monash.edu)</span>
+
+<span class="c1">// This program illustrates how HepMC can be interfaced to Pythia8.</span>
+<span class="c1">// It uses the SLHA file for the best fit point from EWMSSM</span>
+<span class="c1">// arXiv:1809.02097</span>
+
+<span class="c1">// WARNING: the default version generateds 30k events, including ISR, FSR and Hadronization. HepMC files can weight over 2G</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Pythia8/Pythia.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Pythia8Plugins/HepMC2.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pythia8</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Interface for conversion from Pythia8::Event to HepMC event.</span>
+<span class="w">  </span><span class="n">HepMC</span><span class="o">::</span><span class="n">Pythia8ToHepMC</span><span class="w"> </span><span class="n">ToHepMC</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Specify file where HepMC events will be stored.</span>
+<span class="w">  </span><span class="n">HepMC</span><span class="o">::</span><span class="n">IO_GenEvent</span><span class="w"> </span><span class="n">ascii_io</span><span class="p">(</span><span class="s">&quot;hepmcEWinos_bino_winos_higgsinos.dat&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ios</span><span class="o">::</span><span class="n">out</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Generator. Shorthand for the event.</span>
+<span class="w">  </span><span class="n">Pythia</span><span class="w"> </span><span class="n">pythia</span><span class="p">;</span><span class="w"></span>
+<span class="c1">//  Event&amp; event = pythia.event;</span>
+
+<span class="w">  </span><span class="c1">// Read in commands from external file.</span>
+<span class="w">  </span><span class="n">pythia</span><span class="p">.</span><span class="n">readFile</span><span class="p">(</span><span class="s">&quot;mainEWinos_bino_winos_higgsinos.cmnd&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Initialize</span>
+<span class="w">  </span><span class="n">pythia</span><span class="p">.</span><span class="n">init</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Extract settings to be used in the main program.</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">nEvent</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">pythia</span><span class="p">.</span><span class="n">mode</span><span class="p">(</span><span class="s">&quot;Main:numberOfEvents&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Begin event loop. Generate event. Skip if error.</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">iEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">iEvent</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nEvent</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">iEvent</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">pythia</span><span class="p">.</span><span class="n">next</span><span class="p">())</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Construct new empty HepMC event and fill it.</span>
+<span class="w">    </span><span class="c1">// Units will be as chosen for HepMC build; but can be changed</span>
+<span class="w">    </span><span class="c1">// by arguments, e.g. GenEvt( HepMC::Units::GEV, HepMC::Units::MM)</span>
+<span class="w">    </span><span class="n">HepMC</span><span class="o">::</span><span class="n">GenEvent</span><span class="o">*</span><span class="w"> </span><span class="n">hepmcevt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HepMC</span><span class="o">::</span><span class="n">GenEvent</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">ToHepMC</span><span class="p">.</span><span class="n">fill_next_event</span><span class="p">(</span><span class="w"> </span><span class="n">pythia</span><span class="p">,</span><span class="w"> </span><span class="n">hepmcevt</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Write the HepMC event to file. Done with it.</span>
+<span class="w">    </span><span class="n">ascii_io</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">hepmcevt</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">hepmcevt</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// End of event loop. Statistics. Histogram.</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">pythia</span><span class="p">.</span><span class="n">stat</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Done.</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

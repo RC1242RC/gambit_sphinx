@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File runAnalyses.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File runAnalyses.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-runanalyses-cpp">
+<span id="program-listing-file-colliderbit-src-runanalyses-cpp"></span><h1>Program Listing for File runAnalyses.cpp<a class="headerlink" href="#program-listing-for-file-runanalyses-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_runAnalyses.cpp.html#file-colliderbit-src-runanalyses-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/runAnalyses.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//   GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">//   *********************************************</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/ColliderBit_eventloop.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/Analysis.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// #define COLLIDERBIT_DEBUG</span>
+<span class="cp">#define DEBUG_PREFIX &quot;DEBUG: OMP thread &quot; &lt;&lt; omp_get_thread_num() &lt;&lt; &quot;:  &quot;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">runAnalyses</span><span class="p">(</span><span class="n">AnalysisDataPointers</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"></span>
+<span class="w">                     </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">                       </span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">detname</span><span class="p">,</span><span class="w"></span>
+<span class="w">                     </span><span class="cp">#else</span>
+<span class="w">                       </span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="o">&amp;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                     </span><span class="cp">#endif</span>
+<span class="w">                     </span><span class="k">const</span><span class="w"> </span><span class="n">MCLoopInfo</span><span class="o">&amp;</span><span class="w"> </span><span class="n">RunMC</span><span class="p">,</span><span class="w"></span>
+<span class="w">                     </span><span class="k">const</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Container</span><span class="p">,</span><span class="w"></span>
+<span class="w">                     </span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">&amp;</span><span class="w"> </span><span class="n">SmearedEvent</span><span class="p">,</span><span class="w"></span>
+<span class="w">                     </span><span class="kt">int</span><span class="w"> </span><span class="n">iteration</span><span class="p">,</span><span class="w"></span>
+<span class="w">                     </span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="n">wrapup</span><span class="p">)())</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BASE_INIT</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">MC_convergence_checker</span><span class="w"> </span><span class="n">convergence</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">COLLIDER_INIT</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">convergence</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">RunMC</span><span class="p">.</span><span class="n">current_convergence_options</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">not</span><span class="w"> </span><span class="n">Container</span><span class="p">.</span><span class="n">has_analyses</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">COLLECT_CONVERGENCE_DATA</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Update the convergence tracker with the new results</span>
+<span class="w">        </span><span class="n">convergence</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">Container</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CHECK_CONVERGENCE</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Call quits on the event loop if every analysis in every analysis container has sufficient statistics</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">convergence</span><span class="p">.</span><span class="n">achieved</span><span class="p">(</span><span class="n">Container</span><span class="p">))</span><span class="w"> </span><span class="n">wrapup</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// #ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">      </span><span class="c1">// if (iteration == END_SUBPROCESS)</span>
+<span class="w">      </span><span class="c1">// {</span>
+<span class="w">      </span><span class="c1">//   for (auto&amp; analysis_pointer_pair : Container.get_current_analyses_map())</span>
+<span class="w">      </span><span class="c1">//   {</span>
+<span class="w">      </span><span class="c1">//     for (auto&amp; sr : analysis_pointer_pair.second-&gt;get_results().srdata)</span>
+<span class="w">      </span><span class="c1">//     {</span>
+<span class="w">      </span><span class="c1">//       cout &lt;&lt; DEBUG_PREFIX &lt;&lt; &quot;run&quot;+detname+&quot;Analyses: signal region &quot; &lt;&lt; sr.sr_label &lt;&lt; &quot;, n_signal = &quot; &lt;&lt; sr.n_signal &lt;&lt; endl;</span>
+<span class="w">      </span><span class="c1">//     }</span>
+<span class="w">      </span><span class="c1">//   }</span>
+<span class="w">      </span><span class="c1">// }</span>
+<span class="w">      </span><span class="c1">// #endif</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">COLLIDER_FINALIZE</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// The final iteration for this collider: collect results</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">analysis_pointer_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Container</span><span class="p">.</span><span class="n">get_current_analyses_map</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;run&quot;</span><span class="o">+</span><span class="n">detname</span><span class="o">+</span><span class="s">&quot;Analyses: Collecting result from &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">analysis_pointer_pair</span><span class="p">.</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#endif</span>
+
+<span class="w">          </span><span class="n">str</span><span class="w"> </span><span class="n">warning</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">analysis_pointer_pair</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">get_results_ptr</span><span class="p">(</span><span class="n">warning</span><span class="p">));</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">RunMC</span><span class="p">.</span><span class="n">event_generation_began</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">RunMC</span><span class="p">.</span><span class="n">exceeded_maxFailedEvents</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">warning</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="w"> </span><span class="n">warning</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BASE_FINALIZE</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Final iteration. Just return.</span>
+<span class="w">        </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;run&quot;</span><span class="o">+</span><span class="n">detname</span><span class="o">+</span><span class="s">&quot;Analyses: &#39;result&#39; contains &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; results.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">BASE_INIT</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Loop over contained analyses and run them.</span>
+<span class="w">      </span><span class="n">Container</span><span class="p">.</span><span class="n">analyze</span><span class="p">(</span><span class="n">SmearedEvent</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="cp">#define RUN_ANALYSES(NAME, EXPERIMENT, SMEARED_EVENT_DEP)                 \</span>
+<span class="cp">    void NAME(AnalysisDataPointers&amp; result)                                   \</span>
+<span class="cp">    {                                                                         \</span>
+<span class="cp">      using namespace Pipes::NAME;                                            \</span>
+<span class="cp">      runAnalyses(result, #EXPERIMENT, *Dep::RunMC,                           \</span>
+<span class="cp">       *Dep::CAT(EXPERIMENT,AnalysisContainer), *Dep::SMEARED_EVENT_DEP,      \</span>
+<span class="cp">       *Loop::iteration, Loop::wrapup);                                       \</span>
+<span class="cp">    }</span>
+
+<span class="w">    </span><span class="n">RUN_ANALYSES</span><span class="p">(</span><span class="n">runATLASAnalyses</span><span class="p">,</span><span class="w"> </span><span class="n">ATLAS</span><span class="p">,</span><span class="w"> </span><span class="n">ATLASSmearedEvent</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">RUN_ANALYSES</span><span class="p">(</span><span class="n">runCMSAnalyses</span><span class="p">,</span><span class="w"> </span><span class="n">CMS</span><span class="p">,</span><span class="w"> </span><span class="n">CMSSmearedEvent</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">RUN_ANALYSES</span><span class="p">(</span><span class="n">runIdentityAnalyses</span><span class="p">,</span><span class="w"> </span><span class="n">Identity</span><span class="p">,</span><span class="w"> </span><span class="n">CopiedEvent</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

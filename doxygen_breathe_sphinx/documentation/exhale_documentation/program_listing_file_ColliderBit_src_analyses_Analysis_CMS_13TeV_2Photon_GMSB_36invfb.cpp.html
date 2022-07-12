@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File Analysis_CMS_13TeV_2Photon_GMSB_36invfb.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File Analysis_CMS_13TeV_2Photon_GMSB_36invfb.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-analysis-cms-13tev-2photon-gmsb-36invfb-cpp">
+<span id="program-listing-file-colliderbit-src-analyses-analysis-cms-13tev-2photon-gmsb-36invfb-cpp"></span><h1>Program Listing for File Analysis_CMS_13TeV_2Photon_GMSB_36invfb.cpp<a class="headerlink" href="#program-listing-for-file-analysis-cms-13tev-2photon-gmsb-36invfb-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_analyses_Analysis_CMS_13TeV_2Photon_GMSB_36invfb.cpp.html#file-colliderbit-src-analyses-analysis-cms-13tev-2photon-gmsb-36invfb-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/analyses/Analysis_CMS_13TeV_2Photon_GMSB_36invfb.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">  Based on:</span>
+<span class="cm">    &quot;Search for supersymmetry in final states with photons and missing transverse momentum in proton-proton collisions at 13 TeV&quot;</span>
+
+<span class="cm">    http://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-17-011/index.html</span>
+<span class="cm">    arxiv:1903.07070</span>
+
+<span class="cm">  Notes:</span>
+
+<span class="cm">    There are a lot of details missing in the paper, e.g. the exact numbers used for baseline</span>
+<span class="cm">    object selection, isolation criteria, etc. So we have for now made some hopefully reasonable</span>
+<span class="cm">    assumptions, to be validated when we get more info from CMS.</span>
+
+<span class="cm">  Event selection summary:</span>
+
+<span class="cm">    Trigger:</span>
+<span class="cm">    - Two photons</span>
+<span class="cm">    - Leading photon: pT &gt; 30</span>
+<span class="cm">    - Subleading photon: pT &gt; 18</span>
+<span class="cm">    - Invariant mass m_gg &gt; 95</span>
+<span class="cm">    - Isolation and cluster shape requirements (not implemented)</span>
+
+<span class="cm">    Photon selection:</span>
+<span class="cm">    - pT &gt; 40</span>
+<span class="cm">    - |eta| &lt; 1.44</span>
+<span class="cm">    - Isolated from other reconstructed particles by</span>
+<span class="cm">      considering pT sum of other particles within</span>
+<span class="cm">      DeltaR = 0.3. (Not implemented. No details given in the paper...)</span>
+
+<span class="cm">    Further requirements:</span>
+<span class="cm">    - Identify the two highest pT EM objects (gg, ee, ge)</span>
+<span class="cm">    - Require objects to have DeltaR &gt; 0.6</span>
+<span class="cm">    - Require objects to have m &gt; 105</span>
+
+<span class="cm">    Vetos:</span>
+<span class="cm">    - Any *additional* electron with pT &gt; 25, |eta| &lt; 2.5</span>
+<span class="cm">    - Any muon with pT &gt; 25, |eta| &lt; 2.4</span>
+
+<span class="cm">    Six SRs based on MET value.</span>
+<span class="cm">*/</span><span class="w"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iomanip&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/Analysis.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/CMSEfficiencies.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/mt2_bisect.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/Cutflow.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// #define CHECK_CUTFLOW</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Analysis_CMS_13TeV_2Photon_GMSB_36invfb</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Analysis</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;CMS&quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Counters for the number of accepted events for each signal region</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_counters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;SR_MET_100-115&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;SR_MET_100-115&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;SR_MET_115-130&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;SR_MET_115-130&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;SR_MET_130-150&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;SR_MET_130-150&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;SR_MET_150-185&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;SR_MET_150-185&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;SR_MET_185-250&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;SR_MET_185-250&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="s">&quot;SR_MET_&gt;250&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;SR_MET_&gt;250&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">      </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Cutflow _cutflow;</span>
+
+<span class="w">      </span><span class="c1">// Analysis_CMS_13TeV_2Photon_GMSB_36invfb():</span>
+<span class="w">      </span><span class="c1">// _cutflow(&quot;CMS 2-photon GMSB 13 TeV&quot;, {&quot;preselection&quot;, &quot;MET&gt;300GeV&quot;, &quot;MT(g,MET)&gt;300GeV&quot;, &quot;S_T^g&gt;600GeV&quot;})</span>
+<span class="w">      </span><span class="n">Analysis_CMS_13TeV_2Photon_GMSB_36invfb</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">set_analysis_name</span><span class="p">(</span><span class="s">&quot;CMS_13TeV_2Photon_GMSB_36invfb&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">set_luminosity</span><span class="p">(</span><span class="mf">35.9</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">run</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">*</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Baseline objects</span>
+<span class="w">        </span><span class="c1">// HEPUtils::P4 pTmissVector = event-&gt;missingmom();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">met</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">met</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// _cutflow.fillinit();</span>
+
+<span class="w">        </span><span class="c1">// Photons</span>
+<span class="w">        </span><span class="c1">// NOTE:</span>
+<span class="w">        </span><span class="c1">//   No photon efficiency info available for this analysis.</span>
+<span class="w">        </span><span class="c1">//   We therefore assume the same efficiency map as used for</span>
+<span class="w">        </span><span class="c1">//   other CMS 36 fb^-1 SUSY searches:</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">//   https://twiki.cern.ch/twiki/pub/CMSPublic/SUSMoriond2017ObjectsEfficiency/PhotonEfficiencies_ForPublic_Moriond2017_LoosePixelVeto.pdf</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">//   The efficiency map has been extended to cover the low-pT region (pT &lt; 20)</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">aPhoton</span><span class="o">=</span><span class="p">{</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">1.4442</span><span class="p">,</span><span class="w"> </span><span class="mf">1.566</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">};</span><span class="w">  </span><span class="c1">// Bin edges in eta</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bPhoton</span><span class="o">=</span><span class="p">{</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">20.</span><span class="p">,</span><span class="w"> </span><span class="mf">35.</span><span class="p">,</span><span class="w"> </span><span class="mf">50.</span><span class="p">,</span><span class="w"> </span><span class="mf">90.</span><span class="p">,</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">};</span><span class="w">  </span><span class="c1">// Bin edges in pT. Assume flat efficiency above 500, where the CMS map stops.</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cPhoton</span><span class="o">=</span><span class="p">{</span><span class="w"></span>
+<span class="w">                           </span><span class="c1">// pT:   (0,20),  (20,35),  (35,50),  (50,90),  (90,inf)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.735</span><span class="p">,</span><span class="w">    </span><span class="mf">0.779</span><span class="p">,</span><span class="w">    </span><span class="mf">0.805</span><span class="p">,</span><span class="w">    </span><span class="mf">0.848</span><span class="p">,</span><span class="w">   </span><span class="c1">// eta: (0, 0.8)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.726</span><span class="p">,</span><span class="w">    </span><span class="mf">0.746</span><span class="p">,</span><span class="w">    </span><span class="mf">0.768</span><span class="p">,</span><span class="w">    </span><span class="mf">0.809</span><span class="p">,</span><span class="w">   </span><span class="c1">// eta: (0.8, 1.4442)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">     </span><span class="c1">// eta: (1.4442, 1.566)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.669</span><span class="p">,</span><span class="w">    </span><span class="mf">0.687</span><span class="p">,</span><span class="w">    </span><span class="mf">0.704</span><span class="p">,</span><span class="w">    </span><span class="mf">0.723</span><span class="p">,</span><span class="w">   </span><span class="c1">// eta: (1.566, 2.0)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.564</span><span class="p">,</span><span class="w">    </span><span class="mf">0.585</span><span class="p">,</span><span class="w">    </span><span class="mf">0.592</span><span class="p">,</span><span class="w">    </span><span class="mf">0.612</span><span class="p">,</span><span class="w">   </span><span class="c1">// eta: (2.0, 2.5)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">     </span><span class="c1">// eta &gt; 2.5</span>
+<span class="w">                                 </span><span class="p">};</span><span class="w"></span>
+<span class="w">        </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">BinnedFn2D</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_eff2dPhoton</span><span class="p">(</span><span class="n">aPhoton</span><span class="p">,</span><span class="n">bPhoton</span><span class="p">,</span><span class="n">cPhoton</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">photons</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">photon</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">photons</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="kt">bool</span><span class="w"> </span><span class="n">isPhoton</span><span class="o">=</span><span class="n">has_tag</span><span class="p">(</span><span class="n">_eff2dPhoton</span><span class="p">,</span><span class="w"> </span><span class="n">photon</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">(),</span><span class="w"> </span><span class="n">photon</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isPhoton</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">photon</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="o">&gt;</span><span class="mf">15.</span><span class="p">)</span><span class="w"> </span><span class="n">photons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">photon</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Sort</span>
+<span class="w">        </span><span class="n">sortByPt</span><span class="p">(</span><span class="n">photons</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Photon trigger cut</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">trigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">photons</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="kt">double</span><span class="w"> </span><span class="n">mggTrigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">photons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">photons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">()).</span><span class="n">m</span><span class="p">();</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mggTrigger</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">95.</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">trigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// // Return immediately if event didn&#39;t pass trigger</span>
+<span class="w">        </span><span class="c1">// if (!trigger) return;</span>
+
+
+<span class="w">        </span><span class="c1">// Electrons</span>
+<span class="w">        </span><span class="c1">// NOTE:</span>
+<span class="w">        </span><span class="c1">//   No electron efficiency info available for this analysis.</span>
+<span class="w">        </span><span class="c1">//   We therefore assume the efficiency map used for the 36 fb^-1 CMS multilepton search:</span>
+<span class="w">        </span><span class="c1">//   https://twiki.cern.ch/twiki/pub/CMSPublic/SUSMoriond2017ObjectsEfficiency/2d_full_pteta_el_039_multi_ttbar.pdf</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">//   See this page for more info:</span>
+<span class="w">        </span><span class="c1">//   https://twiki.cern.ch/twiki/bin/view/CMSPublic/SUSMoriond2017ObjectsEfficiency</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">//   The efficiency map has been extended to cover the low-pT region, using the efficiencies from BuckFast (CMSEfficiencies.hpp)</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">aEl</span><span class="o">=</span><span class="p">{</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">1.442</span><span class="p">,</span><span class="w"> </span><span class="mf">1.556</span><span class="p">,</span><span class="w"> </span><span class="mf">2.</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">};</span><span class="w">   </span><span class="c1">// Bin edges in eta</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bEl</span><span class="o">=</span><span class="p">{</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">10.</span><span class="p">,</span><span class="w"> </span><span class="mf">15.</span><span class="p">,</span><span class="w"> </span><span class="mf">20.</span><span class="p">,</span><span class="w"> </span><span class="mf">25.</span><span class="p">,</span><span class="w"> </span><span class="mf">30.</span><span class="p">,</span><span class="w"> </span><span class="mf">40.</span><span class="p">,</span><span class="w"> </span><span class="mf">50.</span><span class="p">,</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">};</span><span class="w"> </span><span class="c1">// Bin edges in pT. Assume flat efficiency above 200, where the CMS map stops.</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cEl</span><span class="o">=</span><span class="p">{</span><span class="w"></span>
+<span class="w">                          </span><span class="c1">// pT: (0,10),  (10,15),  (15,20),  (20,25),  (25,30),  (30,40),  (40,50),  (50,inf)</span>
+<span class="w">                                   </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.95</span><span class="p">,</span><span class="w">    </span><span class="mf">0.507</span><span class="p">,</span><span class="w">    </span><span class="mf">0.619</span><span class="p">,</span><span class="w">    </span><span class="mf">0.682</span><span class="p">,</span><span class="w">    </span><span class="mf">0.742</span><span class="p">,</span><span class="w">    </span><span class="mf">0.798</span><span class="p">,</span><span class="w">    </span><span class="mf">0.863</span><span class="p">,</span><span class="w">  </span><span class="c1">// eta: (0, 0.8)</span>
+<span class="w">                                   </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.95</span><span class="p">,</span><span class="w">    </span><span class="mf">0.429</span><span class="p">,</span><span class="w">    </span><span class="mf">0.546</span><span class="p">,</span><span class="w">    </span><span class="mf">0.619</span><span class="p">,</span><span class="w">    </span><span class="mf">0.710</span><span class="p">,</span><span class="w">    </span><span class="mf">0.734</span><span class="p">,</span><span class="w">    </span><span class="mf">0.833</span><span class="p">,</span><span class="w">  </span><span class="c1">// eta: (0.8, 1.442)</span>
+<span class="w">                                   </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.95</span><span class="p">,</span><span class="w">    </span><span class="mf">0.256</span><span class="p">,</span><span class="w">    </span><span class="mf">0.221</span><span class="p">,</span><span class="w">    </span><span class="mf">0.315</span><span class="p">,</span><span class="w">    </span><span class="mf">0.351</span><span class="p">,</span><span class="w">    </span><span class="mf">0.373</span><span class="p">,</span><span class="w">    </span><span class="mf">0.437</span><span class="p">,</span><span class="w">  </span><span class="c1">// eta: (1.442, 1.556)</span>
+<span class="w">                                   </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.85</span><span class="p">,</span><span class="w">    </span><span class="mf">0.249</span><span class="p">,</span><span class="w">    </span><span class="mf">0.404</span><span class="p">,</span><span class="w">    </span><span class="mf">0.423</span><span class="p">,</span><span class="w">    </span><span class="mf">0.561</span><span class="p">,</span><span class="w">    </span><span class="mf">0.642</span><span class="p">,</span><span class="w">    </span><span class="mf">0.749</span><span class="p">,</span><span class="w">  </span><span class="c1">// eta: (1.556, 2)</span>
+<span class="w">                                   </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.85</span><span class="p">,</span><span class="w">    </span><span class="mf">0.195</span><span class="p">,</span><span class="w">    </span><span class="mf">0.245</span><span class="p">,</span><span class="w">    </span><span class="mf">0.380</span><span class="p">,</span><span class="w">    </span><span class="mf">0.441</span><span class="p">,</span><span class="w">    </span><span class="mf">0.533</span><span class="p">,</span><span class="w">    </span><span class="mf">0.644</span><span class="p">,</span><span class="w">  </span><span class="c1">// eta: (2, 2.5)</span>
+<span class="w">                                   </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="mf">0.0</span><span class="p">,</span><span class="w">     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="c1">// eta &gt; 2.5</span>
+<span class="w">                                  </span><span class="p">};</span><span class="w"></span>
+<span class="w">        </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">BinnedFn2D</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_eff2dEl</span><span class="p">(</span><span class="n">aEl</span><span class="p">,</span><span class="n">bEl</span><span class="p">,</span><span class="n">cEl</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">electrons</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">electron</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">electrons</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="kt">bool</span><span class="w"> </span><span class="n">isEl</span><span class="o">=</span><span class="n">has_tag</span><span class="p">(</span><span class="n">_eff2dEl</span><span class="p">,</span><span class="w"> </span><span class="n">electron</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">(),</span><span class="w"> </span><span class="n">electron</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// No info in the paper on pT or |eta| cuts for baseline electrons,</span>
+<span class="w">          </span><span class="c1">// but the above efficieny map effectively requires pT &gt; 10 and |eta| &lt; 2.5</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEl</span><span class="p">)</span><span class="w"> </span><span class="n">electrons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">electron</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Sort</span>
+<span class="w">        </span><span class="n">sortByPt</span><span class="p">(</span><span class="n">electrons</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="c1">// Muons</span>
+<span class="w">        </span><span class="c1">// NOTE:</span>
+<span class="w">        </span><span class="c1">//   No muon efficiency info available for this analysis.</span>
+<span class="w">        </span><span class="c1">//   We therefore assume the efficiency map used for the 36 fb^-1 CMS multilepton search:</span>
+<span class="w">        </span><span class="c1">//   https://twiki.cern.ch/twiki/pub/CMSPublic/SUSMoriond2017ObjectsEfficiency/2d_full_pteta_mu_039_multi_ttbar.pdf</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">//   See this page for more info:</span>
+<span class="w">        </span><span class="c1">//   https://twiki.cern.ch/twiki/bin/view/CMSPublic/SUSMoriond2017ObjectsEfficiency</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">//   The efficiency map has been extended to cover the low-pT region, using the efficiencies from BuckFast (CMSEfficiencies.hpp)</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">aMu</span><span class="o">=</span><span class="p">{</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="mf">2.1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.4</span><span class="p">,</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">};</span><span class="w">   </span><span class="c1">// Bin edges in eta</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bMu</span><span class="o">=</span><span class="p">{</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">10.</span><span class="p">,</span><span class="w"> </span><span class="mf">15.</span><span class="p">,</span><span class="w"> </span><span class="mf">20.</span><span class="p">,</span><span class="w"> </span><span class="mf">25.</span><span class="p">,</span><span class="w"> </span><span class="mf">30.</span><span class="p">,</span><span class="w"> </span><span class="mf">40.</span><span class="p">,</span><span class="w"> </span><span class="mf">50.</span><span class="p">,</span><span class="w"> </span><span class="n">DBL_MAX</span><span class="p">};</span><span class="w">  </span><span class="c1">// Bin edges in pT. Assume flat efficiency above 200, where the CMS map stops.</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cMu</span><span class="o">=</span><span class="p">{</span><span class="w"></span>
+<span class="w">                           </span><span class="c1">// pT:   (0,10),  (10,15),  (15,20),  (20,25),  (25,30),  (30,40),  (40,50),  (50,inf)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">     </span><span class="mf">0.704</span><span class="p">,</span><span class="w">    </span><span class="mf">0.797</span><span class="p">,</span><span class="w">    </span><span class="mf">0.855</span><span class="p">,</span><span class="w">    </span><span class="mf">0.880</span><span class="p">,</span><span class="w">    </span><span class="mf">0.906</span><span class="p">,</span><span class="w">    </span><span class="mf">0.927</span><span class="p">,</span><span class="w">    </span><span class="mf">0.931</span><span class="p">,</span><span class="w">  </span><span class="c1">// eta: (0, 0.9)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">     </span><span class="mf">0.639</span><span class="p">,</span><span class="w">    </span><span class="mf">0.776</span><span class="p">,</span><span class="w">    </span><span class="mf">0.836</span><span class="p">,</span><span class="w">    </span><span class="mf">0.875</span><span class="p">,</span><span class="w">    </span><span class="mf">0.898</span><span class="p">,</span><span class="w">    </span><span class="mf">0.940</span><span class="p">,</span><span class="w">    </span><span class="mf">0.930</span><span class="p">,</span><span class="w">  </span><span class="c1">// eta: (0.9, 1.2)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">     </span><span class="mf">0.596</span><span class="p">,</span><span class="w">    </span><span class="mf">0.715</span><span class="p">,</span><span class="w">    </span><span class="mf">0.840</span><span class="p">,</span><span class="w">    </span><span class="mf">0.862</span><span class="p">,</span><span class="w">    </span><span class="mf">0.891</span><span class="p">,</span><span class="w">    </span><span class="mf">0.906</span><span class="p">,</span><span class="w">    </span><span class="mf">0.925</span><span class="p">,</span><span class="w">  </span><span class="c1">// eta: (1.2, 2.1)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">     </span><span class="mf">0.522</span><span class="p">,</span><span class="w">    </span><span class="mf">0.720</span><span class="p">,</span><span class="w">    </span><span class="mf">0.764</span><span class="p">,</span><span class="w">    </span><span class="mf">0.803</span><span class="p">,</span><span class="w">    </span><span class="mf">0.807</span><span class="p">,</span><span class="w">    </span><span class="mf">0.885</span><span class="p">,</span><span class="w">    </span><span class="mf">0.877</span><span class="p">,</span><span class="w">  </span><span class="c1">// eta: (2.1, 2.4)</span>
+<span class="w">                                     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">     </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">      </span><span class="mf">0.0</span><span class="p">,</span><span class="w">    </span><span class="c1">// eta &gt; 2.4</span>
+<span class="w">                                 </span><span class="p">};</span><span class="w"></span>
+<span class="w">        </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">BinnedFn2D</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_eff2dMu</span><span class="p">(</span><span class="n">aMu</span><span class="p">,</span><span class="n">bMu</span><span class="p">,</span><span class="n">cMu</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">muons</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">muon</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">muons</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="kt">bool</span><span class="w"> </span><span class="n">isMu</span><span class="o">=</span><span class="n">has_tag</span><span class="p">(</span><span class="n">_eff2dMu</span><span class="p">,</span><span class="w"> </span><span class="n">muon</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">(),</span><span class="w"> </span><span class="n">muon</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// No info in the paper on pT or |eta| cuts for baseline muons,</span>
+<span class="w">          </span><span class="c1">// but the above efficieny map effectively requires pT &gt; 10 and |eta| &lt; 2.4</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isMu</span><span class="p">)</span><span class="w"> </span><span class="n">muons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">muon</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Sort</span>
+<span class="w">        </span><span class="n">sortByPt</span><span class="p">(</span><span class="n">muons</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="c1">// Jets</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">jets</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span><span class="w"> </span><span class="n">jet</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">jets</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// No info on baseline jet cuts in the paper, so for now we&#39;ll</span>
+<span class="w">          </span><span class="c1">// apply an|eta| cut for HCAL coverage and a loose jet pT cut</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jet</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="o">&gt;</span><span class="mf">10.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">jet</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="o">&lt;</span><span class="mf">3.0</span><span class="p">)</span><span class="w"> </span><span class="n">jets</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">jet</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Sort</span>
+<span class="w">        </span><span class="n">sortByPt</span><span class="p">(</span><span class="n">jets</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="c1">// Select signal photon candidates</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">signalPhotons</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">photon</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">photons</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">photon</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">15.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">photon</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.44</span><span class="p">)</span><span class="w"> </span><span class="n">signalPhotons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">photon</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// NOTE: there should also be an isolation cut based on pT sums of other objects</span>
+<span class="w">          </span><span class="c1">// within DeltaR = 0.3 of the photon, but no details are given in the paper...</span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Requirements on the two highest-pT EM objects</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">EMobjects</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">EMobjects</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">EMobjects</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">signalPhotons</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">signalPhotons</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">EMobjects</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">EMobjects</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">electrons</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">electrons</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">sortByPt</span><span class="p">(</span><span class="n">EMobjects</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">signalEMobjects</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">EMobjects</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">signalEMobjects</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">signalEMobjects</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">EMobjects</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">EMobjects</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">signalEMobjects</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">signalEMobjects</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">EMobjects</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">EMobjects</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">isDiphoton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">DeltaR_gt_06</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">mgg_gt_105</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">signalEMobjects</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">          </span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">obj1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">signalEMobjects</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">obj2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">signalEMobjects</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obj1</span><span class="o">-&gt;</span><span class="n">pid</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj2</span><span class="o">-&gt;</span><span class="n">pid</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">22</span><span class="p">)</span><span class="w"> </span><span class="n">isDiphoton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obj1</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">deltaR_eta</span><span class="p">(</span><span class="n">obj2</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">())</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.6</span><span class="p">)</span><span class="w"> </span><span class="n">DeltaR_gt_06</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">obj1</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">obj2</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">()).</span><span class="n">m</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">105.</span><span class="p">)</span><span class="w"> </span><span class="n">mgg_gt_105</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Vetos on muons</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">muVeto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">muon</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">muons</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">muon</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">25.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">muon</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2.4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">muVeto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Veto on electrons not part of the two signalEMobjects</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">elVeto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">electron</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">electrons</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">electron</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">25.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">electron</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2.5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">electron</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">signalEMobjects</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">electron</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">signalEMobjects</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="n">elVeto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">              </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Fill signal region</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">trigger</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">isDiphoton</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">DeltaR_gt_06</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">mgg_gt_105</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">muVeto</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">elVeto</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w">      </span><span class="p">(</span><span class="n">met</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">100.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">met</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">115</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_100-115&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">met</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">115.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">met</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">130</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_115-130&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">met</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">130.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">met</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">150</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_130-150&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">met</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">150.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">met</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">185</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_150-185&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">met</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">185.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">met</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">250</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_185-250&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">met</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">250.</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_&gt;250&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">combine</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Analysis</span><span class="o">*</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">Analysis_CMS_13TeV_2Photon_GMSB_36invfb</span><span class="o">*</span><span class="w"> </span><span class="n">specificOther</span><span class="w"></span>
+<span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Analysis_CMS_13TeV_2Photon_GMSB_36invfb</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">other</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">_counters</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">specificOther</span><span class="o">-&gt;</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">      </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">collect_results</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_100-115&quot;</span><span class="p">),</span><span class="w"> </span><span class="mi">105</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">114.</span><span class="p">,</span><span class="w"> </span><span class="mf">13.</span><span class="p">}));</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_115-130&quot;</span><span class="p">),</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">42.9</span><span class="p">,</span><span class="w"> </span><span class="mf">7.5</span><span class="p">}));</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_130-150&quot;</span><span class="p">),</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">27.3</span><span class="p">,</span><span class="w"> </span><span class="mf">5.6</span><span class="p">}));</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_150-185&quot;</span><span class="p">),</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">17.4</span><span class="p">,</span><span class="w"> </span><span class="mf">4.1</span><span class="p">}));</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_185-250&quot;</span><span class="p">),</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">10.2</span><span class="p">,</span><span class="w"> </span><span class="mf">2.7</span><span class="p">}));</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;SR_MET_&gt;250&quot;</span><span class="p">),</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">5.4</span><span class="p">,</span><span class="w"> </span><span class="mf">1.6</span><span class="p">}));</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">analysis_specific_reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">_counters</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Factory fn</span>
+<span class="w">    </span><span class="n">DEFINE_ANALYSIS_FACTORY</span><span class="p">(</span><span class="n">CMS_13TeV_2Photon_GMSB_36invfb</span><span class="p">)</span><span class="w"></span>
+
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

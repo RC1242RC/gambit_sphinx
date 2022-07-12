@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namespace Gambit::ColliderBit::EventConversion &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace generate_raster_scan_settings" href="namespace_generate_raster_scan_settings.html" />
+    <link rel="prev" title="Namespace Gambit::ColliderBit::CMS" href="namespace_Gambit__ColliderBit__CMS.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Library API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_BackendIniBit__Functown.html">Namespace BackendIniBit::Functown</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_CAT.html">Namespace CAT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_collider_harvester.html">Namespace collider_harvester</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_ColliderBit__Functown.html">Namespace ColliderBit::Functown</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_FJNS.html">Namespace FJNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Gambit.html">Namespace Gambit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Gambit__ColliderBit.html">Namespace Gambit::ColliderBit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Gambit__ColliderBit__ATLAS.html">Namespace Gambit::ColliderBit::ATLAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Gambit__ColliderBit__CMS.html">Namespace Gambit::ColliderBit::CMS</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Namespace Gambit::ColliderBit::EventConversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_generate_raster_scan_settings.html">Namespace generate_raster_scan_settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_HEPUtils.html">Namespace HEPUtils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Lester.html">Namespace Lester</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_LHEF.html">Namespace LHEF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_mt2_bisect.html">Namespace mt2_bisect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_mt2w_bisect.html">Namespace mt2w_bisect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_Pythia8.html">Namespace Pythia8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_std.html">Namespace std</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="library_root.html">Library API</a> &raquo;</li>
+      <li>Namespace Gambit::ColliderBit::EventConversion</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-gambit-colliderbit-eventconversion">
+<span id="id1"></span><h1>Namespace Gambit::ColliderBit::EventConversion<a class="headerlink" href="#namespace-gambit-colliderbit-eventconversion" title="Permalink to this headline"></a></h1>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#functions" id="id2">Functions</a></p></li>
+</ul>
+</div>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a5901c69e006fd8c320521d42659d9694.html#exhale-function-eventconversionutils-8hpp-1a5901c69e006fd8c320521d42659d9694"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_child_ids(ParticleP&amp;, EventT&amp;, std::vector&lt;int&gt;&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1af921a7edeca1d7d217e277440c9cb8e9.html#exhale-function-eventconversionutils-8hpp-1af921a7edeca1d7d217e277440c9cb8e9"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_child_ids(const HepMC3::GenParticlePtr&amp;, const std::vector&lt;HepMC3::GenParticlePtr&gt;&amp;, std::vector&lt;int&gt;&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1aaa3ad7c563660da2c1fd2d13d78ec172.html#exhale-function-eventconversionutils-8hpp-1aaa3ad7c563660da2c1fd2d13d78ec172"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_eta(const HepMC3::GenParticlePtr&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1ad859650b7ad8619b469c86c99d1d034c.html#exhale-function-eventconversionutils-8hpp-1ad859650b7ad8619b469c86c99d1d034c"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_eta(ParticleP)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a50ca5b5fcc4bd21abcfee5d8d2a32e18.html#exhale-function-eventconversionutils-8hpp-1a50ca5b5fcc4bd21abcfee5d8d2a32e18"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_fromHadron(const HepMC3::GenParticlePtr&amp;, const std::vector&lt;HepMC3::GenParticlePtr&gt;&amp;, int)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a03d229399cec64f6093912f83bf4f5c1.html#exhale-function-eventconversionutils-8hpp-1a03d229399cec64f6093912f83bf4f5c1"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_fromHadron(ParticleP&amp;, const EventT&amp;, int)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a4fff66ac300704d51b8197d77d441c56.html#exhale-function-eventconversionutils-8hpp-1a4fff66ac300704d51b8197d77d441c56"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_isFinal(const HepMC3::GenParticlePtr&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a47b004ebfcd479d053e1ad115c8862ce.html#exhale-function-eventconversionutils-8hpp-1a47b004ebfcd479d053e1ad115c8862ce"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_isFinal(ParticleP)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1aecc0c3f77db9ce3cc0e8455bc0352566.html#exhale-function-eventconversionutils-8hpp-1aecc0c3f77db9ce3cc0e8455bc0352566"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_momentum(const HepMC3::GenParticlePtr&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1aec371b0b37374709072056791af48044.html#exhale-function-eventconversionutils-8hpp-1aec371b0b37374709072056791af48044"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_momentum(ParticleP)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a4b26074bc4b7a16b790e3ca9ab8ca12d.html#exhale-function-eventconversionutils-8hpp-1a4b26074bc4b7a16b790e3ca9ab8ca12d"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_mother1(const HepMC3::GenParticlePtr&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1afccc7247fc89851a6ffa78e46f032a12.html#exhale-function-eventconversionutils-8hpp-1afccc7247fc89851a6ffa78e46f032a12"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_mother1(ParticleP&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a8a8ec0d1226991832c40e8676eb8c3ff.html#exhale-function-eventconversionutils-8hpp-1a8a8ec0d1226991832c40e8676eb8c3ff"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_mother1_pid(ParticleP&amp;, EventT&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1ab4ce58d6070230d33e17e4fdd3ec7593.html#exhale-function-eventconversionutils-8hpp-1ab4ce58d6070230d33e17e4fdd3ec7593"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_mother1_pid(const HepMC3::GenParticlePtr&amp;, const std::vector&lt;HepMC3::GenParticlePtr&gt;&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1af3e480efa617cb93220f6a636140fffb.html#exhale-function-eventconversionutils-8hpp-1af3e480efa617cb93220f6a636140fffb"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_mother2(const HepMC3::GenParticlePtr&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1ab527a3085ce68b94eb37db5d76ced06c.html#exhale-function-eventconversionutils-8hpp-1ab527a3085ce68b94eb37db5d76ced06c"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_mother2(ParticleP&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a5eaf2a72b7e21cc6ae3df430a1bad198.html#exhale-function-eventconversionutils-8hpp-1a5eaf2a72b7e21cc6ae3df430a1bad198"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_mother2_pid(ParticleP&amp;, EventT&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a770e75c5700bcba64f3f274010403168.html#exhale-function-eventconversionutils-8hpp-1a770e75c5700bcba64f3f274010403168"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_mother2_pid(const HepMC3::GenParticlePtr&amp;, const std::vector&lt;HepMC3::GenParticlePtr&gt;&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1aa25ac5fe7cdf4f5da23c444de686309d.html#exhale-function-eventconversionutils-8hpp-1aa25ac5fe7cdf4f5da23c444de686309d"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_pid(const HepMC3::GenParticlePtr&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a66aaa9edc3eff393269f7ed8a780e70d.html#exhale-function-eventconversionutils-8hpp-1a66aaa9edc3eff393269f7ed8a780e70d"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_pid(ParticleP)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a17a4f804344df426d1b71f323d4cfc09.html#exhale-function-eventconversionutils-8hpp-1a17a4f804344df426d1b71f323d4cfc09"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::get_unified_pseudojet(const HepMC3::GenParticlePtr&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1a5b46b18371847c6f3950580433e2b7a0.html#exhale-function-eventconversionutils-8hpp-1a5b46b18371847c6f3950580433e2b7a0"><span class="std std-ref">Template Function Gambit::ColliderBit::EventConversion::get_unified_pseudojet(ParticleP)</span></a></p></li>
+<li><p><a class="reference internal" href="function_EventConversionUtils_8hpp_1ad995f0e518b3203f1c8e10f52a0c68c2.html#exhale-function-eventconversionutils-8hpp-1ad995f0e518b3203f1c8e10f52a0c68c2"><span class="std std-ref">Function Gambit::ColliderBit::EventConversion::HEPMC3_isParton</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

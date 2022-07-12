@@ -1,5 +1,0 @@
-var classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__2OSLEP__chargino__inclusive__139invfb =
-[
-    [ "Analysis_ATLAS_13TeV_2OSLEP_chargino_inclusive_139invfb", "classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__2OSLEP__chargino__inclusive__139invfb.html#a9ec5b6ec42bce9e7c922eded1b69ac96", null ],
-    [ "collect_results", "classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__2OSLEP__chargino__inclusive__139invfb.html#af29ef0da9b4406dba07698307870284e", null ]
-];

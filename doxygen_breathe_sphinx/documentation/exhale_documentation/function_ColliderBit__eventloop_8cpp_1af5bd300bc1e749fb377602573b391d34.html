@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function Gambit::ColliderBit::CollectAnalyses &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function Gambit::ColliderBit::convert_xsecs_to_fb" href="function_getxsec_8cpp_1a85901588714c3cc17c9132fc67206fb3.html" />
+    <link rel="prev" title="Function Gambit::ColliderBit::CMS::smearTaus" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1ac1abbb95c9de02059ac9b59bfdea20a2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Library API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY_8hpp_1ab9e8b4b8683508b5b8cfda2d4064e704.html">Function ALLOW_MODELS(MSSM63atQ, MSSM63atMGUT, MSSM63atQ_mA, MSSM63atMGUT_mA)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8hpp_1adc5e49927864913e364cb0e0eff062a5.html">Function ALLOW_MODELS()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8hpp_1a9176de98a61f6a767a0c0c2c367e99fd.html">Function ALLOW_MODELS()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1ae35ef47bb1f7738c01f181a9d8052c2f.html">Function Analysis_ATLAS_7TeV_1OR2LEPStop_4_7invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1a7e9c7394c39383ad5bc166754c4891fe.html">Function analysis_specific_reset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8hpp_1a7cbe782d42e2bc696e4f85cf8af5c69c.html">Function BACKEND_REQ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lester__mt2__bisect_8h_1acd10f6bf19639115c5da257a3e9ee610.html">Function ben_findsols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1a7afeb6de2124db4bcd1e734826722ff0.html">Function calcMt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1a7183d1bb8c5bb7600bef93ff203c5649.html">Function calcNuPz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1a9957e8639e686d363294d7b491b96d0e.html">Function calcSqrtSSubMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mt2w_8h_1a346d7b146b8ed00957aa22ae2b5693a6.html">Function calculateMT2wHepUtils(vector&lt;HEPUtils::P4&gt;&amp;, vector&lt;bool&gt;&amp;, HEPUtils::P4&amp;, float, float)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mt2w_8cc_1a346d7b146b8ed00957aa22ae2b5693a6.html">Function calculateMT2wHepUtils(vector&lt;HEPUtils::P4&gt;&amp;, vector&lt;bool&gt;&amp;, HEPUtils::P4&amp;, float, float)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1a70678429fb2633ff39decf7e92950c92.html">Function collect_results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_collider__harvester_8py_1a3d82efab9eade325fcf205a9bcc37864.html">Function collider_harvester::main</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1a4caa6e4df1b11f956f9d32f2f62ae03e.html">Function combine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY_8hpp_1aaf386d4a3187f22a9e9a7898c213a720.html">Function DEPENDENCY(MSSM_spectrum, Spectrum)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY_8hpp_1ad429c55573403e69a55a9e8a1ecd769f.html">Function DEPENDENCY(SpectrumAndDecaysForPythia, SLHAstruct)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY_8hpp_1a3ecfdd988931eb86f109279d071d3e3d.html">Function DEPENDENCY(EventWeighterFunction, EventWeighterFunctionType)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8hpp_1a451232381563c1bc8a89b4a9ae850574.html">Function DEPENDENCY()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8hpp_1a48e9a5d849ed82e41e96c28eb3b5bbe8.html">Function DEPENDENCY()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1ad707bc1f9fe1547981dcc745d710e98a.html">Function Gambit::ColliderBit::_gsl_calc_Analysis_MinusLogLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1ad79f21cd8930fae9925e7b6cb0402cc6.html">Function Gambit::ColliderBit::_gsl_calc_Analysis_MinusLogLikeAndGrad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1ae6f741ebfb51bd2aea978a9cb139fcce.html">Function Gambit::ColliderBit::_gsl_calc_Analysis_MinusLogLikeGrad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1a512895ae9314049ce4b4209def86a78e.html">Function Gambit::ColliderBit::_gsl_mkpackedarray</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1a2e4a667539a208c93c3eac8dc4e53d17.html">Function Gambit::ColliderBit::_gsl_target_func</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__CMS__8TeV__1LEPDMTOP__20invfb_8cpp_1a8cb3d22adb4238ddbdf4cc01a11e96f7.html">Function Gambit::ColliderBit::_Phi_mpi_pi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_collider__event__weights_8cpp_1a08659916551bbe4b892d6a3c20caa45c.html">Function Gambit::ColliderBit::_setEventWeight_fromCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_collider__event__weights_8cpp_1a20c19a91f9b8f3cff80994b8d09e3fe5.html">Function Gambit::ColliderBit::_setEventWeight_unity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_PointsAndLines_8hpp_1a441695392e8497ae0071043b7549a70a.html">Function Gambit::ColliderBit::addInQuad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a49f2c80e8172f9ad12b377a19644609c.html">Function Gambit::ColliderBit::ALEPH_Selectron_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1af4859a0f475494a2a306b840d30f4566.html">Function Gambit::ColliderBit::ALEPH_Smuon_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a6fa06071735829f4208f0f3d2d741518.html">Function Gambit::ColliderBit::ALEPH_Stau_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1aab1fa0df2dee362f7039e4b9fe0bed4b.html">Function Gambit::ColliderBit::all_of</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_complete__process__PID__pair__multimaps_8hpp_1aa00f9200838426661631c91a4990186d.html">Function Gambit::ColliderBit::all_PID_pairs_to_process_codes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a66c6e7dce6ad591eb1569ae6c2c066f5.html">Function Gambit::ColliderBit::amIaBJet()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1acef57926d6067a635ebf410f5a9e7303.html">Function Gambit::ColliderBit::amIaBJet()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a090fae038f9467725561bab4a5286afd.html">Function Gambit::ColliderBit::amIaJet()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a459902a1bc1cb1b8b92a0f9196a0e79f.html">Function Gambit::ColliderBit::amIaJet()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a9ec34ac47693aabf0ff2ea6112e9c6a7.html">Function Gambit::ColliderBit::any_of</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a11974204f71df5d81e23f013b68b5027.html">Function Gambit::ColliderBit::ATLAS::applyElectronEff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a9020cc2ad2fd30a62f5e69105b48c1a1.html">Function Gambit::ColliderBit::ATLAS::applyElectronIDEfficiency2019</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a6411ca61a81ce789e3a480801ef7d565.html">Function Gambit::ColliderBit::ATLAS::applyElectronIsolationEfficiency2019</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1ab03047d9d6f4f1dae6fdd0389a8e57ac.html">Function Gambit::ColliderBit::ATLAS::applyLooseIDElectronSelectionR2()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1ae43a82fc034584efbd3cc1eac2f4fb5b.html">Function Gambit::ColliderBit::ATLAS::applyLooseIDElectronSelectionR2()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a0a1f1fd449b607e29c209e3b457e7d7e.html">Function Gambit::ColliderBit::ATLAS::applyMediumIDElectronSelection()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a983c53a960850a544394eb2a54ec2f8c.html">Function Gambit::ColliderBit::ATLAS::applyMediumIDElectronSelection()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a8b216d9e4efc7df991880ec63234b234.html">Function Gambit::ColliderBit::ATLAS::applyMediumIDElectronSelectionR2()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1ab9a06c7b74a0a6fb60a3f4631aea30fc.html">Function Gambit::ColliderBit::ATLAS::applyMediumIDElectronSelectionR2()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1aed15b411a9dd1525f4c429001c30e2a9.html">Function Gambit::ColliderBit::ATLAS::applyMuonEff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a6210e1c1e1bc6608f69993b0706ae8c0.html">Function Gambit::ColliderBit::ATLAS::applyMuonEffR2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a7fed72d230ec295af7d49ff61621a8c6.html">Function Gambit::ColliderBit::ATLAS::applyPhotonEfficiencyR2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a7f1d0f561ef2bb959ce676241583c33e.html">Function Gambit::ColliderBit::ATLAS::applyTauEfficiencyR1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a9adc55ce219844b065be0eeaf11fdf29.html">Function Gambit::ColliderBit::ATLAS::applyTauEfficiencyR2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a02e070dc82bdc10cf8d4d07477cd111c.html">Function Gambit::ColliderBit::ATLAS::applyTightIDElectronSelection()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a007d73ea93df5516dae8e99a99d23a40.html">Function Gambit::ColliderBit::ATLAS::applyTightIDElectronSelection()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a507de27fec530a6e39e3b8011b7113fb.html">Function Gambit::ColliderBit::ATLAS::smearElectronEnergy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a43ab61722c904642c08b935644dbd0d9.html">Function Gambit::ColliderBit::ATLAS::smearJets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a8e7ceb91b11cb38469b7f264b8503bb1.html">Function Gambit::ColliderBit::ATLAS::smearMET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1ad58906fcb8d039c94e1fa423a76e70a6.html">Function Gambit::ColliderBit::ATLAS::smearMuonMomentum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1ATLAS_1a788362cce2744e7839f03f6db3950b90.html">Function Gambit::ColliderBit::ATLAS::smearTaus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1a0f8614fd96d901159ac0d80064ba1f33.html">Function Gambit::ColliderBit::BFM2SLHA_NN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1a2a49411999b394113fffcb395bab148f.html">Function Gambit::ColliderBit::BFM2SLHA_VV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a4fd48029976976354f74213f6b8d264d.html">Function Gambit::ColliderBit::binIndex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1a5d9da53652210cd01275f3b77f8a2206.html">Function Gambit::ColliderBit::calc_combined_LHC_LogLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1aeab93ba70b53d1ca4ede58fc669e7666.html">Function Gambit::ColliderBit::calc_DMEFT_profiled_LHC_nuisance_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__Higgs_8cpp_1ad52378a77e73a6c354e8dbff99e2f956.html">Function Gambit::ColliderBit::calc_HB_LEP_LogLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__Higgs_8cpp_1adb2876394b3b4ad3f580a9dc81448432.html">Function Gambit::ColliderBit::calc_HS_LHC_LogLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1ab31b3bf9535961fc06d86c2743109533.html">Function Gambit::ColliderBit::calc_LHC_LogLike_scan_guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1afe222480b8cb9ef3bf37262d5d6a75a5.html">Function Gambit::ColliderBit::calc_LHC_LogLikes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1a109db19d5c1790c312adbdf90c2b6d38.html">Function Gambit::ColliderBit::calc_LHC_signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1aa372076882c0888fc20fcf8f52a666e1.html">Function Gambit::ColliderBit::calc_loglikes_for_analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8cpp_1a772e2e5ffacd8972d7da55323230dc92.html">Function Gambit::ColliderBit::calc_susy_spectrum_scan_guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__0LEPStop__36invfb_8cpp_1a2bd8de508d5b9fbc3af058cba48241ad.html">Function Gambit::ColliderBit::calcMT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__1LEPStop__36invfb_8cpp_1a10e4bc9637bbedebf77554eaab1cf8d4.html">Function Gambit::ColliderBit::calcMT_1l</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1a8bc2df3538bcfcf6f99c7f6d7bf52710.html">Function Gambit::ColliderBit::checkOptions_getYAMLCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a4fdf4a31732240b6ec1f4f92cb130a19.html">Function Gambit::ColliderBit::cmpJetsByPt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1ab4abea9a2b524471f92960a8e57ca597.html">Function Gambit::ColliderBit::cmpParticlesByPt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1adbbc313338a5a9746f6f1e1c05e1a200.html">Function Gambit::ColliderBit::CMS::applyBtagMisId()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1abfe6a5c39fab54024a07af03c9f04262.html">Function Gambit::ColliderBit::CMS::applyBtagMisId()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a8277e9316f0d53cee8cdfa6d5495e238.html">Function Gambit::ColliderBit::CMS::applyCSVv2LooseBtagEff()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a3852aa0043fb37cd2438df29898cdd40.html">Function Gambit::ColliderBit::CMS::applyCSVv2LooseBtagEff()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a9849c551a617d2d77d9beadbec937b9c.html">Function Gambit::ColliderBit::CMS::applyCSVv2LooseBtagEffAndMisId()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1af275457546e63ff4c867bede23940e49.html">Function Gambit::ColliderBit::CMS::applyCSVv2LooseBtagEffAndMisId()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a7aff46ccc1e659340beecc2f6bc3fbd9.html">Function Gambit::ColliderBit::CMS::applyCSVv2LooseBtagMisId()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1ae30d73d9612e4749ac8cb6f37a5cba0d.html">Function Gambit::ColliderBit::CMS::applyCSVv2LooseBtagMisId()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1ab8337314f862c7d52263076be261ceb6.html">Function Gambit::ColliderBit::CMS::applyCSVv2MediumBtagEff()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1af88e55a4e5b449cc45d61871b7d50006.html">Function Gambit::ColliderBit::CMS::applyCSVv2MediumBtagEff()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a89082670e09757644ae97095dab97659.html">Function Gambit::ColliderBit::CMS::applyCSVv2MediumBtagEffAndMisId()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a9ad8e2fc85f72ff1b6970f5b17e8e87f.html">Function Gambit::ColliderBit::CMS::applyCSVv2MediumBtagEffAndMisId()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a3c45c10ae85d2a1a2c5174001f4e9a21.html">Function Gambit::ColliderBit::CMS::applyCSVv2MediumBtagMisId()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a13da06b00f2f54fc9334d4596e94c2a3.html">Function Gambit::ColliderBit::CMS::applyCSVv2MediumBtagMisId()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a21ef840d1b4329f3b773b9e77807b1af.html">Function Gambit::ColliderBit::CMS::applyElectronEff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a89a3847d536a96d290b7d4c81c00372d.html">Function Gambit::ColliderBit::CMS::applyElectronTrackingEff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1ab1505d12e0fe18877d8afa86e83df707.html">Function Gambit::ColliderBit::CMS::applyMuonEff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a373164680c6bca8d94b699b17e038a72.html">Function Gambit::ColliderBit::CMS::applyMuonTrackEff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1adb68a1df2dfc3f8a8b30b95127834cb8.html">Function Gambit::ColliderBit::CMS::applyTauEfficiency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a6e1e42a2d443facf5dc9e9558cd3cc53.html">Function Gambit::ColliderBit::CMS::smearElectronEnergy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1aa82b5cc950fdb91e31c9bb3ac7d26d80.html">Function Gambit::ColliderBit::CMS::smearJets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1a5b468afca764b653736efbdde08caa9c.html">Function Gambit::ColliderBit::CMS::smearMuonMomentum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceGambit_1_1ColliderBit_1_1CMS_1ac1abbb95c9de02059ac9b59bfdea20a2.html">Function Gambit::ColliderBit::CMS::smearTaus</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Function Gambit::ColliderBit::CollectAnalyses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1a85901588714c3cc17c9132fc67206fb3.html">Function Gambit::ColliderBit::convert_xsecs_to_fb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8EventConversions_8hpp_1ab50b344a3140f50cdc0b43f1437274de.html">Template Function Gambit::ColliderBit::convertParticleEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8EventConversions_8hpp_1a42e166b5bdf2ffb8544b4a65edc89976.html">Template Function Gambit::ColliderBit::convertPartonEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_smearEvent_8cpp_1a349059b8dfe37e624a392d474638225a.html">Function Gambit::ColliderBit::copyEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1ae0ffa8d8fda0bbda592974ccbc0dd27a.html">Function Gambit::ColliderBit::countPt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a858795fe02f1780e07b8c98625727488.html">Function Gambit::ColliderBit::countPt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ab707ed8c2f9af699566186e3cd7d1256.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_0LEP_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ad7de8d89709ae2016669c272307c2a0c.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_0LEP_13invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a0953ce3fbe423f653dada4d62c652e2a.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_0LEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a0b85c0aabc4d9a9ddd1ca456c62f2ae0.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_0LEPStop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a58b94161b9db28e396a3cf36f801ab9d.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_1LEPStop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a6b219aa237c5a045c4043dd1097bb9df.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2bMET_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ab4a60a77310723803cc65c9a1e042c37.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2LEPStop_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a738c82b856f6b193a31e64f119ec5b99.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2LEPStop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a2d981b3b409a65cc065c39eaf708341d.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2LEPStop_exclusive_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a6ad537290a6a74d7b97adfa892ea9c2d.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2LEPStop_inclusive_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1adc17c7d7e393ed8e61ed2b3a3f2916a9.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2OSLEP_chargino_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a2d3f2fe5946c1a08c3aea9d671b73ae5.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2OSLEP_chargino_80invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a4ea0eca656c5de1d0cdc92f692b0d0cc.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2OSLEP_chargino_binned_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aca0d19a01c9c662d571529e59b6f6dd5.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2OSLEP_chargino_binned_80invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a745c3806a3750ab9144cb3ac499f2c28.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2OSLEP_chargino_inclusive_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a857062b92769d8708c44a4f23ebab649.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2OSLEP_chargino_inclusive_80invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1abf0f72309a96500c0bbddf2f222884ed.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_2OSLEP_Z_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ab6dc927eae904e8748e3c92f42bfb20c.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_3b_24invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a5fae4d48b79f497d4cfd9c621df1a13c.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_3b_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ada3f87330048ef41d1886e3a359b5d17.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_3b_discoverySR_24invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a11d823c8e6c4cc9a33d8b9076a5f976e.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_3b_discoverySR_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a36e9712530b56c1f3502081b99c3cbd7.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_4LEP_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a840d945c604ef52d6795be2694735d20.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_4LEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1acf70e00b9b36999aad13bdbcc3fa0542.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_MultiLEP_2Lep0Jets_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aa97870ba85491de4efa013a8c1d294f6.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_MultiLEP_2LepPlusJets_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ad24ae5b8b6cc5f7c5d002ad05909841c.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_MultiLEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a4eba9c347b04d300ee4d4982322aeb0c.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_MultiLEP_3Lep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aa76f3319e51d344929ed4cf0699e4f07.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_MultiLEP_confnote_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af729cda73c5a6f17cfdc1f7daadfa599.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_MultiLEP_strong_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a048e2edc3954f45f696f669df2bfb24b.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_PhotonGGM_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aa899910edffd2549036f5a6609389535.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_RJ3L_2Lep2Jets_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a494c7ecffb2a7f5fad69a0a457005ce3.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_RJ3L_3Lep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a371a66e895f3337f4bedf352093600ad.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_RJ3L_lowmass_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a0677110d5dc9fd1e629f6f9e89d0978d.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_13TeV_ZGammaGrav_CONFNOTE_80invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ac4a5cbc09bc47417549622d5b5558d5b.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_7TeV_1OR2LEPStop_4_7invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a1345162706429ad3546dd9380aed7a66.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_7TeV_2LEPStop_4_7invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a8dba35f43329eec7100c1a8d37b57769.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_8TeV_0LEP_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af01f8cff43f8873f713c0b318477430f.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_8TeV_0LEPStop_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a856de52ba205bc1b757ede13a044bd86.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_8TeV_1LEPbb_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a12057cc6c44b50d9614009e8af7b2d39.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_8TeV_1LEPStop_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af9609fe4fa01ac654c52b7c6a9177620.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_8TeV_2bStop_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af1e1845dc0d5ca0401ecc5132bc036eb.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_8TeV_2LEPEW_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1adb9d0149884a9d70417e074bd3595efd.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_8TeV_2LEPStop_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1afdafe6cc4f0652836a82349ee4827486.html">Function Gambit::ColliderBit::create_Analysis_ATLAS_8TeV_3LEPEW_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a81283d360ffb8a3e70cc4b296680ebd5.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_0LEP_137invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ab2ef66a0db2b27ba17f30470283671f2.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_0LEP_13invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ae5e73b006378f929ea45fc40e051c55f.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_0LEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a8138732707aa00580670dc37b98a2abd.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_1LEPbb_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a9d2a17e7cd5a2824a8bbb5dd6490c300.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_1LEPStop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a650f5a60a5ec8fbf99f1aba0d1598e35.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_1Photon1Lepton_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a0230e0bab6caaccd48114dd0ff669307.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_1Photon1Lepton_emu_combined_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a079e337403f18cf796cb9322eb885880.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2LEPsoft_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aaa27f84991fc91c3d7b924fb3ba485d3.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2LEPsoft_36invfb_nocovar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ae61768e48a6011975c032bc7640575e1.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2LEPsoft_stop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af38745c91b29122912dae9ce8e26d4f0.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2LEPsoft_stop_36invfb_nocovar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a3b7ce36f0bcbe255fcfecdba4b0768ed.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2LEPStop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a2ff47f4af88908533c2f538cb549e2bf.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2OSLEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a2c4b08a98d1a2b406465f7c45c190dcb.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2OSLEP_36invfb_nocovar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a6d006a7de108d62ac2e7b2a58f12b74f.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2OSLEP_chargino_stop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a15c69ae94158dffed024d70bcc67d918.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2OSLEP_confnote_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a68aa9a281a2df8904d8e452a5644e540.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2OSLEP_for_chargino_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a3312235b7f3cc68d1480be4ff45190f4.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2OSLEP_for_stop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a15f4630649e7270b26b24cc702ca5c84.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2Photon_GMSB_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a7e4e03d9b4d647110a0a583e1b23de00.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2SSLEP_Stop_137invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ac5577889b86a4b61777de2b99426f3b2.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2SSLEP_Stop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ada7ba2cfef97c5c4160537b2e9ef1832.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2SSLEP_Stop_exclusive_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a7d1acffde607e2c3b9d38ca2102df162.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_2SSLEP_Stop_inclusive_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a736a6a3e4bc468a1ac406cb2ab5bfe43.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_MONOJET_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a0005869e4e93f88ae8be07daacd33c83.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_MultiLEP_2SSLep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a161b6e4d999814c657a27e8ab9255576.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_MultiLEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af038d0d11dbbd5664dcde1da2bd2a699.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_MultiLEP_3Lep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af6b7c03d68aec014d3109bc0fc9940e3.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_MultiLEP_Full_2SSLep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a786e9620f5f35a6fbf34a31cdc9a3052.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_MultiLEP_Full_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a50535510de7ef5cdf3421c5f5f9defa4.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_MultiLEP_Full_3Lep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a4e9529bc757a4fac662d732abb5bebd2.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_MultiLEP_Full_3Lep_rebinned_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a1959f3e08553ac2132b27f4ebd95314d.html">Function Gambit::ColliderBit::create_Analysis_CMS_13TeV_Photon_GMSB_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1abf86e28003fa72d2393fab0523c749ef.html">Function Gambit::ColliderBit::create_Analysis_CMS_8TeV_1LEPDMTOP_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a63b1c460bf7d3e321a9ba55072762e31.html">Function Gambit::ColliderBit::create_Analysis_CMS_8TeV_2LEPDMTOP_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a03afac778da7cae99e1af76775aa1ec7.html">Function Gambit::ColliderBit::create_Analysis_CMS_8TeV_MONOJET_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ad470dc8d3cff5a9cb31f315a6167ff5e.html">Function Gambit::ColliderBit::create_Analysis_CMS_8TeV_MultiLEP_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a6a0f07b054f8927ed7c54ff13ea878ee.html">Function Gambit::ColliderBit::create_Analysis_CMS_8TeV_MultiLEP_3Lep_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a60f37b302b10bc054b0a2d9b4db70d5f.html">Function Gambit::ColliderBit::create_Analysis_CMS_8TeV_MultiLEP_4Lep_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af5503f7e834b0f6889c13a7d568b13f3.html">Function Gambit::ColliderBit::create_Analysis_Covariance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aa82db29d427922fd225239b90766368b.html">Function Gambit::ColliderBit::create_Analysis_Minimum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__ZGammaGrav__CONFNOTE__80invfb_8cpp_1a7c337fa29f65840eb62658bdf2ae6ab8.html">Function Gambit::ColliderBit::DEFINE_ANALYSIS_FACTORY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1ac3973f4ef16dc84eb1ec3873f15c61b0.html">Function Gambit::ColliderBit::DMEFT_results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1ad34ef94007d90c2c983ed20f99120386.html">Function Gambit::ColliderBit::DMEFT_results_cutoff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1acfb2fa465de3e5f18ea2cd157765ca03.html">Function Gambit::ColliderBit::DMEFT_results_profiled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1ad018861cfbdd85115f8d16dba9106dfc.html">Function Gambit::ColliderBit::doCrossSectionConsistencyCheck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_generateEventPy8Collider_8hpp_1a9cbda0b8772ada2f012c84c66cd84921.html">Template Function Gambit::ColliderBit::dropHepMCEventPy8Collider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a5901c69e006fd8c320521d42659d9694.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_child_ids(ParticleP&amp;, EventT&amp;, std::vector&lt;int&gt;&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1af921a7edeca1d7d217e277440c9cb8e9.html">Function Gambit::ColliderBit::EventConversion::get_unified_child_ids(const HepMC3::GenParticlePtr&amp;, const std::vector&lt;HepMC3::GenParticlePtr&gt;&amp;, std::vector&lt;int&gt;&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1ad859650b7ad8619b469c86c99d1d034c.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_eta(ParticleP)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1aaa3ad7c563660da2c1fd2d13d78ec172.html">Function Gambit::ColliderBit::EventConversion::get_unified_eta(const HepMC3::GenParticlePtr&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a03d229399cec64f6093912f83bf4f5c1.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_fromHadron(ParticleP&amp;, const EventT&amp;, int)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a50ca5b5fcc4bd21abcfee5d8d2a32e18.html">Function Gambit::ColliderBit::EventConversion::get_unified_fromHadron(const HepMC3::GenParticlePtr&amp;, const std::vector&lt;HepMC3::GenParticlePtr&gt;&amp;, int)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a47b004ebfcd479d053e1ad115c8862ce.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_isFinal(ParticleP)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a4fff66ac300704d51b8197d77d441c56.html">Function Gambit::ColliderBit::EventConversion::get_unified_isFinal(const HepMC3::GenParticlePtr&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1aec371b0b37374709072056791af48044.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_momentum(ParticleP)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1aecc0c3f77db9ce3cc0e8455bc0352566.html">Function Gambit::ColliderBit::EventConversion::get_unified_momentum(const HepMC3::GenParticlePtr&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1afccc7247fc89851a6ffa78e46f032a12.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_mother1(ParticleP&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a4b26074bc4b7a16b790e3ca9ab8ca12d.html">Function Gambit::ColliderBit::EventConversion::get_unified_mother1(const HepMC3::GenParticlePtr&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a8a8ec0d1226991832c40e8676eb8c3ff.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_mother1_pid(ParticleP&amp;, EventT&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1ab4ce58d6070230d33e17e4fdd3ec7593.html">Function Gambit::ColliderBit::EventConversion::get_unified_mother1_pid(const HepMC3::GenParticlePtr&amp;, const std::vector&lt;HepMC3::GenParticlePtr&gt;&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1ab527a3085ce68b94eb37db5d76ced06c.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_mother2(ParticleP&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1af3e480efa617cb93220f6a636140fffb.html">Function Gambit::ColliderBit::EventConversion::get_unified_mother2(const HepMC3::GenParticlePtr&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a5eaf2a72b7e21cc6ae3df430a1bad198.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_mother2_pid(ParticleP&amp;, EventT&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a770e75c5700bcba64f3f274010403168.html">Function Gambit::ColliderBit::EventConversion::get_unified_mother2_pid(const HepMC3::GenParticlePtr&amp;, const std::vector&lt;HepMC3::GenParticlePtr&gt;&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a66aaa9edc3eff393269f7ed8a780e70d.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_pid(ParticleP)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1aa25ac5fe7cdf4f5da23c444de686309d.html">Function Gambit::ColliderBit::EventConversion::get_unified_pid(const HepMC3::GenParticlePtr&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a5b46b18371847c6f3950580433e2b7a0.html">Template Function Gambit::ColliderBit::EventConversion::get_unified_pseudojet(ParticleP)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1a17a4f804344df426d1b71f323d4cfc09.html">Function Gambit::ColliderBit::EventConversion::get_unified_pseudojet(const HepMC3::GenParticlePtr&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_EventConversionUtils_8hpp_1ad995f0e518b3203f1c8e10f52a0c68c2.html">Function Gambit::ColliderBit::EventConversion::HEPMC3_isParton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__Higgs_8cpp_1a4ad9928c29decfa7cad12b2dcc337ab5.html">Function Gambit::ColliderBit::FeynHiggs_HiggsProd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1a77e1e6f4e83205760ee6e97eac487757.html">Function Gambit::ColliderBit::fill_analysis_info_map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a1a018b09cbd8d1f85e2af56b717a5f6e.html">Function Gambit::ColliderBit::filter_reject()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a2413a535901135a74d4d20f101c78abd.html">Function Gambit::ColliderBit::filter_reject()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a2019408d78d453c480024a58ed872a12.html">Function Gambit::ColliderBit::filter_select()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1ad3ed8df8faa85dbfa9e27feac8555b08.html">Function Gambit::ColliderBit::filter_select()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a878e042861c7e3c817f85f0678954ecc.html">Function Gambit::ColliderBit::filtereff()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a6cc580ac44bf5513d5206959d8ae4514.html">Function Gambit::ColliderBit::filtereff()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a198880b5e00a4a2c6a6e7a3ee801ad1e.html">Function Gambit::ColliderBit::filtereff_etapt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1acacdc93daa0787f1cf7a436380390a7a.html">Function Gambit::ColliderBit::filtereff_pt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1afe3f3167e3fd6c6a40c811daf8049a9e.html">Function Gambit::ColliderBit::fromBottom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1aa7eb6fa6f85fb094a6b3eccf87c51913.html">Function Gambit::ColliderBit::fromHadron</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1aabbafbbb0e8d2bbba0ed8f66cd799471.html">Function Gambit::ColliderBit::fromTau</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a6506203fe9da38752dd2a1a783974f6d.html">Function Gambit::ColliderBit::generateBTagsMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_generateEventPy8Collider_8hpp_1a15297fb2b1580bb766aa4aa1dab3435c.html">Template Function Gambit::ColliderBit::generateEventPy8Collider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1add7205c37867015ac8b11e4a9987c43c.html">Function Gambit::ColliderBit::get_all_DMEFT_signal_yields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1a89d3209ad6993f929779ec026e09f5a1.html">Function Gambit::ColliderBit::get_DMEFT_signal_yields_dim6_operator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1abac0f0c989a899660856fc73b28e8a1d.html">Function Gambit::ColliderBit::get_DMEFT_signal_yields_dim7_operator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a70a48e8033edee127719134dcedd6fc8.html">Function Gambit::ColliderBit::get_jets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1aae752d88dc8febc660c69c3b7497bb37.html">Function Gambit::ColliderBit::get_LHC_LogLike_per_analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1a76ce3bab18adcf2953c4ae58698a043b.html">Function Gambit::ColliderBit::get_LHC_LogLike_per_SR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1a88887324dcde65eec7890eddc1b942b3.html">Function Gambit::ColliderBit::get_LHC_LogLike_SR_indices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1aa92b67efa599b9e4f5def8ff480833f8.html">Function Gambit::ColliderBit::get_LHC_LogLike_SR_labels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1a4ec008f96435ebe11b78eca1aa2126f0.html">Function Gambit::ColliderBit::get_sigma_ee_chi00</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1abbf01c906a8961538f1ea4f79d56fcec.html">Function Gambit::ColliderBit::get_sigma_ee_chipm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1a989dc93c7fb84645e72819a5986ab7a5.html">Function Gambit::ColliderBit::get_sigma_ee_ll</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8cpp_1a81c600f971c6a04919dd1b825294e075.html">Function Gambit::ColliderBit::GET_SPECIFIC_PYTHIA_SLHA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY_8cpp_1a6d3b525610e4027d8e74a9cfecd3df8b.html">Function Gambit::ColliderBit::GET_SPECTRUM_AND_DECAYS_FOR_PYTHIA_SUSY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_process__code__PID__pair__mapping_8cpp_1a1575b93a743be0a1ae18995aa3a6a2b3.html">Function Gambit::ColliderBit::getActivePIDPairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getActiveProcessCodes_8cpp_1ad6b9d54b30afe9a3691a213668a846c3.html">Function Gambit::ColliderBit::getActiveProcessCodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_process__code__PID__pair__mapping_8cpp_1a542c460f6394282a1ac609bd0a09f247.html">Function Gambit::ColliderBit::getActiveProcessCodeToPIDPairsMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getAnalysisContainer_8cpp_1a06cdbc6e15bdd1680adfaf2957321183.html">Function Gambit::ColliderBit::getAnalysisContainer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8cpp_1a6363fd11361a2611aa3285cb075a5672.html">Function Gambit::ColliderBit::getAndReplaceSLHAContent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getAnalysisContainer_8cpp_1a22d3afa47cd39fec7e4d86855306a5a6.html">Function Gambit::ColliderBit::getATLASAnalysisContainer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getBuckFast_8cpp_1adb6cf55a989324b29f8d1d5605712571.html">Function Gambit::ColliderBit::getBuckFastATLAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getBuckFast_8cpp_1a081bd4307fbc73cdf6000e942fe3b537.html">Function Gambit::ColliderBit::getBuckFastCMS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getBuckFast_8cpp_1a2cba3802cdcd2c9ca425eb09d6a71f8d.html">Function Gambit::ColliderBit::getBuckFastIdentity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getAnalysisContainer_8cpp_1ac1ad7f5ee97f997449a1e6f26d098b43.html">Function Gambit::ColliderBit::getCMSAnalysisContainer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8hpp_1a341c31eed591311cea031c6abda1d27d.html">Function Gambit::ColliderBit::getDetector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a10b2762039573f2e4739e6698677cc33.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_0LEP_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ab1d162415fe204ea3c239f6905c61a3c.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_0LEP_13invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a601fb6572e3636b6dfa187c3a81a26d7.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_0LEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a0db10a46000555e723aa977a25437096.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_0LEPStop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aa025c19f3dcd0b954a247051c6b9e118.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_1LEPStop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a1677c7267086726cff2b5eb7d2f110ea.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2bMET_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af052bda43a0718e8aa3ed7d5d313ecc0.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2LEPStop_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af1f9bcdc67b99f05e74023d55079e34e.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2LEPStop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1abd3a5e9a34dee61a4575460a17e431aa.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2LEPStop_exclusive_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ab3c62dbb89800f0cd28fa9819e13a996.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2LEPStop_inclusive_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a490bd3bec9eab76cb8ec1b22936e59ce.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2OSLEP_chargino_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1affcaa6cd6786d80fb6c759f98ba34b04.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2OSLEP_chargino_80invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a5e477219824e3e835cad4ea4ed8fa8a7.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2OSLEP_chargino_binned_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ac2c5b12952b05c6c5565064e288c1407.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2OSLEP_chargino_binned_80invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af09ff6df502c0a40f7eae4a8fb4f3cb1.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2OSLEP_chargino_inclusive_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a67195f50c9fc5eecaccdb04a008aae60.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2OSLEP_chargino_inclusive_80invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aaafc272e92f9e48cdddeb970751b79b4.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_2OSLEP_Z_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a5fa6ac7f32b343793f205701d25ba536.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_3b_24invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ac3b9a2eaf432f1666ae18d9b62377c3c.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_3b_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a3f86eeada660d77bc560302f09fba591.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_3b_discoverySR_24invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a12d18a35b87853d1fd3834ec15c98818.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_3b_discoverySR_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aa267bfe95a281acfc5d14b777d0670eb.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_4LEP_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1afef9636b03d4dc694b8b42097fc8d6ce.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_4LEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a89e808d232b26537d9071cc74e76a898.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_MultiLEP_2Lep0Jets_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1acea30199827f2fc0376078850165ee38.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_MultiLEP_2LepPlusJets_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ab63e82f215367781c9aea569321e83f2.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_MultiLEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ae234557abbad6ae741e6ff777fb689c1.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_MultiLEP_3Lep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a91e8db98b752f36e31965fa3f14db2b5.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_MultiLEP_confnote_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a725a5e83db9359301be01db730a5bb40.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_MultiLEP_strong_139invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ab80dabc93d807734da3ff86216200956.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_PhotonGGM_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a0ec7fbf952824b1e978051e766d81fcd.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_RJ3L_2Lep2Jets_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a15f4b51fc9e93d0486f727e81a7fdb36.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_RJ3L_3Lep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1acada57332b8577a9d6d67ff8ac325fbc.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_RJ3L_lowmass_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a9b9642c14de4aff8bf8ebede3864032d.html">Function Gambit::ColliderBit::getDetector_ATLAS_13TeV_ZGammaGrav_CONFNOTE_80invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1afb3a0854ce8a9b1d8e95f35fde83fade.html">Function Gambit::ColliderBit::getDetector_ATLAS_7TeV_1OR2LEPStop_4_7invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a7596b933b177666175f1054a4d9aa65e.html">Function Gambit::ColliderBit::getDetector_ATLAS_7TeV_2LEPStop_4_7invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a11280d6c460754b60c3c03478fdf5e7a.html">Function Gambit::ColliderBit::getDetector_ATLAS_8TeV_0LEP_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a3d66d52985eb6c075b93f76685f354c8.html">Function Gambit::ColliderBit::getDetector_ATLAS_8TeV_0LEPStop_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a8ad75337bb22959d9eb7f2432e140cda.html">Function Gambit::ColliderBit::getDetector_ATLAS_8TeV_1LEPbb_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ac09523457518f6b8215a7a77f0ad969c.html">Function Gambit::ColliderBit::getDetector_ATLAS_8TeV_1LEPStop_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a2b98e2af0331439968710e5f99d85241.html">Function Gambit::ColliderBit::getDetector_ATLAS_8TeV_2bStop_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ae64e735283749f03ec9bff3bc925fe37.html">Function Gambit::ColliderBit::getDetector_ATLAS_8TeV_2LEPEW_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a68b55676aba8b2f2c835f6e4374033f1.html">Function Gambit::ColliderBit::getDetector_ATLAS_8TeV_2LEPStop_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a6e99a4df58e3fb1ea3a652ed3a3b7b09.html">Function Gambit::ColliderBit::getDetector_ATLAS_8TeV_3LEPEW_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aafb98eda8ee5dd7410114522ee4654ff.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_0LEP_137invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a9bcab2e991fc7f48ec4a0c41159bf7d3.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_0LEP_13invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a570aba0b93c634246825fc7bc3772a1a.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_0LEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1abc3acef0f0e56148ec5842efeaffc08e.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_1LEPbb_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a5c6ab05188e2f756e7a84eef728cde29.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_1LEPStop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a2b3f97e2d1ba98244fb8daa905b63b88.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_1Photon1Lepton_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a3c9909e590564af40056d25bc6214fbb.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_1Photon1Lepton_emu_combined_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a51e273ea1151265cf671dd5d7903bcab.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2LEPsoft_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a9b6355c496a6127ddf8bf1ddb523268a.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2LEPsoft_36invfb_nocovar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ac6956babb0a4fbe8edffc1867a7966b2.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2LEPsoft_stop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ad83bf9e1e4d473a824187d6bf11b746e.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2LEPsoft_stop_36invfb_nocovar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a439fcfbcadb1e64aa91f585e1c47e2d7.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2LEPStop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a52483eebc23622d40df64c2f31772d40.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2OSLEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a3adddd8d92a32cd2379a91159577fe6f.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2OSLEP_36invfb_nocovar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a713680dbe66a6fb75e6f2ef4cdbd5736.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2OSLEP_chargino_stop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1aabd47be34de63e0936f84085761b51d5.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2OSLEP_confnote_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a784504c739924a2dd776cbb3459d25ab.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2OSLEP_for_chargino_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a94a562d53dfc6f5ca53fc06ab87ef06c.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2OSLEP_for_stop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ac618feee9673d4ab85baee8ada464f3b.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2Photon_GMSB_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a47f059a7dd101b727aa2d7e004e3b6ec.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2SSLEP_Stop_137invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af647a3633a663c10e75632ba5b436b56.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2SSLEP_Stop_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a79d79e43c0eb2ae041b8c85ae0794ea7.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2SSLEP_Stop_exclusive_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ac68b01234796485e0b4994a84b35fdc3.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_2SSLEP_Stop_inclusive_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a29f98c09a5b3101b04b720fa2489387b.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_MONOJET_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a1cf850b32d8178c190827a14aa2307f6.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_MultiLEP_2SSLep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af4faa48346b867fa7d76ce00417ffcfe.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_MultiLEP_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af50430ff5fd3b14bd294aa854313a77d.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_MultiLEP_3Lep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a901bba048fa53f1e942d820ff670b071.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_MultiLEP_Full_2SSLep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a3933fd405031582d8c4532f54d8c89ec.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_MultiLEP_Full_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a3cfd24bbe078fb00f765fbda6433e7a4.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_MultiLEP_Full_3Lep_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1accd1905ac337345cbb0b1388bca3ba82.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_MultiLEP_Full_3Lep_rebinned_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ac0aa9222863b63ea746b8c98d9a0669f.html">Function Gambit::ColliderBit::getDetector_CMS_13TeV_Photon_GMSB_36invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ab531e3116c1b57e23ba86499be94effa.html">Function Gambit::ColliderBit::getDetector_CMS_8TeV_1LEPDMTOP_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ace33bc6f8ea5f7c536ee25feabe04e7f.html">Function Gambit::ColliderBit::getDetector_CMS_8TeV_2LEPDMTOP_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a506857f50a31161218f71a20682fe87a.html">Function Gambit::ColliderBit::getDetector_CMS_8TeV_MONOJET_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1af6bbf1ad641f7a751b6ae10bb82f1779.html">Function Gambit::ColliderBit::getDetector_CMS_8TeV_MultiLEP_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a28c00cf416bb944872ff52adebad9095.html">Function Gambit::ColliderBit::getDetector_CMS_8TeV_MultiLEP_3Lep_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a0e4ae1ad269a7de1b11c1a4f96b80db1.html">Function Gambit::ColliderBit::getDetector_CMS_8TeV_MultiLEP_4Lep_20invfb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1a0cd0a8bea71ab057b22f8f249b06a5da.html">Function Gambit::ColliderBit::getDetector_Covariance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8cpp_1ab2d9414fdab1881e540a7b99d72ccc94.html">Function Gambit::ColliderBit::getDetector_Minimum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__dummy_8cpp_1a890744b1f1f61371a7f03d5bcff3d6ed.html">Function Gambit::ColliderBit::getDummyColliderObservable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1a9e877c6d2d31189e7919f21f4a76b23a.html">Function Gambit::ColliderBit::getEvGenCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1acc41ba64cd92b7775c9c3c50f6e692d7.html">Function Gambit::ColliderBit::getEvGenCrossSection_as_base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getHepMCEvent_8cpp_1a416cd7baf6bd86cf9ce9b946db937213.html">Function Gambit::ColliderBit::getHepMCEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getAnalysisContainer_8cpp_1a57e87b82f30c43100ef7a67d110e9c5a.html">Function Gambit::ColliderBit::getIdentityAnalysisContainer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__eventloop_8cpp_1a132440e55b40d46ed297b3d8de3e72df.html">Function Gambit::ColliderBit::getLHCEventLoopInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getLHEvent_8cpp_1a1b28509f4e801937cc82732cde3dc590.html">Function Gambit::ColliderBit::getLHEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1ab9ce0663698907199868970fd5f1a721.html">Function Gambit::ColliderBit::getNLLFastCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a4ade2e59fe5795e1cd55cc1516f6a6f3.html">Function Gambit::ColliderBit::getOSpairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1aad4e3ff084fbc1311ee20d8dcd3d495c.html">Function Gambit::ColliderBit::getPIDPairCrossSectionsInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1a2f0d8eadae6eb2c168fa6c75868eac55.html">Function Gambit::ColliderBit::getPIDPairCrossSectionsMap_prospino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1aaf9f6ceecac4a6f1b0fa9a84903ced10.html">Function Gambit::ColliderBit::getPIDPairCrossSectionsMap_testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1ad955ff4bcca971d65e21f56391df9f4d.html">Function Gambit::ColliderBit::getProcessCrossSectionsMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getPy8Collider_8hpp_1a5ede3f4b8295dfe12591687b91521a80.html">Template Function Gambit::ColliderBit::getPy8Collider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a4b8fca22bab46eebe47ed3908eca1725.html">Function Gambit::ColliderBit::getSFOSpairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8cpp_1a2959357b3e5f373c695c9695cd8c7728.html">Function Gambit::ColliderBit::getSLHA1Spectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8cpp_1a347e5d0f07da20505418a1190c44cdf6.html">Function Gambit::ColliderBit::getSLHA2Spectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8cpp_1a95400b0c3aae3bc5287310ab212291b3.html">Function Gambit::ColliderBit::getSLHAFileElements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1ab2dfeadec5c25359a418f22b14cf1da6.html">Function Gambit::ColliderBit::getSSpairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1a487dc7186bae6e4108c24fe9065b30a9.html">Function Gambit::ColliderBit::getTotalCrossSectionAsMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1a785b9f67e6f3febfe0edd0e609fa3064.html">Function Gambit::ColliderBit::getYAMLCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1aa16c952740fdf5d486bc8768dbbdd161.html">Function Gambit::ColliderBit::getYAMLCrossSection_param</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1a5e8df620827c109afe3d7e1ba417732e.html">Function Gambit::ColliderBit::getYAMLCrossSection_SLHA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a3a98b6d22188cdf64b09e866b31cb6f3.html">Function Gambit::ColliderBit::has_tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8cpp_1a677234e706d36fbf0d69ea4aa36da071.html">Function Gambit::ColliderBit::I1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8cpp_1a542968f21cd6ea97fa35a259c1867b41.html">Function Gambit::ColliderBit::I2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8cpp_1a4f0f4abb63ed791a4fcf32df0d122b98.html">Function Gambit::ColliderBit::I3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a1684b50776a7a5c8ee5dc9184abf81d5.html">Function Gambit::ColliderBit::ifilter_reject()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a9745f85f022c50e621511dcb8a14e34e.html">Function Gambit::ColliderBit::ifilter_reject()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a20aacf254f32c16e5347ffbb6fedae41.html">Function Gambit::ColliderBit::ifilter_select()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a69713e830f67280d1f6578c2df49674b.html">Function Gambit::ColliderBit::ifilter_select()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1a8f54236771955821c2aefcb85cd36b8c.html">Function Gambit::ColliderBit::InterpolatedMCInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1af270c432665b810c5ed3a053ee216a90.html">Function Gambit::ColliderBit::iremoveerase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ac7f44c0dc65eacab6d5cb8bacc7fbab4.html">Function Gambit::ColliderBit::is_xsec_sane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1ae3d158ade9c19939449629a690a26610.html">Function Gambit::ColliderBit::isFinalB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1a6685729995990d7c406e1c9fadb9fcc5.html">Function Gambit::ColliderBit::isFinalLepton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1a7c56591a9035aa42edeaff0dfdee3072.html">Function Gambit::ColliderBit::isFinalParton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1a554fdff74b49040712eaa953a7d17e15.html">Function Gambit::ColliderBit::isFinalPhoton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1a937ee11c1f4fd150a8a53fab300f6e51.html">Function Gambit::ColliderBit::isFinalTau</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1a8f43b6ae7aa38fd8b03554932a5758e6.html">Function Gambit::ColliderBit::isParton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ab52d32081caf4be86fe61b9bc108b77c.html">Function Gambit::ColliderBit::L3_Chargino_All_Channels_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ae1a89b6e07bfef9bcb2eb0ddf118f625.html">Function Gambit::ColliderBit::L3_Chargino_Leptonic_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a2522e659615324d2797a15b37d75bd24.html">Function Gambit::ColliderBit::L3_Gravitino_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1af1fd8e96b08cd4e30df63c4aee39624b.html">Function Gambit::ColliderBit::L3_Neutralino_All_Channels_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a341897648962e2c1f4195c268018f696.html">Function Gambit::ColliderBit::L3_Neutralino_Leptonic_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aceaaf830599122efc50f46a7867b72f5.html">Function Gambit::ColliderBit::L3_Selectron_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a041127277e4f449a61f9574cafc313cc.html">Function Gambit::ColliderBit::L3_Smuon_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a8f86e7ab13cb8e675a761ee9f59799e8.html">Function Gambit::ColliderBit::L3_Stau_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a56ef1b8eb48b7f60d50871d924c880ee.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chi00_11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a8fccfcd3962c5b1c644e5b72c86ba495.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chi00_12</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aa8631aef97217e893c522ef37966e88f.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chi00_13</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ad7bf6987a887b28fad2246ef524e251f.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chi00_14</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ab225304306130dbdb7da01c9f2063fb9.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chi00_22</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a30bd18979c627d96308bedb70e2e7990.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chi00_23</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a4c038b353ea9dc1c17b605138d5acd30.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chi00_24</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a18f5860a0b71a690203e4dc8e9217d60.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chi00_33</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a2cf7e858d4457d18ae289dc6b56999ae.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chi00_34</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aeb438699801690eb8a7b87aaa9a843c9.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chi00_44</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ae03c38f70297602109ce23a6135bccab.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chipm_11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ab040523f82db90e515ddfbfe15489516.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chipm_12</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a43ef80cfc7439f56bacd525bcb930b0c.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chipm_21</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a2beb2309e141ebbda8f5a9b091b1c795.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_chipm_22</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aa71caab74b41cd9cdfe5446e7c2f8a0e.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_se1se1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a921198b3383c8e07218e93c29525dbf4.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_se1se2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ae807617b6d2be578616492ebc3e1d338.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_se2se1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a89fef547dec674f9ba3be87355f62daa.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_se2se2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a14196368ea825cc11292cdb1fb60c21e.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_selselbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a9ff43a07bf481216ff6039765d17170c.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_selserbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a2d58c979b7ad02da1922e483826d5032.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_serselbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a83ea14b603a5dbd89f5ee6a47f8003bb.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_serserbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a0295a4b3b080bcf74b4c6b1a35f6e958.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_smu1smu1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1abd9baab8a2bf151d82b3ff10ab0d6849.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_smu1smu2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a14028a573d87134622cf84973c6e9607.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_smu2smu1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a51ea6c29c51490899ecef30d088401e3.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_smu2smu2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a7db93d4ae3cc26819be0b443b3d0a9cb.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_smulsmulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a0743daa65b72d17dc766a0aafc9d8dce.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_smulsmurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a5307967f043dd647f30c077c072da065.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_smursmulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a94e9f64115dbe872c01f1ce909266064.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_smursmurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a00cacf4ae96846ffbb3c64c33eda1107.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_stau1stau1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a822f8a2ffcb31255f034553fbdf71525.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_stau1stau2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a77a7551f9c4be6e328299b85c0b5c331.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_stau2stau1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aa2225df30f992aaa4a5cf2fdea0782d1.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_stau2stau2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a44e8b3afef9de1a9fcdc7d6433fbb8d7.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_staulstaulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1adbd40c6e174c3f373e8f736ba7523269.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_staulstaurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a0d79a831b25a1244512839d35ddfaa5a.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_staurstaulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1af8c66a686d2240b84fac15399595ebca.html">Function Gambit::ColliderBit::LEP188_SLHA1_convention_xsec_staurstaurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a679f5a4179dff7f5edddbf08b618351b.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chi00_11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a7513b522794fe8d239b440b4c341f817.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chi00_12</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a8321a99bcfe3cbaa0e2ef5e2537794d7.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chi00_13</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a9b156499e3316b51ff4f3cabcb602b40.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chi00_14</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a492fa12f3fb2cecc1cb4408e075e41b8.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chi00_22</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a185dcd31dc15852d6153abc55c4b1409.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chi00_23</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a08184cc82a9087aacf5059cc53d6f03b.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chi00_24</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a78bafff0be1301416acc0f8fd6d541f7.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chi00_33</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a6549992a462e0e5ee4f435a69073c27d.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chi00_34</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a6a90743e0985f5fe7b668a961d7038d1.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chi00_44</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a6730fd1c9cfe19685736a24e5e9149ef.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chipm_11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a17f5bb2fdc78e9067c52da4c6e8c584b.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chipm_12</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a088512ccd3931f662c635e5a601627c4.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chipm_21</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aabc90f2ec893c88b156b651e5f290ff7.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_chipm_22</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aa302e0734c6e64ce85b0f74e51ef2d2a.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_se1se1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aab6528cfb89ee4f3bcc87398a28f4d65.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_se1se2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a549e4a256f3258cb102818dce9e5b7f4.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_se2se1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a0817068bd8c520a555f60805753b4efc.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_se2se2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a9452f995bdc75c7f1d62df5f068e5b98.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_selselbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1acb452181f11a374b3d3f6b275eda7623.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_selserbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ac6c923718ae76b04c355c53ab1304ed6.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_serselbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ad7e8db7bcd9f391d2b2790b5fb1be9f0.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_serserbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a3277a703d860eca06244338f18a116c7.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_smu1smu1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ab3e7ac7ab247156a715265d2150681a7.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_smu1smu2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aaef82286898e637e87f91dca26daf15b.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_smu2smu1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a5631229a626ef0fbb5886a9981d2ba92.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_smu2smu2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a773ba7564cdf27edbc36d3c0b7feee09.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_smulsmulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a10a40f97f6b3735d91bfbedfd2cc3727.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_smulsmurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aff8ec3ded049fea56ff0c6cb23c3d586.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_smursmulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a22ba1c6a04ecd846ae29f02e6dc1a2d1.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_smursmurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ab53fdf76bf6a81b9d09e60d99386b45d.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_stau1stau1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a037ba810bfc3b72015ae9909f0d6f88f.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_stau1stau2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a51d285a730993b4bad0ad0d414a1514b.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_stau2stau1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1afa1ea899b8ab0ad29d661691090cdf1a.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_stau2stau2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a52263f363ad897dbd3ddea9fe530e5d0.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_staulstaulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a88709cdf8d519207746ef6b291cdceb5.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_staulstaurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a51f4c58cb81c9e9b4f3e3c46102a8292.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_staurstaulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a77faa1141f4a7c3b604efa4421943aca.html">Function Gambit::ColliderBit::LEP205_SLHA1_convention_xsec_staurstaurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ae22a8426efc37f070e8bf1205ed48180.html">Function Gambit::ColliderBit::LEP207_SLHA1_convention_xsec_chi00_11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a4c825e61da93e19117e53ea9cb7086a4.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chi00_11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ae2b5cc60602126c9eb1a277dea98e7a0.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chi00_12</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aace8c3f046b00de996e7189792d2250d.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chi00_13</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1af855309550cf4b32bb5baf3aaede3df6.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chi00_14</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a265d17d0a3a88fb4aa6b5bebc56a3213.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chi00_22</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a81ca6e26ae27ad430ce8644da3a22d7a.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chi00_23</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1af71a17fea4cef724b9ed21152f3bf5f9.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chi00_24</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a871a25b1e23001594421dcae6e451081.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chi00_33</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a57f78fb53f37733342debb920ad665f2.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chi00_34</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aa8dbb9e0955a9754ede68273178aa38a.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chi00_44</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a89a23d9587ea898e0e71570de50e73b7.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chipm_11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a5d21e2a16db1091e50dcdc07b1aa04b3.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chipm_12</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aad0e0bd9b44fd81ee2cd9bad51612983.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chipm_21</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ad635ce6d9913478bd7c86ec97db13143.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_chipm_22</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ad25b5ccc9454b8ea1bd0228bb0ca6a54.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_se1se1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a135ea7bd11ef8cfabbae8978da587e51.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_se1se2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a1b50e19dcc239d9c693af3a9b5f11c80.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_se2se1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a07fbf9de75a06ee5b1f6cfaa389737c9.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_se2se2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ac6371f94ffc391a4350223f30ac3795e.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_selselbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1adc5e6571be7ab1654bff93eae3aecac9.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_selserbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1acd816b6cb78190eeba14857d23646d0a.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_serselbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a69b496697cdc17fffecdc0cb238bbc95.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_serserbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ac9ab4be7a79f37acdfec7ee4aed4e7cf.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_smu1smu1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a9131c6341f25d60a0bba1eff1989fd46.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_smu1smu2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a037ed4ce221fd99cce8b78c47b7a1ffe.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_smu2smu1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a3be9510c323be0ad92239d3402d11d16.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_smu2smu2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a2749a4dd95efb61382f7bf36f7f6fecc.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_smulsmulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ae32681b93a880a816489ba0fdeaf6369.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_smulsmurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1afff1ed70af8bb6f3e13d38b74cf260ee.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_smursmulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a2b56c22037cc92aba6b81fcb0d25e21c.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_smursmurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a627bd82910bd04392e3b3cf7fd1ef000.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_stau1stau1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a612e1d01a847fc3a8748731454ef6b1b.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_stau1stau2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1aa2bdae8f47b7ddc8edacb4473053cd12.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_stau2stau1bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a12f629600ab08b1a70a74557dbd10e64.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_stau2stau2bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a98da656961862e31ff84807ac108705e.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_staulstaulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a1fb05fad8a7b385b928d56cb51c83f85.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_staulstaurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ad8e3fe0b45ca4f4f3eaf7e0d51345267.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_staurstaulbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a57a311992da939ae107ef6149a197cab.html">Function Gambit::ColliderBit::LEP208_SLHA1_convention_xsec_staurstaurbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1abd1ca4d53792828f13dce08349673b03.html">Function Gambit::ColliderBit::limit_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a7e0a8ed09b6b60dfc50d7db29d7dd7d2.html">Function Gambit::ColliderBit::makeBinValues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_BaseLimitContainer_8hpp_1a79cb77533c3ff48b0ba2b1624436ed09.html">Function Gambit::ColliderBit::makeLine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1ac6ca5a53404e7386a30f556ff9894ca7.html">Function Gambit::ColliderBit::marg_loglike_cov</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1a9e94402fd90aa9ba884624dc7674bf0b.html">Function Gambit::ColliderBit::marg_loglike_nulike1sr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a5bc975a8f9ed2c1668b36ea01f9b123b.html">Function Gambit::ColliderBit::mk_bin_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1a9477748f42e43699af3c241005f484c0.html">Function Gambit::ColliderBit::mk_p4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Py8Utils_8hpp_1a284f3bcf0df7a2bcf7747dfd6d4c566a.html">Function Gambit::ColliderBit::mk_pseudojet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_AnalysisContainer_8hpp_1a02a869bd87c56deb16a32a91e08342be.html">Function Gambit::ColliderBit::mkAnalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__Higgs_8cpp_1af191b3a243675c3f058c7a76e70d7a20.html">Function Gambit::ColliderBit::MSSMLikeHiggs_ModelParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1a2791d0121d64b32b19da2f1129efdf4d.html">Function Gambit::ColliderBit::multiply</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1accb9a97df0082909089686ad0d1bbcd7.html">Function Gambit::ColliderBit::none_of</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1af8cafeb2ad8fb99727709a15d7398c8d.html">Function Gambit::ColliderBit::object_in_cone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a00bec4a8f688bf46f54c6c420e414e16.html">Function Gambit::ColliderBit::OPAL_Chargino_All_Channels_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a88f1c4ac6ffee25c84621218d772ebac.html">Function Gambit::ColliderBit::OPAL_Chargino_Hadronic_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a5fc3f81d872f4a4d9a1614112f98d922.html">Function Gambit::ColliderBit::OPAL_Chargino_Leptonic_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1a8ca6445d271599ba4f2d241d1f88765b.html">Function Gambit::ColliderBit::OPAL_Chargino_SemiLeptonic_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ab7321bec3295b7f37859ed13ea86db5f.html">Function Gambit::ColliderBit::OPAL_Degenerate_Chargino_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__LEP_8cpp_1ac096fc5a2e23216830011394c865bbbd.html">Function Gambit::ColliderBit::OPAL_Neutralino_Hadronic_Conservative_LLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__eventloop_8cpp_1ac3e5caa6762666779fa7980190de2207.html">Function Gambit::ColliderBit::operateLHCLoop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_PointsAndLines_8hpp_1ac9bba425ed2b60cefa62d7e01a75f3b5.html">Function Gambit::ColliderBit::operator*()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_PointsAndLines_8hpp_1a81484b3875f86f28253d125e2346bf2c.html">Function Gambit::ColliderBit::operator*()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_PointsAndLines_8hpp_1a69b1b1b5ddf477ada785cd4b95d6b946.html">Function Gambit::ColliderBit::operator+</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_PointsAndLines_8hpp_1a920afcb9da8c9ac089677162726a17ac.html">Function Gambit::ColliderBit::operator-</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_PointsAndLines_8hpp_1a64fcbcd63a371a84511e0537218ac6a4.html">Function Gambit::ColliderBit::operator/</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_PointsAndLines_8hpp_1a909f963851395c14f7ca3115f1378cfb.html">Function Gambit::ColliderBit::operator&lt;&lt;()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_PointsAndLines_8hpp_1a3f801b8f7712cba3537fcc33cde632c6.html">Function Gambit::ColliderBit::operator&lt;&lt;()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Cutflow_8hpp_1a1ea489ab93302d6eadb162397b0ed5ad.html">Function Gambit::ColliderBit::operator&lt;&lt;(std::ostream&amp;, const Cutflow&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Cutflow_8hpp_1af5ec0ba61446e99b331ef85c501a8eab.html">Function Gambit::ColliderBit::operator&lt;&lt;(std::ostream&amp;, const Cutflows&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__8TeV__2LEPStop__20invfb_8cpp_1aa25860d08826dd10ccf3c85bd3c5f22e.html">Function Gambit::ColliderBit::Phi_mpi_pi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1ad77ec694b2787bf548b6e9a9c62a259c.html">Function Gambit::ColliderBit::print</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_LHC__likelihoods_8cpp_1ac5fbc3cb77924f2552408b92e1e6435e.html">Function Gambit::ColliderBit::profile_loglike_cov</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a3b59353a7ec6cb32c170baddc17ee4ed.html">Function Gambit::ColliderBit::random_bool()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a78d8549dacfbff00a5d2f0f09667d756.html">Function Gambit::ColliderBit::random_bool()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1ad9b71ef4722c30ca0b0bef6a44516d4c.html">Function Gambit::ColliderBit::random_bool()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1ab09d9a78a703b128a28b63a6c52396a1.html">Function Gambit::ColliderBit::removeOverlap()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a07c3f4250cc6df0bbca9875949bade5e.html">Function Gambit::ColliderBit::removeOverlap()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a41b04372dc4483504b6027e23a27542e.html">Function Gambit::ColliderBit::removeOverlapIfBjet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_runAnalyses_8cpp_1a97fe1656985cf21a6baa16807a935d7b.html">Function Gambit::ColliderBit::runAnalyses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_runAnalyses_8cpp_1a58bf00219054442b985bd3ded454c2f5.html">Function Gambit::ColliderBit::runATLASAnalyses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_runAnalyses_8cpp_1af1d6d28cac6b2e82e42acc15c49e6d83.html">Function Gambit::ColliderBit::runCMSAnalyses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_runAnalyses_8cpp_1a660cd6cf0165371f3d83eec00ab80058.html">Function Gambit::ColliderBit::runIdentityAnalyses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1ac8a67a27a9088243be6e3e74430e2b5b.html">Function Gambit::ColliderBit::scalarSumPt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a2c1002cf9d1ec8b4c5a49ee5f45e0d38.html">Function Gambit::ColliderBit::scalarSumPt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__Higgs_8cpp_1a267d0b16dff2d81a6ffe147f9dfb3349.html">Function Gambit::ColliderBit::set_CS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__Higgs_8cpp_1ad75b662c5425d0d0df2254cf1a12a1d3.html">Function Gambit::ColliderBit::set_SMLikeHiggs_ModelParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_collider__event__weights_8cpp_1adc8a2acd0f6d4debf3b019fa4a37cd7f.html">Function Gambit::ColliderBit::setEventWeight_fromCrossSection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_collider__event__weights_8cpp_1a88072f249e49df263533314e68ffe6df.html">Function Gambit::ColliderBit::setEventWeight_unity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1a8ecd6e8e0f57cfccadc7368d383dca43.html">Function Gambit::ColliderBit::signal_cutoff_function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__InterpolatedYields_8cpp_1a88c08c0921b8a5f711a41b82ac7d2a98.html">Function Gambit::ColliderBit::signal_modifier_function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_getxsec_8cpp_1a58e51b21f00ca97d852977987162f878.html">Function Gambit::ColliderBit::silly_pid_xsec_constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1a2d9bce10091f76de9afa9815f1cce2bf.html">Function Gambit::ColliderBit::SLHA2BFM_NN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1a185a033e85266930b5e6220b3a149204.html">Function Gambit::ColliderBit::SLHA2BFM_VV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_smearEvent_8cpp_1a0317da16d18b74ee8af1ad5e16eaed66.html">Function Gambit::ColliderBit::smearEvent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_smearEvent_8cpp_1a9656074166415225df3f7104ad6b1895.html">Function Gambit::ColliderBit::smearEventATLAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_smearEvent_8cpp_1a151dd1e8bf68bdbde5cbdf39c7c226e7.html">Function Gambit::ColliderBit::smearEventCMS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_ColliderBit__Higgs_8cpp_1abba8b5caefcc14699274b8e16c4fb48c.html">Function Gambit::ColliderBit::SMLikeHiggs_ModelParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1af4fc976689ef014d5a3aeda9a9497d72.html">Function Gambit::ColliderBit::sortBy()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1a50a2de59bc5a7ddf9b409867d64890fd.html">Function Gambit::ColliderBit::sortBy()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__0LEPStop__36invfb_8cpp_1a5fa299ab59a058523e20559db4f72729.html">Function Gambit::ColliderBit::sortByMass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__1LEPStop__36invfb_8cpp_1a6d7f672c3b7f15b9e18481418b02998c.html">Function Gambit::ColliderBit::sortByMass_1l</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__1LEPStop__36invfb_8cpp_1abbf1476bd9d0d560de037a39fe388b34.html">Function Gambit::ColliderBit::sortByMass_1l_sharedptr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__0LEPStop__36invfb_8cpp_1a35cfdd907e2eafd80b8f0f28d38ab759.html">Function Gambit::ColliderBit::sortByMass_sharedptr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1ad01601d1de019bb97736b84ac32f8737.html">Function Gambit::ColliderBit::sortByPt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Utils_8hpp_1aaab2bad58ea291398350c2e2016fb6ca.html">Function Gambit::ColliderBit::sortByPt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__8TeV__0LEPStop__20invfb_8cpp_1a4c62548771b0fafe5b3b03c2ebfedd52.html">Function Gambit::ColliderBit::sortByPT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__0LEPStop__36invfb_8cpp_1ab6962246026e42a7ef55cad5ac535a61.html">Function Gambit::ColliderBit::sortByPT13</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__0LEPStop__36invfb_8cpp_1a1301b195a5480cd644cbcf23e69c2d85.html">Function Gambit::ColliderBit::sortByPT13_sharedptr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__1LEPStop__36invfb_8cpp_1a04b6cbef4a3ea25ea09bfb8d927d215b.html">Function Gambit::ColliderBit::sortByPT_1l</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__1LEPStop__36invfb_8cpp_1a3d8a66425475cc0fe07836198247f7da.html">Function Gambit::ColliderBit::sortByPT_1l_sharedptr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__8TeV__2LEPEW__20invfb_8cpp_1a71291de6eb48a68f62a3c4302e3531b1.html">Function Gambit::ColliderBit::sortByPT_2lep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__2LEPStop__36invfb_8cpp_1a00d9b68dfe9f812e9465fcd2ad47f90e.html">Function Gambit::ColliderBit::sortByPT_j</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__PhotonGGM__36invfb_8cpp_1a0f5cf155a4ee0e08c56659aecd1bc463.html">Function Gambit::ColliderBit::sortByPT_jet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__2LEPStop__36invfb_8cpp_1ab1ed4f41cc233f7c09d1d90b97a39668.html">Function Gambit::ColliderBit::sortByPT_l</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__PhotonGGM__36invfb_8cpp_1a53e701d01b7bf88343fdf72ae1555ab2.html">Function Gambit::ColliderBit::sortByPT_lep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__RJ3L__lowmass__36invfb_8cpp_1ad3c33b44a7c3fbee6a77fa433dabff8a.html">Function Gambit::ColliderBit::sortByPT_RJ3L</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__RJ3L__lowmass__36invfb_8cpp_1aa34440b1910cf32fe4e1503ba3d5f876.html">Function Gambit::ColliderBit::SortJets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__RJ3L__lowmass__36invfb_8cpp_1a6808d11cee050333da7867744a8883dc.html">Function Gambit::ColliderBit::sortLepByPT_RJ3L</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__13TeV__RJ3L__lowmass__36invfb_8cpp_1a631fea599abf73bc0de9b59338b9b682.html">Function Gambit::ColliderBit::SortLeptons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_PointsAndLines_8hpp_1a09c016898ad4172aecbe857de6227196.html">Function Gambit::ColliderBit::to_str()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_PointsAndLines_8hpp_1a3f1bc1360354ab1ec8ce3189f8a7c4db.html">Function Gambit::ColliderBit::to_str()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1ab5acef007a85c7973d4c6df87a830cc1.html">Function Gambit::ColliderBit::transpose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1a0a45ecc9f0425ac00881ccbee9667570.html">Function Gambit::ColliderBit::xsec_chaichaj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1a259260adac6ba1e9f35d2bdac43d0daa.html">Function Gambit::ColliderBit::xsec_neuineuj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lep__mssm__xsecs_8hpp_1a9669178acc1b60140c705ef7749b24db.html">Function Gambit::ColliderBit::xsec_sleislej</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lhef2heputils_8hpp_1a795c59f3ab2042b075bd00140bf1103a.html">Function get_HEPUtils_event(const LHEF::Reader&amp;, HEPUtils::Event&amp;, double)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lhef2heputils_8cpp_1a0d7e39d883ac004ebe24cdc61919025b.html">Function get_HEPUtils_event(const LHEF::Reader&amp;, Event&amp;, double)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1aae9d9ddeb63231c0625e790f1f8ccbe4.html">Function getBestHadronicTop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1a646dbb5210bcefbdf88cd9fe586b7c79.html">Function getBJets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1a75d1efc42887fe6c1ffbcec8ef33d33f.html">Function incrementCut</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lester__mt2__bisect_8h_1a4d176db4292aa9dd6ace9b5206effe2c.html">Function Lester::__private_ellipsesAreDisjoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lester__mt2__bisect_8h_1acdaf6e08e0aabb77660a3720f551282c.html">Function Lester::ellipsesAreDisjoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mainEWinos__bino__winos__higgsinos_8cc_1ae66f6b31b5ad750f1fe042a706a4e3d4.html">Function main()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_solo_8cpp_1a0ddf1224851353fc92bfbff6f499fa97.html">Function main(int, char *)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8hpp_1a241d532232ea2764f721288165532fa8.html">Function MODEL_CONDITIONAL_DEPENDENCY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lester__mt2__bisect_8h_1a26ee32886634b411522d45bdb495fe2f.html">Function MT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mt2w_8h_1ad232ca7013f202adc10e0ca14d7a71da.html">Function mt2wWrapperHepUtils(HEPUtils::P4&amp;, HEPUtils::P4&amp;, HEPUtils::P4&amp;, float, float)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_mt2w_8cc_1ad232ca7013f202adc10e0ca14d7a71da.html">Function mt2wWrapperHepUtils(HEPUtils::P4&amp;, HEPUtils::P4&amp;, HEPUtils::P4&amp;, float, float)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_topness_8h_1ac3ddc6c2b61a4ce9c0aae495efe9a287.html">Function my_add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_topness_8h_1acd35f9ea93c5d6a374556cf783a7c11c.html">Function my_dot(double, double, int)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_topness_8h_1acb6246bab375772ba27f6ff0a6631feb.html">Function my_dot(double, double, double, int)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_topness_8h_1a85c13dfa358423de6517315bb3f3abc7.html">Function my_enorm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_topness_8h_1a473abd09ae40a9c045848cb73c378357.html">Function my_lp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_lester__mt2__bisect_8h_1af31f8c017894aee6db1796f80fbd1a17.html">Function myversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY_8hpp_1aaba633162aec1e527a023496b35ecc25.html">Function NEEDS_CLASSES_FROM(Pythia, default)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8hpp_1acefcf66a42a16ae537585819ff482e88.html">Function NEEDS_CLASSES_FROM(Pythia, default)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1a73a5f9255d84308dd37bfdc6014e374b.html">Function run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp_1a9bc733a80740a9a031acedab4336f29f.html">Function saveCutFlow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY_8hpp_1afa570928c94d96ba818879674cfb905d.html">Function START_FUNCTION(SLHAstruct)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY_8hpp_1a45b5bcf105c4764f95f9e926ef562f74.html">Function START_FUNCTION(HEPUtils::Event)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8hpp_1ab94165a72a86815a22b28cea65bacb99.html">Function START_FUNCTION()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8hpp_1acfac5ed93f7db96d649777824905502f.html">Function START_FUNCTION(Py8Collider_defaultversion)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_SUSY__extras_8hpp_1a485b64bb2e3438c18a89e56ac0f32207.html">Function START_FUNCTION(double)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_topness_8h_1a061d622ee47a18395d2930c5b412b15c.html">Function topnesscompute</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="library_root.html">Library API</a> &raquo;</li>
+      <li>Function Gambit::ColliderBit::CollectAnalyses</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="function-gambit-colliderbit-collectanalyses">
+<span id="exhale-function-colliderbit-eventloop-8cpp-1af5bd300bc1e749fb377602573b391d34"></span><h1>Function Gambit::ColliderBit::CollectAnalyses<a class="headerlink" href="#function-gambit-colliderbit-collectanalyses" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_ColliderBit_src_ColliderBit_eventloop.cpp.html#file-colliderbit-src-colliderbit-eventloop-cpp"><span class="std std-ref">File ColliderBit_eventloop.cpp</span></a></p></li>
+</ul>
+<section id="function-documentation">
+<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit15CollectAnalysesER20AnalysisDataPointers">
+<span id="_CPPv3N6Gambit11ColliderBit15CollectAnalysesER20AnalysisDataPointers"></span><span id="_CPPv2N6Gambit11ColliderBit15CollectAnalysesER20AnalysisDataPointers"></span><span id="Gambit::ColliderBit::CollectAnalyses__AnalysisDataPointersR"></span><span class="target" id="ColliderBit__eventloop_8cpp_1af5bd300bc1e749fb377602573b391d34"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">Gambit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ColliderBit</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CollectAnalyses</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api/typedef_ColliderBit__types_8hpp_1a03c2e9b2a191cef3d43ee07d33ff7034.html#_CPPv4N6Gambit11ColliderBit20AnalysisDataPointersE" title="Gambit::ColliderBit::AnalysisDataPointers"><span class="n"><span class="pre">AnalysisDataPointers</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">result</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Loop over all analyses and collect them in one place. </p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File getPy8Collider.hpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File getPy8Collider.hpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-getpy8collider-hpp">
+<span id="program-listing-file-colliderbit-include-gambit-colliderbit-getpy8collider-hpp"></span><h1>Program Listing for File getPy8Collider.hpp<a class="headerlink" href="#program-listing-for-file-getpy8collider-hpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_include_gambit_ColliderBit_getPy8Collider.hpp.html#file-colliderbit-include-gambit-colliderbit-getpy8collider-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/include/gambit/ColliderBit/getPy8Collider.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//   GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">//   *********************************************</span>
+
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/ColliderBit_eventloop.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// #define COLLIDERBIT_DEBUG</span>
+<span class="cp">#define DEBUG_PREFIX &quot;DEBUG: OMP thread &quot; &lt;&lt; omp_get_thread_num() &lt;&lt; &quot;:  &quot;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">PythiaT</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">EventT</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">hepmc_writerT</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">getPy8Collider</span><span class="p">(</span><span class="n">Py8Collider</span><span class="o">&lt;</span><span class="n">PythiaT</span><span class="p">,</span><span class="w"> </span><span class="n">EventT</span><span class="p">,</span><span class="w"> </span><span class="n">hepmc_writerT</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="k">const</span><span class="w"> </span><span class="n">MCLoopInfo</span><span class="o">&amp;</span><span class="w"> </span><span class="n">RunMC</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="k">const</span><span class="w"> </span><span class="n">SLHAstruct</span><span class="o">&amp;</span><span class="w"> </span><span class="n">slha</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">model_suffix</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">iteration</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="n">wrapup</span><span class="p">)(),</span><span class="w"></span>
+<span class="w">                        </span><span class="k">const</span><span class="w"> </span><span class="n">Options</span><span class="o">&amp;</span><span class="w"> </span><span class="n">runOptions</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">pythia_doc_path</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">xsec_veto_fb</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BASE_INIT</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Setup the Pythia documentation path and print the banner once</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pythia&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">model_suffix</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">ver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Backends</span><span class="o">::</span><span class="n">backendInfo</span><span class="p">().</span><span class="n">default_version</span><span class="p">(</span><span class="n">be</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">pythia_doc_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Backends</span><span class="o">::</span><span class="n">backendInfo</span><span class="p">().</span><span class="n">path_dir</span><span class="p">(</span><span class="n">be</span><span class="p">,</span><span class="w"> </span><span class="n">ver</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/../share/Pythia8/xmldoc/&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">banner</span><span class="p">(</span><span class="n">pythia_doc_path</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// To make sure that the Pythia instance on each OMP thread gets all the</span>
+<span class="w">      </span><span class="c1">// options it should, all the options parsing and initialisation happens in</span>
+<span class="w">      </span><span class="c1">// COLLIDER_INIT_OMP (OMP parallel) rather than COLLIDER_INIT (only thread 0).</span>
+<span class="w">      </span><span class="c1">// We may want to split this up, so that all the yaml options are parsed in</span>
+<span class="w">      </span><span class="c1">// COLLIDER_INIT (by thread 0), and used to initialize the &#39;result&#39; instance</span>
+<span class="w">      </span><span class="c1">// of each thread within COLLIDER_INIT_OMP.</span>
+<span class="w">      </span><span class="c1">//</span>
+<span class="w">      </span><span class="c1">// else if (iteration == COLLIDER_INIT)</span>
+<span class="w">      </span><span class="c1">// {</span>
+<span class="w">      </span><span class="c1">//   // Do the option parsing here?</span>
+<span class="w">      </span><span class="c1">// }</span>
+
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">COLLIDER_INIT_OMP</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pythiaOptions</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// By default we tell Pythia to be quiet. (Can be overridden from yaml settings)</span>
+<span class="w">        </span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Print:quiet = on&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;SLHA:verbose = 0&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Get options from yaml file.</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">xsec_veto_default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">partonOnly_default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">antiktR_default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.4</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">runOptions</span><span class="p">.</span><span class="n">hasKey</span><span class="p">(</span><span class="n">RunMC</span><span class="p">.</span><span class="n">current_collider</span><span class="p">()))</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">YAML</span><span class="o">::</span><span class="n">Node</span><span class="w"> </span><span class="n">colNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="p">.</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">YAML</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span><span class="n">RunMC</span><span class="p">.</span><span class="n">current_collider</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="n">Options</span><span class="w"> </span><span class="nf">colOptions</span><span class="p">(</span><span class="n">colNode</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">xsec_veto_fb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">xsec_veto_default</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;xsec_veto&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">partonOnly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">partonOnly_default</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;partonOnly&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">antiktR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">antiktR_default</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;antiktR&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">colOptions</span><span class="p">.</span><span class="n">hasKey</span><span class="p">(</span><span class="s">&quot;pythia_settings&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="n">addPythiaOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colNode</span><span class="p">[</span><span class="s">&quot;pythia_settings&quot;</span><span class="p">].</span><span class="n">as</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">addPythiaOptions</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">addPythiaOptions</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">xsec_veto_fb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xsec_veto_default</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">partonOnly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">partonOnly_default</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">antiktR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">antiktR_default</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// We need showProcesses for the xsec veto.</span>
+<span class="w">        </span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Init:showProcesses = on&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// We need &quot;SLHA:file = slhaea&quot; for the SLHAea interface.</span>
+<span class="w">        </span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;SLHA:file = slhaea&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// If the collider energy is not given in the list of Pythia options, we set it to 13 TeV by default.</span>
+<span class="w">        </span><span class="c1">// We search for the substring &quot;Beams:e&quot;, meaning that if any of the Pythia options &quot;Beams:eCM&quot;, &quot;Beams:eA&quot;</span>
+<span class="w">        </span><span class="c1">// or &quot;Beams:eB&quot; are present we don&#39;t apply the default.</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">has_beam_energy_option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">any_of</span><span class="p">(</span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;Beams:e&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">str</span><span class="o">::</span><span class="n">npos</span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">has_beam_energy_option</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Beams:eCM = 13000&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">logger</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">LogTags</span><span class="o">::</span><span class="n">debug</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Could not find a beam energy in the list of Pythia settings. Will add the setting &#39;Beams:eCM = 13000&#39;.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOM</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Variables needed for the xsec veto</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">processLevelOutput</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="n">_junk</span><span class="p">,</span><span class="w"> </span><span class="n">readline</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">nxsec</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">xsec</span><span class="p">,</span><span class="w"> </span><span class="n">totalxsec</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Each thread needs an independent Pythia instance at the start</span>
+<span class="w">        </span><span class="c1">// of each event generation loop.</span>
+<span class="w">        </span><span class="c1">// Thus, the actual Pythia initialization is</span>
+<span class="w">        </span><span class="c1">// *after* COLLIDER_INIT, within omp parallel.</span>
+
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Add the thread-specific seed to the Pythia options</span>
+<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="n">seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="n">Random</span><span class="o">::</span><span class="n">draw</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">899990000.</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Random:seed = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">seed</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;getPythia&quot;</span><span class="o">+</span><span class="n">model_suffix</span><span class="o">+</span><span class="s">&quot;: My Pythia seed is: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">seed</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+
+<span class="w">        </span><span class="k">try</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">pythia_doc_path</span><span class="p">,</span><span class="w"> </span><span class="n">pythiaOptions</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">slha</span><span class="p">,</span><span class="w"> </span><span class="n">processLevelOutput</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">typename</span><span class="w"> </span><span class="nc">Py8Collider</span><span class="o">&lt;</span><span class="n">PythiaT</span><span class="p">,</span><span class="n">EventT</span><span class="p">,</span><span class="n">hepmc_writerT</span><span class="o">&gt;::</span><span class="n">InitializationError</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Append new seed to override the previous one</span>
+<span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">newSeedBase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">Random</span><span class="o">::</span><span class="n">draw</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">899990000.</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">pythiaOptions</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Random:seed = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">newSeedBase</span><span class="p">));</span><span class="w"></span>
+<span class="w">          </span><span class="k">try</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">pythia_doc_path</span><span class="p">,</span><span class="w"> </span><span class="n">pythiaOptions</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">slha</span><span class="p">,</span><span class="w"> </span><span class="n">processLevelOutput</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">typename</span><span class="w"> </span><span class="nc">Py8Collider</span><span class="o">&lt;</span><span class="n">PythiaT</span><span class="p">,</span><span class="n">EventT</span><span class="p">,</span><span class="n">hepmc_writerT</span><span class="o">&gt;::</span><span class="n">InitializationError</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">              </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Py8Collider::InitializationError caught in getPy8Collider. Will discard this point.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="cp">#endif</span>
+<span class="w">            </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">&quot;Bad point: Pythia can&#39;t initialize&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">wrapup</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Should we apply the xsec veto and skip event generation?</span>
+
+<span class="w">        </span><span class="c1">// - Get the upper limt xsec as estimated by Pythia</span>
+<span class="w">        </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">nxsec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">totalxsec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">processLevelOutput</span><span class="p">,</span><span class="w"> </span><span class="n">readline</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">istringstream</span><span class="w"> </span><span class="nf">issPtr</span><span class="p">(</span><span class="n">readline</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">issPtr</span><span class="p">.</span><span class="n">seekg</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="w"> </span><span class="n">issPtr</span><span class="p">.</span><span class="n">beg</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">issPtr</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">code</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">issPtr</span><span class="p">.</span><span class="n">good</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nxsec</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">issPtr</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">_junk</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">xsec</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">issPtr</span><span class="p">.</span><span class="n">good</span><span class="p">())</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">totalxsec</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">xsec</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">nxsec</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;totalxsec [fb] = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">totalxsec</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1e12</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, veto limit [fb] = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">xsec_veto_fb</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+
+<span class="w">        </span><span class="c1">// - Check for NaN xsec</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Utils</span><span class="o">::</span><span class="n">isnan</span><span class="p">(</span><span class="n">totalxsec</span><span class="p">))</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Got NaN cross-section estimate from Pythia.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#endif</span>
+<span class="w">          </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">&quot;Got NaN cross-section estimate from Pythia.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">wrapup</span><span class="p">();</span><span class="w"></span>
+<span class="w">          </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// - Wrap up loop if veto applies</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">totalxsec</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1e12</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">xsec_veto_fb</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Cross-section veto applies. Will now call Loop::wrapup() to skip event generation for this collider.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#endif</span>
+<span class="w">          </span><span class="n">wrapup</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">          </span><span class="c1">// Create a dummy event to make Pythia fill its internal list of process codes</span>
+<span class="w">          </span><span class="n">EventT</span><span class="w"> </span><span class="n">dummy_pythia_event</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="k">try</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="n">nextEvent</span><span class="p">(</span><span class="n">dummy_pythia_event</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">typename</span><span class="w"> </span><span class="nc">Py8Collider</span><span class="o">&lt;</span><span class="n">PythiaT</span><span class="p">,</span><span class="n">EventT</span><span class="p">,</span><span class="n">hepmc_writerT</span><span class="o">&gt;::</span><span class="n">EventGenerationError</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Try again...</span>
+<span class="w">            </span><span class="k">try</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="n">result</span><span class="p">.</span><span class="n">nextEvent</span><span class="p">(</span><span class="n">dummy_pythia_event</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">typename</span><span class="w"> </span><span class="nc">Py8Collider</span><span class="o">&lt;</span><span class="n">PythiaT</span><span class="p">,</span><span class="n">EventT</span><span class="p">,</span><span class="n">hepmc_writerT</span><span class="o">&gt;::</span><span class="n">EventGenerationError</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">&quot;Failed to generate dummy test event. Will invalidate point.&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">              </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">                </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed to generate dummy test event during COLLIDER_INIT_OMP in getPy8Collider. Check the logs for event details.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">              </span><span class="cp">#endif</span>
+<span class="w">              </span><span class="cp">#pragma omp critical (pythia_event_failure)</span>
+<span class="w">              </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">ss</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="n">dummy_pythia_event</span><span class="p">.</span><span class="n">list</span><span class="p">(</span><span class="n">ss</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="n">logger</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">LogTags</span><span class="o">::</span><span class="n">debug</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed to generate dummy test event during COLLIDER_INIT_OMP iteration in getPy8Collider. Pythia record for the event that failed:</span><span class="se">\n</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOM</span><span class="p">;</span><span class="w"></span>
+<span class="w">              </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="c1">// Get SLHAea object with spectrum and decays for Pythia -- SUSY version</span>
+<span class="w">    </span><span class="cp">#define GET_SPECTRUM_AND_DECAYS_FOR_PYTHIA_SUSY(NAME, SPECTRUM)                           \</span>
+<span class="cp">    void NAME(SLHAstruct&amp; result)                                                             \</span>
+<span class="cp">    {                                                                                         \</span>
+<span class="cp">      using namespace Pipes::NAME;                                                            \</span>
+<span class="cp">      static const int slha_version = runOptions-&gt;getValueOrDef&lt;int&gt;(2, &quot;slha_version&quot;);      \</span>
+<span class="cp">      static const bool write_summary_to_log =                                                \</span>
+<span class="cp">       runOptions-&gt;getValueOrDef&lt;bool&gt;(false, &quot;write_summary_to_log&quot;);                        \</span>
+<span class="cp">                                                                                              \</span>
+<span class="cp">      if ((slha_version != 1) &amp;&amp; (slha_version != 2))                                       \</span>
+<span class="cp">      {                                                                                     \</span>
+<span class="cp">        ColliderBit_error().raise(LOCAL_INFO,                                               \</span>
+<span class="cp">          &quot;The option &#39;slha_version&#39; must be set to 1 or 2 (default).&quot;);                    \</span>
+<span class="cp">      }                                                                                     \</span>
+<span class="cp">      result.clear();                                                                       \</span>
+<span class="cp">      </span><span class="cm">/* Get decays */</span><span class="cp">                                                                      \</span>
+<span class="cp">      result = Dep::decay_rates-&gt;getSLHAea(slha_version, false, *Dep::SLHA_pseudonyms);     \</span>
+<span class="cp">      </span><span class="cm">/* Get spectrum */</span><span class="cp">                                                                    \</span>
+<span class="cp">      SLHAstruct slha_spectrum = Dep::SPECTRUM-&gt;getSLHAea(slha_version);                    \</span>
+<span class="cp">      result.insert(result.begin(), slha_spectrum.begin(), slha_spectrum.end());            \</span>
+<span class="cp">      </span><span class="cm">/* Add MODSEL block if not found */</span><span class="cp">                                                   \</span>
+<span class="cp">      if(result.find(&quot;MODSEL&quot;) == result.end())                                             \</span>
+<span class="cp">      {                                                                                     \</span>
+<span class="cp">        SLHAea::Block block(&quot;MODSEL&quot;);                                                      \</span>
+<span class="cp">        block.push_back(&quot;BLOCK MODSEL              # Model selection&quot;);                     \</span>
+<span class="cp">        SLHAea::Line line;                                                                  \</span>
+<span class="cp">        line &lt;&lt; 1 &lt;&lt; 0 &lt;&lt; &quot;# Tell Pythia that this is a SUSY model.&quot;;                       \</span>
+<span class="cp">        block.push_back(line);                                                              \</span>
+<span class="cp">        result.push_front(block);                                                           \</span>
+<span class="cp">      }                                                                                     \</span>
+<span class="cp">                                                                                            \</span>
+<span class="cp">      if (write_summary_to_log)                                                             \</span>
+<span class="cp">      {                                                                                     \</span>
+<span class="cp">        std::stringstream SLHA_log_output;                                                  \</span>
+<span class="cp">        SLHA_log_output &lt;&lt; &quot;SLHA&quot; &lt;&lt; slha_version &lt;&lt; &quot; input to Pythia:\n&quot; &lt;&lt; result.str()  \</span>
+<span class="cp">         &lt;&lt; &quot;\n&quot;;                                                                           \</span>
+<span class="cp">        logger() &lt;&lt; SLHA_log_output.str() &lt;&lt; EOM;                                           \</span>
+<span class="cp">      }                                                                                     \</span>
+<span class="cp">    }</span>
+
+
+<span class="w">    </span><span class="c1">// Get SLHAea object with spectrum and decays for Pythia -- non-SUSY version</span>
+<span class="w">    </span><span class="cp">#define GET_SPECTRUM_AND_DECAYS_FOR_PYTHIA_NONSUSY(NAME, SPECTRUM)                \</span>
+<span class="cp">    void NAME(SLHAstruct&amp; result)                                                     \</span>
+<span class="cp">    {                                                                                 \</span>
+<span class="cp">      using namespace Pipes::NAME;                                                    \</span>
+<span class="cp">      result.clear();                                                                 \</span>
+<span class="cp">      </span><span class="cm">/* Get decays */</span><span class="cp">                                                                \</span>
+<span class="cp">      result = Dep::decay_rates-&gt;getSLHAea(2);                                        \</span>
+<span class="cp">      </span><span class="cm">/* Get spectrum */</span><span class="cp">                                                              \</span>
+<span class="cp">      SLHAstruct slha_spectrum = Dep::SPECTRUM-&gt;getSLHAea(2);                         \</span>
+<span class="cp">      result.insert(result.begin(), slha_spectrum.begin(), slha_spectrum.end());      \</span>
+<span class="cp">    }</span>
+
+
+<span class="w">    </span><span class="cp">#ifdef EXCLUDE_HEPMC</span>
+<span class="w">      </span><span class="cp">#define HEPMC_TYPE(PYTHIA_NS) void</span>
+<span class="w">    </span><span class="cp">#else</span>
+<span class="w">      </span><span class="cp">#define HEPMC_TYPE(PYTHIA_NS) PYTHIA_NS::Pythia8::GAMBIT_hepmc_writer</span>
+<span class="w">    </span><span class="cp">#endif</span>
+
+<span class="w">    </span><span class="cp">#define GET_SPECIFIC_PYTHIA(NAME, PYTHIA_NS, MODEL_EXTENSION)                     \</span>
+<span class="cp">    void NAME(Py8Collider&lt;PYTHIA_NS::Pythia8::Pythia,                                 \</span>
+<span class="cp">                          PYTHIA_NS::Pythia8::Event,                                  \</span>
+<span class="cp">                          HEPMC_TYPE(PYTHIA_NS)&gt; &amp;result)                             \</span>
+<span class="cp">    {                                                                                 \</span>
+<span class="cp">      using namespace Pipes::NAME;                                                    \</span>
+<span class="cp">      static SLHAstruct slha;                                                         \</span>
+<span class="cp">                                                                                      \</span>
+<span class="cp">      if (*Loop::iteration == BASE_INIT)                                              \</span>
+<span class="cp">      {                                                                               \</span>
+<span class="cp">        </span><span class="cm">/* SLHAea object constructed from dependencies on the spectrum and decays. */</span><span class="cp"> \</span>
+<span class="cp">        slha.clear();                                                                 \</span>
+<span class="cp">        slha = *Dep::SpectrumAndDecaysForPythia;                                      \</span>
+<span class="cp">      }                                                                               \</span>
+<span class="cp">                                                                                      \</span>
+<span class="cp">      getPy8Collider(result, *Dep::RunMC, slha, #MODEL_EXTENSION,                     \</span>
+<span class="cp">        *Loop::iteration, Loop::wrapup, *runOptions);                                 \</span>
+<span class="cp">    }</span>
+
+
+<span class="w">    </span><span class="cp">#define GET_SPECIFIC_PYTHIA_SLHA(NAME, PYTHIA_NS, MODEL_EXTENSION)                \</span>
+<span class="cp">    void NAME(Py8Collider&lt;PYTHIA_NS::Pythia8::Pythia,                                 \</span>
+<span class="cp">                          PYTHIA_NS::Pythia8::Event,                                  \</span>
+<span class="cp">                          HEPMC_TYPE(PYTHIA_NS)&gt; &amp;result)                             \</span>
+<span class="cp">    {                                                                                 \</span>
+<span class="cp">      using namespace Pipes::NAME;                                                    \</span>
+<span class="cp">      static SLHAstruct slha;                                                         \</span>
+<span class="cp">                                                                                      \</span>
+<span class="cp">      if (*Loop::iteration == COLLIDER_INIT)                                          \</span>
+<span class="cp">      {                                                                               \</span>
+<span class="cp">        const pair_str_SLHAstruct&amp; filename_content_pair = *Dep::SLHAFileNameAndContent; \</span>
+<span class="cp">        if (filename_content_pair.first.empty())                                      \</span>
+<span class="cp">        {                                                                             \</span>
+<span class="cp">          piped_invalid_point.request(&quot;Got empty SLHA filename. Will invalidate point.&quot;); \</span>
+<span class="cp">        }                                                                             \</span>
+<span class="cp">      }                                                                               \</span>
+<span class="cp">                                                                                      \</span>
+<span class="cp">      getPy8Collider(result, *Dep::RunMC, Dep::SLHAFileNameAndContent-&gt;second,        \</span>
+<span class="cp">        #MODEL_EXTENSION, *Loop::iteration, Loop::wrapup, *runOptions);               \</span>
+<span class="cp">    }</span>
+
+
+<span class="w">    </span><span class="cp">#define GET_PYTHIA_AS_BASE_COLLIDER(NAME)           \</span>
+<span class="cp">    void NAME(const BaseCollider* &amp;result)              \</span>
+<span class="cp">    {                                                   \</span>
+<span class="cp">      result = &amp;(*Pipes::NAME::Dep::HardScatteringSim); \</span>
+<span class="cp">    }                                                   \</span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

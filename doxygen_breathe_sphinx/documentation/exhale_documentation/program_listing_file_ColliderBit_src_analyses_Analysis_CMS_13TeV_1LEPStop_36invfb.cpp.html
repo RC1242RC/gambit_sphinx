@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File Analysis_CMS_13TeV_1LEPStop_36invfb.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File Analysis_CMS_13TeV_1LEPStop_36invfb.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-analysis-cms-13tev-1lepstop-36invfb-cpp">
+<span id="program-listing-file-colliderbit-src-analyses-analysis-cms-13tev-1lepstop-36invfb-cpp"></span><h1>Program Listing for File Analysis_CMS_13TeV_1LEPStop_36invfb.cpp<a class="headerlink" href="#program-listing-for-file-analysis-cms-13tev-1lepstop-36invfb-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_analyses_Analysis_CMS_13TeV_1LEPStop_36invfb.cpp.html#file-colliderbit-src-analyses-analysis-cms-13tev-1lepstop-36invfb-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/analyses/Analysis_CMS_13TeV_1LEPStop_36invfb.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/topness.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/CMSEfficiencies.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/Analysis.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/Cutflow.hpp&quot;</span><span class="cp"></span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"></span>
+
+<span class="cm">/* The CMS 0 lepton direct stop analysis (35.9fb^-1).</span>
+
+<span class="cm">   Based on: https://arxiv.org/pdf/1706.04402.pdf</span>
+<span class="cm">             http://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-16-051/#AddTab</span>
+
+<span class="cm">   By Yang Zhang</span>
+
+<span class="cm">   Known errors:</span>
+<span class="cm">        1. Modified topness is calculated with all b jets (not b-tagged)</span>
+<span class="cm">           and up to three none-b jets, instead of up to three jets with</span>
+<span class="cm">           highest CSV discriminator values.</span>
+<span class="cm">   Known features:</span>
+
+<span class="cm">*/</span><span class="w"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Analysis_CMS_13TeV_1LEPStop_36invfb</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Analysis</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Numbers passing cuts</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_counters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Aggregate SRs</span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;aggregateSR0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;aggregateSR0&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;aggregateSR1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;aggregateSR1&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;aggregateSR2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;aggregateSR2&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;aggregateSR3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;aggregateSR3&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;aggregateSR4&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;aggregateSR4&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="s">&quot;aggregateSR5&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EventCounter</span><span class="p">(</span><span class="s">&quot;aggregateSR5&quot;</span><span class="p">)},</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Fine-binned SRs</span>
+<span class="w">            </span><span class="c1">// {&quot;SR0&quot;, EventCounter(&quot;SR0&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR1&quot;, EventCounter(&quot;SR1&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR2&quot;, EventCounter(&quot;SR2&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR3&quot;, EventCounter(&quot;SR3&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR4&quot;, EventCounter(&quot;SR4&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR5&quot;, EventCounter(&quot;SR5&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR6&quot;, EventCounter(&quot;SR6&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR7&quot;, EventCounter(&quot;SR7&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR8&quot;, EventCounter(&quot;SR8&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR9&quot;, EventCounter(&quot;SR9&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR10&quot;, EventCounter(&quot;SR10&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR11&quot;, EventCounter(&quot;SR11&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR12&quot;, EventCounter(&quot;SR12&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR13&quot;, EventCounter(&quot;SR13&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR14&quot;, EventCounter(&quot;SR14&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR15&quot;, EventCounter(&quot;SR15&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR16&quot;, EventCounter(&quot;SR16&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR17&quot;, EventCounter(&quot;SR17&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR18&quot;, EventCounter(&quot;SR18&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR19&quot;, EventCounter(&quot;SR19&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR20&quot;, EventCounter(&quot;SR20&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR21&quot;, EventCounter(&quot;SR21&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR22&quot;, EventCounter(&quot;SR22&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR23&quot;, EventCounter(&quot;SR23&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR24&quot;, EventCounter(&quot;SR24&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR25&quot;, EventCounter(&quot;SR25&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR26&quot;, EventCounter(&quot;SR26&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR27&quot;, EventCounter(&quot;SR27&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR28&quot;, EventCounter(&quot;SR28&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR29&quot;, EventCounter(&quot;SR29&quot;)},</span>
+<span class="w">            </span><span class="c1">// {&quot;SR30&quot;, EventCounter(&quot;SR30&quot;)},</span>
+<span class="w">        </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">NUM_aggregateSR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Cut Flow</span>
+<span class="w">        </span><span class="n">Cutflow</span><span class="w"> </span><span class="n">_cutflow</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Jet overlap removal</span>
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">JetLeptonOverlapRemoval</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">jetvec</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lepvec</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">DeltaRMax</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">//Routine to do jet-lepton check</span>
+<span class="w">            </span><span class="c1">//Discards jets if they are within DeltaRMax of a lepton</span>
+
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">Survivors</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">itjet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">itjet</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">jetvec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">itjet</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="kt">bool</span><span class="w"> </span><span class="n">overlap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="w"> </span><span class="n">jetmom</span><span class="o">=</span><span class="n">jetvec</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">itjet</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="k">for</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">itlep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">itlep</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">lepvec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">itlep</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="w"> </span><span class="n">lepmom</span><span class="o">=</span><span class="n">lepvec</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">itlep</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="kt">double</span><span class="w"> </span><span class="n">dR</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">dR</span><span class="o">=</span><span class="n">jetmom</span><span class="p">.</span><span class="n">deltaR_eta</span><span class="p">(</span><span class="n">lepmom</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">dR</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">DeltaRMax</span><span class="p">)</span><span class="w"> </span><span class="n">overlap</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">overlap</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="n">Survivors</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">jetvec</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">itjet</span><span class="p">));</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="n">jetvec</span><span class="o">=</span><span class="n">Survivors</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Required detector sim</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;CMS&quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">Analysis_CMS_13TeV_1LEPStop_36invfb</span><span class="p">()</span><span class="o">:</span><span class="w"></span>
+<span class="w">            </span><span class="n">_cutflow</span><span class="p">(</span><span class="s">&quot;CMS 0-lep stop 13 TeV&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;Trigger&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;M_{T}&gt;150&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;N_b&gt;=1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;N_l&lt;2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;N_tau==0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;deltaPhi_j12&gt;0.8&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;MET&gt;250&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;**t_mod&gt;0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;**t_mod&gt;10&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;**Mlb&lt;175&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;**Mlb&gt;175&quot;</span><span class="p">})</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">set_analysis_name</span><span class="p">(</span><span class="s">&quot;CMS_13TeV_1LEPStop_36invfb&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">set_luminosity</span><span class="p">(</span><span class="mf">35.9</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">run</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">*</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fillinit</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Missing energy</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">met</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">met</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="w"> </span><span class="n">ptot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">missingmom</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Online  trigger</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">met</span><span class="o">&lt;</span><span class="mi">120</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Electron objects</span>
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">baselineElectrons</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">electron</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">electrons</span><span class="p">())</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">electron</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">electron</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2.4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">baselineElectrons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">electron</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Apply electron efficiency</span>
+<span class="w">            </span><span class="n">CMS</span><span class="o">::</span><span class="n">applyElectronEff</span><span class="p">(</span><span class="n">baselineElectrons</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Muon objects</span>
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">baselineMuons</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">muon</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">muons</span><span class="p">())</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">muon</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">muon</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2.4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">baselineMuons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">muon</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Apply muon efficiency</span>
+<span class="w">            </span><span class="n">CMS</span><span class="o">::</span><span class="n">applyMuonEff</span><span class="p">(</span><span class="n">baselineMuons</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Jets</span>
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">baselineJets</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">fullJets</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span><span class="w"> </span><span class="n">jet</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">jets</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jet</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">30.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">jet</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2.4</span><span class="p">)</span><span class="w"> </span><span class="n">baselineJets</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">jet</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jet</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5.0</span><span class="p">)</span><span class="w"> </span><span class="n">fullJets</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">jet</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Electron isolation</span>
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">Electrons</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">Rrel</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">baselineElectrons</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">50.</span><span class="p">)</span><span class="w"> </span><span class="n">Rrel</span><span class="o">=</span><span class="mf">0.2</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">200.</span><span class="p">)</span><span class="w"> </span><span class="n">Rrel</span><span class="o">=</span><span class="mf">10.</span><span class="o">/</span><span class="n">e</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="n">Rrel</span><span class="o">=</span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">sumpt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">fullJets</span><span class="p">)</span><span class="w"></span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">deltaR_eta</span><span class="p">(</span><span class="n">j</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Rrel</span><span class="p">)</span><span class="w"> </span><span class="n">sumpt</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">j</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sumpt</span><span class="o">/</span><span class="n">e</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.1</span><span class="p">)</span><span class="w"> </span><span class="n">Electrons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Muon isolation</span>
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">Muons</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">mu</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">baselineMuons</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">50.</span><span class="p">)</span><span class="w"> </span><span class="n">Rrel</span><span class="o">=</span><span class="mf">0.2</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">200.</span><span class="p">)</span><span class="w"> </span><span class="n">Rrel</span><span class="o">=</span><span class="mf">10.</span><span class="o">/</span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="n">Rrel</span><span class="o">=</span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">sumpt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">fullJets</span><span class="p">)</span><span class="w"></span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">deltaR_eta</span><span class="p">(</span><span class="n">j</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Rrel</span><span class="p">)</span><span class="w"> </span><span class="n">sumpt</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">j</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sumpt</span><span class="o">/</span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.2</span><span class="p">)</span><span class="w"> </span><span class="n">Muons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">mu</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Selected lepton</span>
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">Leptons</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Electrons</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">e</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.442</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Leptons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">mu</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Muons</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2.4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">Leptons</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">mu</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">JetLeptonOverlapRemoval</span><span class="p">(</span><span class="n">baselineJets</span><span class="p">,</span><span class="n">Leptons</span><span class="p">,</span><span class="mf">0.4</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// Online trigger</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Leptons</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">!=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="w"> </span><span class="nf">HTmiss</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">baselineJets</span><span class="p">)</span><span class="w"> </span><span class="n">HTmiss</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">j</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">lep_trigger</span><span class="o">=</span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Electrons</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">HTmiss</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">()).</span><span class="n">pT</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">120</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">lep_trigger</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">25.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">e</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2.1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">lep_trigger</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">mu</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Muons</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">HTmiss</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">()).</span><span class="n">pT</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">120</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">lep_trigger</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">22.</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">mu</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2.4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">lep_trigger</span><span class="o">=</span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">lep_trigger</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;Trigger&quot;</span>
+
+<span class="w">            </span><span class="c1">// MT of lepton-MET system</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">MT</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="w"> </span><span class="mf">2.</span><span class="o">*</span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="o">*</span><span class="n">met</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span><span class="o">-</span><span class="n">std</span><span class="o">::</span><span class="n">cos</span><span class="p">(</span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">deltaPhi</span><span class="p">(</span><span class="n">ptot</span><span class="p">)))</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">MT</span><span class="o">&lt;</span><span class="mi">150</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;M_{T}&gt;150&quot;</span>
+
+<span class="w">            </span><span class="c1">// b-tagged jets</span>
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">bJets</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">nobJets</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mediumbJets</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">N_tight_bJets</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kt">bool</span><span class="w"> </span><span class="n">leadjet_nob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w">  </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mf">10.</span><span class="p">};</span><span class="w"></span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w">  </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mf">10000.</span><span class="p">};</span><span class="w"></span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w">  </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0.60</span><span class="p">};</span><span class="w"> </span><span class="c1">// medium</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w">  </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0.35</span><span class="p">};</span><span class="w"> </span><span class="c1">// tight</span>
+<span class="w">            </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">BinnedFn2D</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_eff2d_1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c1</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">BinnedFn2D</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_eff2d_2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c2</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">ii</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">ii</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">baselineJets</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">ii</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">btag</span><span class="p">())</span><span class="w"></span>
+<span class="w">                    </span><span class="n">bJets</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ii</span><span class="p">));</span><span class="w"></span>
+<span class="w">                </span><span class="k">else</span><span class="w"></span>
+<span class="w">                    </span><span class="n">nobJets</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ii</span><span class="p">));</span><span class="w"></span>
+<span class="w">                </span><span class="kt">bool</span><span class="w"> </span><span class="n">hasTag</span><span class="o">=</span><span class="n">has_tag</span><span class="p">(</span><span class="n">_eff2d_1</span><span class="p">,</span><span class="w"> </span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">(),</span><span class="w"> </span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">());</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">btag</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">hasTag</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">mediumbJets</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ii</span><span class="p">));</span><span class="w"></span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ii</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">leadjet_nob</span><span class="w"> </span><span class="o">=</span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="n">hasTag</span><span class="o">=</span><span class="n">has_tag</span><span class="p">(</span><span class="n">_eff2d_2</span><span class="p">,</span><span class="w"> </span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">abseta</span><span class="p">(),</span><span class="w"> </span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">());</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">btag</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">hasTag</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">                    </span><span class="n">N_tight_bJets</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">mediumbJets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;N_b&gt;=1&quot;</span>
+
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">Electrons</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">+</span><span class="n">Muons</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;N_l&lt;2&quot;</span>
+
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">event</span><span class="o">-&gt;</span><span class="n">taus</span><span class="p">().</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;N_tau==0&quot;</span>
+
+<span class="w">            </span><span class="c1">// Azimuthal angle between MET and two leading jets</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">deltaPhi_j1</span><span class="o">=</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">deltaPhi</span><span class="p">(</span><span class="n">ptot</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">deltaPhi_j2</span><span class="o">=</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">deltaPhi</span><span class="p">(</span><span class="n">ptot</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">deltaPhi_j12</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deltaPhi_j1</span><span class="o">&lt;</span><span class="n">deltaPhi_j2</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">deltaPhi_j1</span><span class="o">:</span><span class="n">deltaPhi_j2</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">deltaPhi_j12</span><span class="o">&lt;</span><span class="mf">0.8</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;deltaPhi_j12&gt;0.8&quot;</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">met</span><span class="o">&lt;</span><span class="mi">250</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;MET&gt;250&quot;</span>
+
+<span class="w">            </span><span class="c1">// *MODIFIED* topness</span>
+<span class="w">            </span><span class="c1">// 1612.03877 &amp; 1212.4495</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">sigmat</span><span class="o">=</span><span class="mf">15.</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">sigmaW</span><span class="o">=</span><span class="mf">5.</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">pl</span><span class="p">[]</span><span class="o">=</span><span class="p">{</span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">px</span><span class="p">(),</span><span class="w"> </span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">py</span><span class="p">(),</span><span class="w"> </span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">pz</span><span class="p">(),</span><span class="w"> </span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">E</span><span class="p">()};</span><span class="w"></span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">MET</span><span class="p">[]</span><span class="o">=</span><span class="p">{</span><span class="n">ptot</span><span class="p">.</span><span class="n">px</span><span class="p">(),</span><span class="w"> </span><span class="n">ptot</span><span class="p">.</span><span class="n">py</span><span class="p">(),</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">};</span><span class="w"></span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">tmod</span><span class="o">=</span><span class="n">exp</span><span class="p">(</span><span class="mf">9999.</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// The experimental report consider all possible pairings of b jet candidates</span>
+<span class="w">            </span><span class="c1">// with up to three jets with highest CSV discriminator values.</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">n_b</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span><span class="w"> </span><span class="n">bj</span><span class="w"> </span><span class="o">:</span><span class="n">bJets</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">n_b</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">pb1</span><span class="p">[]</span><span class="o">=</span><span class="p">{</span><span class="n">bj</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">px</span><span class="p">(),</span><span class="w"> </span><span class="n">bj</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">py</span><span class="p">(),</span><span class="w"> </span><span class="n">bj</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">pz</span><span class="p">(),</span><span class="w"> </span><span class="n">bj</span><span class="o">-&gt;</span><span class="n">E</span><span class="p">()};</span><span class="w"></span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">tmod_tem</span><span class="o">=</span><span class="n">log</span><span class="p">(</span><span class="n">topnesscompute</span><span class="p">(</span><span class="n">pb1</span><span class="p">,</span><span class="w"> </span><span class="n">pl</span><span class="p">,</span><span class="w"> </span><span class="n">MET</span><span class="p">,</span><span class="w"> </span><span class="n">sigmat</span><span class="p">,</span><span class="w"> </span><span class="n">sigmaW</span><span class="p">));</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">tmod</span><span class="o">&gt;</span><span class="n">tmod_tem</span><span class="p">)</span><span class="w"> </span><span class="n">tmod</span><span class="o">=</span><span class="n">tmod_tem</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// up to three jets</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span><span class="w"> </span><span class="n">nobj</span><span class="w"> </span><span class="o">:</span><span class="n">nobJets</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">n_b</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="n">n_b</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">pb1</span><span class="p">[]</span><span class="o">=</span><span class="p">{</span><span class="n">nobj</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">px</span><span class="p">(),</span><span class="w"> </span><span class="n">nobj</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">py</span><span class="p">(),</span><span class="w"> </span><span class="n">nobj</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">pz</span><span class="p">(),</span><span class="w"> </span><span class="n">nobj</span><span class="o">-&gt;</span><span class="n">E</span><span class="p">()};</span><span class="w"></span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">tmod_tem</span><span class="o">=</span><span class="n">log</span><span class="p">(</span><span class="n">topnesscompute</span><span class="p">(</span><span class="n">pb1</span><span class="p">,</span><span class="w"> </span><span class="n">pl</span><span class="p">,</span><span class="w"> </span><span class="n">MET</span><span class="p">,</span><span class="w"> </span><span class="n">sigmat</span><span class="p">,</span><span class="w"> </span><span class="n">sigmaW</span><span class="p">));</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">tmod</span><span class="o">&gt;</span><span class="n">tmod_tem</span><span class="p">)</span><span class="w"> </span><span class="n">tmod</span><span class="o">=</span><span class="n">tmod_tem</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tmod</span><span class="o">&gt;</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;**t_mod&gt;0&quot;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tmod</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;**t_mod&gt;10&quot;</span>
+
+
+<span class="w">            </span><span class="c1">// Mlb</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">deltaRlb</span><span class="o">=</span><span class="mf">9999.</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">Mlb</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Jet</span><span class="o">*</span><span class="w"> </span><span class="n">bj</span><span class="w"> </span><span class="o">:</span><span class="n">mediumbJets</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">deltaRlb</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">bj</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">deltaR_eta</span><span class="p">(</span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">())){</span><span class="w"></span>
+<span class="w">                    </span><span class="n">deltaRlb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bj</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">deltaR_eta</span><span class="p">(</span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">());</span><span class="w"></span>
+<span class="w">                    </span><span class="n">Mlb</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">bj</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">()</span><span class="o">+</span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">()).</span><span class="n">m</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Mlb</span><span class="o">&lt;</span><span class="mi">175</span><span class="p">)</span><span class="w"> </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;**Mlb&lt;175&quot;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Mlb</span><span class="o">&gt;</span><span class="mi">175</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">N_tight_bJets</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">_cutflow</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span><span class="w"> </span><span class="c1">//&quot;**Mlb&gt;175&quot;</span>
+
+<span class="w">            </span><span class="cm">/*********************************************************/</span><span class="w"></span>
+<span class="w">            </span><span class="cm">/*                                                       */</span><span class="w"></span>
+<span class="w">            </span><span class="cm">/* SIGNAL REGIONS                                        */</span><span class="w"></span>
+<span class="w">            </span><span class="cm">/*                                                       */</span><span class="w"></span>
+<span class="w">            </span><span class="cm">/*********************************************************/</span><span class="w"></span>
+
+<span class="c1">//            bool MET_250_350= met&gt;250 and met&lt;350;</span>
+<span class="c1">//            bool MET_350_450= met&gt;350 and met&lt;450;</span>
+<span class="c1">//            bool MET_450_600= met&gt;450 and met&lt;600;</span>
+<span class="c1">//            bool MET_600= met&gt;=600;</span>
+<span class="c1">//            bool MET_250_450= met&gt;250 and met&lt;450;</span>
+<span class="c1">//            bool MET_450_550= met&gt;450 and met&lt;550;</span>
+<span class="c1">//            bool MET_550_650= met&gt;550 and met&lt;650;</span>
+<span class="c1">//            bool MET_650= met&gt;=650;</span>
+<span class="c1">//            bool MET_550= met&gt;=550;</span>
+<span class="c1">//            bool MET_350_550= met&gt;350 and met&lt;550;</span>
+<span class="c1">//            bool MET_450= met&gt;=450;</span>
+
+<span class="c1">//            if (baselineJets.size()&lt;=3){</span>
+<span class="c1">//                if(tmod&gt;10){</span>
+<span class="c1">//                    if(Mlb&lt;175){</span>
+<span class="c1">//                        if( MET_250_350) _counters.at(&quot;SR0&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_350_450) _counters.at(&quot;SR1&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_450_600) _counters.at(&quot;SR2&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_600    ) _counters.at(&quot;SR3&quot;).add_event(event);</span>
+<span class="c1">//                    }else{//Mlb&gt;175</span>
+<span class="c1">//                      if(N_tight_bJets&gt;0){</span>
+<span class="c1">//                        if( MET_250_450) _counters.at(&quot;SR4&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_450_600) _counters.at(&quot;SR5&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_600    ) _counters.at(&quot;SR6&quot;).add_event(event);</span>
+<span class="c1">//                      }</span>
+<span class="c1">//                    }</span>
+<span class="c1">//                }</span>
+<span class="c1">//            }</span>
+<span class="c1">//            else{ // N_j&gt;=4</span>
+<span class="c1">//                if(tmod&lt;=0){</span>
+<span class="c1">//                    if(Mlb&lt;175){</span>
+<span class="c1">//                        if( MET_250_350) _counters.at(&quot;SR7&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_350_450) _counters.at(&quot;SR8&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_450_550) _counters.at(&quot;SR9&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_550_650) _counters.at(&quot;SR10&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_650    ) _counters.at(&quot;SR11&quot;).add_event(event);</span>
+<span class="c1">//                    }else{//Mlb&gt;175</span>
+<span class="c1">//                      if(N_tight_bJets&gt;0){</span>
+<span class="c1">//                        if( MET_250_350) _counters.at(&quot;SR12&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_350_450) _counters.at(&quot;SR13&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_450_550) _counters.at(&quot;SR14&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_550    ) _counters.at(&quot;SR15&quot;).add_event(event);</span>
+<span class="c1">//                      }</span>
+<span class="c1">//                    }</span>
+<span class="c1">//                }else if (tmod&lt;=10){</span>
+<span class="c1">//                    if(Mlb&lt;175){</span>
+<span class="c1">//                        if( MET_250_350) _counters.at(&quot;SR16&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_350_550) _counters.at(&quot;SR17&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_550    ) _counters.at(&quot;SR18&quot;).add_event(event);</span>
+<span class="c1">//                    }else{//Mlb&gt;175</span>
+<span class="c1">//                      if(N_tight_bJets&gt;0){</span>
+<span class="c1">//                        if( MET_250_450) _counters.at(&quot;SR19&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_450    ) _counters.at(&quot;SR20&quot;).add_event(event);</span>
+<span class="c1">//                      }</span>
+<span class="c1">//                    }</span>
+<span class="c1">//                }else{ //tmod&gt;10</span>
+<span class="c1">//                    if(Mlb&lt;175){</span>
+<span class="c1">//                        if( MET_250_350) _counters.at(&quot;SR21&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_350_450) _counters.at(&quot;SR22&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_450_600) _counters.at(&quot;SR23&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_600    ) _counters.at(&quot;SR24&quot;).add_event(event);</span>
+<span class="c1">//                    }else{//Mlb&gt;175</span>
+<span class="c1">//                      if(N_tight_bJets&gt;0){</span>
+<span class="c1">//                        if( MET_250_450) _counters.at(&quot;SR25&quot;).add_event(event);</span>
+<span class="c1">//                        if( MET_450    ) _counters.at(&quot;SR26&quot;).add_event(event);</span>
+<span class="c1">//                      }</span>
+<span class="c1">//                    }</span>
+<span class="c1">//                }</span>
+<span class="c1">//            }</span>
+<span class="c1">//</span>
+<span class="c1">//            // compressed region</span>
+<span class="c1">//            if(baselineJets.size()&gt;=5 and leadjet_nob and deltaPhi_j12 &gt;0.5 and Leptons.at(0)-&gt;pT() &lt; 150 and Leptons.at(0)-&gt;mom().deltaPhi(ptot)&lt;2. ){</span>
+<span class="c1">//                if( MET_250_350) _counters.at(&quot;SR27&quot;).add_event(event);</span>
+<span class="c1">//                if( MET_350_450) _counters.at(&quot;SR28&quot;).add_event(event);</span>
+<span class="c1">//                if( MET_450_550) _counters.at(&quot;SR29&quot;).add_event(event);</span>
+<span class="c1">//                if( MET_550    ) _counters.at(&quot;SR30&quot;).add_event(event);</span>
+<span class="c1">//            }</span>
+
+<span class="w">            </span><span class="c1">// aggregate signal region</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&lt;=</span><span class="mi">3</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">tmod</span><span class="o">&gt;</span><span class="mi">10</span><span class="w">              </span><span class="n">and</span><span class="w"> </span><span class="n">met</span><span class="o">&gt;=</span><span class="mi">600</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR0&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;=</span><span class="mi">4</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">tmod</span><span class="o">&lt;=</span><span class="mi">0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">Mlb</span><span class="o">&lt;=</span><span class="mi">175</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">met</span><span class="o">&gt;=</span><span class="mi">550</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR1&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;=</span><span class="mi">4</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">tmod</span><span class="o">&gt;</span><span class="mi">10</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">Mlb</span><span class="o">&lt;=</span><span class="mi">175</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">met</span><span class="o">&gt;=</span><span class="mi">450</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR2&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;=</span><span class="mi">4</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">tmod</span><span class="o">&lt;=</span><span class="mi">0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">Mlb</span><span class="o">&gt;</span><span class="w"> </span><span class="mi">175</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">met</span><span class="o">&gt;=</span><span class="mi">450</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR3&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;=</span><span class="mi">4</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">tmod</span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">Mlb</span><span class="o">&gt;</span><span class="w"> </span><span class="mi">175</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">met</span><span class="o">&gt;=</span><span class="mi">450</span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR4&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">baselineJets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;=</span><span class="mi">5</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">leadjet_nob</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">deltaPhi_j12</span><span class="w"> </span><span class="o">&gt;</span><span class="mf">0.5</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">150</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">Leptons</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">mom</span><span class="p">().</span><span class="n">deltaPhi</span><span class="p">(</span><span class="n">ptot</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">2.</span><span class="w"> </span><span class="p">){</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">met</span><span class="o">&gt;=</span><span class="mi">450</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR5&quot;</span><span class="p">).</span><span class="n">add_event</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">combine</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Analysis</span><span class="o">*</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="n">Analysis_CMS_13TeV_1LEPStop_36invfb</span><span class="o">*</span><span class="w"> </span><span class="n">specificOther</span><span class="w"></span>
+<span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Analysis_CMS_13TeV_1LEPStop_36invfb</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">other</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">_counters</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">specificOther</span><span class="o">-&gt;</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">collect_results</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// cout &lt;&lt; _cutflow &lt;&lt; endl;</span>
+
+<span class="w">            </span><span class="c1">// aggregate signal regions</span>
+<span class="w">            </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR0&quot;</span><span class="p">),</span><span class="w"> </span><span class="mf">4.</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">3.4</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR1&quot;</span><span class="p">),</span><span class="w"> </span><span class="mf">8.</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">10.7</span><span class="p">,</span><span class="w"> </span><span class="mf">3.2</span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR2&quot;</span><span class="p">),</span><span class="w"> </span><span class="mf">3.</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">8.8</span><span class="p">,</span><span class="w"> </span><span class="mf">1.8</span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR3&quot;</span><span class="p">),</span><span class="w"> </span><span class="mf">3.</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">5.3</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR4&quot;</span><span class="p">),</span><span class="w"> </span><span class="mf">2.</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">1.9</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="n">_counters</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="s">&quot;aggregateSR5&quot;</span><span class="p">),</span><span class="w"> </span><span class="mf">4.</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">8.6</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">}));</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// binned signal region</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR0&quot;), 72., {65.8, 6.8}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR1&quot;), 24., {20.5, 2.9}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR2&quot;), 6., {6.4, 1.3}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR3&quot;), 2., {2.4, 0.8}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR4&quot;), 6., {8.9, 2.4}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR5&quot;), 3., {1.9, 0.7}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR6&quot;), 2., {1., 0.5}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR7&quot;), 343., {383., 34.}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR8&quot;), 68., {75.5, 8.5}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR9&quot;), 13., {15.0, 2.9}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR10&quot;), 6., {4.1, 1.5}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR11&quot;), 2., {6.6, 2.9}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR12&quot;), 38., {39.7, 6.2}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR13&quot;), 8., {13.7, 2.8}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR14&quot;), 2., {3.1, 1.1}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR15&quot;), 1., {2.2, 1.0}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR16&quot;), 65., {58.7, 7.2}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR17&quot;), 23., {14.7, 2.4}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR18&quot;), 1., {1.5, 0.6}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR19&quot;), 9., {8.9, 1.9}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR20&quot;), 0., {0.6, 0.2}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR21&quot;), 12., {14.3, 2.7}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR22&quot;), 9., {10., 2.1}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR23&quot;), 3., {6.3, 1.5}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR24&quot;), 0., {2.4, 1.0}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR25&quot;), 0., {1.9, 0.7}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR26&quot;), 2., {1.3, 0.4}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR27&quot;), 72., {82., 11.}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR28&quot;), 30., {18.9, 3.7}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR29&quot;), 2., {3.7, 1.4}));</span>
+<span class="w">            </span><span class="c1">// add_result(SignalRegionData(_counters.at(&quot;SR30&quot;), 2., {4.8, 2.0}));</span>
+
+<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">analysis_specific_reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">_counters</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="n">DEFINE_ANALYSIS_FACTORY</span><span class="p">(</span><span class="n">CMS_13TeV_1LEPStop_36invfb</span><span class="p">)</span><span class="w"></span>
+
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

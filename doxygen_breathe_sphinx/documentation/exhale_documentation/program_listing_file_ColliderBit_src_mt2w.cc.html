@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File mt2w.cc &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File mt2w.cc</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-mt2w-cc">
+<span id="program-listing-file-colliderbit-src-mt2w-cc"></span><h1>Program Listing for File mt2w.cc<a class="headerlink" href="#program-listing-for-file-mt2w-cc" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_mt2w.cc.html#file-colliderbit-src-mt2w-cc"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/mt2w.cc</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/mt2w.h&quot;</span><span class="cp"></span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">calculateMT2wHepUtils</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">jets</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">btag</span><span class="p">,</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="o">&amp;</span><span class="w"> </span><span class="n">lep</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">met</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">metphi</span><span class="p">){</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// I am asumming that jets is sorted by Pt</span>
+<span class="w">    </span><span class="n">assert</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">jets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">btag</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// require at least 2 jets</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">jets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&lt;</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">99999.</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// First we count the number of b-tagged jets, and separate those non b-tagged</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bjets</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">non_bjets</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">jets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">btag</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">bjets</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">non_bjets</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n_btag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">bjets</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//  cout &lt;&lt; &quot;n_btag = &quot; &lt;&lt; n_btag &lt;&lt; endl;</span>
+
+<span class="w">    </span><span class="c1">// We do different things depending on the number of b-tagged jets</span>
+<span class="w">    </span><span class="c1">// arXiv:1203.4813 recipe</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nMax</span><span class="o">=</span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">jets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&lt;=</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="n">nMax</span><span class="o">=</span><span class="n">non_bjets</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="n">nMax</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n_btag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w">                  </span><span class="c1">//  0 b-tags</span>
+<span class="w">        </span><span class="c1">// If no b-jets select the minimum of the mt2w from all combinations with</span>
+<span class="w">        </span><span class="c1">// the three leading jets</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">min_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9999</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">nMax</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;</span><span class="n">nMax</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="kt">float</span><span class="w"> </span><span class="n">c_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mt2wWrapperHepUtils</span><span class="p">(</span><span class="n">lep</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="n">jets</span><span class="p">[</span><span class="n">non_bjets</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span><span class="w"></span>
+<span class="w">                        </span><span class="n">jets</span><span class="p">[</span><span class="n">non_bjets</span><span class="p">[</span><span class="n">j</span><span class="p">]],</span><span class="w"> </span><span class="n">met</span><span class="p">,</span><span class="w"> </span><span class="n">metphi</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c_mt2w</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">min_mt2w</span><span class="p">)</span><span class="w"></span>
+<span class="w">                    </span><span class="n">min_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_mt2w</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">min_mt2w</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n_btag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">){</span><span class="w">          </span><span class="c1">//  1 b-tags</span>
+<span class="w">        </span><span class="c1">// if only one b-jet choose the three non-b leading jets and choose the smaller</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">min_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9999</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">nMax</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">            </span><span class="kt">float</span><span class="w"> </span><span class="n">c_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mt2wWrapperHepUtils</span><span class="p">(</span><span class="n">lep</span><span class="p">,</span><span class="w"> </span><span class="n">jets</span><span class="p">[</span><span class="n">bjets</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span><span class="w"> </span><span class="n">jets</span><span class="p">[</span><span class="n">non_bjets</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span><span class="w"> </span><span class="n">met</span><span class="p">,</span><span class="w"> </span><span class="n">metphi</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c_mt2w</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">min_mt2w</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="n">min_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_mt2w</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">nMax</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">            </span><span class="kt">float</span><span class="w"> </span><span class="n">c_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mt2wWrapperHepUtils</span><span class="p">(</span><span class="n">lep</span><span class="p">,</span><span class="w"> </span><span class="n">jets</span><span class="p">[</span><span class="n">non_bjets</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span><span class="w"> </span><span class="n">jets</span><span class="p">[</span><span class="n">bjets</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span><span class="w"> </span><span class="n">met</span><span class="p">,</span><span class="w"> </span><span class="n">metphi</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c_mt2w</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">min_mt2w</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="n">min_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_mt2w</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">min_mt2w</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n_btag</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">          </span><span class="c1">// &gt;=2 b-tags</span>
+<span class="w">        </span><span class="c1">// if 3 or more b-jets the paper says ignore b-tag and do like 0-bjets</span>
+<span class="w">        </span><span class="c1">// but we are going to make the combinations with the b-jets</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">min_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9999</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">n_btag</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;</span><span class="n">n_btag</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="kt">float</span><span class="w"> </span><span class="n">c_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mt2wWrapperHepUtils</span><span class="p">(</span><span class="n">lep</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="n">jets</span><span class="p">[</span><span class="n">bjets</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span><span class="w"></span>
+<span class="w">                        </span><span class="n">jets</span><span class="p">[</span><span class="n">bjets</span><span class="p">[</span><span class="n">j</span><span class="p">]],</span><span class="w"> </span><span class="n">met</span><span class="p">,</span><span class="w"> </span><span class="n">metphi</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c_mt2w</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">min_mt2w</span><span class="p">)</span><span class="w"></span>
+<span class="w">                    </span><span class="n">min_mt2w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_mt2w</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">min_mt2w</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">-1.</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// This funcion is a wrapper for mt2w_bisect etc that takes HEPUtils::P4 vectors instead of doubles</span>
+<span class="c1">// Written by Martin White (martin.white@adelaide.edu.au), October 2015</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">mt2wWrapperHepUtils</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="o">&amp;</span><span class="w"> </span><span class="n">lep</span><span class="p">,</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="o">&amp;</span><span class="w"> </span><span class="n">jet_o</span><span class="p">,</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">P4</span><span class="o">&amp;</span><span class="w"> </span><span class="n">jet_b</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">met</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">metphi</span><span class="p">){</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// same for all MT2x variables</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">metx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">met</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="w"> </span><span class="n">metphi</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">mety</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">met</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="w"> </span><span class="n">metphi</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">pl</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">     </span><span class="c1">// Visible lepton</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">pb1</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">    </span><span class="c1">// bottom on the same side as the visible lepton</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">pb2</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">    </span><span class="c1">// other bottom, paired with the invisible W</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">pmiss</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w">  </span><span class="c1">// &lt;unused&gt;, pmx, pmy   missing pT</span>
+
+<span class="w">    </span><span class="n">pl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="n">lep</span><span class="p">.</span><span class="n">E</span><span class="p">();</span><span class="w"> </span><span class="n">pl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="n">lep</span><span class="p">.</span><span class="n">px</span><span class="p">();</span><span class="w"> </span><span class="n">pl</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="n">lep</span><span class="p">.</span><span class="n">py</span><span class="p">();</span><span class="w"> </span><span class="n">pl</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="n">lep</span><span class="p">.</span><span class="n">pz</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">pb1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jet_o</span><span class="p">.</span><span class="n">px</span><span class="p">();</span><span class="w">  </span><span class="n">pb1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jet_o</span><span class="p">.</span><span class="n">py</span><span class="p">();</span><span class="w">   </span><span class="n">pb1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jet_o</span><span class="p">.</span><span class="n">pz</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">pb2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jet_b</span><span class="p">.</span><span class="n">px</span><span class="p">();</span><span class="w">  </span><span class="n">pb2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jet_b</span><span class="p">.</span><span class="n">py</span><span class="p">();</span><span class="w">   </span><span class="n">pb2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jet_b</span><span class="p">.</span><span class="n">pz</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">pmiss</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span><span class="w"> </span><span class="n">pmiss</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metx</span><span class="p">;</span><span class="w"> </span><span class="n">pmiss</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mety</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">pb1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jet_o</span><span class="p">.</span><span class="n">E</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">pb2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jet_b</span><span class="p">.</span><span class="n">E</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">mt2w_bisect</span><span class="o">::</span><span class="n">mt2w</span><span class="w"> </span><span class="n">mt2w_event</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">mt2w_event</span><span class="p">.</span><span class="n">set_momenta</span><span class="p">(</span><span class="n">pl</span><span class="p">,</span><span class="w"> </span><span class="n">pb1</span><span class="p">,</span><span class="w"> </span><span class="n">pb2</span><span class="p">,</span><span class="w"> </span><span class="n">pmiss</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">mt2w_event</span><span class="p">.</span><span class="n">get_mt2w</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>
