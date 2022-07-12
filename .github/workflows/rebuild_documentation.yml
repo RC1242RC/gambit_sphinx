@@ -34,7 +34,6 @@ jobs:
           && rm -r exhale_documentation
           && mkdir documentation
           && mkdir exhale_documentation
-          && doxygen 
           && sphinx-build -b html . documentation
       
       - name: Commit changes
