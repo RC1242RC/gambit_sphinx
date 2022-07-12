@@ -27,7 +27,7 @@ author = 'The GAMBIT Community'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [ "breathe" ]
+extensions = [ "breathe", "exhale" ]
 
 breathe_projects = {"GAMBIT": "./xml"}
 
@@ -66,3 +66,25 @@ html_copy_source = False
 html_theme_options = {
     'prev_next_buttons_location': 'none',
 }
+
+# Setup the exhale extension
+exhale_args = {
+    # These arguments are required
+    "containmentFolder":     "./api",
+    "rootFileName":          "library_root.rst",
+    "doxygenStripFromPath":  "..",
+    # Heavily encouraged optional argument (see docs)
+    "rootFileTitle":         "Library API",
+    # Suggested optional arguments
+    "createTreeView":        True,
+    # TIP: if using the sphinx-bootstrap-theme, you need
+    # "treeViewIsBootstrap": True,
+    "exhaleExecutesDoxygen": True,
+    "exhaleDoxygenStdin":    "INPUT = ../ColliderBit"
+}
+
+# Tell sphinx what the primary language being documented is.
+primary_domain = 'cpp'
+
+# Tell sphinx what the pygments highlight language should be.
+highlight_language = 'cpp'

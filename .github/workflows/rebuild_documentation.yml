@@ -21,6 +21,7 @@ jobs:
         run: pip install Sphinx 
           && pip install sphinx_rtd_theme 
           && pip install breathe
+          && pip install exhale
 
       - name: Install doxygen
         run: sudo apt-get install doxygen
@@ -30,7 +31,9 @@ jobs:
           && rm -r xml
           && rm -r html
           && rm -r documentation
+          && rm -r exhale_documentation
           && mkdir documentation
+          && mkdir exhale_documentation
           && doxygen 
           && sphinx-build -b html . documentation
       

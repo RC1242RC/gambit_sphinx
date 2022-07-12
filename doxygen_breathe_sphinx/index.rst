@@ -5,7 +5,7 @@ Welcome to GAMBIT's Documentation!
    :maxdepth: 4
    :hidden:
    
-   colliderbit
+   exhale_documentation/library_root
    genindex
 
 Here you will find documentation for each ``Bit`` that makes up GAMBIT.
