@@ -28,10 +28,16 @@ jobs:
       - name: Generate doxygen-breathe-sphinx documentation
         run: cd doxygen_breathe_sphinx 
           && rm -r xml
+          && rm -r html
           && rm -r documentation
           && mkdir documentation
           && doxygen 
           && sphinx-build -b html . documentation
+      
+      - name: Commit changes
+        run: git add --all
+          && git commit -m "Rebuilt documentation"
+          && git push
 
       - name: Push generated html to site repository
         uses: cpina/github-action-push-to-another-repository@main
