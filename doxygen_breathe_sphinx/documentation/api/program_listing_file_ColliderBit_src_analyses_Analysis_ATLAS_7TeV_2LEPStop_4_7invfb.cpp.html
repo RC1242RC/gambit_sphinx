@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File Analysis_ATLAS_7TeV_2LEPStop_4_7invfb.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File Analysis_ATLAS_7TeV_2LEPStop_4_7invfb.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-analysis-atlas-7tev-2lepstop-4-7invfb-cpp">
+<span id="program-listing-file-colliderbit-src-analyses-analysis-atlas-7tev-2lepstop-4-7invfb-cpp"></span><h1>Program Listing for File Analysis_ATLAS_7TeV_2LEPStop_4_7invfb.cpp<a class="headerlink" href="#program-listing-for-file-analysis-atlas-7tev-2lepstop-4-7invfb-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_analyses_Analysis_ATLAS_7TeV_2LEPStop_4_7invfb.cpp.html#file-colliderbit-src-analyses-analysis-atlas-7tev-2lepstop-4-7invfb-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/analyses/Analysis_ATLAS_7TeV_2LEPStop_4_7invfb.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// Created by dsteiner on 26/07/18.</span>
+<span class="c1">// Amended by Martin White on 08/03/19</span>
+<span class="c1">//</span>
+<span class="c1">// Based on https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/SUSY-2012-04/ (arXiv:1208.4305)</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/ATLASEfficiencies.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/Analysis.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/Cutflow.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/AnalysisUtil.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/Utils.hpp&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">HEPUtils</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Analysis_ATLAS_7TeV_2LEPStop_4_7invfb</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Analysis</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Required detector sim</span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ATLAS&quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">numEE</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">numUU</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">numEU</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="w">      </span><span class="n">Analysis_ATLAS_7TeV_2LEPStop_4_7invfb</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">set_analysis_name</span><span class="p">(</span><span class="s">&quot;ATLAS_7TeV_2LEPStop_4_7invfb&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">set_luminosity</span><span class="p">(</span><span class="mf">4.7</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//clear();</span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">run</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Event</span><span class="w"> </span><span class="o">*</span><span class="n">event</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">electrons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">electrons</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">muons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">muons</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">electrons</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">electrons</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">sortParticlesByPt</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">muons</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">muons</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">sortParticlesByPt</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// get the jets and leptons filtered by their pt and eta requirements</span>
+<span class="w">        </span><span class="n">electrons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">filterPtEta</span><span class="p">(</span><span class="n">electrons</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mf">2.47</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">muons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">filterPtEta</span><span class="p">(</span><span class="n">muons</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mf">2.4</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Jet</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">jets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">filterPtEta</span><span class="p">(</span><span class="n">event</span><span class="o">-&gt;</span><span class="n">jets</span><span class="p">(),</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mf">4.5</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// check if any of the triggers were triggered</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">eeTrigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">isMultipleParticleTriggered</span><span class="p">(</span><span class="n">electrons</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">});</span><span class="w"></span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">uuTrigger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">isMultipleParticleTriggered</span><span class="p">(</span><span class="n">muons</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">});</span><span class="w"></span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">euTrigger</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">          </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">isSingleParticleTriggered</span><span class="p">(</span><span class="n">electrons</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"></span>
+<span class="w">          </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">isSingleParticleTriggered</span><span class="p">(</span><span class="n">muons</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">triggered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eeTrigger</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">uuTrigger</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">euTrigger</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// do overlap removal</span>
+<span class="w">        </span><span class="n">jets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">jetLeptonOverlapRemoval</span><span class="p">(</span><span class="n">jets</span><span class="p">,</span><span class="w"> </span><span class="n">electrons</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">electrons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">leptonJetOverlapRemoval</span><span class="p">(</span><span class="n">electrons</span><span class="p">,</span><span class="w"> </span><span class="n">jets</span><span class="p">,</span><span class="w"> </span><span class="mf">0.4</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">muons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">leptonJetOverlapRemoval</span><span class="p">(</span><span class="n">muons</span><span class="p">,</span><span class="w"> </span><span class="n">jets</span><span class="p">,</span><span class="w"> </span><span class="mf">0.4</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// This uses 8TeV tight electron selection, but it is close enough to the 7TeV implementation so we still use it</span>
+<span class="w">        </span><span class="n">ATLAS</span><span class="o">::</span><span class="n">applyTightIDElectronSelection</span><span class="p">(</span><span class="n">electrons</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// fill a vector with all of the leptons</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Particle</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">leptons</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">leptons</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">leptons</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">electrons</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">electrons</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">leptons</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">leptons</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">muons</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">muons</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// sort jets and leptons by pT</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">jets</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">jets</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">sortJetsByPt</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">leptons</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">leptons</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">sortParticlesByPt</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// minimum requirements</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">leptons</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">jets</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">triggered</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">oppositeSign</span><span class="p">(</span><span class="n">leptons</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">leptons</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">lep0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leptons</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">Particle</span><span class="o">*</span><span class="w"> </span><span class="n">lep1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leptons</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// calculate discriminating variables</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">mll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">lep0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">*</span><span class="n">lep1</span><span class="p">).</span><span class="n">m</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">zVeto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mll</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">81</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">mll</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">101</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">Ht</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lep0</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lep1</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Jet</span><span class="o">*</span><span class="w"> </span><span class="n">jet</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">jets</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">Ht</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">jet</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">();</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">Met</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">met</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">MetSig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Met</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Ht</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// any channel</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lep0</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">jets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">Met</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">MetSig</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">7.5</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">mll</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// ee or mu-mu channel</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">zVeto</span><span class="p">)</span><span class="w"></span>
+<span class="w">              </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// ee channel</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">electrons</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">electrons</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">17</span><span class="p">)</span><span class="w"></span>
+<span class="w">                  </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">numEE</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">weight</span><span class="p">();</span><span class="w"></span>
+<span class="w">                  </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// mu-mu channel</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">muons</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">muons</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">AnalysisUtil</span><span class="o">::</span><span class="n">muonFilter7TeV</span><span class="p">(</span><span class="n">muons</span><span class="p">))</span><span class="w"></span>
+<span class="w">                  </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">numUU</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">weight</span><span class="p">();</span><span class="w"></span>
+<span class="w">                  </span><span class="p">}</span><span class="w"></span>
+<span class="w">              </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// e-mu channel</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">muons</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">electrons</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">electrons</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">17</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">muons</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">pT</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"></span>
+<span class="w">              </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">numEU</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">weight</span><span class="p">();</span><span class="w"></span>
+<span class="w">              </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// cout &lt;&lt; numEE &lt;&lt; &quot;, &quot; &lt;&lt; numEU &lt;&lt; &quot;, &quot; &lt;&lt; numUU &lt;&lt; endl;</span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="cm">/*void Analysis_ATLAS_7TeV_2LEPStop_4_7invfb::scale(double factor)</span>
+<span class="cm">      {</span>
+<span class="cm">        HEPUtilsAnalysis::scale(factor);</span>
+<span class="cm">        cout &lt;&lt; &quot;SAVE_XSEC:&quot; &lt;&lt; xsec() &lt;&lt; endl;</span>
+<span class="cm">        auto save = [](double value, std::string name)</span>
+<span class="cm">          {</span>
+<span class="cm">            cout &lt;&lt; &quot;SAVE_START:&quot; &lt;&lt; name &lt;&lt; endl;</span>
+<span class="cm">            cout &lt;&lt; value &lt;&lt; endl;</span>
+<span class="cm">            cout &lt;&lt; &quot;SAVE_END&quot; &lt;&lt; endl;</span>
+<span class="cm">          };</span>
+<span class="cm">        save(numEE, &quot;numEE&quot;);</span>
+<span class="cm">        save(numUU, &quot;numUU&quot;);</span>
+<span class="cm">        save(numEU, &quot;numEU&quot;);</span>
+<span class="cm">        }*/</span><span class="w"></span>
+
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">combine</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Analysis</span><span class="o">*</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">Analysis_ATLAS_7TeV_2LEPStop_4_7invfb</span><span class="o">*</span><span class="w"> </span><span class="n">specificOther</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Analysis_ATLAS_7TeV_2LEPStop_4_7invfb</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">other</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="c1">// Here we will add the subclass member variables:</span>
+<span class="w">        </span><span class="n">numEE</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">specificOther</span><span class="o">-&gt;</span><span class="n">numEE</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">numEU</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">specificOther</span><span class="o">-&gt;</span><span class="n">numEU</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">numUU</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">specificOther</span><span class="o">-&gt;</span><span class="n">numUU</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">collect_results</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="s">&quot;ee&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">numEE</span><span class="p">,</span><span class="w">  </span><span class="mf">0.</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mf">61.</span><span class="p">,</span><span class="w"> </span><span class="mf">6.</span><span class="p">}));</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="s">&quot;eu&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">188</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">numEU</span><span class="p">,</span><span class="w">  </span><span class="mf">0.</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mf">189.</span><span class="p">,</span><span class="w"> </span><span class="mf">21.</span><span class="p">}));</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_result</span><span class="p">(</span><span class="n">SignalRegionData</span><span class="p">(</span><span class="s">&quot;uu&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">195</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">numUU</span><span class="p">,</span><span class="w">  </span><span class="mf">0.</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mf">190.</span><span class="p">,</span><span class="w"> </span><span class="mf">31.</span><span class="p">}));</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// std::cout &lt;&lt; &quot;Results ee &quot; &lt;&lt; numEE &lt;&lt; std::endl;</span>
+<span class="w">        </span><span class="c1">// std::cout &lt;&lt; &quot;Results emu &quot; &lt;&lt; numEU &lt;&lt; std::endl;</span>
+<span class="w">        </span><span class="c1">// std::cout &lt;&lt; &quot;Results mumu &quot; &lt;&lt; numUU &lt;&lt; std::endl;</span>
+
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="n">analysis_specific_reset</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">numEE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">numUU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">numEU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">DEFINE_ANALYSIS_FACTORY</span><span class="p">(</span><span class="n">ATLAS_7TeV_2LEPStop_4_7invfb</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

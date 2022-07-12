@@ -131,7 +131,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_13TeV_3b_36invfb.cpp</label>
+        <label>ColliderBit/src/analyses/Analysis_ATLAS_13TeV_3b_36invfb.cpp</label>
         <link refid="Analysis__ATLAS__13TeV__3b__36invfb_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -173,7 +173,6 @@
       </node>
     </incdepgraph>
     <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__3b__36invfb" prot="public">Gambit::ColliderBit::Analysis_ATLAS_13TeV_3b_36invfb</innerclass>
-    <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__3b__discoverySR__36invfb" prot="public">Gambit::ColliderBit::Analysis_ATLAS_13TeV_3b_discoverySR_36invfb</innerclass>
     <innernamespace refid="namespaceGambit">Gambit</innernamespace>
     <innernamespace refid="namespaceGambit_1_1ColliderBit">Gambit::ColliderBit</innernamespace>
     <briefdescription>
@@ -648,16 +647,16 @@
 <codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Class<sp/>for<sp/>collecting<sp/>results<sp/>for<sp/>discovery<sp/>regions<sp/>as<sp/>a<sp/>derived<sp/>class</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="479"><highlight class="normal"></highlight></codeline>
-<codeline lineno="480" refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__3b__discoverySR__36invfb" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__3b__discoverySR__36invfb" kindref="compound">Analysis_ATLAS_13TeV_3b_discoverySR_36invfb</ref><sp/>:<sp/>public<sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__3b__36invfb" kindref="compound">Analysis_ATLAS_13TeV_3b_36invfb</ref><sp/>{</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Analysis_ATLAS_13TeV_3b_discoverySR_36invfb<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__3b__36invfb" kindref="compound">Analysis_ATLAS_13TeV_3b_36invfb</ref><sp/>{</highlight></codeline>
 <codeline lineno="481"><highlight class="normal"></highlight></codeline>
 <codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__3b__discoverySR__36invfb" kindref="compound">Analysis_ATLAS_13TeV_3b_discoverySR_36invfb</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Analysis_ATLAS_13TeV_3b_discoverySR_36invfb()<sp/>{</highlight></codeline>
 <codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_analysis_name(</highlight><highlight class="stringliteral">&quot;ATLAS_13TeV_3b_discoverySR_36invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="486"><highlight class="normal"></highlight></codeline>
 <codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>collect_results()<sp/>{</highlight></codeline>
 <codeline lineno="488"><highlight class="normal"></highlight></codeline>
-<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-4b-meff1-A-disc&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{0.7,<sp/>0.5}));</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-4b-meff1-A-disc&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{0.7,<sp/>0.5}));</highlight></codeline>
 <codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="491"><highlight class="normal"></highlight></codeline>
 <codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
@@ -669,6 +668,6 @@
 <codeline lineno="498"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="499"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_13TeV_3b_36invfb.cpp"/>
+    <location file="ColliderBit/src/analyses/Analysis_ATLAS_13TeV_3b_36invfb.cpp"/>
   </compounddef>
 </doxygen>

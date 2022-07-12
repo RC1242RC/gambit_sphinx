@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File collider_harvester.py &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File collider_harvester.py</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-collider-harvester-py">
+<span id="program-listing-file-colliderbit-scripts-collider-harvester-py"></span><h1>Program Listing for File collider_harvester.py<a class="headerlink" href="#program-listing-for-file-collider-harvester-py" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_scripts_collider_harvester.py.html#file-colliderbit-scripts-collider-harvester-py"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/scripts/collider_harvester.py</span></code>)</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">#</span>
+<span class="c1"># GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">#*********************************************</span>
+<span class="c1"># \file</span>
+<span class="c1">#</span>
+<span class="c1">#  Model harvesting script for ColliderBit.</span>
+<span class="c1">#  Generates ColliderBit_models_rollcall.hpp</span>
+<span class="c1">#  and Py8Collider_typedefs.hpp</span>
+<span class="c1">#</span>
+<span class="c1">#  This script identifies all the models for</span>
+<span class="c1">#  which a new Pythia has been defined</span>
+<span class="c1">#  (typically but not neccessarily by GUM),</span>
+<span class="c1">#  and includes them in the relevant headers.</span>
+<span class="c1">#</span>
+<span class="c1">#*********************************************</span>
+<span class="c1">#</span>
+<span class="c1">#  Authors (add name and date if you modify):</span>
+<span class="c1">#</span>
+<span class="c1">#  \author Pat Scott</span>
+<span class="c1">#          (patscott@physics.mcgill.ca)</span>
+<span class="c1">#    \date 2019 Jan</span>
+<span class="c1">#</span>
+<span class="c1">#*********************************************</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">toolsfile</span><span class="o">=</span><span class="s2">&quot;./Utils/scripts/harvesting_tools.py&quot;</span>
+<span class="n">exec</span><span class="p">(</span><span class="nb">compile</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">toolsfile</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">toolsfile</span><span class="p">,</span> <span class="s1">&#39;exec&#39;</span><span class="p">))</span> <span class="c1"># Python 2/3 compatible version of &#39;execfile&#39;</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">argv</span><span class="p">):</span>
+
+    <span class="n">model_headers</span><span class="o">=</span><span class="nb">set</span><span class="p">([])</span>
+    <span class="n">ignore_model_headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;SUSY.hpp&quot;</span><span class="p">,</span> <span class="s2">&quot;SUSY_extras.hpp&quot;</span><span class="p">]</span>
+
+    <span class="c1"># Handle command line options</span>
+    <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">opts</span><span class="p">,</span> <span class="n">args</span> <span class="o">=</span> <span class="n">getopt</span><span class="o">.</span><span class="n">getopt</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span><span class="s2">&quot;vx:&quot;</span><span class="p">,[</span><span class="s2">&quot;verbose&quot;</span><span class="p">,</span><span class="s2">&quot;exclude-models=&quot;</span><span class="p">])</span>
+    <span class="k">except</span> <span class="n">getopt</span><span class="o">.</span><span class="n">GetoptError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Usage: collider_harvestor.py [flags]&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; flags:&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;        -v : More verbose output&#39;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">opt</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">opts</span><span class="p">:</span>
+      <span class="k">if</span> <span class="n">opt</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;-v&#39;</span><span class="p">,</span><span class="s1">&#39;--verbose&#39;</span><span class="p">):</span>
+        <span class="n">verbose</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;collider_harvester.py: verbose=True&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Get list of models to include in ColliderBit_model_rollcall.hpp</span>
+    <span class="n">model_headers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">retrieve_generic_headers</span><span class="p">(</span><span class="n">verbose</span><span class="p">,</span><span class="s2">&quot;./ColliderBit/include/gambit/ColliderBit/models&quot;</span><span class="p">,</span><span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="nb">set</span><span class="p">()))</span>
+
+    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ColliderBit model headers identified:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">model_headers</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  gambit/ColliderBit/models/&#39;</span><span class="o">+</span><span class="n">h</span><span class="p">)</span>
+
+    <span class="c1"># Generate a C++ header containing all the model headers we have just harvested.</span>
+    <span class="n">towrite</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\</span>
+<span class="s2">//   GAMBIT: Global and Modular BSM Inference Tool</span><span class="se">\n\</span>
+<span class="s2">//   *********************************************</span><span class="se">\n\</span>
+<span class="s2">///  </span><span class="se">\\</span><span class="s2">file                                       </span><span class="se">\n\</span>
+<span class="s2">///                                               </span><span class="se">\n\</span>
+<span class="s2">///  Rollcall header for ColliderBit models.      </span><span class="se">\n\</span>
+<span class="s2">///                                               </span><span class="se">\n\</span>
+<span class="s2">///  This file is automatically generated by      </span><span class="se">\n\</span>
+<span class="s2">///  collider_harvester.py.  Do not modify.       </span><span class="se">\n\</span>
+<span class="s2">///                                               </span><span class="se">\n\</span>
+<span class="s2">///  *********************************************</span><span class="se">\n\</span>
+<span class="s2">///                                               </span><span class="se">\n\</span>
+<span class="s2">///  </span><span class="se">\\</span><span class="s2">author The GAMBIT Collaboration            </span><span class="se">\n\</span>
+<span class="s2">///  \date &quot;</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%I:%M%p on %B </span><span class="si">%d</span><span class="s2">, %Y&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\n\</span>
+<span class="s2">///                                               </span><span class="se">\n\</span>
+<span class="s2">///  *********************************************</span><span class="se">\n\</span>
+<span class="s2">                                                  </span><span class="se">\n\</span>
+<span class="s2">#pragma once                                      </span><span class="se">\n\</span>
+<span class="s2">                                                  </span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">model_headers</span><span class="p">:</span>
+        <span class="n">towrite</span><span class="o">+=</span><span class="s1">&#39;#include </span><span class="se">\&quot;</span><span class="s1">gambit/ColliderBit/models/</span><span class="si">{0}</span><span class="se">\&quot;\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./ColliderBit/include/gambit/ColliderBit/ColliderBit_models_rollcall.hpp&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">towrite</span><span class="p">)</span>
+
+    <span class="c1"># Generate a C++ header containing Py8Collider typedefs for all the model headers we have just harvested.</span>
+    <span class="n">towrite</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\</span>
+<span class="s2">//   GAMBIT: Global and Modular BSM Inference Tool</span><span class="se">\n\</span>
+<span class="s2">//   *********************************************</span><span class="se">\n\</span>
+<span class="s2">///  </span><span class="se">\\</span><span class="s2">file                                       </span><span class="se">\n\</span>
+<span class="s2">///                                               </span><span class="se">\n\</span>
+<span class="s2">///  Py8Collider typedefs for models in           </span><span class="se">\n\</span>
+<span class="s2">///  ColliderBit.                                 </span><span class="se">\n\</span>
+<span class="s2">///                                               </span><span class="se">\n\</span>
+<span class="s2">///  This file is automatically generated by      </span><span class="se">\n\</span>
+<span class="s2">///  collider_harvester.py.  Do not modify.       </span><span class="se">\n\</span>
+<span class="s2">///                                               </span><span class="se">\n\</span>
+<span class="s2">///  *********************************************</span><span class="se">\n\</span>
+<span class="s2">///                                               </span><span class="se">\n\</span>
+<span class="s2">///  </span><span class="se">\\</span><span class="s2">author The GAMBIT Collaboration            </span><span class="se">\n\</span>
+<span class="s2">///  \date &quot;</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%I:%M%p on %B </span><span class="si">%d</span><span class="s2">, %Y&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\n\</span>
+<span class="s2">///                                               </span><span class="se">\n\</span>
+<span class="s2">///  *********************************************</span><span class="se">\n\</span>
+<span class="s2">                                                  </span><span class="se">\n\</span>
+<span class="s2">#pragma once                                      </span><span class="se">\n\</span>
+<span class="s2">                                                  </span><span class="se">\n\</span>
+<span class="s2">#include </span><span class="se">\&quot;</span><span class="s2">gambit/ColliderBit/colliders/Pythia8/Py8Collider.hpp</span><span class="se">\&quot;\n\</span>
+<span class="s2">                                                  </span><span class="se">\n\</span>
+<span class="s2">namespace Gambit                                  </span><span class="se">\n\</span>
+<span class="s2">{                                                 </span><span class="se">\n\</span>
+<span class="s2">  namespace ColliderBit                           </span><span class="se">\n\</span>
+<span class="s2">  {                                               </span><span class="se">\n\</span>
+<span class="s2">                                                  </span><span class="se">\n\</span>
+<span class="s2">    /// Typedefs for each Pythia collider         </span><span class="se">\n\</span>
+<span class="s2">    /// @{                                        </span><span class="se">\n\</span>
+<span class="s2">    #ifdef EXCLUDE_HEPMC                          </span><span class="se">\n\</span>
+<span class="s2">      typedef Py8Collider&lt;Pythia_default::Pythia8::Pythia, Pythia_default::Pythia8::Event, void&gt; Py8Collider_defaultversion;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">model_headers</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">h</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ignore_model_headers</span><span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;.hpp&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+            <span class="n">towrite</span><span class="o">+=</span><span class="s1">&#39;      typedef Py8Collider&lt;Pythia_</span><span class="si">{0}</span><span class="s1">_default::Pythia8::Pythia, Pythia_</span><span class="si">{0}</span><span class="s1">_default::Pythia8::Event, void&gt; Py8Collider_</span><span class="si">{0}</span><span class="s1">_defaultversion;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="n">towrite</span><span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\</span>
+<span class="s2">    #else                                         </span><span class="se">\n\</span>
+<span class="s2">      typedef Py8Collider&lt;Pythia_default::Pythia8::Pythia, Pythia_default::Pythia8::Event, Pythia_default::Pythia8::GAMBIT_hepmc_writer&gt; Py8Collider_defaultversion;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">model_headers</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">h</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ignore_model_headers</span><span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;.hpp&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+            <span class="n">towrite</span><span class="o">+=</span><span class="s1">&#39;      typedef Py8Collider&lt;Pythia_</span><span class="si">{0}</span><span class="s1">_default::Pythia8::Pythia, Pythia_</span><span class="si">{0}</span><span class="s1">_default::Pythia8::Event, Pythia_</span><span class="si">{0}</span><span class="s1">_default::Pythia8::GAMBIT_hepmc_writer&gt; Py8Collider_</span><span class="si">{0}</span><span class="s1">_defaultversion;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="n">towrite</span><span class="o">+=</span><span class="s2">&quot;    #endif</span><span class="se">\n</span><span class="s2">    /// @}</span><span class="se">\n\n</span><span class="s2">  }</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./ColliderBit/include/gambit/ColliderBit/colliders/Pythia8/Py8Collider_typedefs.hpp&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">towrite</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Generated ColliderBit_models_rollcall.hpp.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Generated Py8Collider_typedefs.hpp.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Handle command line arguments (verbosity)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+   <span class="n">main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

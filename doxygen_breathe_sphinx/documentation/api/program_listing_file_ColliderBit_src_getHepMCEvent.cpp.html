@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File getHepMCEvent.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File getHepMCEvent.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-gethepmcevent-cpp">
+<span id="program-listing-file-colliderbit-src-gethepmcevent-cpp"></span><h1>Program Listing for File getHepMCEvent.cpp<a class="headerlink" href="#program-listing-for-file-gethepmcevent-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_getHepMCEvent.cpp.html#file-colliderbit-src-gethepmcevent-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/getHepMCEvent.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//   GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">//   *********************************************</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/cmake/cmake_variables.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#ifndef EXCLUDE_HEPMC</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/ColliderBit_eventloop.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/Utils/util_functions.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;HepMC3/ReaderAsciiHepMC2.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/colliders/Pythia8/Py8EventConversions.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;HepMC3/GenEvent.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;HepMC3/GenParticle.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;HepMC3/ReaderAscii.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#define DEBUG_PREFIX &quot;DEBUG: OMP thread &quot; &lt;&lt; omp_get_thread_num() &lt;&lt; &quot;:  &quot;</span>
+<span class="c1">//#define COLLIDERBIT_DEBUG</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">getHepMCEvent</span><span class="p">(</span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pipes</span><span class="o">::</span><span class="nn">getHepMCEvent</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Get yaml options and initialise the HepMC reader</span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">antiktR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">0.4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;antiktR&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">jet_pt_min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;jet_pt_min&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">HepMC_filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hepmc_filename&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">HepMC_file_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">not</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">file_exists</span><span class="p">(</span><span class="n">HepMC_filename</span><span class="p">))</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;HepMC event file &quot;</span><span class="o">+</span><span class="n">HepMC_filename</span><span class="o">+</span><span class="s">&quot; not found. Quitting...&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Figure out if the file is HepMC2 or HepMC3</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">ifstream</span><span class="w"> </span><span class="nf">infile</span><span class="p">(</span><span class="n">HepMC_filename</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">infile</span><span class="p">.</span><span class="n">good</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">line</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="k">while</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">infile</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="p">))</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Skip blank lines</span>
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">// We look for &quot;HepMC::Version 2&quot; or &quot;HepMC::Version 3&quot;,</span>
+<span class="w">            </span><span class="c1">// so we only need the first 16 characters of the line</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">short_line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">line</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">16</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">short_line</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;HepMC::Version 2&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="n">HepMC_file_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">              </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">short_line</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;HepMC::Version 3&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="c1">// Check the text format</span>
+<span class="w">              </span><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">infile</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="p">);</span><span class="w"></span>
+<span class="w">              </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">text_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">line</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">14</span><span class="p">);</span><span class="w"></span>
+<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">text_format</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;HepMC::Asciiv3&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">              </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">HepMC_file_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">              </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">text_format</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;HepMC::IO_GenE&quot;</span><span class="p">){</span><span class="w"></span>
+<span class="w">                </span><span class="n">HepMC_file_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">              </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"></span>
+<span class="w">              </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Could not determine HepMC version from the string &#39;&quot;</span><span class="o">+</span><span class="n">text_format</span><span class="o">+</span><span class="s">&quot;&#39; extracted from the line &#39;&quot;</span><span class="o">+</span><span class="n">line</span><span class="o">+</span><span class="s">&quot;&#39;. Quitting...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">              </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="k">else</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Could not determine HepMC version from the string &#39;&quot;</span><span class="o">+</span><span class="n">short_line</span><span class="o">+</span><span class="s">&quot;&#39; extracted from the line &#39;&quot;</span><span class="o">+</span><span class="n">line</span><span class="o">+</span><span class="s">&quot;&#39;. Quitting...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">HepMC_file_version</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">HepMC_file_version</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Failed to determine HepMC version for input file &quot;</span><span class="o">+</span><span class="n">HepMC_filename</span><span class="o">+</span><span class="s">&quot;. Quitting...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">HepMC3</span><span class="o">::</span><span class="n">Reader</span><span class="w"> </span><span class="o">*</span><span class="n">HepMCio</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Initialize the reader on the first iteration</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">Loop</span><span class="o">::</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BASE_INIT</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">HepMC_file_version</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="n">HepMCio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HepMC3</span><span class="o">::</span><span class="n">ReaderAsciiHepMC2</span><span class="p">(</span><span class="n">HepMC_filename</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">          </span><span class="n">HepMCio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HepMC3</span><span class="o">::</span><span class="n">ReaderAscii</span><span class="p">(</span><span class="n">HepMC_filename</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Delete the reader in the last iteration</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">Loop</span><span class="o">::</span><span class="n">iteration</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BASE_FINALIZE</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">delete</span><span class="w"> </span><span class="n">HepMCio</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Don&#39;t do anything else during special iterations</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">Loop</span><span class="o">::</span><span class="n">iteration</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Event number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">Loop</span><span class="o">::</span><span class="n">iteration</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#endif</span>
+
+<span class="w">      </span><span class="c1">// Attempt to read the next HepMC event as a HEPUtils event. If there are no more events, wrap up the loop and skip the rest of this iteration.</span>
+<span class="w">      </span><span class="n">HepMC3</span><span class="o">::</span><span class="n">GenEvent</span><span class="w"> </span><span class="nf">ge</span><span class="p">(</span><span class="n">HepMC3</span><span class="o">::</span><span class="n">Units</span><span class="o">::</span><span class="n">GEV</span><span class="p">,</span><span class="w"> </span><span class="n">HepMC3</span><span class="o">::</span><span class="n">Units</span><span class="o">::</span><span class="n">MM</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="kt">bool</span><span class="w"> </span><span class="n">event_retrieved</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#pragma omp critical (reading_HepMCEvent)</span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">event_retrieved</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HepMCio</span><span class="o">-&gt;</span><span class="n">read_event</span><span class="p">(</span><span class="n">ge</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// FIXME This is a temp solution to ensure that the event reading</span>
+<span class="w">        </span><span class="c1">//       stops when there are no more events in the HepMC file.</span>
+<span class="w">        </span><span class="c1">//       Remove this once bugfix is implemented in HepMC.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">ge</span><span class="p">.</span><span class="n">particles</span><span class="p">().</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">ge</span><span class="p">.</span><span class="n">vertices</span><span class="p">().</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="n">event_retrieved</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">not</span><span class="w"> </span><span class="n">event_retrieved</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Tell the MCLoopInfo instance that we have reached the end of the file</span>
+<span class="w">        </span><span class="n">Dep</span><span class="o">::</span><span class="n">RunMC</span><span class="o">-&gt;</span><span class="n">report_end_of_event_file</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">Loop</span><span class="o">::</span><span class="n">halt</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">//Set the weight</span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">set_weight</span><span class="p">(</span><span class="n">ge</span><span class="p">.</span><span class="n">weight</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">//Translate to HEPUtils event by calling the unified HEPMC/Pythia event converter:</span>
+<span class="w">      </span><span class="n">Gambit</span><span class="o">::</span><span class="n">ColliderBit</span><span class="o">::</span><span class="n">convertParticleEvent</span><span class="p">(</span><span class="n">ge</span><span class="p">.</span><span class="n">particles</span><span class="p">(),</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">antiktR</span><span class="p">,</span><span class="w"> </span><span class="n">jet_pt_min</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

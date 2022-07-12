@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File generate_raster_scan_settings.py &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File generate_raster_scan_settings.py</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-generate-raster-scan-settings-py">
+<span id="program-listing-file-colliderbit-scripts-generate-raster-scan-settings-py"></span><h1>Program Listing for File generate_raster_scan_settings.py<a class="headerlink" href="#program-listing-for-file-generate-raster-scan-settings-py" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_scripts_generate_raster_scan_settings.py.html#file-colliderbit-scripts-generate-raster-scan-settings-py"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/scripts/generate_raster_scan_settings.py</span></code>)</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">#</span>
+<span class="c1"># GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">#*********************************************</span>
+<span class="c1"># \file</span>
+<span class="c1">#</span>
+<span class="c1"># Simple script for generating parameter value</span>
+<span class="c1"># lists for the &#39;raster&#39; scanner, when used</span>
+<span class="c1"># to perform &quot;SLHA scans&quot; of simplified models</span>
+<span class="c1"># with ColliderBit.</span>
+<span class="c1">#</span>
+<span class="c1">#*********************************************</span>
+<span class="c1">#</span>
+<span class="c1">#  Authors (add name and date if you modify):</span>
+<span class="c1">#</span>
+<span class="c1">#  \author Anders Kvellestad</span>
+<span class="c1">#          (a.kvellestad@imperial.ac.uk)</span>
+<span class="c1">#    \date 2019 Jul</span>
+<span class="c1">#</span>
+<span class="c1">#*********************************************</span>
+
+<span class="c1">#</span>
+<span class="c1"># Example:</span>
+<span class="c1">#</span>
+<span class="c1">#   m1 : mass of neutralino1</span>
+<span class="c1">#   m2 : mass of chargino1 = mass of neutralino2</span>
+<span class="c1">#   xsec_fb: NLO+NLL cross-section [fb] for wino-like chi1pm + chi10 production at 13 TeV.</span>
+<span class="c1">#   xsec_uncert_fb: absolute cross-section uncertainty [fb]</span>
+<span class="c1">#</span>
+<span class="c1">#   Cross-section values and uncertainties are taken from</span>
+<span class="c1">#   https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SUSYCrossSections13TeVn2x1wino#Envelope_of_CTEQ6_6_and_MSTW2008</span>
+<span class="c1">#</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="n">m2_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">275</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">325</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">375</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">425</span><span class="p">,</span> <span class="mi">450</span><span class="p">,</span> <span class="mi">475</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">525</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span> <span class="mi">575</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">625</span><span class="p">,</span> <span class="mi">650</span><span class="p">,</span> <span class="mi">675</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">725</span><span class="p">,</span> <span class="mi">750</span><span class="p">,</span> <span class="mi">775</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">825</span><span class="p">,</span> <span class="mi">850</span><span class="p">,</span> <span class="mi">875</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">925</span><span class="p">,</span> <span class="mi">950</span><span class="p">,</span> <span class="mi">975</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span>
+<span class="n">xsec_fb_data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">22670.1</span><span class="p">,</span> <span class="mf">10034.8</span><span class="p">,</span> <span class="mf">5180.86</span><span class="p">,</span> <span class="mf">2953.28</span><span class="p">,</span> <span class="mf">1807.39</span><span class="p">,</span> <span class="mf">1165.09</span><span class="p">,</span> <span class="mf">782.487</span><span class="p">,</span> <span class="mf">543.03</span><span class="p">,</span> <span class="mf">386.936</span><span class="p">,</span> <span class="mf">281.911</span><span class="p">,</span> <span class="mf">209.439</span><span class="p">,</span> <span class="mf">158.06</span><span class="p">,</span> <span class="mf">121.013</span><span class="p">,</span> <span class="mf">93.771</span><span class="p">,</span> <span class="mf">73.4361</span><span class="p">,</span> <span class="mf">58.0811</span><span class="p">,</span> <span class="mf">46.3533</span><span class="p">,</span> <span class="mf">37.2636</span><span class="p">,</span> <span class="mf">30.1656</span><span class="p">,</span> <span class="mf">24.5798</span><span class="p">,</span> <span class="mf">20.1372</span><span class="p">,</span> <span class="mf">16.5706</span><span class="p">,</span> <span class="mf">13.7303</span><span class="p">,</span> <span class="mf">11.3975</span><span class="p">,</span> <span class="mf">9.51032</span><span class="p">,</span> <span class="mf">7.9595</span><span class="p">,</span> <span class="mf">6.69356</span><span class="p">,</span> <span class="mf">5.63562</span><span class="p">,</span> <span class="mf">4.75843</span><span class="p">,</span> <span class="mf">4.02646</span><span class="p">,</span> <span class="mf">3.42026</span><span class="p">,</span> <span class="mf">2.90547</span><span class="p">,</span> <span class="mf">2.49667</span><span class="p">,</span> <span class="mf">2.12907</span><span class="p">,</span> <span class="mf">1.8164</span><span class="p">,</span> <span class="mf">1.56893</span><span class="p">,</span> <span class="mf">1.34352</span><span class="p">]</span>
+<span class="n">xsec_uncert_fb_data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">973.967</span><span class="p">,</span> <span class="mf">457.604</span><span class="p">,</span> <span class="mf">253.223</span><span class="p">,</span> <span class="mf">154.386</span><span class="p">,</span> <span class="mf">101.316</span><span class="p">,</span> <span class="mf">68.8042</span><span class="p">,</span> <span class="mf">48.7463</span><span class="p">,</span> <span class="mf">35.4083</span><span class="p">,</span> <span class="mf">26.3602</span><span class="p">,</span> <span class="mf">20.0201</span><span class="p">,</span> <span class="mf">15.4539</span><span class="p">,</span> <span class="mf">12.0956</span><span class="p">,</span> <span class="mf">9.61659</span><span class="p">,</span> <span class="mf">7.73547</span><span class="p">,</span> <span class="mf">6.2389</span><span class="p">,</span> <span class="mf">5.05005</span><span class="p">,</span> <span class="mf">4.16461</span><span class="p">,</span> <span class="mf">3.46763</span><span class="p">,</span> <span class="mf">2.88065</span><span class="p">,</span> <span class="mf">2.40183</span><span class="p">,</span> <span class="mf">2.04438</span><span class="p">,</span> <span class="mf">1.70195</span><span class="p">,</span> <span class="mf">1.43519</span><span class="p">,</span> <span class="mf">1.21937</span><span class="p">,</span> <span class="mf">1.04092</span><span class="p">,</span> <span class="mf">0.885243</span><span class="p">,</span> <span class="mf">0.769988</span><span class="p">,</span> <span class="mf">0.654544</span><span class="p">,</span> <span class="mf">0.564061</span><span class="p">,</span> <span class="mf">0.478362</span><span class="p">,</span> <span class="mf">0.412315</span><span class="p">,</span> <span class="mf">0.366257</span><span class="p">,</span> <span class="mf">0.314019</span><span class="p">,</span> <span class="mf">0.26801</span><span class="p">,</span> <span class="mf">0.242682</span><span class="p">,</span> <span class="mf">0.217618</span><span class="p">,</span> <span class="mf">0.175604</span><span class="p">]</span>
+
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">m2_data</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">xsec_fb_data</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">m2_data</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">xsec_uncert_fb_data</span><span class="p">)</span>
+
+
+<span class="c1"># Pick out every n-th point, and no more than N different m2 values</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="n">m2_data</span><span class="p">[::</span><span class="n">n</span><span class="p">][:</span><span class="n">N</span><span class="p">]</span>
+<span class="n">xsec_fb</span> <span class="o">=</span> <span class="n">xsec_fb_data</span><span class="p">[::</span><span class="n">n</span><span class="p">][:</span><span class="n">N</span><span class="p">]</span>
+<span class="n">xsec_uncert_fb</span> <span class="o">=</span> <span class="n">xsec_uncert_fb_data</span><span class="p">[::</span><span class="n">n</span><span class="p">][:</span><span class="n">N</span><span class="p">]</span>
+
+<span class="c1"># Steps in m1 for every m2</span>
+<span class="n">m1_min</span> <span class="o">=</span> <span class="mf">25.</span>
+<span class="n">m1_step</span> <span class="o">=</span> <span class="mf">50.</span>
+
+<span class="c1"># Generate lists</span>
+<span class="n">m1_raster</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">m2_raster</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">xsec_fb_raster</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">xsec_uncert_fb_raster</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># xsec_fractional_uncert_raster = []</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m2</span><span class="p">)):</span>
+
+    <span class="n">m1</span> <span class="o">=</span> <span class="n">m1_min</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">m1</span> <span class="o">&lt;</span> <span class="n">m2</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+        <span class="n">m1_raster</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+        <span class="n">m2_raster</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">xsec_fb_raster</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xsec_fb</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">xsec_uncert_fb_raster</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xsec_uncert_fb</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="c1"># xsec_fractional_uncert_raster.append(xsec_uncert_fb[i] / xsec_fb[i])</span>
+        <span class="n">m1</span> <span class="o">+=</span> <span class="n">m1_step</span>
+
+
+<span class="c1"># Format parameter lists for output</span>
+<span class="n">model_name</span><span class="o">=</span> <span class="s2">&quot;ColliderBit_SLHA_scan_model&quot;</span>
+
+<span class="n">m1_str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">model_name</span> <span class="o">+</span> <span class="s2">&quot;::m1</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;: [&quot;</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">m1_raster</span><span class="p">:</span>
+    <span class="n">m1_str</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">%.1f</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="n">x</span>
+<span class="n">m1_str</span> <span class="o">=</span> <span class="n">m1_str</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span>
+
+<span class="n">m2_str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">model_name</span> <span class="o">+</span> <span class="s2">&quot;::m2</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;: [&quot;</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">m2_raster</span><span class="p">:</span>
+    <span class="n">m2_str</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">%.1f</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="n">x</span>
+<span class="n">m2_str</span> <span class="o">=</span> <span class="n">m2_str</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span>
+
+<span class="n">xsec_fb_str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">model_name</span> <span class="o">+</span> <span class="s2">&quot;::xsec_fb</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;: [&quot;</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xsec_fb_raster</span><span class="p">:</span>
+    <span class="n">xsec_fb_str</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">%.1f</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="n">x</span>
+<span class="n">xsec_fb_str</span> <span class="o">=</span> <span class="n">xsec_fb_str</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span>
+
+<span class="n">xsec_uncert_fb_str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">model_name</span> <span class="o">+</span> <span class="s2">&quot;::xsec_uncert_fb</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;: [&quot;</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xsec_uncert_fb_raster</span><span class="p">:</span>
+    <span class="n">xsec_uncert_fb_str</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="n">x</span>
+<span class="n">xsec_uncert_fb_str</span> <span class="o">=</span> <span class="n">xsec_uncert_fb_str</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span>
+
+<span class="c1"># xsec_fractional_uncert_str = &quot;\&quot;&quot; + model_name + &quot;::p4\&quot;&quot; + &quot;: [&quot;</span>
+<span class="c1"># for x in xsec_fractional_uncert_raster:</span>
+<span class="c1">#     xsec_fractional_uncert_str += &quot;%.2f, &quot; % x</span>
+<span class="c1"># xsec_fractional_uncert_str = xsec_fractional_uncert_str[:-2] + &quot;]&quot;</span>
+
+
+<span class="c1"># Print output</span>
+<span class="n">output</span>  <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">Scanner:</span>
+
+<span class="s2">  use_scanner: raster</span>
+
+<span class="s2">  scanners:</span>
+
+<span class="s2">    raster:</span>
+<span class="s2">      plugin: raster</span>
+<span class="s2">      like: LogLike</span>
+<span class="s2">      parameters:</span>
+<span class="s2">        </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">        </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">        </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">        </span><span class="si">{}</span><span class="s2"></span>
+
+<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m1_str</span><span class="p">,</span> <span class="n">m2_str</span><span class="p">,</span> <span class="n">xsec_fb_str</span><span class="p">,</span> <span class="n">xsec_uncert_fb_str</span><span class="p">)</span>
+<span class="c1"># &quot;&quot;&quot;.format(m1_str, m2_str, xsec_fb_str, xsec_fractional_uncert_str)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

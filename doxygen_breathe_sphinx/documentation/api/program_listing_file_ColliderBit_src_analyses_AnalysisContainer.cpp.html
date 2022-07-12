@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File AnalysisContainer.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File AnalysisContainer.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-analysiscontainer-cpp">
+<span id="program-listing-file-colliderbit-src-analyses-analysiscontainer-cpp"></span><h1>Program Listing for File AnalysisContainer.cpp<a class="headerlink" href="#program-listing-for-file-analysiscontainer-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_analyses_AnalysisContainer.cpp.html#file-colliderbit-src-analyses-analysiscontainer-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/analyses/AnalysisContainer.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//   GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">//   *********************************************</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdexcept&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/cmake/cmake_variables.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/AnalysisContainer.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/Analysis.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/Utils/standalone_error_handlers.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// #define ANALYSISCONTAINER_DEBUG</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Add analysis names here and only here (trick to avoid duplication)</span>
+<span class="w">    </span><span class="c1">// - If the analysis depends on RestFrames (which uses ROOT), add it to MAP_ANALYSES_WITH_ROOT_RESTFRAMES</span>
+<span class="w">    </span><span class="c1">// - If the analysis only depends on ROOT, add it to MAP_ANALYSES_WITH_ROOT</span>
+<span class="w">    </span><span class="c1">// - Else, add the analysis to MAP_ANALYSES</span>
+<span class="w">    </span><span class="cp">#define MAP_ANALYSES_WITH_ROOT_RESTFRAMES(F)     \</span>
+<span class="cp">      F(ATLAS_13TeV_RJ3L_2Lep2Jets_36invfb)          \</span>
+<span class="cp">      F(ATLAS_13TeV_RJ3L_3Lep_36invfb)               \</span>
+<span class="cp">      F(ATLAS_13TeV_RJ3L_lowmass_36invfb)            \</span>
+
+<span class="w">    </span><span class="cp">#define MAP_ANALYSES_WITH_ROOT(F)                \</span>
+<span class="cp">      F(ATLAS_13TeV_1LEPStop_36invfb)                \</span>
+
+<span class="w">    </span><span class="cp">#define MAP_ANALYSES(F)                          \</span>
+<span class="cp">      F(Minimum)                                     \</span>
+<span class="cp">      F(Covariance)                                  \</span>
+<span class="cp">      F(ATLAS_13TeV_0LEP_13invfb)                    \</span>
+<span class="cp">      F(ATLAS_13TeV_0LEP_36invfb)                    \</span>
+<span class="cp">      F(ATLAS_13TeV_0LEP_139invfb)                   \</span>
+<span class="cp">      F(ATLAS_13TeV_0LEPStop_36invfb)                \</span>
+<span class="cp">      F(ATLAS_13TeV_2LEPStop_36invfb)                \</span>
+<span class="cp">      F(ATLAS_13TeV_2LEPStop_139invfb)               \</span>
+<span class="cp">      F(ATLAS_13TeV_2LEPStop_inclusive_139invfb)     \</span>
+<span class="cp">      F(ATLAS_13TeV_2LEPStop_exclusive_139invfb)     \</span>
+<span class="cp">      F(ATLAS_13TeV_MultiLEP_confnote_36invfb)       \</span>
+<span class="cp">      F(ATLAS_13TeV_MultiLEP_36invfb)                \</span>
+<span class="cp">      F(ATLAS_13TeV_MultiLEP_2Lep0Jets_36invfb)      \</span>
+<span class="cp">      F(ATLAS_13TeV_MultiLEP_2LepPlusJets_36invfb)   \</span>
+<span class="cp">      F(ATLAS_13TeV_MultiLEP_3Lep_36invfb)           \</span>
+<span class="cp">      F(ATLAS_13TeV_MultiLEP_strong_139invfb)        \</span>
+<span class="cp">      F(ATLAS_13TeV_2OSLEP_chargino_80invfb)         \</span>
+<span class="cp">      F(ATLAS_13TeV_2OSLEP_chargino_binned_80invfb)  \</span>
+<span class="cp">      F(ATLAS_13TeV_2OSLEP_chargino_inclusive_80invfb)  \</span>
+<span class="cp">      F(ATLAS_13TeV_2OSLEP_chargino_139invfb)        \</span>
+<span class="cp">      F(ATLAS_13TeV_2OSLEP_chargino_inclusive_139invfb) \</span>
+<span class="cp">      F(ATLAS_13TeV_2OSLEP_chargino_binned_139invfb) \</span>
+<span class="cp">      F(ATLAS_13TeV_4LEP_36invfb)                    \</span>
+<span class="cp">      F(ATLAS_13TeV_4LEP_139invfb)                   \</span>
+<span class="cp">      F(ATLAS_13TeV_2bMET_36invfb)                   \</span>
+<span class="cp">      F(ATLAS_13TeV_3b_24invfb)                      \</span>
+<span class="cp">      F(ATLAS_13TeV_3b_discoverySR_24invfb)          \</span>
+<span class="cp">      F(ATLAS_13TeV_3b_36invfb)                      \</span>
+<span class="cp">      F(ATLAS_13TeV_3b_discoverySR_36invfb)          \</span>
+<span class="cp">      F(ATLAS_13TeV_PhotonGGM_36invfb)               \</span>
+<span class="cp">      F(ATLAS_13TeV_ZGammaGrav_CONFNOTE_80invfb)     \</span>
+<span class="cp">      F(ATLAS_13TeV_2OSLEP_Z_139invfb)               \</span>
+<span class="cp">      F(ATLAS_8TeV_0LEP_20invfb)                     \</span>
+<span class="cp">      F(ATLAS_8TeV_0LEPStop_20invfb)                 \</span>
+<span class="cp">      F(ATLAS_8TeV_1LEPStop_20invfb)                 \</span>
+<span class="cp">      F(ATLAS_8TeV_2bStop_20invfb)                   \</span>
+<span class="cp">      F(ATLAS_8TeV_2LEPEW_20invfb)                   \</span>
+<span class="cp">      F(ATLAS_8TeV_2LEPStop_20invfb)                 \</span>
+<span class="cp">      F(ATLAS_8TeV_3LEPEW_20invfb)                   \</span>
+<span class="cp">      F(ATLAS_8TeV_1LEPbb_20invfb)                   \</span>
+<span class="cp">      F(ATLAS_7TeV_1OR2LEPStop_4_7invfb)             \</span>
+<span class="cp">      F(ATLAS_7TeV_2LEPStop_4_7invfb)                \</span>
+<span class="cp">      F(CMS_13TeV_0LEP_13invfb)                      \</span>
+<span class="cp">      F(CMS_13TeV_0LEP_36invfb)                      \</span>
+<span class="cp">      F(CMS_13TeV_0LEP_137invfb)                     \</span>
+<span class="cp">      F(CMS_13TeV_1LEPbb_36invfb)                    \</span>
+<span class="cp">      F(CMS_13TeV_1LEPStop_36invfb)                  \</span>
+<span class="cp">      F(CMS_13TeV_2LEPStop_36invfb)                  \</span>
+<span class="cp">      F(CMS_13TeV_2LEPsoft_36invfb)                  \</span>
+<span class="cp">      F(CMS_13TeV_2LEPsoft_36invfb_nocovar)          \</span>
+<span class="cp">      F(CMS_13TeV_2LEPsoft_stop_36invfb)             \</span>
+<span class="cp">      F(CMS_13TeV_2LEPsoft_stop_36invfb_nocovar)     \</span>
+<span class="cp">      F(CMS_13TeV_2OSLEP_36invfb)                    \</span>
+<span class="cp">      F(CMS_13TeV_2OSLEP_36invfb_nocovar)            \</span>
+<span class="cp">      F(CMS_13TeV_2OSLEP_confnote_36invfb)           \</span>
+<span class="cp">      F(CMS_13TeV_2OSLEP_chargino_stop_36invfb)      \</span>
+<span class="cp">      F(CMS_13TeV_2OSLEP_for_stop_36invfb)           \</span>
+<span class="cp">      F(CMS_13TeV_2OSLEP_for_chargino_36invfb)       \</span>
+<span class="cp">      F(CMS_13TeV_2SSLEP_Stop_36invfb)               \</span>
+<span class="cp">      F(CMS_13TeV_2SSLEP_Stop_inclusive_36invfb)     \</span>
+<span class="cp">      F(CMS_13TeV_2SSLEP_Stop_exclusive_36invfb)     \</span>
+<span class="cp">      F(CMS_13TeV_2SSLEP_Stop_137invfb)              \</span>
+<span class="cp">      F(CMS_13TeV_Photon_GMSB_36invfb)               \</span>
+<span class="cp">      F(CMS_13TeV_2Photon_GMSB_36invfb)              \</span>
+<span class="cp">      F(CMS_13TeV_1Photon1Lepton_36invfb)            \</span>
+<span class="cp">      F(CMS_13TeV_1Photon1Lepton_emu_combined_36invfb) \</span>
+<span class="cp">      F(CMS_13TeV_MultiLEP_36invfb)                  \</span>
+<span class="cp">      F(CMS_13TeV_MultiLEP_2SSLep_36invfb)           \</span>
+<span class="cp">      F(CMS_13TeV_MultiLEP_3Lep_36invfb)             \</span>
+<span class="cp">      F(CMS_13TeV_MultiLEP_Full_36invfb)             \</span>
+<span class="cp">      F(CMS_13TeV_MultiLEP_Full_2SSLep_36invfb)      \</span>
+<span class="cp">      F(CMS_13TeV_MultiLEP_Full_3Lep_36invfb)        \</span>
+<span class="cp">      F(CMS_13TeV_MultiLEP_Full_3Lep_rebinned_36invfb) \</span>
+<span class="cp">      F(CMS_13TeV_MONOJET_36invfb)                   \</span>
+<span class="cp">      F(CMS_8TeV_1LEPDMTOP_20invfb)                  \</span>
+<span class="cp">      F(CMS_8TeV_2LEPDMTOP_20invfb)                  \</span>
+<span class="cp">      F(CMS_8TeV_MultiLEP_20invfb)                   \</span>
+<span class="cp">      F(CMS_8TeV_MultiLEP_3Lep_20invfb)              \</span>
+<span class="cp">      F(CMS_8TeV_MultiLEP_4Lep_20invfb)              \</span>
+<span class="cp">      F(CMS_8TeV_MONOJET_20invfb)                    \</span>
+
+<span class="w">    </span><span class="cp">#define DECLARE_ANALYSIS_FACTORY(ANAME)          \</span>
+<span class="cp">      Analysis* create_Analysis_ ## ANAME();         \</span>
+<span class="cp">      std::string getDetector_ ## ANAME();</span>
+
+<span class="w">    </span><span class="cp">#ifndef EXCLUDE_ROOT</span>
+<span class="w">      </span><span class="cp">#ifndef EXCLUDE_RESTFRAMES</span>
+<span class="w">        </span><span class="n">MAP_ANALYSES_WITH_ROOT_RESTFRAMES</span><span class="p">(</span><span class="n">DECLARE_ANALYSIS_FACTORY</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#endif</span>
+<span class="w">      </span><span class="n">MAP_ANALYSES_WITH_ROOT</span><span class="p">(</span><span class="n">DECLARE_ANALYSIS_FACTORY</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="cp">#endif</span>
+<span class="w">    </span><span class="n">MAP_ANALYSES</span><span class="p">(</span><span class="n">DECLARE_ANALYSIS_FACTORY</span><span class="p">)</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="cp">#define IF_X_RTN_CREATE_ANA_X(A)                                           \</span>
+<span class="cp">      if (name == #A) return create_Analysis_ ## A();</span>
+
+<span class="w">    </span><span class="n">Analysis</span><span class="o">*</span><span class="w"> </span><span class="n">mkAnalysis</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#ifndef EXCLUDE_ROOT</span>
+<span class="w">        </span><span class="cp">#ifndef EXCLUDE_RESTFRAMES</span>
+<span class="w">          </span><span class="n">MAP_ANALYSES_WITH_ROOT_RESTFRAMES</span><span class="p">(</span><span class="n">IF_X_RTN_CREATE_ANA_X</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+<span class="w">        </span><span class="n">MAP_ANALYSES_WITH_ROOT</span><span class="p">(</span><span class="n">IF_X_RTN_CREATE_ANA_X</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#endif</span>
+<span class="w">      </span><span class="n">MAP_ANALYSES</span><span class="p">(</span><span class="n">IF_X_RTN_CREATE_ANA_X</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// If we end up here the analysis has not been found</span>
+<span class="w">      </span><span class="n">utils_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;The analysis &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is not a known ColliderBit analysis.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="cp">#define IF_X_RTN_DETECTOR(A)                                               \</span>
+<span class="cp">      if (name == #A) return getDetector_ ## A();</span>
+
+<span class="w">    </span><span class="n">str</span><span class="w"> </span><span class="n">getDetector</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#ifndef EXCLUDE_ROOT</span>
+<span class="w">        </span><span class="cp">#ifndef EXCLUDE_RESTFRAMES</span>
+<span class="w">          </span><span class="n">MAP_ANALYSES_WITH_ROOT_RESTFRAMES</span><span class="p">(</span><span class="n">IF_X_RTN_DETECTOR</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+<span class="w">        </span><span class="n">MAP_ANALYSES_WITH_ROOT</span><span class="p">(</span><span class="n">IF_X_RTN_DETECTOR</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#endif</span>
+<span class="w">      </span><span class="n">MAP_ANALYSES</span><span class="p">(</span><span class="n">IF_X_RTN_DETECTOR</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// If we end up here the analysis has not been found</span>
+<span class="w">      </span><span class="n">utils_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;The analysis &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is not a known ColliderBit analysis.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">str</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="n">AnalysisContainer</span><span class="o">*&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">instances_map</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">AnalysisContainer</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">current_collider</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">                                             </span><span class="n">is_registered</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span><span class="w"></span>
+<span class="w">                                             </span><span class="n">n_threads</span><span class="p">(</span><span class="n">omp_get_max_threads</span><span class="p">()),</span><span class="w"></span>
+<span class="w">                                             </span><span class="n">base_key</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#ifdef ANALYSISCONTAINER_DEBUG</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;DEBUG: thread &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;: AnalysisContainer::ctor: created at &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#endif</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="n">AnalysisContainer</span><span class="o">::~</span><span class="n">AnalysisContainer</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">register_thread</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">base_key_in</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">base_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base_key_in</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="cp">#pragma omp critical</span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">instances_map</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">base_key</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">instances_map</span><span class="p">[</span><span class="n">base_key</span><span class="p">].</span><span class="n">count</span><span class="p">(</span><span class="n">omp_get_thread_num</span><span class="p">())</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Add this instance to the instances map</span>
+<span class="w">          </span><span class="n">instances_map</span><span class="p">[</span><span class="n">base_key</span><span class="p">][</span><span class="n">omp_get_thread_num</span><span class="p">()]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">is_registered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">          </span><span class="cp">#ifdef ANALYSISCONTAINER_DEBUG</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;DEBUG: thread &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;: AnalysisContainer::register_thread: added &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to instances_map with key &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">base_key</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#endif</span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">not</span><span class="w"> </span><span class="n">is_registered</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">utils_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There is already an entry with this key in instances_map, but it&#39;s not this one! Something has gone wrong...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="k">else</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="cp">#ifdef ANALYSISCONTAINER_DEBUG</span>
+<span class="w">              </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;DEBUG: thread &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">omp_get_thread_num</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;: AnalysisContainer::register_thread: this instance is already in instances_map&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="cp">#endif</span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">clear</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Loop through double map and delete the analysis pointers</span>
+<span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">collider_map_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">analysis_pointer_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">collider_map_pair</span><span class="p">.</span><span class="n">second</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">delete</span><span class="w"> </span><span class="n">analysis_pointer_pair</span><span class="p">.</span><span class="n">second</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">analysis_pointer_pair</span><span class="p">.</span><span class="n">second</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Clear the double map</span>
+<span class="w">      </span><span class="n">analyses_map</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">set_current_collider</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">current_collider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">collider_name</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="n">str</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">get_current_collider</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">current_collider</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">has_analyses</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="kt">bool</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">analyses_map</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">collider_name</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">analyses_map</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider_name</span><span class="p">).</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">has_analyses</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">has_analyses</span><span class="p">(</span><span class="n">current_collider</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">analysis_names</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// If a map of analyses already exist for this collider, clear it</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">analyses_map</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">collider_name</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">analyses_map</span><span class="p">[</span><span class="n">collider_name</span><span class="p">].</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Create analysis pointers and add to the map</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">aname</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">analysis_names</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">analyses_map</span><span class="p">[</span><span class="n">collider_name</span><span class="p">][</span><span class="n">aname</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mkAnalysis</span><span class="p">(</span><span class="n">aname</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">analysis_names</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">init</span><span class="p">(</span><span class="n">analysis_names</span><span class="p">,</span><span class="w"> </span><span class="n">current_collider</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">reset</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">analysis_name</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">analyses_map</span><span class="p">[</span><span class="n">collider_name</span><span class="p">][</span><span class="n">analysis_name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">reset</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">reset</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">analysis_pointer_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">[</span><span class="n">collider_name</span><span class="p">])</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">analysis_pointer_pair</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">reset</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">reset</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">reset</span><span class="p">(</span><span class="n">current_collider</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">reset_all</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">collider_map_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">reset</span><span class="p">(</span><span class="n">collider_map_pair</span><span class="p">.</span><span class="n">first</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Analysis</span><span class="o">*</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">get_analysis_pointer</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">analysis_name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider_name</span><span class="p">).</span><span class="n">at</span><span class="p">(</span><span class="n">analysis_name</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">str</span><span class="p">,</span><span class="n">Analysis</span><span class="o">*&gt;&amp;</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">get_collider_analyses_map</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider_name</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">str</span><span class="p">,</span><span class="n">Analysis</span><span class="o">*&gt;&amp;</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">get_current_analyses_map</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">current_collider</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">str</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">str</span><span class="p">,</span><span class="n">Analysis</span><span class="o">*&gt;</span><span class="w"> </span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">get_full_analyses_map</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">analyze</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">analysis_name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">analyses_map</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider_name</span><span class="p">).</span><span class="n">at</span><span class="p">(</span><span class="n">analysis_name</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">analyze</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">analyze</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">analysis_pointer_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider_name</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">analysis_pointer_pair</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">analyze</span><span class="p">(</span><span class="n">event</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">analyze</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">analyze</span><span class="p">(</span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">current_collider</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">collect_and_add_signal</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">analysis_name</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">thread_container_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">instances_map</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">base_key</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">AnalysisContainer</span><span class="o">*</span><span class="w"> </span><span class="n">other_container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thread_container_pair</span><span class="p">.</span><span class="n">second</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">Analysis</span><span class="o">*</span><span class="w"> </span><span class="n">other_analysis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">other_container</span><span class="o">-&gt;</span><span class="n">analyses_map</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider_name</span><span class="p">).</span><span class="n">at</span><span class="p">(</span><span class="n">analysis_name</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">analyses_map</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider_name</span><span class="p">).</span><span class="n">at</span><span class="p">(</span><span class="n">analysis_name</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="n">other_analysis</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">collect_and_add_signal</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">analysis_pointer_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">[</span><span class="n">collider_name</span><span class="p">])</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="n">analysis_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analysis_pointer_pair</span><span class="p">.</span><span class="n">first</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">collect_and_add_signal</span><span class="p">(</span><span class="n">collider_name</span><span class="p">,</span><span class="w"> </span><span class="n">analysis_name</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">collect_and_add_signal</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">collect_and_add_signal</span><span class="p">(</span><span class="n">current_collider</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">scale</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="n">analysis_name</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">xsec_per_event</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">analyses_map</span><span class="p">[</span><span class="n">collider_name</span><span class="p">][</span><span class="n">analysis_name</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">scale</span><span class="p">(</span><span class="n">xsec_per_event</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">scale</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">xsec_per_event</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">analysis_pointer_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">[</span><span class="n">collider_name</span><span class="p">])</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="n">analysis_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analysis_pointer_pair</span><span class="p">.</span><span class="n">first</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">scale</span><span class="p">(</span><span class="n">collider_name</span><span class="p">,</span><span class="w"> </span><span class="n">analysis_name</span><span class="p">,</span><span class="w"> </span><span class="n">xsec_per_event</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">scale</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">xsec_per_event</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">scale</span><span class="p">(</span><span class="n">current_collider</span><span class="p">,</span><span class="w"> </span><span class="n">xsec_per_event</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">AnalysisContainer</span><span class="o">::</span><span class="n">scale_all</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">xsec_per_event</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">collider_map_pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">analyses_map</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="n">collider_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">collider_map_pair</span><span class="p">.</span><span class="n">first</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">scale</span><span class="p">(</span><span class="n">collider_name</span><span class="p">,</span><span class="w"> </span><span class="n">xsec_per_event</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

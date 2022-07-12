@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class DMEFT_analysis_info &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Class DMEFT_analysis_info</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-dmeft-analysis-info">
+<span id="exhale-class-classgambit-1-1colliderbit-1-1dmeft-analysis-info"></span><h1>Class DMEFT_analysis_info<a class="headerlink" href="#class-dmeft-analysis-info" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_ColliderBit_src_ColliderBit_InterpolatedYields.cpp.html#file-colliderbit-src-colliderbit-interpolatedyields-cpp"><span class="std std-ref">File ColliderBit_InterpolatedYields.cpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_infoE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_infoE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_infoE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DMEFT_analysis_info</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_infoE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A minimal class with analysis info, maps for containing collections of 1D/2D interpolators and some helper functions for adding and accessing the interpolators, and for adding a background covariance matrix. Currently this class is tailored specifically for the DMEFT model &amp;#8212; it will be generalized in the future. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info10add_bkgcovERKNSt6vectorINSt6vectorIdEEEE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info10add_bkgcovERKNSt6vectorINSt6vectorIdEEEE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info10add_bkgcovERKNSt6vectorINSt6vectorIdEEEE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::add_bkgcov__std::vector:std::vector:double::CR"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a1a186d11377de856afada63c997f04e5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add_bkgcov</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bkgcov_in</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info10add_bkgcovERKNSt6vectorINSt6vectorIdEEEE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info12add_interp1dE3str3strNSt6vectorI3strEE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info12add_interp1dE3str3strNSt6vectorI3strEE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info12add_interp1dE3str3strNSt6vectorI3strEE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::add_interp1d__str.str.std::vector:str:"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a799d2473fc02dcd4a4b7ca6f4f106f17"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add_interp1d</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">colnames</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info12add_interp1dE3str3strNSt6vectorI3strEE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info12add_interp2dE3str3strNSt6vectorI3strEE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info12add_interp2dE3str3strNSt6vectorI3strEE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info12add_interp2dE3str3strNSt6vectorI3strEE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::add_interp2d__str.str.std::vector:str:"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1acedfa59c17146a5d7727eb4521b4f188"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add_interp2d</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">colnames</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info12add_interp2dE3str3strNSt6vectorI3strEE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit19DMEFT_analysis_info12get_interp1dE3str">
+<span id="_CPPv3NK6Gambit11ColliderBit19DMEFT_analysis_info12get_interp1dE3str"></span><span id="_CPPv2NK6Gambit11ColliderBit19DMEFT_analysis_info12get_interp1dE3str"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::get_interp1d__strC"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a385232c4ef483534bb2a979fdbaa9239"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Utils</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">interp1d_collection</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_interp1d</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit19DMEFT_analysis_info12get_interp1dE3str" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit19DMEFT_analysis_info12get_interp2dE3str">
+<span id="_CPPv3NK6Gambit11ColliderBit19DMEFT_analysis_info12get_interp2dE3str"></span><span id="_CPPv2NK6Gambit11ColliderBit19DMEFT_analysis_info12get_interp2dE3str"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::get_interp2d__strC"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a13ed06dc2a9c4a20f2c3f4af23a1ce26"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Utils</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">interp2d_collection</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_interp2d</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit19DMEFT_analysis_info12get_interp2dE3str" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info4nameE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info4nameE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info4nameE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::name__str"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a5f4d8375c5a4689de10d1df16db3bfd2"></span><a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info4nameE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info10lumi_invfbE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info10lumi_invfbE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info10lumi_invfbE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::lumi_invfb__double"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1aebd4dec5a5b812aaf4c0a16f78931ab9"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lumi_invfb</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info10lumi_invfbE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info16n_signal_regionsE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info16n_signal_regionsE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info16n_signal_regionsE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::n_signal_regions__s"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a7f8c6d9f4939044a34edda3f56de95e8"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">n_signal_regions</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info16n_signal_regionsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info6obsnumE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info6obsnumE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info6obsnumE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::obsnum__std::vector:i:"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1abceb0b30524f5181cb37ffde28d46d04"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">obsnum</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info6obsnumE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info6bkgnumE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info6bkgnumE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info6bkgnumE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::bkgnum__std::vector:double:"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a0690b0b28cece78f23ec06a481f882de"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bkgnum</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info6bkgnumE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info6bkgerrE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info6bkgerrE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info6bkgerrE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::bkgerr__std::vector:double:"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a747a44dba405fd28a5c8f023fceae725"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bkgerr</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info6bkgerrE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info6bkgcovE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info6bkgcovE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info6bkgcovE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::bkgcov__Eigen::MatrixXd"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a3ada00bac7ec0916e9d7319c3fd34073"></span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MatrixXd</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bkgcov</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info6bkgcovE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info10extra_infoE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info10extra_infoE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info10extra_infoE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::extra_info__std::map:str.std::vector:double::"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a68e764c3621e6ae360ecfd527feafc3a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">extra_info</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info10extra_infoE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info8interp1dE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info8interp1dE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info8interp1dE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::interp1d__std::map:str.std::unique_ptr:Utils::interp1d_collection::"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a14d2e08787b50d849ef9a15e301dad55"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Utils</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">interp1d_collection</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interp1d</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info8interp1dE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info8interp2dE">
+<span id="_CPPv3N6Gambit11ColliderBit19DMEFT_analysis_info8interp2dE"></span><span id="_CPPv2N6Gambit11ColliderBit19DMEFT_analysis_info8interp2dE"></span><span id="Gambit::ColliderBit::DMEFT_analysis_info::interp2d__std::map:str.std::unique_ptr:Utils::interp2d_collection::"></span><span class="target" id="classGambit_1_1ColliderBit_1_1DMEFT__analysis__info_1a54ebb087c0caca1ed60c43bd747f84e5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceGambit_1aff3f41b9e6112a6d471a03b2df1f2427.html#_CPPv4N6Gambit3strE" title="Gambit::str"><span class="n"><span class="pre">str</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Utils</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">interp2d_collection</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interp2d</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit19DMEFT_analysis_info8interp2dE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

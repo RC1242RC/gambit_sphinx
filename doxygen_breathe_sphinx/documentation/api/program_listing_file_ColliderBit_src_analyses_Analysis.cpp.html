@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File Analysis.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File Analysis.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-analysis-cpp">
+<span id="program-listing-file-colliderbit-src-analyses-analysis-cpp"></span><h1>Program Listing for File Analysis.cpp<a class="headerlink" href="#program-listing-for-file-analysis-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_analyses_Analysis.cpp.html#file-colliderbit-src-analyses-analysis-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/analyses/Analysis.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//   GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">//   *********************************************</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;HEPUtils/Event.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/analyses/Analysis.hpp&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">Analysis</span><span class="o">::</span><span class="n">Analysis</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">_luminosity</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                         </span><span class="p">,</span><span class="w"> </span><span class="n">_luminosity_is_set</span><span class="p">(</span><span class="nb">false</span><span class="p">)</span><span class="w"></span>
+<span class="w">                         </span><span class="p">,</span><span class="w"> </span><span class="n">_is_scaled</span><span class="p">(</span><span class="nb">false</span><span class="p">)</span><span class="w"></span>
+<span class="w">                         </span><span class="p">,</span><span class="w"> </span><span class="n">_needs_collection</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"></span>
+<span class="w">                         </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">reset</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">_is_scaled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">_needs_collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">_results</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="n">analysis_specific_reset</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">analyze</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">analyze</span><span class="p">(</span><span class="o">&amp;</span><span class="n">e</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">analyze</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">HEPUtils</span><span class="o">::</span><span class="n">Event</span><span class="o">*</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">_needs_collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">run</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">luminosity</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">_luminosity</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">set_luminosity</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">lumi</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">_luminosity_is_set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="n">_luminosity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lumi</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">set_analysis_name</span><span class="p">(</span><span class="n">str</span><span class="w"> </span><span class="n">aname</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">_analysis_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aname</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">_results</span><span class="p">.</span><span class="n">analysis_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_analysis_name</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">str</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">analysis_name</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">_analysis_name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">AnalysisData</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">get_results</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_needs_collection</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">collect_results</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">_needs_collection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">_results</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">AnalysisData</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">get_results</span><span class="p">(</span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">warning</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">warning</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">not</span><span class="w"> </span><span class="n">_luminosity_is_set</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">warning</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;Luminosity has not been set for analysis &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">_analysis_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">not</span><span class="w"> </span><span class="n">_is_scaled</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">warning</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;Results have not been scaled for analysis &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">_analysis_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">get_results</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">AnalysisData</span><span class="o">*</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">get_results_ptr</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Call get_results() to make sure everything has been collected properly, but ignore the return value</span>
+<span class="w">      </span><span class="n">get_results</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Now provide pointer to _results directly</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="n">_results</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">AnalysisData</span><span class="o">*</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">get_results_ptr</span><span class="p">(</span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">warning</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Call get_results() to make sure everything has been collected properly, but ignore the return value</span>
+<span class="w">      </span><span class="n">get_results</span><span class="p">(</span><span class="n">warning</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// Now provide pointer to _results directly</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="n">_results</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">add_result</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SignalRegionData</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">_results</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">sr</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">set_covariance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="o">&amp;</span><span class="w"> </span><span class="n">srcov</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">_results</span><span class="p">.</span><span class="n">srcov</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">srcov</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">set_covariance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">srcov</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="w"> </span><span class="nf">cov</span><span class="p">(</span><span class="n">srcov</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">srcov</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">size</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">srcov</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">srcov</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">cov</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">srcov</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="n">set_covariance</span><span class="p">(</span><span class="n">cov</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">scale</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">xsec_per_event</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">luminosity</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">xsec_per_event</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">assert</span><span class="p">(</span><span class="n">factor</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">SignalRegionData</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sr</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">_results</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">sr</span><span class="p">.</span><span class="n">n_sig_scaled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sr</span><span class="p">.</span><span class="n">n_sig_MC</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="n">_is_scaled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Analysis</span><span class="o">::</span><span class="n">add</span><span class="p">(</span><span class="n">Analysis</span><span class="o">*</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_results</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="n">collect_results</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">AnalysisData</span><span class="w"> </span><span class="n">otherResults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">other</span><span class="o">-&gt;</span><span class="n">get_results</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="n">assert</span><span class="p">(</span><span class="n">otherResults</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">_results</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">_results</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">_results</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">n_sig_MC</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">otherResults</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">n_sig_MC</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="n">combine</span><span class="p">(</span><span class="n">other</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

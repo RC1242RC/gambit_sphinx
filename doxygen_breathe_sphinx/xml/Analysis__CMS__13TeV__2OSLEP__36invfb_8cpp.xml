@@ -160,7 +160,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_13TeV_2OSLEP_36invfb.cpp</label>
+        <label>ColliderBit/src/analyses/Analysis_CMS_13TeV_2OSLEP_36invfb.cpp</label>
         <link refid="Analysis__CMS__13TeV__2OSLEP__36invfb_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -192,7 +192,6 @@
     <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__2OSLEP__36invfb" prot="public">Gambit::ColliderBit::Analysis_CMS_13TeV_2OSLEP_36invfb</innerclass>
     <innerclass refid="structGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__2OSLEP__36invfb_1_1ptComparison" prot="public">Gambit::ColliderBit::Analysis_CMS_13TeV_2OSLEP_36invfb::ptComparison</innerclass>
     <innerclass refid="structGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__2OSLEP__36invfb_1_1ptJetComparison" prot="public">Gambit::ColliderBit::Analysis_CMS_13TeV_2OSLEP_36invfb::ptJetComparison</innerclass>
-    <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__2OSLEP__36invfb__nocovar" prot="public">Gambit::ColliderBit::Analysis_CMS_13TeV_2OSLEP_36invfb_nocovar</innerclass>
     <innernamespace refid="namespaceGambit">Gambit</innernamespace>
     <innernamespace refid="namespaceGambit_1_1ColliderBit">Gambit::ColliderBit</innernamespace>
     <briefdescription>
@@ -634,22 +633,22 @@
 <codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Derived<sp/>analysis<sp/>class<sp/>that<sp/>does<sp/>not<sp/>make<sp/>use<sp/>of<sp/>the<sp/>SR<sp/>covariance<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="443" refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__2OSLEP__36invfb__nocovar" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__2OSLEP__36invfb__nocovar" kindref="compound">Analysis_CMS_13TeV_2OSLEP_36invfb_nocovar</ref><sp/>:<sp/>public<sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__2OSLEP__36invfb" kindref="compound">Analysis_CMS_13TeV_2OSLEP_36invfb</ref><sp/>{</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Analysis_CMS_13TeV_2OSLEP_36invfb_nocovar<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Analysis_CMS_13TeV_2OSLEP_36invfb<sp/>{</highlight></codeline>
 <codeline lineno="444"><highlight class="normal"></highlight></codeline>
 <codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__2OSLEP__36invfb__nocovar" kindref="compound">Analysis_CMS_13TeV_2OSLEP_36invfb_nocovar</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Analysis_CMS_13TeV_2OSLEP_36invfb_nocovar()<sp/>{</highlight></codeline>
 <codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_analysis_name(</highlight><highlight class="stringliteral">&quot;CMS_13TeV_2OSLEP_36invfb_nocovar&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="449"><highlight class="normal"></highlight></codeline>
 <codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>collect_results()<sp/>{</highlight></codeline>
 <codeline lineno="451"><highlight class="normal"></highlight></codeline>
-<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;SR1&quot;</highlight><highlight class="normal">),<sp/>57.,<sp/>{54.9,<sp/>7.}));</highlight></codeline>
-<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;SR2&quot;</highlight><highlight class="normal">),<sp/>29.,<sp/>{21.6,<sp/>5.6}));</highlight></codeline>
-<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;SR3&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/><sp/>{6.,<sp/>1.9}));</highlight></codeline>
-<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;SR4&quot;</highlight><highlight class="normal">),<sp/>0.,<sp/><sp/>{2.5,<sp/>0.9}));</highlight></codeline>
-<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;SR5&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/><sp/>{7.6,<sp/>2.8}));</highlight></codeline>
-<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;SR6&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/><sp/>{5.6,<sp/>1.6}));</highlight></codeline>
-<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;SR7&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/><sp/>{1.3,<sp/>0.4}));</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR1&quot;</highlight><highlight class="normal">),<sp/>57.,<sp/>{54.9,<sp/>7.}));</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR2&quot;</highlight><highlight class="normal">),<sp/>29.,<sp/>{21.6,<sp/>5.6}));</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR3&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/><sp/>{6.,<sp/>1.9}));</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR4&quot;</highlight><highlight class="normal">),<sp/>0.,<sp/><sp/>{2.5,<sp/>0.9}));</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR5&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/><sp/>{7.6,<sp/>2.8}));</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR6&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/><sp/>{5.6,<sp/>1.6}));</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR7&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/><sp/>{1.3,<sp/>0.4}));</highlight></codeline>
 <codeline lineno="459"><highlight class="normal"></highlight></codeline>
 <codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="461"><highlight class="normal"></highlight></codeline>
@@ -662,6 +661,6 @@
 <codeline lineno="468"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="469"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_13TeV_2OSLEP_36invfb.cpp"/>
+    <location file="ColliderBit/src/analyses/Analysis_CMS_13TeV_2OSLEP_36invfb.cpp"/>
   </compounddef>
 </doxygen>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File ColliderBit_eventloop.cpp &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File ColliderBit_eventloop.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-colliderbit-eventloop-cpp">
+<span id="program-listing-file-colliderbit-src-colliderbit-eventloop-cpp"></span><h1>Program Listing for File ColliderBit_eventloop.cpp<a class="headerlink" href="#program-listing-for-file-colliderbit-eventloop-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_ColliderBit_src_ColliderBit_eventloop.cpp.html#file-colliderbit-src-colliderbit-eventloop-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">ColliderBit/src/ColliderBit_eventloop.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//   GAMBIT: Global and Modular BSM Inference Tool</span>
+<span class="c1">//   *********************************************</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/Elements/gambit_module_headers.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;gambit/ColliderBit/ColliderBit_eventloop.hpp&quot;</span><span class="cp"></span>
+
+<span class="c1">// #define COLLIDERBIT_DEBUG</span>
+<span class="cp">#define DEBUG_PREFIX &quot;DEBUG: OMP thread &quot; &lt;&lt; omp_get_thread_num() &lt;&lt; &quot;:  &quot; &lt;&lt; __FILE__ &lt;&lt; &quot;:&quot; &lt;&lt; __LINE__ &lt;&lt; &quot;:  &quot;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Gambit</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ColliderBit</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">operateLHCLoop</span><span class="p">(</span><span class="n">MCLoopInfo</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pipes</span><span class="o">::</span><span class="nn">operateLHCLoop</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">streambuf</span><span class="w"> </span><span class="o">*</span><span class="n">coutbuf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">();</span><span class="w"> </span><span class="c1">// save cout buffer for running the loop quietly</span>
+
+<span class="w">      </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;~~~~ New point! ~~~~&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#endif</span>
+
+<span class="w">      </span><span class="c1">// Retrieve run options from the YAML file (or standalone code)</span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">silenceLoop</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">str</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">min_nEvents</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">str</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">max_nEvents</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">str</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stoppingres</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Should we silence stdout during the loop?</span>
+<span class="w">        </span><span class="n">silenceLoop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;silenceLoop&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Retrieve all the names of all entries in the yaml options node.</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getNames</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Step though the names, and accept only those with a &quot;min_nEvents&quot; sub-entry as colliders.</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">vec</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">YAML</span><span class="o">::</span><span class="n">Node</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getNode</span><span class="p">(</span><span class="n">name</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">not</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="n">IsScalar</span><span class="p">()</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">node</span><span class="p">[</span><span class="s">&quot;min_nEvents&quot;</span><span class="p">])</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">collider_names</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">name</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Retrieve the options for each collider.</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">collider</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">collider_names</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">Options</span><span class="w"> </span><span class="nf">colOptions</span><span class="p">(</span><span class="n">runOptions</span><span class="o">-&gt;</span><span class="n">getValue</span><span class="o">&lt;</span><span class="n">YAML</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span><span class="n">collider</span><span class="p">));</span><span class="w"></span>
+<span class="w">          </span><span class="n">min_nEvents</span><span class="p">[</span><span class="n">collider</span><span class="p">]</span><span class="w">                                           </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;min_nEvents&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">max_nEvents</span><span class="p">[</span><span class="n">collider</span><span class="p">]</span><span class="w">                                           </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;max_nEvents&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">convergence_options</span><span class="p">[</span><span class="n">collider</span><span class="p">].</span><span class="n">target_stat</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValue</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;target_fractional_uncert&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">convergence_options</span><span class="p">[</span><span class="n">collider</span><span class="p">].</span><span class="n">stop_at_sys</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;halt_when_systematic_dominated&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">convergence_options</span><span class="p">[</span><span class="n">collider</span><span class="p">].</span><span class="n">all_analyses_must_converge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;all_analyses_must_converge&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">convergence_options</span><span class="p">[</span><span class="n">collider</span><span class="p">].</span><span class="n">all_SR_must_converge</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;all_SR_must_converge&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">maxFailedEvents</span><span class="p">[</span><span class="n">collider</span><span class="p">]</span><span class="w">                                </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;maxFailedEvents&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">invalidate_failed_points</span><span class="p">[</span><span class="n">collider</span><span class="p">]</span><span class="w">                       </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;invalidate_failed_points&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">stoppingres</span><span class="p">[</span><span class="n">collider</span><span class="p">]</span><span class="w">                                           </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;events_between_convergence_checks&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">analyses</span><span class="p">[</span><span class="n">collider</span><span class="p">]</span><span class="w">                                       </span><span class="o">=</span><span class="w"> </span><span class="n">colOptions</span><span class="p">.</span><span class="n">getValueOrDef</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;analyses&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">event_count</span><span class="p">[</span><span class="n">collider</span><span class="p">]</span><span class="w">                                    </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Check that the nEvents options given make sense.</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">min_nEvents</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">max_nEvents</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider</span><span class="p">))</span><span class="w"></span>
+<span class="w">           </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="s">&quot;Option min_nEvents is greater than corresponding max_nEvents for collider &quot;</span><span class="w"></span>
+<span class="w">                                                </span><span class="o">+</span><span class="n">collider</span><span class="o">+</span><span class="s">&quot;. Please correct your YAML file.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// Check that the analyses all correspond to actual ColliderBit analyses, and sort them into separate maps for each detector.</span>
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">str</span><span class="o">&amp;</span><span class="w"> </span><span class="n">analysis</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">analyses</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider</span><span class="p">))</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="n">detector_analyses</span><span class="p">[</span><span class="n">collider</span><span class="p">][</span><span class="n">getDetector</span><span class="p">(</span><span class="n">analysis</span><span class="p">)].</span><span class="n">push_back</span><span class="p">(</span><span class="n">analysis</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Do the base-level initialisation</span>
+<span class="w">      </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">BASE_INIT</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Mute stdout during the loop if requested</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">silenceLoop</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// For every collider requested in the yaml file:</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">collider</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">collider_names</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Reset the event_generation_began and exceeded_maxFailedEvents flags</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">reset_flags</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Update the collider</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">set_current_collider</span><span class="p">(</span><span class="n">collider</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Initialise the count of the number of generated events.</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;operateLHCLoop: Current collider is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">collider</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+
+<span class="w">        </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">check</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">Loop</span><span class="o">::</span><span class="n">reset</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Do the single-thread part of the collider initialization</span>
+<span class="w">        </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;operateLHCLoop: Will execute COLLIDER_INIT&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+<span class="w">        </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">COLLIDER_INIT</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Any problem during COLLIDER_INIT step?</span>
+<span class="w">        </span><span class="n">piped_warnings</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_warning</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_error</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">check</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Do the OMP parallelized part of the collider initialization</span>
+<span class="w">        </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;operateLHCLoop: Will execute COLLIDER_INIT_OMP&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+<span class="w">        </span><span class="cp">#pragma omp parallel</span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">COLLIDER_INIT_OMP</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Any problems during the COLLIDER_INIT_OMP step?</span>
+<span class="w">        </span><span class="n">piped_warnings</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_warning</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_error</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">check</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Execute the sigle-thread iteration XSEC_CALCULATION</span>
+<span class="w">        </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;operateLHCLoop: Will execute XSEC_CALCULATION&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+<span class="w">        </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">XSEC_CALCULATION</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Any problems during the XSEC_CALCULATION step?</span>
+<span class="w">        </span><span class="n">piped_warnings</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_warning</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_error</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">check</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// The main OMP parallelized sections begin here</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;operateLHCLoop: Will execute START_SUBPROCESS&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+<span class="w">        </span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#pragma omp parallel</span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">START_SUBPROCESS</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Any problems during the START_SUBPROCESS step?</span>
+<span class="w">        </span><span class="n">piped_warnings</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_warning</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_error</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">check</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Convergence loop</span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">max_nEvents</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider</span><span class="p">)</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="o">*</span><span class="n">Loop</span><span class="o">::</span><span class="n">done</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="kt">int</span><span class="w"> </span><span class="n">eventCountBetweenConvergenceChecks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Starting main event loop.  Will do &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">stoppingres</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; events before testing convergence.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#endif</span>
+
+<span class="w">          </span><span class="c1">// Main event loop</span>
+<span class="w">          </span><span class="n">result</span><span class="p">.</span><span class="n">event_generation_began</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#pragma omp parallel</span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">while</span><span class="p">(</span><span class="n">eventCountBetweenConvergenceChecks</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">stoppingres</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider</span><span class="p">)</span><span class="w"> </span><span class="n">and</span><span class="w"></span>
+<span class="w">                  </span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">max_nEvents</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider</span><span class="p">)</span><span class="w"> </span><span class="n">and</span><span class="w"></span>
+<span class="w">                  </span><span class="n">not</span><span class="w"> </span><span class="o">*</span><span class="n">Loop</span><span class="o">::</span><span class="n">done</span><span class="w"> </span><span class="n">and</span><span class="w"></span>
+<span class="w">                  </span><span class="n">not</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">end_of_event_file</span><span class="w"> </span><span class="n">and</span><span class="w"></span>
+<span class="w">                  </span><span class="n">not</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">exceeded_maxFailedEvents</span><span class="w"> </span><span class="n">and</span><span class="w"></span>
+<span class="w">                  </span><span class="n">not</span><span class="w"> </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">inquire</span><span class="p">()</span><span class="w"></span>
+<span class="w">                  </span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="kt">bool</span><span class="w"> </span><span class="n">thread_do_iteration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">              </span><span class="kt">int</span><span class="w"> </span><span class="n">thread_my_iteration</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">              </span><span class="c1">// Increment counters before executing the corresponding event loop iteration,</span>
+<span class="w">              </span><span class="c1">// to stop other threads from starting any event iterations beyond max_nEvents.</span>
+<span class="w">              </span><span class="cp">#pragma omp critical</span>
+<span class="w">              </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">max_nEvents</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider</span><span class="p">))</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                  </span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">()</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">                  </span><span class="n">thread_my_iteration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">();</span><span class="w"></span>
+<span class="w">                  </span><span class="n">eventCountBetweenConvergenceChecks</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="k">else</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                  </span><span class="n">thread_do_iteration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">              </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">              </span><span class="k">if</span><span class="p">(</span><span class="n">thread_do_iteration</span><span class="p">)</span><span class="w"></span>
+<span class="w">              </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">try</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                  </span><span class="c1">// Execute event loop iteration</span>
+<span class="w">                  </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">thread_my_iteration</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">domain_error</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">   Caught std::domain_error. Continuing to the next event...</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">                  </span><span class="c1">// Decrement counters since the event iteration failed</span>
+<span class="w">                  </span><span class="cp">#pragma omp critical</span>
+<span class="w">                  </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">()</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="n">eventCountBetweenConvergenceChecks</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="w">                  </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">              </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="c1">// end while loop</span>
+
+<span class="w">          </span><span class="p">}</span><span class="w"> </span><span class="c1">// end omp parallel block</span>
+
+<span class="w">          </span><span class="c1">// Any problems during the main event loop?</span>
+<span class="w">          </span><span class="n">piped_warnings</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_warning</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_error</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">check</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">          </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Did &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">eventCountBetweenConvergenceChecks</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; events of &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; simulated so far.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="cp">#endif</span>
+
+<span class="w">          </span><span class="c1">// Break convergence loop if too many events fail</span>
+<span class="w">          </span><span class="k">if</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">exceeded_maxFailedEvents</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">          </span><span class="c1">// Don&#39;t bother with convergence stuff if we haven&#39;t passed the minimum number of events yet</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">min_nEvents</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">collider</span><span class="p">))</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="cp">#pragma omp parallel</span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">COLLECT_CONVERGENCE_DATA</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Any problems during the COLLECT_CONVERGENCE_DATA step?</span>
+<span class="w">            </span><span class="n">piped_warnings</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_warning</span><span class="p">());</span><span class="w"></span>
+<span class="w">            </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_error</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">CHECK_CONVERGENCE</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Any problems during the CHECK_CONVERGENCE step?</span>
+<span class="w">            </span><span class="n">piped_warnings</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_warning</span><span class="p">());</span><span class="w"></span>
+<span class="w">            </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_error</span><span class="p">());</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">          </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Final event count: current_event_count() = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">current_event_count</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="cp">#endif</span>
+
+<span class="w">        </span><span class="cp">#pragma omp parallel</span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">END_SUBPROCESS</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Any problems during the END_SUBPROCESS step?</span>
+<span class="w">        </span><span class="n">piped_warnings</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_warning</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_error</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">check</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// OMP parallelized sections end here</span>
+<span class="w">        </span><span class="c1">//</span>
+
+<span class="w">        </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">COLLIDER_FINALIZE</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// Any problems during the COLLIDER_FINALIZE step?</span>
+<span class="w">        </span><span class="n">piped_warnings</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_warning</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_error</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">check</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Nicely thank the loop for being quiet, and restore everyone&#39;s vocal chords</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">silenceLoop</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">.</span><span class="n">rdbuf</span><span class="p">(</span><span class="n">coutbuf</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="n">Loop</span><span class="o">::</span><span class="n">executeIteration</span><span class="p">(</span><span class="n">BASE_FINALIZE</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Any problems during the BASE_FINALIZE step?</span>
+<span class="w">      </span><span class="n">piped_warnings</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_warning</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="n">piped_errors</span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">ColliderBit_error</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="n">piped_invalid_point</span><span class="p">.</span><span class="n">check</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">getLHCEventLoopInfo</span><span class="p">(</span><span class="n">map_str_dbl</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pipes</span><span class="o">::</span><span class="nn">getLHCEventLoopInfo</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="n">result</span><span class="p">[</span><span class="s">&quot;did_event_generation&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">(</span><span class="n">Dep</span><span class="o">::</span><span class="n">RunMC</span><span class="o">-&gt;</span><span class="n">event_generation_began</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">result</span><span class="p">[</span><span class="s">&quot;too_many_failed_events&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">(</span><span class="n">Dep</span><span class="o">::</span><span class="n">RunMC</span><span class="o">-&gt;</span><span class="n">exceeded_maxFailedEvents</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">RunMC</span><span class="o">-&gt;</span><span class="n">collider_names</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">result</span><span class="p">[</span><span class="s">&quot;event_count_&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">RunMC</span><span class="o">-&gt;</span><span class="n">event_count</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">name</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">CollectAnalyses</span><span class="p">(</span><span class="n">AnalysisDataPointers</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Pipes</span><span class="o">::</span><span class="nn">CollectAnalyses</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// Start with an empty vector</span>
+<span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">      </span><span class="cp">#ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;CollectAnalyses: Dep::ATLASAnalysisNumbers-&gt;size()    = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">ATLASAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;CollectAnalyses: Dep::CMSAnalysisNumbers-&gt;size()      = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">CMSAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">DEBUG_PREFIX</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;CollectAnalyses: Dep::IdentityAnalysisNumbers-&gt;size() = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">IdentityAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="cp">#endif</span>
+
+<span class="w">      </span><span class="c1">// Add results</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Dep</span><span class="o">::</span><span class="n">ATLASAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">ATLASAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">ATLASAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Dep</span><span class="o">::</span><span class="n">CMSAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">CMSAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">CMSAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Dep</span><span class="o">::</span><span class="n">IdentityAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">IdentityAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">Dep</span><span class="o">::</span><span class="n">IdentityAnalysisNumbers</span><span class="o">-&gt;</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// When first called, check that all analyses contain at least one signal region.</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Loop over all AnalysisData pointers</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">adp</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">adp</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">str</span><span class="w"> </span><span class="n">errmsg</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">errmsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;The analysis &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">adp</span><span class="o">-&gt;</span><span class="n">analysis_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; has no signal regions.&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">ColliderBit_error</span><span class="p">().</span><span class="n">raise</span><span class="p">(</span><span class="n">LOCAL_INFO</span><span class="p">,</span><span class="w"> </span><span class="n">errmsg</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">      </span><span class="c1">// #ifdef COLLIDERBIT_DEBUG</span>
+<span class="w">      </span><span class="c1">//   cout &lt;&lt; DEBUG_PREFIX &lt;&lt; &quot;CollectAnalyses: Current size of &#39;result&#39;: &quot; &lt;&lt; result.size() &lt;&lt; endl;</span>
+<span class="w">      </span><span class="c1">//   if (result.size() &gt; 0)</span>
+<span class="w">      </span><span class="c1">//   {</span>
+<span class="w">      </span><span class="c1">//     cout &lt;&lt; DEBUG_PREFIX &lt;&lt; &quot;CollectAnalyses: Will loop through &#39;result&#39;...&quot; &lt;&lt; endl;</span>
+<span class="w">      </span><span class="c1">//     for (auto&amp; adp : result)</span>
+<span class="w">      </span><span class="c1">//     {</span>
+<span class="w">      </span><span class="c1">//       cout &lt;&lt; DEBUG_PREFIX &lt;&lt; &quot;CollectAnalyses: &#39;result&#39; contains AnalysisData pointer to &quot; &lt;&lt; adp &lt;&lt; endl;</span>
+<span class="w">      </span><span class="c1">//       cout &lt;&lt; DEBUG_PREFIX &lt;&lt; &quot;CollectAnalyses: -- Will now loop over all signal regions in &quot; &lt;&lt; adp &lt;&lt; endl;</span>
+<span class="w">      </span><span class="c1">//       for (auto&amp; sr : adp-&gt;srdata)</span>
+<span class="w">      </span><span class="c1">//       {</span>
+<span class="w">      </span><span class="c1">//         cout &lt;&lt; DEBUG_PREFIX &lt;&lt; &quot;CollectAnalyses: -- &quot; &lt;&lt; adp &lt;&lt; &quot; contains signal region: &quot; &lt;&lt; sr.sr_label &lt;&lt; &quot;, n_sig_MC = &quot; &lt;&lt; sr.n_sig_MC &lt;&lt; &quot;, n_sig_scaled = &quot; &lt;&lt; n_sig_scaled &lt;&lt; endl;</span>
+<span class="w">      </span><span class="c1">//       }</span>
+<span class="w">      </span><span class="c1">//       cout &lt;&lt; DEBUG_PREFIX &lt;&lt; &quot;CollectAnalyses: -- Done looping over signal regions in &quot; &lt;&lt; adp &lt;&lt; endl;</span>
+<span class="w">      </span><span class="c1">//     }</span>
+<span class="w">      </span><span class="c1">//     cout &lt;&lt; DEBUG_PREFIX &lt;&lt; &quot;CollectAnalyses: ...Done looping through &#39;result&#39;.&quot; &lt;&lt; endl;</span>
+<span class="w">      </span><span class="c1">//   }</span>
+<span class="w">      </span><span class="c1">// #endif</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>

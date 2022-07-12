@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class LineSegment &mdash; GAMBIT  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+  <div class="col-lg-9 col-xl-8 text-center">
+    <p class="meta"><a href="/">⇦ Back to GAMBIT homepage</a></p>
+  </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div> 
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAMBIT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Class LineSegment</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-linesegment">
+<span id="exhale-class-classgambit-1-1colliderbit-1-1linesegment"></span><h1>Class LineSegment<a class="headerlink" href="#class-linesegment" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_ColliderBit_include_gambit_ColliderBit_limits_PointsAndLines.hpp.html#file-colliderbit-include-gambit-colliderbit-limits-pointsandlines-hpp"><span class="std std-ref">File PointsAndLines.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit11LineSegmentE">
+<span id="_CPPv3N6Gambit11ColliderBit11LineSegmentE"></span><span id="_CPPv2N6Gambit11ColliderBit11LineSegmentE"></span><span id="Gambit::ColliderBit::LineSegment"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LineSegment</span></span></span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit11LineSegmentE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A simple container for a line segment on an xy plane. </p>
+<p>This class depends on the <a class="reference internal" href="../colliderbit.html#classGambit_1_1ColliderBit_1_1P2"><span class="std std-ref">P2</span></a> class above. It has a built in algorithm to detect intersection with another <a class="reference internal" href="../colliderbit.html#classGambit_1_1ColliderBit_1_1LineSegment"><span class="std std-ref">LineSegment</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-constructors">Constructors</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit11LineSegment4initEddddd">
+<span id="_CPPv3N6Gambit11ColliderBit11LineSegment4initEddddd"></span><span id="_CPPv2N6Gambit11ColliderBit11LineSegment4initEddddd"></span><span id="Gambit::ColliderBit::LineSegment::init__double.double.double.double.double"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a6a43f182273f857b05b62adf6c746063"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">extendFrac</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1.</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit11LineSegment4initEddddd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Coordinate initializer / recycler. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit11LineSegment4initERK2P2RK2P2d">
+<span id="_CPPv3N6Gambit11ColliderBit11LineSegment4initERK2P2RK2P2d"></span><span id="_CPPv2N6Gambit11ColliderBit11LineSegment4initERK2P2RK2P2d"></span><span id="Gambit::ColliderBit::LineSegment::init__P2CR.P2CR.double"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a1ab0de3c48ffb6f5e5be565179867e9f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classGambit_1_1ColliderBit_1_1P2.html#_CPPv4N6Gambit11ColliderBit2P2E" title="Gambit::ColliderBit::P2"><span class="n"><span class="pre">P2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classGambit_1_1ColliderBit_1_1P2.html#_CPPv4N6Gambit11ColliderBit2P2E" title="Gambit::ColliderBit::P2"><span class="n"><span class="pre">P2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">extendFrac</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1.</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit11LineSegment4initERK2P2RK2P2d" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Point initializer / recycler. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit11LineSegment11LineSegmentEv">
+<span id="_CPPv3N6Gambit11ColliderBit11LineSegment11LineSegmentEv"></span><span id="_CPPv2N6Gambit11ColliderBit11LineSegment11LineSegmentEv"></span><span id="Gambit::ColliderBit::LineSegment::LineSegment"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1ada58f0e12f6ca938eb42930f588947e2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LineSegment</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit11LineSegment11LineSegmentEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Default constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit11LineSegment11LineSegmentEddddd">
+<span id="_CPPv3N6Gambit11ColliderBit11LineSegment11LineSegmentEddddd"></span><span id="_CPPv2N6Gambit11ColliderBit11LineSegment11LineSegmentEddddd"></span><span id="Gambit::ColliderBit::LineSegment::LineSegment__double.double.double.double.double"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a1601222ac4456d36bd973eda754b9c85"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LineSegment</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">extendFrac</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1.</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit11LineSegment11LineSegmentEddddd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Coordinate constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit11LineSegment11LineSegmentERK2P2RK2P2d">
+<span id="_CPPv3N6Gambit11ColliderBit11LineSegment11LineSegmentERK2P2RK2P2d"></span><span id="_CPPv2N6Gambit11ColliderBit11LineSegment11LineSegmentERK2P2RK2P2d"></span><span id="Gambit::ColliderBit::LineSegment::LineSegment__P2CR.P2CR.double"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a2a1cfad0fbc1fc9acda98e4945c10639"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LineSegment</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classGambit_1_1ColliderBit_1_1P2.html#_CPPv4N6Gambit11ColliderBit2P2E" title="Gambit::ColliderBit::P2"><span class="n"><span class="pre">P2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classGambit_1_1ColliderBit_1_1P2.html#_CPPv4N6Gambit11ColliderBit2P2E" title="Gambit::ColliderBit::P2"><span class="n"><span class="pre">P2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">extendFrac</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit11LineSegment11LineSegmentERK2P2RK2P2d" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Point constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit11LineSegment11LineSegmentERK11LineSegment">
+<span id="_CPPv3N6Gambit11ColliderBit11LineSegment11LineSegmentERK11LineSegment"></span><span id="_CPPv2N6Gambit11ColliderBit11LineSegment11LineSegmentERK11LineSegment"></span><span id="Gambit::ColliderBit::LineSegment::LineSegment__LineSegmentCR"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a21b57e12c84fc2fc82d29e7bc4c939f4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LineSegment</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6Gambit11ColliderBit11LineSegment11LineSegmentERK11LineSegment" title="Gambit::ColliderBit::LineSegment::LineSegment"><span class="n"><span class="pre">LineSegment</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit11LineSegment11LineSegmentERK11LineSegment" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Copy constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6Gambit11ColliderBit11LineSegmentaSERK11LineSegment">
+<span id="_CPPv3N6Gambit11ColliderBit11LineSegmentaSERK11LineSegment"></span><span id="_CPPv2N6Gambit11ColliderBit11LineSegmentaSERK11LineSegment"></span><span id="Gambit::ColliderBit::LineSegment::assign-operator__LineSegmentCR"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1adbc727e9ca832890699a142905a32efb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6Gambit11ColliderBit11LineSegmentE" title="Gambit::ColliderBit::LineSegment"><span class="n"><span class="pre">LineSegment</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6Gambit11ColliderBit11LineSegmentE" title="Gambit::ColliderBit::LineSegment"><span class="n"><span class="pre">LineSegment</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6Gambit11ColliderBit11LineSegmentaSERK11LineSegment" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Copy assignment operator. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-coordinate-getters">Coordinate getters</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit11LineSegment5getp1Ev">
+<span id="_CPPv3NK6Gambit11ColliderBit11LineSegment5getp1Ev"></span><span id="_CPPv2NK6Gambit11ColliderBit11LineSegment5getp1Ev"></span><span id="Gambit::ColliderBit::LineSegment::getp1C"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1ab198aa4a66902ca32b3c71f23e8bf8dc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classGambit_1_1ColliderBit_1_1P2.html#_CPPv4N6Gambit11ColliderBit2P2E" title="Gambit::ColliderBit::P2"><span class="n"><span class="pre">P2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getp1</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit11LineSegment5getp1Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit11LineSegment5getp2Ev">
+<span id="_CPPv3NK6Gambit11ColliderBit11LineSegment5getp2Ev"></span><span id="_CPPv2NK6Gambit11ColliderBit11LineSegment5getp2Ev"></span><span id="Gambit::ColliderBit::LineSegment::getp2C"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a96915ee809a5f1660a92c463c7ed8ad0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classGambit_1_1ColliderBit_1_1P2.html#_CPPv4N6Gambit11ColliderBit2P2E" title="Gambit::ColliderBit::P2"><span class="n"><span class="pre">P2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getp2</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit11LineSegment5getp2Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit11LineSegment5slopeEv">
+<span id="_CPPv3NK6Gambit11ColliderBit11LineSegment5slopeEv"></span><span id="_CPPv2NK6Gambit11ColliderBit11LineSegment5slopeEv"></span><span id="Gambit::ColliderBit::LineSegment::slopeC"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a45270b4a61ef8365ac643a4ebda187af"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">slope</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit11LineSegment5slopeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the slope of the line segment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit11LineSegment1mEv">
+<span id="_CPPv3NK6Gambit11ColliderBit11LineSegment1mEv"></span><span id="_CPPv2NK6Gambit11ColliderBit11LineSegment1mEv"></span><span id="Gambit::ColliderBit::LineSegment::mC"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a8905495b3996a2f8bfe0ac7cd7be47fc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit11LineSegment1mEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Alias for slope. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit11LineSegment9interceptEv">
+<span id="_CPPv3NK6Gambit11ColliderBit11LineSegment9interceptEv"></span><span id="_CPPv2NK6Gambit11ColliderBit11LineSegment9interceptEv"></span><span id="Gambit::ColliderBit::LineSegment::interceptC"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a7b7db4d98a228cd01aa9f1b06acc6aef"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">intercept</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit11LineSegment9interceptEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the y-intercept of the full line which contains this segment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit11LineSegment1bEv">
+<span id="_CPPv3NK6Gambit11ColliderBit11LineSegment1bEv"></span><span id="_CPPv2NK6Gambit11ColliderBit11LineSegment1bEv"></span><span id="Gambit::ColliderBit::LineSegment::bC"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a5ea633c552c281e5c409bd6dc5985b01"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">b</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit11LineSegment1bEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Alias for intercept. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit11LineSegment3absEv">
+<span id="_CPPv3NK6Gambit11ColliderBit11LineSegment3absEv"></span><span id="_CPPv2NK6Gambit11ColliderBit11LineSegment3absEv"></span><span id="Gambit::ColliderBit::LineSegment::absC"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1ab9475c1c9f6297adb4e94b73d125933b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">abs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit11LineSegment3absEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the length of the vector from the origin to this point. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit11LineSegment1rEv">
+<span id="_CPPv3NK6Gambit11ColliderBit11LineSegment1rEv"></span><span id="_CPPv2NK6Gambit11ColliderBit11LineSegment1rEv"></span><span id="Gambit::ColliderBit::LineSegment::rC"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1acf9b8d7d717ae3987e928e1936286a3e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit11LineSegment1rEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Alias for abs. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-intersection-algorithm">Intersection algorithm</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6Gambit11ColliderBit11LineSegment12intersectsAtERK11LineSegment">
+<span id="_CPPv3NK6Gambit11ColliderBit11LineSegment12intersectsAtERK11LineSegment"></span><span id="_CPPv2NK6Gambit11ColliderBit11LineSegment12intersectsAtERK11LineSegment"></span><span id="Gambit::ColliderBit::LineSegment::intersectsAt__LineSegmentCRC"></span><span class="target" id="classGambit_1_1ColliderBit_1_1LineSegment_1a40686c3e5bdcff1fdc2f02056b6d3c16"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="classGambit_1_1ColliderBit_1_1P2.html#_CPPv4N6Gambit11ColliderBit2P2E" title="Gambit::ColliderBit::P2"><span class="n"><span class="pre">P2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">intersectsAt</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6Gambit11ColliderBit11LineSegmentE" title="Gambit::ColliderBit::LineSegment"><span class="n"><span class="pre">LineSegment</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6Gambit11ColliderBit11LineSegment12intersectsAtERK11LineSegment" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Determine if this intersects with other and where. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+<style>
+  /* Sidebar header (and topbar for mobile) */
+  .wy-side-nav-search, .wy-nav-top, .wy-nav-side {
+    background: #efefef;
+  }
+
+  /* Sidebar text */
+  .wy-menu-vertical a {
+    color: #000000;
+  }
+</style>
+
+
+</body>
+</html>
