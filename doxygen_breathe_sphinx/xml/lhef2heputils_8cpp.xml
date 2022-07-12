@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="lhef2heputils_8cpp" kind="file" language="C++">
     <compoundname>lhef2heputils.cpp</compoundname>
     <includes local="yes">gambit/cmake/cmake_variables.hpp</includes>
@@ -10,6 +10,9 @@
     <includes local="yes">gambit/Utils/end_ignore_warnings.hpp</includes>
     <includes local="yes">HEPUtils/FastJet.h</includes>
     <incdepgraph>
+      <node id="5">
+        <label>HEPUtils/Event.h</label>
+      </node>
       <node id="4">
         <label>gambit/ColliderBit/lhef2heputils.hpp</label>
         <link refid="lhef2heputils_8hpp_source"/>
@@ -19,7 +22,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/lhef2heputils.cpp</label>
+        <label>/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/lhef2heputils.cpp</label>
         <link refid="lhef2heputils_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -36,17 +39,11 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>HEPUtils/Event.h</label>
-      </node>
       <node id="9">
         <label>HEPUtils/FastJet.h</label>
       </node>
       <node id="7">
         <label>HepMC3/LHEF.h</label>
-      </node>
-      <node id="6">
-        <label>gambit/Utils/begin_ignore_warnings_hepmc.hpp</label>
       </node>
       <node id="8">
         <label>gambit/Utils/end_ignore_warnings.hpp</label>
@@ -56,6 +53,9 @@
       </node>
       <node id="3">
         <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>gambit/Utils/begin_ignore_warnings_hepmc.hpp</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespaceFJNS">FJNS</innernamespace>
@@ -83,12 +83,12 @@
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para><xrefsect id="todo_1_todo000095"><xreftitle>Todo</xreftitle><xrefdescription><para>Dress leptons? </para>
+<para><xrefsect id="todo_1_todo000093"><xreftitle>Todo</xreftitle><xrefdescription><para>Dress leptons? </para>
 </xrefdescription></xrefsect></para>
-<para><xrefsect id="todo_1_todo000096"><xreftitle>Todo</xreftitle><xrefdescription><para>Bug in HEPUtils::get_jets means that constituent info is lost for now... </para>
+<para><xrefsect id="todo_1_todo000094"><xreftitle>Todo</xreftitle><xrefdescription><para>Bug in HEPUtils::get_jets means that constituent info is lost for now... </para>
 </xrefdescription></xrefsect></para>
         </inbodydescription>
-        <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/lhef2heputils.cpp" line="48" column="6" bodyfile="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/lhef2heputils.cpp" bodystart="48" bodyend="127"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/lhef2heputils.cpp" line="48" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/lhef2heputils.cpp" bodystart="48" bodyend="127"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -175,7 +175,7 @@
 <codeline lineno="100"><highlight class="normal"><sp/><sp/>evt.set_missingmom(vmet);</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Jets</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/>vector&lt;PseudoJet&gt;<sp/>jets<sp/>=<sp/><ref refid="Utils_8hpp_1a6b637ed5c7c6e6fe222b389f3a912b44" kindref="member">get_jets</ref>(jetparticles,<sp/>0.4,<sp/>jet_pt_min);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>vector&lt;PseudoJet&gt;<sp/>jets<sp/>=<sp/><ref refid="Utils_8hpp_1a70a48e8033edee127719134dcedd6fc8" kindref="member">get_jets</ref>(jetparticles,<sp/>0.4,<sp/>jet_pt_min);</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>PseudoJet&amp;<sp/>pj<sp/>:<sp/>jets)</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
@@ -202,6 +202,6 @@
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/lhef2heputils.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/lhef2heputils.cpp"/>
   </compounddef>
 </doxygen>

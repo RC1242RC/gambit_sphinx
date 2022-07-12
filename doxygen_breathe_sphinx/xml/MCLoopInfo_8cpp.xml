@@ -1,10 +1,19 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="MCLoopInfo_8cpp" kind="file" language="C++">
     <compoundname>MCLoopInfo.cpp</compoundname>
     <includes refid="MCLoopInfo_8hpp" local="yes">gambit/ColliderBit/MCLoopInfo.hpp</includes>
     <includes local="yes">gambit/Utils/standalone_error_handlers.hpp</includes>
     <incdepgraph>
+      <node id="5">
+        <label>gambit/ColliderBit/MC_convergence.hpp</label>
+        <link refid="MC__convergence_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>gambit/Utils/standalone_error_handlers.hpp</label>
+      </node>
       <node id="2">
         <label>gambit/ColliderBit/MCLoopInfo.hpp</label>
         <link refid="MCLoopInfo_8hpp"/>
@@ -15,28 +24,19 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>gambit/ColliderBit/MC_convergence.hpp</label>
-        <link refid="MC__convergence_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
+      <node id="3">
+        <label>vector</label>
       </node>
       <node id="1">
-        <label>C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/MCLoopInfo.cpp</label>
+        <label>/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/MCLoopInfo.cpp</label>
         <link refid="MCLoopInfo_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="6">
-        <label>gambit/Utils/standalone_error_handlers.hpp</label>
-      </node>
       <node id="4">
         <label>gambit/Utils/util_types.hpp</label>
-      </node>
-      <node id="3">
-        <label>vector</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespaceGambit">Gambit</innernamespace>
@@ -167,20 +167,20 @@
 <codeline lineno="126"><highlight class="normal"></highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a797872c3bb7c015c519866ab32e7b353" kindref="member">MCLoopInfo::current_collider</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_collider;<sp/>}</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1aa702d4b00dafb9e5b660412c4604537e" kindref="member">MCLoopInfo::current_maxFailedEvents</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_maxFailedEvents_it-&gt;second;<sp/>}</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1aa702d4b00dafb9e5b660412c4604537e" kindref="member">MCLoopInfo::current_maxFailedEvents</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_maxFailedEvents_it-&gt;second;<sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a79d4344da65671c3a9bd88a927b8aba8" kindref="member">MCLoopInfo::current_maxFailedEvents</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_maxFailedEvents_it-&gt;second;<sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a79d4344da65671c3a9bd88a927b8aba8" kindref="member">MCLoopInfo::current_maxFailedEvents</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_maxFailedEvents_it-&gt;second;<sp/>}</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a122ee7e96335784b94385881175b7570" kindref="member">MCLoopInfo::current_invalidate_failed_points</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_invalidate_failed_points_it-&gt;second;<sp/>}</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a122ee7e96335784b94385881175b7570" kindref="member">MCLoopInfo::current_invalidate_failed_points</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_invalidate_failed_points_it-&gt;second;<sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a0b903cb11fd3d1130009e56afb8fe9d3" kindref="member">MCLoopInfo::current_invalidate_failed_points</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_invalidate_failed_points_it-&gt;second;<sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a0b903cb11fd3d1130009e56afb8fe9d3" kindref="member">MCLoopInfo::current_invalidate_failed_points</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_invalidate_failed_points_it-&gt;second;<sp/>}</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a749b2423d0b565051be1b8b932d6e2b6" kindref="member">MCLoopInfo::current_event_count</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_event_count_it-&gt;second;<sp/>}</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a749b2423d0b565051be1b8b932d6e2b6" kindref="member">MCLoopInfo::current_event_count</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_event_count_it-&gt;second;<sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1aa93e47f59ebde1aa6797da3d0a5563f3" kindref="member">MCLoopInfo::current_event_count</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_event_count_it-&gt;second;<sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1aa93e47f59ebde1aa6797da3d0a5563f3" kindref="member">MCLoopInfo::current_event_count</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_event_count_it-&gt;second;<sp/>}</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>convergence_settings&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a600f3a4a02d80609a70a30fbd89486b9" kindref="member">MCLoopInfo::current_convergence_options</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_convergence_options_it-&gt;second;<sp/>}</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>convergence_settings&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a600f3a4a02d80609a70a30fbd89486b9" kindref="member">MCLoopInfo::current_convergence_options</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_convergence_options_it-&gt;second;<sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>convergence_settings&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1aa25c519fc2a97b38fe79536db74390d3" kindref="member">MCLoopInfo::current_convergence_options</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_convergence_options_it-&gt;second;<sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>convergence_settings&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1aa25c519fc2a97b38fe79536db74390d3" kindref="member">MCLoopInfo::current_convergence_options</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_convergence_options_it-&gt;second;<sp/>}</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1ab829e691614a9b939ed9f92f44706e4f" kindref="member">MCLoopInfo::current_analyses</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_analyses_it-&gt;second;<sp/>}</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;str&gt;&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1ab829e691614a9b939ed9f92f44706e4f" kindref="member">MCLoopInfo::current_analyses</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_analyses_it-&gt;second;<sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1aa9b8f1b8f2647bff0aa9802dc3100e63" kindref="member">MCLoopInfo::current_analyses</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_analyses_it-&gt;second;<sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;str&gt;&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1aa9b8f1b8f2647bff0aa9802dc3100e63" kindref="member">MCLoopInfo::current_analyses</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_current_analyses_it-&gt;second;<sp/>}</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;&amp;<sp/><ref refid="structGambit_1_1ColliderBit_1_1MCLoopInfo_1a6294f3efb133b279f66be4fd1c725b1d" kindref="member">MCLoopInfo::current_analyses_for</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str&amp;<sp/>detname)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline lineno="145"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
@@ -197,6 +197,6 @@
 <codeline lineno="156"><highlight class="normal"></highlight></codeline>
 <codeline lineno="157"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/MCLoopInfo.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/MCLoopInfo.cpp"/>
   </compounddef>
 </doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="Analysis__ATLAS__8TeV__2bStop__20invfb_8cpp" kind="file" language="C++">
     <compoundname>Analysis_ATLAS_8TeV_2bStop_20invfb.cpp</compoundname>
     <includes local="no">vector</includes>
@@ -10,49 +10,57 @@
     <includes refid="Analysis_8hpp" local="yes">gambit/ColliderBit/analyses/Analysis.hpp</includes>
     <includes refid="mt2__bisect_8h" local="yes">gambit/ColliderBit/mt2_bisect.h</includes>
     <incdepgraph>
-      <node id="6">
-        <label>gambit/ColliderBit/ATLASEfficiencies.hpp</label>
-        <link refid="ATLASEfficiencies_8hpp"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
+      <node id="9">
+        <label>functional</label>
       </node>
-      <node id="8">
-        <label>gambit/ColliderBit/Utils.hpp</label>
-        <link refid="Utils_8hpp"/>
-        <childnode refid="9" relation="include">
+      <node id="5">
+        <label>iomanip</label>
+      </node>
+      <node id="24">
+        <label>limits</label>
+      </node>
+      <node id="12">
+        <label>HEPUtils/Event.h</label>
+      </node>
+      <node id="14">
+        <label>gambit/Utils/threadsafe_rng.hpp</label>
+      </node>
+      <node id="27">
+        <label>gambit/ColliderBit/mt2_bisect.h</label>
+        <link refid="mt2__bisect_8h_source"/>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="19">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_8TeV_2bStop_20invfb.cpp</label>
+        <link refid="Analysis__ATLAS__8TeV__2bStop__20invfb_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="15">
-        <label>gambit/ColliderBit/analyses/Analysis.hpp</label>
-        <link refid="Analysis_8hpp"/>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
+      <node id="7">
+        <label>cfloat</label>
       </node>
       <node id="17">
         <label>gambit/ColliderBit/analyses/AnalysisData.hpp</label>
@@ -88,6 +96,55 @@
         <childnode refid="26" relation="include">
         </childnode>
       </node>
+      <node id="8">
+        <label>gambit/ColliderBit/Utils.hpp</label>
+        <link refid="Utils_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>HEPUtils/FastJet.h</label>
+      </node>
+      <node id="15">
+        <label>gambit/ColliderBit/analyses/Analysis.hpp</label>
+        <link refid="Analysis_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>HEPUtils/BinnedFn.h</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>HEPUtils/MathUtils.h</label>
+      </node>
+      <node id="23">
+        <label>sstream</label>
+      </node>
+      <node id="20">
+        <label>gambit/Utils/end_ignore_warnings.hpp</label>
+      </node>
+      <node id="22">
+        <label>iostream</label>
+      </node>
       <node id="26">
         <label>gambit/ColliderBit/analyses/EventCounter.hpp</label>
         <link refid="EventCounter_8hpp"/>
@@ -96,87 +153,30 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="27">
-        <label>gambit/ColliderBit/mt2_bisect.h</label>
-        <link refid="mt2__bisect_8h_source"/>
-      </node>
-      <node id="1">
-        <label>C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_8TeV_2bStop_20invfb.cpp</label>
-        <link refid="Analysis__ATLAS__8TeV__2bStop__20invfb_8cpp"/>
-        <childnode refid="2" relation="include">
+      <node id="6">
+        <label>gambit/ColliderBit/ATLASEfficiencies.hpp</label>
+        <link refid="ATLASEfficiencies_8hpp"/>
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>Eigen/Core</label>
-      </node>
-      <node id="11">
-        <label>HEPUtils/BinnedFn.h</label>
-      </node>
-      <node id="12">
-        <label>HEPUtils/Event.h</label>
-      </node>
-      <node id="13">
-        <label>HEPUtils/FastJet.h</label>
-      </node>
-      <node id="10">
-        <label>HEPUtils/MathUtils.h</label>
       </node>
       <node id="25">
         <label>algorithm</label>
       </node>
-      <node id="7">
-        <label>cfloat</label>
-      </node>
-      <node id="3">
-        <label>cmath</label>
-      </node>
-      <node id="9">
-        <label>functional</label>
-      </node>
       <node id="18">
         <label>gambit/Utils/begin_ignore_warnings_eigen.hpp</label>
       </node>
-      <node id="20">
-        <label>gambit/Utils/end_ignore_warnings.hpp</label>
-      </node>
-      <node id="14">
-        <label>gambit/Utils/threadsafe_rng.hpp</label>
-      </node>
-      <node id="5">
-        <label>iomanip</label>
-      </node>
-      <node id="22">
-        <label>iostream</label>
-      </node>
-      <node id="24">
-        <label>limits</label>
-      </node>
-      <node id="21">
-        <label>map</label>
-      </node>
       <node id="4">
         <label>memory</label>
-      </node>
-      <node id="23">
-        <label>sstream</label>
-      </node>
-      <node id="16">
-        <label>string</label>
-      </node>
-      <node id="2">
-        <label>vector</label>
       </node>
     </incdepgraph>
     <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__8TeV__2bStop__20invfb" prot="public">Gambit::ColliderBit::Analysis_ATLAS_8TeV_2bStop_20invfb</innerclass>
@@ -231,12 +231,12 @@
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Required<sp/>detector<sp/>sim</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>detector<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ATLAS&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>detector<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ATLAS&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__8TeV__2bStop__20invfb" kindref="compound">Analysis_ATLAS_8TeV_2bStop_20invfb</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a4998785e3f5ebd96a148af8b4fbf575d" kindref="member">set_analysis_name</ref>(</highlight><highlight class="stringliteral">&quot;ATLAS_8TeV_2bStop_20invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1affc00d6a3606fda2e214b99dba9598c6" kindref="member">set_luminosity</ref>(20.1);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_analysis_name(</highlight><highlight class="stringliteral">&quot;ATLAS_8TeV_2bStop_20invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_luminosity(20.1);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_numSRA<sp/>=<sp/>0<sp/>;<sp/>_numSRB<sp/>=<sp/>0;<sp/>_numSRA15<sp/>=<sp/>0;<sp/>_numSRA20<sp/>=<sp/>0;<sp/>_numSRA25<sp/>=<sp/>0;<sp/>_numSRA30<sp/>=<sp/>0;<sp/>_numSRA35<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NCUTS=30;</highlight></codeline>
@@ -566,7 +566,7 @@
 <codeline lineno="377"><highlight class="normal"></highlight></codeline>
 <codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="379"><highlight class="normal"></highlight></codeline>
-<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__8TeV__2bStop__20invfb_1a34af68696a824bf7019ca100e91efeaa" kindref="member">combine</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis" kindref="compound">Analysis</ref>*<sp/>other)</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>combine(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis" kindref="compound">Analysis</ref>*<sp/>other)</highlight></codeline>
 <codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__8TeV__2bStop__20invfb" kindref="compound">Analysis_ATLAS_8TeV_2bStop_20invfb</ref>*<sp/>specificOther</highlight></codeline>
 <codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__8TeV__2bStop__20invfb" kindref="compound">Analysis_ATLAS_8TeV_2bStop_20invfb</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(other);</highlight></codeline>
@@ -586,23 +586,23 @@
 <codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="399"><highlight class="normal"></highlight></codeline>
 <codeline lineno="400"><highlight class="normal"></highlight></codeline>
-<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__8TeV__2bStop__20invfb_1a3d6a34294e31ae47cc733b60adc4e7e6" kindref="member">collect_results</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>collect_results()<sp/>{</highlight></codeline>
 <codeline lineno="402"><highlight class="normal"></highlight></codeline>
 <codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add_result(SignalRegionData(&quot;SR<sp/>label&quot;,<sp/>n_obs,<sp/>{n_sig_MC,<sp/>n_sig_MC_sys},<sp/>{n_bkg,<sp/>n_bkg_err}));</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="404"><highlight class="normal"></highlight></codeline>
-<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRA15&quot;</highlight><highlight class="normal">,<sp/>102.,<sp/>{_numSRA15,<sp/>0.},<sp/>{<sp/>94.,<sp/>13.}));</highlight></codeline>
-<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRA20&quot;</highlight><highlight class="normal">,<sp/>48.,<sp/>{_numSRA20,<sp/>0.},<sp/>{<sp/>39.,<sp/>6.}));</highlight></codeline>
-<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRA25&quot;</highlight><highlight class="normal">,<sp/>14.,<sp/>{_numSRA25,<sp/>0.},<sp/>{<sp/>15.8,<sp/>2.8}));</highlight></codeline>
-<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRA30&quot;</highlight><highlight class="normal">,<sp/>7.,<sp/>{_numSRA30,<sp/>0.},<sp/>{<sp/>5.9,<sp/>1.1}));</highlight></codeline>
-<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRA35&quot;</highlight><highlight class="normal">,<sp/>3.,<sp/>{_numSRA35,<sp/>0.},<sp/>{<sp/>2.5,<sp/>0.6}));</highlight></codeline>
-<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRB&quot;</highlight><highlight class="normal">,<sp/>65.,<sp/>{_numSRB,<sp/>0.},<sp/>{<sp/>64.,<sp/>10.}));</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRA15&quot;</highlight><highlight class="normal">,<sp/>102.,<sp/>{_numSRA15,<sp/>0.},<sp/>{<sp/>94.,<sp/>13.}));</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRA20&quot;</highlight><highlight class="normal">,<sp/>48.,<sp/>{_numSRA20,<sp/>0.},<sp/>{<sp/>39.,<sp/>6.}));</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRA25&quot;</highlight><highlight class="normal">,<sp/>14.,<sp/>{_numSRA25,<sp/>0.},<sp/>{<sp/>15.8,<sp/>2.8}));</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRA30&quot;</highlight><highlight class="normal">,<sp/>7.,<sp/>{_numSRA30,<sp/>0.},<sp/>{<sp/>5.9,<sp/>1.1}));</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRA35&quot;</highlight><highlight class="normal">,<sp/>3.,<sp/>{_numSRA35,<sp/>0.},<sp/>{<sp/>2.5,<sp/>0.6}));</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(</highlight><highlight class="stringliteral">&quot;SRB&quot;</highlight><highlight class="normal">,<sp/>65.,<sp/>{_numSRB,<sp/>0.},<sp/>{<sp/>64.,<sp/>10.}));</highlight></codeline>
 <codeline lineno="411"><highlight class="normal"></highlight></codeline>
 <codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="414"><highlight class="normal"></highlight></codeline>
 <codeline lineno="415"><highlight class="normal"></highlight></codeline>
 <codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__8TeV__2bStop__20invfb_1a54f22baa155cd7529925f2f37a0d4a54" kindref="member">analysis_specific_reset</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>analysis_specific_reset()<sp/>{</highlight></codeline>
 <codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_numSRA<sp/>=<sp/>0<sp/>;<sp/>_numSRB<sp/>=<sp/>0;<sp/>_numSRA15<sp/>=<sp/>0;<sp/>_numSRA20<sp/>=<sp/>0;<sp/>_numSRA25<sp/>=<sp/>0;<sp/>_numSRA30<sp/>=<sp/>0;<sp/>_numSRA35<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="419"><highlight class="normal"></highlight></codeline>
 <codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::fill(cutFlowVector.begin(),<sp/>cutFlowVector.end(),<sp/>0);</highlight></codeline>
@@ -617,6 +617,6 @@
 <codeline lineno="429"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="430"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_8TeV_2bStop_20invfb.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_8TeV_2bStop_20invfb.cpp"/>
   </compounddef>
 </doxygen>

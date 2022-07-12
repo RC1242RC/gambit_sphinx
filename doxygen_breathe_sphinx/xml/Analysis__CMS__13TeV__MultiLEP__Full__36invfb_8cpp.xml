@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="Analysis__CMS__13TeV__MultiLEP__Full__36invfb_8cpp" kind="file" language="C++">
     <compoundname>Analysis_CMS_13TeV_MultiLEP_Full_36invfb.cpp</compoundname>
     <includes local="no">vector</includes>
@@ -11,6 +11,12 @@
     <includes refid="CMSEfficiencies_8hpp" local="yes">gambit/ColliderBit/CMSEfficiencies.hpp</includes>
     <includes refid="mt2__bisect_8h" local="yes">gambit/ColliderBit/mt2_bisect.h</includes>
     <incdepgraph>
+      <node id="23">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>iomanip</label>
+      </node>
       <node id="21">
         <label>gambit/ColliderBit/CMSEfficiencies.hpp</label>
         <link refid="CMSEfficiencies_8hpp"/>
@@ -31,33 +37,36 @@
         <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="22">
-        <label>gambit/ColliderBit/Utils.hpp</label>
-        <link refid="Utils_8hpp"/>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
+      <node id="18">
+        <label>limits</label>
       </node>
-      <node id="7">
-        <label>gambit/ColliderBit/analyses/Analysis.hpp</label>
-        <link refid="Analysis_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
+      <node id="9">
+        <label>HEPUtils/Event.h</label>
+      </node>
+      <node id="27">
+        <label>gambit/Utils/threadsafe_rng.hpp</label>
+      </node>
+      <node id="28">
+        <label>gambit/ColliderBit/mt2_bisect.h</label>
+        <link refid="mt2__bisect_8h_source"/>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="12">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="14">
+        <label>map</label>
+      </node>
+      <node id="17">
+        <label>cfloat</label>
+      </node>
+      <node id="6">
+        <label>fstream</label>
       </node>
       <node id="10">
         <label>gambit/ColliderBit/analyses/AnalysisData.hpp</label>
@@ -93,20 +102,48 @@
         <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="20">
-        <label>gambit/ColliderBit/analyses/EventCounter.hpp</label>
-        <link refid="EventCounter_8hpp"/>
+      <node id="22">
+        <label>gambit/ColliderBit/Utils.hpp</label>
+        <link refid="Utils_8hpp"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>HEPUtils/FastJet.h</label>
+      </node>
+      <node id="7">
+        <label>gambit/ColliderBit/analyses/Analysis.hpp</label>
+        <link refid="Analysis_8hpp"/>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
-      <node id="28">
-        <label>gambit/ColliderBit/mt2_bisect.h</label>
-        <link refid="mt2__bisect_8h_source"/>
+      <node id="25">
+        <label>HEPUtils/BinnedFn.h</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="24">
+        <label>HEPUtils/MathUtils.h</label>
       </node>
       <node id="1">
-        <label>C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_13TeV_MultiLEP_Full_36invfb.cpp</label>
+        <label>/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_13TeV_MultiLEP_Full_36invfb.cpp</label>
         <link refid="Analysis__CMS__13TeV__MultiLEP__Full__36invfb_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -125,68 +162,31 @@
         <childnode refid="28" relation="include">
         </childnode>
       </node>
-      <node id="12">
-        <label>Eigen/Core</label>
-      </node>
-      <node id="25">
-        <label>HEPUtils/BinnedFn.h</label>
-      </node>
-      <node id="9">
-        <label>HEPUtils/Event.h</label>
-      </node>
-      <node id="26">
-        <label>HEPUtils/FastJet.h</label>
-      </node>
-      <node id="24">
-        <label>HEPUtils/MathUtils.h</label>
-      </node>
-      <node id="19">
-        <label>algorithm</label>
-      </node>
-      <node id="17">
-        <label>cfloat</label>
-      </node>
-      <node id="3">
-        <label>cmath</label>
-      </node>
-      <node id="6">
-        <label>fstream</label>
-      </node>
-      <node id="23">
-        <label>functional</label>
-      </node>
-      <node id="11">
-        <label>gambit/Utils/begin_ignore_warnings_eigen.hpp</label>
+      <node id="16">
+        <label>sstream</label>
       </node>
       <node id="13">
         <label>gambit/Utils/end_ignore_warnings.hpp</label>
       </node>
-      <node id="27">
-        <label>gambit/Utils/threadsafe_rng.hpp</label>
-      </node>
-      <node id="5">
-        <label>iomanip</label>
-      </node>
       <node id="15">
         <label>iostream</label>
       </node>
-      <node id="18">
-        <label>limits</label>
+      <node id="20">
+        <label>gambit/ColliderBit/analyses/EventCounter.hpp</label>
+        <link refid="EventCounter_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
-      <node id="14">
-        <label>map</label>
+      <node id="19">
+        <label>algorithm</label>
+      </node>
+      <node id="11">
+        <label>gambit/Utils/begin_ignore_warnings_eigen.hpp</label>
       </node>
       <node id="4">
         <label>memory</label>
-      </node>
-      <node id="16">
-        <label>sstream</label>
-      </node>
-      <node id="8">
-        <label>string</label>
-      </node>
-      <node id="2">
-        <label>vector</label>
       </node>
     </incdepgraph>
     <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__MultiLEP__Full__36invfb" prot="public">Gambit::ColliderBit::Analysis_CMS_13TeV_MultiLEP_Full_36invfb</innerclass>
@@ -201,8 +201,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -385,7 +384,7 @@
 <codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="192"><highlight class="normal"></highlight></codeline>
 <codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Required<sp/>detector<sp/>sim</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>detector<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CMS&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>detector<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CMS&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="195"><highlight class="normal"></highlight></codeline>
 <codeline lineno="196" refid="structGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__MultiLEP__Full__36invfb_1_1ptComparison" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__MultiLEP__Full__36invfb_1_1ptComparison" kindref="compound">ptComparison</ref><sp/>{</highlight></codeline>
 <codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator()<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>HEPUtils::Particle*<sp/>i,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>HEPUtils::Particle*<sp/>j)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(i-&gt;pT()&gt;j-&gt;pT());}</highlight></codeline>
@@ -393,8 +392,8 @@
 <codeline lineno="199"><highlight class="normal"></highlight></codeline>
 <codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__MultiLEP__Full__36invfb" kindref="compound">Analysis_CMS_13TeV_MultiLEP_Full_36invfb</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="201"><highlight class="normal"></highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a4998785e3f5ebd96a148af8b4fbf575d" kindref="member">set_analysis_name</ref>(</highlight><highlight class="stringliteral">&quot;CMS_13TeV_MultiLEP_Full_36invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1affc00d6a3606fda2e214b99dba9598c6" kindref="member">set_luminosity</ref>(35.9);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_analysis_name(</highlight><highlight class="stringliteral">&quot;CMS_13TeV_MultiLEP_Full_36invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_luminosity(35.9);</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"></highlight></codeline>
 <codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NCUTS1=10;</highlight></codeline>
 <codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NCUTS2=7;</highlight></codeline>
@@ -815,7 +814,7 @@
 <codeline lineno="621"><highlight class="normal"></highlight></codeline>
 <codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="623"><highlight class="normal"></highlight></codeline>
-<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__MultiLEP__Full__36invfb_1a681c48b64a53d64b76b98f53b69aad05" kindref="member">combine</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a3eeaadd4fec4b19602be715d1403607e" kindref="member">Analysis</ref>*<sp/>other)</highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>combine(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Analysis*<sp/>other)</highlight></codeline>
 <codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="627"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Analysis_CMS_13TeV_MultiLEP_Full_36invfb*<sp/>specificOther</highlight></codeline>
 <codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">Analysis_CMS_13TeV_MultiLEP_Full_36invfb*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(other);</highlight></codeline>
@@ -847,145 +846,145 @@
 <codeline lineno="654"><highlight class="normal"></highlight></codeline>
 <codeline lineno="655"><highlight class="normal"></highlight></codeline>
 <codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>can<sp/>be<sp/>overridden<sp/>by<sp/>the<sp/>derived<sp/>SR-specific<sp/>classes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="657"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__MultiLEP__Full__36invfb_1aa0b62191ce127c7bceb080f7bbed8fa3" kindref="member">collect_results</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>collect_results()<sp/>{</highlight></codeline>
 <codeline lineno="658"><highlight class="normal"></highlight></codeline>
 <codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Now<sp/>fill<sp/>a<sp/>results<sp/>object<sp/>with<sp/>the<sp/>results<sp/>for<sp/>each<sp/>SR</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="660"><highlight class="normal"></highlight></codeline>
-<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS01&quot;</highlight><highlight class="normal">),<sp/>1193.,<sp/>{1430.,<sp/>180.}));</highlight></codeline>
-<codeline lineno="662"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS02&quot;</highlight><highlight class="normal">),<sp/>50.,<sp/>{56.,<sp/>9.}));</highlight></codeline>
-<codeline lineno="663"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS03&quot;</highlight><highlight class="normal">),<sp/>25.,<sp/>{36.,<sp/>7.}));</highlight></codeline>
-<codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS04&quot;</highlight><highlight class="normal">),<sp/>7.,<sp/>{5.9,<sp/>1.2}));</highlight></codeline>
-<codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS05&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{4.5,<sp/>3.5}));</highlight></codeline>
-<codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS06&quot;</highlight><highlight class="normal">),<sp/>143.,<sp/>{163.,<sp/>19.}));</highlight></codeline>
-<codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS07&quot;</highlight><highlight class="normal">),<sp/>41.,<sp/>{38.,<sp/>6.}));</highlight></codeline>
-<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS08&quot;</highlight><highlight class="normal">),<sp/>24.,<sp/>{23.,<sp/>4.}));</highlight></codeline>
-<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS09&quot;</highlight><highlight class="normal">),<sp/>11.,<sp/>{14.4,<sp/>3.2}));</highlight></codeline>
-<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS10&quot;</highlight><highlight class="normal">),<sp/>6.,<sp/>{6.3,<sp/>0.9}));</highlight></codeline>
-<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS11&quot;</highlight><highlight class="normal">),<sp/>67.,<sp/>{82.,<sp/>12.}));</highlight></codeline>
-<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS12&quot;</highlight><highlight class="normal">),<sp/>19.,<sp/>{27.,<sp/>4.}));</highlight></codeline>
-<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS13&quot;</highlight><highlight class="normal">),<sp/>18.,<sp/>{18.,<sp/>4.}));</highlight></codeline>
-<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS14&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{5.0,<sp/>0.8}));</highlight></codeline>
-<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS15&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{5.1,<sp/>2.6}));</highlight></codeline>
-<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS16&quot;</highlight><highlight class="normal">),<sp/>591.,<sp/>{603.,<sp/>80.}));</highlight></codeline>
-<codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS17&quot;</highlight><highlight class="normal">),<sp/>116.,<sp/>{98.,<sp/>14.}));</highlight></codeline>
-<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS18&quot;</highlight><highlight class="normal">),<sp/>69.,<sp/>{66.,<sp/>10.}));</highlight></codeline>
-<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS19&quot;</highlight><highlight class="normal">),<sp/>43.,<sp/>{33.,<sp/>6.}));</highlight></codeline>
-<codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS20&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{11.4,<sp/>1.7}));</highlight></codeline>
-<codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS21&quot;</highlight><highlight class="normal">),<sp/>232.,<sp/>{264.,<sp/>31.}));</highlight></codeline>
-<codeline lineno="682"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS22&quot;</highlight><highlight class="normal">),<sp/>52.,<sp/>{51.,<sp/>7.}));</highlight></codeline>
-<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS23&quot;</highlight><highlight class="normal">),<sp/>35.,<sp/>{31.,<sp/>4.}));</highlight></codeline>
-<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS24&quot;</highlight><highlight class="normal">),<sp/>28.,<sp/>{29.,<sp/>5.}));</highlight></codeline>
-<codeline lineno="685"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS25&quot;</highlight><highlight class="normal">),<sp/>27.,<sp/>{22.2,<sp/>3.4}));</highlight></codeline>
-<codeline lineno="686"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS26&quot;</highlight><highlight class="normal">),<sp/>49.,<sp/>{44.,<sp/>7.}));</highlight></codeline>
-<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS27&quot;</highlight><highlight class="normal">),<sp/>18.,<sp/>{16.4,<sp/>2.9}));</highlight></codeline>
-<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS28&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{10.7,<sp/>1.9}));</highlight></codeline>
-<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS29&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{6.7,<sp/>1.1}));</highlight></codeline>
-<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS30&quot;</highlight><highlight class="normal">),<sp/>7.,<sp/>{3.9,<sp/>0.8}));</highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS01&quot;</highlight><highlight class="normal">),<sp/>1193.,<sp/>{1430.,<sp/>180.}));</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS02&quot;</highlight><highlight class="normal">),<sp/>50.,<sp/>{56.,<sp/>9.}));</highlight></codeline>
+<codeline lineno="663"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS03&quot;</highlight><highlight class="normal">),<sp/>25.,<sp/>{36.,<sp/>7.}));</highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS04&quot;</highlight><highlight class="normal">),<sp/>7.,<sp/>{5.9,<sp/>1.2}));</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS05&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{4.5,<sp/>3.5}));</highlight></codeline>
+<codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS06&quot;</highlight><highlight class="normal">),<sp/>143.,<sp/>{163.,<sp/>19.}));</highlight></codeline>
+<codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS07&quot;</highlight><highlight class="normal">),<sp/>41.,<sp/>{38.,<sp/>6.}));</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS08&quot;</highlight><highlight class="normal">),<sp/>24.,<sp/>{23.,<sp/>4.}));</highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS09&quot;</highlight><highlight class="normal">),<sp/>11.,<sp/>{14.4,<sp/>3.2}));</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS10&quot;</highlight><highlight class="normal">),<sp/>6.,<sp/>{6.3,<sp/>0.9}));</highlight></codeline>
+<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS11&quot;</highlight><highlight class="normal">),<sp/>67.,<sp/>{82.,<sp/>12.}));</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS12&quot;</highlight><highlight class="normal">),<sp/>19.,<sp/>{27.,<sp/>4.}));</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS13&quot;</highlight><highlight class="normal">),<sp/>18.,<sp/>{18.,<sp/>4.}));</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS14&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{5.0,<sp/>0.8}));</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS15&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{5.1,<sp/>2.6}));</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS16&quot;</highlight><highlight class="normal">),<sp/>591.,<sp/>{603.,<sp/>80.}));</highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS17&quot;</highlight><highlight class="normal">),<sp/>116.,<sp/>{98.,<sp/>14.}));</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS18&quot;</highlight><highlight class="normal">),<sp/>69.,<sp/>{66.,<sp/>10.}));</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS19&quot;</highlight><highlight class="normal">),<sp/>43.,<sp/>{33.,<sp/>6.}));</highlight></codeline>
+<codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS20&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{11.4,<sp/>1.7}));</highlight></codeline>
+<codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS21&quot;</highlight><highlight class="normal">),<sp/>232.,<sp/>{264.,<sp/>31.}));</highlight></codeline>
+<codeline lineno="682"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS22&quot;</highlight><highlight class="normal">),<sp/>52.,<sp/>{51.,<sp/>7.}));</highlight></codeline>
+<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS23&quot;</highlight><highlight class="normal">),<sp/>35.,<sp/>{31.,<sp/>4.}));</highlight></codeline>
+<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS24&quot;</highlight><highlight class="normal">),<sp/>28.,<sp/>{29.,<sp/>5.}));</highlight></codeline>
+<codeline lineno="685"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS25&quot;</highlight><highlight class="normal">),<sp/>27.,<sp/>{22.2,<sp/>3.4}));</highlight></codeline>
+<codeline lineno="686"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS26&quot;</highlight><highlight class="normal">),<sp/>49.,<sp/>{44.,<sp/>7.}));</highlight></codeline>
+<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS27&quot;</highlight><highlight class="normal">),<sp/>18.,<sp/>{16.4,<sp/>2.9}));</highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS28&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{10.7,<sp/>1.9}));</highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS29&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{6.7,<sp/>1.1}));</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SS30&quot;</highlight><highlight class="normal">),<sp/>7.,<sp/>{3.9,<sp/>0.8}));</highlight></codeline>
 <codeline lineno="691"><highlight class="normal"></highlight></codeline>
-<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A01&quot;</highlight><highlight class="normal">),<sp/>186.,<sp/>{185.,<sp/>22.}));</highlight></codeline>
-<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A02&quot;</highlight><highlight class="normal">),<sp/>34.,<sp/>{35.,<sp/>6.}));</highlight></codeline>
-<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A03&quot;</highlight><highlight class="normal">),<sp/>11.,<sp/>{9.3,<sp/>2.2}));</highlight></codeline>
-<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A04&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{3.3,<sp/>1.0}));</highlight></codeline>
-<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A05&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{4.,<sp/>1.}));</highlight></codeline>
-<codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A06&quot;</highlight><highlight class="normal">),<sp/>60.,<sp/>{50.,<sp/>8.}));</highlight></codeline>
-<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A07&quot;</highlight><highlight class="normal">),<sp/>19.,<sp/>{15.,<sp/>4.}));</highlight></codeline>
-<codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A08&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.9,<sp/>0.6}));</highlight></codeline>
-<codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A09&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{0.8,<sp/>0.4}));</highlight></codeline>
-<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A10&quot;</highlight><highlight class="normal">),<sp/>16.,<sp/>{13.,<sp/>2.8}));</highlight></codeline>
-<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A11&quot;</highlight><highlight class="normal">),<sp/>17.,<sp/>{11.9,<sp/>3.2}));</highlight></codeline>
-<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A12&quot;</highlight><highlight class="normal">),<sp/>4.,<sp/>{3.1,<sp/>1.2}));</highlight></codeline>
-<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A13&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{2.1,<sp/>0.8}));</highlight></codeline>
-<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A14&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{0.9,<sp/>0.4}));</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A01&quot;</highlight><highlight class="normal">),<sp/>186.,<sp/>{185.,<sp/>22.}));</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A02&quot;</highlight><highlight class="normal">),<sp/>34.,<sp/>{35.,<sp/>6.}));</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A03&quot;</highlight><highlight class="normal">),<sp/>11.,<sp/>{9.3,<sp/>2.2}));</highlight></codeline>
+<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A04&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{3.3,<sp/>1.0}));</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A05&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{4.,<sp/>1.}));</highlight></codeline>
+<codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A06&quot;</highlight><highlight class="normal">),<sp/>60.,<sp/>{50.,<sp/>8.}));</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A07&quot;</highlight><highlight class="normal">),<sp/>19.,<sp/>{15.,<sp/>4.}));</highlight></codeline>
+<codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A08&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.9,<sp/>0.6}));</highlight></codeline>
+<codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A09&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{0.8,<sp/>0.4}));</highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A10&quot;</highlight><highlight class="normal">),<sp/>16.,<sp/>{13.,<sp/>2.8}));</highlight></codeline>
+<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A11&quot;</highlight><highlight class="normal">),<sp/>17.,<sp/>{11.9,<sp/>3.2}));</highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A12&quot;</highlight><highlight class="normal">),<sp/>4.,<sp/>{3.1,<sp/>1.2}));</highlight></codeline>
+<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A13&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{2.1,<sp/>0.8}));</highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A14&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{0.9,<sp/>0.4}));</highlight></codeline>
 <codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SR<sp/>A15<sp/>overlaps<sp/>with<sp/>a<sp/>CR<sp/>and<sp/>is<sp/>not<sp/>used<sp/>for<sp/>the<sp/>results<sp/>in<sp/>arxiv:1709.05406</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add_result(SignalRegionData(_counters.at(&quot;A15&quot;),<sp/>2278.,<sp/>{2180.,<sp/>260}));</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="708"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A16&quot;</highlight><highlight class="normal">),<sp/>429.,<sp/>{440.,<sp/>70}));</highlight></codeline>
-<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A17&quot;</highlight><highlight class="normal">),<sp/>123.,<sp/>{129.,<sp/>28}));</highlight></codeline>
-<codeline lineno="710"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A18&quot;</highlight><highlight class="normal">),<sp/>37.,<sp/>{48.,<sp/>10}));</highlight></codeline>
-<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A19&quot;</highlight><highlight class="normal">),<sp/>38.,<sp/>{42.,<sp/>9}));</highlight></codeline>
-<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A20&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{8.5,<sp/>2.1}));</highlight></codeline>
-<codeline lineno="713"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A21&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{2.6,<sp/>0.8}));</highlight></codeline>
-<codeline lineno="714"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A22&quot;</highlight><highlight class="normal">),<sp/>391.,<sp/>{390,<sp/>50}));</highlight></codeline>
-<codeline lineno="715"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A23&quot;</highlight><highlight class="normal">),<sp/>61.,<sp/>{72,<sp/>19}));</highlight></codeline>
-<codeline lineno="716"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A24&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{10,<sp/>4}));</highlight></codeline>
-<codeline lineno="717"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A25&quot;</highlight><highlight class="normal">),<sp/>8.,<sp/>{4.9,<sp/>1.9}));</highlight></codeline>
-<codeline lineno="718"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A26&quot;</highlight><highlight class="normal">),<sp/>35.,<sp/>{37,<sp/>9}));</highlight></codeline>
-<codeline lineno="719"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A27&quot;</highlight><highlight class="normal">),<sp/>17.,<sp/>{21.,<sp/>8.}));</highlight></codeline>
-<codeline lineno="720"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A28&quot;</highlight><highlight class="normal">),<sp/>7.,<sp/>{8.9,<sp/>3.1}));</highlight></codeline>
-<codeline lineno="721"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A29&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{3.6,<sp/>1.3}));</highlight></codeline>
-<codeline lineno="722"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A30&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{4.1,<sp/>1.6}));</highlight></codeline>
-<codeline lineno="723"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A31&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.0,<sp/>0.5}));</highlight></codeline>
-<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A32&quot;</highlight><highlight class="normal">),<sp/>123.,<sp/>{121.,<sp/>14.}));</highlight></codeline>
-<codeline lineno="725"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A33&quot;</highlight><highlight class="normal">),<sp/>32.,<sp/>{32.0,<sp/>5.}));</highlight></codeline>
-<codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A34&quot;</highlight><highlight class="normal">),<sp/>4.,<sp/>{11.6,<sp/>2.6}));</highlight></codeline>
-<codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A35&quot;</highlight><highlight class="normal">),<sp/>6.,<sp/>{2.9,<sp/>0.8}));</highlight></codeline>
-<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A36&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{3.7,<sp/>1.0}));</highlight></codeline>
-<codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A37&quot;</highlight><highlight class="normal">),<sp/>17.,<sp/>{32.,<sp/>5.}));</highlight></codeline>
-<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A38&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{9.6,<sp/>2.4}));</highlight></codeline>
-<codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A39&quot;</highlight><highlight class="normal">),<sp/>0.,<sp/>{2.4,<sp/>0.7}));</highlight></codeline>
-<codeline lineno="732"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A40&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{1.0,<sp/>0.4}));</highlight></codeline>
-<codeline lineno="733"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A41&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{9.4,<sp/>2.4}));</highlight></codeline>
-<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A42&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{6.6,<sp/>2.1}));</highlight></codeline>
-<codeline lineno="735"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A43&quot;</highlight><highlight class="normal">),<sp/>0.,<sp/>{3.1,<sp/>1.0}));</highlight></codeline>
-<codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A44&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{2.5,<sp/>0.8}));</highlight></codeline>
+<codeline lineno="708"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A16&quot;</highlight><highlight class="normal">),<sp/>429.,<sp/>{440.,<sp/>70}));</highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A17&quot;</highlight><highlight class="normal">),<sp/>123.,<sp/>{129.,<sp/>28}));</highlight></codeline>
+<codeline lineno="710"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A18&quot;</highlight><highlight class="normal">),<sp/>37.,<sp/>{48.,<sp/>10}));</highlight></codeline>
+<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A19&quot;</highlight><highlight class="normal">),<sp/>38.,<sp/>{42.,<sp/>9}));</highlight></codeline>
+<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A20&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{8.5,<sp/>2.1}));</highlight></codeline>
+<codeline lineno="713"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A21&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{2.6,<sp/>0.8}));</highlight></codeline>
+<codeline lineno="714"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A22&quot;</highlight><highlight class="normal">),<sp/>391.,<sp/>{390,<sp/>50}));</highlight></codeline>
+<codeline lineno="715"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A23&quot;</highlight><highlight class="normal">),<sp/>61.,<sp/>{72,<sp/>19}));</highlight></codeline>
+<codeline lineno="716"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A24&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{10,<sp/>4}));</highlight></codeline>
+<codeline lineno="717"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A25&quot;</highlight><highlight class="normal">),<sp/>8.,<sp/>{4.9,<sp/>1.9}));</highlight></codeline>
+<codeline lineno="718"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A26&quot;</highlight><highlight class="normal">),<sp/>35.,<sp/>{37,<sp/>9}));</highlight></codeline>
+<codeline lineno="719"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A27&quot;</highlight><highlight class="normal">),<sp/>17.,<sp/>{21.,<sp/>8.}));</highlight></codeline>
+<codeline lineno="720"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A28&quot;</highlight><highlight class="normal">),<sp/>7.,<sp/>{8.9,<sp/>3.1}));</highlight></codeline>
+<codeline lineno="721"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A29&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{3.6,<sp/>1.3}));</highlight></codeline>
+<codeline lineno="722"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A30&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{4.1,<sp/>1.6}));</highlight></codeline>
+<codeline lineno="723"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A31&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.0,<sp/>0.5}));</highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A32&quot;</highlight><highlight class="normal">),<sp/>123.,<sp/>{121.,<sp/>14.}));</highlight></codeline>
+<codeline lineno="725"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A33&quot;</highlight><highlight class="normal">),<sp/>32.,<sp/>{32.0,<sp/>5.}));</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A34&quot;</highlight><highlight class="normal">),<sp/>4.,<sp/>{11.6,<sp/>2.6}));</highlight></codeline>
+<codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A35&quot;</highlight><highlight class="normal">),<sp/>6.,<sp/>{2.9,<sp/>0.8}));</highlight></codeline>
+<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A36&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{3.7,<sp/>1.0}));</highlight></codeline>
+<codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A37&quot;</highlight><highlight class="normal">),<sp/>17.,<sp/>{32.,<sp/>5.}));</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A38&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{9.6,<sp/>2.4}));</highlight></codeline>
+<codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A39&quot;</highlight><highlight class="normal">),<sp/>0.,<sp/>{2.4,<sp/>0.7}));</highlight></codeline>
+<codeline lineno="732"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A40&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{1.0,<sp/>0.4}));</highlight></codeline>
+<codeline lineno="733"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A41&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{9.4,<sp/>2.4}));</highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A42&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{6.6,<sp/>2.1}));</highlight></codeline>
+<codeline lineno="735"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A43&quot;</highlight><highlight class="normal">),<sp/>0.,<sp/>{3.1,<sp/>1.0}));</highlight></codeline>
+<codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;A44&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{2.5,<sp/>0.8}));</highlight></codeline>
 <codeline lineno="737"><highlight class="normal"></highlight></codeline>
-<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR01&quot;</highlight><highlight class="normal">),<sp/>166.,<sp/>{175.,<sp/>20.}));</highlight></codeline>
-<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR02&quot;</highlight><highlight class="normal">),<sp/>23.,<sp/>{27.,<sp/>4.}));</highlight></codeline>
-<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR03&quot;</highlight><highlight class="normal">),<sp/>6.,<sp/>{5.,<sp/>1.}));</highlight></codeline>
-<codeline lineno="741"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR04&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{2.5,<sp/>0.8}));</highlight></codeline>
-<codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR05&quot;</highlight><highlight class="normal">),<sp/>56.,<sp/>{50.,<sp/>8.}));</highlight></codeline>
-<codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR06&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{12.,<sp/>3.}));</highlight></codeline>
-<codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR07&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.2,<sp/>0.4}));</highlight></codeline>
-<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR08&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{12.,<sp/>2.}));</highlight></codeline>
-<codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR09&quot;</highlight><highlight class="normal">),<sp/>14.,<sp/>{11.,<sp/>3.}));</highlight></codeline>
-<codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR10&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{2.6,<sp/>0.9}));</highlight></codeline>
-<codeline lineno="748"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR11&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.2,<sp/>0.5}));</highlight></codeline>
-<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR12&quot;</highlight><highlight class="normal">),<sp/>41.,<sp/>{39.,<sp/>6.}));</highlight></codeline>
-<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR13&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{10.,<sp/>3.}));</highlight></codeline>
-<codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR14&quot;</highlight><highlight class="normal">),<sp/>11.,<sp/>{6.,<sp/>2.}));</highlight></codeline>
-<codeline lineno="752"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR15&quot;</highlight><highlight class="normal">),<sp/>260.,<sp/>{286.,<sp/>44.}));</highlight></codeline>
-<codeline lineno="753"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR16&quot;</highlight><highlight class="normal">),<sp/>51.,<sp/>{62.,<sp/>14.}));</highlight></codeline>
-<codeline lineno="754"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR17&quot;</highlight><highlight class="normal">),<sp/>10.,<sp/>{20.,<sp/>5.}));</highlight></codeline>
-<codeline lineno="755"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR18&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{16.,<sp/>4.}));</highlight></codeline>
-<codeline lineno="756"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR19&quot;</highlight><highlight class="normal">),<sp/>297.,<sp/>{321.,<sp/>42.}));</highlight></codeline>
-<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR20&quot;</highlight><highlight class="normal">),<sp/>38.,<sp/>{50.,<sp/>14.}));</highlight></codeline>
-<codeline lineno="758"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR21&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{5.,<sp/>2.}));</highlight></codeline>
-<codeline lineno="759"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR22&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{1.1,<sp/>0.5}));</highlight></codeline>
-<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR23&quot;</highlight><highlight class="normal">),<sp/>18.,<sp/>{25.,<sp/>6.}));</highlight></codeline>
-<codeline lineno="761"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR24&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{12.,<sp/>5.}));</highlight></codeline>
-<codeline lineno="762"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR25&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{5.,<sp/>2.}));</highlight></codeline>
-<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR26&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{4.,<sp/>2.}));</highlight></codeline>
-<codeline lineno="764"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR27&quot;</highlight><highlight class="normal">),<sp/>250.,<sp/>{279.,<sp/>34.}));</highlight></codeline>
-<codeline lineno="765"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR28&quot;</highlight><highlight class="normal">),<sp/>81.,<sp/>{87.,<sp/>13.}));</highlight></codeline>
-<codeline lineno="766"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR29&quot;</highlight><highlight class="normal">),<sp/>20.,<sp/>{26.,<sp/>6.}));</highlight></codeline>
-<codeline lineno="767"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR30&quot;</highlight><highlight class="normal">),<sp/>10.,<sp/>{8.,<sp/>2.}));</highlight></codeline>
-<codeline lineno="768"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR31&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{6.,<sp/>1.}));</highlight></codeline>
-<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR32&quot;</highlight><highlight class="normal">),<sp/>49.,<sp/>{54.,<sp/>8.}));</highlight></codeline>
-<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR33&quot;</highlight><highlight class="normal">),<sp/>11.,<sp/>{11.,<sp/>3.}));</highlight></codeline>
-<codeline lineno="771"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR34&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{2.2,<sp/>0.9}));</highlight></codeline>
-<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR35&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{0.5,<sp/>0.4}));</highlight></codeline>
-<codeline lineno="773"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR36&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{6.,<sp/>2.}));</highlight></codeline>
-<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR37&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{3.0,<sp/>1.3}));</highlight></codeline>
-<codeline lineno="775"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR38&quot;</highlight><highlight class="normal">),<sp/>0.,<sp/>{1.1,<sp/>0.4}));</highlight></codeline>
-<codeline lineno="776"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR39&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{0.9,<sp/>0.4}));</highlight></codeline>
-<codeline lineno="777"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR40&quot;</highlight><highlight class="normal">),<sp/>292.,<sp/>{310.,<sp/>40.}));</highlight></codeline>
-<codeline lineno="778"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR41&quot;</highlight><highlight class="normal">),<sp/>69.,<sp/>{81.,<sp/>18.}));</highlight></codeline>
-<codeline lineno="779"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR42&quot;</highlight><highlight class="normal">),<sp/>23.,<sp/>{25.,<sp/>6.}));</highlight></codeline>
-<codeline lineno="780"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR43&quot;</highlight><highlight class="normal">),<sp/>8.,<sp/>{13.,<sp/>3.}));</highlight></codeline>
-<codeline lineno="781"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR44&quot;</highlight><highlight class="normal">),<sp/>45.,<sp/>{45.,<sp/>6.}));</highlight></codeline>
-<codeline lineno="782"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR45&quot;</highlight><highlight class="normal">),<sp/>12.,<sp/>{14.,<sp/>3.}));</highlight></codeline>
-<codeline lineno="783"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR46&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{4.,<sp/>2.}));</highlight></codeline>
-<codeline lineno="784"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR47&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.9,<sp/>0.8}));</highlight></codeline>
-<codeline lineno="785"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR48&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{1.8,<sp/>0.8}));</highlight></codeline>
-<codeline lineno="786"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR49&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.0,<sp/>0.5}));</highlight></codeline>
-<codeline lineno="787"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR50&quot;</highlight><highlight class="normal">),<sp/>12.,<sp/>{9.,<sp/>3.}));</highlight></codeline>
-<codeline lineno="788"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR51&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{4.,<sp/>2.}));</highlight></codeline>
-<codeline lineno="789"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR52&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{2.0,<sp/>0.7}));</highlight></codeline>
-<codeline lineno="790"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR53&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{1.5,<sp/>0.7}));</highlight></codeline>
-<codeline lineno="791"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR54&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{0.6,<sp/>0.3}));</highlight></codeline>
-<codeline lineno="792"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR55&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.1,<sp/>0.5}));</highlight></codeline>
-<codeline lineno="793"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR56&quot;</highlight><highlight class="normal">),<sp/>170.,<sp/>{173.,<sp/>21.}));</highlight></codeline>
-<codeline lineno="794"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR57&quot;</highlight><highlight class="normal">),<sp/>28.,<sp/>{44.,<sp/>7.}));</highlight></codeline>
-<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR58&quot;</highlight><highlight class="normal">),<sp/>12.,<sp/>{23.,<sp/>6.}));</highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR01&quot;</highlight><highlight class="normal">),<sp/>166.,<sp/>{175.,<sp/>20.}));</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR02&quot;</highlight><highlight class="normal">),<sp/>23.,<sp/>{27.,<sp/>4.}));</highlight></codeline>
+<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR03&quot;</highlight><highlight class="normal">),<sp/>6.,<sp/>{5.,<sp/>1.}));</highlight></codeline>
+<codeline lineno="741"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR04&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{2.5,<sp/>0.8}));</highlight></codeline>
+<codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR05&quot;</highlight><highlight class="normal">),<sp/>56.,<sp/>{50.,<sp/>8.}));</highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR06&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{12.,<sp/>3.}));</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR07&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.2,<sp/>0.4}));</highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR08&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{12.,<sp/>2.}));</highlight></codeline>
+<codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR09&quot;</highlight><highlight class="normal">),<sp/>14.,<sp/>{11.,<sp/>3.}));</highlight></codeline>
+<codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR10&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{2.6,<sp/>0.9}));</highlight></codeline>
+<codeline lineno="748"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR11&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.2,<sp/>0.5}));</highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR12&quot;</highlight><highlight class="normal">),<sp/>41.,<sp/>{39.,<sp/>6.}));</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR13&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{10.,<sp/>3.}));</highlight></codeline>
+<codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR14&quot;</highlight><highlight class="normal">),<sp/>11.,<sp/>{6.,<sp/>2.}));</highlight></codeline>
+<codeline lineno="752"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR15&quot;</highlight><highlight class="normal">),<sp/>260.,<sp/>{286.,<sp/>44.}));</highlight></codeline>
+<codeline lineno="753"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR16&quot;</highlight><highlight class="normal">),<sp/>51.,<sp/>{62.,<sp/>14.}));</highlight></codeline>
+<codeline lineno="754"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR17&quot;</highlight><highlight class="normal">),<sp/>10.,<sp/>{20.,<sp/>5.}));</highlight></codeline>
+<codeline lineno="755"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR18&quot;</highlight><highlight class="normal">),<sp/>9.,<sp/>{16.,<sp/>4.}));</highlight></codeline>
+<codeline lineno="756"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR19&quot;</highlight><highlight class="normal">),<sp/>297.,<sp/>{321.,<sp/>42.}));</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR20&quot;</highlight><highlight class="normal">),<sp/>38.,<sp/>{50.,<sp/>14.}));</highlight></codeline>
+<codeline lineno="758"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR21&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{5.,<sp/>2.}));</highlight></codeline>
+<codeline lineno="759"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR22&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{1.1,<sp/>0.5}));</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR23&quot;</highlight><highlight class="normal">),<sp/>18.,<sp/>{25.,<sp/>6.}));</highlight></codeline>
+<codeline lineno="761"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR24&quot;</highlight><highlight class="normal">),<sp/>13.,<sp/>{12.,<sp/>5.}));</highlight></codeline>
+<codeline lineno="762"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR25&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{5.,<sp/>2.}));</highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR26&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{4.,<sp/>2.}));</highlight></codeline>
+<codeline lineno="764"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR27&quot;</highlight><highlight class="normal">),<sp/>250.,<sp/>{279.,<sp/>34.}));</highlight></codeline>
+<codeline lineno="765"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR28&quot;</highlight><highlight class="normal">),<sp/>81.,<sp/>{87.,<sp/>13.}));</highlight></codeline>
+<codeline lineno="766"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR29&quot;</highlight><highlight class="normal">),<sp/>20.,<sp/>{26.,<sp/>6.}));</highlight></codeline>
+<codeline lineno="767"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR30&quot;</highlight><highlight class="normal">),<sp/>10.,<sp/>{8.,<sp/>2.}));</highlight></codeline>
+<codeline lineno="768"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR31&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{6.,<sp/>1.}));</highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR32&quot;</highlight><highlight class="normal">),<sp/>49.,<sp/>{54.,<sp/>8.}));</highlight></codeline>
+<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR33&quot;</highlight><highlight class="normal">),<sp/>11.,<sp/>{11.,<sp/>3.}));</highlight></codeline>
+<codeline lineno="771"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR34&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{2.2,<sp/>0.9}));</highlight></codeline>
+<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR35&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{0.5,<sp/>0.4}));</highlight></codeline>
+<codeline lineno="773"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR36&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{6.,<sp/>2.}));</highlight></codeline>
+<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR37&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{3.0,<sp/>1.3}));</highlight></codeline>
+<codeline lineno="775"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR38&quot;</highlight><highlight class="normal">),<sp/>0.,<sp/>{1.1,<sp/>0.4}));</highlight></codeline>
+<codeline lineno="776"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR39&quot;</highlight><highlight class="normal">),<sp/>3.,<sp/>{0.9,<sp/>0.4}));</highlight></codeline>
+<codeline lineno="777"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR40&quot;</highlight><highlight class="normal">),<sp/>292.,<sp/>{310.,<sp/>40.}));</highlight></codeline>
+<codeline lineno="778"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR41&quot;</highlight><highlight class="normal">),<sp/>69.,<sp/>{81.,<sp/>18.}));</highlight></codeline>
+<codeline lineno="779"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR42&quot;</highlight><highlight class="normal">),<sp/>23.,<sp/>{25.,<sp/>6.}));</highlight></codeline>
+<codeline lineno="780"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR43&quot;</highlight><highlight class="normal">),<sp/>8.,<sp/>{13.,<sp/>3.}));</highlight></codeline>
+<codeline lineno="781"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR44&quot;</highlight><highlight class="normal">),<sp/>45.,<sp/>{45.,<sp/>6.}));</highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR45&quot;</highlight><highlight class="normal">),<sp/>12.,<sp/>{14.,<sp/>3.}));</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR46&quot;</highlight><highlight class="normal">),<sp/>5.,<sp/>{4.,<sp/>2.}));</highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR47&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.9,<sp/>0.8}));</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR48&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{1.8,<sp/>0.8}));</highlight></codeline>
+<codeline lineno="786"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR49&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.0,<sp/>0.5}));</highlight></codeline>
+<codeline lineno="787"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR50&quot;</highlight><highlight class="normal">),<sp/>12.,<sp/>{9.,<sp/>3.}));</highlight></codeline>
+<codeline lineno="788"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR51&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{4.,<sp/>2.}));</highlight></codeline>
+<codeline lineno="789"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR52&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{2.0,<sp/>0.7}));</highlight></codeline>
+<codeline lineno="790"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR53&quot;</highlight><highlight class="normal">),<sp/>2.,<sp/>{1.5,<sp/>0.7}));</highlight></codeline>
+<codeline lineno="791"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR54&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{0.6,<sp/>0.3}));</highlight></codeline>
+<codeline lineno="792"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR55&quot;</highlight><highlight class="normal">),<sp/>1.,<sp/>{1.1,<sp/>0.5}));</highlight></codeline>
+<codeline lineno="793"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR56&quot;</highlight><highlight class="normal">),<sp/>170.,<sp/>{173.,<sp/>21.}));</highlight></codeline>
+<codeline lineno="794"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR57&quot;</highlight><highlight class="normal">),<sp/>28.,<sp/>{44.,<sp/>7.}));</highlight></codeline>
+<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR58&quot;</highlight><highlight class="normal">),<sp/>12.,<sp/>{23.,<sp/>6.}));</highlight></codeline>
 <codeline lineno="796"><highlight class="normal"></highlight></codeline>
 <codeline lineno="797"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="798"><highlight class="normal"></highlight></codeline>
@@ -1038,7 +1037,7 @@
 <codeline lineno="845"><highlight class="normal"></highlight></codeline>
 <codeline lineno="846"><highlight class="normal"></highlight></codeline>
 <codeline lineno="847"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="848"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__MultiLEP__Full__36invfb_1a5f57ba57de90904201c49dad885adb8f" kindref="member">analysis_specific_reset</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="848"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>analysis_specific_reset()<sp/>{</highlight></codeline>
 <codeline lineno="849"><highlight class="normal"></highlight></codeline>
 <codeline lineno="850"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>pair<sp/>:<sp/>_counters)<sp/>{<sp/>pair.second.reset();<sp/>}</highlight></codeline>
 <codeline lineno="851"><highlight class="normal"></highlight></codeline>
@@ -1371,6 +1370,6 @@
 <codeline lineno="1178"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1179"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_13TeV_MultiLEP_Full_36invfb.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_13TeV_MultiLEP_Full_36invfb.cpp"/>
   </compounddef>
 </doxygen>

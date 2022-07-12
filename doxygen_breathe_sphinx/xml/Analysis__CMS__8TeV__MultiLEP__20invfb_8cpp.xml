@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="Analysis__CMS__8TeV__MultiLEP__20invfb_8cpp" kind="file" language="C++">
     <compoundname>Analysis_CMS_8TeV_MultiLEP_20invfb.cpp</compoundname>
     <includes local="no">vector</includes>
@@ -11,6 +11,12 @@
     <includes refid="Analysis_8hpp" local="yes">gambit/ColliderBit/analyses/Analysis.hpp</includes>
     <includes refid="CMSEfficiencies_8hpp" local="yes">gambit/ColliderBit/CMSEfficiencies.hpp</includes>
     <incdepgraph>
+      <node id="23">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>iomanip</label>
+      </node>
       <node id="21">
         <label>gambit/ColliderBit/CMSEfficiencies.hpp</label>
         <link refid="CMSEfficiencies_8hpp"/>
@@ -31,33 +37,32 @@
         <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="22">
-        <label>gambit/ColliderBit/Utils.hpp</label>
-        <link refid="Utils_8hpp"/>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
+      <node id="18">
+        <label>limits</label>
       </node>
-      <node id="8">
-        <label>gambit/ColliderBit/analyses/Analysis.hpp</label>
-        <link refid="Analysis_8hpp"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
+      <node id="10">
+        <label>HEPUtils/Event.h</label>
+      </node>
+      <node id="27">
+        <label>gambit/Utils/threadsafe_rng.hpp</label>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="7">
+        <label>cassert</label>
+      </node>
+      <node id="13">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>map</label>
+      </node>
+      <node id="17">
+        <label>cfloat</label>
       </node>
       <node id="11">
         <label>gambit/ColliderBit/analyses/AnalysisData.hpp</label>
@@ -93,16 +98,29 @@
         <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="20">
-        <label>gambit/ColliderBit/analyses/EventCounter.hpp</label>
-        <link refid="EventCounter_8hpp"/>
-        <childnode refid="9" relation="include">
+      <node id="22">
+        <label>gambit/ColliderBit/Utils.hpp</label>
+        <link refid="Utils_8hpp"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>HEPUtils/FastJet.h</label>
       </node>
       <node id="1">
-        <label>C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp</label>
+        <label>/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp</label>
         <link refid="Analysis__CMS__8TeV__MultiLEP__20invfb_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -121,68 +139,50 @@
         <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="13">
-        <label>Eigen/Core</label>
+      <node id="8">
+        <label>gambit/ColliderBit/analyses/Analysis.hpp</label>
+        <link refid="Analysis_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
       <node id="25">
         <label>HEPUtils/BinnedFn.h</label>
       </node>
-      <node id="10">
-        <label>HEPUtils/Event.h</label>
-      </node>
-      <node id="26">
-        <label>HEPUtils/FastJet.h</label>
+      <node id="2">
+        <label>vector</label>
       </node>
       <node id="24">
         <label>HEPUtils/MathUtils.h</label>
       </node>
-      <node id="19">
-        <label>algorithm</label>
-      </node>
-      <node id="7">
-        <label>cassert</label>
-      </node>
-      <node id="17">
-        <label>cfloat</label>
-      </node>
-      <node id="3">
-        <label>cmath</label>
-      </node>
-      <node id="23">
-        <label>functional</label>
-      </node>
-      <node id="12">
-        <label>gambit/Utils/begin_ignore_warnings_eigen.hpp</label>
+      <node id="6">
+        <label>sstream</label>
       </node>
       <node id="14">
         <label>gambit/Utils/end_ignore_warnings.hpp</label>
       </node>
-      <node id="27">
-        <label>gambit/Utils/threadsafe_rng.hpp</label>
-      </node>
-      <node id="5">
-        <label>iomanip</label>
-      </node>
       <node id="16">
         <label>iostream</label>
       </node>
-      <node id="18">
-        <label>limits</label>
+      <node id="20">
+        <label>gambit/ColliderBit/analyses/EventCounter.hpp</label>
+        <link refid="EventCounter_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
-      <node id="15">
-        <label>map</label>
+      <node id="19">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>gambit/Utils/begin_ignore_warnings_eigen.hpp</label>
       </node>
       <node id="4">
         <label>memory</label>
-      </node>
-      <node id="6">
-        <label>sstream</label>
-      </node>
-      <node id="9">
-        <label>string</label>
-      </node>
-      <node id="2">
-        <label>vector</label>
       </node>
     </incdepgraph>
     <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__8TeV__MultiLEP__20invfb" prot="public">Gambit::ColliderBit::Analysis_CMS_8TeV_MultiLEP_20invfb</innerclass>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" line="37" column="9" bodyfile="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" bodystart="37" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" line="37" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="Analysis__CMS__8TeV__MultiLEP__20invfb_8cpp_1af225189cd625714f0e37e21b2719af2c" prot="public" static="no">
         <name>ADD_RESULTS_SRGROUP_2</name>
@@ -237,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" line="81" column="9" bodyfile="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" bodystart="81" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" line="81" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="Analysis__CMS__8TeV__MultiLEP__20invfb_8cpp_1a1906b057fc23fbd43b68d66283b012ea" prot="public" static="no">
         <name>ADD_RESULTS_SRGROUP_3</name>
@@ -273,7 +273,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" line="113" column="9" bodyfile="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" bodystart="113" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" line="113" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" bodystart="113" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="Analysis__CMS__8TeV__MultiLEP__20invfb_8cpp_1a3df334c88594cb5172622ff35e4e92aa" prot="public" static="no">
         <name>ADD_RESULTS_SRGROUP_4</name>
@@ -309,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" line="145" column="9" bodyfile="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" bodystart="145" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" line="145" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" bodystart="145" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="Analysis__CMS__8TeV__MultiLEP__20invfb_8cpp_1a564a2c7b6b722717bcc84d82dd787403" prot="public" static="no">
         <name>ADD_RESULTS_SRGROUP_5</name>
@@ -333,7 +333,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" line="177" column="9" bodyfile="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" bodystart="177" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" line="177" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp" bodystart="177" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -378,161 +378,161 @@
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SR<sp/>group<sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADD_RESULTS_SRGROUP_1<sp/>\</highlight></codeline>
-<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll&lt;75&quot;</highlight><highlight class="normal">,<sp/>138.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll&lt;75&quot;],<sp/>0},<sp/>{132.,<sp/>19.}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll75-105&quot;,<sp/>821.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll75-105&quot;],<sp/>0},<sp/>{776.,<sp/>125.}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll&gt;105&quot;,<sp/>49.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll&gt;105&quot;],<sp/>0},<sp/>{45.,<sp/>7.}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll&lt;75&quot;,<sp/>16.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll&lt;75&quot;],<sp/>0},<sp/>{20.,<sp/>4.}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll75-105&quot;,<sp/>123.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll75-105&quot;],<sp/>0},<sp/>{131.,<sp/>30.}));<sp/><sp/>\</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll&gt;105&quot;,<sp/>10.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll&gt;105&quot;],<sp/>0},<sp/>{10.0,<sp/>1.9}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll&lt;75&quot;,<sp/>5.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll&lt;75&quot;],<sp/>0},<sp/>{4.0,<sp/>0.8}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll75-105&quot;,<sp/>34.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll75-105&quot;],<sp/>0},<sp/>{34.,<sp/>8.}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll&gt;105&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll&gt;105&quot;],<sp/>0},<sp/>{2.5,<sp/>0.5}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll&lt;75&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll&lt;75&quot;],<sp/>0},<sp/>{1.9,<sp/>0.4}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll75-105&quot;,<sp/>14.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll75-105&quot;],<sp/>0},<sp/>{21.,<sp/>7.}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll&gt;105&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll&gt;105&quot;],<sp/>0},<sp/>{1.2,<sp/>0.3}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/>\</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll&lt;75&quot;,<sp/>8.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll&lt;75&quot;],<sp/>0},<sp/>{9.6,<sp/>1.7}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll75-105&quot;,<sp/>29.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll75-105&quot;],<sp/>0},<sp/>{23.,<sp/>5.}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll&gt;105&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll&gt;105&quot;],<sp/>0},<sp/>{2.7,<sp/>0.5}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll&lt;75&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll&lt;75&quot;],<sp/>0},<sp/>{3.3,<sp/>0.8}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll75-105&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll75-105&quot;],<sp/>0},<sp/>{3.4,<sp/>0.7}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll&gt;105&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll&gt;105&quot;],<sp/>0},<sp/>{0.71,<sp/>0.22}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll&lt;75&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll&lt;75&quot;],<sp/>0},<sp/>{0.26,<sp/>0.10}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll75-105&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll75-105&quot;],<sp/>0},<sp/>{0.72,<sp/>0.19}));<sp/>\</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll&gt;105&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll&gt;105&quot;],<sp/>0},<sp/>{0.38,<sp/>0.14}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll&lt;75&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll&lt;75&quot;],<sp/>0},<sp/>{0.29,<sp/>0.11}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll75-105&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll75-105&quot;],<sp/>0},<sp/>{0.36,<sp/>0.12}));<sp/>\</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll&gt;105&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll&gt;105&quot;],<sp/>0},<sp/>{0.24,<sp/>0.20}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/>\</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll&lt;75&quot;,<sp/>12.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll&lt;75&quot;],<sp/>0},<sp/>{5.8,<sp/>1.1}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll75-105&quot;,<sp/>13.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll75-105&quot;],<sp/>0},<sp/>{7.5,<sp/>1.4}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll&gt;105&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll&gt;105&quot;],<sp/>0},<sp/>{2.6,<sp/>1.2}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll&lt;75&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll&lt;75&quot;],<sp/>0},<sp/>{4.5,<sp/>1.1}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll75-105&quot;,<sp/>8.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll75-105&quot;],<sp/>0},<sp/>{4.0,<sp/>1.0}));<sp/><sp/>\</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll&gt;105&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll&gt;105&quot;],<sp/>0},<sp/>{1.8,<sp/>0.9}));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll&lt;75&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll&lt;75&quot;],<sp/>0},<sp/>{1.5,<sp/>0.4}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll75-105&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll75-105&quot;],<sp/>0},<sp/>{1.5,<sp/>0.5}));<sp/><sp/>\</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll&gt;105&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll&gt;105&quot;],<sp/>0},<sp/>{0.7,<sp/>0.4}));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll&lt;75&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll&lt;75&quot;],<sp/>0},<sp/>{0.81,<sp/>0.21}));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll75-105&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll75-105&quot;],<sp/>0},<sp/>{1.1,<sp/>0.4}));<sp/><sp/>\</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll&gt;105&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll&gt;105&quot;],<sp/>0},<sp/>{0.40,<sp/>0.24}));<sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll&lt;75&quot;,<sp/>138.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll&lt;75&quot;],<sp/>0},<sp/>{132.,<sp/>19.}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll75-105&quot;,<sp/>821.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll75-105&quot;],<sp/>0},<sp/>{776.,<sp/>125.}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll&gt;105&quot;,<sp/>49.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss50-100_mll&gt;105&quot;],<sp/>0},<sp/>{45.,<sp/>7.}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll&lt;75&quot;,<sp/>16.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll&lt;75&quot;],<sp/>0},<sp/>{20.,<sp/>4.}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll75-105&quot;,<sp/>123.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll75-105&quot;],<sp/>0},<sp/>{131.,<sp/>30.}));<sp/><sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll&gt;105&quot;,<sp/>10.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss100-150_mll&gt;105&quot;],<sp/>0},<sp/>{10.0,<sp/>1.9}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll&lt;75&quot;,<sp/>5.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll&lt;75&quot;],<sp/>0},<sp/>{4.0,<sp/>0.8}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll75-105&quot;,<sp/>34.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll75-105&quot;],<sp/>0},<sp/>{34.,<sp/>8.}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll&gt;105&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss150-200_mll&gt;105&quot;],<sp/>0},<sp/>{2.5,<sp/>0.5}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll&lt;75&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll&lt;75&quot;],<sp/>0},<sp/>{1.9,<sp/>0.4}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll75-105&quot;,<sp/>14.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll75-105&quot;],<sp/>0},<sp/>{21.,<sp/>7.}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll&gt;105&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&lt;120_ETmiss200-250_mll&gt;105&quot;],<sp/>0},<sp/>{1.2,<sp/>0.3}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll&lt;75&quot;,<sp/>8.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll&lt;75&quot;],<sp/>0},<sp/>{9.6,<sp/>1.7}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll75-105&quot;,<sp/>29.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll75-105&quot;],<sp/>0},<sp/>{23.,<sp/>5.}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll&gt;105&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss50-100_mll&gt;105&quot;],<sp/>0},<sp/>{2.7,<sp/>0.5}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll&lt;75&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll&lt;75&quot;],<sp/>0},<sp/>{3.3,<sp/>0.8}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll75-105&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll75-105&quot;],<sp/>0},<sp/>{3.4,<sp/>0.7}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll&gt;105&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss100-150_mll&gt;105&quot;],<sp/>0},<sp/>{0.71,<sp/>0.22}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll&lt;75&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll&lt;75&quot;],<sp/>0},<sp/>{0.26,<sp/>0.10}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll75-105&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll75-105&quot;],<sp/>0},<sp/>{0.72,<sp/>0.19}));<sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll&gt;105&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss150-200_mll&gt;105&quot;],<sp/>0},<sp/>{0.38,<sp/>0.14}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll&lt;75&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll&lt;75&quot;],<sp/>0},<sp/>{0.29,<sp/>0.11}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll75-105&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll75-105&quot;],<sp/>0},<sp/>{0.36,<sp/>0.12}));<sp/>\</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll&gt;105&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT120-160_ETmiss200-250_mll&gt;105&quot;],<sp/>0},<sp/>{0.24,<sp/>0.20}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll&lt;75&quot;,<sp/>12.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll&lt;75&quot;],<sp/>0},<sp/>{5.8,<sp/>1.1}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll75-105&quot;,<sp/>13.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll75-105&quot;],<sp/>0},<sp/>{7.5,<sp/>1.4}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll&gt;105&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss50-100_mll&gt;105&quot;],<sp/>0},<sp/>{2.6,<sp/>1.2}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll&lt;75&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll&lt;75&quot;],<sp/>0},<sp/>{4.5,<sp/>1.1}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll75-105&quot;,<sp/>8.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll75-105&quot;],<sp/>0},<sp/>{4.0,<sp/>1.0}));<sp/><sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll&gt;105&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss100-150_mll&gt;105&quot;],<sp/>0},<sp/>{1.8,<sp/>0.9}));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll&lt;75&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll&lt;75&quot;],<sp/>0},<sp/>{1.5,<sp/>0.4}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll75-105&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll75-105&quot;],<sp/>0},<sp/>{1.5,<sp/>0.5}));<sp/><sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll&gt;105&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss150-200_mll&gt;105&quot;],<sp/>0},<sp/>{0.7,<sp/>0.4}));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll&lt;75&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll&lt;75&quot;],<sp/>0},<sp/>{0.81,<sp/>0.21}));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll75-105&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll75-105&quot;],<sp/>0},<sp/>{1.1,<sp/>0.4}));<sp/><sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll&gt;105&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OSSF_mT&gt;160_ETmiss200-250_mll&gt;105&quot;],<sp/>0},<sp/>{0.40,<sp/>0.24}));<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SR<sp/>group<sp/>2</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADD_RESULTS_SRGROUP_2<sp/>\</highlight></codeline>
-<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss50-100_mll&lt;100&quot;</highlight><highlight class="normal">,<sp/>29.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{<sp/>32.,<sp/>7.}));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss50-100_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{1.7,<sp/>0.4}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss100-150_mll&lt;100&quot;,<sp/>5.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{7.3,<sp/>1.7}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss100-150_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.30,<sp/>0.11}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss150-200_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{1.0,<sp/>0.3}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.14,<sp/>0.09}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss200-250_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.53,<sp/>0.24}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.03,<sp/>0.03}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/>\</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss50-100_mll&lt;100&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{5.5,<sp/>1.2}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss50-100_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{0.25,<sp/>0.07}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss100-150_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{1.9,<sp/>0.5}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss100-150_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.19,<sp/>0.10}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss150-200_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{0.46,<sp/>0.18}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.03,<sp/>0.03}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss200-250_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.10,<sp/>0.05}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.008,<sp/>0.010}));<sp/>\</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/>\</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss50-100_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{3.2,<sp/>0.8}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss50-100_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{0.44,<sp/>0.33}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss100-150_mll&lt;100&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{2.1,<sp/>0.7}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss100-150_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.42,<sp/>0.19}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss150-200_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{0.59,<sp/>0.18}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.10,<sp/>0.06}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss200-250_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.37,<sp/>0.13}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.16,<sp/>0.14}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss50-100_mll&lt;100&quot;,<sp/>29.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{<sp/>32.,<sp/>7.}));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss50-100_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{1.7,<sp/>0.4}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss100-150_mll&lt;100&quot;,<sp/>5.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{7.3,<sp/>1.7}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss100-150_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.30,<sp/>0.11}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss150-200_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{1.0,<sp/>0.3}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.14,<sp/>0.09}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss200-250_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.53,<sp/>0.24}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&lt;120_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&lt;120_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.03,<sp/>0.03}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss50-100_mll&lt;100&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{5.5,<sp/>1.2}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss50-100_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{0.25,<sp/>0.07}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss100-150_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{1.9,<sp/>0.5}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss100-150_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.19,<sp/>0.10}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss150-200_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{0.46,<sp/>0.18}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.03,<sp/>0.03}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss200-250_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.10,<sp/>0.05}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT120-160_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT120-160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.008,<sp/>0.010}));<sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss50-100_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{3.2,<sp/>0.8}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss50-100_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{0.44,<sp/>0.33}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss100-150_mll&lt;100&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{2.1,<sp/>0.7}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss100-150_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.42,<sp/>0.19}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss150-200_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{0.59,<sp/>0.18}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.10,<sp/>0.06}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss200-250_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.37,<sp/>0.13}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_noOSSF_mT&gt;160_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_noOSSF_mT&gt;160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.16,<sp/>0.14}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="109"><highlight class="normal"></highlight></codeline>
 <codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SR<sp/>group<sp/>3</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADD_RESULTS_SRGROUP_3<sp/>\</highlight></codeline>
-<codeline lineno="114"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss50-100_mll&lt;100&quot;</highlight><highlight class="normal">,<sp/>46.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{51.,<sp/>8.}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss50-100_mll&gt;100&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{2.8,<sp/>0.6}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss100-150_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{6.0,<sp/>1.3}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss100-150_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.50,<sp/>0.14}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss150-200_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{2.0,<sp/>0.4}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.11,<sp/>0.07}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss200-250_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.90,<sp/>0.24}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.042,<sp/>0.021}));<sp/>\</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/>\</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss50-100_mll&lt;100&quot;,<sp/>6.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{5.5,<sp/>1.0}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss50-100_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{0.35,<sp/>0.13}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss100-150_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{0.91,<sp/>0.26}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss100-150_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.06,<sp/>0.05}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss150-200_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{0.15,<sp/>0.10}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.,<sp/>0.008}));<sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss200-250_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.06,<sp/>0.08}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.011,<sp/>0.012}));<sp/>\</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/>\</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss50-100_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{3.1,<sp/>0.6}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss50-100_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{0.50,<sp/>0.21}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss100-150_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{2.3,<sp/>0.5}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss100-150_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.40,<sp/>0.17}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss150-200_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{0.52,<sp/>0.16}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.21,<sp/>0.11}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss200-250_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.41,<sp/>0.12}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.06,<sp/>0.05}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss50-100_mll&lt;100&quot;,<sp/>46.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{51.,<sp/>8.}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="115"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss50-100_mll&gt;100&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{2.8,<sp/>0.6}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss100-150_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{6.0,<sp/>1.3}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss100-150_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.50,<sp/>0.14}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss150-200_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{2.0,<sp/>0.4}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.11,<sp/>0.07}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss200-250_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.90,<sp/>0.24}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&lt;120_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&lt;120_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.042,<sp/>0.021}));<sp/>\</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss50-100_mll&lt;100&quot;,<sp/>6.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{5.5,<sp/>1.0}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss50-100_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{0.35,<sp/>0.13}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss100-150_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{0.91,<sp/>0.26}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss100-150_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.06,<sp/>0.05}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss150-200_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{0.15,<sp/>0.10}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.,<sp/>0.008}));<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="129"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss200-250_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.06,<sp/>0.08}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="130"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT120-160_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT120-160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.011,<sp/>0.012}));<sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss50-100_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{3.1,<sp/>0.6}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss50-100_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{0.50,<sp/>0.21}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss100-150_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{2.3,<sp/>0.5}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss100-150_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{0.40,<sp/>0.17}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="136"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss150-200_mll&lt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{0.52,<sp/>0.16}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="137"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.21,<sp/>0.11}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="138"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss200-250_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.41,<sp/>0.12}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_SS1tau_mT&gt;160_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_SS1tau_mT&gt;160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.06,<sp/>0.05}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="140"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SR<sp/>group<sp/>4</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADD_RESULTS_SRGROUP_4<sp/>\</highlight></codeline>
-<codeline lineno="146"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss50-100_mll&lt;100&quot;</highlight><highlight class="normal">,<sp/>290.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{259.,<sp/>93.}));<sp/><sp/>\</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss50-100_mll&gt;100&quot;,<sp/>27.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{30.,<sp/>13.}));<sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss100-150_mll&lt;100&quot;,<sp/>62.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{60.,<sp/>25.}));<sp/><sp/>\</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss100-150_mll&gt;100&quot;,<sp/>8.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{5.9,<sp/>2.6}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss150-200_mll&lt;100&quot;,<sp/>10.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{11.,<sp/>5.}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{2.3,<sp/>1.4}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss200-250_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{2.9,<sp/>1.4}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{1.1,<sp/>0.6}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/>\</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss50-100_mll&lt;100&quot;,<sp/>41.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{42.,<sp/>16.}));<sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss50-100_mll&gt;100&quot;,<sp/>7.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{8.3,<sp/>2.9}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss100-150_mll&lt;100&quot;,<sp/>18.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{17.,<sp/>9.}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss100-150_mll&gt;100&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{2.3,<sp/>1.3}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss150-200_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{2.0,<sp/>1.2}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.27,<sp/>0.32}));<sp/>\</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss200-250_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.8,<sp/>0.5}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.5,<sp/>0.4}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/>\</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss50-100_mll&lt;100&quot;,<sp/>19.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{15.,<sp/>8.}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss50-100_mll&gt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{5.7,<sp/>2.3}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss100-150_mll&lt;100&quot;,<sp/>14.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{14.,<sp/>9.}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss100-150_mll&gt;100&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{4.0,<sp/>2.2}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss150-200_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{3.7,<sp/>2.1}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss150-200_mll&gt;100&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{1.3,<sp/>1.0}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss200-250_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{1.5,<sp/>1.0}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss200-250_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.7,<sp/>0.4}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss50-100_mll&lt;100&quot;,<sp/>290.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{259.,<sp/>93.}));<sp/><sp/>\</highlight></codeline>
+<codeline lineno="147"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss50-100_mll&gt;100&quot;,<sp/>27.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{30.,<sp/>13.}));<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss100-150_mll&lt;100&quot;,<sp/>62.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{60.,<sp/>25.}));<sp/><sp/>\</highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss100-150_mll&gt;100&quot;,<sp/>8.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{5.9,<sp/>2.6}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss150-200_mll&lt;100&quot;,<sp/>10.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{11.,<sp/>5.}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{2.3,<sp/>1.4}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="152"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss200-250_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{2.9,<sp/>1.4}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&lt;120_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&lt;120_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{1.1,<sp/>0.6}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss50-100_mll&lt;100&quot;,<sp/>41.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{42.,<sp/>16.}));<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="156"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss50-100_mll&gt;100&quot;,<sp/>7.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{8.3,<sp/>2.9}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="157"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss100-150_mll&lt;100&quot;,<sp/>18.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{17.,<sp/>9.}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss100-150_mll&gt;100&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{2.3,<sp/>1.3}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss150-200_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{2.0,<sp/>1.2}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss150-200_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{0.27,<sp/>0.32}));<sp/>\</highlight></codeline>
+<codeline lineno="161"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss200-250_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{0.8,<sp/>0.5}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="162"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT120-160_ETmiss200-250_mll&gt;100&quot;,<sp/>0.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT120-160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.5,<sp/>0.4}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="164"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss50-100_mll&lt;100&quot;,<sp/>19.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss50-100_mll&lt;100&quot;],<sp/>0},<sp/>{15.,<sp/>8.}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="165"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss50-100_mll&gt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss50-100_mll&gt;100&quot;],<sp/>0},<sp/>{5.7,<sp/>2.3}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss100-150_mll&lt;100&quot;,<sp/>14.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss100-150_mll&lt;100&quot;],<sp/>0},<sp/>{14.,<sp/>9.}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="167"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss100-150_mll&gt;100&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss100-150_mll&gt;100&quot;],<sp/>0},<sp/>{4.0,<sp/>2.2}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss150-200_mll&lt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss150-200_mll&lt;100&quot;],<sp/>0},<sp/>{3.7,<sp/>2.1}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="169"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss150-200_mll&gt;100&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss150-200_mll&gt;100&quot;],<sp/>0},<sp/>{1.3,<sp/>1.0}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="170"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss200-250_mll&lt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss200-250_mll&lt;100&quot;],<sp/>0},<sp/>{1.5,<sp/>1.0}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="171"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR3l_OS1tau_mT&gt;160_ETmiss200-250_mll&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR3l_OS1tau_mT&gt;160_ETmiss200-250_mll&gt;100&quot;],<sp/>0},<sp/>{0.7,<sp/>0.4}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="172"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="173"><highlight class="normal"></highlight></codeline>
 <codeline lineno="174"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SR<sp/>group<sp/>5</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADD_RESULTS_SRGROUP_5<sp/>\</highlight></codeline>
-<codeline lineno="178"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF0tau_ETmiss&lt;30&quot;</highlight><highlight class="normal">,<sp/>1.,<sp/>{_numSR[&quot;SR4l_1OSSF0tau_ETmiss&lt;30&quot;],<sp/>0},<sp/>{2.3,<sp/>0.6}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF0tau_ETmiss30-50&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR4l_1OSSF0tau_ETmiss30-50&quot;],<sp/>0},<sp/>{1.2,<sp/>0.3}));<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF0tau_ETmiss50-100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR4l_1OSSF0tau_ETmiss50-100&quot;],<sp/>0},<sp/>{1.5,<sp/>0.4}));<sp/>\</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF0tau_ETmiss&gt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR4l_1OSSF0tau_ETmiss&gt;100&quot;],<sp/>0},<sp/>{0.8,<sp/>0.3}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/>\</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF1tau_ETmiss&lt;30&quot;,<sp/>33.,<sp/>{_numSR[&quot;SR4l_1OSSF1tau_ETmiss&lt;30&quot;],<sp/>0},<sp/>{25.,<sp/>12.}));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF1tau_ETmiss30-50&quot;,<sp/>11.,<sp/>{_numSR[&quot;SR4l_1OSSF1tau_ETmiss30-50&quot;],<sp/>0},<sp/>{11.,<sp/>3.1}));<sp/><sp/>\</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF1tau_ETmiss50-100&quot;,<sp/>9.,<sp/>{_numSR[&quot;SR4l_1OSSF1tau_ETmiss50-100&quot;],<sp/>0},<sp/>{9.3,<sp/>1.9}));<sp/>\</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF1tau_ETmiss&gt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR4l_1OSSF1tau_ETmiss&gt;100&quot;],<sp/>0},<sp/>{2.9,<sp/>0.6}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/>\</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_2OSSF0tau_ETmiss&lt;30&quot;,<sp/>142.,<sp/>{_numSR[&quot;SR4l_2OSSF0tau_ETmiss&lt;30&quot;],<sp/>0},<sp/>{149.,<sp/>46.}));<sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_2OSSF0tau_ETmiss30-50&quot;,<sp/>25.,<sp/>{_numSR[&quot;SR4l_2OSSF0tau_ETmiss30-50&quot;],<sp/>0},<sp/>{28.,<sp/>11.}));<sp/><sp/>\</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_2OSSF0tau_ETmiss50-100&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR4l_2OSSF0tau_ETmiss50-100&quot;],<sp/>0},<sp/>{4.5,<sp/>2.7}));<sp/>\</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_2OSSF0tau_ETmiss&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR4l_2OSSF0tau_ETmiss&gt;100&quot;],<sp/>0},<sp/>{0.8,<sp/>0.3}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF0tau_ETmiss&lt;30&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR4l_1OSSF0tau_ETmiss&lt;30&quot;],<sp/>0},<sp/>{2.3,<sp/>0.6}));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="179"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF0tau_ETmiss30-50&quot;,<sp/>3.,<sp/>{_numSR[&quot;SR4l_1OSSF0tau_ETmiss30-50&quot;],<sp/>0},<sp/>{1.2,<sp/>0.3}));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="180"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF0tau_ETmiss50-100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR4l_1OSSF0tau_ETmiss50-100&quot;],<sp/>0},<sp/>{1.5,<sp/>0.4}));<sp/>\</highlight></codeline>
+<codeline lineno="181"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF0tau_ETmiss&gt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR4l_1OSSF0tau_ETmiss&gt;100&quot;],<sp/>0},<sp/>{0.8,<sp/>0.3}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="182"><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="183"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF1tau_ETmiss&lt;30&quot;,<sp/>33.,<sp/>{_numSR[&quot;SR4l_1OSSF1tau_ETmiss&lt;30&quot;],<sp/>0},<sp/>{25.,<sp/>12.}));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="184"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF1tau_ETmiss30-50&quot;,<sp/>11.,<sp/>{_numSR[&quot;SR4l_1OSSF1tau_ETmiss30-50&quot;],<sp/>0},<sp/>{11.,<sp/>3.1}));<sp/><sp/>\</highlight></codeline>
+<codeline lineno="185"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF1tau_ETmiss50-100&quot;,<sp/>9.,<sp/>{_numSR[&quot;SR4l_1OSSF1tau_ETmiss50-100&quot;],<sp/>0},<sp/>{9.3,<sp/>1.9}));<sp/>\</highlight></codeline>
+<codeline lineno="186"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_1OSSF1tau_ETmiss&gt;100&quot;,<sp/>2.,<sp/>{_numSR[&quot;SR4l_1OSSF1tau_ETmiss&gt;100&quot;],<sp/>0},<sp/>{2.9,<sp/>0.6}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="187"><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="188"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_2OSSF0tau_ETmiss&lt;30&quot;,<sp/>142.,<sp/>{_numSR[&quot;SR4l_2OSSF0tau_ETmiss&lt;30&quot;],<sp/>0},<sp/>{149.,<sp/>46.}));<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="189"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_2OSSF0tau_ETmiss30-50&quot;,<sp/>25.,<sp/>{_numSR[&quot;SR4l_2OSSF0tau_ETmiss30-50&quot;],<sp/>0},<sp/>{28.,<sp/>11.}));<sp/><sp/>\</highlight></codeline>
+<codeline lineno="190"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_2OSSF0tau_ETmiss50-100&quot;,<sp/>4.,<sp/>{_numSR[&quot;SR4l_2OSSF0tau_ETmiss50-100&quot;],<sp/>0},<sp/>{4.5,<sp/>2.7}));<sp/>\</highlight></codeline>
+<codeline lineno="191"><highlight class="preprocessor"><sp/><sp/>add_result(SignalRegionData(&quot;SR4l_2OSSF0tau_ETmiss&gt;100&quot;,<sp/>1.,<sp/>{_numSR[&quot;SR4l_2OSSF0tau_ETmiss&gt;100&quot;],<sp/>0},<sp/>{0.8,<sp/>0.3}));<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="192"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="193"><highlight class="normal"></highlight></codeline>
 <codeline lineno="194"><highlight class="normal"></highlight></codeline>
 <codeline lineno="195"><highlight class="normal"></highlight></codeline>
@@ -776,11 +776,11 @@
 <codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="434"><highlight class="normal"></highlight></codeline>
 <codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Required<sp/>detector<sp/>sim</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>detector<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CMS&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>detector<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CMS&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="437"><highlight class="normal"></highlight></codeline>
 <codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__8TeV__MultiLEP__20invfb" kindref="compound">Analysis_CMS_8TeV_MultiLEP_20invfb</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a4998785e3f5ebd96a148af8b4fbf575d" kindref="member">set_analysis_name</ref>(</highlight><highlight class="stringliteral">&quot;CMS_8TeV_MultiLEP_20invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1affc00d6a3606fda2e214b99dba9598c6" kindref="member">set_luminosity</ref>(19.5);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_analysis_name(</highlight><highlight class="stringliteral">&quot;CMS_8TeV_MultiLEP_20invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_luminosity(19.5);</highlight></codeline>
 <codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="442"><highlight class="normal"></highlight></codeline>
 <codeline lineno="443"><highlight class="normal"></highlight></codeline>
@@ -1172,7 +1172,7 @@
 <codeline lineno="829"><highlight class="normal"></highlight></codeline>
 <codeline lineno="830"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="831"><highlight class="normal"></highlight></codeline>
-<codeline lineno="833"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__8TeV__MultiLEP__20invfb_1aa66f3cb46df46d75ba7d31f409f8c914" kindref="member">combine</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis" kindref="compound">Analysis</ref>*<sp/>other)</highlight></codeline>
+<codeline lineno="833"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>combine(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis" kindref="compound">Analysis</ref>*<sp/>other)</highlight></codeline>
 <codeline lineno="834"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="835"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Need<sp/>to<sp/>combine<sp/>the<sp/>signal<sp/>region<sp/>results<sp/>here</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="836"><highlight class="normal"></highlight></codeline>
@@ -1194,7 +1194,7 @@
 <codeline lineno="852"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="853"><highlight class="normal"></highlight></codeline>
 <codeline lineno="854"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>can<sp/>be<sp/>overridden<sp/>by<sp/>the<sp/>derived<sp/>SR-specific<sp/>classes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__8TeV__MultiLEP__20invfb_1a8d67cbe7bdad8aee5cb7ab821630c51d" kindref="member">collect_results</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>collect_results()<sp/>{</highlight></codeline>
 <codeline lineno="856"><highlight class="normal"></highlight></codeline>
 <codeline lineno="857"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Format:</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="858"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add_result(SignalRegionData(&quot;SR<sp/>label&quot;,<sp/>n_obs,<sp/>{s,<sp/>s_sys},<sp/>{b,<sp/>b_sys}));</highlight><highlight class="normal"></highlight></codeline>
@@ -1209,7 +1209,7 @@
 <codeline lineno="867"><highlight class="normal"></highlight></codeline>
 <codeline lineno="868"><highlight class="normal"></highlight></codeline>
 <codeline lineno="869"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="870"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__CMS__8TeV__MultiLEP__20invfb_1a8ae04d6a4503c5f828592348bf755804" kindref="member">analysis_specific_reset</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="870"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>analysis_specific_reset()<sp/>{</highlight></codeline>
 <codeline lineno="871"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>el<sp/>:<sp/>_numSR)<sp/>{<sp/>el.second<sp/>=<sp/>0.;}</highlight></codeline>
 <codeline lineno="872"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>CHECK_CUTFLOW</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="873"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::fill(cutFlowVector.begin(),<sp/>cutFlowVector.end(),<sp/>0);</highlight></codeline>
@@ -1271,6 +1271,6 @@
 <codeline lineno="929"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="930"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_CMS_8TeV_MultiLEP_20invfb.cpp"/>
   </compounddef>
 </doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="Analysis__ATLAS__13TeV__2OSLEP__chargino__80invfb_8cpp" kind="file" language="C++">
     <compoundname>Analysis_ATLAS_13TeV_2OSLEP_chargino_80invfb.cpp</compoundname>
     <includes local="no">vector</includes>
@@ -13,49 +13,42 @@
     <includes refid="mt2__bisect_8h" local="yes">gambit/ColliderBit/mt2_bisect.h</includes>
     <includes refid="Cutflow_8hpp" local="yes">gambit/ColliderBit/analyses/Cutflow.hpp</includes>
     <incdepgraph>
-      <node id="21">
-        <label>gambit/ColliderBit/ATLASEfficiencies.hpp</label>
-        <link refid="ATLASEfficiencies_8hpp"/>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
+      <node id="23">
+        <label>functional</label>
       </node>
-      <node id="22">
-        <label>gambit/ColliderBit/Utils.hpp</label>
-        <link refid="Utils_8hpp"/>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
+      <node id="5">
+        <label>iomanip</label>
       </node>
-      <node id="8">
-        <label>gambit/ColliderBit/analyses/Analysis.hpp</label>
-        <link refid="Analysis_8hpp"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
+      <node id="19">
+        <label>limits</label>
+      </node>
+      <node id="10">
+        <label>HEPUtils/Event.h</label>
+      </node>
+      <node id="27">
+        <label>gambit/Utils/threadsafe_rng.hpp</label>
+      </node>
+      <node id="28">
+        <label>gambit/ColliderBit/mt2_bisect.h</label>
+        <link refid="mt2__bisect_8h_source"/>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="13">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>map</label>
+      </node>
+      <node id="18">
+        <label>cfloat</label>
+      </node>
+      <node id="7">
+        <label>fstream</label>
       </node>
       <node id="11">
         <label>gambit/ColliderBit/analyses/AnalysisData.hpp</label>
@@ -91,6 +84,49 @@
         <childnode refid="20" relation="include">
         </childnode>
       </node>
+      <node id="22">
+        <label>gambit/ColliderBit/Utils.hpp</label>
+        <link refid="Utils_8hpp"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>HEPUtils/FastJet.h</label>
+      </node>
+      <node id="8">
+        <label>gambit/ColliderBit/analyses/Analysis.hpp</label>
+        <link refid="Analysis_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>HEPUtils/BinnedFn.h</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="24">
+        <label>HEPUtils/MathUtils.h</label>
+      </node>
+      <node id="17">
+        <label>sstream</label>
+      </node>
       <node id="29">
         <label>gambit/ColliderBit/analyses/Cutflow.hpp</label>
         <link refid="Cutflow_8hpp"/>
@@ -107,6 +143,12 @@
         <childnode refid="22" relation="include">
         </childnode>
       </node>
+      <node id="14">
+        <label>gambit/Utils/end_ignore_warnings.hpp</label>
+      </node>
+      <node id="16">
+        <label>iostream</label>
+      </node>
       <node id="20">
         <label>gambit/ColliderBit/analyses/EventCounter.hpp</label>
         <link refid="EventCounter_8hpp"/>
@@ -115,12 +157,30 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="28">
-        <label>gambit/ColliderBit/mt2_bisect.h</label>
-        <link refid="mt2__bisect_8h_source"/>
+      <node id="21">
+        <label>gambit/ColliderBit/ATLASEfficiencies.hpp</label>
+        <link refid="ATLASEfficiencies_8hpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>gambit/Utils/begin_ignore_warnings_eigen.hpp</label>
       </node>
       <node id="1">
-        <label>C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_13TeV_2OSLEP_chargino_80invfb.cpp</label>
+        <label>/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_13TeV_2OSLEP_chargino_80invfb.cpp</label>
         <link refid="Analysis__ATLAS__13TeV__2OSLEP__chargino__80invfb_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -143,68 +203,8 @@
         <childnode refid="29" relation="include">
         </childnode>
       </node>
-      <node id="13">
-        <label>Eigen/Core</label>
-      </node>
-      <node id="25">
-        <label>HEPUtils/BinnedFn.h</label>
-      </node>
-      <node id="10">
-        <label>HEPUtils/Event.h</label>
-      </node>
-      <node id="26">
-        <label>HEPUtils/FastJet.h</label>
-      </node>
-      <node id="24">
-        <label>HEPUtils/MathUtils.h</label>
-      </node>
-      <node id="6">
-        <label>algorithm</label>
-      </node>
-      <node id="18">
-        <label>cfloat</label>
-      </node>
-      <node id="3">
-        <label>cmath</label>
-      </node>
-      <node id="7">
-        <label>fstream</label>
-      </node>
-      <node id="23">
-        <label>functional</label>
-      </node>
-      <node id="12">
-        <label>gambit/Utils/begin_ignore_warnings_eigen.hpp</label>
-      </node>
-      <node id="14">
-        <label>gambit/Utils/end_ignore_warnings.hpp</label>
-      </node>
-      <node id="27">
-        <label>gambit/Utils/threadsafe_rng.hpp</label>
-      </node>
-      <node id="5">
-        <label>iomanip</label>
-      </node>
-      <node id="16">
-        <label>iostream</label>
-      </node>
-      <node id="19">
-        <label>limits</label>
-      </node>
-      <node id="15">
-        <label>map</label>
-      </node>
       <node id="4">
         <label>memory</label>
-      </node>
-      <node id="17">
-        <label>sstream</label>
-      </node>
-      <node id="9">
-        <label>string</label>
-      </node>
-      <node id="2">
-        <label>vector</label>
       </node>
     </incdepgraph>
     <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__2OSLEP__chargino__80invfb" prot="public">Gambit::ColliderBit::Analysis_ATLAS_13TeV_2OSLEP_chargino_80invfb</innerclass>
@@ -218,8 +218,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Based<sp/>on<sp/>https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2018-042/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Search<sp/>for<sp/>direct<sp/>chargino<sp/>pair<sp/>production<sp/>with<sp/>W-boson<sp/>mediated<sp/>decays<sp/>in<sp/>events<sp/>with<sp/>two<sp/>leptons<sp/>and<sp/>missing<sp/>transverse<sp/>momentum<sp/>at<sp/>√s=13<sp/>TeV<sp/>with<sp/>the<sp/>ATLAS<sp/>detector</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
@@ -317,14 +316,14 @@
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Required<sp/>detector<sp/>sim</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>detector<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ATLAS&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>detector<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ATLAS&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__2OSLEP__chargino__80invfb" kindref="compound">Analysis_ATLAS_13TeV_2OSLEP_chargino_80invfb</ref>():</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_cutflow(</highlight><highlight class="stringliteral">&quot;ATLAS<sp/>2-lep<sp/>chargino-W<sp/>13<sp/>TeV&quot;</highlight><highlight class="normal">,<sp/>{</highlight><highlight class="stringliteral">&quot;Two_OS_leptons&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;mll_25&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;b_jet_veto&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;MET_100&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;MET_significance_10&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;n_j&lt;=1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m_ll_m_Z&quot;</highlight><highlight class="normal">})</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a4998785e3f5ebd96a148af8b4fbf575d" kindref="member">set_analysis_name</ref>(</highlight><highlight class="stringliteral">&quot;ATLAS_13TeV_2OSLEP_chargino_80invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1affc00d6a3606fda2e214b99dba9598c6" kindref="member">set_luminosity</ref>(80.5);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_analysis_name(</highlight><highlight class="stringliteral">&quot;ATLAS_13TeV_2OSLEP_chargino_80invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_luminosity(80.5);</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight></codeline>
@@ -580,7 +579,7 @@
 <codeline lineno="363"><highlight class="normal"></highlight></codeline>
 <codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="365"><highlight class="normal"></highlight></codeline>
-<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__2OSLEP__chargino__80invfb_1a3e58b8ab749e81c5e62ea0b12fdf1730" kindref="member">combine</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a3eeaadd4fec4b19602be715d1403607e" kindref="member">Analysis</ref>*<sp/>other)</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>combine(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Analysis*<sp/>other)</highlight></codeline>
 <codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Analysis_ATLAS_13TeV_2OSLEP_chargino_80invfb*<sp/>specificOther</highlight></codeline>
 <codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">Analysis_ATLAS_13TeV_2OSLEP_chargino_80invfb*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(other);</highlight></codeline>
@@ -592,7 +591,7 @@
 <codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="377"><highlight class="normal"></highlight></codeline>
 <codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>can<sp/>be<sp/>overridden<sp/>by<sp/>the<sp/>derived<sp/>SR-specific<sp/>classes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__2OSLEP__chargino__80invfb_1adcb4a0a4d421b867c692110c9258786a" kindref="member">collect_results</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>collect_results()<sp/>{</highlight></codeline>
 <codeline lineno="380"><highlight class="normal"></highlight></codeline>
 <codeline lineno="381"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>CHECK_CUTFLOW</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>_cutflow<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
@@ -604,30 +603,30 @@
 <codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="389"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="390"><highlight class="normal"></highlight></codeline>
-<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-0J-100&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/>131.,<sp/>{119.67,<sp/>9.0}));</highlight></codeline>
-<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-0J-160&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/>31.,<sp/>{27.1<sp/><sp/>,<sp/>2.7}));</highlight></codeline>
-<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-0J-100-120&quot;</highlight><highlight class="normal">),<sp/><sp/>65.,<sp/>{50.9<sp/><sp/>,<sp/>5.7}));</highlight></codeline>
-<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-0J-120-160&quot;</highlight><highlight class="normal">),<sp/><sp/>35.,<sp/>{42.3<sp/><sp/>,<sp/>3.4}));</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-0J-100&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/>131.,<sp/>{119.67,<sp/>9.0}));</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-0J-160&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/>31.,<sp/>{27.1<sp/><sp/>,<sp/>2.7}));</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-0J-100-120&quot;</highlight><highlight class="normal">),<sp/><sp/>65.,<sp/>{50.9<sp/><sp/>,<sp/>5.7}));</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-0J-120-160&quot;</highlight><highlight class="normal">),<sp/><sp/>35.,<sp/>{42.3<sp/><sp/>,<sp/>3.4}));</highlight></codeline>
 <codeline lineno="395"><highlight class="normal"></highlight></codeline>
-<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-1J-100&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/>114.,<sp/>{114.<sp/><sp/>,<sp/>13.}));</highlight></codeline>
-<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-1J-160&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/>23.,<sp/>{29.<sp/><sp/><sp/>,<sp/>5.<sp/>}));</highlight></codeline>
-<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-1J-100-120&quot;</highlight><highlight class="normal">),<sp/><sp/>56.,<sp/>{51.7<sp/><sp/>,<sp/>10.}));</highlight></codeline>
-<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-1J-120-160&quot;</highlight><highlight class="normal">),<sp/><sp/>35.,<sp/>{33.<sp/><sp/><sp/>,<sp/>4.<sp/>}));</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-1J-100&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/>114.,<sp/>{114.<sp/><sp/>,<sp/>13.}));</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-1J-160&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/>23.,<sp/>{29.<sp/><sp/><sp/>,<sp/>5.<sp/>}));</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-1J-100-120&quot;</highlight><highlight class="normal">),<sp/><sp/>56.,<sp/>{51.7<sp/><sp/>,<sp/>10.}));</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-SF-1J-120-160&quot;</highlight><highlight class="normal">),<sp/><sp/>35.,<sp/>{33.<sp/><sp/><sp/>,<sp/>4.<sp/>}));</highlight></codeline>
 <codeline lineno="400"><highlight class="normal"></highlight></codeline>
-<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-0J-100&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/>84.,<sp/>{100.8,<sp/>11.9}));</highlight></codeline>
-<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-0J-160&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/>15.,<sp/>{16.1<sp/>,<sp/>2.0<sp/>}));</highlight></codeline>
-<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-0J-100-120&quot;</highlight><highlight class="normal">),<sp/><sp/>49.,<sp/>{53.4<sp/>,<sp/>9.}));</highlight></codeline>
-<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-0J-120-160&quot;</highlight><highlight class="normal">),<sp/><sp/>20.,<sp/>{31.5<sp/>,<sp/>3.5}));</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-0J-100&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/>84.,<sp/>{100.8,<sp/>11.9}));</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-0J-160&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/>15.,<sp/>{16.1<sp/>,<sp/>2.0<sp/>}));</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-0J-100-120&quot;</highlight><highlight class="normal">),<sp/><sp/>49.,<sp/>{53.4<sp/>,<sp/>9.}));</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-0J-120-160&quot;</highlight><highlight class="normal">),<sp/><sp/>20.,<sp/>{31.5<sp/>,<sp/>3.5}));</highlight></codeline>
 <codeline lineno="405"><highlight class="normal"></highlight></codeline>
-<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-1J-100&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/>73.,<sp/>{83.5<sp/>,<sp/>14.6}));</highlight></codeline>
-<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-1J-160&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/><sp/>9.,<sp/>{12.2<sp/>,<sp/>2.5<sp/>}));</highlight></codeline>
-<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-1J-100-120&quot;</highlight><highlight class="normal">),<sp/><sp/>39.,<sp/>{50.6<sp/>,<sp/>10.7}));</highlight></codeline>
-<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis_1a129c783782dbf71bf5920676a6825f82" kindref="member">add_result</ref>(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-1J-120-160&quot;</highlight><highlight class="normal">),<sp/><sp/>25.,<sp/>{21.2<sp/>,<sp/>4.0<sp/>}));</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-1J-100&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/>73.,<sp/>{83.5<sp/>,<sp/>14.6}));</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-1J-160&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>,<sp/><sp/><sp/>9.,<sp/>{12.2<sp/>,<sp/>2.5<sp/>}));</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-1J-100-120&quot;</highlight><highlight class="normal">),<sp/><sp/>39.,<sp/>{50.6<sp/>,<sp/>10.7}));</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;SR-DF-1J-120-160&quot;</highlight><highlight class="normal">),<sp/><sp/>25.,<sp/>{21.2<sp/>,<sp/>4.0<sp/>}));</highlight></codeline>
 <codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="411"><highlight class="normal"></highlight></codeline>
 <codeline lineno="412"><highlight class="normal"></highlight></codeline>
 <codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__2OSLEP__chargino__80invfb_1a51a125a2c1ec838ee462448b4b305127" kindref="member">analysis_specific_reset</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>analysis_specific_reset()<sp/>{</highlight></codeline>
 <codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>pair<sp/>:<sp/>_counters)<sp/>{<sp/>pair.second.reset();<sp/>}</highlight></codeline>
 <codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>pair<sp/>:<sp/>_counters_bin)<sp/>{<sp/>pair.second.reset();<sp/>}</highlight></codeline>
 <codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -733,6 +732,6 @@
 <codeline lineno="517"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="518"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="C:/Hugo/Sites/gambit_2.2_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_13TeV_2OSLEP_chargino_80invfb.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_13TeV_2OSLEP_chargino_80invfb.cpp"/>
   </compounddef>
 </doxygen>
