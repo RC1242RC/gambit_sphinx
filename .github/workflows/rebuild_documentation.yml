@@ -39,6 +39,7 @@ jobs:
       - name: Install doxybook2
         run: cd doxygen_breathe_sphinx 
           && wget https://github.com/matusnovak/doxybook2/releases/download/v1.4.0/doxybook2-linux-amd64-v1.4.0.zip
+          && rm -r doxybook2
           && mkdir doxybook2
           && unzip doxybook2-linux-amd64-v1.4.0.zip -d ./doxybook2
 
@@ -61,11 +62,13 @@ jobs:
 
       - name: Generate doxygen xml documentation
         run: cd doxygen_breathe_sphinx
+          && rm -r doxygen_xml
           && mkdir doxygen_xml
           && doxygen
 
       - name: Convert xml to md using doxybook2
         run: cd doxygen_breathe_sphinx
+          && rm -r code
           && mkdir code
           && ./doxybook2/bin/doxybook2 -i ./xml -o ./code -c ./config.json -t ./doxybook_templates
       
