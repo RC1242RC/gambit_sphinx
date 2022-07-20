@@ -66,8 +66,8 @@ jobs:
 
       - name: Convert xml to md using doxybook2
         run: cd doxygen_breathe_sphinx
-          && mkdir doxybook_md
-          && ./doxybook2/bin/doxybook2 -i ./xml -o ./doxybook_md -c ./config.json -t ./doxybook_templates
+          && mkdir code
+          && ./doxybook2/bin/doxybook2 -i ./xml -o ./code -c ./config.json -t ./doxybook_templates
       
       - name: Commit changes
         run: git config --local user.email "test@github.com"
@@ -81,7 +81,7 @@ jobs:
         env:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         with:
-          source-directory: 'doxygen_breathe_sphinx/doxybook_md'
+          source-directory: 'doxygen_breathe_sphinx/code'
           destination-github-username: 'RC1242RC'
           destination-repository-name: 'RC1242RC.github.io'
           user-email: r.clark1242@gmail.com
