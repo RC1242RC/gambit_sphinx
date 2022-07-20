@@ -67,11 +67,13 @@ jobs:
       #    && cd
 
       - name: Generate doxygen xml documentation
-        run: mkdir doxygen_xml
+        run: cd doxygen_breathe_sphinx
+          && mkdir doxygen_xml
           && doxygen
 
       - name: Convert xml to md using doxybook2
-        run: mkdir doxybook_md
+        run: cd doxygen_breathe_sphinx
+          && mkdir doxybook_md
           && ./doxybook2/bin/doxybook2 -i ./xml -o ./doxybook_md -c ./config.json -t ./doxybook_templates
 
       - name: Push generated html to site repository
