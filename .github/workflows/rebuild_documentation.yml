@@ -62,8 +62,7 @@ jobs:
 
       - name: Generate doxygen xml documentation
         run: cd doxygen_breathe_sphinx
-          && rm -r doxygen_xml
-          && mkdir doxygen_xml
+          && rm -r xml
           && doxygen
 
       - name: Convert xml to md using doxybook2
