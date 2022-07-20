@@ -61,16 +61,17 @@ jobs:
       #    && cd
 
       - name: Install doxybook2
-        run: curl -s https://api.github.com/repos/matusnovak/doxybook2/releases/latest | jq -r ".assets[] | select(.name | test(\"${linux_amd64}\")) | .browser_download_url"
+        run: curl -s https://api.github.com/repos/matusnovak/doxybook2/releases/download/v1.4.0/doxybook2-linux-amd64-v1.4.0.zip
+          && unzip doxybook2-linux-amd64-v1.4.0.zip
       
       - name: Generate doxygen xml documentation
         run: cd doxygen_breathe_sphinx 
           && mkdir doxygen_xml
-          && doxyygen
+          && doxygen
 
       - name: Convert xml to md using doxybook2
         run: mkdir doxybook_md
-          && ../doxybook2/build/MinSizeRel/doxybook2 -i ./xml -o ./doxybook_md -c ./config.json -t ./doxybook_templates
+          && ../doxybook2-linux-amd64-v1.4.0.zip/bin/doxybook2 -i ./xml -o ./doxybook_md -c ./config.json -t ./doxybook_templates
 
       - name: Push generated html to site repository
         uses: cpina/github-action-push-to-another-repository@main
