@@ -32,13 +32,6 @@ jobs:
       #    && mkdir documentation
       #    && mkdir exhale_documentation
       #    && sphinx-build -b html . documentation
-      
-      #- name: Commit changes
-      #  run: git config --local user.email "test@github.com"
-      #    && git config --local user.name "GitHub Action test"
-      #    && git add --all
-      #    && git commit -m "Rebuilt documentation"
-      #    && git push
 
       - name: Install doxygen
         run: sudo apt-get install doxygen
@@ -75,8 +68,15 @@ jobs:
         run: cd doxygen_breathe_sphinx
           && mkdir doxybook_md
           && ./doxybook2/bin/doxybook2 -i ./xml -o ./doxybook_md -c ./config.json -t ./doxybook_templates
+      
+      - name: Commit changes
+        run: git config --local user.email "test@github.com"
+          && git config --local user.name "GitHub Action test"
+          && git add --all
+          && git commit -m "Rebuilt documentation"
+          && git push
 
-      - name: Push generated html to site repository
+      - name: Push generated md to site repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
