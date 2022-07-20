@@ -43,8 +43,16 @@ jobs:
       - name: Install doxygen
         run: sudo apt-get install doxygen
 
+      #- name: Install boost
+      #  run: git clone https://github.com/bfgroup/b2.git
+      #    && cd b2
+      #    && ./bootstrap.sh
+      #    && ./b2 install
+
       - name: Install doxybook2
-        run: git clone https://github.com/matusnovak/doxybook2.git
+        run: mkdir db
+          && cd db
+          && git clone https://github.com/matusnovak/doxybook2.git
           && cd doxybook2
           && vcpkg install --triplet x64-linux $(cat vcpkg.txt)
           && mkdir build
