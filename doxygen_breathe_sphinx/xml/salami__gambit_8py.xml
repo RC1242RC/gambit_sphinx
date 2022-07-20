@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="salami__gambit_8py" kind="file" language="Python">
+    <compoundname>salami_gambit.py</compoundname>
+    <innernamespace refid="namespacesalami__gambit">salami_gambit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Work<sp/>in<sp/>progress:<sp/>Backend<sp/>interface<sp/>for<sp/>salami</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>__future__<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>print_function</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Prefix<sp/>for<sp/>screen<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">prefix<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;salami_gambit:&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">#<sp/>#<sp/>This<sp/>will<sp/>run<sp/>when<sp/>this<sp/>backend<sp/>is<sp/>first<sp/>loaded,<sp/>i.e.<sp/>during<sp/>GAMBIT<sp/>startup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#<sp/>print(prefix,<sp/>&quot;Starting<sp/>up...&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>salami</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">KPREDS<sp/>=<sp/>{}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">SLHA<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Import<sp/>SLHA<sp/>content<sp/>as<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">import_slha_string(slha_string):</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>SLHA</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>print(prefix,<sp/></highlight><highlight class="stringliteral">&quot;Reading<sp/>SLHA<sp/>input...&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>print(prefix,<sp/></highlight><highlight class="stringliteral">&quot;DEBUG:<sp/>SLHA<sp/>content:\n&quot;</highlight><highlight class="normal">,<sp/>slha_string)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>pyslha</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>SLHA<sp/>=<sp/>pyslha.readSLHA(slha_string)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Set<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">set_parameters(params):</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>We<sp/>can<sp/>use<sp/>this<sp/>function<sp/>to<sp/>set<sp/>any<sp/>scan-level<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Return<sp/>the<sp/>cross-section<sp/>for<sp/>a<sp/>given<sp/>process,<sp/>identified<sp/>by<sp/>a<sp/>PID<sp/>pair</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">get_xsection(proc,<sp/>energy,<sp/>xsec_lo_fb):</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>print()</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>print(prefix,<sp/></highlight><highlight class="stringliteral">&quot;DEBUG:<sp/>======<sp/>Beginning<sp/>of<sp/>get_xsection<sp/>======<sp/><sp/>&quot;</highlight><highlight class="normal">,<sp/>flush=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>print(prefix,<sp/></highlight><highlight class="stringliteral">&quot;DEBUG:<sp/>proc<sp/>=<sp/>&quot;</highlight><highlight class="normal">,<sp/>proc)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>print(prefix,<sp/></highlight><highlight class="stringliteral">&quot;DEBUG:<sp/>xsec_lo_fb<sp/>=<sp/>&quot;</highlight><highlight class="normal">,<sp/>xsec_lo_fb)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>pids_to_prosids<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>nn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000022,<sp/><sp/>1000022)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;11&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000022,<sp/><sp/>1000023)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;12&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000022,<sp/><sp/>1000025)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;13&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000022,<sp/><sp/>1000035)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;14&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000023,<sp/><sp/>1000023)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;22&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000023,<sp/><sp/>1000025)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;23&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000023,<sp/><sp/>1000035)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;24&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000025,<sp/><sp/>1000025)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;33&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000025,<sp/><sp/>1000035)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;34&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000035,<sp/><sp/>1000035)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;44&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>nc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000022,<sp/><sp/>1000024)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;15&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000022,<sp/><sp/>1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;16&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000022,<sp/>-1000024)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;17&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000022,<sp/>-1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;18&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000023,<sp/><sp/>1000024)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;25&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000023,<sp/><sp/>1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;26&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000023,<sp/>-1000024)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;27&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000023,<sp/>-1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;28&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000024,<sp/><sp/>1000025)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;35&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000025,<sp/><sp/>1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;36&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-1000024,<sp/><sp/>1000025)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;37&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000025,<sp/>-1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;38&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000024,<sp/><sp/>1000035)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;45&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000035,<sp/><sp/>1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;46&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-1000024,<sp/><sp/>1000035)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;47&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000035,<sp/>-1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;48&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>cc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000024,<sp/>-1000024)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;57&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000024,<sp/>-1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;58&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-1000024,<sp/><sp/>1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;67&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>1000037,<sp/>-1000037)<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;68&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Load/cache<sp/>predictor<sp/>for<sp/>this<sp/>process</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>energy<sp/>=<sp/>str(int(energy))</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>pidkey<sp/>=<sp/>tuple(sorted(proc,<sp/>key=</highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x<sp/>:<sp/>[abs(x),<sp/>x<sp/>&lt;<sp/>0]))</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>proskey<sp/>=<sp/>pids_to_prosids[pidkey]</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>key<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;{}_{}&quot;</highlight><highlight class="normal">.format(energy,<sp/>proskey)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>DEBUG:<sp/>Taking<sp/>this<sp/>out<sp/>of<sp/>the<sp/>try<sp/>except<sp/>block<sp/>below,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to<sp/>make<sp/>sure<sp/>we<sp/>see<sp/>all<sp/>errors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>print(prefix,<sp/></highlight><highlight class="stringliteral">&quot;DEBUG:<sp/>proskey<sp/>=&quot;</highlight><highlight class="normal">,<sp/>proskey)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>proskey<sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>KPREDS:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KPREDS[key]<sp/>=<sp/>salami.KPred(energy,<sp/>proskey)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>try:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>print(prefix,<sp/>&quot;DEBUG:<sp/>proskey<sp/>=&quot;,<sp/>proskey)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>if<sp/>proskey<sp/>not<sp/>in<sp/>KPREDS:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KPREDS[key]<sp/>=<sp/>salami.KPred(energy,<sp/>proskey)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>except:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>print(prefix,<sp/>&quot;Unknown<sp/>process&quot;,<sp/>proc,<sp/>&quot;--<sp/>using<sp/>LO<sp/>cross-section&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>KPREDS[key]<sp/>=<sp/>salami.KPredConst(1.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Get<sp/>cross-sections<sp/>and<sp/>errors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>kpred<sp/>=<sp/>KPREDS[key]</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>result_dict<sp/>=<sp/>{}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>result_dict[</highlight><highlight class="stringliteral">&quot;central&quot;</highlight><highlight class="normal">]<sp/>=<sp/>kpred.predict_xsec(SLHA,<sp/>xsec_lo_fb,<sp/>kmin=0.0,<sp/>kmax=</highlight><highlight class="keywordtype">None</highlight><highlight class="normal">,<sp/>freeze_xpol=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>result_dict[&quot;regdown_rel&quot;]<sp/>=<sp/>0.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>result_dict[&quot;regup_rel&quot;]<sp/>=<sp/>0.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>result_dict[&quot;scaledown_rel&quot;]<sp/>=<sp/>0.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>result_dict[&quot;scaleup_rel&quot;]<sp/>=<sp/>0.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>result_dict[&quot;pdfdown_rel&quot;]<sp/>=<sp/>0.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>result_dict[&quot;pdfup_rel&quot;]<sp/>=<sp/>0.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>result_dict[&quot;alphasdown_rel&quot;]<sp/>=<sp/>0.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>result_dict[&quot;alphasup_rel&quot;]<sp/>=<sp/>0.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>result_dict[</highlight><highlight class="stringliteral">&quot;tot_err_down&quot;</highlight><highlight class="normal">]<sp/>=<sp/>0.05<sp/>*<sp/>result_dict[</highlight><highlight class="stringliteral">&quot;central&quot;</highlight><highlight class="normal">]<sp/><sp/></highlight><highlight class="comment">#<sp/>&lt;--<sp/>Fixed<sp/>5%<sp/>error<sp/>for<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>result_dict[</highlight><highlight class="stringliteral">&quot;tot_err_up&quot;</highlight><highlight class="normal">]<sp/>=<sp/>0.05<sp/>*<sp/>result_dict[</highlight><highlight class="stringliteral">&quot;central&quot;</highlight><highlight class="normal">]<sp/><sp/></highlight><highlight class="comment">#<sp/>&lt;--<sp/>Fixed<sp/>5%<sp/>error<sp/>for<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>result_dict[</highlight><highlight class="stringliteral">&quot;trust_level&quot;</highlight><highlight class="normal">]<sp/>=<sp/>1<sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>1:<sp/>all<sp/>is<sp/>well;<sp/>0:<sp/>questionable;<sp/>-1:<sp/>don&apos;t<sp/>trust<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;DEBUG:<sp/>result:<sp/>&quot;</highlight><highlight class="normal">,<sp/>result_dict,<sp/>flush=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result_dict</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/examples/salami/0.1.0/salami_gambit.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="SpecBit__SM_8cpp" kind="file" language="C++">
+    <compoundname>SpecBit_SM.cpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">sstream</includes>
+    <includes local="yes">gambit/Elements/gambit_module_headers.hpp</includes>
+    <includes local="yes">gambit/Elements/spectrum.hpp</includes>
+    <includes local="yes">gambit/Utils/stream_overloads.hpp</includes>
+    <includes local="yes">gambit/Utils/util_macros.hpp</includes>
+    <includes local="yes">gambit/SpecBit/SpecBit_rollcall.hpp</includes>
+    <includes refid="SpecBit__helpers_8hpp" local="yes">gambit/SpecBit/SpecBit_helpers.hpp</includes>
+    <includes refid="QedQcdWrapper_8hpp" local="yes">gambit/SpecBit/QedQcdWrapper.hpp</includes>
+    <includes local="yes">gambit/Models/SimpleSpectra/SMHiggsSimpleSpec.hpp</includes>
+    <includes local="yes">flexiblesusy/src/lowe.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>gambit/Elements/spectrum.hpp</label>
+      </node>
+      <node id="4">
+        <label>gambit/Elements/gambit_module_headers.hpp</label>
+      </node>
+      <node id="14">
+        <label>gambit/Models/SpectrumContents/RegisteredSpectra.hpp</label>
+      </node>
+      <node id="15">
+        <label>lowe.h</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>gambit/Models/SimpleSpectra/SMHiggsSimpleSpec.hpp</label>
+      </node>
+      <node id="6">
+        <label>gambit/Utils/stream_overloads.hpp</label>
+      </node>
+      <node id="1">
+        <label>SpecBit_SM.cpp</label>
+        <link refid="SpecBit__SM_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>gambit/SpecBit/SpecBit_helpers.hpp</label>
+        <link refid="SpecBit__helpers_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>sstream</label>
+      </node>
+      <node id="13">
+        <label>gambit/Elements/spec.hpp</label>
+      </node>
+      <node id="7">
+        <label>gambit/Utils/util_macros.hpp</label>
+      </node>
+      <node id="12">
+        <label>gambit/SpecBit/QedQcdWrapper.hpp</label>
+        <link refid="QedQcdWrapper_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>gambit/Elements/sminputs.hpp</label>
+      </node>
+      <node id="11">
+        <label>flexiblesusy/src/lowe.h</label>
+      </node>
+      <node id="8">
+        <label>gambit/SpecBit/SpecBit_rollcall.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1SpecBit">Gambit::SpecBit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Functions of module SpecBit</para>
+<para>SpecBit module functions related to the Standard Model.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Ben Farmer (<ulink url="mailto:benjamin.farmer@fysik.su.se">benjamin.farmer@fysik.su.se</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2014 Sep - Dec, 2015 Jan - Mar</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/gambit_module_headers.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/spectrum.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/stream_overloads.hpp&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Just<sp/>for<sp/>more<sp/>convenient<sp/>output<sp/>to<sp/>logger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/util_macros.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/SpecBit/SpecBit_rollcall.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SpecBit__helpers_8hpp" kindref="compound">gambit/SpecBit/SpecBit_helpers.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="QedQcdWrapper_8hpp" kindref="compound">gambit/SpecBit/QedQcdWrapper.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Models/SimpleSpectra/SMHiggsSimpleSpec.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>QedQcd<sp/>header<sp/>from<sp/>SoftSUSY<sp/>(via<sp/>FlexibleSUSY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;flexiblesusy/src/lowe.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Switch<sp/>for<sp/>debug<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>SpecBit_DBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SpecBit</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">LogTags;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="SpecBit__SM_8cpp_1a7b032de0cd57ae35490e28c3b6402241" kindref="member">get_QedQcd_spectrum</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SubSpectrum*<sp/>&amp;result)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Access<sp/>the<sp/>pipes<sp/>for<sp/>this<sp/>function<sp/>to<sp/>get<sp/>model<sp/>and<sp/>parameter<sp/>information,<sp/>and<sp/>dependencies</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">myPipe<sp/>=<sp/>Pipes::get_QedQcd_spectrum;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>SLHA2<sp/>SMINPUTS<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>sminputs<sp/>=<sp/>*myPipe::Dep::SMINPUTS;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SoftSUSY<sp/>object<sp/>used<sp/>to<sp/>set<sp/>quark<sp/>and<sp/>lepton<sp/>masses<sp/>and<sp/>gauge</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>couplings<sp/>in<sp/>QEDxQCD<sp/>effective<sp/>theory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Will<sp/>be<sp/>initialised<sp/>by<sp/>default<sp/>using<sp/>values<sp/>in<sp/>lowe.h,<sp/>which<sp/>we<sp/>will</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>override<sp/>next.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>softsusy::QedQcd<sp/>oneset;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>QedQcd<sp/>object<sp/>with<sp/>SMInputs<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="SpecBit__helpers_8hpp_1ac442b10d4430a2ba56914473d1e972f7" kindref="member">setup_QedQcd</ref>(oneset,sminputs);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Run<sp/>everything<sp/>to<sp/>Mz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.toMz();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>Spectrum<sp/>object<sp/>to<sp/>wrap<sp/>the<sp/>qedqcd<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>QedQcdWrapper<sp/>qedqcdspec(oneset,sminputs);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>This<sp/>probably<sp/>doesn&apos;t<sp/>work,<sp/>and<sp/>only<sp/>gets<sp/>us<sp/>one<sp/>copy<sp/>of<sp/>the<sp/>object<sp/>once.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Unfortunately<sp/>we<sp/>cannot<sp/>copy<sp/>SubSpectrum<sp/>objects,<sp/>so<sp/>this<sp/>is<sp/>a<sp/>little<sp/>tricky<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>solve...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>&amp;qedqcdspec;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="SpecBit__SM_8cpp_1ae7e22a1587e987ce25e70285ff2de63c" kindref="member">get_SM_spectrum</ref>(Spectrum<sp/>&amp;result)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">myPipe<sp/>=<sp/>Pipes::get_SM_spectrum;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>sminputs<sp/>=<sp/>*myPipe::Dep::SMINPUTS;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SoftSUSY<sp/>object<sp/>used<sp/>to<sp/>set<sp/>quark<sp/>and<sp/>lepton<sp/>masses<sp/>and<sp/>gauge</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>couplings<sp/>in<sp/>QEDxQCD<sp/>effective<sp/>theory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>softsusy::QedQcd<sp/>oneset;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>QedQcd<sp/>object<sp/>with<sp/>SMInputs<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="SpecBit__helpers_8hpp_1ac442b10d4430a2ba56914473d1e972f7" kindref="member">setup_QedQcd</ref>(oneset,sminputs);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Run<sp/>everything<sp/>to<sp/>Mz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.toMz();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>SubSpectrum<sp/>object<sp/>to<sp/>wrap<sp/>the<sp/>qedqcd<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Attach<sp/>the<sp/>sminputs<sp/>object<sp/>as<sp/>well,<sp/>so<sp/>that<sp/>SM<sp/>pole<sp/>masses<sp/>can<sp/>be<sp/>passed<sp/>on<sp/>(these<sp/>aren&apos;t<sp/>easily</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>extracted<sp/>from<sp/>the<sp/>QedQcd<sp/>object,<sp/>so<sp/>use<sp/>the<sp/>values<sp/>that<sp/>we<sp/>put<sp/>into<sp/>it.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QedQcdWrapper<sp/>qedqcdspec(oneset,sminputs);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>an<sp/>object<sp/>to<sp/>carry<sp/>Higgs<sp/>sector<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SMHiggsModel<sp/>higgsmodel;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>higgsmodel.HiggsPoleMass<sp/>=<sp/>*myPipe::Param.at(</highlight><highlight class="stringliteral">&quot;mH&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>higgsmodel.HiggsVEV<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1.<sp/>/<sp/>sqrt(sqrt(2.)*sminputs.GF);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>SubSpectrum<sp/>object<sp/>to<sp/>wrap<sp/>the<sp/>EW<sp/>sector<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SMHiggsSimpleSpec<sp/>higgsspec(higgsmodel);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Retrieve<sp/>any<sp/>mass<sp/>cuts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum::mc_info<sp/>mass_cut<sp/>=<sp/>myPipe::runOptions-&gt;getValueOrDef&lt;Spectrum::mc_info&gt;(Spectrum::mc_info(),<sp/></highlight><highlight class="stringliteral">&quot;mass_cut&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum::mr_info<sp/>mass_ratio_cut<sp/>=<sp/>myPipe::runOptions-&gt;getValueOrDef&lt;Spectrum::mr_info&gt;(Spectrum::mr_info(),<sp/></highlight><highlight class="stringliteral">&quot;mass_ratio_cut&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>full<sp/>Spectrum<sp/>object<sp/>from<sp/>components<sp/>above<sp/>(SubSpectrum<sp/>objects<sp/>will<sp/>be<sp/>&quot;cloned&quot;<sp/>into<sp/>the<sp/>Spectrum<sp/>object)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>Spectrum(qedqcdspec,higgsspec,sminputs,&amp;myPipe::Param,mass_cut,mass_ratio_cut);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="SpecBit__SM_8cpp_1a5aa294415de6518ee3d81fca5d6fb832" kindref="member">SM_higgs_couplings</ref>(HiggsCouplingsTable<sp/>&amp;result)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">Pipes::SM_higgs_couplings;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>number<sp/>of<sp/>Higgses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result.set_n_neutral_higgs(1);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result.set_n_charged_higgs(0);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>CP<sp/>of<sp/>the<sp/>Higgs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result.CP[0]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>decays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result.set_neutral_decays_SM(0,<sp/></highlight><highlight class="stringliteral">&quot;h0_1&quot;</highlight><highlight class="normal">,<sp/>*Dep::Higgs_decay_rates);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result.set_neutral_decays(0,<sp/></highlight><highlight class="stringliteral">&quot;h0_1&quot;</highlight><highlight class="normal">,<sp/>*Dep::Higgs_decay_rates);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Leave<sp/>all<sp/>the<sp/>effective<sp/>couplings<sp/>for<sp/>all<sp/>neutral<sp/>higgses<sp/>set<sp/>to<sp/>unity<sp/>(done<sp/>at<sp/>construction).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>SpecBit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>Gambit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/SpecBit_SM.cpp"/>
+  </compounddef>
+</doxygen>

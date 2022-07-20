@@ -1,0 +1,607 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceGambit_1_1DarkBit_1_1DecayChain" kind="namespace" language="C++">
+    <compoundname>Gambit::DarkBit::DecayChain</compoundname>
+    <innerclass refid="structGambit_1_1DarkBit_1_1DecayChain_1_1ChainContainer" prot="public">Gambit::DarkBit::DecayChain::ChainContainer</innerclass>
+    <innerclass refid="classGambit_1_1DarkBit_1_1DecayChain_1_1ChainParticle" prot="public">Gambit::DarkBit::DecayChain::ChainParticle</innerclass>
+    <innerclass refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable" prot="public">Gambit::DarkBit::DecayChain::DecayTable</innerclass>
+    <innerclass refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTableEntry" prot="public">Gambit::DarkBit::DecayChain::DecayTableEntry</innerclass>
+    <innerclass refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" prot="public">Gambit::DarkBit::DecayChain::mat4</innerclass>
+    <innerclass refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" prot="public">Gambit::DarkBit::DecayChain::vec3</innerclass>
+    <innerclass refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" prot="public">Gambit::DarkBit::DecayChain::vec4</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="decay__chain_8hpp_1a7e030770d490da98cb6f2fc8126a99e5" prot="public" static="no">
+        <type>std::vector&lt; const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1ChainParticle" kindref="compound">Gambit::DarkBit::DecayChain::ChainParticle</ref> * &gt;</type>
+        <definition>typedef std::vector&lt;const Gambit::DarkBit::DecayChain::ChainParticle*&gt; Gambit::DarkBit::DecayChain::ChainParticleVector</definition>
+        <argsstring></argsstring>
+        <name>ChainParticleVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="323" column="33" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="decay__chain_8hpp_1a6c1be987621be8e9d55358141a49a2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref></type>
+        <definition>vec3 Gambit::DarkBit::DecayChain::operator*</definition>
+        <argsstring>(double x, const vec3 &amp;y)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="61" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="61" bodyend="69" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="67" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a500e42d297656ca21838aeaf5eaa62ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref></type>
+        <definition>vec3 Gambit::DarkBit::DecayChain::operator*</definition>
+        <argsstring>(const vec3 &amp;y, double x)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="70" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="70" bodyend="78" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="68" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a2e63553762fa489429ed690ce4792386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref></type>
+        <definition>vec3 Gambit::DarkBit::DecayChain::operator/</definition>
+        <argsstring>(const vec3 &amp;y, double x)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="79" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="79" bodyend="87" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="69" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a9c8dc338f168a86fcb75a80264fb1568" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ostream &amp;</type>
+        <definition>ostream&amp; Gambit::DarkBit::DecayChain::operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;os, const vec3 &amp;v)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="70" column="13" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="70" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1ae5104101afa3fb6c873b8407a9d19e0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::DecayChain::dot</definition>
+        <argsstring>(const vec3 &amp;a, const vec3 &amp;b)</argsstring>
+        <name>dot</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="93" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="93" bodyend="96" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="71" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1ae71cb2afc87534f7e4bece8d90b72946" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref></type>
+        <definition>vec4 Gambit::DarkBit::DecayChain::operator*</definition>
+        <argsstring>(double x, const vec4 &amp;y)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="103" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="103" bodyend="111" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="93" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a08aa16ac793bb4d2403041156a744210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref></type>
+        <definition>vec4 Gambit::DarkBit::DecayChain::operator*</definition>
+        <argsstring>(const vec4 &amp;y, double x)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="112" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="112" bodyend="120" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="94" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a99c6fbca1ff4e0ddc0b2eb6930e72e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref></type>
+        <definition>vec4 Gambit::DarkBit::DecayChain::operator+</definition>
+        <argsstring>(const vec4 &amp;x, const vec4 &amp;y)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="121" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="121" bodyend="129" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="95" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a5f0868a947832655fcdc3f327278fcba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref></type>
+        <definition>vec4 Gambit::DarkBit::DecayChain::operator-</definition>
+        <argsstring>(const vec4 &amp;x, const vec4 &amp;y)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="130" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="130" bodyend="138" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="96" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a50122c5f508ee47fb5b3d7aaba444922" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ostream &amp;</type>
+        <definition>ostream&amp; Gambit::DarkBit::DecayChain::operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;os, const vec4 &amp;v)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="97" column="13" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="97" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a199230bf73560ecf85e6ec03976cb11c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::DecayChain::dot</definition>
+        <argsstring>(const vec4 &amp;a, const vec4 &amp;b)</argsstring>
+        <name>dot</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="145" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="145" bodyend="148" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="98" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a08e5bdb9f1f7fc5dea56b0bf9aff9c92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref></type>
+        <definition>vec4 Gambit::DarkBit::DecayChain::Ep4vec</definition>
+        <argsstring>(const vec3 p, double m)</argsstring>
+        <name>Ep4vec</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="149" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="149" bodyend="153" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="100" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a743edfea103bad875443e5ade435ba58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref></type>
+        <definition>vec4 Gambit::DarkBit::DecayChain::operator*</definition>
+        <argsstring>(const mat4 &amp;m, const vec4 &amp;v)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" kindref="compound">mat4</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="209" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="209" bodyend="220" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="119" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1aa0fe05c08dc5a732c6d41611a6d830aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" kindref="compound">mat4</ref></type>
+        <definition>mat4 Gambit::DarkBit::DecayChain::operator*</definition>
+        <argsstring>(const mat4 &amp;m1, const mat4 &amp;m2)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" kindref="compound">mat4</ref> &amp;</type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" kindref="compound">mat4</ref> &amp;</type>
+          <declname>m2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="221" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="221" bodyend="235" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="120" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a25d3db1138412afb9f9f90e918be6f1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ostream &amp;</type>
+        <definition>ostream&amp; Gambit::DarkBit::DecayChain::operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;os, const mat4 &amp;m)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" kindref="compound">mat4</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="121" column="13" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="121" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1ada637e0f35b3e6a2a2cb7526441d96eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::DecayChain::rand_m1_1</definition>
+        <argsstring>()</argsstring>
+        <name>rand_m1_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="255" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="255" bodyend="258" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="128" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a8af6c59745e3bb07778870f3fbc0c68f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::DecayChain::rand_0_1</definition>
+        <argsstring>()</argsstring>
+        <name>rand_0_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="130" column="27" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" bodystart="130" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1ae47eab88e3907ba974ba91eead84a09d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref></type>
+        <definition>vec3 Gambit::DarkBit::DecayChain::randOnSphere</definition>
+        <argsstring>()</argsstring>
+        <name>randOnSphere</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="259" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="259" bodyend="274" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="132" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a251fc2e02a0d02aad96598d500b589f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::DecayChain::lorentzMatrix</definition>
+        <argsstring>(const vec3 &amp;beta_xyz, mat4 &amp;mat)</argsstring>
+        <name>lorentzMatrix</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref> &amp;</type>
+          <declname>beta_xyz</declname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" kindref="compound">mat4</ref> &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="275" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="275" bodyend="287" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="135" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a53be803ab69171b765331a54d74ac678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::DecayChain::lorentzMatrix</definition>
+        <argsstring>(const vec3 &amp;beta_xyz, mat4 &amp;mat, double gamma)</argsstring>
+        <name>lorentzMatrix</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref> &amp;</type>
+          <declname>beta_xyz</declname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" kindref="compound">mat4</ref> &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>gamma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="288" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="288" bodyend="300" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="136" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a6ffac7a1df2b9963a964fdaf6b9093ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref></type>
+        <definition>vec4 Gambit::DarkBit::DecayChain::lorentzBoost</definition>
+        <argsstring>(const vec4 &amp;inVec, const vec3 &amp;beta_xyz)</argsstring>
+        <name>lorentzBoost</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>inVec</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref> &amp;</type>
+          <declname>beta_xyz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="301" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="301" bodyend="306" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="138" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a027ab0428ab7d6a75d73aa1d3b7e2e74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref></type>
+        <definition>vec4 Gambit::DarkBit::DecayChain::p_parentFrame</definition>
+        <argsstring>(const vec4 &amp;inVec, const vec4 &amp;p_parent)</argsstring>
+        <name>p_parentFrame</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>inVec</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>p_parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="307" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="307" bodyend="311" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="140" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1a033adfcdf683869f1d55a6fb786cd004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::DecayChain::boostMatrixParentFrame</definition>
+        <argsstring>(mat4 &amp;mat, vec4 &amp;p_parent)</argsstring>
+        <name>boostMatrixParentFrame</name>
+        <param>
+          <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" kindref="compound">mat4</ref> &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>p_parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="142" column="18" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="142" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8hpp_1aac00e77a4952b4165971974ae0ab0740" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::DecayChain::invariantMass</definition>
+        <argsstring>(const vec4 &amp;a, const vec4 &amp;b)</argsstring>
+        <name>invariantMass</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="318" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="318" bodyend="322" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" declline="144" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8cpp_1aa8417cacc198d43d4d31f00e341578eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; Gambit::DarkBit::DecayChain::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const vec3 &amp;v)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec3" kindref="compound">vec3</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="88" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8cpp_1abec5a9d902f105a1a3206041274c3de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; Gambit::DarkBit::DecayChain::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const vec4 &amp;v)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="139" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="139" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8cpp_1a19b696b7c197c9965b12d8a49a3fff28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; Gambit::DarkBit::DecayChain::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const mat4 &amp;m)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" kindref="compound">mat4</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="236" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="236" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="decay__chain_8cpp_1ac1f9e552e408c218011ed1088541bc5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::DecayChain::boostMatrixParentFrame</definition>
+        <argsstring>(mat4 &amp;mat, vec4 &amp;p_parent, double m)</argsstring>
+        <name>boostMatrixParentFrame</name>
+        <param>
+          <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1mat4" kindref="compound">mat4</ref> &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1vec4" kindref="compound">vec4</ref> &amp;</type>
+          <declname>p_parent</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" line="312" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="312" bodyend="317"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="36" column="1"/>
+  </compounddef>
+</doxygen>

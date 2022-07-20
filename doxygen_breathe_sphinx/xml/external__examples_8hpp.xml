@@ -1,0 +1,567 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="external__examples_8hpp" kind="file" language="C++">
+    <compoundname>external_examples.hpp</compoundname>
+    <includes refid="MSSMSpec_8hpp" local="yes">gambit/SpecBit/MSSMSpec.hpp</includes>
+    <includes local="yes">flexiblesusy/src/ew_input.hpp</includes>
+    <includes local="yes">flexiblesusy/src/numerics2.hpp</includes>
+    <includes local="yes">flexiblesusy/src/wrappers.hpp</includes>
+    <includes local="yes">flexiblesusy/models/CMSSM/CMSSM_two_scale_model.hpp</includes>
+    <includes local="yes">flexiblesusy/models/CMSSM/CMSSM_two_scale_model_slha.hpp</includes>
+    <includedby refid="run__tests_8cpp" local="yes">run_tests.cpp</includedby>
+    <includedby refid="examples_2SpecBit__tests_8cpp" local="yes">SpecBit_tests.cpp</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>gambit/Models/SpectrumContents/RegisteredSpectra.hpp</label>
+      </node>
+      <node id="4">
+        <label>gambit/Elements/slhaea_spec_helpers.hpp</label>
+      </node>
+      <node id="1">
+        <label>external_examples.hpp</label>
+        <link refid="external__examples_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gambit/SpecBit/MSSMSpec.hpp</label>
+        <link refid="MSSMSpec_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>gambit/Utils/util_functions.hpp</label>
+      </node>
+      <node id="15">
+        <label>flexiblesusy/models/CMSSM/CMSSM_two_scale_model.hpp</label>
+      </node>
+      <node id="9">
+        <label>gambit/Elements/spec.hpp</label>
+      </node>
+      <node id="8">
+        <label>gambit/SpecBit/MSSMSpec_head.hpp</label>
+        <link refid="MSSMSpec__head_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>gambit/Utils/version.hpp</label>
+      </node>
+      <node id="12">
+        <label>flexiblesusy/src/ew_input.hpp</label>
+      </node>
+      <node id="14">
+        <label>flexiblesusy/src/wrappers.hpp</label>
+      </node>
+      <node id="13">
+        <label>flexiblesusy/src/numerics2.hpp</label>
+      </node>
+      <node id="5">
+        <label>gambit/Elements/mssm_slhahelp.hpp</label>
+      </node>
+      <node id="11">
+        <label>flexiblesusy/config/config.h</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="16">
+        <label>flexiblesusy/models/CMSSM/CMSSM_two_scale_model_slha.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>external_examples.hpp</label>
+        <link refid="external__examples_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpecBit_tests.cpp</label>
+        <link refid="examples_2SpecBit__tests_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="external__examples_8hpp_1a0760af00db5bda628dd93faaf552f6f2" prot="public" static="no">
+        <name>PRINTOUT</name>
+        <initializer>std::cout</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>contains examples of how to use Spectrum objects. <linebreak/>
+ This is not really part of gambit and exists only for illustration. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" line="14" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="external__examples_8hpp_1aff848a20186f01ce40fffad78590fb60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Model</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void setpars</definition>
+        <argsstring>(Model &amp;mssm)</argsstring>
+        <name>setpars</name>
+        <param>
+          <type>Model &amp;</type>
+          <declname>mssm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" line="17" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" bodystart="17" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="external__examples_8hpp_1ad84f9ea57b69cd93542b4a04e2b6934e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spec_print</definition>
+        <argsstring>(Gambit::SubSpectrum &amp;spec)</argsstring>
+        <name>spec_print</name>
+        <param>
+          <type>Gambit::SubSpectrum &amp;</type>
+          <declname>spec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>TODO: Ben: Used to be this, but &quot;Mu&quot; is in a no-index map so it&apos;s an error Peter, was this this way for a reason?</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" line="133" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" bodystart="133" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="external__examples_8hpp_1a2720e7795818388d3ab71c3434eaa5aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class M</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void mssm_print</definition>
+        <argsstring>(Gambit::SpecBit::MSSMSpec&lt; M &gt; &amp;mssm)</argsstring>
+        <name>mssm_print</name>
+        <param>
+          <type><ref refid="classGambit_1_1SpecBit_1_1MSSMSpec" kindref="compound">Gambit::SpecBit::MSSMSpec</ref>&lt; M &gt; &amp;</type>
+          <declname>mssm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" line="175" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" bodystart="175" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="external__examples_8hpp_1ab500634fa36a8593a587333fb4c764ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spec_manipulate</definition>
+        <argsstring>(Gambit::SubSpectrum &amp;spec)</argsstring>
+        <name>spec_manipulate</name>
+        <param>
+          <type>Gambit::SubSpectrum &amp;</type>
+          <declname>spec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" line="214" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" bodystart="214" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="external__examples_8hpp_1a969806af35e92938b9600628cdded3a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class M</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void mssm_manipulate</definition>
+        <argsstring>(Gambit::SpecBit::MSSMSpec&lt; M &gt; &amp;mssm)</argsstring>
+        <name>mssm_manipulate</name>
+        <param>
+          <type><ref refid="classGambit_1_1SpecBit_1_1MSSMSpec" kindref="compound">Gambit::SpecBit::MSSMSpec</ref>&lt; M &gt; &amp;</type>
+          <declname>mssm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" line="234" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" bodystart="234" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="external__examples_8hpp_1aeac6fbbb11bd3048504de158d36b141c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SM_checks</definition>
+        <argsstring>(Gambit::SubSpectrum &amp;SM)</argsstring>
+        <name>SM_checks</name>
+        <param>
+          <type>Gambit::SubSpectrum &amp;</type>
+          <declname>SM</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" line="252" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp" bodystart="252" bodyend="316"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MSSMSpec_8hpp" kindref="compound">gambit/SpecBit/MSSMSpec.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FlexibleSUSY<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;flexiblesusy/src/ew_input.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;flexiblesusy/src/numerics2.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;flexiblesusy/src/wrappers.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;flexiblesusy/models/CMSSM/CMSSM_two_scale_model.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;flexiblesusy/models/CMSSM/CMSSM_two_scale_model_slha.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINTOUT<sp/>std::cout</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Model&gt;<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setpars(Model&amp;<sp/>mssm)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>Yu;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>Yd;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>Ye;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Mu;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>g1;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>g2;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>g3;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vd;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vu;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>TYu;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>TYd;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>TYe;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>BMu;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>mq2;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>ml2;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mHd2;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mHu2;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>md2;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>mu2;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>Eigen::Matrix&lt;double,3,3&gt;<sp/>me2;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MassB;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MassWB;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MassG;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>susy<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/>Yu<sp/>&lt;&lt;<sp/>1.26136e-05,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0.00667469,<sp/>0,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>0.857849;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>Yd<sp/>&lt;&lt;<sp/>0.000242026,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0.00529911,<sp/>0,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>0.193602;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/>Ye<sp/>&lt;&lt;<sp/>2.84161e-05,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0.00587557,<sp/>0,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>0.10199;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/>Mu<sp/>=<sp/>627.164;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/>g1<sp/>=<sp/>0.468171;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/>g2<sp/>=<sp/>0.642353;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/>g3<sp/>=<sp/>1.06459;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/>vd<sp/>=<sp/>25.0944;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/>vu<sp/>=<sp/>242.968;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>soft<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/>TYu<sp/>&lt;&lt;<sp/>-0.0144387,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>-7.64037,<sp/>0,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>-759.305;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/>TYd<sp/>&lt;&lt;<sp/>-0.336207,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>-7.36109,<sp/>0,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>-250.124;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/>TYe<sp/>&lt;&lt;<sp/>-0.00825134,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>-1.70609,<sp/>0,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>-29.4466;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/>BMu<sp/>=<sp/>52140.8;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/>mq2<sp/>&lt;&lt;<sp/>1.03883e+06,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>1.03881e+06,<sp/>0,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>879135;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/>ml2<sp/>&lt;&lt;<sp/>124856,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>124853,<sp/>0,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>124142;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/>mHd2<sp/>=<sp/>92436.9;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/>mHu2<sp/>=<sp/>-380337;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/>md2<sp/>&lt;&lt;<sp/>954454,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>954439,<sp/>0,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>934727;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/>mu2<sp/>&lt;&lt;<sp/>963422,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>963400,<sp/>0,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>656621;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/>me2<sp/>&lt;&lt;<sp/>49215.8,<sp/>0,<sp/>0,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>49210.9,<sp/>0,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>47759.2;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/>MassB<sp/>=<sp/>210.328;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/>MassWB<sp/>=<sp/>389.189;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/>MassG<sp/>=<sp/>1114.45;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/>mssm.set_scale(flexiblesusy::Electroweak_constants::MZ);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/>mssm.set_Yu(Yu);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/>mssm.set_Yd(Yd);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/>mssm.set_Ye(Ye);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/>mssm.set_Mu(Mu);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/>mssm.set_g1(g1);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/>mssm.set_g2(g2);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/>mssm.set_g3(g3);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/>mssm.set_vd(vd);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/>mssm.set_vu(vu);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/>mssm.set_TYu(TYu);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/>mssm.set_TYd(TYd);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/>mssm.set_TYe(TYe);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/>mssm.set_BMu(BMu);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/>mssm.set_mq2(mq2);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/>mssm.set_ml2(ml2);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/>mssm.set_mHd2(mHd2);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/>mssm.set_mHu2(mHu2);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/>mssm.set_md2(md2);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/>mssm.set_mu2(mu2);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/>mssm.set_me2(me2);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/>mssm.set_MassB(MassB);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/>mssm.set_MassWB(MassWB);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/>mssm.set_MassG(MassG);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>spec_print(Gambit::SubSpectrum&amp;<sp/>spec){</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;spec.GetScale()<sp/>=&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.GetScale()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mHd2<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mHd2&quot;</highlight><highlight class="normal">)<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>mHu2<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/>&lt;&lt;<sp/>spec.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mHu2&quot;</highlight><highlight class="normal">)<sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;BMu<sp/>=&quot;</highlight><highlight class="normal"><sp/><sp/>&lt;&lt;<sp/>spec.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;BMu&quot;</highlight><highlight class="normal">)<sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;std::endl;<sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mq2(1,1)<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mq2&quot;</highlight><highlight class="normal">,1,1)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mu2(1,2)<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mq2&quot;</highlight><highlight class="normal">,1,2)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;me2(3,3)<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mq2&quot;</highlight><highlight class="normal">,3,3)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//PRINTOUT<sp/>&lt;&lt;<sp/>&quot;Mu<sp/>=<sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.get_mass_parameter(&quot;Mu&quot;,3,3)<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Mu<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;Mu&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//what<sp/>not<sp/>to<sp/>do<sp/>here...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ben:<sp/>these<sp/>now<sp/>throw<sp/>errors,<sp/>so<sp/>cannot<sp/>continue<sp/>test<sp/>if<sp/>we<sp/>do<sp/>them.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//PRINTOUT<sp/>&lt;&lt;<sp/>&quot;mistake<sp/>mq2(1)<sp/>=<sp/><sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><sp/>spec.get_mass2_parameter(&quot;mq2&quot;,1)<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//PRINTOUT<sp/>&lt;&lt;<sp/>&quot;mistake<sp/>2<sp/>mq2(1)<sp/>=<sp/><sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><sp/>spec.get_mass2_parameter(&quot;mqL2&quot;,1,1)<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//PRINTOUT<sp/>&lt;&lt;<sp/>&quot;mistake<sp/>3<sp/>mq2(1)<sp/>=<sp/><sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><sp/>spec.get_mass_parameter(&quot;mq2&quot;,1)<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mgluino<sp/>=<sp/>spec.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;~g&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mgluino<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>mgluino&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>M&gt;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>mssm_print(<ref refid="classGambit_1_1SpecBit_1_1MSSMSpec" kindref="compound">Gambit::SpecBit::MSSMSpec&lt;M&gt;</ref><sp/>&amp;<sp/>mssm)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mssm.GetScale()<sp/>=&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>mssm.GetScale()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;map<sp/>mHd2<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>mssm.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mHd2&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;map<sp/>mHu2<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>mssm.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mHu2&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;map<sp/>BMu<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>mssm.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;BMu&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;std::endl;<sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mq2(1,1)<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>mssm.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mq2&quot;</highlight><highlight class="normal">,1,1)<sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mu2(1,2)<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><sp/>mssm.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mq2&quot;</highlight><highlight class="normal">,1,2)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;me2(3,3)<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><sp/><sp/>mssm.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mq2&quot;</highlight><highlight class="normal">,3,3)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Mu<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>mssm.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;Mu&quot;</highlight><highlight class="normal">,3,3)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//what<sp/>not<sp/>to<sp/>do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mistake<sp/><sp/>mq2(1)<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>mssm.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mq2&quot;</highlight><highlight class="normal">,1)<sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mistake<sp/>2<sp/>mq2(1)<sp/>=<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><sp/>mssm.get_mass2_parameter(</highlight><highlight class="stringliteral">&quot;mqL2&quot;</highlight><highlight class="normal">,1,1)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mistake<sp/>3<sp/>mq2(1)<sp/>=<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><sp/>mssm.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;mq2&quot;</highlight><highlight class="normal">,1)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mgluino<sp/>=<sp/>mssm.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;MGluino&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mgluino<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>mgluino&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>spec_manipulate(Gambit::SubSpectrum&amp;<sp/>spec)<sp/></highlight></codeline>
+<codeline lineno="215"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;inside<sp/>spectrum_manipulate&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lowscale<sp/>=<sp/>spec.GetScale();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>highscale<sp/>=<sp/>1e+15;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;lowscale<sp/><sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>lowscale<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;highscale<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>highscale<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/>spec_print(spec);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Testing<sp/>stability<sp/>after<sp/>..&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/>spec.RunToScale(highscale);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;after<sp/>run<sp/>scale<sp/>to<sp/>high<sp/>scale&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/>spec_print(spec);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/>spec.RunToScale(lowscale);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;After<sp/>run<sp/>scale<sp/>back<sp/>to<sp/>low<sp/>scale&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.GetScale()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/>spec_print(spec);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>M&gt;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>mssm_manipulate(<ref refid="classGambit_1_1SpecBit_1_1MSSMSpec" kindref="compound">Gambit::SpecBit::MSSMSpec&lt;M&gt;</ref><sp/>&amp;<sp/>mssm)<sp/></highlight></codeline>
+<codeline lineno="235"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;inside<sp/>mssm_manipulate&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lowscale<sp/>=<sp/>mssm.GetScale();</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//setting<sp/>to<sp/>same<sp/>scale<sp/>to<sp/>test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/>mssm.SetScale(lowscale);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>highscale<sp/>=<sp/>1e+15;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Mssm<sp/>start<sp/>at<sp/>lowscale<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>lowscale<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/>mssm_print(mssm);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/>mssm.RunToScale(highscale);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;after<sp/>run<sp/>to<sp/>highscale&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/>mssm_print(mssm);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/>mssm.RunToScale(lowscale);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;after<sp/>run<sp/>scale<sp/>back<sp/>top<sp/>low<sp/>scale&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><sp/>std::endl;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/>mssm_print(mssm);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SM_checks(Gambit::SubSpectrum&amp;<sp/>SM)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;In<sp/>specbit_test_func3:<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>testing<sp/>retrieval<sp/>from<sp/>SubSpectrum*&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>with<sp/>capability<sp/>SM_spectrum...&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>Scale:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.GetScale()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***<sp/>This<sp/>is<sp/>stuff<sp/>from<sp/>an<sp/>MSSMSpec<sp/>object.<sp/>Now<sp/>testing<sp/>QedQcdWrapper<sp/>instead.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PRINTOUT<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/>Gauge<sp/>couplings:&quot;<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PRINTOUT<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/>g1:<sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.get_dimensionless_parameter(&quot;g1&quot;)<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PRINTOUT<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/>g2:<sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.get_dimensionless_parameter(&quot;g2&quot;)<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PRINTOUT<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/>g3:<sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec.get_dimensionless_parameter(&quot;g3&quot;)<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PRINTOUT<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/>Yukawa<sp/>couplings:&quot;<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>(int<sp/>i=1;<sp/>i&lt;=3;<sp/>i++)<sp/>{<sp/>for<sp/>(int<sp/>j=1;<sp/>j&lt;=3;<sp/>j++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/>Yu(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;):<sp/>&quot;<sp/>&lt;&lt;<sp/>spec.get_dimensionless_parameter(&quot;Yu&quot;,<sp/>i,<sp/>j)<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>(int<sp/>i=1;<sp/>i&lt;=3;<sp/>i++)<sp/>{<sp/>for<sp/>(int<sp/>j=1;<sp/>j&lt;=3;<sp/>j++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/>Yd(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;):<sp/>&quot;<sp/>&lt;&lt;<sp/>spec.get_dimensionless_parameter(&quot;Yd&quot;,<sp/>i,<sp/>j)<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>(int<sp/>i=1;<sp/>i&lt;=3;<sp/>i++)<sp/>{<sp/>for<sp/>(int<sp/>j=1;<sp/>j&lt;=3;<sp/>j++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/>Ye(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;):<sp/>&quot;<sp/>&lt;&lt;<sp/>spec.get_dimensionless_parameter(&quot;Ye&quot;,<sp/>i,<sp/>j)<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>***</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pole<sp/>masses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SM<sp/>pole<sp/>masses:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Z:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;gamma:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;gamma&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>endl;<sp/><sp/></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;W:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;W+&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;g:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;t:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;t&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>top</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;u(3):<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;u&quot;</highlight><highlight class="normal">,3)<sp/><sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>top</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;b:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>bottom</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;d(3):<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;d&quot;</highlight><highlight class="normal">,3)<sp/><sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>bottom</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;e-(1):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;e-&quot;</highlight><highlight class="normal">,1)<sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>electron</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;e-:<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;e-&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>electron</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;e-(2):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;e-&quot;</highlight><highlight class="normal">,2)<sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>muon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mu-:<sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;mu-&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>muon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;e-(3):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;e-&quot;</highlight><highlight class="normal">,3)<sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>tau</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;tau-:<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;tau-&quot;</highlight><highlight class="normal">)<sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>tau</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nu(1):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;nu&quot;</highlight><highlight class="normal">,1)<sp/><sp/>&lt;&lt;<sp/>endl;<sp/></highlight><highlight class="comment">//<sp/>Just<sp/>mass<sp/>ordered<sp/>(if<sp/>there<sp/>is<sp/>mixing)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nu(2):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;nu&quot;</highlight><highlight class="normal">,2)<sp/><sp/>&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nu(3):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_Pole_Mass(</highlight><highlight class="stringliteral">&quot;nu&quot;</highlight><highlight class="normal">,3)<sp/><sp/>&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MSbar<sp/>parameters<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SM<sp/>running<sp/>parameters:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Current<sp/>scale:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.GetScale()<sp/>&lt;&lt;<sp/>endl;<sp/></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;alpha:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_dimensionless_parameter(</highlight><highlight class="stringliteral">&quot;alpha&quot;</highlight><highlight class="normal">)<sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;alphaS:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_dimensionless_parameter(</highlight><highlight class="stringliteral">&quot;alphaS&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;d:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;d&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;u:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;u&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;s:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;c:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;c&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;b:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;t:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;t&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;e:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;e&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mu:<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;mu&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;tau:<sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;tau&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;gamma:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;gamma&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/>PRINTOUT<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;g:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>SM.get_mass_parameter(</highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/external_examples.hpp"/>
+  </compounddef>
+</doxygen>

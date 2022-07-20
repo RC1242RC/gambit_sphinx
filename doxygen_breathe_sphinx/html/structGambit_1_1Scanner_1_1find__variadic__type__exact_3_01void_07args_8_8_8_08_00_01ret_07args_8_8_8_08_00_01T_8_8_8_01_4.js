@@ -1,0 +1,5 @@
+var structGambit_1_1Scanner_1_1find__variadic__type__exact_3_01void_07args_8_8_8_08_00_01ret_07args_8_8_8_08_00_01T_8_8_8_01_4 =
+[
+    [ "func_type", "structGambit_1_1Scanner_1_1find__variadic__type__exact_3_01void_07args_8_8_8_08_00_01ret_07args_8_8_8_08_00_01T_8_8_8_01_4.html#a7d5e5843ab1ba60d191f666b3e2d8453", null ],
+    [ "ret_type", "structGambit_1_1Scanner_1_1find__variadic__type__exact_3_01void_07args_8_8_8_08_00_01ret_07args_8_8_8_08_00_01T_8_8_8_01_4.html#a601d211469b175b715ca0adeaafaa4eb", null ]
+];

@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacecyclic__include__check" kind="namespace" language="Python">
+    <compoundname>cyclic_include_check</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="cyclic__include__check_8py_1aab78a66141ef5f70a13d02befc6d6290" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cyclic_include_check.IncludeDirs</definition>
+        <argsstring></argsstring>
+        <name>IncludeDirs</name>
+        <initializer>=  [
+    &apos;./Core/include&apos;,
+#    &apos;./ModelBit/include&apos;,
+    &apos;./Utils/include&apos;,
+    &apos;./Printers/include&apos;,
+    &apos;./ScannerBit/include&apos;,
+    &apos;./Backends/include&apos;,    
+    &apos;./ColliderBit/include&apos;,    
+    &apos;./DarkBit/include&apos;,    
+    &apos;./FlavBit/include&apos;,    
+    &apos;./ExampleBit_A/include&apos;,    
+    &apos;./ExampleBit_B/include&apos;,    
+    &apos;./Example_SUSYspecBit/include&apos;
+]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="6" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyclic__include__check_8py_1a0a6f833bacdfae2559921f83863b5828" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cyclic_include_check.files</definition>
+        <argsstring></argsstring>
+        <name>files</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="41" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyclic__include__check_8py_1a794dca9a71e8014972f5d467aaa81c06" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyclic_include_check.fs</definition>
+        <argsstring></argsstring>
+        <name>fs</name>
+        <initializer>=  os.listdir(d)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="43" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyclic__include__check_8py_1a8562dac1a42c813dc44ead66d7659348" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary cyclic_include_check.includes</definition>
+        <argsstring></argsstring>
+        <name>includes</name>
+        <initializer>=  {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="48" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyclic__include__check_8py_1a77b0831387320e0b21b4ab2518e32321" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyclic_include_check.infile</definition>
+        <argsstring></argsstring>
+        <name>infile</name>
+        <initializer>=  open(f[0]+&apos;/&apos;+f[1])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="52" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyclic__include__check_8py_1a18177d76fa172f1d4a3459b210c411e6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyclic_include_check.inp</definition>
+        <argsstring></argsstring>
+        <name>inp</name>
+        <initializer>=  infile.read()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="53" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyclic__include__check_8py_1a63460cbd95f99f889b67960cd057b9f3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyclic_include_check.lines</definition>
+        <argsstring></argsstring>
+        <name>lines</name>
+        <initializer>=  inp.splitlines()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="55" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyclic__include__check_8py_1adb53db836ca07ddad318876475a464b3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyclic_include_check.lineL</definition>
+        <argsstring></argsstring>
+        <name>lineL</name>
+        <initializer>=  line.split()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="58" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyclic__include__check_8py_1ab6d1ab4115b2406fd0dc081f73efc254" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyclic_include_check.st2</definition>
+        <argsstring></argsstring>
+        <name>st2</name>
+        <initializer>=  st.replace(&quot;\&quot;&quot;,&quot;&quot; ).replace(&quot;&gt;&quot;,&quot;&quot; ).replace(&quot;&lt;&quot;,&quot;&quot; )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="61" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyclic__include__check_8py_1ac532eb8262f60f72e39f495e93d36f76" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cyclic_include_check.prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="65" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyclic__include__check_8py_1a9a5b7a7bcda5eb0b08a37b900dbb7f2c" prot="public" static="no" mutable="no">
+        <type>def</type>
+        <definition>def cyclic_include_check.loop</definition>
+        <argsstring></argsstring>
+        <name>loop</name>
+        <initializer>=  checkLoop(f,f,prev)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="66" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cyclic__include__check_8py_1a44bc8ea8a83719eed56de1389135c1ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyclic_include_check.checkLoop</definition>
+        <argsstring>(fle, ref, prev)</argsstring>
+        <name>checkLoop</name>
+        <param>
+          <type>fle</type>
+          <defname>fle</defname>
+        </param>
+        <param>
+          <type>ref</type>
+          <defname>ref</defname>
+        </param>
+        <param>
+          <type>prev</type>
+          <defname>prev</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="21" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" bodystart="21" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/scripts/cyclic_include_check.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

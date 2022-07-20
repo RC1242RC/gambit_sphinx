@@ -1,0 +1,755 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structGambit_1_1Backends_1_1backend__info" kind="struct" language="C++" prot="public">
+    <compoundname>Gambit::Backends::backend_info</compoundname>
+    <includes refid="backend__info_8hpp" local="no">backend_info.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1aa84d23da37b4eedc619cd3a376f92800" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, str &gt;</type>
+        <definition>std::map&lt;str,str&gt; Gambit::Backends::backend_info::dlerrors</definition>
+        <argsstring></argsstring>
+        <name>dlerrors</name>
+        <briefdescription>
+<para>Key: backend name + version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="102" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a996829891cd71507a0d6aaf3e68b435f" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, str &gt;</type>
+        <definition>std::map&lt;str, str&gt; Gambit::Backends::backend_info::default_safe_versions</definition>
+        <argsstring></argsstring>
+        <name>default_safe_versions</name>
+        <briefdescription>
+<para>Key: backend name (map from BOSSed backend names to their default safe versions) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="105" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1adfed488e1c7dd773c0fa791093634cc9" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, bool &gt;</type>
+        <definition>std::map&lt;str,bool&gt; Gambit::Backends::backend_info::works</definition>
+        <argsstring></argsstring>
+        <name>works</name>
+        <briefdescription>
+<para>Key: backend name + version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="108" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1aac2cea5bf7d71880a51b4ee22b4f4dfa" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, bool &gt;</type>
+        <definition>std::map&lt;str,bool&gt; Gambit::Backends::backend_info::needsMathematica</definition>
+        <argsstring></argsstring>
+        <name>needsMathematica</name>
+        <briefdescription>
+<para>Key: backend name + version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="111" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a5257f1b1bccf126c1f1df692bad12189" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, bool &gt;</type>
+        <definition>std::map&lt;str,bool&gt; Gambit::Backends::backend_info::needsPython</definition>
+        <argsstring></argsstring>
+        <name>needsPython</name>
+        <briefdescription>
+<para>Key: backend name + version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="114" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1ab20cad6c2e69fac3ccac74cb9a59f93f" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, int &gt;</type>
+        <definition>std::map&lt;str,int&gt; Gambit::Backends::backend_info::missingPythonVersion</definition>
+        <argsstring></argsstring>
+        <name>missingPythonVersion</name>
+        <briefdescription>
+<para>Key: backend name + version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="117" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a63f3da0005d5b1421c040bb3ac2bc7b5" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, bool &gt;</type>
+        <definition>std::map&lt;str,bool&gt; Gambit::Backends::backend_info::classloader</definition>
+        <argsstring></argsstring>
+        <name>classloader</name>
+        <briefdescription>
+<para>Key: backend name + version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="120" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a7311da2cec6c4fe7272422084b9613cc" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, bool &gt;</type>
+        <definition>std::map&lt;str,bool&gt; Gambit::Backends::backend_info::classes_OK</definition>
+        <argsstring></argsstring>
+        <name>classes_OK</name>
+        <briefdescription>
+<para>Key: backend name + version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="123" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a696a5b881ffd5d08bea42fb645d3eaa6" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, std::set&lt; str &gt; &gt;</type>
+        <definition>std::map&lt;str,std::set&lt;str&gt; &gt; Gambit::Backends::backend_info::classes</definition>
+        <argsstring></argsstring>
+        <name>classes</name>
+        <briefdescription>
+<para>Key: backend name + version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="126" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1aa5795b36f00b60747e4da1f09e6aca67" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, std::set&lt; str &gt; &gt;</type>
+        <definition>std::map&lt;str,std::set&lt;str&gt; &gt; Gambit::Backends::backend_info::factory_args</definition>
+        <argsstring></argsstring>
+        <name>factory_args</name>
+        <briefdescription>
+<para>Key: backend name + version + class name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="129" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a87afda01d5e1c7a01031b3cd14deed07" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, str &gt;</type>
+        <definition>std::map&lt;str,str&gt; Gambit::Backends::backend_info::constructor_status</definition>
+        <argsstring></argsstring>
+        <name>constructor_status</name>
+        <briefdescription>
+<para>Key: backend name + version + class name + factory args. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="132" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a63fcf9eace1865736d3ddad16b43c28d" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, void * &gt;</type>
+        <definition>std::map&lt;str, void*&gt; Gambit::Backends::backend_info::loaded_C_CXX_Fortran_backends</definition>
+        <argsstring></argsstring>
+        <name>loaded_C_CXX_Fortran_backends</name>
+        <briefdescription>
+<para>C/C++/Fortran backends that have been successfully loaded (Key: name+version) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="162" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1abe9b96da9ed88ad9f10e4f9045bf0dde" prot="private" static="no" mutable="no">
+        <type>std::map&lt; str, std::pair&lt; std::map&lt; str, str &gt;, std::map&lt; str, str &gt; &gt; &gt;</type>
+        <definition>std::map&lt;str,std::pair&lt;std::map&lt;str,str&gt;,std::map&lt;str,str&gt; &gt; &gt; Gambit::Backends::backend_info::safe_version_map</definition>
+        <argsstring></argsstring>
+        <name>safe_version_map</name>
+        <briefdescription>
+<para>Map from backend names to maps between version and safe version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="180" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a0e92fa5cd56427016b3f68674d021ef9" prot="private" static="no" mutable="no">
+        <type>std::map&lt; str, std::map&lt; str, str &gt; &gt;</type>
+        <definition>std::map&lt;str, std::map&lt;str, str&gt; &gt; Gambit::Backends::backend_info::bepathoverrides</definition>
+        <argsstring></argsstring>
+        <name>bepathoverrides</name>
+        <briefdescription>
+<para>Map from backend names to maps between version and paths found by dlinfo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="183" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a7efaaeec65d10035daae7f9ff9246627" prot="private" static="no" mutable="no">
+        <type>const str</type>
+        <definition>const str Gambit::Backends::backend_info::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+<para>Filename in which to find the user&apos;s custom backend locations configuration file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="186" column="19" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1ade297f5a27e1c2a6db73b4e056ee055c" prot="private" static="no" mutable="no">
+        <type>const str</type>
+        <definition>const str Gambit::Backends::backend_info::default_filename</definition>
+        <argsstring></argsstring>
+        <name>default_filename</name>
+        <briefdescription>
+<para>Filename in which to find the default backend locations configuration file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="189" column="19" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1ab8b0299541f8e9ff81c0a9973e494628" prot="private" static="no" mutable="no">
+        <type>YAML::Node</type>
+        <definition>YAML::Node Gambit::Backends::backend_info::bepathfile</definition>
+        <argsstring></argsstring>
+        <name>bepathfile</name>
+        <briefdescription>
+<para>YAML node corresponding to user custom backend locations configuration file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="192" column="20" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a17fffc07cbd0ae41c3aad570ffb81114" prot="private" static="no" mutable="no">
+        <type>YAML::Node</type>
+        <definition>YAML::Node Gambit::Backends::backend_info::default_bepathfile</definition>
+        <argsstring></argsstring>
+        <name>default_bepathfile</name>
+        <briefdescription>
+<para>YAML node corresponding to default backend locations configuration file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="195" column="20" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Backends_1_1backend__info_1a3dc42a859cdfda2dad1bb5421a83cde3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::Backends::backend_info::custom_bepathfile_exists</definition>
+        <argsstring></argsstring>
+        <name>custom_bepathfile_exists</name>
+        <briefdescription>
+<para>Flag indicating whether or not the user has a custom backend locations file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="198" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a150e0e0b66d9cb17a6557ae0735464ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Backends::backend_info::backend_info</definition>
+        <argsstring>()</argsstring>
+        <name>backend_info</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="75" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="53" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1afe0ab604cc228a6a28bd53abe0ebb058" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Backends::backend_info::~backend_info</definition>
+        <argsstring>()</argsstring>
+        <name>~backend_info</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="78" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="92" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a38436818c2f503eec8f7fa48e705a310" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::Backends::backend_info::custom_locations_exist</definition>
+        <argsstring>() const</argsstring>
+        <name>custom_locations_exist</name>
+        <briefdescription>
+<para>Indicate whether a custom backend locations file exists. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="81" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1ac1827f805171b5899f18519caa93e738" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::Backends::backend_info::backend_locations</definition>
+        <argsstring>() const</argsstring>
+        <name>backend_locations</name>
+        <briefdescription>
+<para>Return the path to any custom user backend locations file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="84" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1afe9450d028c5c0ca67ef98920254da69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::Backends::backend_info::default_backend_locations</definition>
+        <argsstring>() const</argsstring>
+        <name>default_backend_locations</name>
+        <briefdescription>
+<para>Return the path to the default backend locations file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="87" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a09daa1457836c1ec0ed42c617f637be0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::Backends::backend_info::path</definition>
+        <argsstring>(str, str) const</argsstring>
+        <name>path</name>
+        <param>
+          <type>str</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>ver</defname>
+        </param>
+        <briefdescription>
+<para>Return the path to a backend library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the path to a backend library, given a backend name and version. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="90" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="127" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a702725b29b18182be9f8ac2ea97ca7bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::Backends::backend_info::corrected_path</definition>
+        <argsstring>(str, str) const</argsstring>
+        <name>corrected_path</name>
+        <param>
+          <type>str</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>ver</defname>
+        </param>
+        <briefdescription>
+<para>Return the path to a backend library with GAMBIT_DIR expanded. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the complete path to a backend library, given a backend name and version. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="93" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="182" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1ad19381560f72107e0181bc3c3064c215" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::Backends::backend_info::path_dir</definition>
+        <argsstring>(str, str) const</argsstring>
+        <name>path_dir</name>
+        <param>
+          <type>str</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>ver</defname>
+        </param>
+        <briefdescription>
+<para>Return the path to the folder in which a backend library resides. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="96" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="193" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a2e894af083bc1437e1c7fe78917b0a16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::Backends::backend_info::lib_name</definition>
+        <argsstring>(str, str) const</argsstring>
+        <name>lib_name</name>
+        <param>
+          <type>str</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>ver</defname>
+        </param>
+        <briefdescription>
+<para>Return the bare name of the library of a backend library, with no path or extension. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="99" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="204" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1afb22fcba58633cfaf3ad07b22a8817d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::Backends::backend_info::version_from_safe_version</definition>
+        <argsstring>(str, str) const</argsstring>
+        <name>version_from_safe_version</name>
+        <param>
+          <type>str</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>sv</defname>
+        </param>
+        <briefdescription>
+<para>Given a backend and a safe version (with no periods), return the true version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="135" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1acb6d2006db0c710777244939d8ec5db2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::Backends::backend_info::safe_version_from_version</definition>
+        <argsstring>(str, str) const</argsstring>
+        <name>safe_version_from_version</name>
+        <param>
+          <type>str</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Given a backend and a true version (with periods), return the safe version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="138" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="223" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a1be0a9379281ad9f5fb67525310defbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Backends::backend_info::link_versions</definition>
+        <argsstring>(str, str, str)</argsstring>
+        <name>link_versions</name>
+        <param>
+          <type>str</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>sv</defname>
+        </param>
+        <briefdescription>
+<para>Link a backend&apos;s version and safe version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="141" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="229" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a6b195a5733a3d4be3eeacaab06a84279" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Backends::backend_info::override_path</definition>
+        <argsstring>(const str &amp;, const str &amp;, str)</argsstring>
+        <name>override_path</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <defname>ver</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+<para>Override a backend&apos;s config file location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="144" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="236" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1aace9769ac33604d9fe4b0ef10443e4a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::Backends::backend_info::default_version</definition>
+        <argsstring>(const str &amp;be) const</argsstring>
+        <name>default_version</name>
+        <param>
+          <type>const str &amp;</type>
+          <declname>be</declname>
+        </param>
+        <briefdescription>
+<para>Get the default version of a BOSSed backend. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="147" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="244" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1aa502947500cee27a91a7495c27a974f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; str &gt;</type>
+        <definition>std::vector&lt; str &gt; Gambit::Backends::backend_info::working_versions</definition>
+        <argsstring>(const str &amp;)</argsstring>
+        <name>working_versions</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>be</defname>
+        </param>
+        <briefdescription>
+<para>Get all versions of a given backend that are successfully loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="150" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="257" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a1ba671ab887ff973f1ea1efb8ee43186" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; str &gt;</type>
+        <definition>std::vector&lt; str &gt; Gambit::Backends::backend_info::working_safe_versions</definition>
+        <argsstring>(const str &amp;)</argsstring>
+        <name>working_safe_versions</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>be</defname>
+        </param>
+        <briefdescription>
+<para>Get all safe versions of a given backend that are successfully loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="153" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="278" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a2197826e5d41656bc71d171fbff2f4a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Backends::backend_info::attempt_backend_path_override</definition>
+        <argsstring>(const str &amp;, const str &amp;, const char *)</argsstring>
+        <name>attempt_backend_path_override</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <defname>ver</defname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+<para>Try to resolve a pointer to a partial path to a shared library and use it to override the stored backend path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="156" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="292" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a38254e5bd40b26af286397e3a33720a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::backend_info::loadLibrary</definition>
+        <argsstring>(const str &amp;, const str &amp;, const str &amp;, bool, const str &amp;)</argsstring>
+        <name>loadLibrary</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <defname>ver</defname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <defname>sv</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <defname>with_BOSS</defname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <defname>lang</defname>
+        </param>
+        <briefdescription>
+<para>Attempt to load a backend library. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="159" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="311" bodyend="388"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1a6d9ad06e4ed4bd5ac2cb0ef258e8d48b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Backends::backend_info::loadLibrary_C_CXX_Fortran</definition>
+        <argsstring>(const str &amp;, const str &amp;, const str &amp;, bool with_BOSS)</argsstring>
+        <name>loadLibrary_C_CXX_Fortran</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <defname>ver</defname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <defname>sv</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>with_BOSS</declname>
+        </param>
+        <briefdescription>
+<para>Load a backend library written in C, C++ or Fortran. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="201" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="413" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1Backends_1_1backend__info_1ad5259d10b506e2a60dc69e3b67fdab24" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Backends::backend_info::loadLibrary_data</definition>
+        <argsstring>(const str &amp;, const str &amp;, const str &amp;)</argsstring>
+        <name>loadLibrary_data</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <defname>ver</defname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <defname>sv</defname>
+        </param>
+        <briefdescription>
+<para>Load a backend data library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Load a data-only backend library. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="204" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_info.cpp" bodystart="391" bodyend="410"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure providing some basic info on backend libraries. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="70" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" bodystart="69" bodyend="231"/>
+    <listofallmembers>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a2197826e5d41656bc71d171fbff2f4a0" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>attempt_backend_path_override</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a150e0e0b66d9cb17a6557ae0735464ed" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>backend_info</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1ac1827f805171b5899f18519caa93e738" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>backend_locations</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1ab8b0299541f8e9ff81c0a9973e494628" prot="private" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>bepathfile</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a0e92fa5cd56427016b3f68674d021ef9" prot="private" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>bepathoverrides</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a696a5b881ffd5d08bea42fb645d3eaa6" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>classes</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a7311da2cec6c4fe7272422084b9613cc" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>classes_OK</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a63f3da0005d5b1421c040bb3ac2bc7b5" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>classloader</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a87afda01d5e1c7a01031b3cd14deed07" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>constructor_status</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a702725b29b18182be9f8ac2ea97ca7bd" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>corrected_path</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a3dc42a859cdfda2dad1bb5421a83cde3" prot="private" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>custom_bepathfile_exists</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a38436818c2f503eec8f7fa48e705a310" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>custom_locations_exist</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1afe9450d028c5c0ca67ef98920254da69" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>default_backend_locations</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a17fffc07cbd0ae41c3aad570ffb81114" prot="private" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>default_bepathfile</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1ade297f5a27e1c2a6db73b4e056ee055c" prot="private" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>default_filename</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a996829891cd71507a0d6aaf3e68b435f" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>default_safe_versions</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1aace9769ac33604d9fe4b0ef10443e4a3" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>default_version</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1aa84d23da37b4eedc619cd3a376f92800" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>dlerrors</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1aa5795b36f00b60747e4da1f09e6aca67" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>factory_args</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a7efaaeec65d10035daae7f9ff9246627" prot="private" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>filename</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a2e894af083bc1437e1c7fe78917b0a16" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>lib_name</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a1be0a9379281ad9f5fb67525310defbc" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>link_versions</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a63fcf9eace1865736d3ddad16b43c28d" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>loaded_C_CXX_Fortran_backends</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a38254e5bd40b26af286397e3a33720a4" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>loadLibrary</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a6d9ad06e4ed4bd5ac2cb0ef258e8d48b" prot="private" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>loadLibrary_C_CXX_Fortran</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1ad5259d10b506e2a60dc69e3b67fdab24" prot="private" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>loadLibrary_data</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1ab20cad6c2e69fac3ccac74cb9a59f93f" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>missingPythonVersion</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1aac2cea5bf7d71880a51b4ee22b4f4dfa" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>needsMathematica</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a5257f1b1bccf126c1f1df692bad12189" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>needsPython</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a6b195a5733a3d4be3eeacaab06a84279" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>override_path</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a09daa1457836c1ec0ed42c617f637be0" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>path</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1ad19381560f72107e0181bc3c3064c215" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>path_dir</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1acb6d2006db0c710777244939d8ec5db2" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>safe_version_from_version</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1abe9b96da9ed88ad9f10e4f9045bf0dde" prot="private" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>safe_version_map</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1afb22fcba58633cfaf3ad07b22a8817d0" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>version_from_safe_version</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1a1ba671ab887ff973f1ea1efb8ee43186" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>working_safe_versions</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1aa502947500cee27a91a7495c27a974f4" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>working_versions</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1adfed488e1c7dd773c0fa791093634cc9" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>works</name></member>
+      <member refid="structGambit_1_1Backends_1_1backend__info_1afe0ab604cc228a6a28bd53abe0ebb058" prot="public" virt="non-virtual"><scope>Gambit::Backends::backend_info</scope><name>~backend_info</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1DescriptionDatabase" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::DescriptionDatabase</compoundname>
+    <includes refid="yaml__description__database_8hpp" local="no">yaml_description_database.hpp</includes>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classGambit_1_1DescriptionDatabase_1a7e1ad0b7ae04916d7eca7ce2945bfb6c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args</declname>
+            <defname>args</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool Gambit::DescriptionDatabase::hasKey</definition>
+        <argsstring>(const args &amp;... keys) const</argsstring>
+        <name>hasKey</name>
+        <param>
+          <type>const args &amp;...</type>
+          <declname>keys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Getters for key/value pairs (which is all the options node should contain) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="103" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DescriptionDatabase_1aa4e9a39564590faa9bee815b9b05f6e5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TYPE</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>args</declname>
+            <defname>args</defname>
+          </param>
+        </templateparamlist>
+        <type>TYPE</type>
+        <definition>TYPE Gambit::DescriptionDatabase::getValue</definition>
+        <argsstring>(const args &amp;... keys) const</argsstring>
+        <name>getValue</name>
+        <param>
+          <type>const args &amp;...</type>
+          <declname>keys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="109" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="109" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1DescriptionDatabase_1a99fdea973254f734cfe8232a068f28b2" prot="private" static="no" mutable="no">
+        <type>YAML::Node</type>
+        <definition>YAML::Node Gambit::DescriptionDatabase::descriptions</definition>
+        <argsstring></argsstring>
+        <name>descriptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="147" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1DescriptionDatabase_1a26f6ce930dfb98f1d2c9f77c8686190c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DescriptionDatabase::DescriptionDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>DescriptionDatabase</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Member functions for <ref refid="classGambit_1_1DescriptionDatabase" kindref="compound">DescriptionDatabase</ref> class.</para>
+<para>Default constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="89" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/yaml_description_database.cpp" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DescriptionDatabase_1a0fc559aff96755d2b19f63c7f1939e79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DescriptionDatabase::DescriptionDatabase</definition>
+        <argsstring>(const str &amp;filename)</argsstring>
+        <name>DescriptionDatabase</name>
+        <param>
+          <type>const str &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Construct from file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="92" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/yaml_description_database.cpp" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DescriptionDatabase_1a2202e89d3aadd41981c665e50e3e9a9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DescriptionDatabase::DescriptionDatabase</definition>
+        <argsstring>(const YAML::Node &amp;descriptions)</argsstring>
+        <name>DescriptionDatabase</name>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>descriptions</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="95" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/yaml_description_database.cpp" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DescriptionDatabase_1a7264c39d040ac4fa23578344d09657f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DescriptionDatabase::DescriptionDatabase</definition>
+        <argsstring>(YAML::Node &amp;&amp;descriptions)</argsstring>
+        <name>DescriptionDatabase</name>
+        <param>
+          <type>YAML::Node &amp;&amp;</type>
+          <declname>descriptions</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="98" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/yaml_description_database.cpp" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DescriptionDatabase_1a328e31c1548710447ecc1a6b4e2c1dec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args</declname>
+            <defname>args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Gambit::DescriptionDatabase::loadFile</definition>
+        <argsstring>(const str &amp;filename)</argsstring>
+        <name>loadFile</name>
+        <param>
+          <type>const str &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Load descriptions from file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="125" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="125" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DescriptionDatabase_1a51a0a94a0c98681c3d0e4a121fee481b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; str, int &gt;</type>
+        <definition>std::map&lt; str, int &gt; Gambit::DescriptionDatabase::check_for_duplicates</definition>
+        <argsstring>()</argsstring>
+        <name>check_for_duplicates</name>
+        <briefdescription>
+<para>Check &apos;descriptions&apos; for duplicate keys. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="140" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/yaml_description_database.cpp" bodystart="115" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DescriptionDatabase_1a051f98b640720789cd28db0cc8dea25c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; str &gt;</type>
+        <definition>std::vector&lt; str &gt; Gambit::DescriptionDatabase::get_all_values</definition>
+        <argsstring>(str key)</argsstring>
+        <name>get_all_values</name>
+        <param>
+          <type>str</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Return vector of descriptions matching key (for retrieving values with non-unique keys) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="143" column="19" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/yaml_description_database.cpp" bodystart="136" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A small wrapper object for &apos;description database&apos; nodes. The descriptions are extracted from, e.g., capabilities.dat </para>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="84" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="83" bodyend="149"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1DescriptionDatabase_1a51a0a94a0c98681c3d0e4a121fee481b" prot="public" virt="non-virtual"><scope>Gambit::DescriptionDatabase</scope><name>check_for_duplicates</name></member>
+      <member refid="classGambit_1_1DescriptionDatabase_1a26f6ce930dfb98f1d2c9f77c8686190c" prot="public" virt="non-virtual"><scope>Gambit::DescriptionDatabase</scope><name>DescriptionDatabase</name></member>
+      <member refid="classGambit_1_1DescriptionDatabase_1a0fc559aff96755d2b19f63c7f1939e79" prot="public" virt="non-virtual"><scope>Gambit::DescriptionDatabase</scope><name>DescriptionDatabase</name></member>
+      <member refid="classGambit_1_1DescriptionDatabase_1a2202e89d3aadd41981c665e50e3e9a9e" prot="public" virt="non-virtual"><scope>Gambit::DescriptionDatabase</scope><name>DescriptionDatabase</name></member>
+      <member refid="classGambit_1_1DescriptionDatabase_1a7264c39d040ac4fa23578344d09657f3" prot="public" virt="non-virtual"><scope>Gambit::DescriptionDatabase</scope><name>DescriptionDatabase</name></member>
+      <member refid="classGambit_1_1DescriptionDatabase_1a99fdea973254f734cfe8232a068f28b2" prot="private" virt="non-virtual"><scope>Gambit::DescriptionDatabase</scope><name>descriptions</name></member>
+      <member refid="classGambit_1_1DescriptionDatabase_1a051f98b640720789cd28db0cc8dea25c" prot="public" virt="non-virtual"><scope>Gambit::DescriptionDatabase</scope><name>get_all_values</name></member>
+      <member refid="classGambit_1_1DescriptionDatabase_1aa4e9a39564590faa9bee815b9b05f6e5" prot="public" virt="non-virtual"><scope>Gambit::DescriptionDatabase</scope><name>getValue</name></member>
+      <member refid="classGambit_1_1DescriptionDatabase_1a7e1ad0b7ae04916d7eca7ce2945bfb6c" prot="public" virt="non-virtual"><scope>Gambit::DescriptionDatabase</scope><name>hasKey</name></member>
+      <member refid="classGambit_1_1DescriptionDatabase_1a328e31c1548710447ecc1a6b4e2c1dec" prot="public" virt="non-virtual"><scope>Gambit::DescriptionDatabase</scope><name>loadFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

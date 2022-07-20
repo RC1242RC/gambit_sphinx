@@ -8,7 +8,7 @@
         <label>gambit/Elements/gambit_module_headers.hpp</label>
       </node>
       <node id="1">
-        <label>ColliderBit/src/smearEvent.cpp</label>
+        <label>smearEvent.cpp</label>
         <link refid="smearEvent_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -51,7 +51,7 @@
         <initializer>    void NAME(HEPUtils::Event&amp; result)                                                   \
     {                                                                                    \
       using namespace Pipes::NAME;                                                       \
-      smearEvent(result, *Dep::HardScatteringEvent, *(*Dep::CAT(EXPERIMENT,DetectorSim)),\
+      smearEvent(result, *Dep::HardScatteringEvent, *(*<ref refid="cats_8hpp_1aa7c74d1cd12eae89a2d03f84ea2b8598" kindref="member">Dep::CAT</ref>(EXPERIMENT,DetectorSim)),\
        *Dep::RunMC, *Loop::iteration, #EXPERIMENT);                                      \
     }</initializer>
         <briefdescription>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ColliderBit/src/smearEvent.cpp" line="61" column="13" bodyfile="ColliderBit/src/smearEvent.cpp" bodystart="61" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/smearEvent.cpp" line="61" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/smearEvent.cpp" bodystart="61" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -143,6 +143,6 @@
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="ColliderBit/src/smearEvent.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/smearEvent.cpp"/>
   </compounddef>
 </doxygen>

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1DarkBit_1_1WDInterpolator" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::DarkBit::WDInterpolator</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1WDInterpolator_1a7ce3f08ec2c5bdf35b87560ba70abd42" prot="private" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1DarkBit_1_1AxionInterpolator" kindref="compound">AxionInterpolator</ref></type>
+        <definition>AxionInterpolator Gambit::DarkBit::WDInterpolator::period_change</definition>
+        <argsstring></argsstring>
+        <name>period_change</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="1949" column="27" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="1949" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1WDInterpolator_1ad626a86eb73a36d971694a228fbf1745" prot="private" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1DarkBit_1_1AxionInterpolator" kindref="compound">AxionInterpolator</ref></type>
+        <definition>AxionInterpolator Gambit::DarkBit::WDInterpolator::correction</definition>
+        <argsstring></argsstring>
+        <name>correction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="1950" column="27" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="1950" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1WDInterpolator_1a2151cbcfe145d028c8842de86a7f202c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::WDInterpolator::WDInterpolator</definition>
+        <argsstring>(const std::vector&lt; double &gt; x, const std::vector&lt; double &gt; y, std::string correction_file, InterpolationOptions1D type=InterpolationOptions1D::linear)</argsstring>
+        <name>WDInterpolator</name>
+        <param>
+          <type>const std::vector&lt; double &gt;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>correction_file</declname>
+        </param>
+        <param>
+          <type><ref refid="Axions_8cpp_1a15f8b86d8e39700e02f4a2bbcc3d489a" kindref="member">InterpolationOptions1D</ref></type>
+          <declname>type</declname>
+          <defval>InterpolationOptions1D::linear</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="1924" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="1924" bodyend="1928"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1WDInterpolator_1aee76d31eccf9d14c5b6fb099a5582760" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::WDInterpolator::evaluate</definition>
+        <argsstring>(double mrel, double x2)</argsstring>
+        <name>evaluate</name>
+        <param>
+          <type>double</type>
+          <declname>mrel</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="1931" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="1931" bodyend="1946"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="1921" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="1920" bodyend="1951"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1DarkBit_1_1WDInterpolator_1ad626a86eb73a36d971694a228fbf1745" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::WDInterpolator</scope><name>correction</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1WDInterpolator_1aee76d31eccf9d14c5b6fb099a5582760" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::WDInterpolator</scope><name>evaluate</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1WDInterpolator_1a7ce3f08ec2c5bdf35b87560ba70abd42" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::WDInterpolator</scope><name>period_change</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1WDInterpolator_1a2151cbcfe145d028c8842de86a7f202c" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::WDInterpolator</scope><name>WDInterpolator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

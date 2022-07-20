@@ -1,0 +1,5 @@
+var classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__1Photon1Lepton__emu__combined__36invfb =
+[
+    [ "Analysis_CMS_13TeV_1Photon1Lepton_emu_combined_36invfb", "classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__1Photon1Lepton__emu__combined__36invfb.html#a98a50cdf3c40752b5b15549a3b290548", null ],
+    [ "collect_results", "classGambit_1_1ColliderBit_1_1Analysis__CMS__13TeV__1Photon1Lepton__emu__combined__36invfb.html#a6a6bf79eec76e8559589114a098ceb5d", null ]
+];

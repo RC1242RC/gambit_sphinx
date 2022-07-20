@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::DarkBit::CAST_SolarModel_Interpolator</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1acd64214523d16d3d8cdd672e4bb8fcaa" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Gambit::DarkBit::CAST_SolarModel_Interpolator::n_bins</definition>
+        <argsstring></argsstring>
+        <name>n_bins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="770" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="770" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a47da05406aa6564a93fff5fe1d5733dc" prot="private" static="no" mutable="no">
+        <type>ASCIItableReader</type>
+        <definition>ASCIItableReader Gambit::DarkBit::CAST_SolarModel_Interpolator::gagg_data</definition>
+        <argsstring></argsstring>
+        <name>gagg_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="771" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="771" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1ac021451bb7d1cee422c218c2a1d9f840" prot="private" static="no" mutable="no">
+        <type>ASCIItableReader</type>
+        <definition>ASCIItableReader Gambit::DarkBit::CAST_SolarModel_Interpolator::gaee_data</definition>
+        <argsstring></argsstring>
+        <name>gaee_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="772" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="772" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a3e33ec18982e8b1a6f39a20ce5cf6e26" prot="private" static="no" mutable="no">
+        <type>ASCIItableReader</type>
+        <definition>ASCIItableReader Gambit::DarkBit::CAST_SolarModel_Interpolator::eff_exp_data</definition>
+        <argsstring></argsstring>
+        <name>eff_exp_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="773" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="773" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1ac59fd66ba9eb0832bd1954ca84fef1e7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gsl_interp_accel * &gt;</type>
+        <definition>std::vector&lt;gsl_interp_accel*&gt; Gambit::DarkBit::CAST_SolarModel_Interpolator::gagg_acc</definition>
+        <argsstring></argsstring>
+        <name>gagg_acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="774" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="774" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a1a6cde96669cb7a36799cc19a72ea04d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gsl_interp_accel * &gt;</type>
+        <definition>std::vector&lt;gsl_interp_accel*&gt; Gambit::DarkBit::CAST_SolarModel_Interpolator::gaee_acc</definition>
+        <argsstring></argsstring>
+        <name>gaee_acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="775" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="775" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a413e84b2ba157f8623872773eca815eb" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gsl_spline * &gt;</type>
+        <definition>std::vector&lt;gsl_spline*&gt; Gambit::DarkBit::CAST_SolarModel_Interpolator::gagg_linear_interp</definition>
+        <argsstring></argsstring>
+        <name>gagg_linear_interp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="776" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="776" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1ad5c2d9ad461f20db54b6c443773c88e2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gsl_spline * &gt;</type>
+        <definition>std::vector&lt;gsl_spline*&gt; Gambit::DarkBit::CAST_SolarModel_Interpolator::gaee_linear_interp</definition>
+        <argsstring></argsstring>
+        <name>gaee_linear_interp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="777" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="777" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a9dd6084e7a390d449155b82d282ee84b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::CAST_SolarModel_Interpolator::CAST_SolarModel_Interpolator</definition>
+        <argsstring>(std::string solar_model_gagg, std::string solar_model_gaee, std::string data_set)</argsstring>
+        <name>CAST_SolarModel_Interpolator</name>
+        <param>
+          <type>std::string</type>
+          <declname>solar_model_gagg</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>solar_model_gaee</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>data_set</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="761" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="782" bodyend="993"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1adcc48f2c158546d0e61d9ea8ef8cfd73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::CAST_SolarModel_Interpolator::CAST_SolarModel_Interpolator</definition>
+        <argsstring>(CAST_SolarModel_Interpolator &amp;&amp;)</argsstring>
+        <name>CAST_SolarModel_Interpolator</name>
+        <param>
+          <type><ref refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator" kindref="compound">CAST_SolarModel_Interpolator</ref> &amp;&amp;</type>
+          <defname>interp</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="762" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="996" bodyend="1005"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1abfb880b4e26d6bd5ddf8981e46899133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::CAST_SolarModel_Interpolator::~CAST_SolarModel_Interpolator</definition>
+        <argsstring>()</argsstring>
+        <name>~CAST_SolarModel_Interpolator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="763" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="1008" bodyend="1019"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1aa15890924c0d6fa108cfec505cffe8fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::CAST_SolarModel_Interpolator::CAST_SolarModel_Interpolator</definition>
+        <argsstring>(const CAST_SolarModel_Interpolator &amp;)=delete</argsstring>
+        <name>CAST_SolarModel_Interpolator</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator" kindref="compound">CAST_SolarModel_Interpolator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="765" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a334e37b0dbde2535d9e11e8d7acfa3e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator" kindref="compound">CAST_SolarModel_Interpolator</ref></type>
+        <definition>CAST_SolarModel_Interpolator Gambit::DarkBit::CAST_SolarModel_Interpolator::operator=</definition>
+        <argsstring>(const CAST_SolarModel_Interpolator &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator" kindref="compound">CAST_SolarModel_Interpolator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="766" column="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a5dc7542619821d7c8073d1a6634021c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; Gambit::DarkBit::CAST_SolarModel_Interpolator::evaluate_gagg_contrib</definition>
+        <argsstring>(double m_ax)</argsstring>
+        <name>evaluate_gagg_contrib</name>
+        <param>
+          <type>double</type>
+          <declname>m_ax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="767" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="1022" bodyend="1037"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a2cedbdbc3c3318386900512178a28353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; Gambit::DarkBit::CAST_SolarModel_Interpolator::evaluate_gaee_contrib</definition>
+        <argsstring>(double m_ax)</argsstring>
+        <name>evaluate_gaee_contrib</name>
+        <param>
+          <type>double</type>
+          <declname>m_ax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="768" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="1040" bodyend="1055"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="759" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="758" bodyend="778"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a9dd6084e7a390d449155b82d282ee84b" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>CAST_SolarModel_Interpolator</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1adcc48f2c158546d0e61d9ea8ef8cfd73" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>CAST_SolarModel_Interpolator</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1aa15890924c0d6fa108cfec505cffe8fd" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>CAST_SolarModel_Interpolator</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a3e33ec18982e8b1a6f39a20ce5cf6e26" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>eff_exp_data</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a2cedbdbc3c3318386900512178a28353" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>evaluate_gaee_contrib</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a5dc7542619821d7c8073d1a6634021c1" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>evaluate_gagg_contrib</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a1a6cde96669cb7a36799cc19a72ea04d" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>gaee_acc</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1ac021451bb7d1cee422c218c2a1d9f840" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>gaee_data</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1ad5c2d9ad461f20db54b6c443773c88e2" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>gaee_linear_interp</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1ac59fd66ba9eb0832bd1954ca84fef1e7" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>gagg_acc</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a47da05406aa6564a93fff5fe1d5733dc" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>gagg_data</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a413e84b2ba157f8623872773eca815eb" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>gagg_linear_interp</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1acd64214523d16d3d8cdd672e4bb8fcaa" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>n_bins</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1a334e37b0dbde2535d9e11e8d7acfa3e7" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>operator=</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1CAST__SolarModel__Interpolator_1abfb880b4e26d6bd5ddf8981e46899133" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::CAST_SolarModel_Interpolator</scope><name>~CAST_SolarModel_Interpolator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

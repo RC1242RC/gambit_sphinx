@@ -1,0 +1,960 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="SpecBit__examples_8cpp" kind="file" language="C++">
+    <compoundname>SpecBit_examples.cpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">cmath</includes>
+    <includes local="yes">gambit/Utils/gambit_module_headers.hpp</includes>
+    <includes local="yes">gambit/Elements/spectrum.hpp</includes>
+    <includes local="yes">gambit/SpecBit/SpecBit_rollcall.hpp</includes>
+    <includes local="yes">SLHAea/slhaea.h</includes>
+    <includes local="no">boost/preprocessor/tuple/to_seq.hpp</includes>
+    <includes local="no">boost/preprocessor/seq/for_each.hpp</includes>
+    <includes local="no">boost/preprocessor/seq/elem.hpp</includes>
+    <includes local="no">boost/preprocessor/seq/for_each_product.hpp</includes>
+    <includes local="yes">gambit/Utils/stream_overloads.hpp</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>gambit/Elements/spectrum.hpp</label>
+      </node>
+      <node id="9">
+        <label>boost/preprocessor/tuple/to_seq.hpp</label>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="11">
+        <label>boost/preprocessor/seq/elem.hpp</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>gambit/Utils/gambit_module_headers.hpp</label>
+      </node>
+      <node id="1">
+        <label>SpecBit_examples.cpp</label>
+        <link refid="SpecBit__examples_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>gambit/Utils/stream_overloads.hpp</label>
+      </node>
+      <node id="3">
+        <label>sstream</label>
+      </node>
+      <node id="12">
+        <label>boost/preprocessor/seq/for_each_product.hpp</label>
+      </node>
+      <node id="8">
+        <label>SLHAea/slhaea.h</label>
+      </node>
+      <node id="7">
+        <label>gambit/SpecBit/SpecBit_rollcall.hpp</label>
+      </node>
+      <node id="10">
+        <label>boost/preprocessor/seq/for_each.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1SpecBit">Gambit::SpecBit</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="SpecBit__examples_8cpp_1aca80a3ada17b93bb6747d1de0897fadb" prot="public" static="no">
+        <name>ECHO</name>
+        <param><defname>COMMAND</defname></param>
+        <initializer>         {                                                    \
+             try {                                            \
+                cout &lt;&lt; &quot;  &quot; &lt;&lt; STRINGIFY(COMMAND) &lt;&lt; &quot; = &quot; &lt;&lt; COMMAND &lt;&lt; endl;\
+             }                                                \
+             catch (const std::exception&amp; e)                  \
+             { add_error(report,e,STRINGIFY(COMMAND)); }      \
+         }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp" line="105" column="18"/>
+      </memberdef>
+      <memberdef kind="define" id="SpecBit__examples_8cpp_1a167e21f83ddd717010e89d4a674d1c82" prot="public" static="no">
+        <name>PDB</name>
+        <initializer>Models::ParticleDB()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp" line="115" column="18"/>
+      </memberdef>
+      <memberdef kind="define" id="SpecBit__examples_8cpp_1a3d52cc74367f74ab95607082207f1d59" prot="public" static="no">
+        <name>GET_MIX_MATRIX_EL</name>
+        <param><defname>r</defname></param>
+        <param><defname>PRODUCT</defname></param>
+        <initializer>         {                                                                       \
+            str label = BOOST_PP_SEQ_ELEM(0, PRODUCT);                           \
+            str block = BOOST_PP_SEQ_ELEM(1, PRODUCT);                           \
+            int i = BOOST_PP_SEQ_ELEM(2, PRODUCT);                               \
+            int j = BOOST_PP_SEQ_ELEM(3, PRODUCT);                               \
+           try{                                                                  \
+            std::ostringstream echo1;                                            \
+            std::ostringstream echo2;                                            \
+            echo1 &lt;&lt;     &quot;  spec-&gt;get_Pole_Mixing(&quot;&lt;&lt;label&lt;&lt;&quot;,&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;) = &quot;; \
+            double value1 = spec-&gt;get_Pole_Mixing(label,i,j); \
+            echo2 &lt;&lt;     &quot;  SLHAea::to&lt;double&gt;( slhaea.at(&quot;&lt;&lt;block&lt;&lt;&quot;).at(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;).at(2) ) = &quot;; \
+            double value2 = SLHAea::to&lt;double&gt;( slhaea.at(block).at(i,j).at(2) ); \
+            cout &lt;&lt; echo1.str() &lt;&lt; value1 &lt;&lt;endl;                                \
+            cout &lt;&lt; echo2.str() &lt;&lt; value2 &lt;&lt;endl;                                \
+            cout &lt;&lt; endl;                                                        \
+           }                                                                     \
+           catch (const std::exception&amp; e)                                       \
+           { add_error(report,e,label+&quot;: &quot;+block); }                             \
+         }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp" line="395" column="18"/>
+      </memberdef>
+      <memberdef kind="define" id="SpecBit__examples_8cpp_1a18745a046c0fc365b74c957e8568ff25" prot="public" static="no">
+        <name>GET_MIX_MATRIX</name>
+        <param><defname>NAME</defname></param>
+        <param><defname>BLOCK</defname></param>
+        <param><defname>__IND1</defname></param>
+        <param><defname>__IND2</defname></param>
+        <initializer>BOOST_PP_SEQ_FOR_EACH_PRODUCT(GET_MIX_MATRIX_EL, ((NAME))((BLOCK))(BOOST_PP_TUPLE_TO_SEQ(__IND1))(BOOST_PP_TUPLE_TO_SEQ(__IND2)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp" line="416" column="18"/>
+      </memberdef>
+      <memberdef kind="define" id="SpecBit__examples_8cpp_1afa617d69d263127dea2198d489c1e377" prot="public" static="no">
+        <name>GET_MATRIX_EL</name>
+        <param><defname>r</defname></param>
+        <param><defname>PRODUCT</defname></param>
+        <initializer>         {                                                                       \
+            str label = BOOST_PP_SEQ_ELEM(0, PRODUCT);                           \
+            str block = BOOST_PP_SEQ_ELEM(1, PRODUCT);                           \
+            int i = BOOST_PP_SEQ_ELEM(2, PRODUCT);                               \
+            int j = BOOST_PP_SEQ_ELEM(3, PRODUCT);                               \
+           try{                                                                  \
+            std::ostringstream echo1;                                            \
+            std::ostringstream echo2;                                            \
+            echo1 &lt;&lt;     &quot;  spec-&gt;get_dimensionless_parameter(&quot;&lt;&lt;label&lt;&lt;&quot;,&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;) = &quot;; \
+            double value1 = spec-&gt;get_dimensionless_parameter(label,i,j); \
+            echo2 &lt;&lt;     &quot;  SLHAea::to&lt;double&gt;( slhaea.at(&quot;&lt;&lt;block&lt;&lt;&quot;).at(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;).at(2) ) = &quot;; \
+            double value2 = SLHAea::to&lt;double&gt;( slhaea.at(block).at(i,j).at(2) ); \
+            cout &lt;&lt; echo1.str() &lt;&lt; value1 &lt;&lt;endl;                                \
+            cout &lt;&lt; echo2.str() &lt;&lt; value2 &lt;&lt;endl;                                \
+            cout &lt;&lt; endl;                                                        \
+           } catch (const std::exception&amp; e)                                       \
+           { add_error(report,e,label+&quot;: &quot;+block); }                             \
+         }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp" line="459" column="18"/>
+      </memberdef>
+      <memberdef kind="define" id="SpecBit__examples_8cpp_1a76ddc4fa60861448b0b5686f684d7ac6" prot="public" static="no">
+        <name>GET_MATRIX</name>
+        <param><defname>NAME</defname></param>
+        <param><defname>BLOCK</defname></param>
+        <param><defname>__IND1</defname></param>
+        <param><defname>__IND2</defname></param>
+        <initializer>BOOST_PP_SEQ_FOR_EACH_PRODUCT(GET_MATRIX_EL, ((NAME))((BLOCK))(BOOST_PP_TUPLE_TO_SEQ(__IND1))(BOOST_PP_TUPLE_TO_SEQ(__IND2)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp" line="479" column="18"/>
+      </memberdef>
+      <memberdef kind="define" id="SpecBit__examples_8cpp_1ab4a07fc431b019ef1d56c91cfd33a7d0" prot="public" static="no">
+        <name>GET_M1_MATRIX_EL</name>
+        <param><defname>r</defname></param>
+        <param><defname>PRODUCT</defname></param>
+        <initializer>         {                                                                       \
+            str label = BOOST_PP_SEQ_ELEM(0, PRODUCT);                           \
+            str block = BOOST_PP_SEQ_ELEM(1, PRODUCT);                           \
+            int i = BOOST_PP_SEQ_ELEM(2, PRODUCT);                               \
+            int j = BOOST_PP_SEQ_ELEM(3, PRODUCT);                               \
+           try{                                                                  \
+            std::ostringstream echo1;                                            \
+            std::ostringstream echo2;                                            \
+            echo1 &lt;&lt;     &quot;  spec-&gt;get_mass_parameter(&quot;&lt;&lt;label&lt;&lt;&quot;,&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;) = &quot;; \
+            double value1 = spec-&gt;get_mass_parameter(label,i,j); \
+            echo2 &lt;&lt;     &quot;  SLHAea::to&lt;double&gt;( slhaea.at(&quot;&lt;&lt;block&lt;&lt;&quot;).at(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;).at(2) ) = &quot;; \
+            double value2 = SLHAea::to&lt;double&gt;( slhaea.at(block).at(i,j).at(2) ); \
+            cout &lt;&lt; echo1.str() &lt;&lt; value1 &lt;&lt;endl;                                \
+            cout &lt;&lt; echo2.str() &lt;&lt; value2 &lt;&lt;endl;                                \
+            cout &lt;&lt; endl;                                                        \
+           } catch (const std::exception&amp; e)                                       \
+           { add_error(report,e,label+&quot;: &quot;+block); }                             \
+         }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp" line="511" column="18"/>
+      </memberdef>
+      <memberdef kind="define" id="SpecBit__examples_8cpp_1a29d5b2cd20833268bf61142e518af4bd" prot="public" static="no">
+        <name>GET_M1_MATRIX</name>
+        <param><defname>NAME</defname></param>
+        <param><defname>BLOCK</defname></param>
+        <param><defname>__IND1</defname></param>
+        <param><defname>__IND2</defname></param>
+        <initializer>BOOST_PP_SEQ_FOR_EACH_PRODUCT(GET_M1_MATRIX_EL, ((NAME))((BLOCK))(BOOST_PP_TUPLE_TO_SEQ(__IND1))(BOOST_PP_TUPLE_TO_SEQ(__IND2)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp" line="531" column="18"/>
+      </memberdef>
+      <memberdef kind="define" id="SpecBit__examples_8cpp_1aac0912f21186bb4074a6fa43dc773a26" prot="public" static="no">
+        <name>GET_M2_MATRIX_EL</name>
+        <param><defname>r</defname></param>
+        <param><defname>PRODUCT</defname></param>
+        <initializer>         {                                                                       \
+            str label = BOOST_PP_SEQ_ELEM(0, PRODUCT);                           \
+            str block = BOOST_PP_SEQ_ELEM(1, PRODUCT);                           \
+            int i = BOOST_PP_SEQ_ELEM(2, PRODUCT);                               \
+            int j = BOOST_PP_SEQ_ELEM(3, PRODUCT);                               \
+            std::ostringstream echo1;                                            \
+           try {                                                                 \
+            std::ostringstream echo2;                                            \
+            echo1 &lt;&lt;     &quot;  spec-&gt;get_mass2_parameter(&quot;&lt;&lt;label&lt;&lt;&quot;,&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;) = &quot;; \
+            double value1 = spec-&gt;get_mass2_parameter(label,i,j); \
+            echo2 &lt;&lt;     &quot;  SLHAea::to&lt;double&gt;( slhaea.at(&quot;&lt;&lt;block&lt;&lt;&quot;).at(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;).at(2) ) = &quot;; \
+            double value2 = SLHAea::to&lt;double&gt;( slhaea.at(block).at(i,j).at(2) ); \
+            cout &lt;&lt; echo1.str() &lt;&lt; value1 &lt;&lt;endl;                                \
+            cout &lt;&lt; echo2.str() &lt;&lt; value2 &lt;&lt;endl;                                \
+            cout &lt;&lt; endl;                                                        \
+           } catch (const std::exception&amp; e)                                       \
+           { add_error(report,e,label+&quot;: &quot;+block); }                             \
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp" line="562" column="18"/>
+      </memberdef>
+      <memberdef kind="define" id="SpecBit__examples_8cpp_1ab2383afa22bf7f542081a8cc2ed0854e" prot="public" static="no">
+        <name>GET_M2_MATRIX</name>
+        <param><defname>NAME</defname></param>
+        <param><defname>BLOCK</defname></param>
+        <param><defname>__IND1</defname></param>
+        <param><defname>__IND2</defname></param>
+        <initializer>BOOST_PP_SEQ_FOR_EACH_PRODUCT(GET_M2_MATRIX_EL, ((NAME))((BLOCK))(BOOST_PP_TUPLE_TO_SEQ(__IND1))(BOOST_PP_TUPLE_TO_SEQ(__IND2)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp" line="582" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Example retrieval of data from Spectrum object.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Ben Farmer (<ulink url="mailto:ben.farmer@gmail.com">ben.farmer@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2014 Dec</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/gambit_module_headers.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/spectrum.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/SpecBit/SpecBit_rollcall.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SLHAea/slhaea.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/preprocessor/tuple/to_seq.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/preprocessor/seq/for_each.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/preprocessor/seq/elem.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/preprocessor/seq/for_each_product.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>the<sp/>demo<sp/>output<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/stream_overloads.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SpecBit</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">LogTags;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Helper<sp/>function<sp/>to<sp/>add<sp/>error<sp/>information<sp/>to<sp/>report</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>add_error(std::ostringstream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::exception&amp;<sp/>e,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;------------------------------&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TEST<sp/>FAIL:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>msg<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Exception<sp/>thrown<sp/>was:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;e.what()&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Example<sp/>showing<sp/>reading<sp/>of<sp/>SLHA<sp/>information<sp/>from<sp/>Spectrum<sp/>object,<sp/>using</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>both<sp/>SLHAea<sp/>objects<sp/>and<sp/>direct<sp/>Spectrum<sp/>getter<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="SpecBit__examples_8cpp_1a5a9708ca41363cb0ab548eebe2516c42" kindref="member">exampleRead</ref><sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;result)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Retreive<sp/>pointer<sp/>to<sp/>Spectrum<sp/>object,<sp/>delivered<sp/>by<sp/>dependency<sp/>resolver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Module<sp/>function<sp/>asks<sp/>for<sp/>Spectrum*<sp/>with<sp/>capability<sp/>MSSM_spectrum.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>has<sp/>DEPENDENCY(MSSM_spectrum,<sp/>Spectrum*)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">myPipe<sp/>=<sp/>Pipes::exampleRead;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*TAG*/</highlight><highlight class="normal"><sp/>Spectrum<sp/>fullspectrum<sp/>=<sp/>*myPipe::Dep::MSSM_spectrum;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SubSpectrum*<sp/>spec<sp/>=<sp/>fullspectrum-&gt;get_HE();<sp/></highlight><highlight class="comment">//<sp/>MSSMSpec<sp/>SubSpectrum<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SubSpectrum*<sp/>SM<sp/><sp/><sp/>=<sp/>fullspectrum-&gt;get_LE();<sp/></highlight><highlight class="comment">//<sp/>QedQcdWrapper<sp/>SubSpectrum<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>report;<sp/></highlight><highlight class="comment">//<sp/>Information<sp/>about<sp/>any<sp/>problems<sp/>encountered</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>SLHAea<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>copies<sp/>the<sp/>data<sp/>out.<sp/>Could<sp/>possible<sp/>change<sp/>it<sp/>to<sp/>pass<sp/>out<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reference<sp/>instead,<sp/>or<sp/>have<sp/>another<sp/>function<sp/>to<sp/>do<sp/>that.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SLHAea::Coll<sp/>slhaea<sp/>=<sp/>fullspectrum-&gt;getSLHAea(2);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>testing,<sp/>write<sp/>this<sp/>to<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ofstream<sp/>out1;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out1.open(</highlight><highlight class="stringliteral">&quot;SpecBit/exampleRead_test.slha&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out1<sp/>&lt;&lt;<sp/>slhaea;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out1.close();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SLHAea::Coll<sp/>slhaea<sp/>=<sp/>spec-&gt;getSLHAea(2);<sp/>//<sp/>The<sp/>above<sp/>is<sp/>just<sp/>a<sp/>wrapper<sp/>for<sp/>this.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>this<sp/>is<sp/>a<sp/>valid<sp/>model<sp/>point,<sp/>return<sp/>true<sp/>and<sp/>dump<sp/>information,<sp/>else<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SLHAea<sp/>objects<sp/>behave<sp/>mostly<sp/>like<sp/>maps,<sp/>but<sp/>with<sp/>special<sp/>kinds<sp/>of<sp/>keys.<sp/>For</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;at&quot;<sp/>and<sp/>&quot;operator[]&quot;,<sp/>it<sp/>does<sp/>automatic<sp/>conversion,<sp/>but<sp/>for<sp/>&quot;find&quot;<sp/>it<sp/>does</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>not,<sp/>so<sp/>we<sp/>have<sp/>to<sp/>manually<sp/>do<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SLHAea::Block<sp/>spinfo<sp/>=<sp/>slhaea.at(</highlight><highlight class="stringliteral">&quot;SPINFO&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::vector&lt;std::string&gt;<sp/>k3(1,<sp/>&quot;3&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>k4(1,<sp/></highlight><highlight class="stringliteral">&quot;4&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>if<sp/>error<sp/>code<sp/>entries<sp/>exist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if(spinfo.find(k3)<sp/>==<sp/>spinfo.end()<sp/>and<sp/>spinfo.find(k4)<sp/>==<sp/>spinfo.end())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(spinfo.find(k4)<sp/>==<sp/>spinfo.end())</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Good<sp/>spectrum<sp/>found!<sp/>Inspecting<sp/>contents...&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>slhaea<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>to<sp/>file<sp/>so<sp/>we<sp/>can<sp/>check<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>filename(myPipe::runOptions-&gt;getValue&lt;std::string&gt;(</highlight><highlight class="stringliteral">&quot;output_slha_filename&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spec-&gt;writeSLHAfile(2,filename);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>BEGIN<sp/>DEMO<sp/>OF<sp/>SPECTRUM<sp/>OBJECT<sp/>AND<sp/>PARTICLE<sp/>DATABASE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//#define<sp/>ECHO(COMMAND)<sp/>cout<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/>&quot;<sp/>&lt;&lt;<sp/>STRINGIFY(COMMAND)<sp/>&lt;&lt;<sp/>&quot;<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>COMMAND<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Replacing<sp/>with<sp/>a<sp/>version<sp/>that<sp/>deals<sp/>with<sp/>SLHAea<sp/>access<sp/>errors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ECHO(COMMAND)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>try<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/>&quot;<sp/>&lt;&lt;<sp/>STRINGIFY(COMMAND)<sp/>&lt;&lt;<sp/>&quot;<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>COMMAND<sp/>&lt;&lt;<sp/>endl;\</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catch<sp/>(const<sp/>std::exception&amp;<sp/>e)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>add_error(report,e,STRINGIFY(COMMAND));<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>----------Test<sp/>particle<sp/>database<sp/>access<sp/>----------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>PDB<sp/>Models::ParticleDB()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>check<sp/>out<sp/>what<sp/>is<sp/>actually<sp/>in<sp/>the<sp/>database</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PDB.check_contents();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Demo<sp/>a<sp/>couple<sp/>of<sp/>particle<sp/>name<sp/>retrievals</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Demo<sp/>retrieval<sp/>of<sp/>lightest<sp/>neutralino<sp/>info<sp/>from<sp/>particle<sp/>database&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;-----------------------------------------------------------------&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.pdg_pair(</highlight><highlight class="stringliteral">&quot;~chi0_1&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>long<sp/>name,<sp/>retrieve<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.pdg_pair(&quot;~chi0&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>short<sp/>name<sp/>+<sp/>index,<sp/>retrieve<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.long_name(&quot;~chi0&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>short<sp/>name<sp/>+<sp/>index,<sp/>retrieve<sp/>long<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.long_name(std::make_pair(1000022,0))<sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integer,<sp/>retrieve<sp/>long<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.long_name(1000022,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integer,<sp/>retrieve<sp/>long<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.short_name_pair(&quot;~chi0_1&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>long<sp/>name,<sp/>retrieve<sp/>short<sp/>name<sp/>+<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.short_name_pair(std::make_pair(1000022,0))<sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>PDG<sp/>code<sp/>plus<sp/>context<sp/>integer,<sp/>retrieve<sp/>short<sp/>name<sp/>+<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.short_name_pair(1000022,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>PDG<sp/>code<sp/>plus<sp/>context<sp/>integer,<sp/>retrieve<sp/>short<sp/>name<sp/>+<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;Demo<sp/>retrieval<sp/>of<sp/>antiparticle<sp/>names/codes<sp/>using<sp/>particle<sp/>names/codes&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;-----------------------------------------------------------------&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>existence<sp/>in<sp/>various<sp/>ways</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(&quot;~chi0_1&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(&quot;~chi0&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(std::make_pair(&quot;~chi0&quot;,1))<sp/>)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(1000022,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(std::make_pair(1000022,0))<sp/>)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(&quot;~chi0_1&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>long<sp/>name,<sp/>retrieve<sp/>antiparticle<sp/>long<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(&quot;~chi0&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>short<sp/>name<sp/>+<sp/>index,<sp/>retrieve<sp/>antiparticle<sp/>short<sp/>name<sp/>+<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(std::make_pair(&quot;~chi0&quot;,1))<sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>short<sp/>name<sp/>+<sp/>index,<sp/>retrieve<sp/>antiparticle<sp/>short<sp/>name<sp/>+<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(1000022,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integet,<sp/>retrieve<sp/>antiparticle<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(std::make_pair(1000022,0))<sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integet,<sp/>retrieve<sp/>antiparticle<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(&quot;~chi+_1&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(&quot;~chi+&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(std::make_pair(&quot;~chi+&quot;,1))<sp/>)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(1000024,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(std::make_pair(1000024,0))<sp/>)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(&quot;~chi+_1&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>long<sp/>name,<sp/>retrieve<sp/>antiparticle<sp/>long<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(&quot;~chi+&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>short<sp/>name<sp/>+<sp/>index,<sp/>retrieve<sp/>antiparticle<sp/>short<sp/>name<sp/>+<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(std::make_pair(&quot;~chi+&quot;,1))<sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>short<sp/>name<sp/>+<sp/>index,<sp/>retrieve<sp/>antiparticle<sp/>short<sp/>name<sp/>+<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(1000024,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integet,<sp/>retrieve<sp/>antiparticle<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(std::make_pair(1000024,0))<sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integet,<sp/>retrieve<sp/>antiparticle<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(&quot;u_1&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(&quot;u&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(std::make_pair(&quot;u&quot;,1))<sp/>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(2,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.has_antiparticle(std::make_pair(2,0))<sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(&quot;u_1&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>long<sp/>name,<sp/>retrieve<sp/>antiparticle<sp/>long<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(&quot;u&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>short<sp/>name<sp/>+<sp/>index,<sp/>retrieve<sp/>antiparticle<sp/>short<sp/>name<sp/>+<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(std::make_pair(&quot;u&quot;,1))<sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>short<sp/>name<sp/>+<sp/>index,<sp/>retrieve<sp/>antiparticle<sp/>short<sp/>name<sp/>+<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(2,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integet,<sp/>retrieve<sp/>antiparticle<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.get_antiparticle(std::make_pair(2,0))<sp/><sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>Input<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integet,<sp/>retrieve<sp/>antiparticle<sp/>PDG<sp/>code<sp/>+<sp/>context<sp/>integer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;Demo<sp/>retrieval<sp/>when<sp/>no<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>name<sp/>exists&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;-----------------------------------------------------------------&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.pdg_pair(&quot;H+&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/>PDB.pdg_pair(&quot;H+&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>//<sp/>Error!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/>PDB.long_name(&quot;H+&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>//<sp/>Error!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.long_name(std::make_pair(37,0))<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/>PDB.long_name(37,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/>PDB.short_name_pair(&quot;H+&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>//<sp/>Error!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/>PDB.short_name_pair(std::make_pair(37,0))<sp/>)<sp/>//<sp/>Error!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/>PDB.short_name_pair(37,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>//<sp/>Error!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/>PDB.short_name_pair(37)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>//<sp/>Error!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----------------<sp/>Pole<sp/>masses<sp/>---------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;Begin<sp/>demo<sp/>retrievals<sp/>from<sp/>Spectrum<sp/>and<sp/>SubSpectrum<sp/>objects&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;-----------------------------------------------------------------&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;First,<sp/>general<sp/>methods<sp/>for<sp/>accessing<sp/>different<sp/>sorts<sp/>of<sp/>information.&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>At<sp/>the<sp/>moment<sp/>it<sp/>is<sp/>only<sp/>pole<sp/>masses<sp/>which<sp/>have<sp/>getters<sp/>overloaded<sp/>to<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>particle<sp/>database<sp/>information.<sp/>It<sp/>is<sp/>only<sp/>the<sp/>MASS<sp/>block<sp/>in<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>spectrum<sp/>generator<sp/>output<sp/>SLHA<sp/>files<sp/>which<sp/>use<sp/>PDG<sp/>numbers<sp/>anyway,<sp/>so<sp/>I</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>think<sp/>this<sp/>makes<sp/>sense.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;Lightest<sp/>neutral<sp/>Higgs<sp/>boson<sp/>pole<sp/>mass:&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(<sp/>PDB.short_name_pair(25,0)<sp/>)<sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(<sp/>PDB.long_name(25,0)<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(25,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(<sp/>PDB.pdg_pair(&quot;h0&quot;,1)<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;h0&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;h0_1&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(<sp/>PDB.short_name_pair(25,0)<sp/>)<sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(<sp/>PDB.long_name(25,0)<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(25,0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(<sp/>PDB.pdg_pair(&quot;h0&quot;,1)<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;h0&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;h0_1&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;Retrieval<sp/>of<sp/>Spectrum<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>contents,<sp/>with&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;correspondence<sp/>to<sp/>SLHAea<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>entries&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;-----------------------------------------------------------------&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MZ<sp/>was<sp/>a<sp/>bad<sp/>first<sp/>example;<sp/>it<sp/>is<sp/>empty<sp/>unless<sp/>you<sp/>switch<sp/>on<sp/>the<sp/>SM<sp/>pole<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculator<sp/>for<sp/>flexiblesusy.<sp/>We<sp/>do<sp/>not<sp/>yet<sp/>pass<sp/>any<sp/>input<sp/>value<sp/>of<sp/>MZ<sp/>though</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Similar<sp/>issues<sp/>with<sp/>other<sp/>gauge<sp/>boson<sp/>masses.<sp/>So<sp/>don&apos;t<sp/>use<sp/>these<sp/>yet<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>you&apos;ll<sp/>get<sp/>zero<sp/>for<sp/>all<sp/>these<sp/>masses.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;Gauge<sp/>boson<sp/>pole<sp/>masses:&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;Z0&quot;)<sp/>)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;Z0&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(4).at(1)<sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;gamma&quot;)<sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;gamma&quot;)<sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;<sp/><sp/>***Not<sp/>in<sp/>slha***&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;W+&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;W+&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;MASS&quot;).at(24).at(1)<sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;g&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;g&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;<sp/><sp/>***Not<sp/>in<sp/>slha***&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;Quark<sp/>pole<sp/>masses<sp/>(actually<sp/>the<sp/>slha<sp/>entries<sp/>are<sp/>MSbar<sp/>except<sp/>the<sp/>top<sp/>mass):&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>I&apos;m<sp/>a<sp/>little<sp/>unclear<sp/>on<sp/>what<sp/>the<sp/>pole<sp/>masses<sp/>for<sp/>the<sp/>lighter<sp/>quarks<sp/>mean,<sp/>since<sp/>I<sp/>thought</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>that<sp/>non-perturbative<sp/>effects<sp/>made<sp/>definining<sp/>them<sp/>difficult...<sp/>well<sp/>anyway<sp/>will<sp/>have</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>ask<sp/>Peter<sp/>what<sp/>is<sp/>being<sp/>computed<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;u&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/>)<sp/><sp/>//<sp/>i.e.<sp/>up<sp/>(mass<sp/>eigenstate)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;<sp/><sp/>***u<sp/>Pole<sp/>mass<sp/>not<sp/>well<sp/>defined***&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(22).at(1)<sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>mu(2<sp/>GeV)^MS-bar,<sp/>not<sp/>pole<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;u&quot;,2)<sp/><sp/><sp/><sp/><sp/><sp/>)<sp/><sp/>//<sp/>i.e.<sp/>charm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;<sp/><sp/>***c<sp/>Pole<sp/>mass<sp/>not<sp/>well<sp/>defined***&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(24).at(1)<sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>mc(mc)^MS-bar,<sp/>not<sp/>pole<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;u&quot;,3)<sp/><sp/><sp/><sp/><sp/><sp/>)<sp/><sp/>//<sp/>i.e.<sp/>top</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;t&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;u&quot;,3)<sp/><sp/><sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>top</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(6).at(1)<sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;d&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/>)<sp/><sp/>//<sp/>i.e.<sp/>down</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;<sp/><sp/>***d<sp/>Pole<sp/>mass<sp/>not<sp/>well<sp/>defined***&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(21).at(1)<sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>md(2<sp/>GeV)^MS-bar,<sp/>not<sp/>pole<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;d&quot;,2)<sp/><sp/><sp/><sp/><sp/><sp/>)<sp/><sp/>//<sp/>i.e.<sp/>strange</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;<sp/><sp/>***s<sp/>Pole<sp/>mass<sp/>not<sp/>well<sp/>defined***&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(23).at(1)<sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>ms(2<sp/>GeV)^MS-bar,<sp/>not<sp/>pole<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;d&quot;,3)<sp/><sp/><sp/><sp/><sp/><sp/>)<sp/><sp/>//<sp/>i.e.<sp/>bottom</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;b&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;d&quot;,3)<sp/><sp/><sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>bottom</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(5).at(1)<sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>mb(mb)^MS-bar,<sp/>not<sp/>pole<sp/>mass.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;Charged<sp/>fermions<sp/>pole<sp/>masses:&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;e-&quot;,1)<sp/><sp/><sp/><sp/><sp/>)<sp/><sp/>//<sp/>i.e.<sp/>electron</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;e-&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;e-&quot;,1)<sp/><sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>electron</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(11).at(1)<sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;e-&quot;,2)<sp/><sp/><sp/><sp/><sp/>)<sp/><sp/>//<sp/>i.e.<sp/>muon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;mu-&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;e-&quot;,2)<sp/><sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>muon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(13).at(1)<sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;e-&quot;,3)<sp/><sp/><sp/><sp/><sp/>)<sp/><sp/>//<sp/>i.e.<sp/>tau</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;tau-&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;e-&quot;,3)<sp/><sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>tau</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(7).at(1)<sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;Neutrinos<sp/>pole<sp/>masses:&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>will<sp/>produce<sp/>errors<sp/>because<sp/>currently<sp/>no<sp/>neutrino<sp/>mass<sp/>getters<sp/>are<sp/>hooked<sp/>up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;nu&quot;,1)<sp/><sp/><sp/><sp/><sp/>)<sp/><sp/>//<sp/>Just<sp/>mass<sp/>ordered<sp/>(if<sp/>there<sp/>is<sp/>mixing)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;nu&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;nu&quot;,1)<sp/><sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Just<sp/>mass<sp/>ordered<sp/>(if<sp/>there<sp/>is<sp/>mixing)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(12).at(1)<sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;nu&quot;,2)<sp/><sp/><sp/><sp/><sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;nu&quot;,2)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;nu&quot;,2)<sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(14).at(1)<sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;nu&quot;,3)<sp/><sp/><sp/><sp/><sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;nu&quot;,3)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>SM-&gt;get_Pole_Mass(&quot;nu&quot;,3)<sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;SMINPUTS&quot;).at(8).at(1)<sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>for<sp/>SUSY<sp/>particles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;MSSM<sp/>Higgs<sp/>sector<sp/>pole<sp/>masses:&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;h0&quot;,1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;h0&quot;,1)<sp/><sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Lightest<sp/>neutral<sp/>Higgs<sp/>boson</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;MASS&quot;).at(25).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;h0&quot;,2)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;h0&quot;,2)<sp/><sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Heavy<sp/>neutral<sp/>Higgs<sp/>boson</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;MASS&quot;).at(35).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;H+&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;H+&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Charged<sp/>Higgs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;MASS&quot;).at(37).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;A0&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;A0&quot;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Pseudoscalar<sp/>neutral<sp/>Higgs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;MASS&quot;).at(36).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>I&apos;m<sp/>going<sp/>to<sp/>use<sp/>these<sp/>nested<sp/>functors<sp/>to<sp/>save<sp/>lots<sp/>of<sp/>typing<sp/>for<sp/>the<sp/>rest.<sp/>It<sp/>is<sp/>just<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>same<sp/>as<sp/>the<sp/>examples<sp/>above,<sp/>except<sp/>that<sp/>the<sp/>PDG<sp/>codes<sp/>are<sp/>retrieved<sp/>from<sp/>the<sp/>particle<sp/>database.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>PDG<sp/>code<sp/>-<sp/>string<sp/>name<sp/>correspondences<sp/>are<sp/>defined<sp/>in<sp/>&apos;Models/src/particle_database.cpp&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>get_polemass_functor</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Single<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>longname)</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo1,<sp/>echo2,<sp/>echo3;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo1<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>fullspectrum-&gt;get_Pole_Mass(&quot;</highlight><highlight class="normal">&lt;&lt;longname&lt;&lt;</highlight><highlight class="stringliteral">&quot;)<sp/>=<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value1<sp/>=<sp/>fullspectrum-&gt;get_Pole_Mass(longname);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo2<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;</highlight><highlight class="normal">&lt;&lt;longname&lt;&lt;</highlight><highlight class="stringliteral">&quot;)<sp/>=<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value2<sp/>=<sp/>spec-&gt;get_Pole_Mass(longname);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo3<sp/>&lt;&lt;<sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>slhaea.at(\&quot;MASS\&quot;).at(&quot;</highlight><highlight class="normal">&lt;&lt;PDB.pdg_pair(longname).first&lt;&lt;</highlight><highlight class="stringliteral">&quot;).at(1)<sp/>=<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>value3<sp/>=<sp/>slhaea.at(</highlight><highlight class="stringliteral">&quot;MASS&quot;</highlight><highlight class="normal">).at(<sp/>PDB.pdg_pair(longname).first<sp/>).at(1);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo1.str()<sp/>&lt;&lt;<sp/>value1<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo2.str()<sp/>&lt;&lt;<sp/>value2<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo3.str()<sp/>&lt;&lt;<sp/>value3<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Range<sp/>of<sp/>indexes<sp/>masses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>longname,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>from,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>to)</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=from;<sp/>i&lt;=to;<sp/>++i)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo1;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo2;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo1<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>spec-&gt;get_Pole_Mass(&quot;</highlight><highlight class="normal">&lt;&lt;longname&lt;&lt;</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">&lt;&lt;i&lt;&lt;</highlight><highlight class="stringliteral">&quot;)<sp/>=<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value1<sp/>=<sp/>spec-&gt;get_Pole_Mass(longname,i);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo2<sp/>&lt;&lt;<sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>slhaea.at(\&quot;MASS\&quot;).at(&quot;</highlight><highlight class="normal">&lt;&lt;PDB.pdg_pair(longname,i).first&lt;&lt;</highlight><highlight class="stringliteral">&quot;).at(1)<sp/>=<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>value2<sp/>=<sp/>slhaea.at(</highlight><highlight class="stringliteral">&quot;MASS&quot;</highlight><highlight class="normal">).at(<sp/>PDB.pdg_pair(longname,i).first<sp/>).at(1);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo1.str()<sp/>&lt;&lt;<sp/>value1<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo2.str()<sp/>&lt;&lt;<sp/>value2<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_polemass_functor(std::ostringstream&amp;<sp/>report,<sp/></highlight><highlight class="comment">/*TAG*/</highlight><highlight class="normal"><sp/>Spectrum<sp/>fullin,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SubSpectrum*<sp/>specin,<sp/>SLHAea::Coll&amp;<sp/>slhaeain)</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>report(report)</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>fullspectrum(fullin)</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>spec(specin)</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>slhaea(slhaeain)</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream&amp;<sp/>report;</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*TAG*/</highlight><highlight class="normal"><sp/>Spectrum<sp/>fullspectrum;</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SubSpectrum*<sp/>spec;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SLHAea::Coll<sp/>slhaea;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_polemass_functor<sp/>get_polemass(report,fullspectrum,spec,slhaea);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl&lt;&lt;</highlight><highlight class="stringliteral">&quot;Gaugino<sp/>pole<sp/>masses:&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_polemass(</highlight><highlight class="stringliteral">&quot;~g&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_polemass(</highlight><highlight class="stringliteral">&quot;~chi+&quot;</highlight><highlight class="normal">,1,2);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_polemass(</highlight><highlight class="stringliteral">&quot;~chi0&quot;</highlight><highlight class="normal">,1,4);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl&lt;&lt;</highlight><highlight class="stringliteral">&quot;Squark<sp/>pole<sp/>masses:&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_polemass(</highlight><highlight class="stringliteral">&quot;~d&quot;</highlight><highlight class="normal">,1,6);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_polemass(</highlight><highlight class="stringliteral">&quot;~u&quot;</highlight><highlight class="normal">,1,6);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl&lt;&lt;</highlight><highlight class="stringliteral">&quot;Slepton<sp/>pole<sp/>masses:&quot;</highlight><highlight class="normal">&lt;&lt;endl&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_polemass(</highlight><highlight class="stringliteral">&quot;~e-&quot;</highlight><highlight class="normal">,1,6);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_polemass(</highlight><highlight class="stringliteral">&quot;~nu&quot;</highlight><highlight class="normal">,1,3);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Mixing<sp/>matrices:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note,<sp/>currently<sp/>we<sp/>are<sp/>not<sp/>using<sp/>a<sp/>matrix<sp/>object<sp/>or<sp/>any<sp/>such<sp/>thing,<sp/>so<sp/>you<sp/>have<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>extract<sp/>the<sp/>elements<sp/>of<sp/>each<sp/>matrix<sp/>one<sp/>at<sp/>a<sp/>time.<sp/>It<sp/>would<sp/>probably<sp/>be<sp/>handy<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>such<sp/>a<sp/>return<sp/>type<sp/>though.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>GET_MIX_MATRIX_EL(r,<sp/>PRODUCT)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="396"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="397"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>label<sp/>=<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="398"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>block<sp/>=<sp/>BOOST_PP_SEQ_ELEM(1,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="399"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>i<sp/>=<sp/>BOOST_PP_SEQ_ELEM(2,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="400"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>j<sp/>=<sp/>BOOST_PP_SEQ_ELEM(3,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="401"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>try{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="402"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="403"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="404"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo1<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/>spec-&gt;get_Pole_Mixing(&quot;&lt;&lt;label&lt;&lt;&quot;,&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;)<sp/>=<sp/>&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="405"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>value1<sp/>=<sp/>spec-&gt;get_Pole_Mixing(label,i,j);<sp/>\</highlight></codeline>
+<codeline lineno="406"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo2<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/>SLHAea::to&lt;double&gt;(<sp/>slhaea.at(&quot;&lt;&lt;block&lt;&lt;&quot;).at(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;).at(2)<sp/>)<sp/>=<sp/>&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="407"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>value2<sp/>=<sp/>SLHAea::to&lt;double&gt;(<sp/>slhaea.at(block).at(i,j).at(2)<sp/>);<sp/>\</highlight></codeline>
+<codeline lineno="408"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo1.str()<sp/>&lt;&lt;<sp/>value1<sp/>&lt;&lt;endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="409"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo2.str()<sp/>&lt;&lt;<sp/>value2<sp/>&lt;&lt;endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="410"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="411"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="412"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catch<sp/>(const<sp/>std::exception&amp;<sp/>e)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="413"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>add_error(report,e,label+&quot;:<sp/>&quot;+block);<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="414"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>GET_MIX_MATRIX(NAME,BLOCK,__IND1,__IND2)<sp/>BOOST_PP_SEQ_FOR_EACH_PRODUCT(GET_MIX_MATRIX_EL,<sp/>((NAME))((BLOCK))(BOOST_PP_TUPLE_TO_SEQ(__IND1))(BOOST_PP_TUPLE_TO_SEQ(__IND2)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>names<sp/>here<sp/>could<sp/>perhaps<sp/>be<sp/>improved.<sp/>They<sp/>are<sp/>not<sp/>so<sp/>immediately<sp/>obvious<sp/>to<sp/>me.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MIX_MATRIX(</highlight><highlight class="stringliteral">&quot;~chi-&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;UMIX&quot;</highlight><highlight class="normal">,(1,2),(1,2))<sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MIX_MATRIX(&quot;~chi+&quot;,&quot;VMIX&quot;,(1,2),(1,2))<sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MIX_MATRIX(&quot;A0&quot;,&quot;PSEUDOSCALARMIX&quot;,(1,2),(1,2))<sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MIX_MATRIX(&quot;~d&quot;,&quot;DSQMIX&quot;,(1,2,3,4,5,6),(1,2,3,4,5,6))<sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MIX_MATRIX(&quot;~e-&quot;,&quot;SELMIX&quot;,(1,2,3,4,5,6),(1,2,3,4,5,6))<sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MIX_MATRIX(&quot;h0&quot;,&quot;SCALARMIX&quot;,(1,2),(1,2))<sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MIX_MATRIX(&quot;~chi0&quot;,&quot;NMIX&quot;,(1,2,3,4),(1,2,3,4))<sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MIX_MATRIX(&quot;H+&quot;,&quot;CHARGEMIX&quot;,(1,2),(1,2))<sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MIX_MATRIX(&quot;~u&quot;,&quot;USQMIX&quot;,(1,2,3,4,5,6),(1,2,3,4,5,6))<sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MIX_MATRIX(&quot;~nu&quot;,&quot;SNUMIX&quot;,(1,2,3),(1,2,3))<sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Next<sp/>up:<sp/>running<sp/>parameters&quot;<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;These<sp/>are<sp/>all<sp/>given<sp/>in<sp/>the<sp/>DRbar<sp/>scheme,<sp/>at<sp/>least<sp/>when<sp/>running<sp/>FlexibleSUSY<sp/>or<sp/>SoftSUSY.<sp/>&quot;;</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;There<sp/>may<sp/>be<sp/>some<sp/>switching<sp/>or<sp/>converting<sp/>once<sp/>other<sp/>spectrum<sp/>generator<sp/>are<sp/>added.&quot;<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Spectrum<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>running<sp/>parameters<sp/>are<sp/>currently<sp/>defined<sp/>at<sp/>scale<sp/>Q=&quot;</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec-&gt;GetScale()<sp/>&lt;&lt;<sp/>&quot;<sp/>[GeV]&quot;<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;--<sp/>Dimensionless<sp/>parameters<sp/>--&quot;<sp/>&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>&quot;Gauge<sp/>couplings:&quot;<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_dimensionless_parameter(&quot;g1&quot;)<sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>U_Y(1)<sp/>gauge<sp/>coupling<sp/>in<sp/>SU(5)<sp/>normalisation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;GAUGE&quot;).at(1).at(1)<sp/><sp/>)<sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>in<sp/>the<sp/>Standard<sp/>Model<sp/>normalisation<sp/>as<sp/>per<sp/>SLHA<sp/>conventions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Note:<sp/>&quot;<sp/>&lt;&lt;<sp/>spec-&gt;get_dimensionless_parameter(&quot;g1&quot;)<sp/>&lt;&lt;<sp/>&quot;<sp/>*<sp/>sqrt(3/5)<sp/>=<sp/>&quot;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>spec-&gt;get_dimensionless_parameter(&quot;g1&quot;)*sqrt(3./5.)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_dimensionless_parameter(&quot;g2&quot;)<sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>SU(2)<sp/>gauge<sp/>coupling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;GAUGE&quot;).at(2).at(1)<sp/><sp/>)</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_dimensionless_parameter(&quot;g3&quot;)<sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>SU(3)<sp/>gauge<sp/>coupling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;GAUGE&quot;).at(3).at(1)<sp/><sp/>)</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>&quot;Yukawa<sp/>matrices:&quot;<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note,<sp/>currently<sp/>we<sp/>are<sp/>not<sp/>using<sp/>a<sp/>matrix<sp/>object<sp/>or<sp/>any<sp/>such<sp/>thing,<sp/>so<sp/>you<sp/>have<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>extract<sp/>the<sp/>elements<sp/>of<sp/>the<sp/>matrix<sp/>one<sp/>at<sp/>a<sp/>time.<sp/>It<sp/>would<sp/>probably<sp/>be<sp/>handy<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>such<sp/>a<sp/>return<sp/>type<sp/>though.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#define<sp/>GET_MATRIX_EL(r,<sp/>PRODUCT)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="460"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="461"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>label<sp/>=<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="462"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>block<sp/>=<sp/>BOOST_PP_SEQ_ELEM(1,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="463"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>i<sp/>=<sp/>BOOST_PP_SEQ_ELEM(2,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="464"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>j<sp/>=<sp/>BOOST_PP_SEQ_ELEM(3,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="465"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>try{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="466"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="467"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="468"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo1<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/>spec-&gt;get_dimensionless_parameter(&quot;&lt;&lt;label&lt;&lt;&quot;,&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;)<sp/>=<sp/>&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="469"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>value1<sp/>=<sp/>spec-&gt;get_dimensionless_parameter(label,i,j);<sp/>\</highlight></codeline>
+<codeline lineno="470"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo2<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/>SLHAea::to&lt;double&gt;(<sp/>slhaea.at(&quot;&lt;&lt;block&lt;&lt;&quot;).at(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;).at(2)<sp/>)<sp/>=<sp/>&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="471"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>value2<sp/>=<sp/>SLHAea::to&lt;double&gt;(<sp/>slhaea.at(block).at(i,j).at(2)<sp/>);<sp/>\</highlight></codeline>
+<codeline lineno="472"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo1.str()<sp/>&lt;&lt;<sp/>value1<sp/>&lt;&lt;endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="473"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo2.str()<sp/>&lt;&lt;<sp/>value2<sp/>&lt;&lt;endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="474"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="475"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>catch<sp/>(const<sp/>std::exception&amp;<sp/>e)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="476"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>add_error(report,e,label+&quot;:<sp/>&quot;+block);<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="477"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>GET_MATRIX(NAME,BLOCK,__IND1,__IND2)<sp/>BOOST_PP_SEQ_FOR_EACH_PRODUCT(GET_MATRIX_EL,<sp/>((NAME))((BLOCK))(BOOST_PP_TUPLE_TO_SEQ(__IND1))(BOOST_PP_TUPLE_TO_SEQ(__IND2)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"></highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MATRIX(</highlight><highlight class="stringliteral">&quot;Yu&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;YU&quot;</highlight><highlight class="normal">,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MATRIX(&quot;Yd&quot;,&quot;YD&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_MATRIX(&quot;Ye&quot;,&quot;YE&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mass<sp/>dimension<sp/>1<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;MSSM<sp/>mass<sp/>dimension<sp/>1<sp/>running<sp/>parameters&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_mass_parameter(&quot;M1&quot;)<sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Gaugino<sp/>mass<sp/>parameter<sp/>&quot;MassB&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;MSOFT&quot;).at(1).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_mass_parameter(&quot;M2&quot;)<sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Gaugino<sp/>mass<sp/>parameter<sp/>&quot;MassWB&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;MSOFT&quot;).at(2).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_mass_parameter(&quot;M3&quot;)<sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Gaugino<sp/>mass<sp/>parameter<sp/>&quot;MassG&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;MSOFT&quot;).at(3).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_mass_parameter(&quot;Mu&quot;)<sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Superpotential<sp/>mu<sp/>parameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;HMIX&quot;).at(1).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_mass_parameter(&quot;vd&quot;)<sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Down-type<sp/>Higgs<sp/>vev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;HMIX&quot;).at(102).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_mass_parameter(&quot;vu&quot;)<sp/><sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Up-type<sp/>Higgs<sp/>vev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;HMIX&quot;).at(103).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Matrices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#define<sp/>GET_M1_MATRIX_EL(r,<sp/>PRODUCT)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="512"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="513"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>label<sp/>=<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="514"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>block<sp/>=<sp/>BOOST_PP_SEQ_ELEM(1,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="515"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>i<sp/>=<sp/>BOOST_PP_SEQ_ELEM(2,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="516"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>j<sp/>=<sp/>BOOST_PP_SEQ_ELEM(3,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="517"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>try{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="518"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="519"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="520"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo1<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/>spec-&gt;get_mass_parameter(&quot;&lt;&lt;label&lt;&lt;&quot;,&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;)<sp/>=<sp/>&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="521"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>value1<sp/>=<sp/>spec-&gt;get_mass_parameter(label,i,j);<sp/>\</highlight></codeline>
+<codeline lineno="522"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo2<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/>SLHAea::to&lt;double&gt;(<sp/>slhaea.at(&quot;&lt;&lt;block&lt;&lt;&quot;).at(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;).at(2)<sp/>)<sp/>=<sp/>&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="523"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>value2<sp/>=<sp/>SLHAea::to&lt;double&gt;(<sp/>slhaea.at(block).at(i,j).at(2)<sp/>);<sp/>\</highlight></codeline>
+<codeline lineno="524"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo1.str()<sp/>&lt;&lt;<sp/>value1<sp/>&lt;&lt;endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="525"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo2.str()<sp/>&lt;&lt;<sp/>value2<sp/>&lt;&lt;endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="526"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="527"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>catch<sp/>(const<sp/>std::exception&amp;<sp/>e)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="528"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>add_error(report,e,label+&quot;:<sp/>&quot;+block);<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="529"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>GET_M1_MATRIX(NAME,BLOCK,__IND1,__IND2)<sp/>BOOST_PP_SEQ_FOR_EACH_PRODUCT(GET_M1_MATRIX_EL,<sp/>((NAME))((BLOCK))(BOOST_PP_TUPLE_TO_SEQ(__IND1))(BOOST_PP_TUPLE_TO_SEQ(__IND2)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="532"><highlight class="normal"></highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Triliner<sp/>coupling<sp/>matrices?<sp/>SLHA<sp/>says<sp/>these<sp/>blocks<sp/>should<sp/>be<sp/>called<sp/>AU,AD,AE,<sp/>not<sp/>TU,TD,TE<sp/>though,<sp/>so<sp/>I&apos;m<sp/>not<sp/>sure.<sp/>Need<sp/>to<sp/>check<sp/>with<sp/>Peter.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"></highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Seem<sp/>to<sp/>be<sp/>the<sp/>trilinears,<sp/>and<sp/>TYu<sp/>and<sp/>au<sp/>etc.<sp/>seem<sp/>to<sp/>be<sp/>equal.<sp/>Ask<sp/>Peter...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M1_MATRIX(</highlight><highlight class="stringliteral">&quot;TYu&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;TU&quot;</highlight><highlight class="normal">,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M1_MATRIX(&quot;TYd&quot;,&quot;TD&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M1_MATRIX(&quot;TYe&quot;,&quot;TE&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M1_MATRIX(&quot;au&quot;,&quot;TU&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M1_MATRIX(&quot;ad&quot;,&quot;TD&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M1_MATRIX(&quot;ae&quot;,&quot;TE&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mass<sp/>dimension<sp/>2<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;&quot;MSSM<sp/>mass<sp/>dimension<sp/>2<sp/>running<sp/>parameters&quot;&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_mass2_parameter(&quot;mHd2&quot;)<sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Down-type<sp/>Higgs<sp/>soft<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;MSOFT&quot;).at(21).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_mass2_parameter(&quot;mHu2&quot;)<sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Up-type<sp/>Higgs<sp/>soft<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;MSOFT&quot;).at(22).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>spec-&gt;get_mass2_parameter(&quot;BMu&quot;)<sp/><sp/><sp/>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Higgs<sp/>bilinear<sp/>soft<sp/>parameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ECHO(<sp/><sp/>slhaea.at(&quot;HMIX&quot;).at(101).at(1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"></highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Matrices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="561"><highlight class="normal"></highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#define<sp/>GET_M2_MATRIX_EL(r,<sp/>PRODUCT)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="563"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="564"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>label<sp/>=<sp/>BOOST_PP_SEQ_ELEM(0,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="565"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>block<sp/>=<sp/>BOOST_PP_SEQ_ELEM(1,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="566"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>i<sp/>=<sp/>BOOST_PP_SEQ_ELEM(2,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="567"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>j<sp/>=<sp/>BOOST_PP_SEQ_ELEM(3,<sp/>PRODUCT);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="568"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="569"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>try<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="570"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>echo2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="571"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo1<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/>spec-&gt;get_mass2_parameter(&quot;&lt;&lt;label&lt;&lt;&quot;,&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;)<sp/>=<sp/>&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="572"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>value1<sp/>=<sp/>spec-&gt;get_mass2_parameter(label,i,j);<sp/>\</highlight></codeline>
+<codeline lineno="573"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo2<sp/>&lt;&lt;<sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/>SLHAea::to&lt;double&gt;(<sp/>slhaea.at(&quot;&lt;&lt;block&lt;&lt;&quot;).at(&quot;&lt;&lt;i&lt;&lt;&quot;,&quot;&lt;&lt;j&lt;&lt;&quot;).at(2)<sp/>)<sp/>=<sp/>&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="574"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>value2<sp/>=<sp/>SLHAea::to&lt;double&gt;(<sp/>slhaea.at(block).at(i,j).at(2)<sp/>);<sp/>\</highlight></codeline>
+<codeline lineno="575"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo1.str()<sp/>&lt;&lt;<sp/>value1<sp/>&lt;&lt;endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="576"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>echo2.str()<sp/>&lt;&lt;<sp/>value2<sp/>&lt;&lt;endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="577"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="578"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>catch<sp/>(const<sp/>std::exception&amp;<sp/>e)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="579"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>add_error(report,e,label+&quot;:<sp/>&quot;+block);<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="580"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="581"><highlight class="normal"></highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>GET_M2_MATRIX(NAME,BLOCK,__IND1,__IND2)<sp/>BOOST_PP_SEQ_FOR_EACH_PRODUCT(GET_M2_MATRIX_EL,<sp/>((NAME))((BLOCK))(BOOST_PP_TUPLE_TO_SEQ(__IND1))(BOOST_PP_TUPLE_TO_SEQ(__IND2)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="583"><highlight class="normal"></highlight></codeline>
+<codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Mass<sp/>matrices:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight></codeline>
+<codeline lineno="586"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M2_MATRIX(</highlight><highlight class="stringliteral">&quot;mq2&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;MSQ2&quot;</highlight><highlight class="normal">,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="587"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M2_MATRIX(&quot;mu2&quot;,&quot;MSU2&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M2_MATRIX(&quot;md2&quot;,&quot;MSD2&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M2_MATRIX(&quot;me2&quot;,&quot;MSE2&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GET_M2_MATRIX(&quot;ml2&quot;,&quot;MSL2&quot;,(1,2,3),(1,2,3))<sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"></highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Testing<sp/>set_override<sp/>functions&quot;<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"></highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Original<sp/>M1:&quot;<sp/>&lt;&lt;<sp/>spec-&gt;get_mass_parameter(&quot;M1&quot;)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spec-&gt;set_override_mass_parameter(-666,&quot;M1&quot;);</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Override<sp/>M1:&quot;<sp/>&lt;&lt;<sp/>spec-&gt;get_mass_parameter(&quot;M1&quot;)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"></highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Original<sp/>~e-(1):&quot;<sp/>&lt;&lt;<sp/>spec-&gt;get_Pole_Mass(&quot;~e-&quot;,1)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spec-&gt;set_override_Pole_Mass(-667,&quot;~e-&quot;,1);</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Override<sp/>~e-(1):&quot;<sp/>&lt;&lt;<sp/>spec-&gt;get_Pole_Mass(&quot;~e-&quot;,1)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"></highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Original<sp/>ml2(1,1):&quot;<sp/>&lt;&lt;<sp/>spec-&gt;get_mass2_parameter(&quot;ml2&quot;,1,1)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spec-&gt;set_override_mass2_parameter(-668,&quot;ml2&quot;,1,1);</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Override<sp/>ml2(1,1):&quot;<sp/>&lt;&lt;<sp/>spec-&gt;get_mass2_parameter(&quot;ml2&quot;,1,1)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;has<sp/>&apos;new_entry&apos;?<sp/>&quot;<sp/>&lt;&lt;<sp/>spec-&gt;has_mass_parameter(&quot;new_entry&quot;)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;...&quot;<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//spec-&gt;set_override_mass2_parameter(-1234,&quot;new_entry&quot;);<sp/>//<sp/>incorrect:<sp/>safety<sp/>still<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="615"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spec-&gt;set_override_mass_parameter(-1234,&quot;new_entry&quot;,false);<sp/></highlight><highlight class="comment">//<sp/>correct:<sp/>safety<sp/>check<sp/>turned<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="616"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;has<sp/>&apos;new_entry&apos;?<sp/>&quot;<sp/>&lt;&lt;<sp/>spec-&gt;has_mass_parameter(&quot;new_entry&quot;)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="617"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;new_entry<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>spec-&gt;get_mass_parameter(&quot;new_entry&quot;)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"></highlight></codeline>
+<codeline lineno="620"><highlight class="normal"></highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Things<sp/>left<sp/>to<sp/>add<sp/>to<sp/>demo:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>Tree-level<sp/>masses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>Standard<sp/>Model<sp/>mixings<sp/>(need<sp/>to<sp/>be<sp/>added<sp/>to<sp/>MSSMSpec<sp/>as<sp/>well)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>some<sp/>extra<sp/>stuff<sp/>to<sp/>do<sp/>regarding<sp/>organising<sp/>Standard<sp/>Model<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>parameters<sp/>(and<sp/>computing/transferring<sp/>the<sp/>pole<sp/>masses)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="626"><highlight class="normal"></highlight></codeline>
+<codeline lineno="627"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Test<sp/>report:&quot;<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>report.str();</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"></highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpecBit_warning().raise(LOCAL_INFO,&quot;\n<sp/>***<sp/>Stopped<sp/>on<sp/>purpose<sp/>to<sp/>examine<sp/>spectrum<sp/>contents<sp/>***&quot;);</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//else<sp/>if(spinfo.find(k3)<sp/>!=<sp/>spinfo.end())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="634"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;Bad<sp/>spectrum:<sp/>&quot;<sp/>&lt;&lt;<sp/>spinfo.at(3)<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>result<sp/>=<sp/>1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>if(spinfo.find(k4)<sp/>!=<sp/>spinfo.end())</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Bad<sp/>spectrum:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>spinfo.at(4)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="643"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="644"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpecBit_error().raise(LOCAL_INFO,</highlight><highlight class="stringliteral">&quot;Bug<sp/>in<sp/>exampleRead<sp/>&apos;if&apos;<sp/>logic&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="645"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"></highlight></codeline>
+<codeline lineno="648"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="649"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="650"><highlight class="normal"></highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"></highlight></codeline>
+<codeline lineno="653"><highlight class="normal"></highlight></codeline>
+<codeline lineno="654"><highlight class="normal"></highlight></codeline>
+<codeline lineno="655"><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"></highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"></highlight></codeline>
+<codeline lineno="662"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/examples/SpecBit_examples.cpp"/>
+  </compounddef>
+</doxygen>

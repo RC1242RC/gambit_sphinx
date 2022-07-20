@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="FlavBit__standalone__example_8cpp" kind="file" language="C++">
+    <compoundname>FlavBit_standalone_example.cpp</compoundname>
+    <includes local="yes">gambit/Elements/standalone_module.hpp</includes>
+    <includes local="yes">gambit/FlavBit/FlavBit_rollcall.hpp</includes>
+    <includes local="yes">gambit/Elements/spectrum_factories.hpp</includes>
+    <includes local="yes">gambit/Models/SimpleSpectra/MSSMSimpleSpec.hpp</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>gambit/Elements/standalone_module.hpp</label>
+      </node>
+      <node id="3">
+        <label>gambit/FlavBit/FlavBit_rollcall.hpp</label>
+      </node>
+      <node id="4">
+        <label>gambit/Elements/spectrum_factories.hpp</label>
+      </node>
+      <node id="1">
+        <label>FlavBit_standalone_example.cpp</label>
+        <link refid="FlavBit__standalone__example_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>gambit/Models/SimpleSpectra/MSSMSimpleSpec.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceFlavBit_1_1Functown">FlavBit::Functown</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="FlavBit__standalone__example_8cpp_1abb948f24c3da4cd143295ebcd04c1804" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string infile</definition>
+        <argsstring>(&quot;FlavBit/data/example.slha&quot;)</argsstring>
+        <name>infile</name>
+        <param>
+          <type>&quot;FlavBit/data/example.slha&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/FlavBit/examples/FlavBit_standalone_example.cpp" line="41" column="13" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/FlavBit/examples/FlavBit_standalone_example.cpp" declline="41" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="FlavBit__standalone__example_8cpp_1a4742a6f86517940537356782061b2bdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QUICK_FUNCTION</definition>
+        <argsstring>(FlavBit, MSSM_spectrum, NEW_CAPABILITY, relabelSpectrum, Spectrum,(MSSM30atQ, MSSM30atMGUT),(unimproved_MSSM_spectrum, Spectrum)) namespace Gambit</argsstring>
+        <name>QUICK_FUNCTION</name>
+        <param>
+          <type>FlavBit</type>
+        </param>
+        <param>
+          <type>MSSM_spectrum</type>
+        </param>
+        <param>
+          <type>NEW_CAPABILITY</type>
+        </param>
+        <param>
+          <type>relabelSpectrum</type>
+        </param>
+        <param>
+          <type>Spectrum</type>
+        </param>
+        <param>
+          <type>(MSSM30atQ, MSSM30atMGUT)</type>
+        </param>
+        <param>
+          <type>(unimproved_MSSM_spectrum, Spectrum)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Make an unimproved GAMBIT spectrum object from an SLHA file</para>
+<para>Relabel it as a complete spectrum</para>
+<para>W decays <ndash/> only need the total width for SuperIso</para>
+<para>Z decays <ndash/> only need the total width for SuperIso</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/FlavBit/examples/FlavBit_standalone_example.cpp" line="44" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/FlavBit/examples/FlavBit_standalone_example.cpp" bodystart="44" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="FlavBit__standalone__example_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/FlavBit/examples/FlavBit_standalone_example.cpp" line="80" column="5" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/FlavBit/examples/FlavBit_standalone_example.cpp" bodystart="80" bodyend="387"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Always<sp/>required<sp/>in<sp/>any<sp/>standalone<sp/>module<sp/>main<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/standalone_module.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/FlavBit/FlavBit_rollcall.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Just<sp/>required<sp/>in<sp/>this<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/spectrum_factories.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Models/SimpleSpectra/MSSMSimpleSpec.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">FlavBit::Functown;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functors<sp/>wrapping<sp/>the<sp/>module&apos;s<sp/>actual<sp/>module<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">BackendIniBit::Functown;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functors<sp/>wrapping<sp/>the<sp/>backend<sp/>initialisation<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Default<sp/>SLHA<sp/>file<sp/>for<sp/>input,<sp/>if<sp/>not<sp/>given<sp/>on<sp/>the<sp/>command<sp/>line.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">std::string<sp/>infile(</highlight><highlight class="stringliteral">&quot;FlavBit/data/example.slha&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="DarkBit__standalone__MSSM_8cpp_1a01c72e2595b3c5b9003b5dc52a4dbd6f" kindref="member">QUICK_FUNCTION</ref>(FlavBit,<sp/>unimproved_MSSM_spectrum,<sp/>NEW_CAPABILITY,<sp/>createSpectrum,<sp/>Spectrum,<sp/>(MSSM30atQ,MSSM30atMGUT))</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="DarkBit__standalone__MSSM_8cpp_1a01c72e2595b3c5b9003b5dc52a4dbd6f" kindref="member">QUICK_FUNCTION</ref>(FlavBit,<sp/>MSSM_spectrum,<sp/>NEW_CAPABILITY,<sp/>relabelSpectrum,<sp/>Spectrum,<sp/>(MSSM30atQ,MSSM30atMGUT),<sp/>(unimproved_MSSM_spectrum,<sp/>Spectrum))</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="DarkBit__standalone__MSSM_8cpp_1a01c72e2595b3c5b9003b5dc52a4dbd6f" kindref="member">QUICK_FUNCTION</ref>(FlavBit,<sp/>Z_decay_rates,<sp/>NEW_CAPABILITY,<sp/>GammaZ,<sp/>DecayTable::Entry)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><ref refid="DarkBit__standalone__MSSM_8cpp_1a01c72e2595b3c5b9003b5dc52a4dbd6f" kindref="member">QUICK_FUNCTION</ref>(FlavBit,<sp/>W_plus_decay_rates,<sp/>NEW_CAPABILITY,<sp/>GammaW,<sp/>DecayTable::Entry)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">FlavBit</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>createSpectrum(Spectrum&amp;<sp/>outSpec)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outSpec<sp/>=<sp/>spectrum_from_SLHA&lt;MSSMSimpleSpec&gt;(infile,<sp/>Spectrum::mc_info(),<sp/>Spectrum::mr_info());</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>relabelSpectrum(Spectrum&amp;<sp/>outSpec)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outSpec<sp/>=<sp/>*Pipes::relabelSpectrum::Dep::unimproved_MSSM_spectrum;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GammaW(DecayTable::Entry&amp;<sp/>result)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result.width_in_GeV<sp/>=<sp/>2.085;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GammaZ(DecayTable::Entry&amp;<sp/>result)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result.width_in_GeV<sp/>=<sp/>2.4952;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gambit_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Starting<sp/>FlavBit_standalone&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>SLHA<sp/>filename<sp/>from<sp/>the<sp/>command<sp/>line,<sp/>if<sp/>it<sp/>has<sp/>been<sp/>given.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>&gt;=<sp/>2)<sp/>infile<sp/>=<sp/>argv[1];</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>a<sp/>logging<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/>loggerinfo;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>where<sp/>the<sp/>logs<sp/>will<sp/>end<sp/>up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>prefix(</highlight><highlight class="stringliteral">&quot;runs/FlavBit_standalone/logs/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ensure<sp/>that<sp/>the<sp/>above<sp/>directory<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>Utils::ensure_path_exists(prefix);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>entries<sp/>to<sp/>the<sp/>loggerinfo<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>loggerinfo[</highlight><highlight class="stringliteral">&quot;Core,<sp/>Error&quot;</highlight><highlight class="normal">]<sp/>=<sp/>prefix+</highlight><highlight class="stringliteral">&quot;core_errors.log&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>loggerinfo[</highlight><highlight class="stringliteral">&quot;Default&quot;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/>=<sp/>prefix+</highlight><highlight class="stringliteral">&quot;default.log&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>loggerinfo[</highlight><highlight class="stringliteral">&quot;Warning&quot;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/>=<sp/>prefix+</highlight><highlight class="stringliteral">&quot;warnings.log&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>loggerinfo[</highlight><highlight class="stringliteral">&quot;FlavBit,<sp/>Info&quot;</highlight><highlight class="normal">]<sp/>=<sp/>prefix+</highlight><highlight class="stringliteral">&quot;FlavBit_info.log&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>global<sp/>LogMaster<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>logger().initialise(loggerinfo);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>logger()&lt;&lt;</highlight><highlight class="stringliteral">&quot;Running<sp/>FlavBit<sp/>standalone<sp/>example&quot;</highlight><highlight class="normal">&lt;&lt;LogTags::info&lt;&lt;EOM;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Notify<sp/>all<sp/>module<sp/>functions<sp/>that<sp/>care<sp/>of<sp/>the<sp/>model<sp/>being<sp/>scanned.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>createSpectrum.notifyOfModel(</highlight><highlight class="stringliteral">&quot;MSSM30atQ&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>relabelSpectrum.notifyOfModel(</highlight><highlight class="stringliteral">&quot;MSSM30atQ&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab22c15f5e52fa4124c5a52c72e44a08a" kindref="member">SuperIso_fill</ref>.notifyOfModel(</highlight><highlight class="stringliteral">&quot;MSSM30atQ&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Arrange<sp/>the<sp/>spectrum<sp/>chain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>relabelSpectrum.resolveDependency(&amp;createSpectrum);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>the<sp/>deltaMB_LL<sp/>likelihood</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Have<sp/>to<sp/>resolve<sp/>dependencies<sp/>by<sp/>hand</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>deltaMB_likelihood<sp/>depends<sp/>on:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>deltaMs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1af3a1bd95049efff094d84551bce29233" kindref="member">deltaMB_likelihood</ref>.resolveDependency(&amp;FeynHiggs_prediction_DeltaMs);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FeynHiggs_prediction_DeltaMs<sp/>depends<sp/>on:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>FeynHiggs_FlavourObs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>FeynHiggs_prediction_DeltaMs.resolveDependency(&amp;FeynHiggs_FlavourObs);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FeynHiggs_FlavourObs<sp/>has<sp/>only<sp/>one<sp/>backend<sp/>requirement:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>FHFlavour</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab161c7410473d2c9a00138049bf24d8c" kindref="member">FeynHiggs_FlavourObs</ref>.resolveBackendReq(&amp;Backends::FeynHiggs_2_11_3::Functown::FHFlavour);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>FeynHiggs<sp/>initialisation<sp/>function<sp/>depends<sp/>on:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>unimproved_MSSM_spectrum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>FeynHiggs_2_11_3_init.resolveDependency(&amp;createSpectrum);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>the<sp/>HEPLike_B2KstarmumuAng_LogLikelihood_LHCb<sp/>likelihood</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a94dfcc231f7a07d0725e3f485d6bc8" kindref="member">HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020</ref>.notifyOfSubCaps(</highlight><highlight class="stringliteral">&quot;[FL,<sp/>AFB,<sp/>S3,<sp/>S4,<sp/>S5,<sp/>S7,<sp/>S8,<sp/>S9]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a94dfcc231f7a07d0725e3f485d6bc8" kindref="member">HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020</ref>.resolveDependency(&amp;SuperIso_prediction_B2KstarmumuAng_0p1_0p98_LHCb);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a94dfcc231f7a07d0725e3f485d6bc8" kindref="member">HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020</ref>.resolveDependency(&amp;SuperIso_prediction_B2KstarmumuAng_1p1_2p5_LHCb);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a94dfcc231f7a07d0725e3f485d6bc8" kindref="member">HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020</ref>.resolveDependency(&amp;SuperIso_prediction_B2KstarmumuAng_2p5_4_LHCb);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a94dfcc231f7a07d0725e3f485d6bc8" kindref="member">HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020</ref>.resolveDependency(&amp;SuperIso_prediction_B2KstarmumuAng_4_6_LHCb);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a94dfcc231f7a07d0725e3f485d6bc8" kindref="member">HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020</ref>.resolveDependency(&amp;SuperIso_prediction_B2KstarmumuAng_6_8_LHCb);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a94dfcc231f7a07d0725e3f485d6bc8" kindref="member">HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020</ref>.resolveDependency(&amp;SuperIso_prediction_B2KstarmumuAng_15_19_LHCb);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SuperIso_fill<sp/>needs:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>-<sp/>BEreq<sp/>Init_param</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>-<sp/>BEreq<sp/>slha_adjust</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>-<sp/>BEreq<sp/>mcmc_from_pole</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>-<sp/>BEreq<sp/>mb_1S</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>-<sp/>MSSM_spectrum<sp/>(or<sp/>SM_spectrum)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>-<sp/>W_plus_decay_rates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>-<sp/>Z_decay_rates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab22c15f5e52fa4124c5a52c72e44a08a" kindref="member">SuperIso_fill</ref>.resolveDependency(&amp;relabelSpectrum);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab22c15f5e52fa4124c5a52c72e44a08a" kindref="member">SuperIso_fill</ref>.resolveDependency(&amp;GammaZ);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab22c15f5e52fa4124c5a52c72e44a08a" kindref="member">SuperIso_fill</ref>.resolveDependency(&amp;GammaW);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab22c15f5e52fa4124c5a52c72e44a08a" kindref="member">SuperIso_fill</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::Init_param);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab22c15f5e52fa4124c5a52c72e44a08a" kindref="member">SuperIso_fill</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::slha_adjust);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab22c15f5e52fa4124c5a52c72e44a08a" kindref="member">SuperIso_fill</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::mcmc_from_pole);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab22c15f5e52fa4124c5a52c72e44a08a" kindref="member">SuperIso_fill</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::mb_1S);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SuperIso_nuisance_fill<sp/>needs:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>BEreq<sp/>set_nuisance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>BEreq<sp/>set_nuisance_value_from_param</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>-<sp/>SuperIso_fill</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1af2e3bab53c876311e14c2f119ec27241" kindref="member">SuperIso_nuisance_fill</ref>.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1af2e3bab53c876311e14c2f119ec27241" kindref="member">SuperIso_nuisance_fill</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::set_nuisance);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1af2e3bab53c876311e14c2f119ec27241" kindref="member">SuperIso_nuisance_fill</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::set_nuisance_value_from_param);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>resolve<sp/>dependencies<sp/>of<sp/>the<sp/>BKstar<sp/>mu<sp/>mu<sp/>measurements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_0p1_0p98_LHCb.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_0p1_0p98_LHCb.resolveDependency(&amp;SuperIso_nuisance_fill);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_0p1_0p98_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_predictions_nuisance);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_0p1_0p98_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::observables);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_0p1_0p98_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::convert_correlation);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_0p1_0p98_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_th_covariance_nuisance);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_1p1_2p5_LHCb.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_1p1_2p5_LHCb.resolveDependency(&amp;SuperIso_nuisance_fill);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_1p1_2p5_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_predictions_nuisance);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_1p1_2p5_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::observables);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_1p1_2p5_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::convert_correlation);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_1p1_2p5_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_th_covariance_nuisance);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_2p5_4_LHCb.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_2p5_4_LHCb.resolveDependency(&amp;SuperIso_nuisance_fill);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_2p5_4_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_predictions_nuisance);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_2p5_4_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::observables);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_2p5_4_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::convert_correlation);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_2p5_4_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_th_covariance_nuisance);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_4_6_LHCb.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_4_6_LHCb.resolveDependency(&amp;SuperIso_nuisance_fill);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_4_6_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_predictions_nuisance);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_4_6_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::observables);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_4_6_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::convert_correlation);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_4_6_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_th_covariance_nuisance);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_6_8_LHCb.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_6_8_LHCb.resolveDependency(&amp;SuperIso_nuisance_fill);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_6_8_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_predictions_nuisance);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_6_8_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::observables);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_6_8_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::convert_correlation);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_6_8_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_th_covariance_nuisance);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_15_19_LHCb.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_15_19_LHCb.resolveDependency(&amp;SuperIso_nuisance_fill);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_15_19_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_predictions_nuisance);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_15_19_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::observables);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_15_19_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::convert_correlation);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_15_19_LHCb.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_th_covariance_nuisance);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>do<sp/>the<sp/>HEPLike_B2mumu_LogLikelihood_LHCb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a07251afa3bb76885f9680ab86159d40a" kindref="member">HEPLike_B2mumu_LogLikelihood_LHCb</ref>.notifyOfSubCaps(</highlight><highlight class="stringliteral">&quot;[BRuntag_Bsmumu,<sp/>BR_Bdmumu]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a07251afa3bb76885f9680ab86159d40a" kindref="member">HEPLike_B2mumu_LogLikelihood_LHCb</ref>.resolveDependency(&amp;SuperIso_prediction_B2mumu);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Resolve<sp/>dependencies<sp/>of<sp/>SuperIso_prediction_B2mumu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2mumu.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2mumu.resolveDependency(&amp;SuperIso_nuisance_fill);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2mumu.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_predictions_nuisance);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2mumu.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::observables);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2mumu.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::convert_correlation);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2mumu.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_th_covariance_nuisance);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>do<sp/>the<sp/>semi-leptonic<sp/>likelihood<sp/>SL_LL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>depends<sp/>on:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>SL_M</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a2a68bc91cda4c05d12e487fc47a9db64" kindref="member">SL_likelihood</ref>.resolveDependency(&amp;SL_measurements);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Resolve<sp/>dependencies<sp/>of<sp/>SL_measurements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>which<sp/>are:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>RD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>RDstar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>BDmunu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>BDstarmunu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>Btaunu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>Dstaunu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>Dsmunu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>Dmunu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab5d991860189dd873fa8870f5160b7a6" kindref="member">SL_measurements</ref>.resolveDependency(&amp;SuperIso_prediction_RD);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab5d991860189dd873fa8870f5160b7a6" kindref="member">SL_measurements</ref>.resolveDependency(&amp;SuperIso_prediction_RDstar);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab5d991860189dd873fa8870f5160b7a6" kindref="member">SL_measurements</ref>.resolveDependency(&amp;SuperIso_prediction_BDmunu);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab5d991860189dd873fa8870f5160b7a6" kindref="member">SL_measurements</ref>.resolveDependency(&amp;SuperIso_prediction_BDstarmunu);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab5d991860189dd873fa8870f5160b7a6" kindref="member">SL_measurements</ref>.resolveDependency(&amp;SuperIso_prediction_Btaunu);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab5d991860189dd873fa8870f5160b7a6" kindref="member">SL_measurements</ref>.resolveDependency(&amp;SuperIso_prediction_Dsmunu);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab5d991860189dd873fa8870f5160b7a6" kindref="member">SL_measurements</ref>.resolveDependency(&amp;SuperIso_prediction_Dstaunu);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab5d991860189dd873fa8870f5160b7a6" kindref="member">SL_measurements</ref>.resolveDependency(&amp;SuperIso_prediction_Dmunu);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Resolve<sp/>all<sp/>of<sp/>the<sp/>individual<sp/>dependencies<sp/>and<sp/>backend<sp/>reqs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>are:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>SuperIso_fill</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>BE<sp/>Req:<sp/>BDtaunu,<sp/>etc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a0bf6ac1b44b60c529de2d4790049469d" kindref="member">SuperIso_prediction_Btaunu</ref>.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a0bf6ac1b44b60c529de2d4790049469d" kindref="member">SuperIso_prediction_Btaunu</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::Btaunu);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a1dfb1d1eb7a5b5a1d9a29a5082eb5bd6" kindref="member">SuperIso_prediction_BDtaunu</ref>.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a1dfb1d1eb7a5b5a1d9a29a5082eb5bd6" kindref="member">SuperIso_prediction_BDtaunu</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::BRBDlnu);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1af74b513884f376991a066e6420a32598" kindref="member">SuperIso_prediction_RD</ref>.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1af74b513884f376991a066e6420a32598" kindref="member">SuperIso_prediction_RD</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::BDtaunu_BDenu);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a17c52b6cf8a39025576819c8996b50" kindref="member">SuperIso_prediction_RDstar</ref>.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a17c52b6cf8a39025576819c8996b50" kindref="member">SuperIso_prediction_RDstar</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::BDstartaunu_BDstarenu);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1aa3f98ed5b0107a7bfb237417b7caa994" kindref="member">SuperIso_prediction_Dstaunu</ref>.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1aa3f98ed5b0107a7bfb237417b7caa994" kindref="member">SuperIso_prediction_Dstaunu</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::Dstaunu);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1aa367208f57b43543a79b2e9de54a22f5" kindref="member">SuperIso_prediction_Dsmunu</ref>.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1aa367208f57b43543a79b2e9de54a22f5" kindref="member">SuperIso_prediction_Dsmunu</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::Dsmunu);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a3c6d60fb81a0e315c589f0e4204f3df5" kindref="member">SuperIso_prediction_Dmunu</ref>.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a3c6d60fb81a0e315c589f0e4204f3df5" kindref="member">SuperIso_prediction_Dmunu</ref>.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::Dmunu);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>resolve<sp/>dependencies<sp/>for<sp/>the<sp/>b-&gt;sgamma<sp/>likelihoods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>HEPLike_b2sgamma_LogLikelihood.resolveDependency(&amp;SuperIso_prediction_b2sgamma);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Resolve<sp/>dependencies<sp/>and<sp/>backend<sp/>requirements<sp/>of<sp/>SuperIso_prediction_b2sgamma:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_b2sgamma.resolveDependency(&amp;SuperIso_fill);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_b2sgamma.resolveDependency(&amp;SuperIso_nuisance_fill);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_b2sgamma.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_predictions_nuisance);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_b2sgamma.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::observables);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_b2sgamma.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::convert_correlation);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_b2sgamma.resolveBackendReq(&amp;Backends::SuperIso_4_1::Functown::get_th_covariance_nuisance);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Double-check<sp/>which<sp/>backend<sp/>requirements<sp/>have<sp/>been<sp/>filled<sp/>with<sp/>what</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>function<sp/>SuperIso_fill<sp/>has<sp/>had<sp/>its<sp/>backend<sp/>requirement<sp/>on<sp/>Init_param<sp/>filled<sp/>by:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_fill::BEreq::Init_param.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_fill::BEreq::Init_param.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>function<sp/>SuperIso_fill<sp/>has<sp/>had<sp/>its<sp/>backend<sp/>requirement<sp/>on<sp/>slha_adjust<sp/>filled<sp/>by:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_fill::BEreq::slha_adjust.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_fill::BEreq::slha_adjust.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Double-check<sp/>which<sp/>backend<sp/>requirements<sp/>have<sp/>been<sp/>filled<sp/>with<sp/>what</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>function<sp/>SuperIso_prediction_B2mumu<sp/><sp/>has<sp/>had<sp/>its<sp/>backend<sp/>requirements<sp/>filled<sp/>by:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_prediction_B2mumu::BEreq::get_predictions_nuisance.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_prediction_B2mumu::BEreq::get_predictions_nuisance.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_prediction_B2mumu::BEreq::observables.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_prediction_B2mumu::BEreq::observables.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_prediction_B2mumu::BEreq::convert_correlation.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_prediction_B2mumu::BEreq::convert_correlation.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_prediction_B2mumu::BEreq::get_th_covariance_nuisance.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_prediction_B2mumu::BEreq::get_th_covariance_nuisance.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Double-check<sp/>which<sp/>dependencies<sp/>have<sp/>been<sp/>filled<sp/>with<sp/>whatever<sp/>(not<sp/>every<sp/>combination<sp/>is<sp/>shown)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>function<sp/>SuperIso_fill<sp/>has<sp/>had<sp/>its<sp/>dependency<sp/>on<sp/>MSSM_spectrum<sp/>filled<sp/>by:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_fill::Dep::MSSM_spectrum.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::SuperIso_fill::Dep::MSSM_spectrum.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>function<sp/>HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020<sp/>has<sp/>had<sp/>its<sp/>dependency<sp/>on<sp/>BKstarmumu_11_25<sp/>filled<sp/>by:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_0p1_0p98_LHCb.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_0p1_0p98_LHCb.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>function<sp/>HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020<sp/>has<sp/>had<sp/>its<sp/>dependency<sp/>on<sp/>BKstarmumu_25_40<sp/>filled<sp/>by:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_1p1_2p5_LHCb.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_1p1_2p5_LHCb.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>function<sp/>HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020<sp/>has<sp/>had<sp/>its<sp/>dependency<sp/>on<sp/>BKstarmumu_40_60<sp/>filled<sp/>by:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_2p5_4_LHCb.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_2p5_4_LHCb.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>function<sp/>HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020<sp/>has<sp/>had<sp/>its<sp/>dependency<sp/>on<sp/>BKstarmumu_60_80<sp/>filled<sp/>by:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_2p5_4_LHCb.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_2p5_4_LHCb.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>function<sp/>HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020<sp/>has<sp/>had<sp/>its<sp/>dependency<sp/>on<sp/>BKstarmumu_15_17<sp/>filled<sp/>by:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_6_8_LHCb.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_6_8_LHCb.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;My<sp/>function<sp/>HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020<sp/>has<sp/>had<sp/>its<sp/>dependency<sp/>on<sp/>BKstarmumu_17_19<sp/>filled<sp/>by:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_15_19_LHCb.origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>FlavBit::Pipes::HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020::Dep::prediction_B2KstarmumuAng_15_19_LHCb.name()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>we<sp/>start<sp/>the<sp/>actual<sp/>calculations<sp/>(which<sp/>we<sp/>would<sp/>loop<sp/>over<sp/>if<sp/>doing<sp/>a<sp/>scan).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>loglike;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>the<sp/>spectra</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>createSpectrum.reset_and_calculate();</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>relabelSpectrum.reset_and_calculate();</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>the<sp/>backends</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_4_1_init.reset_and_calculate();</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>FeynHiggs_2_11_3_init.reset_and_calculate();</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>call<sp/>the<sp/>module<sp/>functions<sp/>in<sp/>an<sp/>appropriate<sp/>order</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab22c15f5e52fa4124c5a52c72e44a08a" kindref="member">SuperIso_fill</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1af2e3bab53c876311e14c2f119ec27241" kindref="member">SuperIso_nuisance_fill</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>B<sp/>meson<sp/>mass<sp/>asymmetry<sp/>likelihood</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab161c7410473d2c9a00138049bf24d8c" kindref="member">FeynHiggs_FlavourObs</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>FeynHiggs_prediction_DeltaMs.reset_and_calculate();</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1af3a1bd95049efff094d84551bce29233" kindref="member">deltaMB_likelihood</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>loglike<sp/>=<sp/><ref refid="FlavBit_8cpp_1af3a1bd95049efff094d84551bce29233" kindref="member">deltaMB_likelihood</ref>(0);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;B<sp/>meson<sp/>mass<sp/>asymmetry<sp/>log-likelihood:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>loglike<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>B<sp/>-&gt;<sp/>ll<sp/>likelihood</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2mumu.reset_and_calculate();</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a07251afa3bb76885f9680ab86159d40a" kindref="member">HEPLike_B2mumu_LogLikelihood_LHCb</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>loglike<sp/>=<sp/><ref refid="FlavBit_8cpp_1a07251afa3bb76885f9680ab86159d40a" kindref="member">HEPLike_B2mumu_LogLikelihood_LHCb</ref>(0);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Fully<sp/>leptonic<sp/>B<sp/>decays<sp/>(B-&gt;ll)<sp/>joint<sp/>log-likelihood<sp/>from<sp/>LHCb<sp/>results:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>loglike<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>B<sp/>-&gt;<sp/>Xs<sp/>ll<sp/>likelihood</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_0p1_0p98_LHCb.reset_and_calculate();</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_1p1_2p5_LHCb.reset_and_calculate();</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_2p5_4_LHCb.reset_and_calculate();</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_4_6_LHCb.reset_and_calculate();</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_6_8_LHCb.reset_and_calculate();</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_B2KstarmumuAng_15_19_LHCb.reset_and_calculate();</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a94dfcc231f7a07d0725e3f485d6bc8" kindref="member">HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>loglike<sp/>=<sp/><ref refid="FlavBit_8cpp_1a9a94dfcc231f7a07d0725e3f485d6bc8" kindref="member">HEPLike_B2KstarmumuAng_LogLikelihood_LHCb_2020</ref>(0);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Leptonic<sp/>penguin<sp/>B<sp/>decays<sp/>(B-&gt;X_s<sp/>ll)<sp/>joint<sp/>log-likelihood<sp/>from<sp/>2020<sp/>LHCb<sp/>results:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>loglike<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>semi-leptonic<sp/>(SL)<sp/>likelihood</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a0bf6ac1b44b60c529de2d4790049469d" kindref="member">SuperIso_prediction_Btaunu</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a1dfb1d1eb7a5b5a1d9a29a5082eb5bd6" kindref="member">SuperIso_prediction_BDtaunu</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1af74b513884f376991a066e6420a32598" kindref="member">SuperIso_prediction_RD</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a9a17c52b6cf8a39025576819c8996b50" kindref="member">SuperIso_prediction_RDstar</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1aa3f98ed5b0107a7bfb237417b7caa994" kindref="member">SuperIso_prediction_Dstaunu</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1aa367208f57b43543a79b2e9de54a22f5" kindref="member">SuperIso_prediction_Dsmunu</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a3c6d60fb81a0e315c589f0e4204f3df5" kindref="member">SuperIso_prediction_Dmunu</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1ab5d991860189dd873fa8870f5160b7a6" kindref="member">SL_measurements</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FlavBit_8cpp_1a2a68bc91cda4c05d12e487fc47a9db64" kindref="member">SL_likelihood</ref>.reset_and_calculate();</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/>loglike<sp/>=<sp/><ref refid="FlavBit_8cpp_1a2a68bc91cda4c05d12e487fc47a9db64" kindref="member">SL_likelihood</ref>(0);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Semi-leptonic<sp/>B<sp/>decays<sp/>(B-&gt;D<sp/>l<sp/>nu)<sp/>joint<sp/>log-likelihood:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>loglike<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>B<sp/>-&gt;<sp/>X_s<sp/>gamma<sp/>likelihood</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>SuperIso_prediction_b2sgamma.reset_and_calculate();</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>HEPLike_b2sgamma_LogLikelihood.reset_and_calculate();</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>loglike<sp/>=<sp/>HEPLike_b2sgamma_LogLikelihood(0);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;B-&gt;X_s<sp/>gamma<sp/>log-likelihood:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>loglike<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::exception&amp;<sp/>e)</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;FlavBit_standalone<sp/>example<sp/>has<sp/>exited<sp/>with<sp/>fatal<sp/>exception:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.what()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/FlavBit/examples/FlavBit_standalone_example.cpp"/>
+  </compounddef>
+</doxygen>

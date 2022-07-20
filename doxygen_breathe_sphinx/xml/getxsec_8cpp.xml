@@ -219,7 +219,7 @@
         <label>HEPUtils/Particle.h</label>
       </node>
       <node id="1">
-        <label>ColliderBit/src/getxsec.cpp</label>
+        <label>getxsec.cpp</label>
         <link refid="getxsec_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -401,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ColliderBit/src/getxsec.cpp" line="25" column="9" bodyfile="ColliderBit/src/getxsec.cpp" bodystart="25" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/getxsec.cpp" line="25" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/getxsec.cpp" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -492,7 +492,7 @@
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(*Loop::iteration<sp/>==<sp/>XSEC_CALCULATION)</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>dicts<sp/>to<sp/>pass<sp/>parameters<sp/>and<sp/>flags<sp/>to<sp/>the<sp/>backend</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PyDict<sp/>xsecBE_pars;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="python__helpers_8hpp_1a75d3d28c847302d727ee671263dae2f9" kindref="member">PyDict</ref><sp/>xsecBE_pars;</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PyDict<sp/>xsecBE_flags;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>First<sp/>set<sp/>the<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
@@ -527,7 +527,7 @@
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iipair<sp/>proc<sp/>=<sp/>pid_pair.PIDs();</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>dictionary<sp/>with<sp/>cross-section<sp/>results<sp/>from<sp/>backend</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PyDict<sp/>xs_fb_dict<sp/>=<sp/>BEreq::xsecBE_get_xsection(proc);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="python__helpers_8hpp_1a75d3d28c847302d727ee671263dae2f9" kindref="member">PyDict</ref><sp/>xs_fb_dict<sp/>=<sp/>BEreq::xsecBE_get_xsection(proc);</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
 <codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>xsec_container<sp/>classes<sp/>don&apos;t<sp/>have<sp/>asymmetric<sp/>errors<sp/>yet,</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>let&apos;s<sp/>take<sp/>the<sp/>max<sp/>error<sp/>for<sp/>now</highlight><highlight class="normal"></highlight></codeline>
@@ -585,7 +585,7 @@
 <codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Param.find(</highlight><highlight class="stringliteral">&quot;mu&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>Param.end()<sp/>&amp;&amp;<sp/>Param.find(</highlight><highlight class="stringliteral">&quot;mA&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>Param.end())</highlight></codeline>
 <codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>slha[</highlight><highlight class="stringliteral">&quot;EXTPAR&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">]<sp/>&lt;&lt;<sp/>23<sp/>&lt;&lt;<sp/>*Param.at(</highlight><highlight class="stringliteral">&quot;mu&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>mu&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>slha[</highlight><highlight class="stringliteral">&quot;EXTPAR&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">]<sp/>&lt;&lt;<sp/>24<sp/>&lt;&lt;<sp/>pow(*Param.at(</highlight><highlight class="stringliteral">&quot;mA&quot;</highlight><highlight class="normal">),2)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>m_A^2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>slha[</highlight><highlight class="stringliteral">&quot;EXTPAR&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">]<sp/>&lt;&lt;<sp/>24<sp/>&lt;&lt;<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(*Param.at(</highlight><highlight class="stringliteral">&quot;mA&quot;</highlight><highlight class="normal">),2)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>m_A^2&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Param.find(</highlight><highlight class="stringliteral">&quot;mHd2&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>Param.end()<sp/>&amp;&amp;<sp/>Param.find(</highlight><highlight class="stringliteral">&quot;mHd2&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>Param.end())</highlight></codeline>
 <codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -661,7 +661,7 @@
 <codeline lineno="260"><highlight class="normal"></highlight></codeline>
 <codeline lineno="261"><highlight class="normal"></highlight></codeline>
 <codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>a<sp/>dictionary<sp/>with<sp/>parameters/settings<sp/>(if<sp/>any)<sp/>to<sp/>the<sp/>backend</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PyDict<sp/>salami_pars;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="python__helpers_8hpp_1a75d3d28c847302d727ee671263dae2f9" kindref="member">PyDict</ref><sp/>salami_pars;</highlight></codeline>
 <codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(fill<sp/>salami_pars<sp/>here...)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BEreq::salami_set_parameters(salami_pars);</highlight></codeline>
 <codeline lineno="266"><highlight class="normal"></highlight></codeline>
@@ -687,7 +687,7 @@
 <codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LOxs_trust_level<sp/>=<sp/>pp_LOxs_map.at(pid_pair).trust_level();</highlight></codeline>
 <codeline lineno="287"><highlight class="normal"></highlight></codeline>
 <codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>dictionary<sp/>with<sp/>cross-section<sp/>results<sp/>from<sp/>backend</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PyDict<sp/>xs_fb_dict<sp/>=<sp/>BEreq::salami_get_xsection(proc,<sp/>energy,<sp/>LOxs_fb);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="python__helpers_8hpp_1a75d3d28c847302d727ee671263dae2f9" kindref="member">PyDict</ref><sp/>xs_fb_dict<sp/>=<sp/>BEreq::salami_get_xsection(proc,<sp/>energy,<sp/>LOxs_fb);</highlight></codeline>
 <codeline lineno="290"><highlight class="normal"></highlight></codeline>
 <codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>xsec_container<sp/>classes<sp/>don&apos;t<sp/>have<sp/>asymmetric<sp/>errors<sp/>yet,</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>let&apos;s<sp/>take<sp/>the<sp/>max<sp/>error<sp/>for<sp/>now</highlight><highlight class="normal"></highlight></codeline>
@@ -751,7 +751,7 @@
 <codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Param.find(</highlight><highlight class="stringliteral">&quot;mu&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>Param.end()<sp/>&amp;&amp;<sp/>Param.find(</highlight><highlight class="stringliteral">&quot;mA&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>Param.end())</highlight></codeline>
 <codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>slha[</highlight><highlight class="stringliteral">&quot;EXTPAR&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">]<sp/>&lt;&lt;<sp/>23<sp/>&lt;&lt;<sp/>*Param.at(</highlight><highlight class="stringliteral">&quot;mu&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>mu&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>slha[</highlight><highlight class="stringliteral">&quot;EXTPAR&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">]<sp/>&lt;&lt;<sp/>24<sp/>&lt;&lt;<sp/>pow(*Param.at(</highlight><highlight class="stringliteral">&quot;mA&quot;</highlight><highlight class="normal">),2)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>m_A^2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>slha[</highlight><highlight class="stringliteral">&quot;EXTPAR&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">]<sp/>&lt;&lt;<sp/>24<sp/>&lt;&lt;<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(*Param.at(</highlight><highlight class="stringliteral">&quot;mA&quot;</highlight><highlight class="normal">),2)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>m_A^2&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Param.find(</highlight><highlight class="stringliteral">&quot;mHd2&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>Param.end()<sp/>&amp;&amp;<sp/>Param.find(</highlight><highlight class="stringliteral">&quot;mHd2&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>Param.end())</highlight></codeline>
 <codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -2002,6 +2002,6 @@
 <codeline lineno="1618"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1619"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="ColliderBit/src/getxsec.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/getxsec.cpp"/>
   </compounddef>
 </doxygen>

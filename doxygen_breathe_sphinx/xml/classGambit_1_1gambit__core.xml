@@ -1,0 +1,1203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1gambit__core" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::gambit_core</compoundname>
+    <includes refid="core_8hpp" local="no">core.hpp</includes>
+      <sectiondef kind="user-defined">
+      <memberdef kind="typedef" id="classGambit_1_1gambit__core_1a08c569a1cb0fe1936c7a460cb410fbcf" prot="private" static="no">
+        <type>std::vector&lt; functor * &gt;</type>
+        <definition>typedef std::vector&lt;functor *&gt; Gambit::gambit_core::fVec</definition>
+        <argsstring></argsstring>
+        <name>fVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Internal typedefs to keep things readable </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="45" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classGambit_1_1gambit__core_1a7fe5b76c0d2e1a284ea683e3bac4694c" prot="private" static="no">
+        <type>std::vector&lt; primary_model_functor * &gt;</type>
+        <definition>typedef std::vector&lt;primary_model_functor *&gt; Gambit::gambit_core::pmfVec</definition>
+        <argsstring></argsstring>
+        <name>pmfVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="46" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classGambit_1_1gambit__core_1a733e0826c0f5b22eeb87a281fd1f792d" prot="private" static="no">
+        <type>std::map&lt; str, primary_model_functor * &gt;</type>
+        <definition>typedef std::map&lt;str, primary_model_functor *&gt; Gambit::gambit_core::pmfMap</definition>
+        <argsstring></argsstring>
+        <name>pmfMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="47" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a544da685ec5d5786cffddddd0ad8380a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::module_diagnostic</definition>
+        <argsstring>()</argsstring>
+        <name>module_diagnostic</name>
+        <briefdescription>
+<para>Basic module diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Basic diagnostic functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="102" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="41" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a56326280ff18fe7ab0d98a54a49db704" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::backend_diagnostic</definition>
+        <argsstring>()</argsstring>
+        <name>backend_diagnostic</name>
+        <briefdescription>
+<para>Basic backend diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="103" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="84" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1ad20b293405ef1c97aab5122a904dd831" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::capability_diagnostic</definition>
+        <argsstring>()</argsstring>
+        <name>capability_diagnostic</name>
+        <briefdescription>
+<para>Basic capability diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="104" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="179" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1abae9de2bf908334275fe9bcb3835bf4d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::model_diagnostic</definition>
+        <argsstring>()</argsstring>
+        <name>model_diagnostic</name>
+        <briefdescription>
+<para>Basic model diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="105" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="148" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a38f47e3e4da977339caaa3a8273b8823" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::scanner_diagnostic</definition>
+        <argsstring>()</argsstring>
+        <name>scanner_diagnostic</name>
+        <briefdescription>
+<para>Basic scanner diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="106" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="227" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a2008f73ad4b7de0634393c436e379e20" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::test_function_diagnostic</definition>
+        <argsstring>()</argsstring>
+        <name>test_function_diagnostic</name>
+        <briefdescription>
+<para>Basic test function diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="107" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="235" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1afe538ac1f096f7814a9a21fd092027e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::prior_diagnostic</definition>
+        <argsstring>()</argsstring>
+        <name>prior_diagnostic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="108" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="241" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a39f77b1aa1ccf45a761ec3d93b6282c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::ff_module_diagnostic</definition>
+        <argsstring>(const str &amp;)</argsstring>
+        <name>ff_module_diagnostic</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>command</defname>
+        </param>
+        <briefdescription>
+<para>Free-form module diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Free-form diagnostic functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="112" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="257" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1ae957640adac0adb366197b0adb0e7808" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::ff_backend_diagnostic</definition>
+        <argsstring>(const str &amp;)</argsstring>
+        <name>ff_backend_diagnostic</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>command</defname>
+        </param>
+        <briefdescription>
+<para>Free-form backend diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="113" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="322" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a019ab6bd5c15daea5f06c54197170d82" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::ff_capability_diagnostic</definition>
+        <argsstring>(const str &amp;)</argsstring>
+        <name>ff_capability_diagnostic</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>command</defname>
+        </param>
+        <briefdescription>
+<para>Free-form capability diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="114" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="455" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a51915fd6b35bb063ccc8891cc682e81d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::ff_model_diagnostic</definition>
+        <argsstring>(const str &amp;)</argsstring>
+        <name>ff_model_diagnostic</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>command</defname>
+        </param>
+        <briefdescription>
+<para>Free-form model diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="115" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="419" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1abef236a07b98b89f1b09068101fa6500" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::ff_scanner_diagnostic</definition>
+        <argsstring>(const str &amp;)</argsstring>
+        <name>ff_scanner_diagnostic</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>command</defname>
+        </param>
+        <briefdescription>
+<para>Free-form scanner diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="116" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="498" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a1d83b248f4287a49e61838e67544056e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::ff_test_function_diagnostic</definition>
+        <argsstring>(const str &amp;)</argsstring>
+        <name>ff_test_function_diagnostic</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>command</defname>
+        </param>
+        <briefdescription>
+<para>Free-form test function diagnostic function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="117" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="505" bodyend="509"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1acfabd5ac835bc5409c3ef8ec47f64dc2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::ff_prior_diagnostic</definition>
+        <argsstring>(const str &amp;)</argsstring>
+        <name>ff_prior_diagnostic</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>command</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="118" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/diagnostics.cpp" bodystart="247" bodyend="254"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a7e1de363db70a975e8456945c069d9d7" prot="private" static="no" mutable="no">
+        <type>const Models::ModelFunctorClaw *</type>
+        <definition>const Models::ModelFunctorClaw* Gambit::gambit_core::modelInfo</definition>
+        <argsstring></argsstring>
+        <name>modelInfo</name>
+        <briefdescription>
+<para>Internal model claw pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="51" column="36" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a2c0b224194b7642e4f285890bb9124f7" prot="private" static="no" mutable="no">
+        <type>const <ref refid="structGambit_1_1Backends_1_1backend__info" kindref="compound">Backends::backend_info</ref> *</type>
+        <definition>const Backends::backend_info* Gambit::gambit_core::backendData</definition>
+        <argsstring></argsstring>
+        <name>backendData</name>
+        <briefdescription>
+<para>Internal backend info pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="54" column="34" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1ae4bd9f72435bb04cdb0f553634a8f321" prot="private" static="no" mutable="no">
+        <type>std::set&lt; str &gt;</type>
+        <definition>std::set&lt;str&gt; Gambit::gambit_core::modules</definition>
+        <argsstring></argsstring>
+        <name>modules</name>
+        <briefdescription>
+<para>Set of all declared modules. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="57" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a078741f9531525b7a445424ef1871dbc" prot="private" static="no" mutable="no">
+        <type>std::map&lt; str, str &gt;</type>
+        <definition>std::map&lt;str, str&gt; Gambit::gambit_core::module_citation_keys</definition>
+        <argsstring></argsstring>
+        <name>module_citation_keys</name>
+        <briefdescription>
+<para>Map from module names to their citation keys. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="60" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a61aeb650a830cfbe822be2acc19c1330" prot="private" static="no" mutable="no">
+        <type>std::map&lt; str, std::set&lt; str &gt; &gt;</type>
+        <definition>std::map&lt;str, std::set&lt;str&gt; &gt; Gambit::gambit_core::backend_versions</definition>
+        <argsstring></argsstring>
+        <name>backend_versions</name>
+        <briefdescription>
+<para>Map from backend names to a list of all registered versions of the backend. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="63" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a0ebf6d13a6c6c0d1abf0594a9ca192ec" prot="private" static="no" mutable="no">
+        <type>std::map&lt; sspair, str &gt;</type>
+        <definition>std::map&lt;sspair, str&gt; Gambit::gambit_core::backend_citation_keys</definition>
+        <argsstring></argsstring>
+        <name>backend_citation_keys</name>
+        <briefdescription>
+<para>Map from backend name and versions, to their citation keys. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="66" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a26c16bc574021044ae48d548b3284320" prot="private" static="no" mutable="no">
+        <type>std::set&lt; str &gt;</type>
+        <definition>std::set&lt;str&gt; Gambit::gambit_core::capabilities</definition>
+        <argsstring></argsstring>
+        <name>capabilities</name>
+        <briefdescription>
+<para>List of all declared capabilities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="69" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1aea9152437cf9254df8e25ea226df5a11" prot="private" static="no" mutable="no">
+        <type>std::set&lt; str &gt;</type>
+        <definition>std::set&lt;str&gt; Gambit::gambit_core::models</definition>
+        <argsstring></argsstring>
+        <name>models</name>
+        <briefdescription>
+<para>List of all declared models. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="72" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1ac1e65e11fc6591c03d66dd7d2b1804a0" prot="private" static="no" mutable="no">
+        <type>fVec</type>
+        <definition>fVec Gambit::gambit_core::functorList</definition>
+        <argsstring></argsstring>
+        <name>functorList</name>
+        <briefdescription>
+<para>List of all declared module functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="75" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a828eaa203a8467a0965b3bd367f46435" prot="private" static="no" mutable="no">
+        <type>fVec</type>
+        <definition>fVec Gambit::gambit_core::nestedFunctorList</definition>
+        <argsstring></argsstring>
+        <name>nestedFunctorList</name>
+        <briefdescription>
+<para>List of all module functors that are declared as nested (i.e. require loop managers) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="78" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a3a1e7b6916ac4f873b3ac82bf3a59c55" prot="private" static="no" mutable="no">
+        <type>fVec</type>
+        <definition>fVec Gambit::gambit_core::backendFunctorList</definition>
+        <argsstring></argsstring>
+        <name>backendFunctorList</name>
+        <briefdescription>
+<para>List of all declared backend functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="81" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a185fe8767b3f1c99cfdfa310f873ab4a" prot="private" static="no" mutable="no">
+        <type>pmfVec</type>
+        <definition>pmfVec Gambit::gambit_core::primaryModelFunctorList</definition>
+        <argsstring></argsstring>
+        <name>primaryModelFunctorList</name>
+        <briefdescription>
+<para>List of all declared primary model functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="84" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a031f83cba9376936be0b1fcc8cd9e10d" prot="private" static="no" mutable="no">
+        <type>pmfMap</type>
+        <definition>pmfMap Gambit::gambit_core::activeModelFunctorList</definition>
+        <argsstring></argsstring>
+        <name>activeModelFunctorList</name>
+        <briefdescription>
+<para>A map of all user-activated primary model functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="87" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a871d43f94c04e972b3d7c0f45e120d79" prot="private" static="no" mutable="no">
+        <type>const str</type>
+        <definition>const str Gambit::gambit_core::input_capability_descriptions</definition>
+        <argsstring></argsstring>
+        <name>input_capability_descriptions</name>
+        <briefdescription>
+<para>Filename of the file from which to harvest capability descriptions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="90" column="15" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a7a5cfdcbdace07f7ce2d5a516043a336" prot="private" static="no" mutable="no">
+        <type>const str</type>
+        <definition>const str Gambit::gambit_core::input_model_descriptions</definition>
+        <argsstring></argsstring>
+        <name>input_model_descriptions</name>
+        <briefdescription>
+<para>Filename of the file from which to harvest model descriptions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="92" column="15" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a5aef1f53a27c7b0c919866ef7a71ef7e" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Gambit::gambit_core::outprec</definition>
+        <argsstring></argsstring>
+        <name>outprec</name>
+        <briefdescription>
+<para>Precision to use for cout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="95" column="15" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1aef1230fac981cbf3a10bb955492958f3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::gambit_core::processed_options</definition>
+        <argsstring></argsstring>
+        <name>processed_options</name>
+        <briefdescription>
+<para>Flag specifying whether command line options have been processed yet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="98" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1af2148a5bf48f1115aa838e4841f436a0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Gambit::gambit_core::show_runorder</definition>
+        <argsstring></argsstring>
+        <name>show_runorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flags set by command line options Flag to trigger dependency resolver to report functor run order </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="139" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a59ac2e115ba6a935c154108310b1791c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Gambit::gambit_core::show_backends</definition>
+        <argsstring></argsstring>
+        <name>show_backends</name>
+        <briefdescription>
+<para>Flag to show the list of required backends. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="142" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1afb45c1d5212a99a4e9e96d80639fd3ab" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::gambit_core::resume</definition>
+        <argsstring></argsstring>
+        <name>resume</name>
+        <briefdescription>
+<para>Flag to trigger &quot;resume&quot; mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="145" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1abc372ad305cceaf6ad60f6048a40d772" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::gambit_core::verbose_flag</definition>
+        <argsstring></argsstring>
+        <name>verbose_flag</name>
+        <briefdescription>
+<para>Verbosity mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="149" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1ac281999b748dc75f7a4851005e02cc39" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::gambit_core::found_inifile</definition>
+        <argsstring></argsstring>
+        <name>found_inifile</name>
+        <briefdescription>
+<para>Flag recording whether an inifile has been supplied. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="152" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1a24bcd9920a409a4a5f1f44ba00eec40e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::gambit_core::missing_capability_description</definition>
+        <argsstring></argsstring>
+        <name>missing_capability_description</name>
+        <briefdescription>
+<para>set to true if capability descriptions missing </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="221" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1ac0f37b99f25c1c6a38584c643864ff4c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structGambit_1_1capability__info" kindref="compound">capability_info</ref> &gt;</type>
+        <definition>std::vector&lt;capability_info&gt; Gambit::gambit_core::capability_dbase</definition>
+        <argsstring></argsstring>
+        <name>capability_dbase</name>
+        <briefdescription>
+<para>Vector of all <ref refid="structGambit_1_1capability__info" kindref="compound">capability_info</ref> objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="227" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1gambit__core_1ae71ae16e80ab1bd733fdb81339a3395c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structGambit_1_1model__info" kindref="compound">model_info</ref> &gt;</type>
+        <definition>std::vector&lt;model_info&gt; Gambit::gambit_core::model_dbase</definition>
+        <argsstring></argsstring>
+        <name>model_dbase</name>
+        <briefdescription>
+<para>Vector of all <ref refid="structGambit_1_1model__info" kindref="compound">model_info</ref> objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="230" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a6c3dc34c917e6003a8fab249edc75824" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::gambit_core::backend_status</definition>
+        <argsstring>(const str &amp;, const str &amp;, bool &amp;)</argsstring>
+        <name>backend_status</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <defname>version</defname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <defname>no_failures</defname>
+        </param>
+        <briefdescription>
+<para>Compute the status of a given backend. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="122" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="558" bodyend="593"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1ae7cdc80ad7267b10d0f0ab96379658a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::gambit_core::launch_diagnostic_MPI</definition>
+        <argsstring>()</argsstring>
+        <name>launch_diagnostic_MPI</name>
+        <briefdescription>
+<para>Launch MPI and return the rank, for limiting diagnostic output to master node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="125" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1af55b8e9ae62842d09f8ac3ab5aef871c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::quit_diagnostic_MPI</definition>
+        <argsstring>()</argsstring>
+        <name>quit_diagnostic_MPI</name>
+        <briefdescription>
+<para>Quit MPI used for diagnostic mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="128" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a39c2761ce427f8f8c44428edc96f0391" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::gambit_core::gambit_core</definition>
+        <argsstring>(const Models::ModelFunctorClaw &amp;, const Backends::backend_info &amp;)</argsstring>
+        <name>gambit_core</name>
+        <param>
+          <type>const Models::ModelFunctorClaw &amp;</type>
+          <defname>claw</defname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1Backends_1_1backend__info" kindref="compound">Backends::backend_info</ref> &amp;</type>
+          <defname>beinfo</defname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Definitions of public methods in GAMBIT core class.</para>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="132" column="5" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="64" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a2a26fe30efe2f94a9ec3e6fd58f578c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::gambit_core::~gambit_core</definition>
+        <argsstring>()</argsstring>
+        <name>~gambit_core</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="135" column="5" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="135" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a7b647508b923c4c36b8154f29866818a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::bail</definition>
+        <argsstring>(int mpirank=-1)</argsstring>
+        <name>bail</name>
+        <param>
+          <type>int</type>
+          <declname>mpirank</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Command-line info function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inform the user of the ways to invoke GAMBIT, then die. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="155" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="77" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a997b7c040387c5f58d0e65be82070ee8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::gambit_core::process_primary_options</definition>
+        <argsstring>(int, char **)</argsstring>
+        <name>process_primary_options</name>
+        <param>
+          <type>int</type>
+          <defname>argc</defname>
+        </param>
+        <param>
+          <type>char **</type>
+          <defname>argv</defname>
+        </param>
+        <briefdescription>
+<para>Process default command line options. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Process default mode command line options and return filename. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para><ref refid="namespaceGambit" kindref="compound">Gambit</ref> &apos;standard mode&apos; command line option definitions (needed by getopt)</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="158" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="126" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a9defd7437a39d3648b6ba68e5ee75734" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition>str Gambit::gambit_core::run_diagnostic</definition>
+        <argsstring>(int, char **)</argsstring>
+        <name>run_diagnostic</name>
+        <param>
+          <type>int</type>
+          <defname>argc</defname>
+        </param>
+        <param>
+          <type>char **</type>
+          <defname>argv</defname>
+        </param>
+        <briefdescription>
+<para>Diagnostics function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Launch non-interactive command-line diagnostic mode, for printing info about current GAMBIT configuration. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="161" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="596" bodyend="719"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a0720d248572cb823c6128d77c096949d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::registerModule</definition>
+        <argsstring>(str, str)</argsstring>
+        <name>registerModule</name>
+        <param>
+          <type>str</type>
+          <defname>module</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>ref</defname>
+        </param>
+        <briefdescription>
+<para>Add a new module to modules list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="164" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="204" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1aa8d4edafab459c47a493eda6a92af0b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::registerBackend</definition>
+        <argsstring>(str, str, str)</argsstring>
+        <name>registerBackend</name>
+        <param>
+          <type>str</type>
+          <defname>be</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>version</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>ref</defname>
+        </param>
+        <briefdescription>
+<para>Register a new backend. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="167" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="231" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1ab442083e00214eb2fd855a3076625167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::registerModuleFunctor</definition>
+        <argsstring>(functor &amp;)</argsstring>
+        <name>registerModuleFunctor</name>
+        <param>
+          <type>functor &amp;</type>
+          <defname>f</defname>
+        </param>
+        <briefdescription>
+<para>Add a new module functor to functorList. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="170" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="214" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1ab5c415ea364f8e48337adb095903041b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::registerNestedModuleFunctor</definition>
+        <argsstring>(functor &amp;)</argsstring>
+        <name>registerNestedModuleFunctor</name>
+        <param>
+          <type>functor &amp;</type>
+          <defname>f</defname>
+        </param>
+        <briefdescription>
+<para>Add a new module functor to nestFunctorList. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="173" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="221" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a5e95090d4ef8218ebfbc0ec33bc1c761" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::registerBackendFunctor</definition>
+        <argsstring>(functor &amp;)</argsstring>
+        <name>registerBackendFunctor</name>
+        <param>
+          <type>functor &amp;</type>
+          <defname>f</defname>
+        </param>
+        <briefdescription>
+<para>Add a new backend functor to backendFunctorList. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="176" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="224" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a978036143df8c1d06733fbeba84a3d6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::registerPrimaryModelFunctor</definition>
+        <argsstring>(primary_model_functor &amp;)</argsstring>
+        <name>registerPrimaryModelFunctor</name>
+        <param>
+          <type>primary_model_functor &amp;</type>
+          <defname>f</defname>
+        </param>
+        <briefdescription>
+<para>Add a new primary model functor to primaryModelFunctorList. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="179" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="241" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a89fee83a68a36ffeb42a5ff5a3983ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::registerActiveModelFunctors</definition>
+        <argsstring>(const pmfVec &amp;)</argsstring>
+        <name>registerActiveModelFunctors</name>
+        <param>
+          <type>const pmfVec &amp;</type>
+          <defname>fvec</defname>
+        </param>
+        <briefdescription>
+<para>Add entries to the map of activated primary model functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="182" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="248" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a79baa948dee4864db4ba41956d423beb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const fVec &amp;</type>
+        <definition>const gambit_core::fVec &amp; Gambit::gambit_core::getModuleFunctors</definition>
+        <argsstring>() const</argsstring>
+        <name>getModuleFunctors</name>
+        <briefdescription>
+<para>Get a reference to the list of module functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="185" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="254" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1ab4f8cca3c156bf1474b9aa4e324d1dbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const fVec &amp;</type>
+        <definition>const gambit_core::fVec &amp; Gambit::gambit_core::getNestedModuleFunctors</definition>
+        <argsstring>() const</argsstring>
+        <name>getNestedModuleFunctors</name>
+        <briefdescription>
+<para>Get a reference to the list of nested module functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="188" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="257" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a97e80129aba47015c6b0037a4dd45e05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const fVec &amp;</type>
+        <definition>const gambit_core::fVec &amp; Gambit::gambit_core::getBackendFunctors</definition>
+        <argsstring>() const</argsstring>
+        <name>getBackendFunctors</name>
+        <briefdescription>
+<para>Get a reference to the list of backend model functors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a reference to the list of backend functors. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="191" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="260" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a1707c957de82fcf5a47f70a428c72bf0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const pmfVec &amp;</type>
+        <definition>const gambit_core::pmfVec &amp; Gambit::gambit_core::getPrimaryModelFunctors</definition>
+        <argsstring>() const</argsstring>
+        <name>getPrimaryModelFunctors</name>
+        <briefdescription>
+<para>Get a reference to the list of primary model functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="194" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="263" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a42ca47063026a55d2819948f052651aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const pmfMap &amp;</type>
+        <definition>const gambit_core::pmfMap &amp; Gambit::gambit_core::getActiveModelFunctors</definition>
+        <argsstring>() const</argsstring>
+        <name>getActiveModelFunctors</name>
+        <briefdescription>
+<para>Get a reference to the map of all user-activated primary model functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="197" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="266" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1acbe81988bf09d2f67864e32d802130d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::map&lt; str, str &gt; &amp;</type>
+        <definition>const std::map&lt; str, str &gt; &amp; Gambit::gambit_core::getModuleCitationKeys</definition>
+        <argsstring>() const</argsstring>
+        <name>getModuleCitationKeys</name>
+        <briefdescription>
+<para>Get a reference to the map of module citation keys. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a reference to the map of module citaton keys. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="200" column="20" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="269" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a3305d158d4e63a41c88585d2dd3e0b50" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::map&lt; sspair, str &gt; &amp;</type>
+        <definition>const std::map&lt; sspair, str &gt; &amp; Gambit::gambit_core::getBackendCitationKeys</definition>
+        <argsstring>() const</argsstring>
+        <name>getBackendCitationKeys</name>
+        <briefdescription>
+<para>Get a reference to the map of backend citation keys. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="203" column="20" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="272" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a760beca9c444c45c97d8f7381f9fc74f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::accountForMissingClasses</definition>
+        <argsstring>() const</argsstring>
+        <name>accountForMissingClasses</name>
+        <briefdescription>
+<para>Tell the module functors which backends are actually present. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell the module functors which backends are actually present, so that they can deactivate themselves if they require a class that is supposed to be provided by a backend that is AWOL. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="206" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="277" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1ac7804e69c4b092a09751aa34e8ab0f61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structGambit_1_1capability__info" kindref="compound">capability_info</ref></type>
+        <definition>capability_info Gambit::gambit_core::get_capability_info</definition>
+        <argsstring>(const str &amp;) const</argsstring>
+        <name>get_capability_info</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+<para>Get the description (and other info) of the named item from the capability database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the description of the named capability from the description database. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="209" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="519" bodyend="536"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a3f3b4a7b50920313c5827af72670af1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structGambit_1_1model__info" kindref="compound">model_info</ref></type>
+        <definition>model_info Gambit::gambit_core::get_model_info</definition>
+        <argsstring>(const str &amp;) const</argsstring>
+        <name>get_model_info</name>
+        <param>
+          <type>const str &amp;</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+<para>Get the description (and other info) of the named item from the model database. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="212" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="538" bodyend="555"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a0196b29cf9c56a21444de3f22e723462" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::gambit_core::get_outprec</definition>
+        <argsstring>() const</argsstring>
+        <name>get_outprec</name>
+        <briefdescription>
+<para>Getter for precision to use for cout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="215" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a3b4e49b074f1a6cc8cbc05264def96ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::check_databases</definition>
+        <argsstring>()</argsstring>
+        <name>check_databases</name>
+        <briefdescription>
+<para>Check the named database for conflicts and missing descriptions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Check the capability and model databases for conflicts and missing descriptions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="218" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="306" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1gambit__core_1a78d47e77590cc889dc08b74e3205604c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::gambit_core::check_capability_descriptions</definition>
+        <argsstring>()</argsstring>
+        <name>check_capability_descriptions</name>
+        <briefdescription>
+<para>Check for missing capability descriptions (after reading in runtime flags) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="224" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/core.cpp" bodystart="504" bodyend="516"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Master driver class for a GAMBIT scan. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" line="40" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/core.hpp" bodystart="39" bodyend="231"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1gambit__core_1a760beca9c444c45c97d8f7381f9fc74f" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>accountForMissingClasses</name></member>
+      <member refid="classGambit_1_1gambit__core_1a031f83cba9376936be0b1fcc8cd9e10d" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>activeModelFunctorList</name></member>
+      <member refid="classGambit_1_1gambit__core_1a0ebf6d13a6c6c0d1abf0594a9ca192ec" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>backend_citation_keys</name></member>
+      <member refid="classGambit_1_1gambit__core_1a56326280ff18fe7ab0d98a54a49db704" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>backend_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1a6c3dc34c917e6003a8fab249edc75824" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>backend_status</name></member>
+      <member refid="classGambit_1_1gambit__core_1a61aeb650a830cfbe822be2acc19c1330" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>backend_versions</name></member>
+      <member refid="classGambit_1_1gambit__core_1a2c0b224194b7642e4f285890bb9124f7" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>backendData</name></member>
+      <member refid="classGambit_1_1gambit__core_1a3a1e7b6916ac4f873b3ac82bf3a59c55" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>backendFunctorList</name></member>
+      <member refid="classGambit_1_1gambit__core_1a7b647508b923c4c36b8154f29866818a" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>bail</name></member>
+      <member refid="classGambit_1_1gambit__core_1a26c16bc574021044ae48d548b3284320" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>capabilities</name></member>
+      <member refid="classGambit_1_1gambit__core_1ac0f37b99f25c1c6a38584c643864ff4c" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>capability_dbase</name></member>
+      <member refid="classGambit_1_1gambit__core_1ad20b293405ef1c97aab5122a904dd831" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>capability_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1a78d47e77590cc889dc08b74e3205604c" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>check_capability_descriptions</name></member>
+      <member refid="classGambit_1_1gambit__core_1a3b4e49b074f1a6cc8cbc05264def96ce" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>check_databases</name></member>
+      <member refid="classGambit_1_1gambit__core_1ae957640adac0adb366197b0adb0e7808" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>ff_backend_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1a019ab6bd5c15daea5f06c54197170d82" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>ff_capability_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1a51915fd6b35bb063ccc8891cc682e81d" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>ff_model_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1a39f77b1aa1ccf45a761ec3d93b6282c0" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>ff_module_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1acfabd5ac835bc5409c3ef8ec47f64dc2" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>ff_prior_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1abef236a07b98b89f1b09068101fa6500" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>ff_scanner_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1a1d83b248f4287a49e61838e67544056e" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>ff_test_function_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1ac281999b748dc75f7a4851005e02cc39" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>found_inifile</name></member>
+      <member refid="classGambit_1_1gambit__core_1ac1e65e11fc6591c03d66dd7d2b1804a0" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>functorList</name></member>
+      <member refid="classGambit_1_1gambit__core_1a08c569a1cb0fe1936c7a460cb410fbcf" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>fVec</name></member>
+      <member refid="classGambit_1_1gambit__core_1a39c2761ce427f8f8c44428edc96f0391" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>gambit_core</name></member>
+      <member refid="classGambit_1_1gambit__core_1ac7804e69c4b092a09751aa34e8ab0f61" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>get_capability_info</name></member>
+      <member refid="classGambit_1_1gambit__core_1a3f3b4a7b50920313c5827af72670af1b" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>get_model_info</name></member>
+      <member refid="classGambit_1_1gambit__core_1a0196b29cf9c56a21444de3f22e723462" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>get_outprec</name></member>
+      <member refid="classGambit_1_1gambit__core_1a42ca47063026a55d2819948f052651aa" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>getActiveModelFunctors</name></member>
+      <member refid="classGambit_1_1gambit__core_1a3305d158d4e63a41c88585d2dd3e0b50" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>getBackendCitationKeys</name></member>
+      <member refid="classGambit_1_1gambit__core_1a97e80129aba47015c6b0037a4dd45e05" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>getBackendFunctors</name></member>
+      <member refid="classGambit_1_1gambit__core_1acbe81988bf09d2f67864e32d802130d1" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>getModuleCitationKeys</name></member>
+      <member refid="classGambit_1_1gambit__core_1a79baa948dee4864db4ba41956d423beb" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>getModuleFunctors</name></member>
+      <member refid="classGambit_1_1gambit__core_1ab4f8cca3c156bf1474b9aa4e324d1dbe" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>getNestedModuleFunctors</name></member>
+      <member refid="classGambit_1_1gambit__core_1a1707c957de82fcf5a47f70a428c72bf0" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>getPrimaryModelFunctors</name></member>
+      <member refid="classGambit_1_1gambit__core_1a871d43f94c04e972b3d7c0f45e120d79" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>input_capability_descriptions</name></member>
+      <member refid="classGambit_1_1gambit__core_1a7a5cfdcbdace07f7ce2d5a516043a336" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>input_model_descriptions</name></member>
+      <member refid="classGambit_1_1gambit__core_1ae7cdc80ad7267b10d0f0ab96379658a4" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>launch_diagnostic_MPI</name></member>
+      <member refid="classGambit_1_1gambit__core_1a24bcd9920a409a4a5f1f44ba00eec40e" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>missing_capability_description</name></member>
+      <member refid="classGambit_1_1gambit__core_1ae71ae16e80ab1bd733fdb81339a3395c" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>model_dbase</name></member>
+      <member refid="classGambit_1_1gambit__core_1abae9de2bf908334275fe9bcb3835bf4d" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>model_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1a7e1de363db70a975e8456945c069d9d7" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>modelInfo</name></member>
+      <member refid="classGambit_1_1gambit__core_1aea9152437cf9254df8e25ea226df5a11" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>models</name></member>
+      <member refid="classGambit_1_1gambit__core_1a078741f9531525b7a445424ef1871dbc" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>module_citation_keys</name></member>
+      <member refid="classGambit_1_1gambit__core_1a544da685ec5d5786cffddddd0ad8380a" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>module_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1ae4bd9f72435bb04cdb0f553634a8f321" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>modules</name></member>
+      <member refid="classGambit_1_1gambit__core_1a828eaa203a8467a0965b3bd367f46435" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>nestedFunctorList</name></member>
+      <member refid="classGambit_1_1gambit__core_1a5aef1f53a27c7b0c919866ef7a71ef7e" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>outprec</name></member>
+      <member refid="classGambit_1_1gambit__core_1a733e0826c0f5b22eeb87a281fd1f792d" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>pmfMap</name></member>
+      <member refid="classGambit_1_1gambit__core_1a7fe5b76c0d2e1a284ea683e3bac4694c" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>pmfVec</name></member>
+      <member refid="classGambit_1_1gambit__core_1a185fe8767b3f1c99cfdfa310f873ab4a" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>primaryModelFunctorList</name></member>
+      <member refid="classGambit_1_1gambit__core_1afe538ac1f096f7814a9a21fd092027e4" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>prior_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1a997b7c040387c5f58d0e65be82070ee8" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>process_primary_options</name></member>
+      <member refid="classGambit_1_1gambit__core_1aef1230fac981cbf3a10bb955492958f3" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>processed_options</name></member>
+      <member refid="classGambit_1_1gambit__core_1af55b8e9ae62842d09f8ac3ab5aef871c" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>quit_diagnostic_MPI</name></member>
+      <member refid="classGambit_1_1gambit__core_1a89fee83a68a36ffeb42a5ff5a3983ba0" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>registerActiveModelFunctors</name></member>
+      <member refid="classGambit_1_1gambit__core_1aa8d4edafab459c47a493eda6a92af0b4" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>registerBackend</name></member>
+      <member refid="classGambit_1_1gambit__core_1a5e95090d4ef8218ebfbc0ec33bc1c761" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>registerBackendFunctor</name></member>
+      <member refid="classGambit_1_1gambit__core_1a0720d248572cb823c6128d77c096949d" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>registerModule</name></member>
+      <member refid="classGambit_1_1gambit__core_1ab442083e00214eb2fd855a3076625167" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>registerModuleFunctor</name></member>
+      <member refid="classGambit_1_1gambit__core_1ab5c415ea364f8e48337adb095903041b" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>registerNestedModuleFunctor</name></member>
+      <member refid="classGambit_1_1gambit__core_1a978036143df8c1d06733fbeba84a3d6a" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>registerPrimaryModelFunctor</name></member>
+      <member refid="classGambit_1_1gambit__core_1afb45c1d5212a99a4e9e96d80639fd3ab" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>resume</name></member>
+      <member refid="classGambit_1_1gambit__core_1a9defd7437a39d3648b6ba68e5ee75734" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>run_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1a38f47e3e4da977339caaa3a8273b8823" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>scanner_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1a59ac2e115ba6a935c154108310b1791c" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>show_backends</name></member>
+      <member refid="classGambit_1_1gambit__core_1af2148a5bf48f1115aa838e4841f436a0" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>show_runorder</name></member>
+      <member refid="classGambit_1_1gambit__core_1a2008f73ad4b7de0634393c436e379e20" prot="private" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>test_function_diagnostic</name></member>
+      <member refid="classGambit_1_1gambit__core_1abc372ad305cceaf6ad60f6048a40d772" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>verbose_flag</name></member>
+      <member refid="classGambit_1_1gambit__core_1a2a26fe30efe2f94a9ec3e6fd58f578c2" prot="public" virt="non-virtual"><scope>Gambit::gambit_core</scope><name>~gambit_core</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

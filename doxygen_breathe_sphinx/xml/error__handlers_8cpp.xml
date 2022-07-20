@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="error__handlers_8cpp" kind="file" language="C++">
+    <compoundname>error_handlers.cpp</compoundname>
+    <includes refid="error__handlers_8hpp" local="yes">gambit/Core/error_handlers.hpp</includes>
+    <includes local="yes">gambit/Logs/log_tags.hpp</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>gambit/Utils/local_info.hpp</label>
+      </node>
+      <node id="1">
+        <label>error_handlers.cpp</label>
+        <link refid="error__handlers_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>gambit/Logs/log_tags.hpp</label>
+      </node>
+      <node id="3">
+        <label>gambit/Utils/standalone_error_handlers.hpp</label>
+      </node>
+      <node id="2">
+        <label>gambit/Core/error_handlers.hpp</label>
+        <link refid="error__handlers_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1DRes">Gambit::DRes</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Exception object definitions.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Pat Scott (<ulink url="mailto:patscott@physics.mcgill.ca">patscott@physics.mcgill.ca</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2014 Mar</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="error__handlers_8hpp" kindref="compound">gambit/Core/error_handlers.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Logs/log_tags.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">LogTags;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>error&amp;<sp/><ref refid="namespaceGambit_1abbe80443e7044737d5d4658b968ff7f4" kindref="member">core_error</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>error<sp/>local(</highlight><highlight class="stringliteral">&quot;The<sp/>Core<sp/>has<sp/>encountered<sp/>a<sp/>problem.&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;core_error&quot;</highlight><highlight class="normal">,<sp/>core);<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>local;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>warning&amp;<sp/><ref refid="namespaceGambit_1a93a04abc5d812b62e646a945f27e35a8" kindref="member">core_warning</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>warning<sp/>local(</highlight><highlight class="stringliteral">&quot;The<sp/>Core<sp/>has<sp/>encountered<sp/>a<sp/>problem.&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;core_warning&quot;</highlight><highlight class="normal">,<sp/>core);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>local;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DRes</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>error&amp;<sp/><ref refid="error__handlers_8hpp_1abda0801bcf720c49927e2b62e0678648" kindref="member">dependency_resolver_error</ref>()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>error<sp/>local(</highlight><highlight class="stringliteral">&quot;A<sp/>problem<sp/>has<sp/>been<sp/>raised<sp/>by<sp/>the<sp/>dependency<sp/>resolver<sp/>subsystem.&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;dependency_resolver_error&quot;</highlight><highlight class="normal">,<sp/>dependency_resolver);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>local;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>warning&amp;<sp/><ref refid="error__handlers_8hpp_1aef6f186a60427ce462d26acb91a8c9d2" kindref="member">dependency_resolver_warning</ref>()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>warning<sp/>local(</highlight><highlight class="stringliteral">&quot;A<sp/>problem<sp/>has<sp/>been<sp/>raised<sp/>by<sp/>the<sp/>dependency<sp/>resolver<sp/>subsystem.&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;dependency_resolver_warning&quot;</highlight><highlight class="normal">,<sp/>dependency_resolver);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>local;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/error_handlers.cpp"/>
+  </compounddef>
+</doxygen>

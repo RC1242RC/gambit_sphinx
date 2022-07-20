@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1SpecBit_1_1VevaciousResultContainer" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::SpecBit::VevaciousResultContainer</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a29ec056a47e240d3ae085dbd15d22e8d" prot="private" static="no" mutable="no">
+        <type>map_str_map_str_dbl</type>
+        <definition>map_str_map_str_dbl Gambit::SpecBit::VevaciousResultContainer::result_map</definition>
+        <argsstring></argsstring>
+        <name>result_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="129" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1ad61e1cdb14ee829bce5fc5b98a11f7ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::SpecBit::VevaciousResultContainer::VevaciousResultContainer</definition>
+        <argsstring>()</argsstring>
+        <name>VevaciousResultContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="105" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a6164e63e6ffd634a33c8d0a94425e74d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::SpecBit::VevaciousResultContainer::clear_results</definition>
+        <argsstring>(const str panic_vaccum, int pathFinder_number)</argsstring>
+        <name>clear_results</name>
+        <param>
+          <type>const str</type>
+          <declname>panic_vaccum</declname>
+          <defname>panic_vacuum</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pathFinder_number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>delete all entries of the vevacious results map and set lifetime, probability and all entries of bounceActionThreshould vectors to -1 to be able to easily filter out points for which vevacious did not run successfully </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="108" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/SpecBit_types.cpp" bodystart="30" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a4bf0e0095555de41a785868ffaeba24d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::SpecBit::VevaciousResultContainer::set_results</definition>
+        <argsstring>(str panic_vaccum, str name, double val)</argsstring>
+        <name>set_results</name>
+        <param>
+          <type>str</type>
+          <declname>panic_vaccum</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>add entries to vevacious result map </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="113" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/SpecBit_types.cpp" bodystart="62" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a4da3859b3801d98e20dde7ef98f3d52a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::SpecBit::VevaciousResultContainer::add_straightPathGoodEnough</definition>
+        <argsstring>(str panic_vacuum)</argsstring>
+        <name>add_straightPathGoodEnough</name>
+        <param>
+          <type>str</type>
+          <declname>panic_vacuum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>add information to vevacious result map whether the action of drawing a straight path between the physical &amp; panic vacuum is already below the action threshold. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="114" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/SpecBit_types.cpp" bodystart="80" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1ae18e60c88cb27b127ce1bbba83bc2e55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>map_str_dbl</type>
+        <definition>map_str_dbl Gambit::SpecBit::VevaciousResultContainer::get_nearest_results</definition>
+        <argsstring>()</argsstring>
+        <name>get_nearest_results</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="117" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" bodystart="117" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1acd70ab80fea8ee171e668ddedebb650c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>map_str_dbl</type>
+        <definition>map_str_dbl Gambit::SpecBit::VevaciousResultContainer::get_global_results</definition>
+        <argsstring>()</argsstring>
+        <name>get_global_results</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="118" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" bodystart="118" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1adb80cc9b065a4d7be4fbb7791cce4fe6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::SpecBit::VevaciousResultContainer::get_width</definition>
+        <argsstring>(str panic_vacuum)</argsstring>
+        <name>get_width</name>
+        <param>
+          <type>str</type>
+          <declname>panic_vacuum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="121" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1aa3dc70844253ef0043fae4c32b9d9d3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::SpecBit::VevaciousResultContainer::get_lifetime</definition>
+        <argsstring>(str panic_vaccum)</argsstring>
+        <name>get_lifetime</name>
+        <param>
+          <type>str</type>
+          <declname>panic_vaccum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="122" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1ae703d8a6a505aaaa3960721abb6743a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::SpecBit::VevaciousResultContainer::get_thermalProbability</definition>
+        <argsstring>(str panic_vaccum)</argsstring>
+        <name>get_thermalProbability</name>
+        <param>
+          <type>str</type>
+          <declname>panic_vaccum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="125" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a4d83cd614ad3c421becee3aed55affc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::SpecBit::VevaciousResultContainer::get_thermalWidth</definition>
+        <argsstring>(str panic_vacuum)</argsstring>
+        <name>get_thermalWidth</name>
+        <param>
+          <type>str</type>
+          <declname>panic_vacuum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="126" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" bodystart="126" bodyend="126"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" line="100" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp" bodystart="99" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a4da3859b3801d98e20dde7ef98f3d52a" prot="public" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>add_straightPathGoodEnough</name></member>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a6164e63e6ffd634a33c8d0a94425e74d" prot="public" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>clear_results</name></member>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1acd70ab80fea8ee171e668ddedebb650c" prot="public" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>get_global_results</name></member>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1aa3dc70844253ef0043fae4c32b9d9d3c" prot="public" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>get_lifetime</name></member>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1ae18e60c88cb27b127ce1bbba83bc2e55" prot="public" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>get_nearest_results</name></member>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1ae703d8a6a505aaaa3960721abb6743a0" prot="public" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>get_thermalProbability</name></member>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a4d83cd614ad3c421becee3aed55affc6" prot="public" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>get_thermalWidth</name></member>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1adb80cc9b065a4d7be4fbb7791cce4fe6" prot="public" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>get_width</name></member>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a29ec056a47e240d3ae085dbd15d22e8d" prot="private" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>result_map</name></member>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a4bf0e0095555de41a785868ffaeba24d" prot="public" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>set_results</name></member>
+      <member refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1ad61e1cdb14ee829bce5fc5b98a11f7ab" prot="public" virt="non-virtual"><scope>Gambit::SpecBit::VevaciousResultContainer</scope><name>VevaciousResultContainer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

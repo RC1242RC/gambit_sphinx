@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structGambit_1_1capability__info" kind="struct" language="C++" prot="public">
+    <compoundname>Gambit::capability_info</compoundname>
+    <includes refid="yaml__description__database_8hpp" local="no">yaml_description_database.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGambit_1_1capability__info_1a5083ab370a1da9da83cc9086d0c61f74" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str Gambit::capability_info::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>Capability name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="43" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1capability__info_1af85ade6c5af81f4d3c0a24dfb52af76a" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, std::set&lt; std::pair&lt; str, str &gt; &gt; &gt;</type>
+        <definition>std::map&lt;str, std::set&lt;std::pair&lt;str,str&gt; &gt; &gt; Gambit::capability_info::modset</definition>
+        <argsstring></argsstring>
+        <name>modset</name>
+        <briefdescription>
+<para>Set of modules and module functions in which capability is used, along with corresponding result types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="45" column="15" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1capability__info_1a3b42d249798f5a648010a529fbce1cbe" prot="public" static="no" mutable="no">
+        <type>std::map&lt; str, std::set&lt; std::pair&lt; str, str &gt; &gt; &gt;</type>
+        <definition>std::map&lt;str, std::set&lt;std::pair&lt;str,str&gt; &gt; &gt; Gambit::capability_info::beset</definition>
+        <argsstring></argsstring>
+        <name>beset</name>
+        <briefdescription>
+<para>Set of backends and backend functions in which capability is used, along with corresponding type signatures. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="47" column="15" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1capability__info_1a5f7fc9c8e6f5be1f2f031d076912a9a5" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str Gambit::capability_info::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+<para>Full description of capability. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="49" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1capability__info_1a8638f6e1b8f46e46820be3b3b77bf8b0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::capability_info::has_description</definition>
+        <argsstring></argsstring>
+        <name>has_description</name>
+        <briefdescription>
+<para>Flag to check if description is missing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="51" column="11" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper struct to carry around capability information. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Gambit::capability_info</label>
+        <link refid="structGambit_1_1capability__info"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>name</edgelabel>
+          <edgelabel>description</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" line="41" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/yaml_description_database.hpp" bodystart="40" bodyend="52"/>
+    <listofallmembers>
+      <member refid="structGambit_1_1capability__info_1a3b42d249798f5a648010a529fbce1cbe" prot="public" virt="non-virtual"><scope>Gambit::capability_info</scope><name>beset</name></member>
+      <member refid="structGambit_1_1capability__info_1a5f7fc9c8e6f5be1f2f031d076912a9a5" prot="public" virt="non-virtual"><scope>Gambit::capability_info</scope><name>description</name></member>
+      <member refid="structGambit_1_1capability__info_1a8638f6e1b8f46e46820be3b3b77bf8b0" prot="public" virt="non-virtual"><scope>Gambit::capability_info</scope><name>has_description</name></member>
+      <member refid="structGambit_1_1capability__info_1af85ade6c5af81f4d3c0a24dfb52af76a" prot="public" virt="non-virtual"><scope>Gambit::capability_info</scope><name>modset</name></member>
+      <member refid="structGambit_1_1capability__info_1a5083ab370a1da9da83cc9086d0c61f74" prot="public" virt="non-virtual"><scope>Gambit::capability_info</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

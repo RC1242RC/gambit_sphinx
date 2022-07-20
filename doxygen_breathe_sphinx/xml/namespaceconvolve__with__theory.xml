@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceconvolve__with__theory" kind="namespace" language="Python">
+    <compoundname>convolve_with_theory</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceconvolve__with__theory_1adbd2f16e6d1679b2c26553bebb23a8fe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>convolve_with_theory.FILE_NAME</definition>
+        <argsstring></argsstring>
+        <name>FILE_NAME</name>
+        <initializer>=  sys.argv[1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/data/convolve_with_theory.py" line="62" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/data/convolve_with_theory.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceconvolve__with__theory_1a5812dda07afffdbf35952ff39d8a678b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>convolve_with_theory.ARGS</definition>
+        <argsstring></argsstring>
+        <name>ARGS</name>
+        <initializer>=  map(float, sys.argv[2:])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/data/convolve_with_theory.py" line="66" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/data/convolve_with_theory.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceconvolve__with__theory_1a227f70778548335eae9040b60463bc75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def convolve_with_theory.convolve</definition>
+        <argsstring>(file_name, frac_error=0.1, min_=0., max_=1., log_normal=True)</argsstring>
+        <name>convolve</name>
+        <param>
+          <type>file_name</type>
+          <defname>file_name</defname>
+        </param>
+        <param>
+          <type>frac_error</type>
+          <defname>frac_error</defname>
+          <defval>0.1</defval>
+        </param>
+        <param>
+          <type>min_</type>
+          <defname>min_</defname>
+          <defval>0.</defval>
+        </param>
+        <param>
+          <type>max_</type>
+          <defname>max_</defname>
+          <defval>1.</defval>
+        </param>
+        <param>
+          <type>log_normal</type>
+          <defname>log_normal</defname>
+          <defval>True</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Convolve chi-squared in a data file with a fractional theory error
+
+Args:
+    file_name (str): Data file with columns (parameter, chi-squared).
+    frac_error (float, optional): Fractional theory error on the parameter.
+    min_ (float, optional): Minimum value of parameter.
+    max_ (float, optional): Maximum value of parameter.
+    log_normal (bool, optional): Whether to use log-normal or normal error.
+
+Returns:
+    list(tuples): List of (parameter, convolved chi-squared)
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/data/convolve_with_theory.py" line="19" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/data/convolve_with_theory.py" bodystart="19" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Convolve chi-squared in a data file with a fractional theory error
+==================================================================
+
+python convolve_with_theory.py &lt;file&gt; &lt;frac-error&gt; &lt;min&gt; &lt;max&gt;
+
+prints (parameter, convolved chi-squared) from a file containing
+(parameter, chi-squared).
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/data/convolve_with_theory.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

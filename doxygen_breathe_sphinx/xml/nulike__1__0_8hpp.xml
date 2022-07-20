@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="nulike__1__0_8hpp" kind="file" language="C++">
+    <compoundname>nulike_1_0.hpp</compoundname>
+    <includedby refid="nulike__1__0__4_8hpp" local="yes">nulike_1_0_4.hpp</includedby>
+    <includedby refid="nulike__1__0__5_8hpp" local="yes">nulike_1_0_5.hpp</includedby>
+    <includedby refid="nulike__1__0__6_8hpp" local="yes">nulike_1_0_6.hpp</includedby>
+    <includedby refid="nulike__1__0__7_8hpp" local="yes">nulike_1_0_7.hpp</includedby>
+    <includedby refid="nulike__1__0__8_8hpp" local="yes">nulike_1_0_8.hpp</includedby>
+    <includedby refid="nulike__1__0__9_8hpp" local="yes">nulike_1_0_9.hpp</includedby>
+    <invincdepgraph>
+      <node id="9">
+        <label>nulike_1_0_7.cpp</label>
+        <link refid="nulike__1__0__7_8cpp"/>
+      </node>
+      <node id="7">
+        <label>nulike_1_0_6.cpp</label>
+        <link refid="nulike__1__0__6_8cpp"/>
+      </node>
+      <node id="13">
+        <label>nulike_1_0_9.cpp</label>
+        <link refid="nulike__1__0__9_8cpp"/>
+      </node>
+      <node id="11">
+        <label>nulike_1_0_8.cpp</label>
+        <link refid="nulike__1__0__8_8cpp"/>
+      </node>
+      <node id="2">
+        <label>nulike_1_0_4.hpp</label>
+        <link refid="nulike__1__0__4_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>nulike_1_0_5.hpp</label>
+        <link refid="nulike__1__0__5_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>nulike_1_0.hpp</label>
+        <link refid="nulike__1__0_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>nulike_1_0_8.hpp</label>
+        <link refid="nulike__1__0__8_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>nulike_1_0_9.hpp</label>
+        <link refid="nulike__1__0__9_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>nulike_1_0_6.hpp</label>
+        <link refid="nulike__1__0__6_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>nulike_1_0_5.cpp</label>
+        <link refid="nulike__1__0__5_8cpp"/>
+      </node>
+      <node id="8">
+        <label>nulike_1_0_7.hpp</label>
+        <link refid="nulike__1__0__7_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nulike_1_0_4.cpp</label>
+        <link refid="nulike__1__0__4_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Frontend header for the nulike backend.</para>
+<para>Compile-time registration of available functions and variables from this backend.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Pat Scott (<ulink url="mailto:patscott@physics.mcgill.ca">patscott@physics.mcgill.ca</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2013 May </para>
+</simplesect>
+<simplesect kind="date"><para>2014 March </para>
+</simplesect>
+<simplesect kind="date"><para>2015 Aug</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Import<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">BE_FUNCTION(nulike_init,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;),<sp/></highlight><highlight class="stringliteral">&quot;nulike_init_&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;nulike_init&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">BE_FUNCTION(nulike_bounds,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">,<sp/>(const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/>nuyield_function_pointer,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;nulike_bounds&quot;,<sp/>&quot;nubounds&quot;)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">BE_FUNCTION(nulike_lnpiln,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/>(const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;),<sp/>&quot;nulike_lnpiln_&quot;,<sp/>&quot;lnlike_marg_poisson_lognormal_error&quot;)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">BE_FUNCTION(nulike_lnpin,<sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/>(const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/>const<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;),<sp/>&quot;nulike_lnpin_&quot;,<sp/><sp/>&quot;lnlike_marg_poisson_gaussian_error&quot;)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Arguments<sp/>for<sp/>the<sp/>last<sp/>two<sp/>above<sp/>are:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>int<sp/><sp/><sp/><sp/>nobs<sp/><sp/><sp/>number<sp/>of<sp/>observed<sp/>events</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>double<sp/>npred1<sp/>number<sp/>of<sp/>predicted<sp/>events<sp/>with<sp/>no<sp/>uncertainty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>double<sp/>npred2<sp/>number<sp/>of<sp/>predicted<sp/>events<sp/>with<sp/>an<sp/>associated<sp/>prediction<sp/>uncertainty<sp/>due<sp/>to<sp/>e.g.<sp/>efficiency<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>double<sp/>error<sp/><sp/>fractional<sp/>uncertainty<sp/>on<sp/>prediction<sp/>npred2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>the<sp/>split<sp/>into<sp/>npred1<sp/>and<sp/>npred2<sp/>is<sp/>just<sp/>for<sp/>distinguishing<sp/>which<sp/>part<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>predicition<sp/>has<sp/>the<sp/>fractional<sp/>uncertainty<sp/>associated<sp/>with<sp/>it.<sp/><sp/>If<sp/>the<sp/>uncertainty<sp/>is<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>entire<sp/>prediction,<sp/>set<sp/>npred1<sp/>=<sp/>0<sp/>and<sp/>npred2<sp/>=<sp/>total<sp/>predicted<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/frontends/shared_includes/nulike_1_0.hpp"/>
+  </compounddef>
+</doxygen>

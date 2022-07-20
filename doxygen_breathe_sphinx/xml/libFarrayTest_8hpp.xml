@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="libFarrayTest_8hpp" kind="file" language="C++">
+    <compoundname>libFarrayTest.hpp</compoundname>
+    <includes local="yes">gambit/Utils/util_types.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>libFarrayTest.hpp</label>
+        <link refid="libFarrayTest_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gambit/Utils/util_types.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structGambit_1_1libFarrayTest__CB__type" prot="public">Gambit::libFarrayTest_CB_type</innerclass>
+    <innerclass refid="structGambit_1_1libFarrayTest__CB2__type" prot="public">Gambit::libFarrayTest_CB2_type</innerclass>
+    <innerclass refid="structGambit_1_1libFarrayTest__CB3__type" prot="public">Gambit::libFarrayTest_CB3_type</innerclass>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Definitions of container classes for the libFarrayTest backend.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Lars A. Dal (<ulink url="mailto:l.a.dal@fys.uio.no">l.a.dal@fys.uio.no</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2014 Feb</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__libFarrayTest_types_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__libFarrayTest_types_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/util_types.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Farray<sp/>syntax:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Farray&lt;[type],<sp/>[lower<sp/>index,<sp/>dim<sp/>1],<sp/>[upper<sp/>index,<sp/>dim<sp/>1],<sp/>[alternating<sp/>lower/upper<sp/>indices<sp/>for<sp/>subsequent<sp/>dimensions]&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fstring<sp/>syntax:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fstring&lt;[string<sp/>length]&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FstringArray<sp/>syntax:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FstringArray&lt;[string<sp/>length],<sp/>[lower<sp/>index,<sp/>dim<sp/>1],<sp/>[upper<sp/>index,<sp/>dim<sp/>1],<sp/>[alternating<sp/>lower/upper<sp/>indices<sp/>for<sp/>subsequent<sp/>dimensions]&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>util_types.hpp<sp/>for<sp/>the<sp/>typedefs<sp/>(such<sp/>as<sp/>Finteger)<sp/>used<sp/>in<sp/>the<sp/>code<sp/>below</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33" refid="structGambit_1_1libFarrayTest__CB__type" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1libFarrayTest__CB__type" kindref="compound">libFarrayTest_CB_type</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Farray&lt;<sp/>Fdouble,-2,0&gt;<sp/>a;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Farray&lt;<sp/>Fdouble,1,3&gt;<sp/><sp/>b;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Finteger<sp/>c;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Farray&lt;Finteger,<sp/>1,3,<sp/>0,1,<sp/>-1,0&gt;<sp/>d;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40" refid="structGambit_1_1libFarrayTest__CB2__type" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1libFarrayTest__CB2__type" kindref="compound">libFarrayTest_CB2_type</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Fstring&lt;5&gt;<sp/>chara;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FstringArray&lt;5,<sp/>1,3&gt;<sp/><sp/>charb;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FstringArray&lt;6,<sp/>1,2,<sp/>-1,0&gt;<sp/>charc;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Finteger<sp/>e;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="47" refid="structGambit_1_1libFarrayTest__CB3__type" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1libFarrayTest__CB3__type" kindref="compound">libFarrayTest_CB3_type</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Fcomplex<sp/>cpa;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Fcomplex16<sp/>cpb;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Finteger<sp/>f;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>defined<sp/>__libFarrayTest_types_hpp__</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/libFarrayTest.hpp"/>
+  </compounddef>
+</doxygen>

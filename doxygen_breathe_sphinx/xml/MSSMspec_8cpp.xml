@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="MSSMspec_8cpp" kind="file" language="C++">
+    <compoundname>MSSMspec.cpp</compoundname>
+    <includes refid="MSSMSpec__head_8hpp" local="yes">gambit/SpecBit/MSSMSpec_head.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>MSSMspec.cpp</label>
+        <link refid="MSSMspec_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>gambit/Models/SpectrumContents/RegisteredSpectra.hpp</label>
+      </node>
+      <node id="4">
+        <label>gambit/Utils/util_functions.hpp</label>
+      </node>
+      <node id="3">
+        <label>gambit/Elements/spec.hpp</label>
+      </node>
+      <node id="2">
+        <label>gambit/SpecBit/MSSMSpec_head.hpp</label>
+        <link refid="MSSMSpec__head_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>flexiblesusy/config/config.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1SpecBit">Gambit::SpecBit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Source file definable quantities for MSSMSpec class</para>
+<para><hruler/>
+</para>
+<para>Authors:</para>
+<para><simplesect kind="author"><para>Ben Farmer (<ulink url="mailto:benjamin.farmer@fysik.su.se">benjamin.farmer@fysik.su.se</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>Aug 2016</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MSSMSpec__head_8hpp" kindref="compound">gambit/SpecBit/MSSMSpec_head.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SpecBit<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MSSM_strs::MSSM_strs()<sp/>{}<sp/></highlight><highlight class="comment">//<sp/>Constructor<sp/>needed<sp/>to<sp/>silence<sp/>certain<sp/>compiler<sp/>warnings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a694dfc418e4989ddc20cc81f36e2572e" kindref="member">MSSM_strs::BMu</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;BMu&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::mHd2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;mHd2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::mHu2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;mHu2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a40cacd72b11707f0245f66342ce21d16" kindref="member">MSSM_strs::mq2</ref><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;mq2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::ml2<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;ml2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::md2<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;md2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::mu2<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;mu2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::me2<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;me2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a25bd3b0bd124c624e54530ff35c5dd3f" kindref="member">MSSM_strs::M1</ref><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;M1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::M2<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;M2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::M3<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;M3&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Mu<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;Mu&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::vu<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;vu&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::vd<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;vd&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1af2d8786639b0615f32fd8124c8a6fd99" kindref="member">MSSM_strs::TYd</ref><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;TYd&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::TYe<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;TYe&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::TYu<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;TYu&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::ad<sp/><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;ad&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::ae<sp/><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;ae&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::au<sp/><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;au&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1ab1d9edc31a6e8d098937608be59cbef7" kindref="member">MSSM_strs::g1</ref><sp/><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;g1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::g2<sp/><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;g2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::g3<sp/><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;g3&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a1b82a433db1b88b64334eb74fe0210af" kindref="member">MSSM_strs::tanbeta</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;tanbeta&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::sinW2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;sinW2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a807dd4e8c26b9e47efa359a0ea7aff49" kindref="member">MSSM_strs::mA2</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;mA2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1aec4a98408fccd1a94a79796c856af4b8" kindref="member">MSSM_strs::Yd</ref><sp/><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;Yd&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Yu<sp/><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;Yu&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Ye<sp/><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;Ye&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a8c54afa5f12ebc8d7d6dea2dc37e1c8c" kindref="member">MSSM_strs::gluino</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;~g&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::A0<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;A0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Hplus=<sp/></highlight><highlight class="stringliteral">&quot;H+&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Hminus<sp/>=</highlight><highlight class="stringliteral">&quot;H-&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Goldstone0<sp/>=</highlight><highlight class="stringliteral">&quot;Goldstone0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Goldstoneplus<sp/>=</highlight><highlight class="stringliteral">&quot;Goldstone+&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Goldstoneminus<sp/>=</highlight><highlight class="stringliteral">&quot;Goldstone-&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Wplus<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;W+&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Wminus<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;W-&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::Z0<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a9eba65565eb00cb7225e2eeb024fd012" kindref="member">MSSM_strs::su</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~u&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::sd<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~d&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::se<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~e-&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::snu<sp/><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~nu&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::chiplus<sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~chi+&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::chi0<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~chi0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::h0<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;h0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::subar<sp/><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~ubar&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::sdbar<sp/><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~dbar&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::seplus<sp/><sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~e+&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::snubar<sp/><sp/><sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~nubar&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>MSSM_strs::chiminus<sp/><sp/>=<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;~chi-&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>replace<sp/>with<sp/>a<sp/>more<sp/>integrated<sp/>system</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pole<sp/>mass<sp/>strings<sp/>with<sp/>no<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a98d29e080ab8f4124cb3ec0d65fe4abe" kindref="member">MSSM_strs::pole_mass_strs</ref><sp/>=<sp/>initVector(<sp/>gluino,<sp/>A0,<sp/>Hplus,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Hminus,<sp/>Goldstone0,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Goldstoneplus,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Goldstoneminus,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wplus,<sp/>Wminus,<sp/>Z0<sp/>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>as<sp/>above<sp/>but<sp/>without<sp/>Z0<sp/>since<sp/>we<sp/>do<sp/>not<sp/>predict<sp/>that<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/>MSSM_strs::pole_mass_pred<sp/>=<sp/>initVector(<sp/>gluino,<sp/>A0,<sp/>Hplus,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Hminus,<sp/>Goldstone0,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Goldstoneplus,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Goldstoneminus,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wplus,<sp/>Wminus<sp/>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1aa15b5d71f13a236bf559ca57951fd42d" kindref="member">MSSM_strs::pole_mass_strs_1</ref><sp/>=<sp/>initVector(<sp/>su,<sp/>sd,<sp/>se,<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subar,<sp/>sdbar,<sp/>seplus,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chiplus,<sp/>chiminus,<sp/>chi0,<sp/>h0,<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snu,<sp/>snubar<sp/>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1aac9a6d06af0d2fa64e88a63a191ffbf0" kindref="member">MSSM_strs::pole_mass_strs_1_6</ref><sp/><sp/>=<sp/>initVector(<sp/>su,<sp/>sd,<sp/>se,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subar,<sp/>sdbar,<sp/>seplus<sp/>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a521a0847fcf57e9b7b0fb74bbd88b2c7" kindref="member">MSSM_strs::pole_mass_strs_1_4</ref><sp/><sp/>=<sp/>initVector(<sp/>chi0<sp/>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a01bcc72e6c42a5b387c94eab357af8b5" kindref="member">MSSM_strs::pole_mass_strs_1_3</ref><sp/><sp/>=<sp/>initVector(<sp/>snu,<sp/>snubar<sp/>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a8b25ca60f01d513b641a8bed1fac83d2" kindref="member">MSSM_strs::pole_mass_strs_1_2</ref><sp/><sp/>=<sp/>initVector(<sp/>chiplus,<sp/>chiminus,<sp/>h0<sp/>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"></codeline>
+<codeline lineno="138"></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a876adc67b8c4b0b276c49f04cbc61ef8" kindref="member">MSSM_strs::pole_mixing_strs_2_6x6</ref><sp/><sp/>=<sp/>initVector(<sp/>sd,<sp/>su,<sp/>se<sp/>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1ab303c56b131f66329aa3e33a8520ad88" kindref="member">MSSM_strs::pole_mixing_strs_2_4x4</ref><sp/><sp/>=<sp/>initVector(<sp/>chi0<sp/>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1aef66636d322baffc90c2e0dc94ab205b" kindref="member">MSSM_strs::pole_mixing_strs_2_3x3</ref><sp/><sp/>=<sp/>initVector(<sp/>snu<sp/>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1aafd6b011026a1f49a7c58012ae1dcab5" kindref="member">MSSM_strs::pole_mixing_strs_2_2x2</ref><sp/><sp/>=<sp/>initVector(<sp/>h0,<sp/>A0,<sp/>Hplus,<sp/>chiminus,<sp/>chiplus<sp/>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>index<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1a57c7e0854ef4aeeb874afbbdb9df0535" kindref="member">MSSM_strs::mass2_strs</ref><sp/>=<sp/>initVector(<sp/>BMu,<sp/>mHd2,<sp/>mHu2,<sp/>mA2<sp/>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>two-index,<sp/>3x3<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/>MSSM_strs::mass2_strs_2_3x3=<sp/>initVector(<sp/>mq2,<sp/>ml2,<sp/>md2,<sp/>mu2,<sp/>me2<sp/>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1accc55618836d37344d92dea51414b785" kindref="member">MSSM_strs::mass1_strs</ref><sp/>=<sp/>initVector(<sp/>M1,<sp/>M2,<sp/>M3,<sp/>Mu,<sp/>vu,<sp/>vd<sp/>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>two-index,<sp/>3x3<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/>MSSM_strs::mass1_strs_2_3x3<sp/>=<sp/>initVector(<sp/>TYd,<sp/>TYe,<sp/>TYu,<sp/>ad,<sp/>ae,<sp/>au<sp/>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1SpecBit_1_1MSSM__strs_1accecf880a585eac336dd4fd2608356e1" kindref="member">MSSM_strs::dimensionless_strs</ref><sp/>=<sp/>initVector(<sp/>g1,<sp/>g2,<sp/>g3,<sp/>tanbeta,<sp/>sinW2<sp/>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>two-index,<sp/>3x3<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/>MSSM_strs::dimensionless_strs_2_3x3<sp/>=<sp/>initVector(<sp/>Yd,<sp/>Yu,<sp/>Ye<sp/>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/MSSMspec.cpp"/>
+  </compounddef>
+</doxygen>

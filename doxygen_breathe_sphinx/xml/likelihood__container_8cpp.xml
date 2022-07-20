@@ -1,0 +1,855 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="likelihood__container_8cpp" kind="file" language="C++">
+    <compoundname>likelihood_container.cpp</compoundname>
+    <includes refid="likelihood__container_8hpp" local="yes">gambit/Core/likelihood_container.hpp</includes>
+    <includes local="yes">gambit/Utils/signal_helpers.hpp</includes>
+    <includes local="yes">gambit/Utils/signal_handling.hpp</includes>
+    <includes local="yes">gambit/Utils/mpiwrapper.hpp</includes>
+    <includes local="yes">gambit/Utils/lnlike_modifiers.hpp</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>list</label>
+      </node>
+      <node id="32">
+        <label>gambit/Printers/baseprinter.hpp</label>
+      </node>
+      <node id="27">
+        <label>gambit/Utils/local_info.hpp</label>
+      </node>
+      <node id="42">
+        <label>boost/iterator/zip_iterator.hpp</label>
+      </node>
+      <node id="14">
+        <label>gambit/Backends/backend_info.hpp</label>
+        <link refid="backend__info_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>queue</label>
+      </node>
+      <node id="53">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="25">
+        <label>gambit/Models/models.hpp</label>
+      </node>
+      <node id="61">
+        <label>gambit/ScannerBit/priors.hpp</label>
+        <link refid="priors_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>gambit/ScannerBit/base_prior.hpp</label>
+        <link refid="base__prior_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>boost/graph/topological_sort.hpp</label>
+      </node>
+      <node id="23">
+        <label>gambit/Utils/yaml_variadic_functions.hpp</label>
+      </node>
+      <node id="46">
+        <label>gambit/Utils/factory_registry.hpp</label>
+      </node>
+      <node id="18">
+        <label>gambit/Core/yaml_description_database.hpp</label>
+        <link refid="yaml__description__database_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gambit/Core/container_factory.hpp</label>
+        <link refid="container__factory_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>gambit/Elements/type_equivalency.hpp</label>
+      </node>
+      <node id="37">
+        <label>gambit/ScannerBit/scanner_utils.hpp</label>
+        <link refid="scanner__utils_8hpp"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>likelihood_container.cpp</label>
+        <link refid="likelihood__container_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+      <node id="55">
+        <label>gambit/ScannerBit/plugin_loader.hpp</label>
+        <link refid="plugin__loader_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>gambit/Utils/variadic_functions.hpp</label>
+      </node>
+      <node id="6">
+        <label>map</label>
+      </node>
+      <node id="21">
+        <label>gambit/Utils/standalone_error_handlers.hpp</label>
+      </node>
+      <node id="7">
+        <label>unordered_set</label>
+      </node>
+      <node id="62">
+        <label>gambit/Utils/signal_helpers.hpp</label>
+      </node>
+      <node id="24">
+        <label>gambit/Elements/functors.hpp</label>
+      </node>
+      <node id="39">
+        <label>ostream</label>
+      </node>
+      <node id="2">
+        <label>gambit/Core/likelihood_container.hpp</label>
+        <link refid="likelihood__container_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>gambit/Utils/util_functions.hpp</label>
+      </node>
+      <node id="47">
+        <label>gambit/Utils/yaml_options.hpp</label>
+      </node>
+      <node id="17">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+      <node id="63">
+        <label>gambit/Utils/mpiwrapper.hpp</label>
+      </node>
+      <node id="44">
+        <label>gambit/Utils/exceptions.hpp</label>
+      </node>
+      <node id="26">
+        <label>gambit/Core/error_handlers.hpp</label>
+        <link refid="error__handlers_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>boost/range.hpp</label>
+      </node>
+      <node id="52">
+        <label>typeinfo</label>
+      </node>
+      <node id="35">
+        <label>gambit/Printers/basebaseprinter.hpp</label>
+      </node>
+      <node id="56">
+        <label>gambit/ScannerBit/plugin_details.hpp</label>
+        <link refid="plugin__details_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="36">
+        <label>gambit/ScannerBit/priors_rollcall.hpp</label>
+      </node>
+      <node id="29">
+        <label>gambit/Utils/yaml_parser_base.hpp</label>
+      </node>
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="19">
+        <label>sstream</label>
+      </node>
+      <node id="16">
+        <label>gambit/cmake/cmake_variables.hpp</label>
+      </node>
+      <node id="51">
+        <label>gambit/ScannerBit/factory_defs.hpp</label>
+        <link refid="factory__defs_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>gambit/Core/core.hpp</label>
+        <link refid="core_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="45">
+        <label>gambit/Utils/util_macros.hpp</label>
+      </node>
+      <node id="49">
+        <label>gambit/ScannerBit/printer_interface.hpp</label>
+        <link refid="printer__interface_8hpp"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>cctype</label>
+      </node>
+      <node id="60">
+        <label>iostream</label>
+      </node>
+      <node id="28">
+        <label>gambit/Core/yaml_parser.hpp</label>
+        <link refid="yaml__parser_8hpp"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>unordered_map</label>
+      </node>
+      <node id="15">
+        <label>gambit/Utils/util_types.hpp</label>
+      </node>
+      <node id="58">
+        <label>gambit/Utils/signal_handling.hpp</label>
+      </node>
+      <node id="64">
+        <label>gambit/Utils/lnlike_modifiers.hpp</label>
+      </node>
+      <node id="59">
+        <label>gambit/ScannerBit/priors/composite.hpp</label>
+        <link refid="composite_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>type_traits</label>
+      </node>
+      <node id="8">
+        <label>set</label>
+      </node>
+      <node id="33">
+        <label>boost/graph/adjacency_list.hpp</label>
+      </node>
+      <node id="10">
+        <label>gambit/Core/depresolver.hpp</label>
+        <link refid="depresolver_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>gambit/Printers/baseprintermanager.hpp</label>
+      </node>
+      <node id="40">
+        <label>algorithm</label>
+      </node>
+      <node id="48">
+        <label>gambit/ScannerBit/scan.hpp</label>
+        <link refid="scan_8hpp"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Likelihood container implementations.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Christoph Weniger (<ulink url="mailto:c.weniger@uva.nl">c.weniger@uva.nl</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2013 May, June, July</para>
+</simplesect>
+<simplesect kind="author"><para>Gregory Martinez (<ulink url="mailto:gregory.david.martinez@gmail.com">gregory.david.martinez@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2013 July </para>
+</simplesect>
+<simplesect kind="date"><para>2014 Feb</para>
+</simplesect>
+<simplesect kind="author"><para>Pat Scott (<ulink url="mailto:patscott@physics.mcgill.ca">patscott@physics.mcgill.ca</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2013 Aug </para>
+</simplesect>
+<simplesect kind="date"><para>2014 May, June, onwards...</para>
+</simplesect>
+<simplesect kind="author"><para>Tomas Gonzalo (<ulink url="mailto:tomas.gonzalo@monash.edu">tomas.gonzalo@monash.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2019 May</para>
+</simplesect>
+<simplesect kind="author"><para>Anders Kvellestad (<ulink url="mailto:anders.kvellestad@fys.uio.no">anders.kvellestad@fys.uio.no</ulink> </para>
+</simplesect>
+<simplesect kind="date"><para>2021 Feb</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="likelihood__container_8hpp" kindref="compound">gambit/Core/likelihood_container.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/signal_helpers.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/signal_handling.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/mpiwrapper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/lnlike_modifiers.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>CORE_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Methods<sp/>for<sp/>Likelihood_Container<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><ref refid="classGambit_1_1Likelihood__Container_1ae7233196bd570b3f3169a8cf8cc740cf" kindref="member">Likelihood_Container::Likelihood_Container</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;str,<sp/>primary_model_functor<sp/>*&gt;<sp/>&amp;functorMap,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/>DRes::DependencyResolver<sp/>&amp;dependencyResolver,<sp/>IniParser::IniFile<sp/>&amp;iniFile,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>&amp;purpose,<sp/>Printers::BaseBasePrinter&amp;<sp/>printer)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>:<sp/>dependencyResolver<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(dependencyResolver),</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>),</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>functorMap<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(functorMap),</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>min_valid_lnlike<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(iniFile.getValueOrDef&lt;double&gt;(0.9*std::numeric_limits&lt;double&gt;::lowest(),<sp/></highlight><highlight class="stringliteral">&quot;likelihood&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;model_invalid_for_lnlike_below&quot;</highlight><highlight class="normal">)),</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>alt_min_valid_lnlike<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(iniFile.getValueOrDef&lt;double&gt;(0.5*min_valid_lnlike,<sp/></highlight><highlight class="stringliteral">&quot;likelihood&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;model_invalid_for_lnlike_below_alt&quot;</highlight><highlight class="normal">)),</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>active_min_valid_lnlike<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(min_valid_lnlike),<sp/></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>switched<sp/>to<sp/>the<sp/>alternate<sp/>value<sp/>by<sp/>the<sp/>scanner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>print_invalid_points<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(iniFile.getValueOrDef&lt;bool&gt;(true,<sp/></highlight><highlight class="stringliteral">&quot;likelihood&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;print_invalid_points&quot;</highlight><highlight class="normal">)),</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>disable_print_for_lnlike_below<sp/><sp/><sp/>(iniFile.getValueOrDef&lt;double&gt;(min_valid_lnlike,<sp/></highlight><highlight class="stringliteral">&quot;likelihood&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;disable_print_for_lnlike_below&quot;</highlight><highlight class="normal">)),</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>lnlike_modifier_name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(iniFile.getValueOrDef&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;identity&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;likelihood&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;use_lnlike_modifier&quot;</highlight><highlight class="normal">)),</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>intralooptime_label<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="stringliteral">&quot;Runtime(ms)<sp/>intraloop&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>interlooptime_label<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="stringliteral">&quot;Runtime(ms)<sp/>interloop&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>totallooptime_label<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="stringliteral">&quot;Runtime(ms)<sp/>totalloop&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Note,<sp/>likelihood<sp/>container<sp/>should<sp/>be<sp/>constructed<sp/>after<sp/>dependency</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resolution,<sp/>so<sp/>that<sp/>new<sp/>printer<sp/>IDs<sp/>can<sp/>be<sp/>safely<sp/>acquired<sp/>without</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>risk<sp/>of<sp/>collision<sp/>with<sp/>graph<sp/>vertex<sp/>IDs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>intraloopID(Printers::get_main_param_id(intralooptime_label)),</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>interloopID(Printers::get_main_param_id(interlooptime_label)),</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>totalloopID(Printers::get_main_param_id(totallooptime_label)),</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>invalidcodeID(Printers::get_main_param_id(</highlight><highlight class="stringliteral">&quot;Invalidation<sp/>Code&quot;</highlight><highlight class="normal">)),</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>#ifdef<sp/>CORE_DEBUG</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>debug<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(true)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>#else</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>debug<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(iniFile.getValueOrDef&lt;bool&gt;(false,<sp/></highlight><highlight class="stringliteral">&quot;debug&quot;</highlight><highlight class="normal">)<sp/>or<sp/>iniFile.getValueOrDef&lt;bool&gt;(false,<sp/></highlight><highlight class="stringliteral">&quot;likelihood&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;debug&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>parameter<sp/>node<sp/>for<sp/>the<sp/>chosen<sp/>lnlike_modifier<sp/>(if<sp/>any)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lnlike_modifier_name<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;identity&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lnlike_modifier_params<sp/>=<sp/>Options(iniFile.getValue&lt;YAML::Node&gt;(</highlight><highlight class="stringliteral">&quot;likelihood&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;lnlike_modifiers&quot;</highlight><highlight class="normal">,<sp/>lnlike_modifier_name));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>list<sp/>of<sp/>valid<sp/>return<sp/>types<sp/>of<sp/>functions<sp/>that<sp/>can<sp/>be<sp/>used<sp/>for<sp/>&apos;purpose&apos;<sp/>by<sp/>this<sp/>container<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;str&gt;<sp/>allowed_types_for_purpose<sp/>=<sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;double&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;std::vector&lt;double&gt;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;float&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;std::vector&lt;float&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>subset<sp/>of<sp/>vertices<sp/>that<sp/>match<sp/>requested<sp/>purpose</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>all_vertices<sp/>=<sp/>dependencyResolver.getObsLikeOrder();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>all_vertices.begin();<sp/>it<sp/>!=<sp/>all_vertices.end();<sp/>++it)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dependencyResolver.getIniEntry(*it)-&gt;purpose<sp/>==<sp/>purpose)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_types[*it]<sp/>=<sp/>dependencyResolver.checkTypeMatch(*it,<sp/>purpose,<sp/>allowed_types_for_purpose);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_vertices.push_back(std::move(*it));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux_vertices.push_back(std::move(*it));</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1Likelihood__Container_1ab9c7697939a968437e9cdd378b9675cd" kindref="member">Likelihood_Container::setParameters</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>double&gt;<sp/>&amp;parameterMap)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>a<sp/>stream<sp/>containing<sp/>the<sp/>parameter<sp/>values,<sp/>for<sp/>diagnostic<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>parstream;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>over<sp/>the<sp/>primary_model_parameters<sp/>functors<sp/>of<sp/>all<sp/>the<sp/>models<sp/>being<sp/>scanned.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>act_it<sp/>=<sp/>functorMap.begin(),<sp/>act_end<sp/>=<sp/>functorMap.end();<sp/>act_it<sp/>!=<sp/>act_end;<sp/>act_it++)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parstream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>act_it-&gt;first<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>names<sp/>of<sp/>the<sp/>parameters<sp/>for<sp/>this<sp/>model.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>paramkeys<sp/>=<sp/>act_it-&gt;second-&gt;getcontentsPtr()-&gt;getKeys();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>over<sp/>the<sp/>parameters,<sp/>setting<sp/>their<sp/>values<sp/>in<sp/>the<sp/>primary_model_parameters<sp/>functors<sp/>from<sp/>the<sp/>parameterMap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>par_it<sp/>=<sp/>paramkeys.begin(),<sp/>par_end<sp/>=<sp/>paramkeys.end();<sp/>par_it<sp/>!=<sp/>par_end;<sp/>par_it++)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>key<sp/>=<sp/>act_it-&gt;first<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal"><sp/>+<sp/>*par_it;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tmp_it<sp/>=<sp/>parameterMap.find(key);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(tmp_it<sp/>==<sp/>parameterMap.end())</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>err;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error!<sp/>Failed<sp/>to<sp/>set<sp/>parameter<sp/>&apos;&quot;</highlight><highlight class="normal">&lt;&lt;key&lt;&lt;</highlight><highlight class="stringliteral">&quot;&apos;<sp/>following<sp/>prior<sp/>transformation!<sp/>The<sp/>parameter<sp/>could<sp/>not<sp/>be<sp/>found<sp/>in<sp/>the<sp/>map<sp/>returned<sp/>by<sp/>the<sp/>prior.<sp/>This<sp/>probably<sp/>means<sp/>that<sp/>the<sp/>prior<sp/>you<sp/>are<sp/>using<sp/>contains<sp/>a<sp/>bug.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>parameters<sp/>and<sp/>values<sp/>that<sp/>*were*<sp/>returned<sp/>by<sp/>the<sp/>prior<sp/>were:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(parameterMap.size()==0){<sp/>err<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;None!<sp/>Size<sp/>of<sp/>map<sp/>was<sp/>zero.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;<sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>par_jt<sp/>=<sp/>parameterMap.begin();<sp/>par_jt<sp/>!=<sp/>parameterMap.end();<sp/>++par_jt)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>&lt;&lt;<sp/>par_jt-&gt;first<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>par_jt-&gt;second<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceGambit_1abbe80443e7044737d5d4658b968ff7f4" kindref="member">core_error</ref>().raise(LOCAL_INFO,err.str());</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parstream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>*par_it<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>tmp_it-&gt;second<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>act_it-&gt;second-&gt;getcontentsPtr()-&gt;setValue(*par_it,<sp/>tmp_it-&gt;second);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Notify<sp/>all<sp/>exceptions<sp/>of<sp/>the<sp/>values<sp/>of<sp/>the<sp/>parameters<sp/>for<sp/>this<sp/>point.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>exception::set_parameters(</highlight><highlight class="stringliteral">&quot;\n\nYAML-ready<sp/>parameter<sp/>values<sp/>at<sp/>failed<sp/>point:\n&quot;</highlight><highlight class="normal">+parstream.str());</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>out<sp/>the<sp/>MPI<sp/>rank<sp/>and<sp/>values<sp/>of<sp/>the<sp/>parameters<sp/>for<sp/>this<sp/>point<sp/>if<sp/>in<sp/>debug<sp/>mode.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>WITH_MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GMPI::Comm<sp/>COMM_WORLD;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;MPI<sp/>process<sp/>rank:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<sp/>COMM_WORLD.Get_rank()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>parstream.str();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nBeginning<sp/>computations<sp/>for<sp/>parameter<sp/>point:\n&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>parstream.str()<sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>the<sp/>parameter<sp/>point<sp/>to<sp/>the<sp/>logs,<sp/>even<sp/>if<sp/>not<sp/>in<sp/>debug<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/>&quot;\nBeginning<sp/>computations<sp/>for<sp/>parameter<sp/>point:\n&quot;<sp/>&lt;&lt;<sp/>parstream.str()<sp/>&lt;&lt;<sp/>EOM;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1Likelihood__Container_1a66db00b645d8e40a3e3dfd636bdd4b4b" kindref="member">Likelihood_Container::main</ref>(std::unordered_map&lt;std::string,<sp/>double&gt;<sp/>&amp;in)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/>LogTags::debug<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Entered<sp/>Likelihood_Container::main&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lnlike<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>point_invalidated<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>signals<sp/>from<sp/>the<sp/>scanner<sp/>to<sp/>switch<sp/>to<sp/>an<sp/>alternate<sp/>minimum<sp/>log<sp/>likelihood<sp/>value.<sp/>TODO:<sp/>could<sp/>let<sp/>scanner<sp/>plugin<sp/>set<sp/>the<sp/>actual<sp/>value?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>switch_done(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Disable<sp/>this<sp/>check<sp/>once<sp/>the<sp/>switch<sp/>occurs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(not<sp/>switch_done)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(check_for_switch_to_alternate_min_LogL())</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>active_min_valid_lnlike<sp/>=<sp/>alt_min_valid_lnlike;<sp/></highlight><highlight class="comment">//<sp/>starts<sp/>off<sp/>equal<sp/>to<sp/>min_valid_lnlike</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logger()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Switched<sp/>to<sp/>using<sp/>alt_min_valid_lnlike<sp/>(&quot;</highlight><highlight class="normal">&lt;&lt;alt_min_valid_lnlike&lt;&lt;</highlight><highlight class="stringliteral">&quot;)<sp/>instead<sp/>of<sp/>original<sp/>value<sp/>(&quot;</highlight><highlight class="normal">&lt;&lt;min_valid_lnlike&lt;&lt;</highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>switch_done<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>signals<sp/>to<sp/>abort<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(signaldata().check_if_shutdown_begun())</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tell_scanner_early_shutdown_in_progress();<sp/></highlight><highlight class="comment">//<sp/>e.g.<sp/>sets<sp/>&apos;quit&apos;<sp/>flag<sp/>in<sp/>Diver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>logger()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Informed<sp/>scanner<sp/>that<sp/>early<sp/>shutdown<sp/>is<sp/>in<sp/>progress<sp/>and<sp/>it<sp/>should<sp/>secure<sp/>all<sp/>its<sp/>output<sp/>files<sp/>if<sp/>possible.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decide<sp/>if<sp/>we<sp/>need<sp/>to<sp/>skip<sp/>the<sp/>likelihood<sp/>calculation<sp/>due<sp/>to<sp/>shutdown<sp/>procedure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(signaldata().shutdown_begun()<sp/>and<sp/>not<sp/>scanner_can_quit())</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>scanner<sp/>does<sp/>not<sp/>have<sp/>a<sp/>built-in<sp/>mechanism<sp/>for<sp/>halting<sp/>the<sp/>scan<sp/>early,<sp/>then<sp/>we<sp/>will<sp/>assume</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>responsiblity<sp/>for<sp/>the<sp/>process<sp/>and<sp/>attempt<sp/>to<sp/>shut<sp/>the<sp/>scan<sp/>down<sp/>from<sp/>our<sp/>side.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>signaldata().attempt_soft_shutdown();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lnlike<sp/>=<sp/>alt_min_valid_lnlike;<sp/></highlight><highlight class="comment">//<sp/>Always<sp/>use<sp/>this<sp/>larger<sp/>value<sp/>to<sp/>avoid<sp/>scanner<sp/>deadlocks<sp/>(e.g.<sp/>MultiNest<sp/>refuses<sp/>to<sp/>progress<sp/>without<sp/>a<sp/>likelihood<sp/>above<sp/>its<sp/>minimum<sp/>threshold)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>point_invalidated<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Will<sp/>prevent<sp/>this<sp/>likelihood<sp/>value<sp/>from<sp/>being<sp/>flagged<sp/>as<sp/>&apos;valid&apos;<sp/>by<sp/>the<sp/>printer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>logger()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Shutdown<sp/>in<sp/>progess!<sp/>The<sp/>scanner<sp/>is<sp/>not<sp/>flagged<sp/>as<sp/>being<sp/>able<sp/>to<sp/>shut<sp/>itself<sp/>down,<sp/>so<sp/>are<sp/>managing<sp/>the<sp/>shutdown<sp/>from<sp/>the<sp/>likelihood<sp/>container<sp/>side.<sp/>Returning<sp/>min_valid_lnlike<sp/>to<sp/>ScannerBit<sp/>instead<sp/>of<sp/>computing<sp/>likelihood.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>the<sp/>normal<sp/>likelihood<sp/>calculation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>shutdown<sp/>has<sp/>been<sp/>triggered<sp/>but<sp/>the<sp/>quit<sp/>flag<sp/>is<sp/>present,<sp/>then<sp/>we<sp/>let<sp/>the<sp/>likelihood<sp/>evaluation<sp/>proceed<sp/>as<sp/>normal.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>compute_aux<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>values<sp/>of<sp/>the<sp/>parameter<sp/>point<sp/>in<sp/>the<sp/>PrimaryParameters<sp/>functor,<sp/>and<sp/>log<sp/>them<sp/>to<sp/>cout<sp/>and/or<sp/>the<sp/>logs<sp/>if<sp/>desired.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1Likelihood__Container_1ab9c7697939a968437e9cdd378b9675cd" kindref="member">setParameters</ref>(in);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Logger<sp/>debug<sp/>output;<sp/>things<sp/>labelled<sp/>&apos;LogTags::debug&apos;<sp/>only<sp/>get<sp/>logged<sp/>if<sp/>the<sp/>logger::debug<sp/>or<sp/>master<sp/>debug<sp/>flags<sp/>are<sp/>true,<sp/>not<sp/>if<sp/>only<sp/>&apos;likelihood::debug&apos;<sp/>is<sp/>true.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/>LogTags::debug<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>target<sp/>vertices<sp/>to<sp/>calculate:<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>target_vertices.size()<sp/>&lt;&lt;<sp/>endl</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>auxiliary<sp/>vertices<sp/>to<sp/>calculate:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>aux_vertices.size()<sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Begin<sp/>timing<sp/>of<sp/>total<sp/>likelihood<sp/>evaluation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::time_point&lt;std::chrono::system_clock&gt;<sp/>startL<sp/>=<sp/>std::chrono::system_clock::now();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>time<sp/>since<sp/>the<sp/>previous<sp/>likelihood<sp/>evaluation<sp/>ended</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::duration&lt;double&gt;<sp/>interloop_time<sp/>=<sp/>startL<sp/>-<sp/>previous_endL;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>work<sp/>through<sp/>the<sp/>target<sp/>functors,<sp/>i.e.<sp/>the<sp/>ones<sp/>contributing<sp/>to<sp/>the<sp/>likelihood.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>target_vertices.begin(),<sp/>end<sp/>=<sp/>target_vertices.end();<sp/>it<sp/>!=<sp/>end;<sp/>++it)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Log<sp/>the<sp/>likelihood<sp/>being<sp/>tried.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>likelihood_tag<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ikelihood<sp/>contribution<sp/>from<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>dependencyResolver.get_functor(*it)-&gt;origin()</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal"><sp/>+<sp/>dependencyResolver.get_functor(*it)-&gt;name();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Calculating<sp/>l&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>likelihood_tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>debug<sp/>output<sp/>streams.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>debug_to_cout;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>debug_to_cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>L&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>likelihood_tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>likelihood<sp/>component.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dependencyResolver.calcObsLike(*it);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Switch<sp/>depending<sp/>on<sp/>whether<sp/>the<sp/>functor<sp/>returns<sp/>floats<sp/>or<sp/>doubles<sp/>and<sp/>a<sp/>single<sp/>likelihood<sp/>or<sp/>a<sp/>vector<sp/>of<sp/>them.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>rtype<sp/>=<sp/>return_types[*it];</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rtype<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;double&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>dependencyResolver.getObsLike&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;(*it);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>debug_to_cout<sp/>&lt;&lt;<sp/>result;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lnlike<sp/>+=<sp/>result;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rtype<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;std::vector&lt;double&gt;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>result<sp/>=<sp/>dependencyResolver.getObsLike&lt;std::vector&lt;double&gt;<sp/>&gt;(*it);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jt<sp/>=<sp/>result.begin();<sp/>jt<sp/>!=<sp/>result.end();<sp/>++jt)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>debug_to_cout<sp/>&lt;&lt;<sp/>*jt<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lnlike<sp/>+=<sp/>*jt;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rtype<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;float&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>dependencyResolver.getObsLike&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&gt;(*it);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>debug_to_cout<sp/>&lt;&lt;<sp/>result;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lnlike<sp/>+=<sp/>result;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rtype<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;std::vector&lt;float&gt;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;float&gt;<sp/>result<sp/>=<sp/>dependencyResolver.getObsLike&lt;std::vector&lt;float&gt;<sp/>&gt;(*it);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jt<sp/>=<sp/>result.begin();<sp/>jt<sp/>!=<sp/>result.end();<sp/>++jt)</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>debug_to_cout<sp/>&lt;&lt;<sp/>*jt<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lnlike<sp/>+=<sp/>*jt;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="namespaceGambit_1abbe80443e7044737d5d4658b968ff7f4" kindref="member">core_error</ref>().raise(LOCAL_INFO,<sp/></highlight><highlight class="stringliteral">&quot;Unexpected<sp/>target<sp/>functor<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>debug<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>cout<sp/>&lt;&lt;<sp/>debug_to_cout.str()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Don&apos;t<sp/>just<sp/>roll<sp/>over<sp/>if<sp/>it&apos;s<sp/>a<sp/>NaN,<sp/>kill<sp/>the<sp/>scan<sp/>and<sp/>force<sp/>the<sp/>developer<sp/>to<sp/>fix<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Utils::isnan(lnlike))</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceGambit_1abbe80443e7044737d5d4658b968ff7f4" kindref="member">core_error</ref>().raise(LOCAL_INFO,<sp/></highlight><highlight class="stringliteral">&quot;L&quot;</highlight><highlight class="normal"><sp/>+<sp/>likelihood_tag<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>NaN!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we&apos;ve<sp/>dropped<sp/>below<sp/>the<sp/>likelihood<sp/>corresponding<sp/>to<sp/>effective<sp/>zero<sp/>already,<sp/>skip<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>vertices.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lnlike<sp/>&lt;=<sp/>active_min_valid_lnlike)<sp/>dependencyResolver.invalidatePointAt(*it,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Log<sp/>completion<sp/>of<sp/>this<sp/>likelihood.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Computed<sp/>l&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>likelihood_tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Catch<sp/>points<sp/>that<sp/>are<sp/>invalid,<sp/>either<sp/>due<sp/>to<sp/>low<sp/>like<sp/>or<sp/>pathology.<sp/><sp/>Skip<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>vertices<sp/>if<sp/>a<sp/>point<sp/>is<sp/>invalid.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal">(invalid_point_exception&amp;<sp/>e)</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Point<sp/>invalidated<sp/>by<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.thrower()-&gt;origin()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.thrower()-&gt;name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.message()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Invalidation<sp/>code<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.invalidcode<sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logger().leaving_module();</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lnlike<sp/>=<sp/>active_min_valid_lnlike;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>compute_aux<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point_invalidated<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rankinv<sp/>=<sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>.getRank();</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>print_ivalid_points<sp/>is<sp/>false<sp/>disable<sp/>the<sp/>printer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!print_invalid_points)</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>.disable();</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>.print(e.invalidcode,<sp/></highlight><highlight class="stringliteral">&quot;Invalidation<sp/>Code&quot;</highlight><highlight class="normal">,<sp/>invalidcodeID,<sp/>rankinv,<sp/>getPtID());</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Point<sp/>invalid.<sp/>Invalidation<sp/>code:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.invalidcode<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>none<sp/>of<sp/>the<sp/>likelihood<sp/>calculations<sp/>have<sp/>invalidated<sp/>the<sp/>point,<sp/>calculate<sp/>the<sp/>additional<sp/>auxiliary<sp/>observables.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(compute_aux)</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/><sp/></highlight><highlight class="stringliteral">&quot;Completed<sp/>likelihoods.<sp/><sp/>Calculating<sp/>additional<sp/>observables.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>aux_vertices.begin(),<sp/>end<sp/>=<sp/>aux_vertices.end();<sp/>it<sp/>!=<sp/>end;<sp/>++it)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Log<sp/>the<sp/>observables<sp/>being<sp/>tried.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>aux_tag<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;dditional<sp/>observable<sp/>from<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>dependencyResolver.get_functor(*it)-&gt;origin()</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal"><sp/>+<sp/>dependencyResolver.get_functor(*it)-&gt;name();</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/><sp/></highlight><highlight class="stringliteral">&quot;Calculating<sp/>a&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>aux_tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dependencyResolver.calcObsLike(*it);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Computed<sp/>a&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>aux_tag<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal">(Gambit::invalid_point_exception&amp;<sp/>e)</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Additional<sp/>observable<sp/>invalidated<sp/>by<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.thrower()-&gt;origin()</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;::&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.thrower()-&gt;name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.message()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Invalidation<sp/>code<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.invalidcode<sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>point<sp/>is<sp/>invalid<sp/>and<sp/>print_invalid_points<sp/>=<sp/>false<sp/>disable<sp/>the<sp/>printer,<sp/>otherwise<sp/>print<sp/>vertices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(point_invalidated<sp/>and<sp/>!print_invalid_points)</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>.disable();</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>likelihood<sp/>is<sp/>below<sp/>the<sp/>limit<sp/>given<sp/>in<sp/>disable_print_for_lnlike_below,<sp/>disable<sp/>the<sp/>printer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lnlike<sp/>&lt;=<sp/>disable_print_for_lnlike_below)</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>.disable();</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>target_vertices.begin(),<sp/>end<sp/>=<sp/>target_vertices.end();<sp/>it<sp/>!=<sp/>end;<sp/>++it)</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dependencyResolver.printObsLike(*it,getPtID());</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>aux_vertices.begin(),<sp/>end<sp/>=<sp/>aux_vertices.end();<sp/>it<sp/>!=<sp/>end;<sp/>++it)</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dependencyResolver.printObsLike(*it,getPtID());</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>End<sp/>timing<sp/>of<sp/>total<sp/>likelihood<sp/>evaluation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::time_point&lt;std::chrono::system_clock&gt;<sp/>endL<sp/>=<sp/>std::chrono::system_clock::now();</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>time<sp/>since<sp/>the<sp/>previous<sp/>likelihood<sp/>evaluation<sp/>ended</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>I.e.<sp/>computing<sp/>time<sp/>of<sp/>this<sp/>likelihood,<sp/>plus<sp/>overhead<sp/>from<sp/>previous<sp/>inter-loop<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::duration&lt;double&gt;<sp/>true_total_loop_time<sp/>=<sp/>endL<sp/>-<sp/>previous_endL;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>stored<sp/>timing<sp/>information<sp/>for<sp/>use<sp/>in<sp/>next<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>previous_startL<sp/>=<sp/>startL;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>previous_endL<sp/><sp/><sp/>=<sp/>endL;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::duration&lt;double&gt;<sp/>runtimeL<sp/>=<sp/>endL<sp/>-<sp/>startL;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::chrono::milliseconds<sp/>ms;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>timing<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dependencyResolver.printTiming())</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rank<sp/>=<sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>.getRank();</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>time<sp/>counts<sp/>to<sp/>doubles<sp/>(had<sp/>weird<sp/>problem<sp/>with<sp/>long<sp/>long<sp/>ints<sp/>on<sp/>some<sp/>systems)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d_runtime<sp/><sp/><sp/>=<sp/>std::chrono::duration_cast&lt;ms&gt;(runtimeL).count();</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d_interloop<sp/>=<sp/>std::chrono::duration_cast&lt;ms&gt;(interloop_time).count();</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d_total<sp/><sp/><sp/><sp/><sp/>=<sp/>std::chrono::duration_cast&lt;ms&gt;(true_total_loop_time).count();</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>.print(d_runtime,<sp/><sp/><sp/>intralooptime_label,<sp/>intraloopID,<sp/>rank,<sp/>getPtID());</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>.print(d_interloop,<sp/>interlooptime_label,<sp/>interloopID,<sp/>rank,<sp/>getPtID());</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>.print(d_total,<sp/><sp/><sp/><sp/><sp/>totallooptime_label,<sp/>totalloopID,<sp/>rank,<sp/>getPtID());</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(debug)<sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Total<sp/>log-likelihood:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>lnlike<sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>logger()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Total<sp/>lnL:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>lnlike<sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>dependencyResolver.resetAll();</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Disable<sp/>the<sp/>printer<sp/>so<sp/>that<sp/>it<sp/>doesn&apos;t<sp/>try<sp/>to<sp/>output<sp/>the<sp/>min_valid_lnlike<sp/>as<sp/>a<sp/>valid<sp/>likelihood<sp/>value.<sp/>ScannerBit<sp/>will<sp/>re-enable<sp/>it<sp/>when<sp/>needed<sp/>again.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Disable<sp/>only<sp/>for<sp/>the<sp/>next<sp/>print<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(point_invalidated)<sp/><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref>.disable(1);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>logger()<sp/>&lt;&lt;<sp/>LogTags::core<sp/>&lt;&lt;<sp/>LogTags::debug<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Returning<sp/>control<sp/>to<sp/>ScannerBit&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>EOM;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lnlike;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1Likelihood__Container_1a6454ed1c31dc423cfdae27323bb88bc6" kindref="member">Likelihood_Container::purposeModifier</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lnlike)</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Utils::run_lnlike_modifier(lnlike,<sp/>lnlike_modifier_name,<sp/>lnlike_modifier_params);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/likelihood_container.cpp"/>
+  </compounddef>
+</doxygen>

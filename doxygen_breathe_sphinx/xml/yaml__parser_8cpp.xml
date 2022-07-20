@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="yaml__parser_8cpp" kind="file" language="C++">
+    <compoundname>yaml_parser.cpp</compoundname>
+    <includes refid="yaml__parser_8hpp" local="yes">gambit/Core/yaml_parser.hpp</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>gambit/Elements/type_equivalency.hpp</label>
+      </node>
+      <node id="4">
+        <label>gambit/Utils/util_functions.hpp</label>
+      </node>
+      <node id="6">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+      <node id="3">
+        <label>gambit/Utils/yaml_parser_base.hpp</label>
+      </node>
+      <node id="2">
+        <label>gambit/Core/yaml_parser.hpp</label>
+        <link refid="yaml__parser_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>yaml_parser.cpp</label>
+        <link refid="yaml__parser_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1IniParser">Gambit::IniParser</innernamespace>
+    <innernamespace refid="namespaceYAML">YAML</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="yaml__parser_8cpp_1a4060eb08d1602e9cf386267ae434672c" prot="public" static="no">
+        <name>READ</name>
+        <param><defname>NAME</defname></param>
+        <initializer><ref refid="DarkSUSY__MSSM__6__2__5_8cpp_1a4cc6f5317481c4b2f46fb215ba938f45" kindref="member">if</ref> (node[#NAME].IsDefined()) rhs.NAME = node[#NAME].as&lt;std::string&gt;();</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/yaml_parser.cpp" line="87" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Ini-file parser based on yaml-cpp</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Christoph Weniger (<ulink url="mailto:c.weniger@uva.nl">c.weniger@uva.nl</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2013 May, June, July</para>
+</simplesect>
+<simplesect kind="author"><para>Pat Scott (<ulink url="mailto:patscott@physics.mcgill.ca">patscott@physics.mcgill.ca</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2014 Mar </para>
+</simplesect>
+<simplesect kind="date"><para>2015 Mar </para>
+</simplesect>
+<simplesect kind="date"><para>2020 Apr</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="yaml__parser_8hpp" kindref="compound">gambit/Core/yaml_parser.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">IniParser</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Implementations<sp/>of<sp/>main<sp/>inifile<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>IniFile::filename()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_filename;<sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1IniParser_1_1IniFile_1a84f7b652e87357cfa3362511398d4753" kindref="member">IniFile::readFile</ref>(std::string<sp/>name)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>filename<sp/>internally</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_filename<sp/>=<sp/>name;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Perform<sp/>the<sp/>basic<sp/>read<sp/>and<sp/>parse<sp/>operations<sp/>defined<sp/>by<sp/>the<sp/>parent.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>YAML::Node<sp/>root<sp/>=<sp/>filename_to_node(_filename);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>basicParse(root,_filename);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>observables<sp/>and<sp/>rules<sp/>sections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>YAML::Node<sp/>outputNode<sp/>=<sp/>root[</highlight><highlight class="stringliteral">&quot;ObsLikes&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>YAML::Node<sp/>rulesNode<sp/>=<sp/>root[</highlight><highlight class="stringliteral">&quot;Rules&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>likelihood/observables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(YAML::const_iterator<sp/>it=outputNode.begin();<sp/>it!=outputNode.end();<sp/>++it)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>observables.push_back((*it).as&lt;Types::Observable&gt;());</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>rules</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(YAML::const_iterator<sp/>it=rulesNode.begin();<sp/>it!=rulesNode.end();<sp/>++it)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rules.push_back((*it).as&lt;Types::Observable&gt;());</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>KeyValue<sp/>section,<sp/>find<sp/>the<sp/>default<sp/>path<sp/>entry,<sp/>and<sp/>pass<sp/>this<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>the<sp/>Scanner,<sp/>Logger,<sp/>and<sp/>Printer<sp/>nodes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>YAML::Node<sp/>keyvalue<sp/><sp/><sp/><sp/>=<sp/>getKeyValuePairNode();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>YAML::Node<sp/>scanNode<sp/><sp/><sp/><sp/>=<sp/>getScannerNode();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>YAML::Node<sp/>printerNode<sp/>=<sp/>getPrinterNode();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>YAML::Node<sp/>logNode<sp/><sp/><sp/><sp/><sp/>=<sp/>getLoggerNode();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ObservablesType&amp;<sp/><ref refid="classGambit_1_1IniParser_1_1IniFile_1a3a2f7f26b954799fa694807a70e7bac7" kindref="member">IniFile::getObservables</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>observables;<sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ObservablesType&amp;<sp/>IniFile::getRules()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rules;<sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Methods<sp/>for<sp/>converting<sp/>from<sp/>inifile<sp/>to<sp/>Observable<sp/>format</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">YAML</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">Gambit::IniParser::Types;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>convert&lt;Observable&gt;::decode(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Node&amp;<sp/>node,<sp/><ref refid="structGambit_1_1IniParser_1_1Types_1_1Observable" kindref="compound">Observable</ref>&amp;<sp/>rhs)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>READ(NAME)<sp/>if<sp/>(node[#NAME].IsDefined())<sp/>rhs.NAME<sp/>=<sp/>node[#NAME].as&lt;std::string&gt;();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>READ(purpose)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>READ(capability)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>READ(type)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>READ(</highlight><highlight class="keyword">function</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>READ(module)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>READ(backend)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>READ(version)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#undef<sp/>READ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node.Tag()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;!weak&quot;</highlight><highlight class="normal"><sp/>or<sp/>node.Tag()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;!weakrule&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rhs.weakrule<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rhs.weakrule<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Strip<sp/>leading<sp/>&quot;Gambit::&quot;<sp/>namespaces<sp/>and<sp/>whitespace,<sp/>but<sp/>preserve<sp/>&quot;const<sp/>&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>rhs.type<sp/>=<sp/>Gambit::Utils::fix_type(rhs.type);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node[</highlight><highlight class="stringliteral">&quot;printme&quot;</highlight><highlight class="normal">].IsDefined())</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rhs.printme<sp/>=<sp/>node[</highlight><highlight class="stringliteral">&quot;printme&quot;</highlight><highlight class="normal">].as&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&gt;();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node[</highlight><highlight class="stringliteral">&quot;options&quot;</highlight><highlight class="normal">].IsDefined())</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rhs.options<sp/>=<sp/>Gambit::Options(node[</highlight><highlight class="stringliteral">&quot;options&quot;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node[</highlight><highlight class="stringliteral">&quot;sub_capabilities&quot;</highlight><highlight class="normal">].IsDefined())</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rhs.subcaps<sp/>=<sp/>node[</highlight><highlight class="stringliteral">&quot;sub_capabilities&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(node[</highlight><highlight class="stringliteral">&quot;functionChain&quot;</highlight><highlight class="normal">].IsDefined())</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rhs.functionChain<sp/>=<sp/>node[</highlight><highlight class="stringliteral">&quot;functionChain&quot;</highlight><highlight class="normal">].as&lt;std::vector&lt;std::string&gt;&gt;();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(YAML::const_iterator<sp/>it=node[</highlight><highlight class="stringliteral">&quot;dependencies&quot;</highlight><highlight class="normal">].begin();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it!=node[</highlight><highlight class="stringliteral">&quot;dependencies&quot;</highlight><highlight class="normal">].end();<sp/>++it)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rhs.dependencies.push_back((*it).as&lt;<ref refid="structGambit_1_1IniParser_1_1Types_1_1Observable" kindref="compound">Observable</ref>&gt;());</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(YAML::const_iterator<sp/>it=node[</highlight><highlight class="stringliteral">&quot;backends&quot;</highlight><highlight class="normal">].begin();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it!=node[</highlight><highlight class="stringliteral">&quot;backends&quot;</highlight><highlight class="normal">].end();<sp/>++it)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rhs.backends.push_back((*it).as&lt;<ref refid="structGambit_1_1IniParser_1_1Types_1_1Observable" kindref="compound">Observable</ref>&gt;());</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/yaml_parser.cpp"/>
+  </compounddef>
+</doxygen>

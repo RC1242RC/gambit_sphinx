@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1Priors_1_1Cauchy" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::Priors::Cauchy</compoundname>
+    <basecompoundref refid="classGambit_1_1Priors_1_1BasePrior" prot="public" virt="non-virtual">Gambit::Priors::BasePrior</basecompoundref>
+    <includes refid="cauchy_8hpp" local="no">cauchy.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1Priors_1_1Cauchy_1a67419461493b67029af719669aabae7b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Gambit::Priors::Cauchy::location</definition>
+        <argsstring></argsstring>
+        <name>location</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" line="54" column="19" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Priors_1_1Cauchy_1a4561b4625561650aad35544468ce19ab" prot="private" static="no" mutable="yes">
+        <type><ref refid="classGambit_1_1Cholesky" kindref="compound">Cholesky</ref></type>
+        <definition>Cholesky Gambit::Priors::Cauchy::col</definition>
+        <argsstring></argsstring>
+        <name>col</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" line="55" column="24" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1Priors_1_1Cauchy_1a84b93d67293fc2d65f6b7d2e599984ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Priors::Cauchy::Cauchy</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;param, const Options &amp;options)</argsstring>
+        <name>Cauchy</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const Options &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" line="59" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/priors/cauchy.cpp" bodystart="27" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Priors_1_1Cauchy_1a4b2a3519c38536de901cfa78385d4a7e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Gambit::Priors::Cauchy::transform</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;unitpars, std::unordered_map&lt; std::string, double &gt; &amp;outputMap) const override</argsstring>
+        <name>transform</name>
+        <reimplements refid="classGambit_1_1Priors_1_1BasePrior_1adaf214a4f7aa4e9c4c3fa7daebc32903">transform</reimplements>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>unitpars</declname>
+        </param>
+        <param>
+          <type>std::unordered_map&lt; std::string, double &gt; &amp;</type>
+          <declname>outputMap</declname>
+        </param>
+        <briefdescription>
+<para>Transformation from unit interval to the <ref refid="classGambit_1_1Priors_1_1Cauchy" kindref="compound">Cauchy</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" line="62" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" bodystart="62" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Priors_1_1Cauchy_1a6351960aae4505b8be2269aa848aede8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Gambit::Priors::Cauchy::inverse_transform</definition>
+        <argsstring>(const std::unordered_map&lt; std::string, double &gt; &amp;physical) const override</argsstring>
+        <name>inverse_transform</name>
+        <reimplements refid="classGambit_1_1Priors_1_1BasePrior_1acabfe262437426296314806cd7ccee38">inverse_transform</reimplements>
+        <param>
+          <type>const std::unordered_map&lt; std::string, double &gt; &amp;</type>
+        </param>
+        <briefdescription>
+<para>Transform from parameter back to unit hypercube. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" line="82" column="19" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" bodystart="82" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Priors_1_1Cauchy_1aed77f6e26c21985480ad6b9aa8afdc9e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double Gambit::Priors::Cauchy::operator()</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;vec) const override</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classGambit_1_1Priors_1_1BasePrior_1a6b502e586d6c964a9dfe2935b630a2d3">operator()</reimplements>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+        </param>
+        <briefdescription>
+<para>Log of PDF density. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" line="103" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" bodystart="103" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Multi-dimensional <ref refid="classGambit_1_1Priors_1_1Cauchy" kindref="compound">Cauchy</ref> prior. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a <ulink url="https://en.wikipedia.org/wiki/Multivariate_t-distribution">multivariate <formula id="52">$t$</formula>-distribution</ulink> with <formula id="53">$\nu = 1$</formula> degree of freedom.</para>
+<para>Defined by a scale matrix, <formula id="54">$\Sigma$</formula>, and a location vector.</para>
+<para>If the scale matrix is diagonal,it may instead be specified by the square-roots of its diagonal entries, denoted <formula id="55">$\gamma$</formula>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Gambit::Priors::BasePrior</label>
+        <link refid="classGambit_1_1Priors_1_1BasePrior"/>
+      </node>
+      <node id="1">
+        <label>Gambit::Priors::Cauchy</label>
+        <link refid="classGambit_1_1Priors_1_1Cauchy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Gambit::Priors::BasePrior</label>
+        <link refid="classGambit_1_1Priors_1_1BasePrior"/>
+      </node>
+      <node id="1">
+        <label>Gambit::Priors::Cauchy</label>
+        <link refid="classGambit_1_1Priors_1_1Cauchy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" line="52" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors/cauchy.hpp" bodystart="51" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1a839ff7a9704898c967f03add67950b05" prot="public" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>BasePrior</name></member>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1aefa66cd74f99ecf7d29dcb9c608ed202" prot="public" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>BasePrior</name></member>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1a55ba5474027bb858c3561600aeb39dbb" prot="public" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>BasePrior</name></member>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1a421fbf213a5d7b1734ff5190cc27ff6a" prot="public" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>BasePrior</name></member>
+      <member refid="classGambit_1_1Priors_1_1Cauchy_1a84b93d67293fc2d65f6b7d2e599984ee" prot="public" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>Cauchy</name></member>
+      <member refid="classGambit_1_1Priors_1_1Cauchy_1a4561b4625561650aad35544468ce19ab" prot="private" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>col</name></member>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1a032cbfb1593025f14f91e474a80b0bd4" prot="public" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>getParameters</name></member>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1a055095009842723b51592fdb0875d555" prot="public" virt="virtual"><scope>Gambit::Priors::Cauchy</scope><name>getShownParameters</name></member>
+      <member refid="classGambit_1_1Priors_1_1Cauchy_1a6351960aae4505b8be2269aa848aede8" prot="public" virt="virtual"><scope>Gambit::Priors::Cauchy</scope><name>inverse_transform</name></member>
+      <member refid="classGambit_1_1Priors_1_1Cauchy_1a67419461493b67029af719669aabae7b" prot="private" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>location</name></member>
+      <member refid="classGambit_1_1Priors_1_1Cauchy_1aed77f6e26c21985480ad6b9aa8afdc9e" prot="public" virt="virtual"><scope>Gambit::Priors::Cauchy</scope><name>operator()</name></member>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1ab54eef4c7b0188cc43c60e10f77fac3d" prot="protected" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>param_names</name></member>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1ab79d2df1f9c6350ed69a76e5d123de39" prot="public" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>setSize</name></member>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1a9c476b07daa0abd7259573e5825c3d48" prot="public" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>size</name></member>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1a7f036ffc6b743ab2b6b886cada94b7c9" prot="public" virt="non-virtual"><scope>Gambit::Priors::Cauchy</scope><name>sizeRef</name></member>
+      <member refid="classGambit_1_1Priors_1_1Cauchy_1a4b2a3519c38536de901cfa78385d4a7e" prot="public" virt="virtual"><scope>Gambit::Priors::Cauchy</scope><name>transform</name></member>
+      <member refid="classGambit_1_1Priors_1_1BasePrior_1af23c343daddeab5deb668909eff4d918" prot="public" virt="virtual"><scope>Gambit::Priors::Cauchy</scope><name>~BasePrior</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

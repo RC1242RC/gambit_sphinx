@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="SpecBit__helpers_8hpp" kind="file" language="C++">
+    <compoundname>SpecBit_helpers.hpp</compoundname>
+    <includes local="yes">gambit/Elements/sminputs.hpp</includes>
+    <includes local="yes">flexiblesusy/src/lowe.h</includes>
+    <includedby refid="SpecBit__DiracSingletDM_8cpp" local="yes">SpecBit_DiracSingletDM.cpp</includedby>
+    <includedby refid="SpecBit__DMEFT_8cpp" local="yes">SpecBit_DMEFT.cpp</includedby>
+    <includedby refid="SpecBit__MajoranaSingletDM_8cpp" local="yes">SpecBit_MajoranaSingletDM.cpp</includedby>
+    <includedby refid="SpecBit__MDM_8cpp" local="yes">SpecBit_MDM.cpp</includedby>
+    <includedby refid="SpecBit__MSSM_8cpp" local="yes">SpecBit_MSSM.cpp</includedby>
+    <includedby refid="SpecBit__ScalarSingletDM_8cpp" local="yes">SpecBit_ScalarSingletDM.cpp</includedby>
+    <includedby refid="SpecBit__SM_8cpp" local="yes">SpecBit_SM.cpp</includedby>
+    <includedby refid="SpecBit__VectorSingletDM_8cpp" local="yes">SpecBit_VectorSingletDM.cpp</includedby>
+    <includedby refid="SpecBit__VS_8cpp" local="yes">SpecBit_VS.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>SpecBit_helpers.hpp</label>
+        <link refid="SpecBit__helpers_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gambit/Elements/sminputs.hpp</label>
+      </node>
+      <node id="3">
+        <label>flexiblesusy/src/lowe.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10">
+        <label>SpecBit_VS.cpp</label>
+        <link refid="SpecBit__VS_8cpp"/>
+      </node>
+      <node id="5">
+        <label>SpecBit_MDM.cpp</label>
+        <link refid="SpecBit__MDM_8cpp"/>
+      </node>
+      <node id="4">
+        <label>SpecBit_MajoranaSingletDM.cpp</label>
+        <link refid="SpecBit__MajoranaSingletDM_8cpp"/>
+      </node>
+      <node id="7">
+        <label>SpecBit_ScalarSingletDM.cpp</label>
+        <link refid="SpecBit__ScalarSingletDM_8cpp"/>
+      </node>
+      <node id="9">
+        <label>SpecBit_VectorSingletDM.cpp</label>
+        <link refid="SpecBit__VectorSingletDM_8cpp"/>
+      </node>
+      <node id="2">
+        <label>SpecBit_DiracSingletDM.cpp</label>
+        <link refid="SpecBit__DiracSingletDM_8cpp"/>
+      </node>
+      <node id="6">
+        <label>SpecBit_MSSM.cpp</label>
+        <link refid="SpecBit__MSSM_8cpp"/>
+      </node>
+      <node id="8">
+        <label>SpecBit_SM.cpp</label>
+        <link refid="SpecBit__SM_8cpp"/>
+      </node>
+      <node id="1">
+        <label>SpecBit_helpers.hpp</label>
+        <link refid="SpecBit__helpers_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SpecBit_DMEFT.cpp</label>
+        <link refid="SpecBit__DMEFT_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1SpecBit">Gambit::SpecBit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Declarations of convenience (i.e. non-Gambit) functions used by more than one SpecBit source file.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Ben Farmer (<ulink url="mailto:benjamin.farmer@fysik.su.se">benjamin.farmer@fysik.su.se</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2014 Sep - Dec, 2015 Jan - May</para>
+</simplesect>
+<simplesect kind="author"><para>Tomas Gonzalo (<ulink url="mailto:tomas.gonzalo@monash.edu">tomas.gonzalo@monash.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>Jul 2020</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__SpecBit_helpers_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SpecBit_helpers_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/sminputs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Flexible<sp/>SUSY<sp/>stuff<sp/>(should<sp/>not<sp/>be<sp/>needed<sp/>by<sp/>the<sp/>rest<sp/>of<sp/>gambit)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;flexiblesusy/src/ew_input.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;flexiblesusy/src/lowe.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>From<sp/>softsusy;<sp/>used<sp/>by<sp/>flexiblesusy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;flexiblesusy/src/numerics.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SpecBit</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>=======================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>These<sp/>are<sp/>not<sp/>known<sp/>to<sp/>Gambit,<sp/>but<sp/>perform<sp/>helper<sp/>tasks<sp/>used<sp/>by<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Gambit<sp/>module<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="SpecBit__helpers_8hpp_1ac442b10d4430a2ba56914473d1e972f7" kindref="member">setup_QedQcd</ref>(softsusy::QedQcd&amp;<sp/>oneset<sp/></highlight><highlight class="comment">/*output*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>sminputs<sp/></highlight><highlight class="comment">/*input*/</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="SpecBit__helpers_8hpp_1a2f0b4e6889c2679c95f00d9941d829d4" kindref="member">has_neutralino_LSP</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum&amp;<sp/>result);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="SpecBit__helpers_8hpp_1a2f0b4e6889c2679c95f00d9941d829d4" kindref="member">has_neutralino_LSP</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum*<sp/>result);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_helpers.hpp"/>
+  </compounddef>
+</doxygen>

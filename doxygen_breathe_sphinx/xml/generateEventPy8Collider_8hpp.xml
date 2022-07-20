@@ -4,8 +4,8 @@
     <compoundname>generateEventPy8Collider.hpp</compoundname>
     <includes refid="ColliderBit__eventloop_8hpp" local="yes">gambit/ColliderBit/ColliderBit_eventloop.hpp</includes>
     <includes refid="Py8EventConversions_8hpp" local="yes">gambit/ColliderBit/colliders/Pythia8/Py8EventConversions.hpp</includes>
-    <includedby refid="SUSY_8cpp" local="yes">ColliderBit/src/models/SUSY.cpp</includedby>
-    <includedby refid="SUSY__extras_8cpp" local="yes">ColliderBit/src/models/SUSY_extras.cpp</includedby>
+    <includedby refid="SUSY_8cpp" local="yes">SUSY.cpp</includedby>
+    <includedby refid="SUSY__extras_8cpp" local="yes">SUSY_extras.cpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>gambit/Elements/gambit_module_headers.hpp</label>
@@ -82,7 +82,7 @@
         <label>iostream</label>
       </node>
       <node id="1">
-        <label>ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp</label>
+        <label>generateEventPy8Collider.hpp</label>
         <link refid="generateEventPy8Collider_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -110,15 +110,15 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>ColliderBit/src/models/SUSY.cpp</label>
+        <label>SUSY.cpp</label>
         <link refid="SUSY_8cpp"/>
       </node>
       <node id="3">
-        <label>ColliderBit/src/models/SUSY_extras.cpp</label>
+        <label>SUSY_extras.cpp</label>
         <link refid="SUSY__extras_8cpp"/>
       </node>
       <node id="1">
-        <label>ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp</label>
+        <label>generateEventPy8Collider.hpp</label>
         <link refid="generateEventPy8Collider_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp" line="48" column="9" bodyfile="ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp" bodystart="48" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp" line="48" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="generateEventPy8Collider_8hpp_1aa0a7aeb7b1de3091b839d2f5eca4f532" prot="public" static="no">
         <name>GET_PYTHIA_EVENT</name>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp" line="201" column="13" bodyfile="ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp" bodystart="201" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp" line="201" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp" bodystart="201" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -224,7 +224,7 @@
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifndef<sp/>EXCLUDE_HEPMC</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>PythiaT,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hepmc_writerT&gt;</highlight></codeline>
-<codeline lineno="59" refid="generateEventPy8Collider_8hpp_1a9cbda0b8772ada2f012c84c66cd84921" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="generateEventPy8Collider_8hpp_1a9cbda0b8772ada2f012c84c66cd84921" kindref="member">dropHepMCEventPy8Collider</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>PythiaT*<sp/>Pythia,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>safe_ptr&lt;Options&gt;&amp;<sp/>runOptions)</highlight></codeline>
+<codeline lineno="59" refid="generateEventPy8Collider_8hpp_1a9cbda0b8772ada2f012c84c66cd84921" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="generateEventPy8Collider_8hpp_1a9cbda0b8772ada2f012c84c66cd84921" kindref="member">dropHepMCEventPy8Collider</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>PythiaT*<sp/>Pythia,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1safe__ptr" kindref="compound">safe_ptr&lt;Options&gt;</ref>&amp;<sp/>runOptions)</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>event<sp/>to<sp/>HepMC<sp/>file</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>drop_HepMC2_file<sp/>=<sp/>runOptions-&gt;getValueOrDef&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&gt;(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;drop_HepMC2_file&quot;</highlight><highlight class="normal">);</highlight></codeline>
@@ -259,7 +259,7 @@
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EventWeighterFunctionType&amp;<sp/>EventWeighterFunction,</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iteration,</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*wrapup)(),</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>safe_ptr&lt;Options&gt;&amp;<sp/>runOptions)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1safe__ptr" kindref="compound">safe_ptr&lt;Options&gt;</ref>&amp;<sp/>runOptions)</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nFailedEvents;</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>thread_local<sp/>EventT<sp/>pythia_event;</highlight></codeline>
@@ -377,6 +377,6 @@
 <codeline lineno="211"><highlight class="normal"></highlight></codeline>
 <codeline lineno="212"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp"/>
   </compounddef>
 </doxygen>

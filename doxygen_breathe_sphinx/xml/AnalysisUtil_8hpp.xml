@@ -4,8 +4,8 @@
     <compoundname>AnalysisUtil.hpp</compoundname>
     <includes refid="Utils_8hpp" local="yes">gambit/ColliderBit/Utils.hpp</includes>
     <includes local="yes">HEPUtils/Event.h</includes>
-    <includedby refid="Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp" local="yes">ColliderBit/src/analyses/Analysis_ATLAS_7TeV_1OR2LEPStop_4_7invfb.cpp</includedby>
-    <includedby refid="Analysis__ATLAS__7TeV__2LEPStop__4__7invfb_8cpp" local="yes">ColliderBit/src/analyses/Analysis_ATLAS_7TeV_2LEPStop_4_7invfb.cpp</includedby>
+    <includedby refid="Analysis__ATLAS__7TeV__1OR2LEPStop__4__7invfb_8cpp" local="yes">Analysis_ATLAS_7TeV_1OR2LEPStop_4_7invfb.cpp</includedby>
+    <includedby refid="Analysis__ATLAS__7TeV__2LEPStop__4__7invfb_8cpp" local="yes">Analysis_ATLAS_7TeV_2LEPStop_4_7invfb.cpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>functional</label>
@@ -14,7 +14,7 @@
         <label>HEPUtils/Event.h</label>
       </node>
       <node id="1">
-        <label>ColliderBit/include/gambit/ColliderBit/analyses/AnalysisUtil.hpp</label>
+        <label>AnalysisUtil.hpp</label>
         <link refid="AnalysisUtil_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -89,9 +89,9 @@
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sortParticlesByPt(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>HEPUtils::Particle<sp/>*particle1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>HEPUtils::Particle<sp/>*particle2)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sortParticlesByPt(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>HEPUtils::Particle<sp/>*particle1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>HEPUtils::Particle<sp/>*<ref refid="structGambit_1_1particle2" kindref="compound">particle2</ref>)</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(particle1-&gt;pT()<sp/>&gt;<sp/>particle2-&gt;pT());</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(particle1-&gt;pT()<sp/>&gt;<sp/><ref refid="structGambit_1_1particle2" kindref="compound">particle2</ref>-&gt;pT());</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sortJetsByPt(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>HEPUtils::Jet*<sp/>jet1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>HEPUtils::Jet*<sp/>jet2)</highlight></codeline>
@@ -251,6 +251,6 @@
 <codeline lineno="187"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="188"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="ColliderBit/include/gambit/ColliderBit/analyses/AnalysisUtil.hpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/include/gambit/ColliderBit/analyses/AnalysisUtil.hpp"/>
   </compounddef>
 </doxygen>

@@ -1,0 +1,25 @@
+var structGambit_1_1slha__leshouches2__hdec__type =
+[
+    [ "adval", "structGambit_1_1slha__leshouches2__hdec__type.html#a55064b9c79b9d570c7bf80f77a5fcd71", null ],
+    [ "aeval", "structGambit_1_1slha__leshouches2__hdec__type.html#a89d85cf26275dcfde7905a4248d674e0", null ],
+    [ "alphaval", "structGambit_1_1slha__leshouches2__hdec__type.html#a397604bce4d11cc0d121e5bbcf664914", null ],
+    [ "auval", "structGambit_1_1slha__leshouches2__hdec__type.html#ab080db42f8da4a1ac17f7f47ada33a97", null ],
+    [ "extval", "structGambit_1_1slha__leshouches2__hdec__type.html#a53bfd8cba60d4cd57b226d97d154ab4c", null ],
+    [ "gaugeval", "structGambit_1_1slha__leshouches2__hdec__type.html#a0ef9c2d24a4b7f5750eabfb1292ce592", null ],
+    [ "hmixval", "structGambit_1_1slha__leshouches2__hdec__type.html#a0d380d64018b2f0443a297c3ca1ea86a", null ],
+    [ "imod", "structGambit_1_1slha__leshouches2__hdec__type.html#af97692a163fe0cec412b5cf0f37d8095", null ],
+    [ "massval", "structGambit_1_1slha__leshouches2__hdec__type.html#afc713eed4aecb3e3bb5e55c1b53ea2c2", null ],
+    [ "minval", "structGambit_1_1slha__leshouches2__hdec__type.html#a5ce7c963f8936566c79d13782bafe91e", null ],
+    [ "msoftval", "structGambit_1_1slha__leshouches2__hdec__type.html#a712d288c19fd5b96d487a6b9fab41f4c", null ],
+    [ "nmixval", "structGambit_1_1slha__leshouches2__hdec__type.html#ae0246561948560078bc81e562d7e90ab", null ],
+    [ "qvalue", "structGambit_1_1slha__leshouches2__hdec__type.html#a7bce258a2097d6bb16b16f1fd4d1d3b3", null ],
+    [ "sbotmixval", "structGambit_1_1slha__leshouches2__hdec__type.html#a8ee7df2f4a926d6f57a2336ebef0da88", null ],
+    [ "smval", "structGambit_1_1slha__leshouches2__hdec__type.html#ad5460e4598fbe90ab8d0956c5c517dbf", null ],
+    [ "staumixval", "structGambit_1_1slha__leshouches2__hdec__type.html#ad6ff8db5cce10a533896655fee74dcbc", null ],
+    [ "stopmixval", "structGambit_1_1slha__leshouches2__hdec__type.html#a3083ab7fed6da35b09e8bbb14b11d830", null ],
+    [ "umixval", "structGambit_1_1slha__leshouches2__hdec__type.html#a3bc2e45d72de175c8e57add0cc6a43c3", null ],
+    [ "vmixval", "structGambit_1_1slha__leshouches2__hdec__type.html#a3cbfc60eacfb4b5809d9b0dc8b39e224", null ],
+    [ "ydval", "structGambit_1_1slha__leshouches2__hdec__type.html#a898cbd1429d9d2cc526ba09e61d0c079", null ],
+    [ "yeval", "structGambit_1_1slha__leshouches2__hdec__type.html#af2fa719902fa3d4d2e8125260ae5e3e3", null ],
+    [ "yuval", "structGambit_1_1slha__leshouches2__hdec__type.html#a5b1464240637251204c627345201058d", null ]
+];

@@ -1,0 +1,28 @@
+var SpecBit__VS_8cpp =
+[
+    [ "check_EW_stability_ScalarSingletDM_Z3", "SpecBit__VS_8cpp.html#ad6277424fae73031225d10f909b4d25e", null ],
+    [ "check_perturb_min_lambda", "SpecBit__VS_8cpp.html#ad30f85bcb06c928ea810a962a2bec1dc", null ],
+    [ "check_perturb_to_min_lambda", "SpecBit__VS_8cpp.html#a12f9f5e1fb78564c13f4e0a52ab913d4", null ],
+    [ "check_vacuum_stability_vevacious", "SpecBit__VS_8cpp.html#aec08dff07fccfccffe1dd5efb480545b", null ],
+    [ "compare_panic_vacua", "SpecBit__VS_8cpp.html#a9e2bff935ed5ded0fc8341bd0cdd6728", null ],
+    [ "exec_pass_spectrum_to_vevacious", "SpecBit__VS_8cpp.html#aa741e89b1679f2e744dfbb28f393ac82", null ],
+    [ "find_min_lambda_Helper", "SpecBit__VS_8cpp.html#a29f53d6123fbfb4f69d6866a292ed679", null ],
+    [ "find_min_lambda_MDM", "SpecBit__VS_8cpp.html#a3361e95a55145661a531c14a7fa4d26f", null ],
+    [ "find_min_lambda_ScalarSingletDM_Z2", "SpecBit__VS_8cpp.html#a53ec37c7b2932fc75e12e58a3920a02d", null ],
+    [ "find_min_lambda_ScalarSingletDM_Z3", "SpecBit__VS_8cpp.html#abc5c376547743abb165e96eacbbba347", null ],
+    [ "get_expected_vacuum_lifetime", "SpecBit__VS_8cpp.html#af7a27a34a7a133230082b5eac6044e32", null ],
+    [ "get_lambdaB", "SpecBit__VS_8cpp.html#a39633b048051296eddca4b2d02df7d2d", null ],
+    [ "get_likelihood_VS", "SpecBit__VS_8cpp.html#a9230e8a341b68b10bd6a6a4a4c45942a", null ],
+    [ "get_VS_results", "SpecBit__VS_8cpp.html#a5ce2c8730e02bca53cb6cfa5af77136e", null ],
+    [ "helper_catch_vevacious", "SpecBit__VS_8cpp.html#ad4c6affb30bad5dd7d3f1504c1dcb076", null ],
+    [ "helper_run_vevacious", "SpecBit__VS_8cpp.html#aa35e62ed8d72c6328f7fb1991305f7dd", null ],
+    [ "helper_set_tunnelingStrategy", "SpecBit__VS_8cpp.html#aa48f96bbbd0104b2515718351433bdd7", null ],
+    [ "initialize_vevacious", "SpecBit__VS_8cpp.html#a8ffbf0fd3ecb2cec6cf73c828a610413", null ],
+    [ "lnL_highscale_vacuum_decay_single_field", "SpecBit__VS_8cpp.html#a4a6227518c25968e1d683ded98c93fac", null ],
+    [ "make_vpp_inputs", "SpecBit__VS_8cpp.html#a87dbdfb59226f9e3cf7ae393d0864038", null ],
+    [ "prepare_pass_MSSM_spectrum_to_vevacious", "SpecBit__VS_8cpp.html#ab58b92ebff3b665989e4b8ffdd2842e3", null ],
+    [ "run_lambda", "SpecBit__VS_8cpp.html#a19d2b2c2c3c0ce9c8b47bb6aaf1c93d6", null ],
+    [ "set_panic_vacua", "SpecBit__VS_8cpp.html#a3c5322744bb3bc2f3a1000bd8d1f71c9", null ],
+    [ "set_tunnelling_strategy", "SpecBit__VS_8cpp.html#a0b62bdb4ea9e2702f6ed0ecf301708ef", null ],
+    [ "vevacious_file_location_MSSM", "SpecBit__VS_8cpp.html#a43f68cb300aba8b8a4a42555c4f8b7a7", null ]
+];

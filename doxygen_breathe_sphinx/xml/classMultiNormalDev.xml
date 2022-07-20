@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classMultiNormalDev" kind="class" language="C++" prot="public">
+    <compoundname>MultiNormalDev</compoundname>
+    <basecompoundref refid="classRan" prot="public" virt="non-virtual">Ran</basecompoundref>
+    <basecompoundref refid="classCholesky" prot="public" virt="non-virtual">Cholesky</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMultiNormalDev_1a85f6be0a640dff6d02830b0969ef54fc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MultiNormalDev::mm</definition>
+        <argsstring></argsstring>
+        <name>mm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="566" column="5" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="566" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMultiNormalDev_1a0bd922264f52251fc2ce8f2a20957a62" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MultiNormalDev::f</definition>
+        <argsstring></argsstring>
+        <name>f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="567" column="8" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="567" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMultiNormalDev_1ab580e0953ae86e9e43f5d338a1d0e36f" prot="private" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double * MultiNormalDev::spt</definition>
+        <argsstring></argsstring>
+        <name>spt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="568" column="8" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="568" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMultiNormalDev_1a22622034b19de6f1b70eb8e23d996662" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MultiNormalDev::MultiNormalDev</definition>
+        <argsstring>(double **vvar, double fin, unsigned long long int j, int nin)</argsstring>
+        <name>MultiNormalDev</name>
+        <param>
+          <type>double **</type>
+          <declname>vvar</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fin</declname>
+        </param>
+        <param>
+          <type>unsigned long long int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="571" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="571" bodyend="574"/>
+      </memberdef>
+      <memberdef kind="function" id="classMultiNormalDev_1a7bae11d59be6a5210c1cf6b8ee6686a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiNormalDev::Dev</definition>
+        <argsstring>(double *pt, double *mean)</argsstring>
+        <name>Dev</name>
+        <param>
+          <type>double *</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>mean</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="575" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="575" bodyend="594"/>
+      </memberdef>
+      <memberdef kind="function" id="classMultiNormalDev_1a83b9c66c6fa4ac6c4c5a1ef8971e6d12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiNormalDev::Dev</definition>
+        <argsstring>(double **cvar, double *pt, double *mean)</argsstring>
+        <name>Dev</name>
+        <param>
+          <type>double **</type>
+          <declname>cvar</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>mean</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="595" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="595" bodyend="615"/>
+      </memberdef>
+      <memberdef kind="function" id="classMultiNormalDev_1a501fdd01bda5c2c96973496d232197fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MultiNormalDev::~MultiNormalDev</definition>
+        <argsstring>()</argsstring>
+        <name>~MultiNormalDev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="616" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="616" bodyend="619"/>
+      </memberdef>
+      <memberdef kind="function" id="classMultiNormalDev_1a22622034b19de6f1b70eb8e23d996662" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MultiNormalDev::MultiNormalDev</definition>
+        <argsstring>(double **vvar, double fin, unsigned long long int j, int nin)</argsstring>
+        <name>MultiNormalDev</name>
+        <param>
+          <type>double **</type>
+          <declname>vvar</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fin</declname>
+        </param>
+        <param>
+          <type>unsigned long long int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="607" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="607" bodyend="610"/>
+      </memberdef>
+      <memberdef kind="function" id="classMultiNormalDev_1a7bae11d59be6a5210c1cf6b8ee6686a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiNormalDev::Dev</definition>
+        <argsstring>(double *pt, double *mean)</argsstring>
+        <name>Dev</name>
+        <param>
+          <type>double *</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>mean</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="611" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="611" bodyend="630"/>
+      </memberdef>
+      <memberdef kind="function" id="classMultiNormalDev_1a83b9c66c6fa4ac6c4c5a1ef8971e6d12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiNormalDev::Dev</definition>
+        <argsstring>(double **cvar, double *pt, double *mean)</argsstring>
+        <name>Dev</name>
+        <param>
+          <type>double **</type>
+          <declname>cvar</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>pt</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>mean</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="631" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="631" bodyend="651"/>
+      </memberdef>
+      <memberdef kind="function" id="classMultiNormalDev_1a501fdd01bda5c2c96973496d232197fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MultiNormalDev::~MultiNormalDev</definition>
+        <argsstring>()</argsstring>
+        <name>~MultiNormalDev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="652" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="652" bodyend="655"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>Cholesky</label>
+        <link refid="classCholesky"/>
+      </node>
+      <node id="1">
+        <label>MultiNormalDev</label>
+        <link refid="classMultiNormalDev"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Ran</label>
+        <link refid="classRan"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Cholesky</label>
+        <link refid="classCholesky"/>
+      </node>
+      <node id="1">
+        <label>MultiNormalDev</label>
+        <link refid="classMultiNormalDev"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Ran</label>
+        <link refid="classRan"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="564" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="563" bodyend="620"/>
+    <listofallmembers>
+      <member refid="classCholesky_1a57ac6362cf5f9c52ba2dcdfca0e19ba5" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Cholesky</name></member>
+      <member refid="classCholesky_1afe4f4b37871cd6dfd5b51308c3de96d8" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Cholesky</name></member>
+      <member refid="classCholesky_1a57ac6362cf5f9c52ba2dcdfca0e19ba5" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Cholesky</name></member>
+      <member refid="classCholesky_1afe4f4b37871cd6dfd5b51308c3de96d8" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Cholesky</name></member>
+      <member refid="classCholesky_1a678474da08112fa7bfe6924ea49b8f39" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>DetSqrt</name></member>
+      <member refid="classCholesky_1a678474da08112fa7bfe6924ea49b8f39" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>DetSqrt</name></member>
+      <member refid="classMultiNormalDev_1a7bae11d59be6a5210c1cf6b8ee6686a6" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Dev</name></member>
+      <member refid="classMultiNormalDev_1a83b9c66c6fa4ac6c4c5a1ef8971e6d12" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Dev</name></member>
+      <member refid="classMultiNormalDev_1a7bae11d59be6a5210c1cf6b8ee6686a6" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Dev</name></member>
+      <member refid="classMultiNormalDev_1a83b9c66c6fa4ac6c4c5a1ef8971e6d12" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Dev</name></member>
+      <member refid="classRan_1a789897ad8b5b38a2e9fe8657ca809f8b" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Doub</name></member>
+      <member refid="classRan_1a789897ad8b5b38a2e9fe8657ca809f8b" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Doub</name></member>
+      <member refid="classCholesky_1abc182576c7cd82fa6566efef5ed173de" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>ElMult</name></member>
+      <member refid="classCholesky_1a55f427e5cca38879191ce7291a835366" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>ElMult</name></member>
+      <member refid="classCholesky_1abc182576c7cd82fa6566efef5ed173de" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>ElMult</name></member>
+      <member refid="classCholesky_1a55f427e5cca38879191ce7291a835366" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>ElMult</name></member>
+      <member refid="classCholesky_1a98ba38a4ab7891dd24f91c4983034cad" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>EnterMat</name></member>
+      <member refid="classCholesky_1ab4968f8c5d1b9f049cb192fd3871193a" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>EnterMat</name></member>
+      <member refid="classCholesky_1a98ba38a4ab7891dd24f91c4983034cad" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>EnterMat</name></member>
+      <member refid="classCholesky_1a9a4975278f6f25edf24869a645381a9b" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>EnterMat</name></member>
+      <member refid="classCholesky_1ab4968f8c5d1b9f049cb192fd3871193a" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>EnterMat</name></member>
+      <member refid="classCholesky_1a10cdf822402d373f88696a10b84cd7ed" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>EnterMatM</name></member>
+      <member refid="classCholesky_1a10cdf822402d373f88696a10b84cd7ed" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>EnterMatM</name></member>
+      <member refid="classMultiNormalDev_1a0bd922264f52251fc2ce8f2a20957a62" prot="private" virt="non-virtual"><scope>MultiNormalDev</scope><name>f</name></member>
+      <member refid="classCholesky_1a152a90e646e2a656b8e9630075c41375" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Inverse</name></member>
+      <member refid="classCholesky_1a152a90e646e2a656b8e9630075c41375" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Inverse</name></member>
+      <member refid="classMultiNormalDev_1a85f6be0a640dff6d02830b0969ef54fc" prot="private" virt="non-virtual"><scope>MultiNormalDev</scope><name>mm</name></member>
+      <member refid="classMultiNormalDev_1a22622034b19de6f1b70eb8e23d996662" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>MultiNormalDev</name></member>
+      <member refid="classMultiNormalDev_1a22622034b19de6f1b70eb8e23d996662" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>MultiNormalDev</name></member>
+      <member refid="classCholesky_1ad0e16025a459f3e376a21be7c4012b44" prot="protected" virt="non-virtual"><scope>MultiNormalDev</scope><name>num</name></member>
+      <member refid="classRan_1a721d7b18b913e1ec15f766ef3e61ee7f" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Ran</name></member>
+      <member refid="classRan_1a721d7b18b913e1ec15f766ef3e61ee7f" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Ran</name></member>
+      <member refid="classCholesky_1aeccc578cf37e684d76473e77946520b6" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Solve</name></member>
+      <member refid="classCholesky_1aeccc578cf37e684d76473e77946520b6" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Solve</name></member>
+      <member refid="classMultiNormalDev_1ab580e0953ae86e9e43f5d338a1d0e36f" prot="private" virt="non-virtual"><scope>MultiNormalDev</scope><name>spt</name></member>
+      <member refid="classCholesky_1ad392e8211dccd589e764898698859b75" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Square</name></member>
+      <member refid="classCholesky_1aa7628d7b1bb68969dbfde05277770b74" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Square</name></member>
+      <member refid="classCholesky_1ad392e8211dccd589e764898698859b75" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Square</name></member>
+      <member refid="classCholesky_1aa7628d7b1bb68969dbfde05277770b74" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>Square</name></member>
+      <member refid="classCholesky_1aed950ac074bea0a0df52749af3944d6a" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>~Cholesky</name></member>
+      <member refid="classCholesky_1aed950ac074bea0a0df52749af3944d6a" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>~Cholesky</name></member>
+      <member refid="classMultiNormalDev_1a501fdd01bda5c2c96973496d232197fb" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>~MultiNormalDev</name></member>
+      <member refid="classMultiNormalDev_1a501fdd01bda5c2c96973496d232197fb" prot="public" virt="non-virtual"><scope>MultiNormalDev</scope><name>~MultiNormalDev</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

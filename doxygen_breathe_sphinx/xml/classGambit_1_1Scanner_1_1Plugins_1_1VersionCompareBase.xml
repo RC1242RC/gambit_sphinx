@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Gambit::Scanner::Plugins::VersionCompareBase</compoundname>
+    <derivedcompoundref refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompare" prot="public" virt="non-virtual">Gambit::Scanner::Plugins::VersionCompare</derivedcompoundref>
+    <derivedcompoundref refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBottom" prot="public" virt="non-virtual">Gambit::Scanner::Plugins::VersionCompareBottom</derivedcompoundref>
+    <includes refid="plugin__comparators_8hpp" local="no">plugin_comparators.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1abb201b4cd45c3cf99013639c0b91256c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::Scanner::Plugins::VersionCompareBase::empty</definition>
+        <argsstring></argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" line="42" column="38" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1afc63e4135f4d0f4f530c98ed0b2b00fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Scanner::Plugins::VersionCompareBase::VersionCompareBase</definition>
+        <argsstring>()</argsstring>
+        <name>VersionCompareBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" line="45" column="33" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1a050fbe5994ccd5f89a2839de3574ec68" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Gambit::Scanner::Plugins::VersionCompareBase::operator()</definition>
+        <argsstring>(const Plugin_Details &amp;)=0</argsstring>
+        <name>operator()</name>
+        <reimplementedby refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBottom_1a6b19b2aa98396a0bff3fd3b9adff0227">operator()</reimplementedby>
+        <reimplementedby refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompare_1a9740a88d845ad2dce2779def43b13924">operator()</reimplementedby>
+        <param>
+          <type>const <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" line="46" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1a72d8bd685beb40bdf68045897b365afc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::Scanner::Plugins::VersionCompareBase::isEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>isEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" line="47" column="38" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1ac604d70f4dc48958252ce8579120ce1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Plugins::VersionCompareBase::setEmpty</definition>
+        <argsstring>(bool in)</argsstring>
+        <name>setEmpty</name>
+        <param>
+          <type>bool</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" line="48" column="38" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1a7d695d3fd222ac3d43812bcacd1a4b7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Gambit::Scanner::Plugins::VersionCompareBase::~VersionCompareBase</definition>
+        <argsstring>()</argsstring>
+        <name>~VersionCompareBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" line="49" column="41" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for comparing scanner plugins. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Gambit::Scanner::Plugins::VersionCompareBase</label>
+        <link refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase"/>
+      </node>
+      <node id="3">
+        <label>Gambit::Scanner::Plugins::VersionCompareBottom</label>
+        <link refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBottom"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Gambit::Scanner::Plugins::VersionCompare</label>
+        <link refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompare"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" line="40" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" bodystart="39" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1abb201b4cd45c3cf99013639c0b91256c" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::VersionCompareBase</scope><name>empty</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1a72d8bd685beb40bdf68045897b365afc" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::VersionCompareBase</scope><name>isEmpty</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1a050fbe5994ccd5f89a2839de3574ec68" prot="public" virt="pure-virtual"><scope>Gambit::Scanner::Plugins::VersionCompareBase</scope><name>operator()</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1ac604d70f4dc48958252ce8579120ce1c" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::VersionCompareBase</scope><name>setEmpty</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1afc63e4135f4d0f4f530c98ed0b2b00fe" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::VersionCompareBase</scope><name>VersionCompareBase</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase_1a7d695d3fd222ac3d43812bcacd1a4b7d" prot="public" virt="virtual"><scope>Gambit::Scanner::Plugins::VersionCompareBase</scope><name>~VersionCompareBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

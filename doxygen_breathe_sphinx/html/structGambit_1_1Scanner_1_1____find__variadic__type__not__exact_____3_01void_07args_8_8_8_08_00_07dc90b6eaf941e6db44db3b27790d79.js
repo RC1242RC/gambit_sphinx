@@ -1,0 +1,5 @@
+var structGambit_1_1Scanner_1_1____find__variadic__type__not__exact_____3_01void_07args_8_8_8_08_00_07dc90b6eaf941e6db44db3b27790d79 =
+[
+    [ "func_type", "structGambit_1_1Scanner_1_1____find__variadic__type__not__exact_____3_01void_07args_8_8_8_08_00_07dc90b6eaf941e6db44db3b27790d79.html#a1adb116567ab78172a15ebd670b05817", null ],
+    [ "ret_type", "structGambit_1_1Scanner_1_1____find__variadic__type__not__exact_____3_01void_07args_8_8_8_08_00_07dc90b6eaf941e6db44db3b27790d79.html#add825820237e7369d6eed20b68a39a2a", null ]
+];

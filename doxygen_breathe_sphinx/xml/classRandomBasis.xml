@@ -1,0 +1,538 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classRandomBasis" kind="class" language="C++" prot="public">
+    <compoundname>RandomBasis</compoundname>
+    <basecompoundref refid="classBasicDevs" prot="public" virt="non-virtual">BasicDevs</basecompoundref>
+    <derivedcompoundref refid="classMultiNormDev" prot="public" virt="non-virtual">MultiNormDev</derivedcompoundref>
+    <derivedcompoundref refid="classTransformRandomBasis" prot="public" virt="non-virtual">TransformRandomBasis</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRandomBasis_1aab9a47abce3fa34c5107eb72d57a156b" prot="private" static="no" mutable="no">
+        <type>double **</type>
+        <definition>double ** RandomBasis::rotVec</definition>
+        <argsstring></argsstring>
+        <name>rotVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1016" column="8" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1016" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classRandomBasis_1af229a74afdff061cfad1b27abdec4b31" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RandomBasis::num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1019" column="5" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1019" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRandomBasis_1a4f9fd4d08470657079b383cb893af678" prot="protected" static="no" mutable="no">
+        <type>double **</type>
+        <definition>double ** RandomBasis::currentVec</definition>
+        <argsstring></argsstring>
+        <name>currentVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1020" column="8" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1020" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRandomBasis_1a30e909fc90244f968d87bdb462b09a73" prot="protected" static="no" mutable="no">
+        <type>double **</type>
+        <definition>double ** RandomBasis::endVec</definition>
+        <argsstring></argsstring>
+        <name>endVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1021" column="8" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1021" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRandomBasis_1a4efc3804dd99f33c0ae59b2c662c9d5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RandomBasis::RandomBasis</definition>
+        <argsstring>(int nin, unsigned long long iin)</argsstring>
+        <name>RandomBasis</name>
+        <param>
+          <type>int</type>
+          <declname>nin</declname>
+        </param>
+        <param>
+          <type>unsigned long long</type>
+          <declname>iin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1024" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1024" bodyend="1029"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1ad74ea15c5f8c80708e7d88f61ae68d9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomBasis::ChangeDim</definition>
+        <argsstring>(const int nin)</argsstring>
+        <name>ChangeDim</name>
+        <param>
+          <type>const int</type>
+          <declname>nin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1031" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1031" bodyend="1038"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1ab1fd63af0deadd6d8f425e821d953006" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomBasis::RandRot</definition>
+        <argsstring>()</argsstring>
+        <name>RandRot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1040" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1040" bodyend="1067"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1a61db105084460c96b9db34b4e4c2187c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RandomBasis::RanMult</definition>
+        <argsstring>(double **cin)</argsstring>
+        <name>RanMult</name>
+        <param>
+          <type>double **</type>
+          <declname>cin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1069" column="8" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1069" bodyend="1082"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1a19f3c763828e1019b40b67622dbb31c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomBasis::RanMult</definition>
+        <argsstring>(const double in, double *out)</argsstring>
+        <name>RanMult</name>
+        <param>
+          <type>const double</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1084" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1084" bodyend="1095"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1acfdef19433906c35b1c38faf43031e34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomBasis::RanMult</definition>
+        <argsstring>(double *in, const double w, double *out)</argsstring>
+        <name>RanMult</name>
+        <param>
+          <type>double *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1097" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1097" bodyend="1107"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1adb944baefc0c297821f4659ce0fbfb6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RandomBasis::Mag</definition>
+        <argsstring>(double *a, double *a0)</argsstring>
+        <name>Mag</name>
+        <param>
+          <type>double *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>a0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1109" column="8" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1109" bodyend="1119"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1ab4d3094d5a8bcdf3e7b415a63e4f4fc2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomBasis::Adjust</definition>
+        <argsstring>(double *a, const double lim, const int iin)</argsstring>
+        <name>Adjust</name>
+        <param>
+          <type>double *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>lim</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>iin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1121" column="6" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1121" bodyend="1129"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1a8405df65e14c5acbed0fc40e2558dd6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RandomBasis::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <reimplementedby refid="classTransformRandomBasis_1ac640e45ecee04a3e9305275d89930b5d">operator++</reimplementedby>
+        <reimplementedby refid="classTransformRandomBasis_1ac640e45ecee04a3e9305275d89930b5d">operator++</reimplementedby>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1131" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1131" bodyend="1137"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1ad0c80b09ef69d99c776dad7a1f612618" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual RandomBasis::~RandomBasis</definition>
+        <argsstring>()</argsstring>
+        <name>~RandomBasis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1139" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1139" bodyend="1142"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1a4efc3804dd99f33c0ae59b2c662c9d5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RandomBasis::RandomBasis</definition>
+        <argsstring>(int nin, unsigned long long iin)</argsstring>
+        <name>RandomBasis</name>
+        <param>
+          <type>int</type>
+          <declname>nin</declname>
+        </param>
+        <param>
+          <type>unsigned long long</type>
+          <declname>iin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="1120" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="1120" bodyend="1125"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1ad74ea15c5f8c80708e7d88f61ae68d9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomBasis::ChangeDim</definition>
+        <argsstring>(const int nin)</argsstring>
+        <name>ChangeDim</name>
+        <param>
+          <type>const int</type>
+          <declname>nin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="1127" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="1127" bodyend="1134"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1ab1fd63af0deadd6d8f425e821d953006" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomBasis::RandRot</definition>
+        <argsstring>()</argsstring>
+        <name>RandRot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="1136" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="1136" bodyend="1163"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1a61db105084460c96b9db34b4e4c2187c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RandomBasis::RanMult</definition>
+        <argsstring>(double **cin)</argsstring>
+        <name>RanMult</name>
+        <param>
+          <type>double **</type>
+          <declname>cin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="1165" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="1165" bodyend="1178"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1a19f3c763828e1019b40b67622dbb31c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomBasis::RanMult</definition>
+        <argsstring>(const double in, double *out)</argsstring>
+        <name>RanMult</name>
+        <param>
+          <type>const double</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="1180" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="1180" bodyend="1191"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1acfdef19433906c35b1c38faf43031e34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomBasis::RanMult</definition>
+        <argsstring>(double *in, const double w, double *out)</argsstring>
+        <name>RanMult</name>
+        <param>
+          <type>double *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="1193" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="1193" bodyend="1203"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1adb944baefc0c297821f4659ce0fbfb6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RandomBasis::Mag</definition>
+        <argsstring>(double *a, double *a0)</argsstring>
+        <name>Mag</name>
+        <param>
+          <type>double *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>a0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="1205" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="1205" bodyend="1215"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1ab4d3094d5a8bcdf3e7b415a63e4f4fc2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RandomBasis::Adjust</definition>
+        <argsstring>(double *a, const double lim, const int iin)</argsstring>
+        <name>Adjust</name>
+        <param>
+          <type>double *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>lim</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>iin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="1217" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="1217" bodyend="1225"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1a8405df65e14c5acbed0fc40e2558dd6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RandomBasis::operator++</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator++</name>
+        <reimplementedby refid="classTransformRandomBasis_1ac640e45ecee04a3e9305275d89930b5d">operator++</reimplementedby>
+        <reimplementedby refid="classTransformRandomBasis_1ac640e45ecee04a3e9305275d89930b5d">operator++</reimplementedby>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="1227" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="1227" bodyend="1233"/>
+      </memberdef>
+      <memberdef kind="function" id="classRandomBasis_1ad0c80b09ef69d99c776dad7a1f612618" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual RandomBasis::~RandomBasis</definition>
+        <argsstring>()</argsstring>
+        <name>~RandomBasis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" line="1235" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/twalk/random_tools.hpp" bodystart="1235" bodyend="1238"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>RandomBasis</label>
+        <link refid="classRandomBasis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BasicDevs</label>
+        <link refid="classBasicDevs"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Ran</label>
+        <link refid="classRan"/>
+      </node>
+      <node id="4">
+        <label>MultiNormDev</label>
+        <link refid="classMultiNormDev"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>TransformRandomBasis</label>
+        <link refid="classTransformRandomBasis"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>RandomBasis</label>
+        <link refid="classRandomBasis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BasicDevs</label>
+        <link refid="classBasicDevs"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Ran</label>
+        <link refid="classRan"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" line="1014" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/simple/random_tools.hpp" bodystart="1013" bodyend="1143"/>
+    <listofallmembers>
+      <member refid="classRandomBasis_1ab4d3094d5a8bcdf3e7b415a63e4f4fc2" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>Adjust</name></member>
+      <member refid="classRandomBasis_1ab4d3094d5a8bcdf3e7b415a63e4f4fc2" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>Adjust</name></member>
+      <member refid="classBasicDevs_1a1423bd8041d0566f6334d1fe8eafbcf7" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>BasicDevs</name></member>
+      <member refid="classBasicDevs_1a1423bd8041d0566f6334d1fe8eafbcf7" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>BasicDevs</name></member>
+      <member refid="classRandomBasis_1ad74ea15c5f8c80708e7d88f61ae68d9c" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>ChangeDim</name></member>
+      <member refid="classRandomBasis_1ad74ea15c5f8c80708e7d88f61ae68d9c" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>ChangeDim</name></member>
+      <member refid="classRandomBasis_1a4f9fd4d08470657079b383cb893af678" prot="protected" virt="non-virtual"><scope>RandomBasis</scope><name>currentVec</name></member>
+      <member refid="classBasicDevs_1a1ecaa14bb5bb7e51f3d778d08450b804" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>Dev</name></member>
+      <member refid="classBasicDevs_1a1ecaa14bb5bb7e51f3d778d08450b804" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>Dev</name></member>
+      <member refid="classRan_1a789897ad8b5b38a2e9fe8657ca809f8b" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>Doub</name></member>
+      <member refid="classRan_1a789897ad8b5b38a2e9fe8657ca809f8b" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>Doub</name></member>
+      <member refid="classRandomBasis_1a30e909fc90244f968d87bdb462b09a73" prot="protected" virt="non-virtual"><scope>RandomBasis</scope><name>endVec</name></member>
+      <member refid="classBasicDevs_1a816f330135a42ddbd94fc44fb0f1825b" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>ExpDev</name></member>
+      <member refid="classBasicDevs_1a816f330135a42ddbd94fc44fb0f1825b" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>ExpDev</name></member>
+      <member refid="classRandomBasis_1adb944baefc0c297821f4659ce0fbfb6e" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>Mag</name></member>
+      <member refid="classRandomBasis_1adb944baefc0c297821f4659ce0fbfb6e" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>Mag</name></member>
+      <member refid="classRandomBasis_1af229a74afdff061cfad1b27abdec4b31" prot="protected" virt="non-virtual"><scope>RandomBasis</scope><name>num</name></member>
+      <member refid="classRandomBasis_1a8405df65e14c5acbed0fc40e2558dd6f" prot="public" virt="virtual"><scope>RandomBasis</scope><name>operator++</name></member>
+      <member refid="classRandomBasis_1a8405df65e14c5acbed0fc40e2558dd6f" prot="public" virt="virtual"><scope>RandomBasis</scope><name>operator++</name></member>
+      <member refid="classRan_1a721d7b18b913e1ec15f766ef3e61ee7f" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>Ran</name></member>
+      <member refid="classRan_1a721d7b18b913e1ec15f766ef3e61ee7f" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>Ran</name></member>
+      <member refid="classRandomBasis_1a4efc3804dd99f33c0ae59b2c662c9d5f" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>RandomBasis</name></member>
+      <member refid="classRandomBasis_1a4efc3804dd99f33c0ae59b2c662c9d5f" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>RandomBasis</name></member>
+      <member refid="classRandomBasis_1ab1fd63af0deadd6d8f425e821d953006" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>RandRot</name></member>
+      <member refid="classRandomBasis_1ab1fd63af0deadd6d8f425e821d953006" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>RandRot</name></member>
+      <member refid="classRandomBasis_1a61db105084460c96b9db34b4e4c2187c" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>RanMult</name></member>
+      <member refid="classRandomBasis_1a19f3c763828e1019b40b67622dbb31c0" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>RanMult</name></member>
+      <member refid="classRandomBasis_1acfdef19433906c35b1c38faf43031e34" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>RanMult</name></member>
+      <member refid="classRandomBasis_1a61db105084460c96b9db34b4e4c2187c" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>RanMult</name></member>
+      <member refid="classRandomBasis_1a19f3c763828e1019b40b67622dbb31c0" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>RanMult</name></member>
+      <member refid="classRandomBasis_1acfdef19433906c35b1c38faf43031e34" prot="public" virt="non-virtual"><scope>RandomBasis</scope><name>RanMult</name></member>
+      <member refid="classRandomBasis_1aab9a47abce3fa34c5107eb72d57a156b" prot="private" virt="non-virtual"><scope>RandomBasis</scope><name>rotVec</name></member>
+      <member refid="classRandomBasis_1ad0c80b09ef69d99c776dad7a1f612618" prot="public" virt="virtual"><scope>RandomBasis</scope><name>~RandomBasis</name></member>
+      <member refid="classRandomBasis_1ad0c80b09ef69d99c776dad7a1f612618" prot="public" virt="virtual"><scope>RandomBasis</scope><name>~RandomBasis</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

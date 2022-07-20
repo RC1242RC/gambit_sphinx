@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="plugin__details_8hpp" kind="file" language="C++">
+    <compoundname>plugin_details.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="yes">yaml-cpp/yaml.h</includes>
+    <includedby refid="ScannerBit__standalone_8cpp" local="yes">ScannerBit_standalone.cpp</includedby>
+    <includedby refid="plugin__comparators_8hpp" local="yes">plugin_comparators.hpp</includedby>
+    <includedby refid="plugin__loader_8hpp" local="yes">plugin_loader.hpp</includedby>
+    <includedby refid="plugin__macros_8hpp" local="yes">plugin_macros.hpp</includedby>
+    <includedby refid="plugin__details_8cpp" local="yes">plugin_details.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+      <node id="1">
+        <label>plugin_details.hpp</label>
+        <link refid="plugin__details_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="17">
+        <label>container_factory.cpp</label>
+        <link refid="container__factory_8cpp"/>
+      </node>
+      <node id="16">
+        <label>gambit.cpp</label>
+        <link refid="gambit_8cpp"/>
+      </node>
+      <node id="59">
+        <label>plugin_details.cpp</label>
+        <link refid="plugin__details_8cpp"/>
+      </node>
+      <node id="40">
+        <label>postprocessor.hpp</label>
+        <link refid="postprocessor__1_80_80_2postprocessor_8hpp"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>plugin.hpp</label>
+        <link refid="plugin_8hpp"/>
+      </node>
+      <node id="41">
+        <label>postprocessor.cpp</label>
+        <link refid="postprocessor__1_80_80_2postprocessor_8cpp"/>
+      </node>
+      <node id="5">
+        <label>plugin_loader.cpp</label>
+        <link refid="plugin__loader_8cpp"/>
+      </node>
+      <node id="19">
+        <label>scannerbit.hpp</label>
+        <link refid="scannerbit_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>diver.cpp</label>
+        <link refid="diver__1_80_84_2diver_8cpp"/>
+      </node>
+      <node id="33">
+        <label>multinest.cpp</label>
+        <link refid="multinest__3_811_2multinest_8cpp"/>
+      </node>
+      <node id="56">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>container_factory.hpp</label>
+        <link refid="container__factory_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>polychord.hpp</label>
+        <link refid="1_817_81_2polychord_8hpp"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>polychord.hpp</label>
+        <link refid="1_820_81_2polychord_8hpp"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>scanner_plugin.hpp</label>
+        <link refid="scanner__plugin_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>likelihood_container.cpp</label>
+        <link refid="likelihood__container_8cpp"/>
+      </node>
+      <node id="8">
+        <label>diagnostics.cpp</label>
+        <link refid="diagnostics_8cpp"/>
+      </node>
+      <node id="6">
+        <label>plugin_loader.hpp</label>
+        <link refid="plugin__loader_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>postprocessor.hpp</label>
+        <link refid="postprocessor__2_80_80_2postprocessor_8hpp"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>twalk.cpp</label>
+        <link refid="twalk_8cpp"/>
+      </node>
+      <node id="4">
+        <label>plugin_comparators.cpp</label>
+        <link refid="plugin__comparators_8cpp"/>
+      </node>
+      <node id="49">
+        <label>random.cpp</label>
+        <link refid="random_8cpp"/>
+      </node>
+      <node id="51">
+        <label>square_grid.cpp</label>
+        <link refid="square__grid_8cpp"/>
+      </node>
+      <node id="7">
+        <label>core.cpp</label>
+        <link refid="core_8cpp"/>
+      </node>
+      <node id="14">
+        <label>likelihood_container.hpp</label>
+        <link refid="likelihood__container_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>great.cpp</label>
+        <link refid="great_8cpp"/>
+      </node>
+      <node id="58">
+        <label>plugin_macros.hpp</label>
+        <link refid="plugin__macros_8hpp"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>multinest.hpp</label>
+        <link refid="multinest_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>examples.cpp</label>
+        <link refid="examples_8cpp"/>
+      </node>
+      <node id="29">
+        <label>minuit2.hpp</label>
+        <link refid="minuit2_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>postprocessor_object.cpp</label>
+        <link refid="postprocessor__1_80_80_2postprocessor__object_8cpp"/>
+      </node>
+      <node id="30">
+        <label>minuit2.cpp</label>
+        <link refid="minuit2_8cpp"/>
+      </node>
+      <node id="10">
+        <label>plugin_factory.hpp</label>
+        <link refid="plugin__factory_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>toy_mcmc.cpp</label>
+        <link refid="toy__mcmc_8cpp"/>
+      </node>
+      <node id="37">
+        <label>polychord.cpp</label>
+        <link refid="polychord__1_818_82_2polychord_8cpp"/>
+      </node>
+      <node id="1">
+        <label>plugin_details.hpp</label>
+        <link refid="plugin__details_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>twalk.hpp</label>
+        <link refid="twalk_8hpp"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>plugin_comparators.hpp</label>
+        <link refid="plugin__comparators_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>postprocessor_object.cpp</label>
+        <link refid="postprocessor__2_80_80_2postprocessor__object_8cpp"/>
+      </node>
+      <node id="27">
+        <label>great.hpp</label>
+        <link refid="great_8hpp"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>diver.cpp</label>
+        <link refid="diver__1_80_82_2diver_8cpp"/>
+      </node>
+      <node id="15">
+        <label>gambit.hpp</label>
+        <link refid="gambit_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>polychord.cpp</label>
+        <link refid="polychord__1_817_81_2polychord_8cpp"/>
+      </node>
+      <node id="9">
+        <label>factory_defs.hpp</label>
+        <link refid="factory__defs_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>polychord.cpp</label>
+        <link refid="polychord__1_820_81_2polychord_8cpp"/>
+      </node>
+      <node id="21">
+        <label>diver.hpp</label>
+        <link refid="1_80_80_2diver_8hpp"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>plugin_defs.hpp</label>
+        <link refid="plugin__defs_8hpp"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ScannerBit_standalone.cpp</label>
+        <link refid="ScannerBit__standalone_8cpp"/>
+      </node>
+      <node id="50">
+        <label>raster.cpp</label>
+        <link refid="raster_8cpp"/>
+      </node>
+      <node id="32">
+        <label>multinest.cpp</label>
+        <link refid="multinest__3_810_2multinest_8cpp"/>
+      </node>
+      <node id="54">
+        <label>objective_plugin.hpp</label>
+        <link refid="objective__plugin_8hpp"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>scan.cpp</label>
+        <link refid="scan_8cpp"/>
+      </node>
+      <node id="25">
+        <label>diver.hpp</label>
+        <link refid="1_80_84_2diver_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>scan.hpp</label>
+        <link refid="scan_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>polychord.hpp</label>
+        <link refid="1_818_82_2polychord_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>postprocessor.cpp</label>
+        <link refid="postprocessor__2_80_80_2postprocessor_8cpp"/>
+      </node>
+      <node id="22">
+        <label>diver.cpp</label>
+        <link refid="diver__1_80_80_2diver_8cpp"/>
+      </node>
+      <node id="48">
+        <label>grid.cpp</label>
+        <link refid="grid_8cpp"/>
+      </node>
+      <node id="23">
+        <label>diver.hpp</label>
+        <link refid="1_80_82_2diver_8hpp"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" prot="public">Gambit::Scanner::Plugins::Plugin_Details</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" prot="public">Gambit::Scanner::Plugins::Plugin_Details_Ref</innerclass>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1Scanner">Gambit::Scanner</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1Scanner_1_1Plugins">Gambit::Scanner::Plugins</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class to hold details of scanner plugins and define simple comparison operations on them.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify): </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__PLUGIN_DETAILS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__PLUGIN_DETAILS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;yaml-cpp/yaml.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Scanner</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Plugins</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a73f0196a87b634f9a374c3706050241b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a73f0196a87b634f9a374c3706050241b" kindref="member">version</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1ad36c0cfc9b2c9bf1e7623955a5876eda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1ad36c0cfc9b2c9bf1e7623955a5876eda" kindref="member">major_version</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1adda63dff29f06e675bdb63f0970a5048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1adda63dff29f06e675bdb63f0970a5048" kindref="member">minor_version</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1ae5171643a83bad2dee04bd6822f5e5b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1ae5171643a83bad2dee04bd6822f5e5b1" kindref="member">patch_version</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a3739479a45891e3c8e0814b04563052b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a3739479a45891e3c8e0814b04563052b" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="52" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a6cfa63db6e9365e75f2438de40cfdcbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a6cfa63db6e9365e75f2438de40cfdcbd" kindref="member">reason</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a71dbc2bbe927bbdbf35b9ccfa98299ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a71dbc2bbe927bbdbf35b9ccfa98299ee" kindref="member">release_version</ref>;</highlight></codeline>
+<codeline lineno="56" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a135102b354d33d05144e7bc93e244309" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a135102b354d33d05144e7bc93e244309" kindref="member">path</ref>;</highlight></codeline>
+<codeline lineno="58" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a0b54f02c9a50c2864d2226c982fc7b8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a0b54f02c9a50c2864d2226c982fc7b8a" kindref="member">plugin</ref>;</highlight></codeline>
+<codeline lineno="60" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a43e5a5065954db277d63c0e156a29d19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a43e5a5065954db277d63c0e156a29d19" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="62" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a3e1dd81f6ad8e5ad69b1c88678eeb0a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a3e1dd81f6ad8e5ad69b1c88678eeb0a5" kindref="member">full_string</ref>;</highlight></codeline>
+<codeline lineno="64" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a5a15222a2567d8b8df9c547f3b160b0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a5a15222a2567d8b8df9c547f3b160b0d" kindref="member">reqd_inifile_entries</ref>;</highlight></codeline>
+<codeline lineno="66" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1acf62ca5cdfc389ff247ecb85e7d46a6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1acf62ca5cdfc389ff247ecb85e7d46a6b" kindref="member">reqd_not_linked_libs</ref>;</highlight></codeline>
+<codeline lineno="68" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a9d5a6aca31efa523515d88c50ccb32c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a9d5a6aca31efa523515d88c50ccb32c0" kindref="member">ini_libs_not_found</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a0fa8a8fabf8ea2f908032d79078e7986" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::multimap&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a0fa8a8fabf8ea2f908032d79078e7986" kindref="member">linked_libs</ref>;</highlight></codeline>
+<codeline lineno="72" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a6eb0163c2129f863015aa8e2f9499add" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a6eb0163c2129f863015aa8e2f9499add" kindref="member">reqd_incs_not_found</ref>;</highlight></codeline>
+<codeline lineno="74" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1aabdc95b79c305f3e8899c5d6bbf6bbd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1aabdc95b79c305f3e8899c5d6bbf6bbd9" kindref="member">ini_incs_not_found</ref>;</highlight></codeline>
+<codeline lineno="76" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a8df0ab363125adf352b8106add14ee04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::multimap&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a8df0ab363125adf352b8106add14ee04" kindref="member">found_incs</ref>;</highlight></codeline>
+<codeline lineno="78" refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1afa355f8455ca16aa7b9ffab27c552f6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>YAML::Node<sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1afa355f8455ca16aa7b9ffab27c552f6c" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref>(){}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::multimap&lt;std::string,<sp/>std::string&gt;<sp/>linked_libraries()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details_1a0fa8a8fabf8ea2f908032d79078e7986" kindref="member">linked_libs</ref>;}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Plugin_Details(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;str);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_status(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node<sp/>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node<sp/>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>YAML::Node<sp/>&amp;);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/>get_description(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;const<sp/>Plugin_Details<sp/>*&gt;<sp/>&amp;plugins);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>printMin()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>print()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>printFull()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/>printMultiPlugins(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;const<sp/>Plugin_Details<sp/>*&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator<sp/>==<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Plugin_Details<sp/>&amp;plug1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Plugin_Details<sp/>&amp;plug2)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((plug1.major_version<sp/>!=<sp/>plug2.major_version)<sp/>||</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(plug1.major_version<sp/>!=<sp/>plug2.major_version)<sp/>||</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(plug1.minor_version<sp/>!=<sp/>plug2.minor_version)<sp/>||</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(plug1.release_version<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>plug2.release_version<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>||</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(plug1.release_version<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>plug2.release_version<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" kindref="compound">Plugin_Details_Ref</ref></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref><sp/>*details;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" kindref="compound">Plugin_Details_Ref</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" kindref="compound">Plugin_Details_Ref</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref><sp/>&amp;details)<sp/>:<sp/>details(&amp;details)<sp/>{}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" kindref="compound">Plugin_Details_Ref</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" kindref="compound">Plugin_Details_Ref</ref><sp/>&amp;details)<sp/>:<sp/>details(details.details)<sp/>{}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//const<sp/>Plugin_Details_Ref<sp/>&amp;operator<sp/>=<sp/>(const<sp/>Plugin_Details<sp/>&amp;details_in)<sp/>const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>details<sp/>=<sp/>&amp;details_in;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>return<sp/>*this;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" kindref="compound">Plugin_Details_Ref</ref><sp/>&amp;operator<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" kindref="compound">Plugin_Details_Ref</ref><sp/>&amp;details_in)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="130"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>details<sp/>=<sp/>details_in.details;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Plugin_Details_Ref<sp/>&amp;operator<sp/>=<sp/>(Plugin_Details<sp/>&amp;details_in)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>details<sp/>=<sp/>&amp;details_in;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>return<sp/>*this;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" kindref="compound">Plugin_Details_Ref</ref><sp/>&amp;operator<sp/>=<sp/>(<ref refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" kindref="compound">Plugin_Details_Ref</ref><sp/>&amp;details_in)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>details<sp/>=<sp/>details_in.details;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref><sp/>&amp;(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*(<ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref><sp/>*)details;}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref><sp/>&amp;()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*details;}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="plugin__details_8hpp_1ae82b372a4d43bc016476b5af384e57d0" kindref="member">Plugin_Version_Supersedes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref><sp/>&amp;plug1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref><sp/>&amp;plug2);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_details.hpp"/>
+  </compounddef>
+</doxygen>

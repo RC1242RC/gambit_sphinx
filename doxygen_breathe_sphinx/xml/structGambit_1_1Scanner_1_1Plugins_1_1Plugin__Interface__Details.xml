@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details" kind="struct" language="C++" prot="public">
+    <compoundname>Gambit::Scanner::Plugins::Plugin_Interface_Details</compoundname>
+    <includes refid="plugin__loader_8hpp" local="no">plugin_loader.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1a7a7b060d93b6744c0ee244c4b0975afc" prot="public" static="no" mutable="no">
+        <type><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &amp;</type>
+        <definition>Plugin_Details&amp; Gambit::Scanner::Plugins::Plugin_Interface_Details::details</definition>
+        <argsstring></argsstring>
+        <name>details</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="66" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1aabf887ebf5ff6a87bb5d9e681de79fb8" prot="public" static="no" mutable="no">
+        <type><ref refid="printer__interface_8hpp_1ae767584d510b4dcaa3b82278ab1ecbd7" kindref="member">printer_interface</ref> *</type>
+        <definition>printer_interface* Gambit::Scanner::Plugins::Plugin_Interface_Details::printer</definition>
+        <argsstring></argsstring>
+        <name>printer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="67" column="35" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1a1245390b1275f4b4ac5f1881e113e28d" prot="public" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1Priors_1_1BasePrior" kindref="compound">Priors::BasePrior</ref> *</type>
+        <definition>Priors::BasePrior* Gambit::Scanner::Plugins::Plugin_Interface_Details::prior</definition>
+        <argsstring></argsstring>
+        <name>prior</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="68" column="35" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1a65c7c344ad96ce46317f271fef2221d3" prot="public" static="no" mutable="no">
+        <type>YAML::Node</type>
+        <definition>YAML::Node Gambit::Scanner::Plugins::Plugin_Interface_Details::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="69" column="28" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1ab765e640998bc8834cf869768075a86f" prot="public" static="no" mutable="no">
+        <type>YAML::Node</type>
+        <definition>YAML::Node Gambit::Scanner::Plugins::Plugin_Interface_Details::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="70" column="28" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1a8c36f6dcc320fca2a9450dec4376281a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Scanner::Plugins::Plugin_Interface_Details::Plugin_Interface_Details</definition>
+        <argsstring>(Plugin_Details &amp;details, printer_interface *printer, Priors::BasePrior *prior, const YAML::Node &amp;node)</argsstring>
+        <name>Plugin_Interface_Details</name>
+        <param>
+          <type><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &amp;</type>
+          <declname>details</declname>
+        </param>
+        <param>
+          <type><ref refid="printer__interface_8hpp_1ae767584d510b4dcaa3b82278ab1ecbd7" kindref="member">printer_interface</ref> *</type>
+          <declname>printer</declname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1Priors_1_1BasePrior" kindref="compound">Priors::BasePrior</ref> *</type>
+          <declname>prior</declname>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="72" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="72" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Plugin info to be given to the interface class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Gambit::Scanner::Plugins::Plugin_Details</label>
+        <link refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>status</edgelabel>
+          <edgelabel>plugin</edgelabel>
+          <edgelabel>path</edgelabel>
+          <edgelabel>full_string</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>version</edgelabel>
+          <edgelabel>release_version</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Gambit::Priors::BasePrior</label>
+        <link refid="classGambit_1_1Priors_1_1BasePrior"/>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>Gambit::Scanner::Plugins::Plugin_Interface_Details</label>
+        <link refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>details</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>prior</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="65" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="64" bodyend="74"/>
+    <listofallmembers>
+      <member refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1a7a7b060d93b6744c0ee244c4b0975afc" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Interface_Details</scope><name>details</name></member>
+      <member refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1a65c7c344ad96ce46317f271fef2221d3" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Interface_Details</scope><name>flags</name></member>
+      <member refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1ab765e640998bc8834cf869768075a86f" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Interface_Details</scope><name>node</name></member>
+      <member refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1a8c36f6dcc320fca2a9450dec4376281a" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Interface_Details</scope><name>Plugin_Interface_Details</name></member>
+      <member refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1aabf887ebf5ff6a87bb5d9e681de79fb8" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Interface_Details</scope><name>printer</name></member>
+      <member refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details_1a1245390b1275f4b4ac5f1881e113e28d" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Interface_Details</scope><name>prior</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

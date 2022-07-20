@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="SpecBit__VectorSingletDM_8cpp" kind="file" language="C++">
+    <compoundname>SpecBit_VectorSingletDM.cpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">sstream</includes>
+    <includes local="yes">gambit/Elements/gambit_module_headers.hpp</includes>
+    <includes local="yes">gambit/Elements/spectrum.hpp</includes>
+    <includes local="yes">gambit/Utils/stream_overloads.hpp</includes>
+    <includes local="yes">gambit/Utils/util_macros.hpp</includes>
+    <includes local="yes">gambit/SpecBit/SpecBit_rollcall.hpp</includes>
+    <includes refid="SpecBit__helpers_8hpp" local="yes">gambit/SpecBit/SpecBit_helpers.hpp</includes>
+    <includes refid="QedQcdWrapper_8hpp" local="yes">gambit/SpecBit/QedQcdWrapper.hpp</includes>
+    <includes local="yes">gambit/Models/SimpleSpectra/SMHiggsSimpleSpec.hpp</includes>
+    <includes local="yes">gambit/Models/SimpleSpectra/VectorSingletDM_Z2SimpleSpec.hpp</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>gambit/Elements/spectrum.hpp</label>
+      </node>
+      <node id="4">
+        <label>gambit/Elements/gambit_module_headers.hpp</label>
+      </node>
+      <node id="14">
+        <label>gambit/Models/SpectrumContents/RegisteredSpectra.hpp</label>
+      </node>
+      <node id="15">
+        <label>lowe.h</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>SpecBit_VectorSingletDM.cpp</label>
+        <link refid="SpecBit__VectorSingletDM_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>gambit/Models/SimpleSpectra/SMHiggsSimpleSpec.hpp</label>
+      </node>
+      <node id="6">
+        <label>gambit/Utils/stream_overloads.hpp</label>
+      </node>
+      <node id="9">
+        <label>gambit/SpecBit/SpecBit_helpers.hpp</label>
+        <link refid="SpecBit__helpers_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>sstream</label>
+      </node>
+      <node id="13">
+        <label>gambit/Elements/spec.hpp</label>
+      </node>
+      <node id="7">
+        <label>gambit/Utils/util_macros.hpp</label>
+      </node>
+      <node id="12">
+        <label>gambit/SpecBit/QedQcdWrapper.hpp</label>
+        <link refid="QedQcdWrapper_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>gambit/Models/SimpleSpectra/VectorSingletDM_Z2SimpleSpec.hpp</label>
+      </node>
+      <node id="10">
+        <label>gambit/Elements/sminputs.hpp</label>
+      </node>
+      <node id="11">
+        <label>flexiblesusy/src/lowe.h</label>
+      </node>
+      <node id="8">
+        <label>gambit/SpecBit/SpecBit_rollcall.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1SpecBit">Gambit::SpecBit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Functions of module SpecBit</para>
+<para>SpecBit module functions related to the VectorSingletDM model.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Ankit Beniwal (<ulink url="mailto:ankit.beniwal@adelaide.edu.au">ankit.beniwal@adelaide.edu.au</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2016 Oct, Nov </para>
+</simplesect>
+<simplesect kind="date"><para>2017 Jun, Sep </para>
+</simplesect>
+<simplesect kind="date"><para>2018 Feb</para>
+</simplesect>
+<simplesect kind="author"><para>Sanjay Bloor (<ulink url="mailto:sanjay.bloor12@imperial.ac.uk">sanjay.bloor12@imperial.ac.uk</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2018 Aug</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/gambit_module_headers.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/spectrum.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/stream_overloads.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/util_macros.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/SpecBit/SpecBit_rollcall.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SpecBit__helpers_8hpp" kindref="compound">gambit/SpecBit/SpecBit_helpers.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="QedQcdWrapper_8hpp" kindref="compound">gambit/SpecBit/QedQcdWrapper.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Models/SimpleSpectra/SMHiggsSimpleSpec.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Models/SimpleSpectra/VectorSingletDM_Z2SimpleSpec.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Switch<sp/>for<sp/>debug<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>SPECBIT_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SpecBit</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">LogTags;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">flexiblesusy;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="SpecBit__VectorSingletDM_8cpp_1a3340b7d2297fff35d01682847962e9fb" kindref="member">get_VectorSingletDM_Z2_spectrum</ref>(Spectrum&amp;<sp/>result)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">myPipe<sp/>=<sp/>Pipes::get_VectorSingletDM_Z2_spectrum;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>sminputs<sp/>=<sp/>*myPipe::Dep::SMINPUTS;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>an<sp/>object<sp/>to<sp/>carry<sp/>the<sp/>Singlet<sp/>plus<sp/>Higgs<sp/>sector<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Models::VectorSingletDM_Z2Model<sp/>vectormodel;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>quantities<sp/>needed<sp/>to<sp/>fill<sp/>container<sp/>spectrum,<sp/>intermediate<sp/>calculations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha_em<sp/>=<sp/>1.0<sp/>/<sp/>sminputs.alphainv;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C<sp/>=<sp/>alpha_em<sp/>*<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref><sp/>/<sp/>(sminputs.GF<sp/>*<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(2,0.5));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sinW2<sp/>=<sp/>0.5<sp/>-<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(<sp/>0.25<sp/>-<sp/>C/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(sminputs.mZ,2)<sp/>,<sp/>0.5);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cosW2<sp/>=<sp/>0.5<sp/>+<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(<sp/>0.25<sp/>-<sp/>C/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(sminputs.mZ,2)<sp/>,<sp/>0.5);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>e<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(<sp/>4*pi*(<sp/>alpha_em<sp/>),0.5)<sp/>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Higgs<sp/>sector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mh<sp/><sp/><sp/>=<sp/>*myPipe::Param.at(</highlight><highlight class="stringliteral">&quot;mH&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.HiggsPoleMass<sp/><sp/><sp/>=<sp/>mh;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vev<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1.<sp/>/<sp/>sqrt(sqrt(2.)*sminputs.GF);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.HiggsVEV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>vev;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//vectormodel.LambdaH<sp/><sp/><sp/>=<sp/>GF*pow(mh,2)/pow(2,0.5)<sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>VectorSingletDM_Z2<sp/>sector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.VectorPoleMass<sp/>=<sp/>*myPipe::Param.at(</highlight><highlight class="stringliteral">&quot;mV&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.VectorLambda<sp/><sp/><sp/>=<sp/>*myPipe::Param.at(</highlight><highlight class="stringliteral">&quot;lambda_hV&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(myPipe::runOptions-&gt;getValueOrDef&lt;bool&gt;(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;impose_pert_unitarity&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Invalidate<sp/>point<sp/>if<sp/>the<sp/>perturbative<sp/>unitarity<sp/>constraint<sp/>is<sp/>not<sp/>satisfied</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vectormodel.VectorLambda<sp/>&gt;<sp/>(2*<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(vectormodel.VectorPoleMass,2))/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(vev,2))</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>msg;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Parameter<sp/>point<sp/>[mV,<sp/>lambda_hV]<sp/>=<sp/>[&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>vectormodel.VectorPoleMass<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>GeV,<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>vectormodel.VectorLambda<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]<sp/>does<sp/>not<sp/>satisfy<sp/>the<sp/>perturbative<sp/>unitarity<sp/>constraint.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>invalid_point().raise(msg.str());</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Standard<sp/>model</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.sinW2<sp/>=<sp/>sinW2;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gauge<sp/>couplings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.g1<sp/>=<sp/>sqrt(5/3)<sp/>*<sp/>e<sp/>/<sp/>sqrt(cosW2);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.g2<sp/>=<sp/>e<sp/>/<sp/>sqrt(sinW2);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.g3<sp/><sp/><sp/>=<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(<sp/>4*pi*(<sp/>sminputs.alphaS<sp/>),0.5)<sp/>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Yukawas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sqrt2v<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(2.0,0.5)/vev;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.Yu[0]<sp/>=<sp/>sqrt2v<sp/>*<sp/>sminputs.mU;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.Yu[1]<sp/>=<sp/>sqrt2v<sp/>*<sp/>sminputs.mCmC;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.Yu[2]<sp/>=<sp/>sqrt2v<sp/>*<sp/>sminputs.mT;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.Ye[0]<sp/>=<sp/>sqrt2v<sp/>*<sp/>sminputs.mE;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.Ye[1]<sp/>=<sp/>sqrt2v<sp/>*<sp/>sminputs.mMu;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.Ye[2]<sp/>=<sp/>sqrt2v<sp/>*<sp/>sminputs.mTau;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.Yd[0]<sp/>=<sp/>sqrt2v<sp/>*<sp/>sminputs.mD;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.Yd[1]<sp/>=<sp/>sqrt2v<sp/>*<sp/>sminputs.mS;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vectormodel.Yd[2]<sp/>=<sp/>sqrt2v<sp/>*<sp/>sminputs.mBmB;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>SubSpectrum<sp/>object<sp/>to<sp/>wrap<sp/>the<sp/>EW<sp/>sector<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Models::VectorSingletDM_Z2SimpleSpec<sp/>vectorspec(vectormodel);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Retrieve<sp/>any<sp/>mass<sp/>cuts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum::mc_info<sp/>mass_cut<sp/>=<sp/>myPipe::runOptions-&gt;getValueOrDef&lt;Spectrum::mc_info&gt;(Spectrum::mc_info(),<sp/></highlight><highlight class="stringliteral">&quot;mass_cut&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum::mr_info<sp/>mass_ratio_cut<sp/>=<sp/>myPipe::runOptions-&gt;getValueOrDef&lt;Spectrum::mr_info&gt;(Spectrum::mr_info(),<sp/></highlight><highlight class="stringliteral">&quot;mass_ratio_cut&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>don&apos;t<sp/>supply<sp/>a<sp/>LE<sp/>subspectrum<sp/>here;<sp/>an<sp/>SMSimpleSpec<sp/>will<sp/>therefore<sp/>be<sp/>automatically<sp/>created<sp/>from<sp/>&apos;sminputs&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>Spectrum(vectorspec,sminputs,&amp;myPipe::Param,mass_cut,mass_ratio_cut);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>print<sp/>spectrum<sp/>out,<sp/>stripped<sp/>down<sp/>copy<sp/>from<sp/>MSSM<sp/>version<sp/>with<sp/>variable<sp/>names<sp/>changed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="SpecBit__VectorSingletDM_8cpp_1aac40f63ac61f805b36aa54a7d6e998aa" kindref="member">fill_map_from_VectorSingletDM_Z2spectrum</ref>(std::map&lt;std::string,double&gt;&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum&amp;);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>get_VectorSingletDM_Z2_spectrum_as_map<sp/>(std::map&lt;std::string,double&gt;&amp;<sp/>specmap)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">myPipe<sp/>=<sp/>Pipes::get_VectorSingletDM_Z2_spectrum_as_map;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum&amp;<sp/>vectordmspec(*myPipe::Dep::VectorSingletDM_Z2_spectrum);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="SpecBit__VectorSingletDM_8cpp_1aac40f63ac61f805b36aa54a7d6e998aa" kindref="member">fill_map_from_VectorSingletDM_Z2spectrum</ref>(specmap,<sp/>vectordmspec);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="SpecBit__VectorSingletDM_8cpp_1aac40f63ac61f805b36aa54a7d6e998aa" kindref="member">fill_map_from_VectorSingletDM_Z2spectrum</ref>(std::map&lt;std::string,double&gt;&amp;<sp/>specmap,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum&amp;<sp/>vectordmspec)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SpectrumContents::VectorSingletDM_Z2<sp/>contents;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;SpectrumParameter&gt;<sp/>required_parameters<sp/>=<sp/>contents.all_parameters();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(std::vector&lt;SpectrumParameter&gt;::const_iterator<sp/>it<sp/>=<sp/>required_parameters.begin();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it<sp/>!=<sp/>required_parameters.end();<sp/>++it)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Par::Tags<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag<sp/><sp/><sp/>=<sp/>it-&gt;tag();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><sp/><sp/><sp/><sp/><sp/>name<sp/><sp/>=<sp/>it-&gt;name();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/>shape<sp/>=<sp/>it-&gt;shape();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>scalar<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(shape.size()==1<sp/>and<sp/>shape[0]==1)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>label;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>label<sp/>&lt;&lt;<sp/>name<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<sp/>Par::toString.at(tag);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>specmap[label.str()]<sp/>=<sp/>vectordmspec.get_HE().get(tag,name);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>vector<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(shape.size()==1<sp/>and<sp/>shape[0]&gt;1)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i&lt;=shape[0];<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>label;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>label<sp/>&lt;&lt;<sp/>name<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;_&quot;</highlight><highlight class="normal">&lt;&lt;i&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<sp/>Par::toString.at(tag);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>specmap[label.str()]<sp/>=<sp/>vectordmspec.get_HE().get(tag,name,i);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>matrix<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(shape.size()==2)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i&lt;=shape[0];<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>1;<sp/>j&lt;=shape[0];<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>label;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>label<sp/>&lt;&lt;<sp/>name<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;_(&quot;</highlight><highlight class="normal">&lt;&lt;i&lt;&lt;</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">&lt;&lt;j&lt;&lt;</highlight><highlight class="stringliteral">&quot;)<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;Par::toString.at(tag);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>specmap[label.str()]<sp/>=<sp/>vectordmspec.get_HE().get(tag,name,i,j);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Deal<sp/>with<sp/>all<sp/>other<sp/>cases</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ERROR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>errmsg;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errmsg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error,<sp/>invalid<sp/>parameter<sp/>received<sp/>while<sp/>converting<sp/>VectorSingletDM_Z2spectrum<sp/>to<sp/>map<sp/>of<sp/>strings!<sp/>This<sp/>should<sp/>no<sp/>be<sp/>possible<sp/>if<sp/>the<sp/>spectrum<sp/>content<sp/>verification<sp/>routines<sp/>were<sp/>working<sp/>correctly;<sp/>they<sp/>must<sp/>be<sp/>buggy,<sp/>please<sp/>report<sp/>this.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errmsg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Problematic<sp/>parameter<sp/>was:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<sp/>tag<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>shape=&quot;</highlight><highlight class="normal">&lt;&lt;<sp/>shape;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>utils_error().forced_throw(LOCAL_INFO,errmsg.str());</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>SpecBit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>Gambit</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/SpecBit_VectorSingletDM.cpp"/>
+  </compounddef>
+</doxygen>

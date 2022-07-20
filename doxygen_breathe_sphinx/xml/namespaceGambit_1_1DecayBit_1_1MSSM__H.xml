@@ -1,0 +1,531 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceGambit_1_1DecayBit_1_1MSSM__H" kind="namespace" language="C++">
+    <compoundname>Gambit::DecayBit::MSSM_H</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="MSSM__H_8hpp_1a21318c67be94f159cd3a21d7def0b1ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DecayBit::MSSM_H::lambda</definition>
+        <argsstring>(double x, double y, double z)</argsstring>
+        <name>lambda</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Phase-space function (similar to Kallen function)</para>
+<para><formula id="17">\[ \lambda(x, y; z) = (1 - x / z - y / z)^2 - 4 x y / z^2 \]</formula></para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" line="38" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" bodystart="38" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="MSSM__H_8hpp_1acbc7841bc4e578a181c2a9698d1de786" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DecayBit::MSSM_H::gamma_h_chi_gL</definition>
+        <argsstring>(std::array&lt; double, 2 &gt; m, double gL, double mh=125., double mw=80.385, double GF=1.1663787e-5)</argsstring>
+        <name>gamma_h_chi_gL</name>
+        <param>
+          <type>std::array&lt; double, 2 &gt;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>gL</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mh</declname>
+          <defval>125.</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mw</declname>
+          <defval>80.385</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>GF</declname>
+          <defval>1.1663787e-5</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Eq. 2.56 for charginos or neutralinos <simplesect kind="return"><para><formula id="18">$\Gamma(h \to \chi_i \chi_j)$</formula> in GeV </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Masses of final state particles </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coupling <formula id="19">$g_L$</formula> in Eq. 1.112 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lightest Higgs mass, <formula id="20">$m_h$</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>W-boson mass, <formula id="21">$M_W$</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>GF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fermi constant, <formula id="22">$G_F$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" line="53" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" bodystart="53" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="MSSM__H_8hpp_1a0cc04d6baa2dd10fc2d61c0129b0ffbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DecayBit::MSSM_H::gamma_h_chi_0</definition>
+        <argsstring>(int i, int j, std::array&lt; double, 4 &gt; m, std::array&lt; std::array&lt; double, 4 &gt;, 4 &gt; Z, double alpha, double mh=125., double mw=80.385, double GF=1.1663787e-5, double sw2=0.22)</argsstring>
+        <name>gamma_h_chi_0</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>std::array&lt; double, 4 &gt;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>std::array&lt; std::array&lt; double, 4 &gt;, 4 &gt;</type>
+          <declname>Z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mh</declname>
+          <defval>125.</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mw</declname>
+          <defval>80.385</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>GF</declname>
+          <defval>1.1663787e-5</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sw2</declname>
+          <defval>0.22</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Lightest Higgs boson decay to neutralinos at tree-level in GeV</para>
+<para><simplesect kind="warning"><para>Arguments <formula id="23">$i$</formula> and <formula id="24">$j$</formula> are zero-based </para>
+</simplesect>
+<simplesect kind="warning"><para>Tree-level formula</para>
+</simplesect>
+<simplesect kind="return"><para><formula id="18">$\Gamma(h \to \chi_i \chi_j)$</formula> in GeV </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Neutralino <formula id="25">$\chi_i$</formula> in final state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Neutralino <formula id="26">$\chi_j$</formula> in final state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Neutralino mases with phases </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Real neutralino mixing matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><formula id="27">$\alpha$</formula>, Higgs mixing angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lightest Higgs mass, <formula id="20">$m_h$</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>W-boson mass, <formula id="21">$M_W$</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>GF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fermi constant, <formula id="22">$G_F$</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sw2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weinberg angle, <formula id="28">$\sin^2\theta_W$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" line="90" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" bodystart="90" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="MSSM__H_8hpp_1a98df19e3cef977b32284aa98ed37013a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DecayBit::MSSM_H::gamma_h_chi_pm</definition>
+        <argsstring>(int i, int j, std::array&lt; double, 2 &gt; m, std::array&lt; std::array&lt; double, 2 &gt;, 2 &gt; U, std::array&lt; std::array&lt; double, 2 &gt;, 2 &gt; V, double alpha, double mh=125., double mw=80.385, double GF=1.1663787e-5)</argsstring>
+        <name>gamma_h_chi_pm</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>std::array&lt; double, 2 &gt;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>std::array&lt; std::array&lt; double, 2 &gt;, 2 &gt;</type>
+          <declname>U</declname>
+        </param>
+        <param>
+          <type>std::array&lt; std::array&lt; double, 2 &gt;, 2 &gt;</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mh</declname>
+          <defval>125.</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mw</declname>
+          <defval>80.385</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>GF</declname>
+          <defval>1.1663787e-5</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Lightest Higgs boson decay to charginos at tree-level in GeV</para>
+<para><simplesect kind="warning"><para>Arguments <formula id="23">$i$</formula> and <formula id="24">$j$</formula> are zero-based </para>
+</simplesect>
+<simplesect kind="warning"><para>Tree-level formula</para>
+</simplesect>
+<simplesect kind="return"><para><formula id="29">$\Gamma(h \to \chi^-_i \chi^+_j)$</formula> in GeV </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Negative chargino <formula id="30">$\chi^-_i$</formula> in final state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Positive chargino <formula id="31">$\chi^+_j$</formula> in final state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chargino masses </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>U</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Real chargino mixing matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Real chargino mixing matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><formula id="27">$\alpha$</formula>, Higgs mixing angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lightest Higgs mass, <formula id="20">$m_h$</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>W-boson mass, <formula id="21">$M_W$</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>GF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fermi constant, <formula id="22">$G_F$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" line="136" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" bodystart="136" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="MSSM__H_8hpp_1ae337bea2e80ca561aeedab938a25a35f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DecayBit::MSSM_H::gamma_h_chi</definition>
+        <argsstring>(std::array&lt; double, 2 &gt; m_pm, std::array&lt; double, 4 &gt; m_0, std::array&lt; std::array&lt; double, 2 &gt;, 2 &gt; U, std::array&lt; std::array&lt; double, 2 &gt;, 2 &gt; V, std::array&lt; std::array&lt; double, 4 &gt;, 4 &gt; Z, double alpha, double mh=125., double mw=80.385, double GF=1.1663787e-5, double sw2=0.22)</argsstring>
+        <name>gamma_h_chi</name>
+        <param>
+          <type>std::array&lt; double, 2 &gt;</type>
+          <declname>m_pm</declname>
+        </param>
+        <param>
+          <type>std::array&lt; double, 4 &gt;</type>
+          <declname>m_0</declname>
+        </param>
+        <param>
+          <type>std::array&lt; std::array&lt; double, 2 &gt;, 2 &gt;</type>
+          <declname>U</declname>
+        </param>
+        <param>
+          <type>std::array&lt; std::array&lt; double, 2 &gt;, 2 &gt;</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>std::array&lt; std::array&lt; double, 4 &gt;, 4 &gt;</type>
+          <declname>Z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mh</declname>
+          <defval>125.</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mw</declname>
+          <defval>80.385</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>GF</declname>
+          <defval>1.1663787e-5</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sw2</declname>
+          <defval>0.22</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Lightest Higgs boson decay to neutralinos and charginos at tree-level in GeV</para>
+<para><simplesect kind="warning"><para>Tree-level formula</para>
+</simplesect>
+<simplesect kind="return"><para><formula id="32">$\Gamma(h \to \chi\chi)$</formula> in GeV </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m_pm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chargino masses </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Neutralino mases with phases </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>U</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Real chargino mixing matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Real chargino mixing matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Real neutralino mixing matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><formula id="27">$\alpha$</formula>, Higgs mixing angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lightest Higgs mass, <formula id="20">$m_h$</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>W-boson mass, <formula id="21">$M_W$</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>GF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fermi constant, <formula id="22">$G_F$</formula> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sw2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Weinberg angle, <formula id="28">$\sin^2\theta_W$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" line="174" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" bodystart="174" bodyend="219"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/MSSM_H.hpp" line="36" column="20"/>
+  </compounddef>
+</doxygen>

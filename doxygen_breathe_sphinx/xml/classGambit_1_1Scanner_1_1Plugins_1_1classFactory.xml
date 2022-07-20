@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1Scanner_1_1Plugins_1_1classFactory" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::Scanner::Plugins::classFactory</compoundname>
+    <basecompoundref refid="classGambit_1_1Scanner_1_1Plugins_1_1factoryBase" prot="public" virt="non-virtual">Gambit::Scanner::Plugins::factoryBase</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Plugins_1_1classFactory_1ad432ca7d69567f01fc598ab6903c547e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; T * &gt;</type>
+        <definition>std::vector&lt;T *&gt; Gambit::Scanner::Plugins::classFactory&lt; T &gt;::ptrs</definition>
+        <argsstring></argsstring>
+        <name>ptrs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_defs.hpp" line="141" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_defs.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1classFactory_1a37ee23483a294763f4a019f4806a083f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void *</type>
+        <definition>void* Gambit::Scanner::Plugins::classFactory&lt; T &gt;::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classGambit_1_1Scanner_1_1Plugins_1_1factoryBase_1a66ac5e8215c1e224fc23b49c854ef866">operator()</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_defs.hpp" line="144" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_defs.hpp" bodystart="144" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1classFactory_1a656d6bb81aff32c58d985c5700e59310" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Scanner::Plugins::classFactory&lt; T &gt;::~classFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~classFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_defs.hpp" line="151" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_defs.hpp" bodystart="151" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Gambit::Scanner::Plugins::factoryBase</label>
+        <link refid="classGambit_1_1Scanner_1_1Plugins_1_1factoryBase"/>
+      </node>
+      <node id="1">
+        <label>Gambit::Scanner::Plugins::classFactory&lt; T &gt;</label>
+        <link refid="classGambit_1_1Scanner_1_1Plugins_1_1classFactory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Gambit::Scanner::Plugins::factoryBase</label>
+        <link refid="classGambit_1_1Scanner_1_1Plugins_1_1factoryBase"/>
+      </node>
+      <node id="1">
+        <label>Gambit::Scanner::Plugins::classFactory&lt; T &gt;</label>
+        <link refid="classGambit_1_1Scanner_1_1Plugins_1_1classFactory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_defs.hpp" line="139" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_defs.hpp" bodystart="138" bodyend="156"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1classFactory_1a37ee23483a294763f4a019f4806a083f" prot="public" virt="virtual"><scope>Gambit::Scanner::Plugins::classFactory</scope><name>operator()</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1classFactory_1ad432ca7d69567f01fc598ab6903c547e" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::classFactory</scope><name>ptrs</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1classFactory_1a656d6bb81aff32c58d985c5700e59310" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::classFactory</scope><name>~classFactory</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1factoryBase_1aa31c14a7b194db5ae5e7b02de656d1e0" prot="public" virt="virtual"><scope>Gambit::Scanner::Plugins::classFactory</scope><name>~factoryBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

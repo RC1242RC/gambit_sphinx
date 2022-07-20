@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceMontePythonLike" kind="namespace" language="Python">
+    <compoundname>MontePythonLike</compoundname>
+    <innerclass refid="classMontePythonLike_1_1Data" prot="public">MontePythonLike::Data</innerclass>
+    <innerclass refid="classMontePythonLike_1_1Likelihood" prot="public">MontePythonLike::Likelihood</innerclass>
+    <innerclass refid="classMontePythonLike_1_1Likelihood__clik" prot="public">MontePythonLike::Likelihood_clik</innerclass>
+    <innerclass refid="classMontePythonLike_1_1Likelihood__clocks" prot="public">MontePythonLike::Likelihood_clocks</innerclass>
+    <innerclass refid="classMontePythonLike_1_1Likelihood__isw" prot="public">MontePythonLike::Likelihood_isw</innerclass>
+    <innerclass refid="classMontePythonLike_1_1Likelihood__mock__cmb" prot="public">MontePythonLike::Likelihood_mock_cmb</innerclass>
+    <innerclass refid="classMontePythonLike_1_1Likelihood__mpk" prot="public">MontePythonLike::Likelihood_mpk</innerclass>
+    <innerclass refid="classMontePythonLike_1_1Likelihood__newdat" prot="public">MontePythonLike::Likelihood_newdat</innerclass>
+    <innerclass refid="classMontePythonLike_1_1Likelihood__prior" prot="public">MontePythonLike::Likelihood_prior</innerclass>
+    <innerclass refid="classMontePythonLike_1_1Likelihood__sd" prot="public">MontePythonLike::Likelihood_sd</innerclass>
+    <innerclass refid="classMontePythonLike_1_1Likelihood__sn" prot="public">MontePythonLike::Likelihood_sn</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceMontePythonLike_1abb914e6946682cac20bbebb56c3e9557" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>MontePythonLike.basestring</definition>
+        <argsstring></argsstring>
+        <name>basestring</name>
+        <initializer>=  str</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" line="33" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceMontePythonLike_1a801cbf1ad9b0e20db499eb49c1d394b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def MontePythonLike::get_available_likelihoods</definition>
+        <argsstring>(backendDir)</argsstring>
+        <name>get_available_likelihoods</name>
+        <param>
+          <type>backendDir</type>
+          <defname>backendDir</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Function that reads and returns a list of all folder names in the MontePython/montepython/likelihoods folder.
+    The output is used in GAMBIT to check if the user requested to use a likelihood which is actually not availible
+    in the installed version of MontePython. 
+    
+    Input:
+    ------
+    str backendDir: string containing backend directory of MontePython
+
+    Output:
+    -------
+    list output: list of strings containing the names of available likelihoods
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" line="2989" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" bodystart="2989" bodyend="3004"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: likelihood_class for use of MontePython likelihoods with gambit (or any external sampler)
+ :synopsis: Definition of the major likelihoods
+.. original moduleauthor:: Julien Lesgourgues &lt;lesgourg@cern.ch&gt;
+.. original moduleauthor:: Benjamin Audren &lt;benjamin.audren@epfl.ch&gt;
+.. adopted to use with gambit:: Janina Renk &lt;janina.renk@fysik.su.se&gt;
+
+Contains the definition of the base likelihood class :class:`Likelihood`, with
+basic functions, as well as more specific likelihood classes that may be reused
+to implement new ones.</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

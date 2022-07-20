@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="vevacious__1__0_8py" kind="file" language="Python">
+    <compoundname>vevacious_1_0.py</compoundname>
+    <innernamespace refid="namespaceconfigs_1_1vevacious__1__0">configs::vevacious_1_0</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#<sp/>~~~~~<sp/>CASTXML<sp/>options<sp/>~~~~~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#<sp/>See<sp/>CastXML<sp/>documentation<sp/>for<sp/>details<sp/>on<sp/>these<sp/>options:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/>https://github.com/CastXML/CastXML/blob/master/doc/manual/castxml.1.rst</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">#<sp/>***<sp/>Special<sp/>note<sp/>for<sp/>OS<sp/>X<sp/>***<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">#<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">#<sp/>BOSS<sp/>will<sp/>most<sp/>likely<sp/>fail<sp/>if<sp/>&apos;g++&apos;<sp/>points<sp/>to<sp/>the<sp/>Clang<sp/>compiler.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Install<sp/>GNU<sp/>g++<sp/>and<sp/>point<sp/>the<sp/>castxml_cc<sp/>variable<sp/>below<sp/>the<sp/>GNU<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">#<sp/>g++<sp/>executable.<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">castxml_cc_id<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;gnu&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Reference<sp/>compiler:<sp/>&apos;gnu&apos;,<sp/>&apos;gnu-c&apos;,<sp/>&apos;msvc&apos;,<sp/>&apos;msvc-c&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">castxml_cc<sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;g++&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Name<sp/>a<sp/>specific<sp/>compiler:<sp/>&apos;g++&apos;,<sp/>&apos;cl&apos;,<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">castxml_cc_opt<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;-std=c++11&apos;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Additional<sp/>option<sp/>string<sp/>passed<sp/>to<sp/>the<sp/>compiler<sp/>in<sp/>castxml_cc<sp/>(e.g.<sp/>&apos;-m32&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">#<sp/>~~~~~<sp/>GAMBIT-specific<sp/>options<sp/>~~~~~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">gambit_backend_name<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;vevacious&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">gambit_backend_version<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;1.0&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">gambit_backend_reference<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Camargo-Molina:2013qva&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">gambit_base_namespace<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">gambit_minuit_version<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;6.23.01&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">#<sp/>~~~~~<sp/>Information<sp/>about<sp/>the<sp/>external<sp/>code<sp/>~~~~~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Use<sp/>either<sp/>absolute<sp/>paths<sp/>or<sp/>paths<sp/>relative<sp/>to<sp/>the<sp/>main<sp/>BOSS<sp/>directory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">input_files<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;../../../Backends/installed/&apos;</highlight><highlight class="normal">+gambit_backend_name+</highlight><highlight class="stringliteral">&apos;/&apos;</highlight><highlight class="normal">+gambit_backend_version+</highlight><highlight class="stringliteral">&apos;/include/VevaciousPlusPlus.hpp&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">]</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">include_paths<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;../../../Backends/installed/&apos;</highlight><highlight class="normal">+gambit_backend_name+</highlight><highlight class="stringliteral">&apos;/&apos;</highlight><highlight class="normal">+gambit_backend_version+</highlight><highlight class="stringliteral">&apos;/include&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;../../../Backends/installed/&apos;</highlight><highlight class="normal">+gambit_backend_name+</highlight><highlight class="stringliteral">&apos;/&apos;</highlight><highlight class="normal">+gambit_backend_version+</highlight><highlight class="stringliteral">&apos;/include/LHPC&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;../../../ScannerBit/installed/minuit2/&apos;</highlight><highlight class="normal">+gambit_minuit_version+</highlight><highlight class="stringliteral">&apos;/inc&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/>&apos;../../../contrib/eigen3.2.8&apos;<sp/>#<sp/>This<sp/>should<sp/>be<sp/>learned<sp/>from<sp/>GAMBIT<sp/>somehow<sp/>to<sp/>future-protect<sp/>against<sp/>version<sp/>changes<sp/>(and<sp/>if<sp/>user<sp/>uses<sp/>own<sp/>library!)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">]</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">base_paths<sp/>=<sp/>[</highlight><highlight class="stringliteral">&apos;../../../Backends/installed/&apos;</highlight><highlight class="normal">+gambit_backend_name+</highlight><highlight class="stringliteral">&apos;/&apos;</highlight><highlight class="normal">+gambit_backend_version]</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">header_files_to<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;../../../Backends/installed/&apos;</highlight><highlight class="normal">+gambit_backend_name+</highlight><highlight class="stringliteral">&apos;/&apos;</highlight><highlight class="normal">+gambit_backend_version+</highlight><highlight class="stringliteral">&apos;/include&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">src_files_to<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;../../../Backends/installed/&apos;</highlight><highlight class="normal">+gambit_backend_name+</highlight><highlight class="stringliteral">&apos;/&apos;</highlight><highlight class="normal">+gambit_backend_version+</highlight><highlight class="stringliteral">&apos;/source&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">load_classes<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;VevaciousPlusPlus::VevaciousPlusPlus&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">]</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">load_functions<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">]</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">ditch<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">auto_detect_stdlib_paths<sp/>=<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">load_parent_classes<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">wrap_inherited_members<sp/>=<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">header_extension<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;.hpp&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">source_extension<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;.cpp&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">indent<sp/>=<sp/>4</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">#<sp/>~~~~~<sp/>Information<sp/>about<sp/>other<sp/>known<sp/>types<sp/>~~~~~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Dictionary<sp/>key:<sp/>type<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Dictionary<sp/>value:<sp/>header<sp/>file<sp/>with<sp/>containing<sp/>type<sp/>declaration.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Example:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/>known_classes<sp/>=<sp/>{&quot;SomeNamespace::KnownClassOne&quot;<sp/>:<sp/>&quot;path_to_header/KnownClassOne.hpp&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;AnotherNamespace::KnownClassTwo&quot;<sp/>:<sp/>&quot;path_to_header/KnownClassTwo.hpp&quot;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">known_classes<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/>&quot;Eigen::Matrix&quot;<sp/>:<sp/>&quot;&lt;Eigen/Core&gt;&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/>&quot;Eigen::Array&quot;<sp/>:<sp/>&quot;&lt;Eigen/Core&gt;&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">#<sp/>~~~~~<sp/>Pragma<sp/>directives<sp/>for<sp/>the<sp/>inclusion<sp/>of<sp/>BOSSed<sp/>classes<sp/>in<sp/>GAMBIT<sp/>~~~~~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">#<sp/>The<sp/>listed<sp/>pragma<sp/>directives<sp/>will<sp/>be<sp/>added<sp/>before/after<sp/>including<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">#<sp/>the<sp/>BOSS-generated<sp/>headers<sp/>in<sp/>GAMBIT.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">pragmas_begin<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">]</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">pragmas_end<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">]</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/configs/vevacious_1_0.py"/>
+  </compounddef>
+</doxygen>

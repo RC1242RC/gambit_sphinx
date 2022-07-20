@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structGambit_1_1GreAT_1_1greatScanData" kind="struct" language="C++" prot="public">
+    <compoundname>Gambit::GreAT::greatScanData</compoundname>
+    <includes refid="great_8hpp" local="no">great.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGambit_1_1GreAT_1_1greatScanData_1aa0c12140cd9f19d50bdeb2beff1ec4a7" prot="public" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1Scanner_1_1like__ptr" kindref="compound">Scanner::like_ptr</ref></type>
+        <definition>Scanner::like_ptr Gambit::GreAT::greatScanData::likelihood_function</definition>
+        <argsstring></argsstring>
+        <name>likelihood_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/great/great.hpp" line="34" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/great/great.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1GreAT_1_1greatScanData_1a62d4a0aad005a6278c22fbc894e9a757" prot="public" static="no" mutable="no">
+        <type><ref refid="printer__interface_8hpp_1ae767584d510b4dcaa3b82278ab1ecbd7" kindref="member">Scanner::printer_interface</ref> *</type>
+        <definition>Scanner::printer_interface* Gambit::GreAT::greatScanData::printer</definition>
+        <argsstring></argsstring>
+        <name>printer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/great/great.hpp" line="35" column="34" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/great/great.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1GreAT_1_1greatScanData_1ab228d4723e028bb3b9bd42aebf0cecaa" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::GreAT::greatScanData::min_logLike</definition>
+        <argsstring></argsstring>
+        <name>min_logLike</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/great/great.hpp" line="36" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/great/great.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for passing likelihood and printer data through GreAT to the objective function. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>Gambit::Scanner::scan_ptr&lt; double(std::unordered_map&lt; std::string, double &gt; &amp;)&gt;</label>
+        <link refid="classGambit_1_1Scanner_1_1scan__ptr"/>
+      </node>
+      <node id="1">
+        <label>Gambit::GreAT::greatScanData</label>
+        <link refid="structGambit_1_1GreAT_1_1greatScanData"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>likelihood_function</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Gambit::Scanner::like_ptr</label>
+        <link refid="classGambit_1_1Scanner_1_1like__ptr"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/great/great.hpp" line="33" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/great/great.hpp" bodystart="32" bodyend="37"/>
+    <listofallmembers>
+      <member refid="structGambit_1_1GreAT_1_1greatScanData_1aa0c12140cd9f19d50bdeb2beff1ec4a7" prot="public" virt="non-virtual"><scope>Gambit::GreAT::greatScanData</scope><name>likelihood_function</name></member>
+      <member refid="structGambit_1_1GreAT_1_1greatScanData_1ab228d4723e028bb3b9bd42aebf0cecaa" prot="public" virt="non-virtual"><scope>Gambit::GreAT::greatScanData</scope><name>min_logLike</name></member>
+      <member refid="structGambit_1_1GreAT_1_1greatScanData_1a62d4a0aad005a6278c22fbc894e9a757" prot="public" virt="non-virtual"><scope>Gambit::GreAT::greatScanData</scope><name>printer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

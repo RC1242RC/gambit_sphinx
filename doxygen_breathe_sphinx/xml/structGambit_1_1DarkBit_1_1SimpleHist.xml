@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structGambit_1_1DarkBit_1_1SimpleHist" kind="struct" language="C++" prot="public">
+    <compoundname>Gambit::DarkBit::SimpleHist</compoundname>
+    <includes refid="SimpleHist_8hpp" local="no">SimpleHist.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGambit_1_1DarkBit_1_1SimpleHist_1adb6b3df41ccfe4698c14c31a22fd5c39" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Gambit::DarkBit::SimpleHist::binLower</definition>
+        <argsstring></argsstring>
+        <name>binLower</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="92" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1DarkBit_1_1SimpleHist_1a9d2d78f2c05be543924e52d099831141" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Gambit::DarkBit::SimpleHist::binVals</definition>
+        <argsstring></argsstring>
+        <name>binVals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="93" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1DarkBit_1_1SimpleHist_1ab9b0037ee9dd0ad2723da0c49edf8a1b" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Gambit::DarkBit::SimpleHist::wtSq</definition>
+        <argsstring></argsstring>
+        <name>wtSq</name>
+        <briefdescription>
+<para>Sum of the squares of all weights. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="95" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1DarkBit_1_1SimpleHist_1a3683849dfcee87dc5bd56e7e667e3d71" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Gambit::DarkBit::SimpleHist::nBins</definition>
+        <argsstring></argsstring>
+        <name>nBins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="96" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1aaae70d5e593f7f51415d3be881a89af8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::SimpleHist::SimpleHist</definition>
+        <argsstring>()</argsstring>
+        <name>SimpleHist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="42" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a15cd1da05cd0c9581b18a3a31db8db27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::SimpleHist::SimpleHist</definition>
+        <argsstring>(int nBins, double Emin, double Emax, bool logscale)</argsstring>
+        <name>SimpleHist</name>
+        <param>
+          <type>int</type>
+          <declname>nBins</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Emin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Emax</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>logscale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="44" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="27" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1adfd94a78e297ef6fcc9ed9c7027e7f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::SimpleHist::SimpleHist</definition>
+        <argsstring>(std::vector&lt; double &gt; binLower)</argsstring>
+        <name>SimpleHist</name>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>binLower</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor taking lower bins edges as input. Last element will be used as upper bin edge for upper bin (Vector with N elements will give N-1 bins). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="48" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="71" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1ad010b9d0c35e54bd4708682f758cd2f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::SimpleHist::addEvent</definition>
+        <argsstring>(double E, double weight=1.0)</argsstring>
+        <name>addEvent</name>
+        <param>
+          <type>double</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>weight</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Add an entry to histogram. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="51" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="78" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a74ae7ffdbd61a48a895f987b59e33706" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::SimpleHist::addToBin</definition>
+        <argsstring>(int bin, double weight=1.0)</argsstring>
+        <name>addToBin</name>
+        <param>
+          <type>int</type>
+          <declname>bin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>weight</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Add an entry to a specified bin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="54" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1aabb2a0743a74e331c0a2a524ec0dcaa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::SimpleHist::addBox</definition>
+        <argsstring>(double Emin, double Emax, double weight=1.0)</argsstring>
+        <name>addBox</name>
+        <param>
+          <type>double</type>
+          <declname>Emin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Emax</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>weight</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Add a box spectrum to the histogram. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="57" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="94" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a5cb48b86b99f1fafe3a09c429db34116" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::SimpleHist::addHistAsWeights_sameBin</definition>
+        <argsstring>(SimpleHist &amp;in)</argsstring>
+        <name>addHistAsWeights_sameBin</name>
+        <param>
+          <type><ref refid="structGambit_1_1DarkBit_1_1SimpleHist" kindref="compound">SimpleHist</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add content of input histogram as weights. Important: Input histogram MUST have identical binning for this to give correct results. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="61" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="147" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a862f66a6c74a6ddf35cc85608cae489f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::SimpleHist::getError</definition>
+        <argsstring>(int bin) const</argsstring>
+        <name>getError</name>
+        <param>
+          <type>int</type>
+          <declname>bin</declname>
+        </param>
+        <briefdescription>
+<para>Get error for a specified bin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="64" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a695a151b884a0ff0a64fdc603c211a6c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::SimpleHist::getRelError</definition>
+        <argsstring>(int bin) const</argsstring>
+        <name>getRelError</name>
+        <param>
+          <type>int</type>
+          <declname>bin</declname>
+        </param>
+        <briefdescription>
+<para>Get relative error for a specified bin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="67" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a1321ef150dc32779234469fa3e6cf5aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::SimpleHist::divideByBinSize</definition>
+        <argsstring>()</argsstring>
+        <name>divideByBinSize</name>
+        <briefdescription>
+<para>Divide all histogram bins by the respective bin size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="70" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="173" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a70b8f27305269748be3c12bd08cad720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::SimpleHist::multiply</definition>
+        <argsstring>(double x)</argsstring>
+        <name>multiply</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Multiply all bin contents by x. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="73" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="182" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a5037bdeb2df0d5c8d14dd1cfd69ee1db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::DarkBit::SimpleHist::findIndex</definition>
+        <argsstring>(double val) const</argsstring>
+        <name>findIndex</name>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Find bin index for given value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="76" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="191" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a80498efd43fc762ad144e0d6f17f3735" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::SimpleHist::binSize</definition>
+        <argsstring>(int bin) const</argsstring>
+        <name>binSize</name>
+        <param>
+          <type>int</type>
+          <declname>bin</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve size of given bins. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="79" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a2ad9dd743592363b7dc45314a2834fa0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::SimpleHist::binCenter</definition>
+        <argsstring>(int bin) const</argsstring>
+        <name>binCenter</name>
+        <param>
+          <type>int</type>
+          <declname>bin</declname>
+        </param>
+        <briefdescription>
+<para>Get central value of bin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="82" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="204" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a8f404cd5deac96722c763a6c38b741c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; Gambit::DarkBit::SimpleHist::getBinCenters</definition>
+        <argsstring>() const</argsstring>
+        <name>getBinCenters</name>
+        <briefdescription>
+<para>Double get central values of all bins. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="85" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="209" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a524424e807585e6fafffa2d1e222336f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; double &gt; &amp;</type>
+        <definition>const std::vector&lt; double &gt; &amp; Gambit::DarkBit::SimpleHist::getBinValues</definition>
+        <argsstring>() const</argsstring>
+        <name>getBinValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="87" column="27" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1SimpleHist_1a68963acab47017322eaac2f502318873" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::SimpleHist::getEdges</definition>
+        <argsstring>(double &amp;lower, double &amp;upper) const</argsstring>
+        <name>getEdges</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>lower</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>upper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="89" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/SimpleHist.cpp" bodystart="224" bodyend="228"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Histogram class for cascade decays. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" line="38" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp" bodystart="37" bodyend="97"/>
+    <listofallmembers>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1aabb2a0743a74e331c0a2a524ec0dcaa3" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>addBox</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1ad010b9d0c35e54bd4708682f758cd2f3" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>addEvent</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a5cb48b86b99f1fafe3a09c429db34116" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>addHistAsWeights_sameBin</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a74ae7ffdbd61a48a895f987b59e33706" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>addToBin</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a2ad9dd743592363b7dc45314a2834fa0" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>binCenter</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1adb6b3df41ccfe4698c14c31a22fd5c39" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>binLower</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a80498efd43fc762ad144e0d6f17f3735" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>binSize</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a9d2d78f2c05be543924e52d099831141" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>binVals</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a1321ef150dc32779234469fa3e6cf5aa" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>divideByBinSize</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a5037bdeb2df0d5c8d14dd1cfd69ee1db" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>findIndex</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a8f404cd5deac96722c763a6c38b741c7" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>getBinCenters</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a524424e807585e6fafffa2d1e222336f" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>getBinValues</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a68963acab47017322eaac2f502318873" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>getEdges</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a862f66a6c74a6ddf35cc85608cae489f" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>getError</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a695a151b884a0ff0a64fdc603c211a6c" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>getRelError</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a70b8f27305269748be3c12bd08cad720" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>multiply</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a3683849dfcee87dc5bd56e7e667e3d71" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>nBins</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1aaae70d5e593f7f51415d3be881a89af8" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>SimpleHist</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1a15cd1da05cd0c9581b18a3a31db8db27" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>SimpleHist</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1adfd94a78e297ef6fcc9ed9c7027e7f6e" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>SimpleHist</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1SimpleHist_1ab9b0037ee9dd0ad2723da0c49edf8a1b" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::SimpleHist</scope><name>wtSq</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

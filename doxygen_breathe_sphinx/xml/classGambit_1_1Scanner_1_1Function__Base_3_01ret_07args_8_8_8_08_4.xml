@@ -1,0 +1,641 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">boost::enable_shared_from_this&lt; Function_Base&lt; ret(args...)&gt; &gt;</basecompoundref>
+    <derivedcompoundref refid="classGambit_1_1Scanner_1_1Multi__Scanner__Plugin__Function_3_01ret_07args_8_8_8_08_4" prot="public" virt="non-virtual">Gambit::Scanner::Multi_Scanner_Plugin_Function&lt; ret(args...)&gt;</derivedcompoundref>
+    <derivedcompoundref refid="classGambit_1_1Scanner_1_1Scanner__Plugin__Function_3_01ret_07args_8_8_8_08_4" prot="public" virt="non-virtual">Gambit::Scanner::Scanner_Plugin_Function&lt; ret(args...)&gt;</derivedcompoundref>
+    <includes refid="factory__defs_8hpp" local="no">factory_defs.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename ret</type>
+      </param>
+      <param>
+        <type>typename...</type>
+        <declname>args</declname>
+        <defname>args</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ad63ac4d5e53a35340b1a028bad019fd2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Function_Deleter&lt; ret(args...)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Function_Deleter&lt; ret(args...)&gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="1" column="0" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1aa0966c3ae9ee7144817e09dbf1e03a75" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class scan_ptr&lt; ret(args...)&gt;</definition>
+        <argsstring></argsstring>
+        <name>scan_ptr&lt; ret(args...)&gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="1" column="0" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a2cc3174c838668e024d5059a7d0e7f00" prot="private" static="no" mutable="no">
+        <type><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref> *</type>
+        <definition>printer* Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::main_printer</definition>
+        <argsstring></argsstring>
+        <name>main_printer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="83" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1aa123344f66ad2cc7ecc3a423115bbdfa" prot="private" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1Priors_1_1BasePrior" kindref="compound">Priors::BasePrior</ref> *</type>
+        <definition>Priors::BasePrior* Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::prior</definition>
+        <argsstring></argsstring>
+        <name>prior</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="84" column="31" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a1514016ba03af3de1e5478fcb5733681" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::purpose</definition>
+        <argsstring></argsstring>
+        <name>purpose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="85" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a776fdb0e41b945d09c9611c2454459f0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::myRealRank</definition>
+        <argsstring></argsstring>
+        <name>myRealRank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="86" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1af3ce0a9846674effb20d79424422eadc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::purpose_offset</definition>
+        <argsstring></argsstring>
+        <name>purpose_offset</name>
+        <briefdescription>
+<para>Variable to store some offset to be removed when printing out the return value of the function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="89" column="20" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ad5625ee0bedb99acca2ccf8b130af417" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::use_alternate_min_LogL</definition>
+        <argsstring></argsstring>
+        <name>use_alternate_min_LogL</name>
+        <briefdescription>
+<para>Variable to store state of affairs regarding use of alternate min_LogL. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="92" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a6b40532c2de5093936b6f5fb1b884ef8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::_scanner_can_quit</definition>
+        <argsstring></argsstring>
+        <name>_scanner_can_quit</name>
+        <briefdescription>
+<para>Variable to specify whether the scanner plugin should control the shutdown process. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="95" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a08aa5fdba6c115eb76bc68606b5082d7" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::deleter</definition>
+        <argsstring>(Function_Base&lt; ret(args...)&gt; *in) const</argsstring>
+        <name>deleter</name>
+        <param>
+          <type><ref refid="classGambit_1_1Scanner_1_1Function__Base" kindref="compound">Function_Base</ref>&lt; ret(args...)&gt; *</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="97" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a48d55761a16e999c9d95526e943b50d7" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const std::type_info &amp;</type>
+        <definition>virtual const std::type_info&amp; Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="102" column="43" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="102" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a0451b367b650170b82d2fe60613ccbe9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::Function_Base</definition>
+        <argsstring>(double offset=0.)</argsstring>
+        <name>Function_Base</name>
+        <param>
+          <type>double</type>
+          <declname>offset</declname>
+          <defval>0.</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="105" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="105" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ae10a510c1aa9a8423834352919a20c51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::purposeModifier</definition>
+        <argsstring>(double ret_val)</argsstring>
+        <name>purposeModifier</name>
+        <param>
+          <type>double</type>
+          <declname>ret_val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="126" column="28" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="126" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a56c3f1e2f1b870402ee819bf7938c434" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>ret</type>
+        <definition>virtual ret Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::main</definition>
+        <argsstring>(const args &amp;...)=0</argsstring>
+        <name>main</name>
+        <param>
+          <type>const args &amp;</type>
+          <declname>...</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="127" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a9cdec7ebbcdc2d800e3c02609a1764da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::~Function_Base</definition>
+        <argsstring>()</argsstring>
+        <name>~Function_Base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="128" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1af423bbd3c2d0c3f9d91d3d505a3fbe86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ret</type>
+        <definition>ret Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::operator()</definition>
+        <argsstring>(const args &amp;... params)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const args &amp;...</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="130" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="130" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a327dc1fabf33c2b038cd281ac23c7bca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::setPurpose</definition>
+        <argsstring>(const std::string p)</argsstring>
+        <name>setPurpose</name>
+        <param>
+          <type>const std::string</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="143" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a0dafeb8846763fba087c0cb193d610cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::setPrinter</definition>
+        <argsstring>(printer *p)</argsstring>
+        <name>setPrinter</name>
+        <param>
+          <type><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="144" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1afba5210e849273426938bea866aaaa26" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::setPrior</definition>
+        <argsstring>(Priors::BasePrior *p)</argsstring>
+        <name>setPrior</name>
+        <param>
+          <type><ref refid="classGambit_1_1Priors_1_1BasePrior" kindref="compound">Priors::BasePrior</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="145" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1aba2202a953a99580cf4429f6ae02d677" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref> &amp;</type>
+        <definition>printer&amp; Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::getPrinter</definition>
+        <argsstring>()</argsstring>
+        <name>getPrinter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="146" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1aef3f3b58abf032b80e8f2aa9746906e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="printer__interface_8hpp_1a3c6ca4999cbe5a04947a903788d93ee7" kindref="member">printer</ref> &amp;</type>
+        <definition>printer&amp; Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::getPrinter</definition>
+        <argsstring>() const</argsstring>
+        <name>getPrinter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="147" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1acf586f2fa3a7baaea0d387dd977e9b08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classGambit_1_1Priors_1_1BasePrior" kindref="compound">Priors::BasePrior</ref> &amp;</type>
+        <definition>Priors::BasePrior&amp; Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::getPrior</definition>
+        <argsstring>()</argsstring>
+        <name>getPrior</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="148" column="31" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a54b0006ac1a5eb9102b2838240f62769" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::getParameters</definition>
+        <argsstring>()</argsstring>
+        <name>getParameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="149" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ad5dc5c1edd2248493a995b1deef28c92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::getShownParameters</definition>
+        <argsstring>()</argsstring>
+        <name>getShownParameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="150" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="150" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a76fd71e0f70c8147dfcc33fc97ef102d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::getPurpose</definition>
+        <argsstring>() const</argsstring>
+        <name>getPurpose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="151" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1aab8d271023563259a7abcb916a5c3969" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::getRank</definition>
+        <argsstring>() const</argsstring>
+        <name>getRank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="152" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="152" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ac6f05eecd136de51907cb4e87faad26d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::setRank</definition>
+        <argsstring>(int r)</argsstring>
+        <name>setRank</name>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="153" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ae09f09eb9bbaa224292103b10e4324ba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::getPurposeOffset</definition>
+        <argsstring>() const</argsstring>
+        <name>getPurposeOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="154" column="20" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a6bf57cc9f9872cf0c101d207b754e9ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::setPurposeOffset</definition>
+        <argsstring>(double os)</argsstring>
+        <name>setPurposeOffset</name>
+        <param>
+          <type>double</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="155" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a72fe567fafed109be986e96dbc2460c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long long int</type>
+        <definition>unsigned long long int Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::getPtID</definition>
+        <argsstring>() const</argsstring>
+        <name>getPtID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="156" column="36" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="156" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a042c7e65c548c64591a5d01cd26c368b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::setPtID</definition>
+        <argsstring>(unsigned long long int pID)</argsstring>
+        <name>setPtID</name>
+        <param>
+          <type>unsigned long long int</type>
+          <declname>pID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="157" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="157" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1adb41ed248f208c77277f7480eb4a87db" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long long int</type>
+        <definition>unsigned long long int Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::getNextPtID</definition>
+        <argsstring>() const</argsstring>
+        <name>getNextPtID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="158" column="36" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="158" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ae1546e867cfee6d0b4c822f8bd67fc06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::tell_scanner_early_shutdown_in_progress</definition>
+        <argsstring>()</argsstring>
+        <name>tell_scanner_early_shutdown_in_progress</name>
+        <briefdescription>
+<para>Tell ScannerBit that we are aborting the scan and it should tell the scanner plugin to stop, and return control to the calling code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="161" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a76a74db811f914c8e5b3a62ac3dff85c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::disable_external_shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>disable_external_shutdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tells log-likelihood function (defined by driver code) not to use its own shutdown system (e.g the GAMBIT soft shutdown procedure) and instead to trust that the scanner plugin will safely terminate executions upon checking that shutdown is in progress (via the shutdown_in_progress flag set in plugin_info) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="170" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="170" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a6201c84b1d7988aa388a19b3ee004b61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::scanner_can_quit</definition>
+        <argsstring>()</argsstring>
+        <name>scanner_can_quit</name>
+        <briefdescription>
+<para>Check whether likelihood container is supposed to control early shutdown of scan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="173" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="173" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a8b90fd44f69a43a60af64b582827fea3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::switch_to_alternate_min_LogL</definition>
+        <argsstring>()</argsstring>
+        <name>switch_to_alternate_min_LogL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell log-likelihood function (defined by driver code) to switch to an alternate value for the minimum log-likelihood. Called by e.g. MultiNest scanner plugin. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="177" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="177" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a17caa51864fd87955c881ea30fba685a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::Scanner::Function_Base&lt; ret(args...)&gt;::check_for_switch_to_alternate_min_LogL</definition>
+        <argsstring>()</argsstring>
+        <name>check_for_switch_to_alternate_min_LogL</name>
+        <briefdescription>
+<para>Checks if some process has triggered the &apos;switch_to_alternate_min_LogL&apos; function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="191" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="191" bodyend="217"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base function for the object that is upputed by &quot;set_purpose&quot;. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>boost::enable_shared_from_this&lt; Function_Base&lt; ret(args...)&gt; &gt;</label>
+      </node>
+      <node id="1">
+        <label>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</label>
+        <link refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Gambit::Scanner::Scanner_Plugin_Function&lt; ret(args...)&gt;</label>
+        <link refid="classGambit_1_1Scanner_1_1Scanner__Plugin__Function_3_01ret_07args_8_8_8_08_4"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Gambit::Scanner::Multi_Scanner_Plugin_Function&lt; ret(args...)&gt;</label>
+        <link refid="classGambit_1_1Scanner_1_1Multi__Scanner__Plugin__Function_3_01ret_07args_8_8_8_08_4"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>boost::enable_shared_from_this&lt; Function_Base&lt; ret(args...)&gt; &gt;</label>
+      </node>
+      <node id="1">
+        <label>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</label>
+        <link refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" line="78" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/factory_defs.hpp" bodystart="77" bodyend="220"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a6b40532c2de5093936b6f5fb1b884ef8" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>_scanner_can_quit</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a17caa51864fd87955c881ea30fba685a" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>check_for_switch_to_alternate_min_LogL</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a08aa5fdba6c115eb76bc68606b5082d7" prot="private" virt="virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>deleter</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a76a74db811f914c8e5b3a62ac3dff85c" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>disable_external_shutdown</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a0451b367b650170b82d2fe60613ccbe9" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>Function_Base</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ad63ac4d5e53a35340b1a028bad019fd2" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>Function_Deleter&lt; ret(args...)&gt;</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1adb41ed248f208c77277f7480eb4a87db" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>getNextPtID</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a54b0006ac1a5eb9102b2838240f62769" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>getParameters</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1aba2202a953a99580cf4429f6ae02d677" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>getPrinter</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1aef3f3b58abf032b80e8f2aa9746906e2" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>getPrinter</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1acf586f2fa3a7baaea0d387dd977e9b08" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>getPrior</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a72fe567fafed109be986e96dbc2460c0" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>getPtID</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a76fd71e0f70c8147dfcc33fc97ef102d" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>getPurpose</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ae09f09eb9bbaa224292103b10e4324ba" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>getPurposeOffset</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1aab8d271023563259a7abcb916a5c3969" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>getRank</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ad5dc5c1edd2248493a995b1deef28c92" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>getShownParameters</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a56c3f1e2f1b870402ee819bf7938c434" prot="public" virt="pure-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>main</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a2cc3174c838668e024d5059a7d0e7f00" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>main_printer</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a776fdb0e41b945d09c9611c2454459f0" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>myRealRank</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1af423bbd3c2d0c3f9d91d3d505a3fbe86" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>operator()</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1aa123344f66ad2cc7ecc3a423115bbdfa" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>prior</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a1514016ba03af3de1e5478fcb5733681" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>purpose</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1af3ce0a9846674effb20d79424422eadc" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>purpose_offset</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ae10a510c1aa9a8423834352919a20c51" prot="public" virt="virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>purposeModifier</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1aa0966c3ae9ee7144817e09dbf1e03a75" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>scan_ptr&lt; ret(args...)&gt;</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a6201c84b1d7988aa388a19b3ee004b61" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>scanner_can_quit</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a0dafeb8846763fba087c0cb193d610cb" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>setPrinter</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1afba5210e849273426938bea866aaaa26" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>setPrior</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a042c7e65c548c64591a5d01cd26c368b" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>setPtID</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a327dc1fabf33c2b038cd281ac23c7bca" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>setPurpose</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a6bf57cc9f9872cf0c101d207b754e9ec" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>setPurposeOffset</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ac6f05eecd136de51907cb4e87faad26d" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>setRank</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a8b90fd44f69a43a60af64b582827fea3" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>switch_to_alternate_min_LogL</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ae1546e867cfee6d0b4c822f8bd67fc06" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>tell_scanner_early_shutdown_in_progress</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a48d55761a16e999c9d95526e943b50d7" prot="private" virt="virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>type</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1ad5625ee0bedb99acca2ccf8b130af417" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>use_alternate_min_LogL</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Function__Base_3_01ret_07args_8_8_8_08_4_1a9cdec7ebbcdc2d800e3c02609a1764da" prot="public" virt="virtual"><scope>Gambit::Scanner::Function_Base&lt; ret(args...)&gt;</scope><name>~Function_Base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

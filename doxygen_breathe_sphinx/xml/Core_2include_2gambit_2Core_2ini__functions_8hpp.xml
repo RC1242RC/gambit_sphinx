@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="Core_2include_2gambit_2Core_2ini__functions_8hpp" kind="file" language="C++">
+    <compoundname>Core/include/gambit/Core/ini_functions.hpp</compoundname>
+    <includes local="yes">gambit/Utils/util_types.hpp</includes>
+    <includedby refid="backend__macros_8hpp" local="yes">backend_macros.hpp</includedby>
+    <includedby refid="Core_2src_2ini__functions_8cpp" local="yes">ini_functions.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>ini_functions.hpp</label>
+        <link refid="Core_2include_2gambit_2Core_2ini__functions_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gambit/Utils/util_types.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>backend_macros.hpp</label>
+        <link refid="backend__macros_8hpp"/>
+      </node>
+      <node id="1">
+        <label>ini_functions.hpp</label>
+        <link refid="Core_2include_2gambit_2Core_2ini__functions_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ini_functions.cpp</label>
+        <link refid="Core_2src_2ini__functions_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Core-only functions for triggering initialisation code.</para>
+<para><hruler/>
+</para>
+<sect1 id="Core_2include_2gambit_2Core_2ini__functions_8hpp_1autotoc_md4">
+<title>Authors</title>
+<para>(add name and date if you modify)</para>
+<para><simplesect kind="author"><para>Pat Scott (<ulink url="mailto:p.scott@imperial.ac.uk">p.scott@imperial.ac.uk</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2015 Feb</para>
+</simplesect>
+<simplesect kind="author"><para>Tomas Gonzalo (<ulink url="mailto:gonzalo@physik.rwth-aachen.de">gonzalo@physik.rwth-aachen.de</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2021 Sep</para>
+</simplesect>
+<hruler/>
+ </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__ini_functions_core_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ini_functions_core_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/util_types.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">functor;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">module_functor_common;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">primary_model_functor;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceGambit_1a2a718d03d940d605e25b106eb35e6650" kindref="member">register_module</ref>(str,<sp/>str);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceGambit_1aa6c42e9faf734495e78c0c67b0e9e0f1" kindref="member">register_module_functor_core</ref>(module_functor_common&amp;);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceGambit_1af4bd16bc37b902883763eaa237792fc5" kindref="member">register_model_functor_core</ref>(primary_model_functor&amp;);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceGambit_1aec88c34fe6927edc3d750fcdd488f55f" kindref="member">register_backend</ref>(str,<sp/>str,<sp/>str);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceGambit_1a0e822ebd27ea0a32fdea6cabcc2045e1" kindref="member">register_backend_functor</ref>(functor&amp;);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceGambit_1a1fd7879b3844fef54128ccef38973734" kindref="member">register_management_req</ref>(module_functor_common&amp;);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>#defined<sp/>__ini_functions_core_hpp__</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/ini_functions.hpp"/>
+  </compounddef>
+</doxygen>

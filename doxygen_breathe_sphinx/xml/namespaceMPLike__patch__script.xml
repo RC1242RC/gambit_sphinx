@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceMPLike__patch__script" kind="namespace" language="Python">
+    <compoundname>MPLike_patch_script</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceMPLike__patch__script_1aef3144d81447004b7448bbe3974fdb33" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list MPLike_patch_script.output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <initializer>=  [dI for dI in os.listdir(&quot;montepython/likelihoods/&quot;) if os.path.isdir(os.path.join(&apos;montepython/likelihoods/&apos;,dI))]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/MPLike_patch_script.py" line="65" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/MPLike_patch_script.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceMPLike__patch__script_1a94c838b412e430a6719e093b57c67133" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>MPLike_patch_script.abspath</definition>
+        <argsstring></argsstring>
+        <name>abspath</name>
+        <initializer>=  os.path.dirname(os.path.abspath(__file__))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/MPLike_patch_script.py" line="67" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/MPLike_patch_script.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceMPLike__patch__script_1a1a3d9546eeacddc135c4479303a713ab" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>MPLike_patch_script.append_to_beginning</definition>
+        <argsstring></argsstring>
+        <name>append_to_beginning</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/MPLike_patch_script.py" line="73" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/MPLike_patch_script.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceMPLike__patch__script_1ada17cd06774a9a3fef4a9470c9cc2aff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def MPLike_patch_script.replace</definition>
+        <argsstring>(file, pattern, subst, append_to_beginning=&quot;&quot;)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>file</type>
+          <defname>file</defname>
+        </param>
+        <param>
+          <type>pattern</type>
+          <defname>pattern</defname>
+        </param>
+        <param>
+          <type>subst</type>
+          <defname>subst</defname>
+        </param>
+        <param>
+          <type>append_to_beginning</type>
+          <defname>append_to_beginning</defname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/MPLike_patch_script.py" line="33" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/MPLike_patch_script.py" bodystart="33" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>GAMBIT: Global and Modular BSM Inference Tool
+//   *********************************************
+///  \file
+///  script to patch MontePython to work with gambit
+///
+///   - harvest all likelihoods included in montepython/likelihoods folder
+///   - create list of available likelihoods
+///   - replace import statement in each __init__ file to import MontePhytonLike instead of montepython.likelihood_class
+///
+///   Note: for simplicity the Data object is also defined in MontePythonLike (extra file in standard MontePython)
+///
+///  *********************************************
+///
+///  Authors (add name and date if you modify):
+///
+///  \author Janina Renk
+///          (janina.renk@fysik.su.se)
+///  \date 2019 June
+///  \date 2020 Sep
+///
+///  \author Patrick Stoecker
+///          (stoecker@physik.rwth-aachen.de)
+///  \date 2021 Sep
+///
+///  *********************************************</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/MPLike_patch_script.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

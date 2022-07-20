@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ProcessCatalog_8hpp" kind="file" language="C++">
+    <compoundname>ProcessCatalog.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="yes">gambit/Utils/util_types.hpp</includes>
+    <includes local="yes">gambit/cmake/cmake_variables.hpp</includes>
+    <includes local="yes">gambit/Elements/daFunk.hpp</includes>
+    <includedby refid="DarkBit__types_8hpp" local="yes">DarkBit_types.hpp</includedby>
+    <includedby refid="ProcessCatalog_8cpp" local="yes">ProcessCatalog.cpp</includedby>
+    <includedby refid="WIMP__EFT_8cpp" local="yes">WIMP_EFT.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>ProcessCatalog.hpp</label>
+        <link refid="ProcessCatalog_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>gambit/Elements/daFunk.hpp</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>gambit/cmake/cmake_variables.hpp</label>
+      </node>
+      <node id="4">
+        <label>gambit/Utils/util_types.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>DarkBit_types.hpp</label>
+        <link refid="DarkBit__types_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DarkBit_types.cpp</label>
+        <link refid="DarkBit__types_8cpp"/>
+      </node>
+      <node id="1">
+        <label>ProcessCatalog.hpp</label>
+        <link refid="ProcessCatalog_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ProcessCatalog.cpp</label>
+        <link refid="ProcessCatalog_8cpp"/>
+      </node>
+      <node id="5">
+        <label>WIMP_EFT.cpp</label>
+        <link refid="WIMP__EFT_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structGambit_1_1DarkBit_1_1TH__Resonance" prot="public">Gambit::DarkBit::TH_Resonance</innerclass>
+    <innerclass refid="structGambit_1_1DarkBit_1_1TH__resonances__thresholds" prot="public">Gambit::DarkBit::TH_resonances_thresholds</innerclass>
+    <innerclass refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty" prot="public">Gambit::DarkBit::TH_ParticleProperty</innerclass>
+    <innerclass refid="structGambit_1_1DarkBit_1_1TH__Channel" prot="public">Gambit::DarkBit::TH_Channel</innerclass>
+    <innerclass refid="structGambit_1_1DarkBit_1_1TH__Process" prot="public">Gambit::DarkBit::TH_Process</innerclass>
+    <innerclass refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog" prot="public">Gambit::DarkBit::TH_ProcessCatalog</innerclass>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1DarkBit">Gambit::DarkBit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Type definition header for DarkBit Process Catalog constituents types.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Christoph Weniger (<ulink url="mailto:c.weniger@uva.nl">c.weniger@uva.nl</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2012 Mar, 2014 Jan</para>
+</simplesect>
+<simplesect kind="author"><para>Pat Scott (<ulink url="mailto:patscott@physics.mcgill.ca">patscott@physics.mcgill.ca</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2015 Mar</para>
+</simplesect>
+<simplesect kind="author"><para>Sanjay Bloor (<ulink url="mailto:sanjay.bloor12@imperial.ac.uk">sanjay.bloor12@imperial.ac.uk</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2018 Aug</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__ProcessCatalog_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ProcessCatalog_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/util_types.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/cmake/cmake_variables.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/daFunk.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DarkBit</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43" refid="structGambit_1_1DarkBit_1_1TH__Resonance" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1DarkBit_1_1TH__Resonance" kindref="compound">TH_Resonance</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Resonance" kindref="compound">TH_Resonance</ref>()<sp/>:<sp/>energy(0.),<sp/>width<sp/>(0.)<sp/>{}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Resonance" kindref="compound">TH_Resonance</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>width)<sp/>:<sp/>energy(energy),<sp/>width(width)<sp/>{}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>width;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structGambit_1_1DarkBit_1_1TH__resonances__thresholds" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1DarkBit_1_1TH__resonances__thresholds" kindref="compound">TH_resonances_thresholds</ref></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__resonances__thresholds" kindref="compound">TH_resonances_thresholds</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__resonances__thresholds" kindref="compound">TH_resonances_thresholds</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__resonances__thresholds" kindref="compound">TH_resonances_thresholds</ref>&amp;<sp/>copy)<sp/>:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resonances(copy.resonances),<sp/>threshold_energy(copy.threshold_energy)<sp/>{}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__resonances__thresholds" kindref="compound">TH_resonances_thresholds</ref>&amp;<sp/>operator=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__resonances__thresholds" kindref="compound">TH_resonances_thresholds</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__resonances__thresholds" kindref="compound">TH_resonances_thresholds</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;TH_Resonance&gt;&amp;<sp/>resonances,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/>&amp;<sp/>thresholds)<sp/>:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resonances(resonances),<sp/>threshold_energy(thresholds)<sp/>{}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;TH_Resonance&gt;<sp/>resonances;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>threshold_energy;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty" kindref="compound">TH_ParticleProperty</ref></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty_1a4207043cffe76428e4a9d489e0fad18e" kindref="member">TH_ParticleProperty</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty_1a4ef18f5f6563ce01addefb10eea03275" kindref="member">mass</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty_1a704b8c1778246a75ab829277c4bb9b64" kindref="member">spin2</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty_1a4ef18f5f6563ce01addefb10eea03275" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty_1a4ef18f5f6563ce01addefb10eea03275" kindref="member">mass</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty_1a704b8c1778246a75ab829277c4bb9b64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty_1a704b8c1778246a75ab829277c4bb9b64" kindref="member">spin2</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="structGambit_1_1DarkBit_1_1TH__Channel" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1DarkBit_1_1TH__Channel" kindref="compound">TH_Channel</ref></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel_1a9997cc44b9346b3679167942b86d7338" kindref="member">TH_Channel</ref>(std::vector&lt;str&gt;<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel_1a514e949b3a3d7187ae177f5d188f60e0" kindref="member">finalStateIDs</ref>,<sp/>daFunk::Funk<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel_1a7dca592a70775e96bea6acca3774d5a1" kindref="member">genRate</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel_1ada3f70b06d1dcf1536e4936c0b1a691e" kindref="member">printChannel</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel_1a97c78c051dd780d07a818afce7da5af7" kindref="member">channelContains</ref>(str<sp/>p)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel_1a0564eebf6324e507b2804e93052199e8" kindref="member">isChannel</ref>(str,<sp/>str,<sp/>str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel_1a0564eebf6324e507b2804e93052199e8" kindref="member">isChannel</ref>(std::vector&lt;str&gt;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="structGambit_1_1DarkBit_1_1TH__Channel_1a514e949b3a3d7187ae177f5d188f60e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel_1a514e949b3a3d7187ae177f5d188f60e0" kindref="member">finalStateIDs</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="structGambit_1_1DarkBit_1_1TH__Channel_1a5ecd054d1fe54facd68d3cb996dc16e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel_1a5ecd054d1fe54facd68d3cb996dc16e0" kindref="member">nFinalStates</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="structGambit_1_1DarkBit_1_1TH__Channel_1a7dca592a70775e96bea6acca3774d5a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>daFunk::Funk<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel_1a7dca592a70775e96bea6acca3774d5a1" kindref="member">genRate</ref><sp/>=<sp/>daFunk::zero(</highlight><highlight class="stringliteral">&quot;dummyArgument&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="structGambit_1_1DarkBit_1_1TH__Process" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1DarkBit_1_1TH__Process" kindref="compound">TH_Process</ref></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1a0c8440c896f398cb0f8774071e623968" kindref="member">TH_Process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>&amp;<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1aef6641901338d975966554940c29bfe9" kindref="member">particle1ID</ref>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1a0c8440c896f398cb0f8774071e623968" kindref="member">TH_Process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>&amp;<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1aef6641901338d975966554940c29bfe9" kindref="member">particle1ID</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>&amp;<sp/>particle2ID);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1afc3374535b4842d349601d2a1a533d04" kindref="member">isProcess</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>&amp;<sp/>=<sp/>std::string())<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel" kindref="compound">TH_Channel</ref>*<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1a2874f5b23e12502572cd543163a45e34" kindref="member">find</ref>(std::vector&lt;str&gt;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="structGambit_1_1DarkBit_1_1TH__Process_1a91aa2ee1a719a792a6d33154792c9b68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1a91aa2ee1a719a792a6d33154792c9b68" kindref="member">isAnnihilation</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="structGambit_1_1DarkBit_1_1TH__Process_1aef6641901338d975966554940c29bfe9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1aef6641901338d975966554940c29bfe9" kindref="member">particle1ID</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>particle2ID;</highlight></codeline>
+<codeline lineno="150"></codeline>
+<codeline lineno="152" refid="structGambit_1_1DarkBit_1_1TH__Process_1a938c618989f19917d843929430059050" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1a938c618989f19917d843929430059050" kindref="member">isSelfConj</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="structGambit_1_1DarkBit_1_1TH__Process_1a9b03fc73305dab6ab372239a60605bb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;TH_Channel&gt;<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1a9b03fc73305dab6ab372239a60605bb3" kindref="member">channelList</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="structGambit_1_1DarkBit_1_1TH__Process_1a9596140231e4a4ea6bfa7f2f0c439ad0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__resonances__thresholds" kindref="compound">TH_resonances_thresholds</ref><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1a9596140231e4a4ea6bfa7f2f0c439ad0" kindref="member">resonances_thresholds</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="structGambit_1_1DarkBit_1_1TH__Process_1a209f94434972098493ce1ecec34f3e48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>daFunk::Funk<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process_1a209f94434972098493ce1ecec34f3e48" kindref="member">genRateMisc</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog" kindref="compound">TH_ProcessCatalog</ref></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process" kindref="compound">TH_Process</ref><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a9b25da91c0282da7cb01707d7454d3fe" kindref="member">getProcess</ref>(str,<sp/>str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process" kindref="compound">TH_Process</ref>*<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a5557a7795c4e5d5272f12e6d942f83ed" kindref="member">find</ref>(str,<sp/>str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty" kindref="compound">TH_ParticleProperty</ref><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a681f0593cd152e9b894f975fde28332c" kindref="member">getParticleProperty</ref>(str)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a961d43a52832afd52d133af64f277f8a" kindref="member">hasParticleProperty</ref>(str)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a74c913ee5231a7bb201c9f4e891a9510" kindref="member">validate</ref>();</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a2a46dd0bf203f704fb53ad9ddffe140d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;TH_Process&gt;<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a2a46dd0bf203f704fb53ad9ddffe140d" kindref="member">processList</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a674d93d0f093d290bc19421dab59d2da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>TH_ParticleProperty&gt;<sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a674d93d0f093d290bc19421dab59d2da" kindref="member">particleProperties</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>#defined<sp/>__ProcessCatalog_hpp__</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp"/>
+  </compounddef>
+</doxygen>

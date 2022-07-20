@@ -1,0 +1,653 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="DarkSUSY__generic__wimp__6__2__5_8cpp" kind="file" language="C++">
+    <compoundname>DarkSUSY_generic_wimp_6_2_5.cpp</compoundname>
+    <includes refid="frontend__macros_8hpp" local="yes">gambit/Backends/frontend_macros.hpp</includes>
+    <includes refid="DarkSUSY__generic__wimp__6__2__5_8hpp" local="yes">gambit/Backends/frontends/DarkSUSY_generic_wimp_6_2_5.hpp</includes>
+    <includes local="yes">gambit/Utils/file_lock.hpp</includes>
+    <includes local="yes">gambit/Utils/mpiwrapper.hpp</includes>
+    <incdepgraph>
+      <node id="22">
+        <label>gambit/Backends/backend_info.hpp</label>
+        <link refid="backend__info_8hpp"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>gambit/Backends/common_macros.hpp</label>
+        <link refid="common__macros_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>boost/preprocessor/seq/transform.hpp</label>
+      </node>
+      <node id="15">
+        <label>gambit/Backends/mathematica_macros.hpp</label>
+        <link refid="mathematica__macros_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>boost/preprocessor/tuple/to_seq.hpp</label>
+      </node>
+      <node id="6">
+        <label>gambit/Elements/types_rollcall.hpp</label>
+      </node>
+      <node id="1">
+        <label>DarkSUSY_generic_wimp_6_2_5.cpp</label>
+        <link refid="DarkSUSY__generic__wimp__6__2__5_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>gambit/Backends/python_variable.hpp</label>
+        <link refid="python__variable_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>gambit/Backends/frontends/shared_includes/DarkSUSY_6.hpp</label>
+        <link refid="DarkSUSY__6_8hpp"/>
+      </node>
+      <node id="11">
+        <label>boost/preprocessor/tuple/elem.hpp</label>
+      </node>
+      <node id="13">
+        <label>gambit/Backends/interoperability.hpp</label>
+        <link refid="interoperability_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>gambit/Backends/python_macros.hpp</label>
+        <link refid="python__macros_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>gambit/Utils/standalone_error_handlers.hpp</label>
+      </node>
+      <node id="21">
+        <label>gambit/Backends/backend_singleton.hpp</label>
+        <link refid="backend__singleton_8hpp"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>gambit/Utils/util_functions.hpp</label>
+      </node>
+      <node id="19">
+        <label>gambit/Elements/ini_catch.hpp</label>
+      </node>
+      <node id="25">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+      <node id="36">
+        <label>gambit/Utils/mpiwrapper.hpp</label>
+      </node>
+      <node id="27">
+        <label>gambit/Backends/mathematica_variable.hpp</label>
+        <link refid="mathematica__variable_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>gambit/Backends/interoperability_macros.hpp</label>
+        <link refid="interoperability__macros_8hpp"/>
+      </node>
+      <node id="2">
+        <label>gambit/Backends/frontend_macros.hpp</label>
+        <link refid="frontend__macros_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>gambit/Utils/file_lock.hpp</label>
+      </node>
+      <node id="32">
+        <label>gambit/Backends/frontends/DarkSUSY_generic_wimp_6_2_5.hpp</label>
+        <link refid="DarkSUSY__generic__wimp__6__2__5_8hpp"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>boost/preprocessor/control/iif.hpp</label>
+      </node>
+      <node id="16">
+        <label>gambit/cmake/cmake_variables.hpp</label>
+      </node>
+      <node id="34">
+        <label>gambit/Backends/backend_undefs.hpp</label>
+        <link refid="include_2gambit_2Backends_2backend__undefs_8hpp"/>
+      </node>
+      <node id="17">
+        <label>gambit/Utils/util_macros.hpp</label>
+      </node>
+      <node id="24">
+        <label>gambit/Utils/util_types.hpp</label>
+      </node>
+      <node id="10">
+        <label>boost/preprocessor/seq/for_each_i.hpp</label>
+      </node>
+      <node id="18">
+        <label>gambit/Backends/mathematica_function.hpp</label>
+        <link refid="mathematica__function_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gambit/Elements/module_macros_inmodule.hpp</label>
+      </node>
+      <node id="30">
+        <label>gambit/Backends/python_helpers.hpp</label>
+        <link refid="python__helpers_8hpp"/>
+      </node>
+      <node id="26">
+        <label>boost/algorithm/string/replace.hpp</label>
+      </node>
+      <node id="29">
+        <label>gambit/Backends/python_function.hpp</label>
+        <link refid="python__function_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>boost/preprocessor/seq/for_each.hpp</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="DarkSUSY__generic__wimp__6__2__5_8cpp_1aeab5d44c426d953a35368f02a8ab0504" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>BE_NAMESPACE</definition>
+        <argsstring></argsstring>
+        <name>BE_NAMESPACE</name>
+        <initializer>{
+  std::vector&lt;double&gt; DSanbr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" line="25" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="DarkSUSY__generic__wimp__6__2__5_8cpp_1a351a8838e51bcec7416298608ff11521" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double anmwimp</definition>
+        <argsstring></argsstring>
+        <name>anmwimp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" line="28" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="DarkSUSY__generic__wimp__6__2__5_8cpp_1aa2f3fb821848cc63c8cd65160f77cd7b" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; DSanpdg1</definition>
+        <argsstring></argsstring>
+        <name>DSanpdg1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" line="29" column="15" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="DarkSUSY__generic__wimp__6__2__5_8cpp_1a980aa7c2696ab910ab3cfdb323870ead" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; DSanpdg2</definition>
+        <argsstring></argsstring>
+        <name>DSanpdg2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" line="30" column="15" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="DarkSUSY__generic__wimp__6__2__5_8cpp_1a47ab4cb3e1fdabf7e2e25349fd267299" prot="public" static="no" mutable="no">
+        <type><ref refid="common__macros_8hpp_1ab9f05bcb458a039e9c1d4060dc04639c" kindref="member">END_BE_NAMESPACE</ref></type>
+        <definition>END_BE_NAMESPACE BE_INI_FUNCTION</definition>
+        <argsstring></argsstring>
+        <name>BE_INI_FUNCTION</name>
+        <initializer>{
+  
+  bool static scan_level = true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" line="35" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="DarkSUSY__generic__wimp__6__2__5_8cpp_1a9d8b760073c710f9361fc1c0d1134b8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>if</definition>
+        <argsstring>(scan_level)</argsstring>
+        <name>if</name>
+        <param>
+          <type>scan_level</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" line="40" column="3" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp" bodystart="40" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Frontend for DarkSUSY_generic_wimp_6.2.5 backend</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Torsten Bringmann (<ulink url="mailto:torsten.bringmann@fys.uio.no">torsten.bringmann@fys.uio.no</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2021</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="frontend__macros_8hpp" kindref="compound">gambit/Backends/frontend_macros.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DarkSUSY__generic__wimp__6__2__5_8hpp" kindref="compound">gambit/Backends/frontends/DarkSUSY_generic_wimp_6_2_5.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/file_lock.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/mpiwrapper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>DARKSUSY_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Some<sp/>ad-hoc<sp/>DarkSUSY<sp/>global<sp/>state.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="common__macros_8hpp_1a4d46c8276b5c657141ff960c177bfe5a" kindref="member">BE_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/>DSanbr;<sp/></highlight><highlight class="comment">//<sp/>to<sp/>have<sp/>BR<sp/>available<sp/>to<sp/>neutrino_yield</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>anmwimp;<sp/></highlight><highlight class="comment">//<sp/>to<sp/>have<sp/>WIMP<sp/>mass<sp/>available<sp/>to<sp/>neutrino_yield</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/>DSanpdg1;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/>DSanpdg2;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="common__macros_8hpp_1ab9f05bcb458a039e9c1d4060dc04639c" kindref="member">END_BE_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initialisation<sp/>function<sp/>(definition)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="common__macros_8hpp_1a825694403adda6ccd191cb93020fbe23" kindref="member">BE_INI_FUNCTION</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>DarkSUSY<sp/>(only)<sp/>if<sp/>run<sp/>for<sp/>the<sp/>first<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>scan_level<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scan_level)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>the<sp/>call<sp/>to<sp/>dsinit<sp/>one-by-one<sp/>for<sp/>each<sp/>MPI<sp/>process,<sp/>as<sp/>DarkSUSY<sp/>loads<sp/>up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>HiggsBounds,<sp/>which<sp/>writes<sp/>files<sp/>at<sp/>init<sp/>then<sp/>reads<sp/>them<sp/>back<sp/>in<sp/>later.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>Utils::ProcessLock<sp/>mylock(</highlight><highlight class="stringliteral">&quot;DarkSUSY_&quot;</highlight><highlight class="normal"><sp/>STRINGIFY(SAFE_VERSION)<sp/></highlight><highlight class="stringliteral">&quot;_init&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>mylock.get_lock();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>dsinit();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>mylock.release_lock();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>makes<sp/>sure<sp/>that<sp/>different<sp/>processes<sp/>later<sp/>don&apos;t<sp/>read<sp/>the<sp/>yield<sp/>tables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>disk<sp/>simultaneously</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>istat=0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mdm=100.0,<sp/>egev=10.0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pdg=5,<sp/>yieldpdg,<sp/>diff=1;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*hel<sp/>=<sp/><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>yieldpdg<sp/>=<sp/>22;</highlight><highlight class="comment">//<sp/>gamma<sp/>rays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>dsanyield_sim(mdm,egev,pdg,hel,yieldpdg,diff,istat);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>yieldpdg<sp/>=<sp/>-2212;<sp/></highlight><highlight class="comment">//antiprotons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>dsanyield_sim(mdm,egev,pdg,hel,yieldpdg,diff,istat);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>yieldpdg<sp/>=<sp/>-11;<sp/></highlight><highlight class="comment">//positrons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>dsanyield_sim(mdm,egev,pdg,hel,yieldpdg,diff,istat);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>yieldpdg<sp/>=<sp/>-1000010020;<sp/></highlight><highlight class="comment">//anti-deuteron</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>dsanyield_sim(mdm,egev,pdg,hel,yieldpdg,diff,istat);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>scan_level<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Unlike<sp/>in<sp/>the<sp/>MSSM<sp/>case,<sp/>we<sp/>don&apos;t<sp/>actually<sp/>initialize<sp/>a<sp/>generic<sp/>WIMP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>model<sp/>&quot;point&quot;<sp/>here.<sp/>We<sp/>thus<sp/>just<sp/>use<sp/>basic,<sp/>&quot;model-independent&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>DarkSUSY<sp/>functinalities.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="common__macros_8hpp_1a12da9763bf3b37787fa5ae54cf36c779" kindref="member">END_BE_INI_FUNCTION</ref></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Convenience<sp/>functions<sp/>(definitions)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><ref refid="common__macros_8hpp_1a4d46c8276b5c657141ff960c177bfe5a" kindref="member">BE_NAMESPACE</ref></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dsgenericwimp_nusetup(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(&amp;annihilation_bf)[29],<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(&amp;)[29][3],</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(&amp;)[15],<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(&amp;)[3],<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;mwimp)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Transfer<sp/>WIMP<sp/>mass<sp/>common<sp/>block.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>anmwimp<sp/>=<sp/>mwimp;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>below<sp/>give<sp/>the<sp/>PDG<sp/>codes<sp/>for<sp/>the<sp/>final<sp/>states<sp/>each<sp/>element<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>annihilation_bf<sp/>array<sp/>is<sp/>associated<sp/>with.<sp/>Non-SM<sp/>final<sp/>states<sp/>are<sp/>given</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PDG<sp/>code<sp/>20000.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.clear();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.clear();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(10000);<sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>used,<sp/>as<sp/>we<sp/>keep<sp/>the<sp/>same<sp/>numbering<sp/>as<sp/>for<sp/>Fortran</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(10000);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(20000);<sp/><sp/></highlight><highlight class="comment">//<sp/>H<sp/>H,<sp/>channel<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(20000);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(25);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>h<sp/>H,<sp/>channel<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(20000);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(25);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>h<sp/>h,<sp/>channel<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(25);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(20000);<sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>A,<sp/>channel<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(20000);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(20000);<sp/><sp/></highlight><highlight class="comment">//<sp/>H<sp/>A,<sp/>channel<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(20000);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(25);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>h<sp/>A,<sp/>channel<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(20000);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(20000);<sp/><sp/></highlight><highlight class="comment">//<sp/>H+<sp/>H-,<sp/>channel<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(20000);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(20000);<sp/><sp/></highlight><highlight class="comment">//<sp/>Z<sp/>H,<sp/>channel<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(20000);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(20000);<sp/><sp/></highlight><highlight class="comment">//<sp/>Z<sp/>h,<sp/>channel<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(25);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(23);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Z<sp/>A,<sp/>channel<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(20000);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(24);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>W+<sp/>H-,<sp/>channel<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(20000);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(23);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Z<sp/>Z,<sp/>channel<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(23);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(24);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>W+<sp/>W-,<sp/>channel<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-24);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(12);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>nue<sp/>nuebar,<sp/>channel<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-12);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(11);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>e-<sp/>e+,<sp/>channel<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-11);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(14);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>numu<sp/>numubar,<sp/>channel<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-14);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(13);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mu-<sp/>mu+,<sp/>channel<sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-13);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(16);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>nutau<sp/>nutaubar,<sp/>channel<sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-16);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(15);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tau-<sp/>tau+,<sp/>channel<sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-15);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(2);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>u<sp/>ubar,<sp/>channel<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-2);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(1);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>d<sp/>dbar,<sp/>channel<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-1);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(4);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>c<sp/>cbar,<sp/>channel<sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-4);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(3);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>s<sp/>sbar,<sp/>channel<sp/>23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-3);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(6);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>t<sp/>tbar,<sp/>channel<sp/>24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-6);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(5);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>b<sp/>bbar,<sp/>channel<sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(-5);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(21);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gluon<sp/>gluon,<sp/>channel<sp/>26</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(21);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(10000);<sp/><sp/></highlight><highlight class="comment">//<sp/>(not<sp/>used)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(10000);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(22);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gamma<sp/>gamma,<sp/>channel<sp/>28</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(22);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg1.push_back(22);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gamma<sp/>Z,<sp/>channel<sp/>29</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanpdg2.push_back(23);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Transfer<sp/>branching<sp/>fractions<sp/>to<sp/>WIMP<sp/>annihilation<sp/>common<sp/>blocks.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>channel<sp/>indices,<sp/>see<sp/>dswayieldone.f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanbr.clear();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>DSanbr.push_back(0.0);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=1;<sp/>i&lt;=29;<sp/>i++)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(DSanpdg1[i]<sp/>==<sp/>10000<sp/>||<sp/>DSanpdg2[i]<sp/>==<sp/>10000)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DSanbr.push_back(0.);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(DSanpdg1[i]<sp/>==<sp/>20000<sp/>||<sp/>DSanpdg2[i]<sp/>==<sp/>20000)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(annihilation_bf[i-1]<sp/>&gt;<sp/>0.00001)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backend_error().raise(LOCAL_INFO,<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>The<sp/>DarkSUSY<sp/>neutrino<sp/>telescope<sp/>routines<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;for<sp/>a<sp/>generic<sp/>WIMP<sp/>cannot<sp/>handle<sp/>models<sp/>with<sp/>non-standard<sp/>model\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;WIMP<sp/>annihilation<sp/>final<sp/>states.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DSanbr.push_back(0.);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DSanbr.push_back(annihilation_bf[i-1]);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>dsgenericwimp_nusetup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>neutrino_yield(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>log10E,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>ptype,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*&amp;)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>istat<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iistat<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t1=3;<sp/></highlight><highlight class="comment">//<sp/>nu<sp/>mu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t2=4;<sp/></highlight><highlight class="comment">//<sp/>nu_mu-bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>=<sp/><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)</highlight><highlight class="stringliteral">&quot;su&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tmp=0;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>twoj=0;<sp/></highlight><highlight class="comment">//<sp/>ignored<sp/>by<sp/>current<sp/>version<sp/>of<sp/>DS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>twos=0;<sp/></highlight><highlight class="comment">//<sp/>ignored<sp/>by<sp/>current<sp/>version<sp/>of<sp/>DS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>twol=0;<sp/></highlight><highlight class="comment">//<sp/>ignored<sp/>by<sp/>current<sp/>version<sp/>of<sp/>DS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cp=-1;<sp/><sp/></highlight><highlight class="comment">//<sp/>ignored<sp/>by<sp/>current<sp/>version<sp/>of<sp/>DS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>result=0.0;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=1;<sp/>i&lt;=29;<sp/>i++)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(DSanbr[i]&gt;0)</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iistat=0;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ptype<sp/>==<sp/>1)<sp/>or<sp/>(ptype<sp/>==<sp/>3))<sp/></highlight><highlight class="comment">//<sp/>particles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Temporary<sp/>hack<sp/>replacing<sp/>h<sp/>h<sp/>and<sp/>Z<sp/>h<sp/>final<sp/>state<sp/>spectra<sp/>with<sp/>Z<sp/>Z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((DSanpdg1[i]<sp/>==<sp/>25<sp/>&amp;&amp;<sp/>DSanpdg2[i]<sp/>==<sp/>25)<sp/>||<sp/>(DSanpdg1[i]<sp/>==<sp/>23<sp/>&amp;&amp;<sp/>DSanpdg2[i]<sp/>==<sp/>25))</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=dsseyield_sim_ls(anmwimp,<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(10.0,log10E),10.0,23,23,twoj,cp,twol,twos,</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,3,t1,iistat);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=dsseyield_sim_ls(anmwimp,<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(10.0,log10E),10.0,DSanpdg1[i],DSanpdg2[i],twoj,cp,twol,twos,</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,3,t1,iistat);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((iistat<sp/>bitand<sp/>8)<sp/>==<sp/>8)<sp/></highlight><highlight class="comment">//<sp/>not<sp/>simulated<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backend_error().raise(LOCAL_INFO,<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>The<sp/>DarkSUSY<sp/>neutrino<sp/>telescope<sp/>routines<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;for<sp/>a<sp/>generic<sp/>WIMP<sp/>cannot<sp/>handle<sp/>models<sp/>with<sp/>non-standard<sp/>model\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;WIMP<sp/>annihilation<sp/>final<sp/>states.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>+=<sp/>1e-30<sp/>*<sp/>DSanbr[i]<sp/>*<sp/>tmp;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>is<sp/>just<sp/>a<sp/>warning,<sp/>not<sp/>an<sp/>error:<sp/>unpolarized<sp/>yields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>are<sp/>used<sp/>even<sp/>if<sp/>polarized<sp/>yields<sp/>are<sp/>asked<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((iistat<sp/>bitand<sp/>16)<sp/>==<sp/>16)<sp/>iistat<sp/>-=<sp/>16;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>istat=(istat<sp/>bitor<sp/>iistat);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ptype<sp/>==<sp/>2)<sp/>or<sp/>(ptype<sp/>==<sp/>3))<sp/></highlight><highlight class="comment">//<sp/>anti-particles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Temporary<sp/>hack<sp/>replacing<sp/>h<sp/>h<sp/>and<sp/>Z<sp/>h<sp/>final<sp/>state<sp/>spectra<sp/>with<sp/>Z<sp/>Z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((DSanpdg1[i]<sp/>==<sp/>25<sp/>&amp;&amp;<sp/>DSanpdg2[i]<sp/>==<sp/>25)<sp/>||<sp/>(DSanpdg1[i]<sp/>==<sp/>23<sp/>&amp;&amp;<sp/>DSanpdg2[i]<sp/>==<sp/>25))</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=dsseyield_sim_ls(anmwimp,<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(10.0,log10E),10.0,23,23,twoj,cp,twol,twos,</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,3,t2,iistat);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=dsseyield_sim_ls(anmwimp,<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(10.0,log10E),10.0,DSanpdg1[i],DSanpdg2[i],twoj,cp,twol,twos,</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,3,t2,iistat);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((iistat<sp/>bitand<sp/>8)<sp/>==<sp/>8)<sp/></highlight><highlight class="comment">//<sp/>not<sp/>simulated<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backend_error().raise(LOCAL_INFO,<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>The<sp/>DarkSUSY<sp/>neutrino<sp/>telescope<sp/>routines<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;for<sp/>a<sp/>generic<sp/>WIMP<sp/>cannot<sp/>handle<sp/>models<sp/>with<sp/>non-standard<sp/>model\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;WIMP<sp/>annihilation<sp/>final<sp/>states.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>+=<sp/>1e-30<sp/>*<sp/>DSanbr[i]<sp/>*<sp/>tmp;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>is<sp/>just<sp/>a<sp/>warning,<sp/>not<sp/>an<sp/>error:<sp/>unpolarized<sp/>yields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>are<sp/>used<sp/>even<sp/>if<sp/>polarized<sp/>yields<sp/>are<sp/>asked<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((iistat<sp/>bitand<sp/>16)<sp/>==<sp/>16)<sp/>iistat<sp/>-=<sp/>16;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>istat=(istat<sp/>bitor<sp/>iistat);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>if<sp/>DSanbr&gt;0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((istat<sp/>bitand<sp/>1)<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(not<sp/>piped_warnings.inquire())<sp/></highlight><highlight class="comment">//<sp/>Don&apos;t<sp/>bother<sp/>re-raising<sp/>a<sp/>warning<sp/>if<sp/>it&apos;s<sp/>already<sp/>been<sp/>done<sp/>since<sp/>the<sp/>last<sp/>.check().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>piped_warnings.request(LOCAL_INFO,<sp/></highlight><highlight class="stringliteral">&quot;Neutrino<sp/>yield<sp/>from<sp/>Sun<sp/>is<sp/>lower<sp/>bound;<sp/>likelihood<sp/>will<sp/>be<sp/>conservative.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((istat<sp/>bitand<sp/>4)<sp/>==<sp/>4)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(not<sp/>piped_warnings.inquire())<sp/></highlight><highlight class="comment">//<sp/>Don&apos;t<sp/>bother<sp/>re-raising<sp/>a<sp/>warning<sp/>if<sp/>it&apos;s<sp/>already<sp/>been<sp/>done<sp/>since<sp/>the<sp/>last<sp/>.check().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>piped_warnings.request(LOCAL_INFO,<sp/></highlight><highlight class="stringliteral">&quot;DarkSUSY&apos;s<sp/>dsseyield_int<sp/>didn&apos;t<sp/>converge.<sp/>This<sp/>occasionally<sp/>happens<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;due<sp/>to<sp/>finite<sp/>statistics<sp/>in<sp/>the<sp/>nu<sp/>yield<sp/>tables<sp/>from<sp/>Pythia.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>benign<sp/>(the<sp/>missing<sp/>integrals<sp/>are<sp/>always<sp/>negligible).&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(istat<sp/>&gt;<sp/>4)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>err;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>from<sp/>DarkSUSY::dsseyield<sp/>functions<sp/>in<sp/>neutrino<sp/>flux<sp/>calculation.<sp/><sp/>istat<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>istat;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>piped_errors.request(LOCAL_INFO,<sp/>err.str());</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>std::vector&lt;<sp/>std::vector&lt;str&gt;<sp/>&gt;<sp/>DS_neutral_h_decay_channels()</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>initVector&lt;<sp/>std::vector&lt;str&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;h0_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;h0_2&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;h0_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;h0_2&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;h0_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;h0_1&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;A0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;A0&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;h0_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;A0&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;h0_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;A0&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;H+&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;H-&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;h0_2&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;h0_1&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;A0&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>actually<sp/>supposed<sp/>to<sp/>be<sp/>W+H-<sp/>and<sp/>W-H+</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;W+&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;H-&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;W+&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;W-&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;nu_e&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;nubar_e&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;e+_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e-_1&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;nu_mu&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;nubar_mu&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;e+_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e-_2&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;nu_tau&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;nubar_tau&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;e+_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e-_3&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ubar_1&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;d_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_1&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ubar_2&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;d_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_2&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ubar_3&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;d_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_3&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>actually<sp/>qqg<sp/>(not<sp/>implemented<sp/>in<sp/>DS<sp/>though)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;d_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;gamma&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;gamma&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;gamma&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>std::vector&lt;<sp/>std::vector&lt;str&gt;<sp/>&gt;<sp/>DS_charged_h_decay_channels()</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>initVector&lt;<sp/>std::vector&lt;str&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>(initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_1&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_2&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_3&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_1&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_2&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_3&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_1&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_2&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;u_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_3&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;e+_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;nu_e&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;e+_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;nu_mu&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;e+_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;nu_tau&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;W+&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;h0_2&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;W+&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;h0_1&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>initVector&lt;str&gt;(</highlight><highlight class="stringliteral">&quot;W+&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;A0&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><ref refid="common__macros_8hpp_1ab9f05bcb458a039e9c1d4060dc04639c" kindref="member">END_BE_NAMESPACE</ref></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/frontends/DarkSUSY_generic_wimp_6_2_5.cpp"/>
+  </compounddef>
+</doxygen>

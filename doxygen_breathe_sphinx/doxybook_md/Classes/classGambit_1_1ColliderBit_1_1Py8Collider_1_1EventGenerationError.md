@@ -1,0 +1,23 @@
+---
+title: 'class Gambit::ColliderBit::Py8Collider::EventGenerationError'
+description: 'An exception for when Pythia fails to generate events. '
+
+---
+
+
+
+
+
+
+
+
+An exception for when Pythia fails to generate events. 
+
+
+`#include <Py8Collider.hpp>`
+
+Inherits from exception
+
+-------------------------------
+
+Updated on 2022-07-20 at 16:54:07 +0000

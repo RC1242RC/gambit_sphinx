@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structGambit_1_1DarkBit_1_1TH__ProcessCatalog" kind="struct" language="C++" prot="public">
+    <compoundname>Gambit::DarkBit::TH_ProcessCatalog</compoundname>
+    <includes refid="ProcessCatalog_8hpp" local="no">ProcessCatalog.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a2a46dd0bf203f704fb53ad9ddffe140d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structGambit_1_1DarkBit_1_1TH__Process" kindref="compound">TH_Process</ref> &gt;</type>
+        <definition>std::vector&lt;TH_Process&gt; Gambit::DarkBit::TH_ProcessCatalog::processList</definition>
+        <argsstring></argsstring>
+        <name>processList</name>
+        <briefdescription>
+<para>Vector of all processes in this catalog. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="188" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a674d93d0f093d290bc19421dab59d2da" prot="public" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty" kindref="compound">TH_ParticleProperty</ref> &gt;</type>
+        <definition>std::map&lt;std::string, TH_ParticleProperty&gt; Gambit::DarkBit::TH_ProcessCatalog::particleProperties</definition>
+        <argsstring></argsstring>
+        <name>particleProperties</name>
+        <briefdescription>
+<para>Map from particles involved in the processes of this catalog, to their properties. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="191" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a9b25da91c0282da7cb01707d7454d3fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structGambit_1_1DarkBit_1_1TH__Process" kindref="compound">TH_Process</ref></type>
+        <definition>TH_Process Gambit::DarkBit::TH_ProcessCatalog::getProcess</definition>
+        <argsstring>(str, str=&quot;&quot;) const</argsstring>
+        <name>getProcess</name>
+        <param>
+          <type>str</type>
+          <defname>id1</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>id2</defname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Retrieve a specific process from the catalog. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="170" column="20" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/ProcessCatalog.cpp" bodystart="137" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a5557a7795c4e5d5272f12e6d942f83ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structGambit_1_1DarkBit_1_1TH__Process" kindref="compound">TH_Process</ref> *</type>
+        <definition>const TH_Process * Gambit::DarkBit::TH_ProcessCatalog::find</definition>
+        <argsstring>(str, str=&quot;&quot;) const</argsstring>
+        <name>find</name>
+        <param>
+          <type>str</type>
+          <defname>id1</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>id2</defname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Check for a specific process in the catalog. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="173" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/ProcessCatalog.cpp" bodystart="149" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a681f0593cd152e9b894f975fde28332c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty" kindref="compound">TH_ParticleProperty</ref></type>
+        <definition>TH_ParticleProperty Gambit::DarkBit::TH_ProcessCatalog::getParticleProperty</definition>
+        <argsstring>(str) const</argsstring>
+        <name>getParticleProperty</name>
+        <param>
+          <type>str</type>
+          <defname>id</defname>
+        </param>
+        <briefdescription>
+<para>Retrieve properties of a given particle involved in one or more processes in this catalog. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="176" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/ProcessCatalog.cpp" bodystart="162" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a961d43a52832afd52d133af64f277f8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DarkBit::TH_ProcessCatalog::hasParticleProperty</definition>
+        <argsstring>(str) const</argsstring>
+        <name>hasParticleProperty</name>
+        <param>
+          <type>str</type>
+          <defname>id</defname>
+        </param>
+        <briefdescription>
+<para>Check whether particle is in particle properties catalog. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="179" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/ProcessCatalog.cpp" bodystart="174" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a74c913ee5231a7bb201c9f4e891a9510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::TH_ProcessCatalog::validate</definition>
+        <argsstring>()</argsstring>
+        <name>validate</name>
+        <briefdescription>
+<para>Validate kinematics and entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="182" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/ProcessCatalog.cpp" bodystart="181" bodyend="334"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A container holding all annihilation and decay initial states relevant for DarkBit. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="166" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" bodystart="165" bodyend="192"/>
+    <listofallmembers>
+      <member refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a5557a7795c4e5d5272f12e6d942f83ed" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_ProcessCatalog</scope><name>find</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a681f0593cd152e9b894f975fde28332c" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_ProcessCatalog</scope><name>getParticleProperty</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a9b25da91c0282da7cb01707d7454d3fe" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_ProcessCatalog</scope><name>getProcess</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a961d43a52832afd52d133af64f277f8a" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_ProcessCatalog</scope><name>hasParticleProperty</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a674d93d0f093d290bc19421dab59d2da" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_ProcessCatalog</scope><name>particleProperties</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a2a46dd0bf203f704fb53ad9ddffe140d" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_ProcessCatalog</scope><name>processList</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a74c913ee5231a7bb201c9f4e891a9510" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_ProcessCatalog</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

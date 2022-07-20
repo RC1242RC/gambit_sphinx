@@ -149,7 +149,7 @@
         <label>gambit/Utils/util_macros.hpp</label>
       </node>
       <node id="1">
-        <label>ColliderBit/src/ColliderBit_InterpolatedYields.cpp</label>
+        <label>ColliderBit_InterpolatedYields.cpp</label>
         <link refid="ColliderBit__InterpolatedYields_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -643,7 +643,7 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C72<sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C72&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C73<sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C73&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C74<sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C74&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda<sp/>=<sp/>spec.get(Par::mass1,<sp/></highlight><highlight class="stringliteral">&quot;Lambda&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="MSSM__H_8hpp_1a21318c67be94f159cd3a21d7def0b1ca" kindref="member">lambda</ref><sp/>=<sp/>spec.get(Par::mass1,<sp/></highlight><highlight class="stringliteral">&quot;Lambda&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>spec.get(Par::Pole_Mass,<sp/></highlight><highlight class="stringliteral">&quot;chi&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="447"><highlight class="normal"></highlight></codeline>
 <codeline lineno="448"><highlight class="normal"></highlight></codeline>
@@ -692,14 +692,14 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta;</highlight></codeline>
 <codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(O2==0)</highlight></codeline>
 <codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>theta<sp/>=<sp/>0.5<sp/>*<sp/>pi;</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>theta<sp/>=<sp/>0.5<sp/>*<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>;</highlight></codeline>
 <codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>theta<sp/>=<sp/>atan(O1<sp/>/<sp/>O2);</highlight></codeline>
 <codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>O1<sp/>/<sp/>O2<sp/>&lt;<sp/>0)</highlight></codeline>
 <codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>theta<sp/>=<sp/>theta<sp/>+<sp/>pi;</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>theta<sp/>=<sp/>theta<sp/>+<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>;</highlight></codeline>
 <codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="505"><highlight class="normal"></highlight></codeline>
@@ -711,7 +711,7 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="512"><highlight class="normal"></highlight></codeline>
 <codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Scaling<sp/>with<sp/>lambda,<sp/>relative<sp/>to<sp/>lambda<sp/>=<sp/>1000<sp/>GeV<sp/>which<sp/>was<sp/>used<sp/>to<sp/>generate<sp/>the<sp/>data<sp/>tables</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda_scaling<sp/>=<sp/>pow(1000.0<sp/>/<sp/>lambda,<sp/>4);</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda_scaling<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(1000.0<sp/>/<sp/>lambda,<sp/>4);</highlight></codeline>
 <codeline lineno="515"><highlight class="normal"></highlight></codeline>
 <codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>interpolator<sp/>collections<sp/>for<sp/>the<sp/>given<sp/>operator_key</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Utils::interp2d_collection&amp;<sp/>xsec_interp<sp/>=<sp/>analysis_info.get_interp2d(</highlight><highlight class="stringliteral">&quot;mass_theta_xsecpb_&quot;</highlight><highlight class="normal"><sp/>+<sp/>operator_key);</highlight></codeline>
@@ -810,7 +810,7 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="612"><highlight class="normal"></highlight></codeline>
 <codeline lineno="613"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Scaling<sp/>with<sp/>lambda,<sp/>relative<sp/>to<sp/>lambda<sp/>=<sp/>1000<sp/>GeV<sp/>which<sp/>was<sp/>used<sp/>to<sp/>generate<sp/>the<sp/>data<sp/>tables</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="614"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda_scaling<sp/>=<sp/>pow(1000.0<sp/>/<sp/>lambda,<sp/>6);</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda_scaling<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(1000.0<sp/>/<sp/>lambda,<sp/>6);</highlight></codeline>
 <codeline lineno="615"><highlight class="normal"></highlight></codeline>
 <codeline lineno="616"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>interpolator<sp/>collections<sp/>for<sp/>the<sp/>given<sp/>operator_key</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="617"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Utils::interp1d_collection&amp;<sp/>xsec_interp<sp/>=<sp/>analysis_info.get_interp1d(</highlight><highlight class="stringliteral">&quot;mass_xsecpb_&quot;</highlight><highlight class="normal"><sp/>+<sp/>operator_key);</highlight></codeline>
@@ -896,7 +896,7 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="698"><highlight class="normal"></highlight></codeline>
 <codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>Lambda</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum&amp;<sp/>spec<sp/>=<sp/>*Dep::DMEFT_spectrum;</highlight></codeline>
-<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda<sp/>=<sp/>spec.get(Par::mass1,<sp/></highlight><highlight class="stringliteral">&quot;Lambda&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="MSSM__H_8hpp_1a21318c67be94f159cd3a21d7def0b1ca" kindref="member">lambda</ref><sp/>=<sp/>spec.get(Par::mass1,<sp/></highlight><highlight class="stringliteral">&quot;Lambda&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="702"><highlight class="normal"></highlight></codeline>
 <codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recalculate<sp/>AnalysisData<sp/>instances<sp/>in<sp/>&quot;result&quot;,<sp/>using<sp/>the<sp/>best-fit<sp/>a-value</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(AnalysisData*<sp/>adata_ptr<sp/>:<sp/>result)</highlight></codeline>
@@ -918,7 +918,7 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="721"><highlight class="normal"></highlight></codeline>
 <codeline lineno="722"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>Lambda</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="723"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum&amp;<sp/>spec<sp/>=<sp/>*Dep::DMEFT_spectrum;</highlight></codeline>
-<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda<sp/>=<sp/>spec.get(Par::mass1,<sp/></highlight><highlight class="stringliteral">&quot;Lambda&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="MSSM__H_8hpp_1a21318c67be94f159cd3a21d7def0b1ca" kindref="member">lambda</ref><sp/>=<sp/>spec.get(Par::mass1,<sp/></highlight><highlight class="stringliteral">&quot;Lambda&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="725"><highlight class="normal"></highlight></codeline>
 <codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Apply<sp/>the<sp/>function<sp/>signal_cutoff_function<sp/>to<sp/>each<sp/>of<sp/>the<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>AnalysisData<sp/>instances<sp/>in<sp/>&quot;result&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -948,7 +948,7 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="754"><highlight class="normal"></highlight></codeline>
 <codeline lineno="755"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lambda<sp/>&lt;<sp/>MET_min)</highlight></codeline>
 <codeline lineno="756"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight<sp/>=<sp/>pow(MET_min<sp/>/<sp/>lambda,<sp/>-a);</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(MET_min<sp/>/<sp/>lambda,<sp/>-a);</highlight></codeline>
 <codeline lineno="758"><highlight class="normal"></highlight></codeline>
 <codeline lineno="759"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(weight<sp/>&lt;<sp/>1.0e-8)<sp/>{<sp/>weight<sp/>=<sp/>0.0;<sp/>}</highlight></codeline>
 <codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1185,13 +1185,13 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="994"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>step_log10_a<sp/>=<sp/>0.02;</highlight></codeline>
 <codeline lineno="995"><highlight class="normal"></highlight></codeline>
 <codeline lineno="996"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>log10_a<sp/>=<sp/>log10_a_min;</highlight></codeline>
-<codeline lineno="997"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>a<sp/>=<sp/>{<sp/>pow(10.,<sp/>log10_a)<sp/>};</highlight></codeline>
+<codeline lineno="997"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>a<sp/>=<sp/>{<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(10.,<sp/>log10_a)<sp/>};</highlight></codeline>
 <codeline lineno="998"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ll_val<sp/>=<sp/>0.0;</highlight></codeline>
 <codeline lineno="999"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1000"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda_min<sp/>=<sp/>670.0;</highlight></codeline>
 <codeline lineno="1001"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda_max<sp/>=<sp/>1070.0;</highlight></codeline>
 <codeline lineno="1002"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>step_lambda<sp/>=<sp/>2.0;</highlight></codeline>
-<codeline lineno="1003"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda<sp/>=<sp/>lambda_min;</highlight></codeline>
+<codeline lineno="1003"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="MSSM__H_8hpp_1a21318c67be94f159cd3a21d7def0b1ca" kindref="member">lambda</ref><sp/>=<sp/>lambda_min;</highlight></codeline>
 <codeline lineno="1004"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1005"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ofstream<sp/>f;</highlight></codeline>
 <codeline lineno="1006"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f.open(</highlight><highlight class="stringliteral">&quot;lambda_a_loglike.dat&quot;</highlight><highlight class="normal">);</highlight></codeline>
@@ -1202,10 +1202,10 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="1011"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1012"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(log10_a<sp/>&lt;=<sp/>log10_a_max)</highlight></codeline>
 <codeline lineno="1013"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="1014"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;DEBUG:<sp/>lambda,<sp/>log10_a<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>lambda<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>log10_a<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="1015"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[0]<sp/>=<sp/>pow(10.,<sp/>log10_a);</highlight></codeline>
+<codeline lineno="1014"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;DEBUG:<sp/>lambda,<sp/>log10_a<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="MSSM__H_8hpp_1a21318c67be94f159cd3a21d7def0b1ca" kindref="member">lambda</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>log10_a<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="1015"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[0]<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(10.,<sp/>log10_a);</highlight></codeline>
 <codeline lineno="1016"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1017"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fpars.lambda<sp/>=<sp/>lambda;</highlight></codeline>
+<codeline lineno="1017"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fpars.lambda<sp/>=<sp/><ref refid="MSSM__H_8hpp_1a21318c67be94f159cd3a21d7def0b1ca" kindref="member">lambda</ref>;</highlight></codeline>
 <codeline lineno="1018"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1019"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ColliderBit__InterpolatedYields_8cpp_1a2e4a667539a208c93c3eac8dc4e53d17" kindref="member">_gsl_target_func</ref>(n_profile_pars,<sp/>&amp;a[0],<sp/>&amp;fpars,<sp/>&amp;ll_val);</highlight></codeline>
 <codeline lineno="1020"><highlight class="normal"></highlight></codeline>
@@ -1213,7 +1213,7 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="1022"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1023"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log10_a<sp/>+=<sp/>step_log10_a;</highlight></codeline>
 <codeline lineno="1024"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="1025"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lambda<sp/>+=<sp/>step_lambda;</highlight></codeline>
+<codeline lineno="1025"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="MSSM__H_8hpp_1a21318c67be94f159cd3a21d7def0b1ca" kindref="member">lambda</ref><sp/>+=<sp/>step_lambda;</highlight></codeline>
 <codeline lineno="1026"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1027"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f.close();</highlight></codeline>
 <codeline lineno="1028"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
@@ -1232,6 +1232,6 @@ Analyses based on: arxiv:1711.03301 and <ulink url="https://journals.aps.org/prd
 <codeline lineno="1043"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="1044"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Gambit</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="ColliderBit/src/ColliderBit_InterpolatedYields.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/ColliderBit_InterpolatedYields.cpp"/>
   </compounddef>
 </doxygen>

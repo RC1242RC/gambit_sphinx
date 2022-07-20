@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classMontePythonLike_1_1Likelihood__sn" kind="class" language="Python" prot="public">
+    <compoundname>MontePythonLike::Likelihood_sn</compoundname>
+    <basecompoundref refid="classMontePythonLike_1_1Likelihood" prot="public" virt="non-virtual">MontePythonLike.Likelihood</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMontePythonLike_1_1Likelihood__sn_1a5a2856ebe1dfd5e0b3d83a5a132d142f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def MontePythonLike.Likelihood_sn.__init__</definition>
+        <argsstring>(self, path, data, command_line)</argsstring>
+        <name>__init__</name>
+        <reimplements refid="classMontePythonLike_1_1Likelihood_1a9f7492f4aacddc71d387cd98933a20db">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>path</type>
+          <defname>path</defname>
+        </param>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>command_line</type>
+          <defname>command_line</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>It copies the content of self.path from the initialization routine of
+the :class:`Data &lt;data.Data&gt;` class, and defines a handful of useful
+methods, that every likelihood might need.
+
+If the nuisance parameters required to compute this likelihood are not
+defined (either fixed or varying), the code will stop.
+
+Parameters
+----------
+data : class
+    Initialized instance of :class:`Data &lt;data.Data&gt;`
+command_line : NameSpace
+    NameSpace containing the command line arguments</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" line="2378" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" bodystart="2378" bodyend="2409"/>
+      </memberdef>
+      <memberdef kind="function" id="classMontePythonLike_1_1Likelihood__sn_1ab08142f26535706be36e2f55faad9993" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def MontePythonLike.Likelihood_sn.read_configuration_file</definition>
+        <argsstring>(self)</argsstring>
+        <name>read_configuration_file</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Extract Python variables from the configuration file
+
+This routine performs the equivalent to the program &quot;inih&quot; used in the
+original c++ library.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" line="2410" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" bodystart="2410" bodyend="2441"/>
+      </memberdef>
+      <memberdef kind="function" id="classMontePythonLike_1_1Likelihood__sn_1aa9ef19b05807fed0b029262c92e612de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def MontePythonLike.Likelihood_sn.read_matrix</definition>
+        <argsstring>(self, path)</argsstring>
+        <name>read_matrix</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>path</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>extract the matrix from the path
+
+This routine uses the blazing fast pandas library (0.10 seconds to load
+a 740x740 matrix). If not installed, it uses a custom routine that is
+twice as slow (but still 4 times faster than the straightforward
+numpy.loadtxt method)
+
+.. note::
+
+    the length of the matrix is stored on the first line... then it has
+    to be unwrapped. The pandas routine read_csv understands this
+    immediatly, though.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" line="2442" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" bodystart="2442" bodyend="2470"/>
+      </memberdef>
+      <memberdef kind="function" id="classMontePythonLike_1_1Likelihood__sn_1a422a7bd2d3dd4e8e81aa0f132f28ac99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def MontePythonLike.Likelihood_sn.read_light_curve_parameters</definition>
+        <argsstring>(self)</argsstring>
+        <name>read_light_curve_parameters</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Read the file jla_lcparams.txt containing the SN data
+
+.. note::
+
+    the length of the resulting array should be equal to the length of
+    the covariance matrices stored in C00, etc...</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" line="2471" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" bodystart="2471" bodyend="2494"/>
+      </memberdef>
+      <memberdef kind="function" id="classMontePythonLike_1_1Likelihood__sn_1a5a2856ebe1dfd5e0b3d83a5a132d142f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def MontePythonLike.Likelihood_sn.__init__</definition>
+        <argsstring>(self, path, data, command_line)</argsstring>
+        <name>__init__</name>
+        <reimplements refid="classMontePythonLike_1_1Likelihood_1a9f7492f4aacddc71d387cd98933a20db">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>path</type>
+          <defname>path</defname>
+        </param>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>command_line</type>
+          <defname>command_line</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>It copies the content of self.path from the initialization routine of
+the :class:`Data &lt;data.Data&gt;` class, and defines a handful of useful
+methods, that every likelihood might need.
+
+If the nuisance parameters required to compute this likelihood are not
+defined (either fixed or varying), the code will stop.
+
+Parameters
+----------
+data : class
+    Initialized instance of :class:`Data &lt;data.Data&gt;`
+command_line : NameSpace
+    NameSpace containing the command line arguments</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.5.0/MontePythonLike.py" line="2779" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.5.0/MontePythonLike.py" bodystart="2779" bodyend="2810"/>
+      </memberdef>
+      <memberdef kind="function" id="classMontePythonLike_1_1Likelihood__sn_1ab08142f26535706be36e2f55faad9993" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def MontePythonLike.Likelihood_sn.read_configuration_file</definition>
+        <argsstring>(self)</argsstring>
+        <name>read_configuration_file</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Extract Python variables from the configuration file
+
+This routine performs the equivalent to the program &quot;inih&quot; used in the
+original c++ library.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.5.0/MontePythonLike.py" line="2811" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.5.0/MontePythonLike.py" bodystart="2811" bodyend="2842"/>
+      </memberdef>
+      <memberdef kind="function" id="classMontePythonLike_1_1Likelihood__sn_1aa9ef19b05807fed0b029262c92e612de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def MontePythonLike.Likelihood_sn.read_matrix</definition>
+        <argsstring>(self, path)</argsstring>
+        <name>read_matrix</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>path</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>extract the matrix from the path
+
+This routine uses the blazing fast pandas library (0.10 seconds to load
+a 740x740 matrix). If not installed, it uses a custom routine that is
+twice as slow (but still 4 times faster than the straightforward
+numpy.loadtxt method)
+
+.. note::
+
+    the length of the matrix is stored on the first line... then it has
+    to be unwrapped. The pandas routine read_csv understands this
+    immediatly, though.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.5.0/MontePythonLike.py" line="2843" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.5.0/MontePythonLike.py" bodystart="2843" bodyend="2871"/>
+      </memberdef>
+      <memberdef kind="function" id="classMontePythonLike_1_1Likelihood__sn_1a422a7bd2d3dd4e8e81aa0f132f28ac99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def MontePythonLike.Likelihood_sn.read_light_curve_parameters</definition>
+        <argsstring>(self)</argsstring>
+        <name>read_light_curve_parameters</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Read the file jla_lcparams.txt containing the SN data
+
+.. note::
+
+    the length of the resulting array should be equal to the length of
+    the covariance matrices stored in C00, etc...</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.5.0/MontePythonLike.py" line="2872" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.5.0/MontePythonLike.py" bodystart="2872" bodyend="2895"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MontePythonLike.Likelihood_sn</label>
+        <link refid="classMontePythonLike_1_1Likelihood__sn"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>object</label>
+      </node>
+      <node id="2">
+        <label>MontePythonLike.Likelihood</label>
+        <link refid="classMontePythonLike_1_1Likelihood"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MontePythonLike.Likelihood_sn</label>
+        <link refid="classMontePythonLike_1_1Likelihood__sn"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>object</label>
+      </node>
+      <node id="2">
+        <label>MontePythonLike.Likelihood</label>
+        <link refid="classMontePythonLike_1_1Likelihood"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" line="2376" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/montepythonlike/3.3.0/MontePythonLike.py" bodystart="2376" bodyend="2495"/>
+    <listofallmembers>
+      <member refid="classMontePythonLike_1_1Likelihood__sn_1a5a2856ebe1dfd5e0b3d83a5a132d142f" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>__init__</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood__sn_1a5a2856ebe1dfd5e0b3d83a5a132d142f" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>__init__</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a97ebff9c54532b18e46bca282e91324f" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>add_contamination_spectra</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a97ebff9c54532b18e46bca282e91324f" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>add_contamination_spectra</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a292608fe142cbc66bcfc5a62c0c8cba5" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>add_nuisance_prior</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a292608fe142cbc66bcfc5a62c0c8cba5" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>add_nuisance_prior</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a71902d23c369807b5f464b1abf418892" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>computeLikelihood</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a71902d23c369807b5f464b1abf418892" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>computeLikelihood</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a9fd70c782482cf8ceed633e696308da4" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>data_directory</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1ae9bf5af937608f0cc8d715aaeab46333" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>default_values</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1aa6c68f2868da79f600c9a1fdc912e799" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>dictionary</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1affd984f54083d2657a384fd6c2351203" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>folder</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1ac1ff5b8bdb6b8b48db3fbd216f166bd4" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>get_cl</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1ac1ff5b8bdb6b8b48db3fbd216f166bd4" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>get_cl</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1ae7c283d2d9fbd1592cbd27e35d5554cb" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>get_unlensed_cl</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1ae7c283d2d9fbd1592cbd27e35d5554cb" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>get_unlensed_cl</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a1bd59854b9f84f9bf89641bf981b3493" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>loglkl</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a1bd59854b9f84f9bf89641bf981b3493" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>loglkl</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a10cd4f121ecb1cb51ab9554fadee0d06" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>name</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a64c1e8d6dddb5bfd86ea2276168cc207" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>need_cosmo_arguments</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a64c1e8d6dddb5bfd86ea2276168cc207" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>need_cosmo_arguments</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1acf6becb7edae22da01cbbde936c343eb" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>need_update</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a57046108c907a13cdd55fcd65b811191" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>nuisance</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a9b3ab577e3c9ab16a7254579755078ee" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>path</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a06115ca87159872058c023f95791dd30" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>raise_fiducial_model_err</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a06115ca87159872058c023f95791dd30" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>raise_fiducial_model_err</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood__sn_1ab08142f26535706be36e2f55faad9993" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>read_configuration_file</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood__sn_1ab08142f26535706be36e2f55faad9993" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>read_configuration_file</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a0bc7beb0fbbeed0d73b5d661f1749c7f" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>read_contamination_spectra</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a0bc7beb0fbbeed0d73b5d661f1749c7f" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>read_contamination_spectra</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a18aba084dc45c091734638bbdee49592" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>read_from_file</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1a18aba084dc45c091734638bbdee49592" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>read_from_file</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood__sn_1a422a7bd2d3dd4e8e81aa0f132f28ac99" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>read_light_curve_parameters</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood__sn_1a422a7bd2d3dd4e8e81aa0f132f28ac99" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>read_light_curve_parameters</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood__sn_1aa9ef19b05807fed0b029262c92e612de" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>read_matrix</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood__sn_1aa9ef19b05807fed0b029262c92e612de" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>read_matrix</name></member>
+      <member refid="classMontePythonLike_1_1Likelihood_1afa2fc3acbed69456b390f9d5c2665804" prot="public" virt="non-virtual"><scope>MontePythonLike::Likelihood_sn</scope><name>use_nuisance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

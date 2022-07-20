@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="SimpleHist_8hpp" kind="file" language="C++">
+    <compoundname>SimpleHist.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="yes">gambit/Utils/util_types.hpp</includes>
+    <includes local="yes">gambit/cmake/cmake_variables.hpp</includes>
+    <includes local="yes">gambit/Elements/daFunk.hpp</includes>
+    <includedby refid="DarkBit__types_8hpp" local="yes">DarkBit_types.hpp</includedby>
+    <includedby refid="SimpleHist_8cpp" local="yes">SimpleHist.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>SimpleHist.hpp</label>
+        <link refid="SimpleHist_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>gambit/Elements/daFunk.hpp</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>gambit/cmake/cmake_variables.hpp</label>
+      </node>
+      <node id="4">
+        <label>gambit/Utils/util_types.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>DarkBit_types.hpp</label>
+        <link refid="DarkBit__types_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DarkBit_types.cpp</label>
+        <link refid="DarkBit__types_8cpp"/>
+      </node>
+      <node id="4">
+        <label>SimpleHist.cpp</label>
+        <link refid="SimpleHist_8cpp"/>
+      </node>
+      <node id="1">
+        <label>SimpleHist.hpp</label>
+        <link refid="SimpleHist_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structGambit_1_1DarkBit_1_1SimpleHist" prot="public">Gambit::DarkBit::SimpleHist</innerclass>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1DarkBit">Gambit::DarkBit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Type definition header for DarkBit SimpleHist types.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Lars A. Dal (<ulink url="mailto:l.a.dal@fys.uio.no">l.a.dal@fys.uio.no</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2015 Feb</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__SimpleHist_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SimpleHist_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/util_types.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/cmake/cmake_variables.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/daFunk.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DarkBit</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structGambit_1_1DarkBit_1_1SimpleHist" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1DarkBit_1_1SimpleHist" kindref="compound">SimpleHist</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist" kindref="compound">SimpleHist</ref>(){}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist" kindref="compound">SimpleHist</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nBins,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Emin,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Emax,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>logscale);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist" kindref="compound">SimpleHist</ref>(std::vector&lt;double&gt;<sp/>binLower);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1ad010b9d0c35e54bd4708682f758cd2f3" kindref="member">addEvent</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>E,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>weight=1.0);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1a74ae7ffdbd61a48a895f987b59e33706" kindref="member">addToBin</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>weight=1.0);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1aabb2a0743a74e331c0a2a524ec0dcaa3" kindref="member">addBox</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Emin,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Emax,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>weight=1.0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1a5cb48b86b99f1fafe3a09c429db34116" kindref="member">addHistAsWeights_sameBin</ref>(<ref refid="structGambit_1_1DarkBit_1_1SimpleHist" kindref="compound">SimpleHist</ref><sp/>&amp;in);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1a862f66a6c74a6ddf35cc85608cae489f" kindref="member">getError</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1a695a151b884a0ff0a64fdc603c211a6c" kindref="member">getRelError</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1a1321ef150dc32779234469fa3e6cf5aa" kindref="member">divideByBinSize</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1a70b8f27305269748be3c12bd08cad720" kindref="member">multiply</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1a5037bdeb2df0d5c8d14dd1cfd69ee1db" kindref="member">findIndex</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1a80498efd43fc762ad144e0d6f17f3735" kindref="member">binSize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1a2ad9dd743592363b7dc45314a2834fa0" kindref="member">binCenter</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1a8f404cd5deac96722c763a6c38b741c7" kindref="member">getBinCenters</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>getBinValues()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getEdges(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>lower,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>upper)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>binLower;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>binVals;</highlight></codeline>
+<codeline lineno="95" refid="structGambit_1_1DarkBit_1_1SimpleHist_1ab9b0037ee9dd0ad2723da0c49edf8a1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="structGambit_1_1DarkBit_1_1SimpleHist_1ab9b0037ee9dd0ad2723da0c49edf8a1b" kindref="member">wtSq</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nBins;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;str,<sp/>std::map&lt;str,<sp/>Gambit::DarkBit::SimpleHist&gt;<sp/>&gt;<sp/>simpleHistContainter;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;str,<sp/>int&gt;<sp/>stringIntMap;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;str,<sp/>daFunk::Funk&gt;<sp/>stringFunkMap;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>defined<sp/>__SimpleHist_hpp__</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/SimpleHist.hpp"/>
+  </compounddef>
+</doxygen>

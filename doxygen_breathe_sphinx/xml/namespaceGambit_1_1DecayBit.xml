@@ -1,0 +1,2272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceGambit_1_1DecayBit" kind="namespace" language="C++">
+    <compoundname>Gambit::DecayBit</compoundname>
+    <innernamespace refid="namespaceGambit_1_1DecayBit_1_1MSSM__H">Gambit::DecayBit::MSSM_H</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1DecayBit_1_1MSSM__Z">Gambit::DecayBit::MSSM_Z</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1DecayBit_1_1SM__Z">Gambit::DecayBit::SM_Z</innernamespace>
+      <sectiondef kind="user-defined">
+      <header>Helper functions for DecayBit</header>
+      <memberdef kind="function" id="DecayBit_8cpp_1a436da6adac48af9283c0bcf5433c82d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DecayBit::sqrt_lambda</definition>
+        <argsstring>(double a, double b, double c)</argsstring>
+        <name>sqrt_lambda</name>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Square root of the standard kinematic function lambda(a,b,c) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="81" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a32b1ebae3b8c626a73705c2be8af62ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>std::complex&lt;double&gt; Gambit::DecayBit::BW</definition>
+        <argsstring>(double q2, double m2, double imag_term)</argsstring>
+        <name>BW</name>
+        <param>
+          <type>double</type>
+          <declname>q2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>imag_term</declname>
+        </param>
+        <briefdescription>
+<para>Breit-Wigner pole (complex) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="84" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1afdeb0424b6f26c145dce2fb24947c8b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::check_width</definition>
+        <argsstring>(const str &amp;info, double &amp;w, bool raise_invalid_pt_negative_width=false, bool raise_invalid_pt_large_width=false)</argsstring>
+        <name>check_width</name>
+        <param>
+          <type>const str &amp;</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>raise_invalid_pt_negative_width</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>raise_invalid_pt_large_width</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Check if a width is negative or suspiciously large and raise an error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="92" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="92" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a5ec858ee92831e182ad7c453dc7cbd09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::compute_SM_higgs_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result, double mh)</argsstring>
+        <name>compute_SM_higgs_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mh</declname>
+        </param>
+        <briefdescription>
+<para>Populate SM Higgs decay channels for a higgs mass of m_h. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="114" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="114" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a6599d85345afe17c9a7453ee86676aae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::set_FH_neutral_h_decay</definition>
+        <argsstring>(DecayTable::Entry &amp;result, int iH, const fh_Couplings_container &amp;FH_input, const mass_es_pseudonyms &amp;psn, bool invalidate, bool SM)</argsstring>
+        <name>set_FH_neutral_h_decay</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iH</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1fh__Couplings__container" kindref="compound">fh_Couplings_container</ref> &amp;</type>
+          <declname>FH_input</declname>
+        </param>
+        <param>
+          <type>const mass_es_pseudonyms &amp;</type>
+          <declname>psn</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>invalidate</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>SM</declname>
+        </param>
+        <briefdescription>
+<para>Set neutral h decays computed by FeynHiggs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="145" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="145" bodyend="258"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>DecayBit module functions</header>
+      <memberdef kind="function" id="DecayBit_8cpp_1ad62dd7a946cba400eb59167604efbabd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::W_plus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>W_plus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: W+ Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="270" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="270" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a61f323a09134323bb3a8101fe9e92761" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::Z_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>Z_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: Z Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="285" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="285" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aef925caa3054e8c3f03964caa71849f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::t_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>t_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: t Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="317" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="317" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aee5a791dbc32145b1911714099bf1e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::mu_plus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>mu_plus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: mu+ Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="329" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="329" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ad93a6a154878624624c3d5c3f416c3af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::tau_plus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>tau_plus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: tau+ Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="341" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="341" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1acffcb31263e66a812ce155068e5fbce0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::pi_0_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>pi_0_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: pi0 Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="360" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="360" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1af5e311b952396bd917311bf6c6e083b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::pi_plus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>pi_plus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: pi+ Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="375" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="375" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ac20043aaf2aac1d7e7b086ca5b837af8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::eta_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>eta_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: eta Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="388" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="388" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ac8bbc0fd3f14acd08440b17b0a48f5dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::rho_0_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>rho_0_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: rho0 Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="399" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="399" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a7f5ca6cf70f62986d0b56019047758cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::rho_plus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>rho_plus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: rho+ Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="410" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="410" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a44b3414a43cd49deb46b98ee180b5fb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::omega_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>omega_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: omega Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="421" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="421" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1abdb2e85ab59e23e2d9e79c96dc8d1fb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::rho1450_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>rho1450_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: rho1450 Reference: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="432" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="432" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a9a1b33a64fb654a723241ddad7b4f8e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::W_minus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>W_minus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SM decays: conjugates </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="443" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="443" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1afb4f5f4f531366c7cb58491880a7f883" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::tbar_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>tbar_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="444" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="444" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a213696bc48de9375e1dee0c96bd93ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::mu_minus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>mu_minus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="445" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="445" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1afe1d073d3d1160f5a4891c65b514328e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::tau_minus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>tau_minus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="446" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="446" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a34edf556712d18e77db2b38954969c8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::pi_minus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>pi_minus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="447" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="447" bodyend="447"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a4521c722ec3598b6f23596f05ade8281" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::rho_minus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>rho_minus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="448" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="448" bodyend="448"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="DecayBit_8cpp_1a492f824bd256026b7a68a579e7f8f750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::Ref_SM_Higgs_decays_table</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>Ref_SM_Higgs_decays_table</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Reference SM Higgs decays. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These functions are given a different capability to regular decay functions, to allow other module functions to specifically depend on the SM values for reference, even when scanning another model. Reference SM Higgs decays from LHCHiggsXSWG: most SM-like Higgs </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="460" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="460" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a868707b3be364612ddf7fbdb4893e75d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::Ref_SM_other_Higgs_decays_table</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>Ref_SM_other_Higgs_decays_table</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Reference SM Higgs decays from LHCHiggsXSWG: least SM-like Higgs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="477" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="477" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a6f9dac27fc79b4742e63aeb3d782c7d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::Ref_SM_A0_decays_table</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>Ref_SM_A0_decays_table</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Reference SM Higgs decays from LHCHiggsXSWG: A0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="486" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="486" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a58452095356f6d947bf8a15cf17cc307" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::Ref_SM_Higgs_decays_FeynHiggs</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>Ref_SM_Higgs_decays_FeynHiggs</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Reference SM Higgs decays from FeynHiggs: h0_1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="494" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="494" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a421740dbf56592d5b03fbcac4a9ac5c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::Ref_SM_other_Higgs_decays_FH</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>Ref_SM_other_Higgs_decays_FH</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Reference SM Higgs decays from FeynHiggs: h0_2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="503" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="503" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aa41f5d4c8d893d506d614393df4ea343" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::Ref_SM_A0_decays_FH</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>Ref_SM_A0_decays_FH</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Reference SM Higgs decays from FeynHiggs: A0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="512" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="512" bodyend="517"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="DecayBit_8cpp_1afdbbc161d9043e37595509b9f4a18e72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::H_minus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>H_minus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MSSM decays: conjugates </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2811" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2811" bodyend="2811"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1af0c9494138c705e6ac8ad3f0b5dd02b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::stopbar_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>stopbar_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2812" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2812" bodyend="2812"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a43f4d088180c9813d800854bb06c4e78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::stopbar_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>stopbar_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2813" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2813" bodyend="2813"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a06b1114aa1fd831d5ff535a511c95985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sbottombar_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sbottombar_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2814" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2814" bodyend="2814"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a2d80d16fd9a1f4c93c36472ea8f9a23f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sbottombar_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sbottombar_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2815" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2815" bodyend="2815"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1af34901c87f42c86284db5390cb108d98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::supbar_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>supbar_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2816" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2816" bodyend="2816"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a36148e2e55119db8e291e7b86cf5c51e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::supbar_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>supbar_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2817" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2817" bodyend="2817"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ae857d2b9fd56b7bc5f27a6623502aaa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sdownbar_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sdownbar_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2818" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2818" bodyend="2818"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1af5cb0c53da333b1183db4d9a53219ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sdownbar_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sdownbar_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2819" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2819" bodyend="2819"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a512a0430546ab416f039688af0eb153b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::scharmbar_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>scharmbar_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2820" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2820" bodyend="2820"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a7212504210638e200fe5c94026538757" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::scharmbar_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>scharmbar_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2821" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2821" bodyend="2821"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a6fbd942a22c540d7b2c4f63d0524f263" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sstrangebar_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sstrangebar_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2822" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2822" bodyend="2822"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a81ad9dbb8676a34b32086b5cdcfe7c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sstrangebar_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sstrangebar_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2823" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2823" bodyend="2823"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aa85d2966199099a40c3ee88fd823cc64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::selectronbar_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>selectronbar_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2824" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2824" bodyend="2824"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aef5bbad00504bd3bd0c37d4f37434b84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::selectronbar_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>selectronbar_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2825" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2825" bodyend="2825"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a84daf914f877eedb9554509daadbeef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::smuonbar_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>smuonbar_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2826" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2826" bodyend="2826"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a43657ea5a67c8d45dba90d93da63478f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::smuonbar_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>smuonbar_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2827" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2827" bodyend="2827"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a36a43cb365fabf21b34841751ac8ec55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::staubar_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>staubar_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2828" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2828" bodyend="2828"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a35bd6d591d976ab18e33cc37639fe284" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::staubar_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>staubar_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2829" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2829" bodyend="2829"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a5d8dc5638ca3bc64a4313cca2e7ae40f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::snubar_electronl_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>snubar_electronl_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2830" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2830" bodyend="2830"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a2b8b795bd8ea9a9d4b1ec6166b986127" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::snubar_muonl_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>snubar_muonl_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2831" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2831" bodyend="2831"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1acf7eb2559eeab2f79d36ac20a9ea1e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::snubar_taul_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>snubar_taul_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2832" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2832" bodyend="2832"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a9f5c20963c5627af6d8c5df19ba5699c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::chargino_minus_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>chargino_minus_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2833" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2833" bodyend="2833"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a4546b23d73fdf3375d5b6dfdca90ce06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::chargino_minus_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>chargino_minus_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2834" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2834" bodyend="2834"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="decay__utils_8hpp_1a0767294e533730e2db5ac5c17b9bcab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DecayTable::Entry</type>
+        <definition>DecayTable::Entry Gambit::DecayBit::CP_conjugate</definition>
+        <argsstring>(const DecayTable::Entry &amp;)</argsstring>
+        <name>CP_conjugate</name>
+        <param>
+          <type>const DecayTable::Entry &amp;</type>
+          <defname>in</defname>
+        </param>
+        <briefdescription>
+<para>Construct a decay table entry for a particle from the entry for its antiparticle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a decay table entry for a particle, from the entry for its antiparticle. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/decay_utils.cpp" line="27" column="23" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/decay_utils.cpp" bodystart="27" bodyend="61" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/decay_utils.hpp" declline="27" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aa677a5d710b763b439342733cc6ca856" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::SM_Higgs_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>SM_Higgs_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SM decays: Higgs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="522" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="522" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a84984b90f2826c497e444b4a8396f675" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::FeynHiggs_t_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>FeynHiggs_t_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FeynHiggs MSSM decays: t Reference for total width: 2017 PDG </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="532" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="532" bodyend="544"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ab32cfae818189124ec3e8f695b95c5bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::FeynHiggs_MSSM_h0_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>FeynHiggs_MSSM_h0_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>FeynHiggs MSSM decays: h0_1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="547" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="547" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a5375317255f3b00201f9fa8ceb72093d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::FeynHiggs_h0_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>FeynHiggs_h0_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>FeynHiggs MSSM decays: h0_2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="555" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="555" bodyend="560"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aa6858d1425e255d321ada2d8ae547ade" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::FeynHiggs_A0_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>FeynHiggs_A0_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>FeynHiggs MSSM decays: A0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="563" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="563" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a62668ed083866eb557516ebf0ca7d894" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::FeynHiggs_H_plus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>FeynHiggs_H_plus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>FeynHiggs MSSM decays: H+. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="571" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="571" bodyend="659"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a5220d2fad3dc1602b055d8a499d18c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::MSSM_h0_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>MSSM_h0_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: h0_1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="662" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="662" bodyend="728"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ab812be2d4d3952dde9d1afad7522afe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::h0_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>h0_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: h0_2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="731" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="731" bodyend="799"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a501e638fc38e167eb9f94c872ffa6c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::A0_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>A0_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: A0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="802" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="802" bodyend="850"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ad46b880b0c6bbbe37a2bbfaf527e64fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::H_plus_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>H_plus_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: H_plus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="853" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="853" bodyend="891"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a436e026b73599e13111bdc210f79c38e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::gluino_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>gluino_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: gluino. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="894" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="894" bodyend="973"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a71653c78ef43a128bdf61ea3b07ad6d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::stop_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>stop_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: stop_1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="976" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="976" bodyend="1051"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a1fd626107054bf7c1bc9ac6d51f8ca01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::stop_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>stop_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: stop_2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1054" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1054" bodyend="1124"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a9a116dbd683b32fade8c3fd9600be340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sbottom_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sbottom_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: sbottom_1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1127" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1127" bodyend="1172"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1afaf32e4e9d332bdafcb6f6815cc5b790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sbottom_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sbottom_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: sbottom_2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1175" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1175" bodyend="1237"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a3a4e5847f5a3fe206ebe21d18e379960" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sup_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sup_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: sup_l. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1240" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1240" bodyend="1257"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a2dda401c8e738d4a0acf5f16fe9e43c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sup_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sup_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: sup_r. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1260" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1260" bodyend="1274"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a7dfb3e67230af58bebd6dbc4f4a75227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sdown_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sdown_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: sdown_l. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1277" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1277" bodyend="1291"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aac9e1152041271e453a3343511839726" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sdown_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sdown_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: sdown_r. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1294" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1294" bodyend="1308"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a85f6f626ed34d66112d2ad972c54c098" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::scharm_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>scharm_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: scharm_l. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1311" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1311" bodyend="1325"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a34d9c26847439557664e70d0d94a3b63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::scharm_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>scharm_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: scharm_r. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1328" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1328" bodyend="1342"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1adac2c8dd2387af770a0f5c15c8db3089" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sstrange_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sstrange_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: sstrange_l. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1345" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1345" bodyend="1359"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a038af6dc8ad45feb915b38fbc2181aea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::sstrange_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>sstrange_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: sstrange_r. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1362" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1362" bodyend="1376"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1acde36be917718aa6918e45c0747531c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::selectron_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>selectron_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: selectron_l. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1379" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1379" bodyend="1392"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a1c441eca5b12578c2bbf64b5eb25a541" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::selectron_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>selectron_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: selectron_r. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1395" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1395" bodyend="1408"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1abaec2f9b89e52b37c77e8d275c851dd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::smuon_l_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>smuon_l_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: smuon_l. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1411" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1411" bodyend="1424"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ab246240ea5149c65fef7db9387b4bde9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::smuon_r_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>smuon_r_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: smuon_r. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1427" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1427" bodyend="1440"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a446a96b731ac60546f10741469c48acd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::stau_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>stau_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>MSSM decays: stau_1 (Uses SUSY-HIT results or dedicated DecayBit calculation for small mass splittings) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1443" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1443" bodyend="1457"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a81a85fe4b324b9da7aa91301dba22758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::stau_1_decays_SH</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>stau_1_decays_SH</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: stau_1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1460" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1460" bodyend="1480"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aa73bfccc76e1c9123fc7300e9b8a6baa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::stau_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>stau_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: stau_2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1483" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1483" bodyend="1507"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a52ab25430dc0d668b065742ae11a91fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::snu_electronl_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>snu_electronl_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: snu_electronl. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1510" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1510" bodyend="1523"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a5f34ec6aee439919a92fcb968c20824e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::snu_muonl_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>snu_muonl_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: snu_muonl. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1526" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1526" bodyend="1539"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ae9d95ceb57b3582472293e8acc3cb842" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::snu_taul_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>snu_taul_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SUSY-HIT MSSM decays: snu_taul Note that SUSY-HIT calls ~nu_tau_L &quot;snutau1&quot; even though it has no RH (~)nus. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1543" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1543" bodyend="1564"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a9cfd6b45302bed000d7c514f609b33db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::chargino_plus_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>chargino_plus_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>MSSM decays: chargino_plus_1 (Uses SUSY-HIT results or dedicated DecayBit calculation for small mass splittings) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1567" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1567" bodyend="1581"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a0a76ea694ac960af1b8c2c299f312a58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::chargino_plus_1_decays_SH</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>chargino_plus_1_decays_SH</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: chargino_plus_1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1584" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1584" bodyend="1655"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1af9299104af29a6f390d08cd504aaa201" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::chargino_plus_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>chargino_plus_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: chargino_plus_2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1658" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1658" bodyend="1745"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a3a668f30232926c05c2a4ac8d5196bc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::neutralino_1_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>neutralino_1_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: neutralino_1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1748" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1748" bodyend="1849"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ac59a7bdbd6b31253e01562b48cae573f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::neutralino_2_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>neutralino_2_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: neutralino_2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1852" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1852" bodyend="1970"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a33d272568a9304ec56431c1317fdcaf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::neutralino_3_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>neutralino_3_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: neutralino_3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="1973" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="1973" bodyend="2108"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a5febe29ebf9f8349ea166c7252dc0c5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::neutralino_4_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>neutralino_4_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>SUSY-HIT MSSM decays: neutralino_4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2111" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2111" bodyend="2263"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1acd4913fb26f347f9145afda87bb8b021" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::chargino_plus_1_decays_smallsplit</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>chargino_plus_1_decays_smallsplit</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MSSM decays: chargino decays for small chargino<ndash/>neutralino mass splitting. Using results from hep-ph/9607421. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2268" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2268" bodyend="2585"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aca25373ffb657301513762f102cf9d3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::stau_1_decays_smallsplit</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>stau_1_decays_smallsplit</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MSSM decays: stau decays for small stau<ndash/>neutralino mass splitting. Using results from T. Jittoh, J. Sato, T. Shimomura, M. Yamanaka, Phys. Rev. D73 (2006), hep-ph/0512197 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2590" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2590" bodyend="2807"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1abb671f18b724cfada43b5af4b11e94a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::ScalarSingletDM_Higgs_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>ScalarSingletDM_Higgs_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Add the decay of Higgs to singlets for the ScalarSingletDM models. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2841" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2841" bodyend="2888"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aeb2b3c265729f4895e2abd17a0c7cdf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::VectorSingletDM_Higgs_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>VectorSingletDM_Higgs_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Add the decay of Higgs to vectors for the VectorSingletDM models (see arXiv:1512.06458v4) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2893" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2893" bodyend="2930"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a88f96d4531c831a00acf076aabfd11b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::MajoranaSingletDM_Higgs_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>MajoranaSingletDM_Higgs_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Add the decay of Higgs to Majorana fermions for the MajoranaSingletDM models (see arXiv:1512.06458v4) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2935" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2935" bodyend="2973"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a213090194d9c6460747e0a789e125be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::DiracSingletDM_Higgs_decays</definition>
+        <argsstring>(DecayTable::Entry &amp;result)</argsstring>
+        <name>DiracSingletDM_Higgs_decays</name>
+        <param>
+          <type>DecayTable::Entry &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Add the decay of Higgs to Dirac fermions for the DiracSingletDM models (see arXiv:1512.06458v4) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="2978" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="2978" bodyend="3016"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ace37478244bc40944c6730a11d21fa4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::all_decays</definition>
+        <argsstring>(DecayTable &amp;decays)</argsstring>
+        <name>all_decays</name>
+        <param>
+          <type>DecayTable &amp;</type>
+          <declname>decays</declname>
+        </param>
+        <briefdescription>
+<para>Collect all the DecayTable entries into an actual DecayTable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Spit out the full decay table as SLHA1 and SLHA2 files.</para>
+<para>Invalidate MSSM points that have a stable charged particle?</para>
+<para>Check all particles for negative decay width</para>
+<para>Spit out the full decay table as an SLHA file.</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3022" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3022" bodyend="3206"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a02485b434a292fb00a5909e1a8ddc724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::all_decays_from_SLHA</definition>
+        <argsstring>(DecayTable &amp;decays)</argsstring>
+        <name>all_decays_from_SLHA</name>
+        <param>
+          <type>DecayTable &amp;</type>
+          <declname>decays</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read an SLHA2 file in and use it to create a GAMBIT DecayTable. Note that creating a DecayTable from an SLHA1 file is not possible at present. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3210" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3210" bodyend="3227"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1afb13fcc6a9cc15c307ac1ecebe516376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::get_decaytable_as_map</definition>
+        <argsstring>(map_str_dbl &amp;map)</argsstring>
+        <name>get_decaytable_as_map</name>
+        <param>
+          <type>map_str_dbl &amp;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Convert the DecayTable to a format where we can print each individual channel&apos;s BF. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Otherwise just print the specific, named channels</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3230" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3230" bodyend="3310"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a346d7267b1edc7b10fae9c5fb34432ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::get_mass_es_pseudonyms</definition>
+        <argsstring>(mass_es_pseudonyms &amp;result)</argsstring>
+        <name>get_mass_es_pseudonyms</name>
+        <param>
+          <type>mass_es_pseudonyms &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Get MSSM mass eigenstate pseudonyms for the gauge eigenstates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3314" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3314" bodyend="3323"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a40933b8672581af0bae9c8c72a72f1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::check_first_sec_gen_mixing</definition>
+        <argsstring>(int &amp;result)</argsstring>
+        <name>check_first_sec_gen_mixing</name>
+        <param>
+          <type>int &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SLHA1 mixing check flag This gets set non-zero if first or second generation left-right mixing exceeds the specified tolerance (which means that SLHA1 is an invalid format for this model point). 1 = u, 2 = d, 3 = c, 4 = s, 5 = e, 6 = mu </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3330" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3330" bodyend="3361"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a4d6921b8e66d190b4f75169c717e9ea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>daFunk::Funk</type>
+        <definition>daFunk::Funk Gambit::DecayBit::get_Higgs_invWidth_chi2</definition>
+        <argsstring>(std::string filename)</argsstring>
+        <name>get_Higgs_invWidth_chi2</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3366" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3366" bodyend="3372"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a4aaed67e4b2ac0d31adef9cabace2670" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::MSSM_inv_Higgs_BF</definition>
+        <argsstring>(double &amp;BF)</argsstring>
+        <name>MSSM_inv_Higgs_BF</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>BF</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Branching fraction for Higgs into pair of lightest neutralinos</para>
+<para><simplesect kind="warning"><para>Tree-level formulas </para>
+</simplesect>
+<simplesect kind="warning"><para>Assumes decoupling limit for Higgs mixing angle <formula id="42">\[ \alpha = \beta - \frac12 \pi \]</formula> </para>
+</simplesect>
+<simplesect kind="warning"><para>Only includes neutralinos, charginos and SM-like width in total width</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>BF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><formula id="43">$\textrm{BR}(h\to\chi^0_1\chi^0_1)$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3375" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3375" bodyend="3471"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ac9922bb693d3f345bc0b0d5b5bb2a1dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::ScalarSingletDM_inv_Higgs_BF</definition>
+        <argsstring>(double &amp;BF)</argsstring>
+        <name>ScalarSingletDM_inv_Higgs_BF</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>BF</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Branching fraction for Higgs into scalar singlet DM <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>BF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><formula id="44">$\textrm{BR}(h\to S S)$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3473" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3473" bodyend="3481"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a2c377c781b089a64168ff1b7107ff4ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::VectorSingletDM_inv_Higgs_BF</definition>
+        <argsstring>(double &amp;BF)</argsstring>
+        <name>VectorSingletDM_inv_Higgs_BF</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>BF</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Branching fraction for Higgs into vector singlet DM <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>BF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><formula id="45">$\textrm{BR}(h\to V V)$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3483" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3483" bodyend="3491"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1aac90c93900fa0d37bc54f3cfcada364f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::MajoranaSingletDM_inv_Higgs_BF</definition>
+        <argsstring>(double &amp;BF)</argsstring>
+        <name>MajoranaSingletDM_inv_Higgs_BF</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>BF</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Branching fraction for Higgs into Majorana singlet DM <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>BF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><formula id="46">$\textrm{BR}(h\to X X)$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3493" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3493" bodyend="3501"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1acbecaf1260437a6e5a0a75b0d142a8d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::DiracSingletDM_inv_Higgs_BF</definition>
+        <argsstring>(double &amp;BF)</argsstring>
+        <name>DiracSingletDM_inv_Higgs_BF</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>BF</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Branching fraction for Higgs into Dirac singlet DM <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>BF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><formula id="47">$\textrm{BR}(h\to F F)$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3503" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3503" bodyend="3511"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a5e9c2f470381c2e9ed6eedbba41abdee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::lnL_Higgs_invWidth_SMlike</definition>
+        <argsstring>(double &amp;lnL)</argsstring>
+        <name>lnL_Higgs_invWidth_SMlike</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>lnL</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Log-likelihood for Higgs invisible branching ratio</para>
+<para>We use log-likelihoods extracted from e.g., <ulink url="http://cms-results.web.cern.ch/cms-results/public-results/
+preliminary-results/HIG-17-023/CMS-PAS-HIG-17-023_Figure_007-b.png">CMS-PAS-HIG-17-023</ulink></para>
+<para>There are scripts <programlisting><codeline><highlight class="normal">python<sp/>./DecayBit/data/convolve_with_theory.py<sp/>&lt;file&gt;<sp/>&lt;frac_error&gt;<sp/>&lt;min&gt;<sp/>&lt;max&gt;</highlight></codeline>
+</programlisting> for convolving a data file with a fractional theory error, and <programlisting><codeline><highlight class="normal">python<sp/>./DecayBit/data/profile_theory.py<sp/>&lt;file&gt;<sp/>&lt;frac_error&gt;<sp/>&lt;min&gt;<sp/>&lt;max&gt;</highlight></codeline>
+</programlisting> for profiling a fractional theory error.</para>
+<para>There are a few data files, e.g., <programlisting><codeline><highlight class="normal">./DecayBit/data/arXiv_1306.2941_Figure_8.dat</highlight></codeline>
+<codeline><highlight class="normal">./DecayBit/data/CMS-PAS-HIG-17-023_Figure_7-b.dat</highlight></codeline>
+<codeline><highlight class="normal">./DecayBit/data/CMS-PAS-HIG-17-023_Figure_7-b_10_convolved.dat</highlight></codeline>
+<codeline><highlight class="normal">./DecayBit/data/CMS-PAS-HIG-17-023_Figure_7-b_10_profiled.dat</highlight></codeline>
+</programlisting> The first one is the default. The third and fourth ones include a 10% theory uncertainty in the branching fraction by convolving it and profiling it, respectively. The data file is specified in the YAML by the <computeroutput>BR_h_inv_chi2_data_file</computeroutput> option. The path is relative to the GAMBIT directory, <computeroutput>GAMBIT_DIR</computeroutput>.</para>
+<para><simplesect kind="warning"><para>This typically assumes that the Higgs is otherwise SM-like, i.e., no changes to production cross sections or any other decays.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lnL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Log-likelihood for Higgs invisible branching ratio</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3513" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3513" bodyend="3565"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a3b20dade556716e0fd67ad7c111475e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::lnL_Z_inv</definition>
+        <argsstring>(double &amp;lnL)</argsstring>
+        <name>lnL_Z_inv</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>lnL</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Log-likelihood from LEP measurements of <formula id="37">$Z$</formula>-boson invisible width</para>
+<para><simplesect kind="warning"><para>This is valid for SM, RHN models and for MSSM-like models with Z-boson invisible decays to neutralinos and neutrinos</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lnL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Log-likelihood</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3567" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3567" bodyend="3596"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1ab9eabc0fbcd032fb377e6057c750e0a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::Z_gamma_nu_2l</definition>
+        <argsstring>(triplet&lt; double &gt; &amp;gamma)</argsstring>
+        <name>Z_gamma_nu_2l</name>
+        <param>
+          <type>triplet&lt; double &gt; &amp;</type>
+          <declname>gamma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Calculate width of <formula id="37">$Z$</formula> decays to neutrinos (with RHN correction if present), <formula id="48">$\Gamma(Z\to\nu\nu)$</formula> at two-loop in GeV</para>
+<para><simplesect kind="warning"><para>This uses input <formula id="49">$\alpha(M_Z)$</formula> - does not include input light-quark thresholds.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gamma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><formula id="50">$\Gamma(Z\to\chi\chi)$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3598" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3598" bodyend="3658"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a0fe18a69a6ff394d90cb283e6d580c87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::Z_gamma_chi_0_MSSM_tree</definition>
+        <argsstring>(triplet&lt; double &gt; &amp;gamma)</argsstring>
+        <name>Z_gamma_chi_0_MSSM_tree</name>
+        <param>
+          <type>triplet&lt; double &gt; &amp;</type>
+          <declname>gamma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Calculate width of <formula id="37">$Z$</formula> decays to the lightest neutralinos, <formula id="51">$\Gamma(Z\to\chi^0_1\chi^0_1)$</formula> in GeV</para>
+<para><simplesect kind="warning"><para>Tree-level formula with 10% error</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gamma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><formula id="51">$\Gamma(Z\to\chi^0_1\chi^0_1)$</formula></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3660" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3660" bodyend="3702"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a38c742fddf9d93ba03b1e280c7382877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::RHN_W_to_l_decays</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;result)</argsstring>
+        <name>RHN_W_to_l_decays</name>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3705" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3705" bodyend="3725"/>
+      </memberdef>
+      <memberdef kind="function" id="DecayBit_8cpp_1a8ca19e4870a6a3746f52b0c445bb9f26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DecayBit::lnL_W_decays_chi2</definition>
+        <argsstring>(double &amp;result)</argsstring>
+        <name>lnL_W_decays_chi2</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" line="3728" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/src/DecayBit.cpp" bodystart="3728" bodyend="3747"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DecayBit/include/gambit/DecayBit/decay_utils.hpp" line="24" column="1"/>
+  </compounddef>
+</doxygen>

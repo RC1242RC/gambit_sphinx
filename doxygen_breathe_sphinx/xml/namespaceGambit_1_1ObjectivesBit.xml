@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceGambit_1_1ObjectivesBit" kind="namespace" language="C++">
+    <compoundname>Gambit::ObjectivesBit</compoundname>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ObjectivesBit_8cpp_1a43822839396038af358466e27658adf2" prot="public" static="no">
+        <type><ref refid="classGambit_1_1Models_1_1safe__param__map" kindref="compound">Gambit::Models::safe_param_map</ref>&lt; <ref refid="classGambit_1_1safe__ptr" kindref="compound">Gambit::safe_ptr</ref>&lt; const double &gt; &gt;</type>
+        <definition>typedef Gambit::Models::safe_param_map&lt;Gambit::safe_ptr&lt;const double&gt; &gt; Gambit::ObjectivesBit::map</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="38" column="44" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a3ebfbeda60d826f47753ea2c871a6ea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Gambit::ObjectivesBit::get_arguments</definition>
+        <argsstring>(map param)</argsstring>
+        <name>get_arguments</name>
+        <param>
+          <type><ref refid="classGambit_1_1Models_1_1safe__param__map" kindref="compound">map</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="40" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="40" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1ac8934f729f5433c77a5d93b019654f21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::gaussian</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>gaussian</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="51" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="51" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a2f97d64b6d559e13356a250f4df5ffd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::ObjectivesBit::rosenbrock</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>rosenbrock</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="70" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1ad43faec5db2e065616f4de2a6ace91bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::ObjectivesBit::rosenbrock</definition>
+        <argsstring>(std::vector&lt; double &gt; x)</argsstring>
+        <name>rosenbrock</name>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="77" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="77" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a1644b5ec3c86fcf9cc875fe8baddc82c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::rosenbrock</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>rosenbrock</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+<para>See <ulink url="https://en.wikipedia.org/wiki/Rosenbrock_function">https://en.wikipedia.org/wiki/Rosenbrock_function</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="89" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="89" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a42ac780be7b5f49609556877d10a4feb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::himmelblau</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>himmelblau</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+<para>See <ulink url="https://en.wikipedia.org/wiki/Himmelblau%27s_function">https://en.wikipedia.org/wiki/Himmelblau%27s_function</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="97" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="97" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a127bf260d74375ccb3d2edda5ac73043" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::mccormick</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>mccormick</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="105" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="105" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a028d7fe0da23cc0978ccfc5d95850aae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::ackley</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>ackley</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+<para>See <ulink url="https://en.wikipedia.org/wiki/Ackley_function">https://en.wikipedia.org/wiki/Ackley_function</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="115" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="115" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1acf799bff31aa9be74a570f3d4818c765" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::eggbox</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>eggbox</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+<para>Test problem 2 from <ulink url="https://arxiv.org/abs/1306.2144">https://arxiv.org/abs/1306.2144</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="132" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="132" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1ab11766dd2088d574feda50ce2469590a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::rastrigin</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>rastrigin</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+<para>See <ulink url="https://en.wikipedia.org/wiki/Rastrigin_function">https://en.wikipedia.org/wiki/Rastrigin_function</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="145" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="145" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a454e69d7424d07d6570fddcb67217222" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::beale</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>beale</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="159" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="159" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1ac9cc033d65c379ca061eae014d68606c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::ObjectivesBit::logaddexp</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>logaddexp</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="168" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a105a5048cd5ece692747613e17831eba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::shells</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>shells</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+<para>Test problem 1 from <ulink url="https://arxiv.org/abs/1306.2144">https://arxiv.org/abs/1306.2144</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="174" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="174" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a3f9b81a7f43478cef16a9e7c3ea3a3b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::styblinski_tang</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>styblinski_tang</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="198" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="198" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a6d259011070bc9e22770daa3d36c7513" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::easom</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>easom</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="212" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="212" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1ada86397c6eace6f215a35ca25a1895b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::tf1</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>tf1</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+<para>Analytic function 1 from <ulink url="https://arxiv.org/abs/2101.04525">https://arxiv.org/abs/2101.04525</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="221" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="221" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a4db28494480ce5af1125a07e649ad0ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::tf2</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>tf2</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+<para>Analytic function 2 from <ulink url="https://arxiv.org/abs/2101.04525">https://arxiv.org/abs/2101.04525</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="246" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="246" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1a1a051c278801e3f8bc325ba803675722" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::tf3</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>tf3</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+<para>Analytic function 3 from <ulink url="https://arxiv.org/abs/2101.04525">https://arxiv.org/abs/2101.04525</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="262" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="262" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="ObjectivesBit_8cpp_1af155f22a8f1ad2e9ba545848ab8eb64b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ObjectivesBit::tf4</definition>
+        <argsstring>(double &amp;loglike)</argsstring>
+        <name>tf4</name>
+        <param>
+          <type>double &amp;</type>
+          <declname>loglike</declname>
+        </param>
+        <briefdescription>
+<para>Analytic function 4 from <ulink url="https://arxiv.org/abs/2101.04525">https://arxiv.org/abs/2101.04525</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="280" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" bodystart="280" bodyend="294"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ObjectivesBit/src/ObjectivesBit.cpp" line="37" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1MultiNest_1_1LogLikeWrapper" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::MultiNest::LogLikeWrapper</compoundname>
+    <includes refid="multinest_8hpp" local="no">multinest.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1MultiNest_1_1LogLikeWrapper_1ab61dbee6e8f241a093222880934e14cb" prot="private" static="no" mutable="no">
+        <type><ref refid="multinest_8hpp_1a3bd627ea10ee343b45a29ba96ef183b9" kindref="member">scanPtr</ref></type>
+        <definition>scanPtr Gambit::MultiNest::LogLikeWrapper::boundLogLike</definition>
+        <argsstring></argsstring>
+        <name>boundLogLike</name>
+        <briefdescription>
+<para>Scanner pointer (points to the ScannerBit provided log-likelihood function) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" line="61" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1MultiNest_1_1LogLikeWrapper_1abf62f42dc7e8e1376cabdf7475dcf09e" prot="private" static="no" mutable="no">
+        <type>printer_interface &amp;</type>
+        <definition>printer_interface&amp; Gambit::MultiNest::LogLikeWrapper::boundPrinter</definition>
+        <argsstring></argsstring>
+        <name>boundPrinter</name>
+        <briefdescription>
+<para>Reference to a printer_interface object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" line="64" column="31" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1MultiNest_1_1LogLikeWrapper_1a1520a5ebab8ada5e2c36526fccf77e0b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::MultiNest::LogLikeWrapper::dumper_runonce</definition>
+        <argsstring></argsstring>
+        <name>dumper_runonce</name>
+        <briefdescription>
+<para>Variable to indicate whether the dumper function has been run at least once. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" line="67" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1MultiNest_1_1LogLikeWrapper_1a849365fb4aa3de55daa39e7a3feafc15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::MultiNest::LogLikeWrapper::LogLikeWrapper</definition>
+        <argsstring>(scanPtr, printer_interface &amp;)</argsstring>
+        <name>LogLikeWrapper</name>
+        <param>
+          <type><ref refid="multinest_8hpp_1a3bd627ea10ee343b45a29ba96ef183b9" kindref="member">scanPtr</ref></type>
+          <defname>loglike</defname>
+        </param>
+        <param>
+          <type>printer_interface &amp;</type>
+          <defname>printer</defname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classGambit_1_1MultiNest_1_1LogLikeWrapper" kindref="compound">LogLikeWrapper</ref> Constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" line="71" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/multinest_3.10/multinest.cpp" bodystart="208" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1MultiNest_1_1LogLikeWrapper_1aa028a57d12da27737a177f7739925135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::MultiNest::LogLikeWrapper::LogLike</definition>
+        <argsstring>(double *, int, int)</argsstring>
+        <name>LogLike</name>
+        <param>
+          <type>double *</type>
+          <defname>Cube</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ndim</defname>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Main interface function from MultiNest to ScannerBit-supplied loglikelihood function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Main interface function from MultiNest to ScannerBit-supplied loglikelihood function This is the function that will be passed to Multinest as the loglike callback routine</para>
+<para>Input arguments ndim = dimensionality (total number of free parameters) of the problem npars = total number of free plus derived parameters context = void pointer, any additional information</para>
+<para>Input/Output arguments Cube[npars] = on entry has the ndim parameters in unit-hypercube on exit, the physical parameters plus copy any derived parameters you want to store with the free parameters</para>
+<para>Output arguments lnew = loglikelihood </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" line="74" column="20" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/multinest_3.10/multinest.cpp" bodystart="229" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1MultiNest_1_1LogLikeWrapper_1a968815716208bbc83bf2494032f49476" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::MultiNest::LogLikeWrapper::dumper</definition>
+        <argsstring>(int, int, int, double *, double *, double *, double, double, double)</argsstring>
+        <name>dumper</name>
+        <param>
+          <type>int</type>
+          <defname>nSamples</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>nlive</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>nPar</defname>
+        </param>
+        <param>
+          <type>double *</type>
+          <defname>physLive</defname>
+        </param>
+        <param>
+          <type>double *</type>
+          <defname>posterior</defname>
+        </param>
+        <param>
+          <type>double *</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+<para>Main interface to MultiNest dumper routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Main interface to MultiNest dumper routine The dumper routine will be called every updInt*10 iterations MultiNest does not need to the user to do anything. User can use the arguments in whichever way he/she wants</para>
+<para>Arguments:</para>
+<para>nSamples = total number of samples in posterior distribution nlive = total number of live points nPar = total number of parameters (free + derived) physLive[1][nlive * (nPar + 1)] = 2D array containing the last set of live points (physical parameters plus derived parameters) along with their loglikelihood values TODO: Multinest uses the likelihood of the lowest live point as the &quot;threshold&quot; for iterating, i.e. it throws out the live point if it finds a better one. So we can use this number to update the GAMBIT &apos;cutoff&apos; threshold when evaluating the likelihood function. posterior[1][nSamples * (nPar + 2)] = posterior distribution containing nSamples points. Each sample has nPar parameters (physical + derived) along with the their loglike value &amp; posterior probability paramConstr[0][0] to paramConstr[0][nPar - 1] = mean values of the parameters paramConstr[0][nPar] to paramConstr[0][2*nPar - 1] = standard deviation of the parameters paramConstr[0][nPar*2] to paramConstr[0][3*nPar - 1] = best-fit (maxlike) parameters paramConstr[0][nPar*4] to paramConstr[0][4*nPar - 1] = MAP (maximum-a-posteriori) parameters paramConstr[1][4*nPar] = ???? maxLogLike = maximum loglikelihood value logZ = log evidence value logZerr = error on log evidence value context = void pointer, any additional information </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" line="77" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/multinest_3.10/multinest.cpp" bodystart="275" bodyend="363"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class to connect multinest log-likelihood function and ScannerBit likelihood function. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" line="58" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/multinest/multinest.hpp" bodystart="57" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1MultiNest_1_1LogLikeWrapper_1ab61dbee6e8f241a093222880934e14cb" prot="private" virt="non-virtual"><scope>Gambit::MultiNest::LogLikeWrapper</scope><name>boundLogLike</name></member>
+      <member refid="classGambit_1_1MultiNest_1_1LogLikeWrapper_1abf62f42dc7e8e1376cabdf7475dcf09e" prot="private" virt="non-virtual"><scope>Gambit::MultiNest::LogLikeWrapper</scope><name>boundPrinter</name></member>
+      <member refid="classGambit_1_1MultiNest_1_1LogLikeWrapper_1a968815716208bbc83bf2494032f49476" prot="public" virt="non-virtual"><scope>Gambit::MultiNest::LogLikeWrapper</scope><name>dumper</name></member>
+      <member refid="classGambit_1_1MultiNest_1_1LogLikeWrapper_1a1520a5ebab8ada5e2c36526fccf77e0b" prot="private" virt="non-virtual"><scope>Gambit::MultiNest::LogLikeWrapper</scope><name>dumper_runonce</name></member>
+      <member refid="classGambit_1_1MultiNest_1_1LogLikeWrapper_1aa028a57d12da27737a177f7739925135" prot="public" virt="non-virtual"><scope>Gambit::MultiNest::LogLikeWrapper</scope><name>LogLike</name></member>
+      <member refid="classGambit_1_1MultiNest_1_1LogLikeWrapper_1a849365fb4aa3de55daa39e7a3feafc15" prot="public" virt="non-virtual"><scope>Gambit::MultiNest::LogLikeWrapper</scope><name>LogLikeWrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

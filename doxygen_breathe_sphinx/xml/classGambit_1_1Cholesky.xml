@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1Cholesky" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::Cholesky</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1Cholesky_1a39b37e3ef4e4f8fbc4c026e29237a78a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;double&gt; &gt; Gambit::Cholesky::el</definition>
+        <argsstring></argsstring>
+        <name>el</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" line="29" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1Cholesky_1a714f86a09c193a6ff69a85752efdadab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Cholesky::Cholesky</definition>
+        <argsstring>()</argsstring>
+        <name>Cholesky</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" line="32" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Cholesky_1af8138eeffd87cbd3e649ddd2600e92ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Cholesky::Cholesky</definition>
+        <argsstring>(const int num)</argsstring>
+        <name>Cholesky</name>
+        <param>
+          <type>const int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" line="34" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Cholesky_1a4201aad57ae90f0ba1c1b8b19e3d433e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::Cholesky::EnterMat</definition>
+        <argsstring>(std::vector&lt; std::vector&lt; double &gt;&gt; &amp;a)</argsstring>
+        <name>EnterMat</name>
+        <param>
+          <type>std::vector&lt; std::vector&lt; double &gt;&gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" line="36" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" bodystart="36" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Cholesky_1ac342423ea3a6b40bc0c7f0502636ca47" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Cholesky::ElMult</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;y) const</argsstring>
+        <name>ElMult</name>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" line="69" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" bodystart="69" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Cholesky_1aaa74c39bc411b534ca2e59964806502b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Gambit::Cholesky::invElMult</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;y) const</argsstring>
+        <name>invElMult</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>x = L^-1 y where L is the lower-diagonal <ref refid="classGambit_1_1Cholesky" kindref="compound">Cholesky</ref> matrix </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Found by forward substituion since L is lower-diagonal. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" line="91" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" bodystart="91" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Cholesky_1acde706f3570e5f8b4e9d35b1011530be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::Cholesky::Square</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;y0)</argsstring>
+        <name>Square</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>y0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" line="106" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" bodystart="106" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Cholesky_1a52eeafdf0a553e1769dcf68bf917eff3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::Cholesky::DetSqrt</definition>
+        <argsstring>()</argsstring>
+        <name>DetSqrt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" line="127" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" bodystart="127" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" line="27" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/cholesky.hpp" bodystart="26" bodyend="135"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1Cholesky_1a714f86a09c193a6ff69a85752efdadab" prot="public" virt="non-virtual"><scope>Gambit::Cholesky</scope><name>Cholesky</name></member>
+      <member refid="classGambit_1_1Cholesky_1af8138eeffd87cbd3e649ddd2600e92ed" prot="public" virt="non-virtual"><scope>Gambit::Cholesky</scope><name>Cholesky</name></member>
+      <member refid="classGambit_1_1Cholesky_1a52eeafdf0a553e1769dcf68bf917eff3" prot="public" virt="non-virtual"><scope>Gambit::Cholesky</scope><name>DetSqrt</name></member>
+      <member refid="classGambit_1_1Cholesky_1a39b37e3ef4e4f8fbc4c026e29237a78a" prot="private" virt="non-virtual"><scope>Gambit::Cholesky</scope><name>el</name></member>
+      <member refid="classGambit_1_1Cholesky_1ac342423ea3a6b40bc0c7f0502636ca47" prot="public" virt="non-virtual"><scope>Gambit::Cholesky</scope><name>ElMult</name></member>
+      <member refid="classGambit_1_1Cholesky_1a4201aad57ae90f0ba1c1b8b19e3d433e" prot="public" virt="non-virtual"><scope>Gambit::Cholesky</scope><name>EnterMat</name></member>
+      <member refid="classGambit_1_1Cholesky_1aaa74c39bc411b534ca2e59964806502b" prot="public" virt="non-virtual"><scope>Gambit::Cholesky</scope><name>invElMult</name></member>
+      <member refid="classGambit_1_1Cholesky_1acde706f3570e5f8b4e9d35b1011530be" prot="public" virt="non-virtual"><scope>Gambit::Cholesky</scope><name>Square</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

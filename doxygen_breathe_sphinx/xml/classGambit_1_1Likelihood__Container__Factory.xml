@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1Likelihood__Container__Factory" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::Likelihood_Container_Factory</compoundname>
+    <basecompoundref refid="classGambit_1_1Scanner_1_1Factory__Base" prot="public" virt="non-virtual">Gambit::Scanner::Factory_Base</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container__Factory_1ad3820d5317b7eb80ad3ab7da8fdbac3c" prot="private" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1DRes_1_1DependencyResolver" kindref="compound">DRes::DependencyResolver</ref> &amp;</type>
+        <definition>DRes::DependencyResolver&amp; Gambit::Likelihood_Container_Factory::dependencyResolver</definition>
+        <argsstring></argsstring>
+        <name>dependencyResolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" line="59" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container__Factory_1a2acaeebededfd8551c5450d9e03e1a6a" prot="private" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1IniParser_1_1IniFile" kindref="compound">IniParser::IniFile</ref> &amp;</type>
+        <definition>IniParser::IniFile&amp; Gambit::Likelihood_Container_Factory::iniFile</definition>
+        <argsstring></argsstring>
+        <name>iniFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" line="60" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container__Factory_1afa414747bd69169fd0d118beb8af16c4" prot="private" static="no" mutable="no">
+        <type>std::map&lt; str, primary_model_functor * &gt;</type>
+        <definition>std::map&lt;str, primary_model_functor *&gt; Gambit::Likelihood_Container_Factory::functorMap</definition>
+        <argsstring></argsstring>
+        <name>functorMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" line="61" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container__Factory_1a45c482ddbed686e619e7c7a469c77d5b" prot="private" static="no" mutable="no">
+        <type>Printers::BaseBasePrinter &amp;</type>
+        <definition>Printers::BaseBasePrinter&amp; Gambit::Likelihood_Container_Factory::printer</definition>
+        <argsstring></argsstring>
+        <name>printer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" line="62" column="33" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1Likelihood__Container__Factory_1a53ed1b90d16090bddf700ba5e01258db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Likelihood_Container_Factory::Likelihood_Container_Factory</definition>
+        <argsstring>(const gambit_core &amp;core, DRes::DependencyResolver &amp;dependencyResolver, IniParser::IniFile &amp;iniFile, Printers::BaseBasePrinter &amp;printer)</argsstring>
+        <name>Likelihood_Container_Factory</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1gambit__core" kindref="compound">gambit_core</ref> &amp;</type>
+          <declname>core</declname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1DRes_1_1DependencyResolver" kindref="compound">DRes::DependencyResolver</ref> &amp;</type>
+          <declname>dependencyResolver</declname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1IniParser_1_1IniFile" kindref="compound">IniParser::IniFile</ref> &amp;</type>
+          <declname>iniFile</declname>
+        </param>
+        <param>
+          <type>Printers::BaseBasePrinter &amp;</type>
+          <declname>printer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" line="65" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/container_factory.cpp" bodystart="32" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Likelihood__Container__Factory_1a90fe576d19c2058228ef5db75e51e1ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Likelihood_Container_Factory::~Likelihood_Container_Factory</definition>
+        <argsstring>()</argsstring>
+        <name>~Likelihood_Container_Factory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" line="67" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Likelihood__Container__Factory_1a125bb9e8449f0159da5101db147d4f3f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * Gambit::Likelihood_Container_Factory::operator()</definition>
+        <argsstring>(const str &amp;purpose) const</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classGambit_1_1Scanner_1_1Factory__Base_1a1d8cb267c173c943ee82033bf1207b72">operator()</reimplements>
+        <param>
+          <type>const str &amp;</type>
+          <declname>purpose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" line="68" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/container_factory.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Gambit::Scanner::Factory_Base</label>
+        <link refid="classGambit_1_1Scanner_1_1Factory__Base"/>
+      </node>
+      <node id="1">
+        <label>Gambit::Likelihood_Container_Factory</label>
+        <link refid="classGambit_1_1Likelihood__Container__Factory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Gambit::Scanner::Factory_Base</label>
+        <link refid="classGambit_1_1Scanner_1_1Factory__Base"/>
+      </node>
+      <node id="1">
+        <label>Gambit::Likelihood_Container_Factory</label>
+        <link refid="classGambit_1_1Likelihood__Container__Factory"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" line="57" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/container_factory.hpp" bodystart="56" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1Likelihood__Container__Factory_1ad3820d5317b7eb80ad3ab7da8fdbac3c" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container_Factory</scope><name>dependencyResolver</name></member>
+      <member refid="classGambit_1_1Likelihood__Container__Factory_1afa414747bd69169fd0d118beb8af16c4" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container_Factory</scope><name>functorMap</name></member>
+      <member refid="classGambit_1_1Likelihood__Container__Factory_1a2acaeebededfd8551c5450d9e03e1a6a" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container_Factory</scope><name>iniFile</name></member>
+      <member refid="classGambit_1_1Likelihood__Container__Factory_1a53ed1b90d16090bddf700ba5e01258db" prot="public" virt="non-virtual"><scope>Gambit::Likelihood_Container_Factory</scope><name>Likelihood_Container_Factory</name></member>
+      <member refid="classGambit_1_1Likelihood__Container__Factory_1a125bb9e8449f0159da5101db147d4f3f" prot="public" virt="virtual"><scope>Gambit::Likelihood_Container_Factory</scope><name>operator()</name></member>
+      <member refid="classGambit_1_1Likelihood__Container__Factory_1a45c482ddbed686e619e7c7a469c77d5b" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container_Factory</scope><name>printer</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Factory__Base_1a2cceaa913b153f16a416e6e62eabcbdf" prot="public" virt="virtual"><scope>Gambit::Likelihood_Container_Factory</scope><name>~Factory_Base</name></member>
+      <member refid="classGambit_1_1Likelihood__Container__Factory_1a90fe576d19c2058228ef5db75e51e1ad" prot="public" virt="non-virtual"><scope>Gambit::Likelihood_Container_Factory</scope><name>~Likelihood_Container_Factory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

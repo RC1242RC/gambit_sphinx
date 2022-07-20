@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1Likelihood__Container" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::Likelihood_Container</compoundname>
+    <basecompoundref refid="classGambit_1_1Scanner_1_1Function__Base" prot="public" virt="non-virtual">Gambit::Scanner::Function_Base&lt; double(std::unordered_map&lt; std::string, double &gt; &amp;)&gt;</basecompoundref>
+    <includes refid="likelihood__container_8hpp" local="no">likelihood_container.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a786e31e436441de29319b11e0f217cbe" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; DRes::VertexID &gt;</type>
+        <definition>std::vector&lt;DRes::VertexID&gt; Gambit::Likelihood_Container::target_vertices</definition>
+        <argsstring></argsstring>
+        <name>target_vertices</name>
+        <briefdescription>
+<para>Graph vertices corresponding to functors in the ObsLike section of yaml file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="51" column="19" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a468f23270ec416d79696a381d0eaeb71" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; DRes::VertexID &gt;</type>
+        <definition>std::vector&lt;DRes::VertexID&gt; Gambit::Likelihood_Container::aux_vertices</definition>
+        <argsstring></argsstring>
+        <name>aux_vertices</name>
+        <briefdescription>
+<para>Graph vertices corresponding to additional functors not in ObsLike part of yaml file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="54" column="19" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a2b99f29d36d5b020c09f75a6a0795f37" prot="private" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1DRes_1_1DependencyResolver" kindref="compound">DRes::DependencyResolver</ref> &amp;</type>
+        <definition>DRes::DependencyResolver&amp; Gambit::Likelihood_Container::dependencyResolver</definition>
+        <argsstring></argsstring>
+        <name>dependencyResolver</name>
+        <briefdescription>
+<para>Bound dependency resolver object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="57" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a23eeb385392ba87588e4f92b99f3e908" prot="private" static="no" mutable="no">
+        <type>Printers::BaseBasePrinter &amp;</type>
+        <definition>Printers::BaseBasePrinter&amp; Gambit::Likelihood_Container::printer</definition>
+        <argsstring></argsstring>
+        <name>printer</name>
+        <briefdescription>
+<para>Bound printer object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="60" column="33" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a34452261bf459b4b0161f8ac06f964ca" prot="private" static="no" mutable="no">
+        <type>std::map&lt; str, primary_model_functor * &gt;</type>
+        <definition>std::map&lt;str, primary_model_functor *&gt; Gambit::Likelihood_Container::functorMap</definition>
+        <argsstring></argsstring>
+        <name>functorMap</name>
+        <briefdescription>
+<para>Map of parameter names to values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Map of scanned model names to primary model functors </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="66" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1ac080f6304c9d122cf3b0787f2f574993" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::Likelihood_Container::min_valid_lnlike</definition>
+        <argsstring></argsstring>
+        <name>min_valid_lnlike</name>
+        <briefdescription>
+<para>Primary value of the log likelihood at which a point is considered so unlikely that it can be ruled out (invalid). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="69" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a5601ada94986a46aca9e8fd707d73111" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::Likelihood_Container::alt_min_valid_lnlike</definition>
+        <argsstring></argsstring>
+        <name>alt_min_valid_lnlike</name>
+        <briefdescription>
+<para>Alternate value for the minimum log likelihood (scanner can trigger a switch to this in special circumstances) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="72" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a7abc551a6be611c9a474914185fec087" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::Likelihood_Container::active_min_valid_lnlike</definition>
+        <argsstring></argsstring>
+        <name>active_min_valid_lnlike</name>
+        <briefdescription>
+<para>Active value for the minimum log likelihood (one of the above two values, whichever is currently in-use) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="75" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a1a30b840bbd93b82a12e21237bec8d8c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::Likelihood_Container::print_invalid_points</definition>
+        <argsstring></argsstring>
+        <name>print_invalid_points</name>
+        <briefdescription>
+<para>Switch to print or not print invalid points to the output file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="78" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a862435ec775471d6018a8e36965de568" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::Likelihood_Container::disable_print_for_lnlike_below</definition>
+        <argsstring></argsstring>
+        <name>disable_print_for_lnlike_below</name>
+        <briefdescription>
+<para>Disable printing for points with log likelihood below some value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="81" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1aa1f18e5f4a48c957a203a04b3a42205e" prot="private" static="no" mutable="no">
+        <type>str</type>
+        <definition>str Gambit::Likelihood_Container::lnlike_modifier_name</definition>
+        <argsstring></argsstring>
+        <name>lnlike_modifier_name</name>
+        <briefdescription>
+<para>Option to modify the total likelihood function before passing it to the scanner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="84" column="11" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1ac125877b7bb45af80f421d44c54518d8" prot="private" static="no" mutable="no">
+        <type>Options</type>
+        <definition>Options Gambit::Likelihood_Container::lnlike_modifier_params</definition>
+        <argsstring></argsstring>
+        <name>lnlike_modifier_params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="85" column="15" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1aa8f762b3a8420cc2045440e6e34d01f1" prot="private" static="no" mutable="no">
+        <type>std::map&lt; DRes::VertexID, str &gt;</type>
+        <definition>std::map&lt;DRes::VertexID,str&gt; Gambit::Likelihood_Container::return_types</definition>
+        <argsstring></argsstring>
+        <name>return_types</name>
+        <briefdescription>
+<para>Map of return types of target functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="88" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1aada96146f4af95c5e851105d02fe2b16" prot="private" static="no" mutable="no">
+        <type>std::chrono::time_point&lt; std::chrono::system_clock &gt;</type>
+        <definition>std::chrono::time_point&lt;std::chrono::system_clock&gt; Gambit::Likelihood_Container::previous_startL</definition>
+        <argsstring></argsstring>
+        <name>previous_startL</name>
+        <briefdescription>
+<para>Global record of time that last likelihood evaluation began, for computing true total iteration time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="91" column="31" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1aefd27d4d806ee935852534e7721656a7" prot="private" static="no" mutable="no">
+        <type>std::chrono::time_point&lt; std::chrono::system_clock &gt;</type>
+        <definition>std::chrono::time_point&lt;std::chrono::system_clock&gt; Gambit::Likelihood_Container::previous_endL</definition>
+        <argsstring></argsstring>
+        <name>previous_endL</name>
+        <briefdescription>
+<para>Global record of time that last likelihood evaluation ended, for computing intra-iteration overhead time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="93" column="31" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1ab8837ec0b09b738ba0af6adb0ea663fb" prot="private" static="no" mutable="no">
+        <type>const str</type>
+        <definition>const str Gambit::Likelihood_Container::intralooptime_label</definition>
+        <argsstring></argsstring>
+        <name>intralooptime_label</name>
+        <briefdescription>
+<para>Print labels for timing data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="96" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1aa9abe0f1a2fe234b9f75b4883f2333a8" prot="private" static="no" mutable="no">
+        <type>const str</type>
+        <definition>const str Gambit::Likelihood_Container::interlooptime_label</definition>
+        <argsstring></argsstring>
+        <name>interlooptime_label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="97" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a9a02cef9b9edaef97a112c0bf8c439a0" prot="private" static="no" mutable="no">
+        <type>const str</type>
+        <definition>const str Gambit::Likelihood_Container::totallooptime_label</definition>
+        <argsstring></argsstring>
+        <name>totallooptime_label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="98" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1adeaaa0e00b2d1bf201cad983ed93e8a7" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Gambit::Likelihood_Container::intraloopID</definition>
+        <argsstring></argsstring>
+        <name>intraloopID</name>
+        <briefdescription>
+<para>printer IDs for timing data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="101" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a5fc8fbfaa05b6e829911112627f23e33" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Gambit::Likelihood_Container::interloopID</definition>
+        <argsstring></argsstring>
+        <name>interloopID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="102" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a239db01e2bf5535d5729555670d497bf" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Gambit::Likelihood_Container::totalloopID</definition>
+        <argsstring></argsstring>
+        <name>totalloopID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="103" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a016ff1d861819546dd87df5e919c37b5" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Gambit::Likelihood_Container::invalidcodeID</definition>
+        <argsstring></argsstring>
+        <name>invalidcodeID</name>
+        <briefdescription>
+<para>Invalid Code printing ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="106" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Likelihood__Container_1a3dffd897575b4592ec121f890f40be51" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::Likelihood_Container::debug</definition>
+        <argsstring></argsstring>
+        <name>debug</name>
+        <briefdescription>
+<para>Run in likelihood debug mode? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="109" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1Likelihood__Container_1ae7233196bd570b3f3169a8cf8cc740cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Likelihood_Container::Likelihood_Container</definition>
+        <argsstring>(const std::map&lt; str, primary_model_functor * &gt; &amp;functorMap, DRes::DependencyResolver &amp;dependencyResolver, IniParser::IniFile &amp;iniFile, const str &amp;purpose, Printers::BaseBasePrinter &amp;printer)</argsstring>
+        <name>Likelihood_Container</name>
+        <param>
+          <type>const std::map&lt; str, primary_model_functor * &gt; &amp;</type>
+          <declname>functorMap</declname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1DRes_1_1DependencyResolver" kindref="compound">DRes::DependencyResolver</ref> &amp;</type>
+          <declname>dependencyResolver</declname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1IniParser_1_1IniFile" kindref="compound">IniParser::IniFile</ref> &amp;</type>
+          <declname>iniFile</declname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <declname>purpose</declname>
+        </param>
+        <param>
+          <type>Printers::BaseBasePrinter &amp;</type>
+          <declname>printer</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="114" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/likelihood_container.cpp" bodystart="49" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Likelihood__Container_1ab9c7697939a968437e9cdd378b9675cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Likelihood_Container::setParameters</definition>
+        <argsstring>(const std::unordered_map&lt; std::string, double &gt; &amp;)</argsstring>
+        <name>setParameters</name>
+        <param>
+          <type>const std::unordered_map&lt; std::string, double &gt; &amp;</type>
+          <defname>parameterMap</defname>
+        </param>
+        <briefdescription>
+<para>Do the prior transformation and populate the parameter map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="119" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/likelihood_container.cpp" bodystart="101" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Likelihood__Container_1a66db00b645d8e40a3e3dfd636bdd4b4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::Likelihood_Container::main</definition>
+        <argsstring>(std::unordered_map&lt; std::string, double &gt; &amp;in)</argsstring>
+        <name>main</name>
+        <param>
+          <type>std::unordered_map&lt; std::string, double &gt; &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate total likelihood function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="122" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/likelihood_container.cpp" bodystart="156" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Likelihood__Container_1a6454ed1c31dc423cfdae27323bb88bc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::Likelihood_Container::purposeModifier</definition>
+        <argsstring>(double lnlike)</argsstring>
+        <name>purposeModifier</name>
+        <param>
+          <type>double</type>
+          <declname>lnlike</declname>
+        </param>
+        <briefdescription>
+<para>Use this to modify the total likelihood function before passing it to the scanner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="125" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/likelihood_container.cpp" bodystart="379" bodyend="382"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for collecting pointers to all the likelihood components, then running and combining them. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Gambit::Likelihood_Container</label>
+        <link refid="classGambit_1_1Likelihood__Container"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Gambit::Scanner::Function_Base&lt; double(std::unordered_map&lt; std::string, double &gt; &amp;)&gt;</label>
+        <link refid="classGambit_1_1Scanner_1_1Function__Base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Gambit::Likelihood_Container</label>
+        <link refid="classGambit_1_1Likelihood__Container"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Gambit::Scanner::Function_Base&lt; double(std::unordered_map&lt; std::string, double &gt; &amp;)&gt;</label>
+        <link refid="classGambit_1_1Scanner_1_1Function__Base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" line="46" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/likelihood_container.hpp" bodystart="45" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1Likelihood__Container_1a7abc551a6be611c9a474914185fec087" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>active_min_valid_lnlike</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a5601ada94986a46aca9e8fd707d73111" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>alt_min_valid_lnlike</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a468f23270ec416d79696a381d0eaeb71" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>aux_vertices</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a3dffd897575b4592ec121f890f40be51" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>debug</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a2b99f29d36d5b020c09f75a6a0795f37" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>dependencyResolver</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a862435ec775471d6018a8e36965de568" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>disable_print_for_lnlike_below</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a34452261bf459b4b0161f8ac06f964ca" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>functorMap</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a5fc8fbfaa05b6e829911112627f23e33" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>interloopID</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1aa9abe0f1a2fe234b9f75b4883f2333a8" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>interlooptime_label</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1adeaaa0e00b2d1bf201cad983ed93e8a7" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>intraloopID</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1ab8837ec0b09b738ba0af6adb0ea663fb" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>intralooptime_label</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a016ff1d861819546dd87df5e919c37b5" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>invalidcodeID</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1ae7233196bd570b3f3169a8cf8cc740cf" prot="public" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>Likelihood_Container</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1aa1f18e5f4a48c957a203a04b3a42205e" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>lnlike_modifier_name</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1ac125877b7bb45af80f421d44c54518d8" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>lnlike_modifier_params</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a66db00b645d8e40a3e3dfd636bdd4b4b" prot="public" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>main</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1ac080f6304c9d122cf3b0787f2f574993" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>min_valid_lnlike</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1aefd27d4d806ee935852534e7721656a7" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>previous_endL</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1aada96146f4af95c5e851105d02fe2b16" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>previous_startL</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a1a30b840bbd93b82a12e21237bec8d8c" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>print_invalid_points</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a23eeb385392ba87588e4f92b99f3e908" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>printer</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a6454ed1c31dc423cfdae27323bb88bc6" prot="public" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>purposeModifier</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1aa8f762b3a8420cc2045440e6e34d01f1" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>return_types</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1ab9c7697939a968437e9cdd378b9675cd" prot="public" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>setParameters</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a786e31e436441de29319b11e0f217cbe" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>target_vertices</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a239db01e2bf5535d5729555670d497bf" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>totalloopID</name></member>
+      <member refid="classGambit_1_1Likelihood__Container_1a9a02cef9b9edaef97a112c0bf8c439a0" prot="private" virt="non-virtual"><scope>Gambit::Likelihood_Container</scope><name>totallooptime_label</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

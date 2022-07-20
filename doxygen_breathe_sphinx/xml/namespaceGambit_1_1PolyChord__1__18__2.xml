@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceGambit_1_1PolyChord__1__18__2" kind="namespace" language="C++">
+    <compoundname>Gambit::PolyChord_1_18_2</compoundname>
+    <innerclass refid="classGambit_1_1PolyChord__1__18__2_1_1LogLikeWrapper" prot="public">Gambit::PolyChord_1_18_2::LogLikeWrapper</innerclass>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="1_818_82_2polychord_8hpp_1a93be260c001caea530f7992b971c5d3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::PolyChord_1_18_2::callback_loglike</definition>
+        <argsstring>(double *, int, double *, int)</argsstring>
+        <name>callback_loglike</name>
+        <param>
+          <type>double *</type>
+          <defname>Cube</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>ndim</defname>
+        </param>
+        <param>
+          <type>double *</type>
+          <defname>phi</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>nderived</defname>
+        </param>
+        <briefdescription>
+<para>C-functions to pass to PolyChord for the callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Plain-vanilla functions to pass to PolyChord for the callback. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/polychord_1.18.2/polychord.cpp" line="264" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/polychord_1.18.2/polychord.cpp" bodystart="264" bodyend="270" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/polychord/1.18.2/polychord.hpp" declline="130" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="1_818_82_2polychord_8hpp_1ad30e98f2e0d947493c16634bffa8671f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::PolyChord_1_18_2::callback_dumper</definition>
+        <argsstring>(int, int, int, double *, double *, double *, double, double)</argsstring>
+        <name>callback_dumper</name>
+        <param>
+          <type>int</type>
+          <defname>ndead</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>nlive</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>npars</defname>
+        </param>
+        <param>
+          <type>double *</type>
+          <defname>live</defname>
+        </param>
+        <param>
+          <type>double *</type>
+          <defname>dead</defname>
+        </param>
+        <param>
+          <type>double *</type>
+          <defname>logweights</defname>
+        </param>
+        <param>
+          <type>double</type>
+          <defname>logZ</defname>
+        </param>
+        <param>
+          <type>double</type>
+          <defname>logZerr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/polychord_1.18.2/polychord.cpp" line="272" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/polychord_1.18.2/polychord.cpp" bodystart="272" bodyend="278" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/polychord/1.18.2/polychord.hpp" declline="131" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="1_818_82_2polychord_8hpp_1af3e7e02d32fad696d06ccaf7047c8ad8" prot="public" static="no">
+        <type><ref refid="classGambit_1_1Scanner_1_1like__ptr" kindref="compound">Gambit::Scanner::like_ptr</ref></type>
+        <definition>typedef Gambit::Scanner::like_ptr Gambit::PolyChord_1_18_2::scanPtr</definition>
+        <argsstring></argsstring>
+        <name>scanPtr</name>
+        <briefdescription>
+<para>Typedef for the ScannerBit pointer to the external loglikelihood function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/polychord/1.18.2/polychord.hpp" line="88" column="41" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/polychord/1.18.2/polychord.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="polychord__1_818_82_2polychord_8cpp_1ac6252564a1b97e025a7743182de1daed" prot="public" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1PolyChord__1__18__2_1_1LogLikeWrapper" kindref="compound">LogLikeWrapper</ref> *</type>
+        <definition>LogLikeWrapper* Gambit::PolyChord_1_18_2::global_loglike_object</definition>
+        <argsstring></argsstring>
+        <name>global_loglike_object</name>
+        <briefdescription>
+<para>Global pointer to loglikelihood wrapper object, for use in the PolyChord callback functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/polychord_1.18.2/polychord.cpp" line="52" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/polychord_1.18.2/polychord.cpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/polychord/1.18.2/polychord.hpp" line="85" column="1"/>
+  </compounddef>
+</doxygen>

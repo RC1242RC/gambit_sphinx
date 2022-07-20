@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="cats_8hpp" kind="file" language="C++">
+    <compoundname>cats.hpp</compoundname>
+      <sectiondef kind="user-defined">
+      <memberdef kind="define" id="cats_8hpp_1aa7c74d1cd12eae89a2d03f84ea2b8598" prot="public" static="no">
+        <name>CAT</name>
+        <param><defname>X</defname></param>
+        <param><defname>Y</defname></param>
+        <initializer>CAT2(X,Y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Concatenate macro arguments for 2-7 arguments. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" line="22" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cats_8hpp_1a5de61bdf852ad90a5ab09b253a303d52" prot="public" static="no">
+        <name>CAT2</name>
+        <param><defname>X</defname></param>
+        <param><defname>Y</defname></param>
+        <initializer>X##Y</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" line="23" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cats_8hpp_1ab0364423e918344013848c144cfa6b52" prot="public" static="no">
+        <name>CAT_2</name>
+        <initializer><ref refid="cats_8hpp_1aa7c74d1cd12eae89a2d03f84ea2b8598" kindref="member">CAT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" line="24" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cats_8hpp_1a69d75b48a2f007ff9ece8fcedb785def" prot="public" static="no">
+        <name>CAT_3</name>
+        <param><defname>X</defname></param>
+        <param><defname>Y</defname></param>
+        <param><defname>Z</defname></param>
+        <initializer><ref refid="cats_8hpp_1aa7c74d1cd12eae89a2d03f84ea2b8598" kindref="member">CAT</ref>(X,<ref refid="cats_8hpp_1aa7c74d1cd12eae89a2d03f84ea2b8598" kindref="member">CAT</ref>(Y,Z))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" line="25" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cats_8hpp_1a9a9c861f0dd56c456ae3fc0107153120" prot="public" static="no">
+        <name>CAT_4</name>
+        <param><defname>A</defname></param>
+        <param><defname>X</defname></param>
+        <param><defname>Y</defname></param>
+        <param><defname>Z</defname></param>
+        <initializer><ref refid="cats_8hpp_1aa7c74d1cd12eae89a2d03f84ea2b8598" kindref="member">CAT</ref>(A,CAT_3(X,Y,Z))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" line="26" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cats_8hpp_1a7e1f73fdeb4e4e02bdcd35a61ecade95" prot="public" static="no">
+        <name>CAT_5</name>
+        <param><defname>A</defname></param>
+        <param><defname>B</defname></param>
+        <param><defname>X</defname></param>
+        <param><defname>Y</defname></param>
+        <param><defname>Z</defname></param>
+        <initializer><ref refid="cats_8hpp_1aa7c74d1cd12eae89a2d03f84ea2b8598" kindref="member">CAT</ref>(A,CAT_4(B,X,Y,Z))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" line="27" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cats_8hpp_1a2008c2f1943f5f8a249dcd52cd3dfd38" prot="public" static="no">
+        <name>CAT_6</name>
+        <param><defname>A</defname></param>
+        <param><defname>B</defname></param>
+        <param><defname>C</defname></param>
+        <param><defname>X</defname></param>
+        <param><defname>Y</defname></param>
+        <param><defname>Z</defname></param>
+        <initializer><ref refid="cats_8hpp_1aa7c74d1cd12eae89a2d03f84ea2b8598" kindref="member">CAT</ref>(A,CAT_5(B,C,X,Y,Z))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" line="28" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cats_8hpp_1a3131ebdba7d9132b6f3753cff10de448" prot="public" static="no">
+        <name>CAT_7</name>
+        <param><defname>A</defname></param>
+        <param><defname>B</defname></param>
+        <param><defname>C</defname></param>
+        <param><defname>D</defname></param>
+        <param><defname>X</defname></param>
+        <param><defname>Y</defname></param>
+        <param><defname>Z</defname></param>
+        <initializer><ref refid="cats_8hpp_1aa7c74d1cd12eae89a2d03f84ea2b8598" kindref="member">CAT</ref>(A,CAT_6(B,C,D,X,Y,Z))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" line="29" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Concatenation macros</para>
+<para><hruler/>
+</para>
+<para>Authors:</para>
+<para><simplesect kind="author"><para>Pat Scott <linebreak/>
+ (<ulink url="mailto:patscott@physics.mcgill.ca">patscott@physics.mcgill.ca</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2014 Oct</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__cats_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__cats_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="cats_8hpp_1aa7c74d1cd12eae89a2d03f84ea2b8598" refkind="member"><highlight class="preprocessor">#define<sp/>CAT(X,Y)<sp/>CAT2(X,Y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAT2(X,Y)<sp/>X##Y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAT_2<sp/>CAT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAT_3(X,Y,Z)<sp/>CAT(X,CAT(Y,Z))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAT_4(A,X,Y,Z)<sp/>CAT(A,CAT_3(X,Y,Z))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAT_5(A,B,X,Y,Z)<sp/>CAT(A,CAT_4(B,X,Y,Z))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAT_6(A,B,C,X,Y,Z)<sp/>CAT(A,CAT_5(B,C,X,Y,Z))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAT_7(A,B,C,D,X,Y,Z)<sp/>CAT(A,CAT_6(B,C,D,X,Y,Z))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__cats_hpp__</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/cats.hpp"/>
+  </compounddef>
+</doxygen>

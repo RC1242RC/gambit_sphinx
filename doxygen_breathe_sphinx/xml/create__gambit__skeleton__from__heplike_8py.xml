@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="create__gambit__skeleton__from__heplike_8py" kind="file" language="Python">
+    <compoundname>create_gambit_skeleton_from_heplike.py</compoundname>
+    <innernamespace refid="namespacecreate__gambit__skeleton__from__heplike">create_gambit_skeleton_from_heplike</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>yaml<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>load</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>yaml<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>CLoader<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>Loader,<sp/>CDumper<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>Dumper</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>ImportError:</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>yaml<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Loader,<sp/>Dumper</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">get_data_from_yaml(path):</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(path,<sp/></highlight><highlight class="stringliteral">&apos;r&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>f:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/>load(f,<sp/>Loader=Loader)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">create_flavbit_function(capability_name,<sp/>*path_to_yaml):</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>likelihood_types<sp/>=<sp/>[get_data_from_yaml(path)[</highlight><highlight class="stringliteral">&apos;HL_Type&apos;</highlight><highlight class="normal">]<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>path<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>path_to_yaml]</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>likelihood_variable_names<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>likelihood_type[3].lower()<sp/>+<sp/>likelihood_type[4:]<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;_&apos;</highlight><highlight class="normal"><sp/>+<sp/>str(i)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i,<sp/>likelihood_type<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(likelihood_types)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>]</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>code_inputfiles<sp/>=<sp/>[</highlight><highlight class="stringliteral">&apos;static<sp/>const<sp/>std::string<sp/>inputfile_%s<sp/>=<sp/>path_to_latest_heplike_data()<sp/>+<sp/>&quot;/%s&quot;;&apos;</highlight><highlight class="normal"><sp/>%<sp/>(i,<sp/>path)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i,<sp/>path<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(path_to_yaml)]</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>code_likelihood_defs<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;static<sp/>HepLike_default::%s<sp/>%s(inputfile_%s);&apos;</highlight><highlight class="normal"><sp/>%<sp/>(likelihood_type,<sp/>likelihood_variable_name,<sp/>i)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i,<sp/>(likelihood_type,<sp/>likelihood_variable_name)<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enumerate(zip(likelihood_types,<sp/>likelihood_variable_names))]</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>code_read_inputs<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;std::cout<sp/>&lt;&lt;<sp/>&quot;Debug:<sp/>Reading<sp/>HepLike<sp/>data<sp/>file:<sp/>&quot;<sp/>&lt;&lt;<sp/>inputfile_%s<sp/>&lt;&lt;<sp/>endl;\n<sp/><sp/><sp/><sp/><sp/><sp/>%s.Read();&apos;</highlight><highlight class="normal"><sp/>%<sp/>(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i,<sp/>likelihood_variable_name)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i,<sp/>likelihood_variable_name<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(likelihood_variable_names)]</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>code_sum_result<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;//result<sp/>+=<sp/>%s.GetLogLikelihood(theory<sp/>/*<sp/>,<sp/>theory_error<sp/>*/);&apos;</highlight><highlight class="normal"><sp/>%<sp/>likelihood_variable_name</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>likelihood_variable_name<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>likelihood_variable_names</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>]</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>code<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;///<sp/>HEPLike<sp/>LogLikelihood<sp/>TODO:<sp/>NAME</highlight></codeline>
+<codeline lineno="41"><highlight class="stringliteral">void<sp/>%s(double<sp/>&amp;result)</highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>using<sp/>namespace<sp/>Pipes::%s;</highlight></codeline>
+<codeline lineno="44"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"><sp/>%<sp/>(capability_name,<sp/>capability_name)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>define_input<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>code_inputfiles:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>code<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>define_input<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;\n&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>define_variable<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>code_likelihood_defs:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>code<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>define_variable<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;\n&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>code<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="53"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>static<sp/>bool<sp/>first<sp/>=<sp/>true;</highlight></codeline>
+<codeline lineno="54"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>(first)</highlight></codeline>
+<codeline lineno="55"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>code_read_input<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>code_read_inputs:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>code<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>code_read_input<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;\n&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>code<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="61"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>first<sp/>=<sp/>false;</highlight></codeline>
+<codeline lineno="62"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>//<sp/>TODO:<sp/>Remove<sp/>the<sp/>line<sp/>below</highlight></codeline>
+<codeline lineno="64"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>assert(false<sp/>&amp;&amp;<sp/>&quot;Theory<sp/>prediction<sp/>not<sp/>available&quot;);</highlight></codeline>
+<codeline lineno="65"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>//<sp/>TODO:<sp/>and<sp/>add<sp/>theory<sp/>prediction<sp/>here<sp/>and<sp/>request<sp/>from<sp/>likelihoods<sp/>(commented<sp/>block<sp/>below)</highlight></codeline>
+<codeline lineno="66"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>code_sum_element<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>code_sum_result:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>code<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>code_sum_element<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;\n&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>code<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;%s<sp/>result:<sp/>&quot;<sp/>&lt;&lt;<sp/>result<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>code</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>likelihood_type<sp/>=<sp/>get_data_from_yaml(path_to_yaml)[&apos;HL_Type&apos;]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>likelihood_variable_name<sp/>=<sp/>likelihood_type.strip(&quot;HL_&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>likelihood_variable_name<sp/>=<sp/>likelihood_variable_name[0].lower()<sp/>+<sp/>likelihood_variable_name[1:]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>code_string<sp/>=<sp/>&quot;&quot;&quot;///<sp/>HEPLike<sp/>LogLikelihood<sp/>TODO:<sp/>NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">#<sp/>void<sp/>%s(double<sp/>&amp;result)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>using<sp/>namespace<sp/>Pipes::%s;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>static<sp/>const<sp/>std::string<sp/>inputfile<sp/>=<sp/>path_to_latest_heplike_data()<sp/>+<sp/>&quot;/%s&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>static<sp/>HepLike_default::%s<sp/>%s(inputfile);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>static<sp/>bool<sp/>first<sp/>=<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>if<sp/>(first)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;Debug:<sp/>Reading<sp/>HepLike<sp/>data<sp/>file:<sp/>&quot;<sp/>&lt;&lt;<sp/>inputfile<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>%s.Read();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>first<sp/>=<sp/>false;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>//<sp/>TODO:<sp/>Remove<sp/>the<sp/>two<sp/>lines<sp/>below</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>assert(false<sp/>&amp;&amp;<sp/>&quot;Theory<sp/>prediction<sp/>not<sp/>available&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>-999;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>//<sp/>TODO:<sp/>and<sp/>add<sp/>theory<sp/>prediction<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>//<sp/>result<sp/>=<sp/>%s.GetLogLikelihood(theory<sp/>/*<sp/>,<sp/>theory_error<sp/>*/);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;%s<sp/>result:<sp/>&quot;<sp/>&lt;&lt;<sp/>result<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">#<sp/>&quot;&quot;&quot;<sp/>%<sp/>(capability_name,<sp/>capability_name,<sp/>*path_to_yaml,<sp/>likelihood_type,<sp/>likelihood_variable_name,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>likelihood_variable_name,<sp/>likelihood_variable_name,<sp/>capability_name)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>return<sp/>code_string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">create_rollcall_entry(capability_name):</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;///<sp/>HEPLike<sp/>LogLikelihood<sp/>TODO:<sp/>NAME</highlight></codeline>
+<codeline lineno="110"><highlight class="stringliteral">#define<sp/>CAPABILITY<sp/>%s</highlight></codeline>
+<codeline lineno="111"><highlight class="stringliteral">START_CAPABILITY</highlight></codeline>
+<codeline lineno="112"><highlight class="stringliteral"><sp/><sp/>#define<sp/>FUNCTION<sp/>%s</highlight></codeline>
+<codeline lineno="113"><highlight class="stringliteral"><sp/><sp/>START_FUNCTION(double);</highlight></codeline>
+<codeline lineno="114"><highlight class="stringliteral"><sp/><sp/>//<sp/>TODO:<sp/>add<sp/>dependencies</highlight></codeline>
+<codeline lineno="115"><highlight class="stringliteral"><sp/><sp/>NEEDS_CLASSES_FROM(HepLike);</highlight></codeline>
+<codeline lineno="116"><highlight class="stringliteral"><sp/><sp/>#undef<sp/>FUNCTION</highlight></codeline>
+<codeline lineno="117"><highlight class="stringliteral">#undef<sp/>CAPABILITY</highlight></codeline>
+<codeline lineno="118"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"><sp/>%<sp/>(capability_name,<sp/>capability_name)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(create_flavbit_function(sys.argv[1],<sp/>*sys.argv[2:]))</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(create_rollcall_entry(sys.argv[1]))</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>IndexError:</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Argument<sp/>1:<sp/>name<sp/>of<sp/>capability&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Argument<sp/>2:<sp/>path<sp/>in<sp/>HEPLikeData<sp/>repository<sp/>starting<sp/>with<sp/>data/...<sp/>in<sp/>HEPLikeData<sp/>repository.<sp/>Multiple<sp/>files<sp/>possible.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/FlavBit/scripts/create_gambit_skeleton_from_heplike.py"/>
+  </compounddef>
+</doxygen>

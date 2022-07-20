@@ -29,7 +29,7 @@
         <label>iostream</label>
       </node>
       <node id="1">
-        <label>ColliderBit/src/lep_mssm_xsecs.cpp</label>
+        <label>lep_mssm_xsecs.cpp</label>
         <link refid="lep__mssm__xsecs_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ColliderBit/src/lep_mssm_xsecs.cpp" line="36" column="9" bodyfile="ColliderBit/src/lep_mssm_xsecs.cpp" bodystart="36" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/lep_mssm_xsecs.cpp" line="36" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/lep_mssm_xsecs.cpp" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -135,7 +135,7 @@
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mZ<sp/>=<sp/>spec.safeget(Par::Pole_Mass,23,0);</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>g2<sp/>=<sp/>mssm.safeget(Par::dimensionless,</highlight><highlight class="stringliteral">&quot;g2&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sinW2<sp/>=<sp/>mssm.safeget(Par::dimensionless,</highlight><highlight class="stringliteral">&quot;sinW2&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha<sp/>=<sp/>0.25*sinW2*g2*g2/pi;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha<sp/>=<sp/>0.25*sinW2*g2*g2/<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>;</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MSSM<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tanb<sp/>=<sp/>mssm.safeget(Par::dimensionless,</highlight><highlight class="stringliteral">&quot;tanbeta&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
@@ -229,7 +229,7 @@
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mZ<sp/>=<sp/>spec.safeget(Par::Pole_Mass,23,0);</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>g2<sp/>=<sp/>mssm.safeget(Par::dimensionless,</highlight><highlight class="stringliteral">&quot;g2&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sinW2<sp/>=<sp/>mssm.safeget(Par::dimensionless,</highlight><highlight class="stringliteral">&quot;sinW2&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha<sp/>=<sp/>0.25*sinW2*g2*g2/pi;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha<sp/>=<sp/>0.25*sinW2*g2*g2/<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>;</highlight></codeline>
 <codeline lineno="166"><highlight class="normal"></highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MSSM<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tanb<sp/>=<sp/>mssm.safeget(Par::dimensionless,</highlight><highlight class="stringliteral">&quot;tanbeta&quot;</highlight><highlight class="normal">);</highlight></codeline>
@@ -296,7 +296,7 @@
 <codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mZ<sp/>=<sp/>spec.safeget(Par::Pole_Mass,23,0);</highlight></codeline>
 <codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>g2<sp/>=<sp/>mssm.safeget(Par::dimensionless,</highlight><highlight class="stringliteral">&quot;g2&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sinW2<sp/>=<sp/>mssm.safeget(Par::dimensionless,</highlight><highlight class="stringliteral">&quot;sinW2&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha<sp/>=<sp/>0.25*sinW2*g2*g2/pi;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha<sp/>=<sp/>0.25*sinW2*g2*g2/<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>;</highlight></codeline>
 <codeline lineno="234"><highlight class="normal"></highlight></codeline>
 <codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MSSM<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>mass<sp/>eigenstate<sp/>best<sp/>corresponding<sp/>to<sp/>~nu_e_L.</highlight><highlight class="normal"></highlight></codeline>
@@ -518,14 +518,14 @@
 <codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cross<sp/>sections<sp/>per<sp/>diagram<sp/>and<sp/>interference<sp/>terms</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigma,<sp/>sigma_Z,<sp/>sigma_Z_mix,<sp/>sigma_g,<sp/>sigma_gZ,<sp/>sigma_N,<sp/>sigma_N_mix,<sp/>sigma_gN,<sp/>sigma_ZN,<sp/>sigma_ZN_mix;</highlight></codeline>
 <codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gamma</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_g<sp/>=<sp/>2.*pi*pow2(alpha)/pow(s,4)<sp/>*<sp/>pow(S,3)/6.;</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_g<sp/>=<sp/>2.*<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(s,4)<sp/>*<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(S,3)/6.;</highlight></codeline>
 <codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Z</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Z<sp/>=<sp/>pi*pow2(alpha)/pow2(s)/pow2(sin2thetaW)/pow2(1.-sin2thetaW)<sp/>*<sp/><sp/>DZ2<sp/>*<sp/>pow(S,3)/6.;</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Z<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/pow2(s)/pow2(sin2thetaW)/pow2(1.-sin2thetaW)<sp/>*<sp/><sp/>DZ2<sp/>*<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(S,3)/6.;</highlight></codeline>
 <codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Z<sp/>*=<sp/>(pow2(Le)+pow2(Re))*pow2(Le*cos2phi+Re*sin2phi);</highlight></codeline>
 <codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Z_mix<sp/>=<sp/>sigma_Z/pow2(Le*cos2phi+Re*sin2phi)*pow2(Le-Re)*cos2phi*sin2phi;</highlight></codeline>
 <codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Interference</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gZ<sp/>=<sp/>2*pi*pow2(alpha)/pow(s,3)/sin2thetaW/(1.-sin2thetaW)<sp/>*<sp/>ReDZ;</highlight></codeline>
-<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gZ<sp/>*=<sp/>(Le+Re)*(Le*cos2phi+Re*sin2phi)<sp/>*<sp/>pow(S,3)/6.;</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gZ<sp/>=<sp/>2*<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(s,3)/sin2thetaW/(1.-sin2thetaW)<sp/>*<sp/>ReDZ;</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gZ<sp/>*=<sp/>(Le+Re)*(Le*cos2phi+Re*sin2phi)<sp/>*<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(S,3)/6.;</highlight></codeline>
 <codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Neutralino</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Loop<sp/>over<sp/>neutralinos</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_N<sp/>=<sp/>0;</highlight></codeline>
@@ -536,7 +536,7 @@
 <codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sigma_N<sp/>+=<sp/>2.*cos2phi*sin2phi*s*mN[k]*mN[l]*I2(s,m1,m2,mN[k],mN[l])*fL[k]*fL[l]*fR[k]*fR[l];</highlight></codeline>
 <codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_N<sp/>*=<sp/>pi*pow2(alpha)/4./pow2(sin2thetaW)/pow2(s);</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_N<sp/>*=<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/4./pow2(sin2thetaW)/pow2(s);</highlight></codeline>
 <codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_N_mix<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>4;<sp/>k++)</highlight></codeline>
 <codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -547,23 +547,23 @@
 <codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sigma_N_mix<sp/>+=<sp/>(pow2(cos2phi)+pow2(sin2phi))*s*mN[k]*mN[l]*I2(s,m1,m2,mN[k],mN[l])*fL[k]*fL[l]*fR[k]*fR[l];</highlight></codeline>
 <codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_N_mix<sp/>*=<sp/>pi*pow2(alpha)/4./pow2(sin2thetaW)/pow2(s);</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_N_mix<sp/>*=<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/4./pow2(sin2thetaW)/pow2(s);</highlight></codeline>
 <codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Neutralino<sp/>interference<sp/>terms</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gN<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>4;<sp/>k++){</highlight></codeline>
 <codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gN<sp/>+=<sp/>I3(s,m1,m2,mN[k])*(cos2phi*pow2(fL[k])+sin2phi*pow2(fR[k]));</highlight></codeline>
 <codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gN<sp/>*=<sp/>pi*pow2(alpha)/sin2thetaW/pow(s,3);</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gN<sp/>*=<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/sin2thetaW/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(s,3);</highlight></codeline>
 <codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_ZN<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>4;<sp/>k++){</highlight></codeline>
 <codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sigma_ZN<sp/>+=<sp/>I3(s,m1,m2,mN[k])*(Le*cos2phi*pow2(fL[k])+Re*sin2phi*pow2(fR[k]));</highlight></codeline>
 <codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_ZN<sp/>*=<sp/>pi*pow2(alpha)/pow2(sin2thetaW)/(1.-sin2thetaW)/pow2(s)*(Le*cos2phi+Re*sin2phi)*ReDZ;</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_ZN<sp/>*=<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/pow2(sin2thetaW)/(1.-sin2thetaW)/pow2(s)*(Le*cos2phi+Re*sin2phi)*ReDZ;</highlight></codeline>
 <codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_ZN_mix<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>4;<sp/>k++){</highlight></codeline>
 <codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sigma_ZN_mix<sp/>+=<sp/>I3(s,m1,m2,mN[k])*(Le*pow2(fL[k])-Re*pow2(fR[k]));</highlight></codeline>
 <codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_ZN_mix<sp/>*=<sp/>pi*pow2(alpha)/pow2(sin2thetaW)/(1.-sin2thetaW)/pow2(s)*sin2phi*cos2phi*(Le-Re)*ReDZ;</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_ZN_mix<sp/>*=<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/pow2(sin2thetaW)/(1.-sin2thetaW)/pow2(s)*sin2phi*cos2phi*(Le-Re)*ReDZ;</highlight></codeline>
 <codeline lineno="508"><highlight class="normal"></highlight></codeline>
 <codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Total<sp/>cross<sp/>section</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>bMixed<sp/>)<sp/>{<sp/>sigma<sp/>=<sp/>sigma_Z_mix;<sp/>}</highlight></codeline>
@@ -653,16 +653,16 @@
 <codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cross<sp/>sections<sp/>per<sp/>diagram<sp/>and<sp/>interference<sp/>terms</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigma,<sp/>sigma_Z,<sp/>sigma_s,<sp/>sigma_Zs;</highlight></codeline>
 <codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Z</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Z<sp/>=<sp/>4.*pi*pow2(alpha)/pow2(sin2thetaW)/pow2(1.-sin2thetaW)<sp/>*<sp/>DZ2<sp/>*<sp/>q/sqrts<sp/>*<sp/>pow2(OL[i][j])<sp/>*<sp/>(pow2(Le)+pow2(Re));</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Z<sp/>=<sp/>4.*<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/pow2(sin2thetaW)/pow2(1.-sin2thetaW)<sp/>*<sp/>DZ2<sp/>*<sp/>q/sqrts<sp/>*<sp/>pow2(OL[i][j])<sp/>*<sp/>(pow2(Le)+pow2(Re));</highlight></codeline>
 <codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Z<sp/>*=<sp/><sp/>Ei*Ej<sp/>+<sp/>1/3.*pow2(q)-mi*mj;</highlight></codeline>
 <codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>selectrons</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_s<sp/><sp/>=<sp/>pow2(fL[i]*fL[j])<sp/>*<sp/>((Ei*Ej-s*dL+pow2(q))/(s*pow2(dL)-pow2(q))<sp/>+<sp/>2.<sp/>+<sp/>0.5*sqrts/q*(1.-2.*dL-mi*mj/s/dL)*log(fabs((dL+q/sqrts)/(dL-q/sqrts))));</highlight></codeline>
 <codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_s<sp/>+=<sp/>pow2(fR[i]*fR[j])<sp/>*<sp/>((Ei*Ej-s*dR+pow2(q))/(s*pow2(dR)-pow2(q))<sp/>+<sp/>2.<sp/>+<sp/>0.5*sqrts/q*(1.-2.*dR-mi*mj/s/dR)*log(fabs((dR+q/sqrts)/(dR-q/sqrts))));</highlight></codeline>
-<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_s<sp/>*=<sp/>pi*pow2(alpha)/pow2(sin2thetaW)<sp/>*<sp/>q/s/sqrts;</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_s<sp/>*=<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/pow2(sin2thetaW)<sp/>*<sp/>q/s/sqrts;</highlight></codeline>
 <codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Interference</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Zs<sp/><sp/>=<sp/><sp/>Le*fL[i]*fL[j]<sp/>*<sp/>(1./q/sqrts*(Ei*Ej-s*dL*(1.-dL)-mi*mj)*log(fabs((dL+q/sqrts)/(dL-q/sqrts)))+2.*(1-dL));</highlight></codeline>
 <codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Zs<sp/>+=<sp/>-Re*fR[i]*fR[j]<sp/>*<sp/>(1./q/sqrts*(Ei*Ej-s*dR*(1.-dR)-mi*mj)*log(fabs((dR+q/sqrts)/(dR-q/sqrts)))+2.*(1-dR));</highlight></codeline>
-<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Zs<sp/>*=<sp/>-2.*pi*pow2(alpha)/pow2(sin2thetaW)/(1.-sin2thetaW)<sp/>*<sp/>q/sqrts<sp/>*<sp/>ReDZ<sp/>*<sp/>OL[i][j];</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Zs<sp/>*=<sp/>-2.*<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/pow2(sin2thetaW)/(1.-sin2thetaW)<sp/>*<sp/>q/sqrts<sp/>*<sp/>ReDZ<sp/>*<sp/>OL[i][j];</highlight></codeline>
 <codeline lineno="610"><highlight class="normal"></highlight></codeline>
 <codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Total<sp/>cross<sp/>section</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="612"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma<sp/>=<sp/>0.5*(sigma_Z<sp/>+<sp/>sigma_s<sp/>+<sp/>sigma_Zs)*(2.-deltaij);</highlight></codeline>
@@ -735,19 +735,19 @@
 <codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cross<sp/>sections<sp/>per<sp/>diagram<sp/>and<sp/>interference<sp/>terms</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="682"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigma,<sp/>sigma_g,<sp/>sigma_Z,<sp/>sigma_s,<sp/>sigma_gZ,<sp/>sigma_gs,<sp/>sigma_Zs;</highlight></codeline>
 <codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Gamma</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_g<sp/>=<sp/>8*pi*pow2(alpha)<sp/>*<sp/>q*sqrts/pow(s,3)<sp/>*<sp/>deltaij<sp/>*<sp/>(Ei*Ej+pow2(q)/3.+fabs(mi*mj));</highlight></codeline>
+<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_g<sp/>=<sp/>8*<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)<sp/>*<sp/>q*sqrts/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(s,3)<sp/>*<sp/>deltaij<sp/>*<sp/>(Ei*Ej+pow2(q)/3.+fabs(mi*mj));</highlight></codeline>
 <codeline lineno="685"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Z</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="686"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Z<sp/>=<sp/>2.*pi*pow2(alpha)/pow2(sin2thetaW)/pow2(1.-sin2thetaW)<sp/>*<sp/>q/sqrts<sp/>*<sp/>DZ2;</highlight></codeline>
+<codeline lineno="686"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Z<sp/>=<sp/>2.*<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/pow2(sin2thetaW)/pow2(1.-sin2thetaW)<sp/>*<sp/>q/sqrts<sp/>*<sp/>DZ2;</highlight></codeline>
 <codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Z<sp/>*=<sp/>(pow2(OL[i][j])+pow2(OR[i][j]))*(pow2(Le)+pow2(Re))*(Ei*Ej+pow2(q)/3.)+2.*(pow2(Le)+pow2(Re))*OL[i][j]*OR[i][j]*mi*mj;</highlight></codeline>
 <codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sneutrino</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_s<sp/>=<sp/>pi*pow2(alpha)/2./pow2(sin2thetaW)*pow2(V[i][0]*V[j][0])/pow(ms,4)<sp/>*<sp/>q/sqrts;</highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_s<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/2./pow2(sin2thetaW)*pow2(V[i][0]*V[j][0])/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(ms,4)<sp/>*<sp/>q/sqrts;</highlight></codeline>
 <codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_s<sp/>*=<sp/>(Ei*Ej+pow2(q)-q*sqrts*aL/bL)/(pow2(aL)-pow2(bL))<sp/>+<sp/>2.*pow2(q/bL)<sp/>+<sp/>0.5/pow2(bL)*(q*sqrts-2.*pow2(q)*aL/bL)*log(fabs((aL+bL)/(aL-bL)));</highlight></codeline>
 <codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Interference</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gZ<sp/>=<sp/>4*pi*pow2(alpha)/(1.-sin2thetaW)/sin2thetaW<sp/>*<sp/>q*sqrts/pow2(s)*ReDZ*deltaij*(Le+Re);</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gZ<sp/>=<sp/>4*<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/(1.-sin2thetaW)/sin2thetaW<sp/>*<sp/>q*sqrts/pow2(s)*ReDZ*deltaij*(Le+Re);</highlight></codeline>
 <codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gZ<sp/>*=<sp/>(OL[i][j]+OR[i][j])*(Ei*Ej+pow2(q)/3.+fabs(mi*mj));</highlight></codeline>
-<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gs<sp/>=<sp/>-pi*pow2(alpha)/sin2thetaW*pow2(V[i][0])<sp/>*<sp/>deltaij/pow2(s);</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gs<sp/>=<sp/>-<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/sin2thetaW*pow2(V[i][0])<sp/>*<sp/>deltaij/pow2(s);</highlight></codeline>
 <codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_gs<sp/>*=<sp/>h<sp/>+<sp/>fabs(mi*mj)*log(fabs((aL+bL)/(aL-bL)));</highlight></codeline>
-<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Zs<sp/>=<sp/>-pi*pow2(alpha)/pow2(sin2thetaW)/(1.-sin2thetaW)*V[i][0]*V[j][0]<sp/>*<sp/>ReDZ/s<sp/>*<sp/>Le;</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Zs<sp/>=<sp/>-<ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref>*pow2(alpha)/pow2(sin2thetaW)/(1.-sin2thetaW)*V[i][0]*V[j][0]<sp/>*<sp/>ReDZ/s<sp/>*<sp/>Le;</highlight></codeline>
 <codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sigma_Zs<sp/>*=<sp/>OL[i][j]*h<sp/>+<sp/>OR[i][j]*mi*mj*log(fabs((aL+bL)/(aL-bL)));</highlight></codeline>
 <codeline lineno="698"><highlight class="normal"></highlight></codeline>
 <codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Total<sp/>cross<sp/>section<sp/>with<sp/>interference<sp/>terms</highlight><highlight class="normal"></highlight></codeline>
@@ -856,6 +856,6 @@
 <codeline lineno="814"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="815"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="ColliderBit/src/lep_mssm_xsecs.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/lep_mssm_xsecs.cpp"/>
   </compounddef>
 </doxygen>

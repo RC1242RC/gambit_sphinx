@@ -1,0 +1,599 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceGambit_1_1Backends" kind="namespace" language="C++">
+    <compoundname>Gambit::Backends</compoundname>
+    <innerclass refid="structGambit_1_1Backends_1_1backend__info" prot="public">Gambit::Backends::backend_info</innerclass>
+    <innerclass refid="classGambit_1_1Backends_1_1instance__helper" prot="public">Gambit::Backends::instance_helper</innerclass>
+    <innerclass refid="classGambit_1_1Backends_1_1instance__helper_3_01void_01_4" prot="public">Gambit::Backends::instance_helper&lt; void &gt;</innerclass>
+    <innerclass refid="classGambit_1_1Backends_1_1mathematica__function" prot="public">Gambit::Backends::mathematica_function</innerclass>
+    <innerclass refid="classGambit_1_1Backends_1_1python__function" prot="public">Gambit::Backends::python_function</innerclass>
+    <innerclass refid="unionGambit_1_1Backends_1_1void__voidFptr" prot="public">Gambit::Backends::void_voidFptr</innerclass>
+    <innernamespace refid="namespaceGambit_1_1Backends_1_1AlterBBN__2__2">Gambit::Backends::AlterBBN_2_2</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1Backends_1_1gm2calc__1__2__0">Gambit::Backends::gm2calc_1_2_0</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1Backends_1_1gm2calc__1__3__0">Gambit::Backends::gm2calc_1_3_0</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1Backends_1_1HepLike__1__2">Gambit::Backends::HepLike_1_2</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1Backends_1_1Pythia__8__212">Gambit::Backends::Pythia_8_212</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1Backends_1_1vevacious__1__0">Gambit::Backends::vevacious_1_0</innernamespace>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1ae7cdcf0db88e3481d8077915bf553836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSGetVariable</definition>
+        <argsstring>(WSLINK WSlink, int *val)</argsstring>
+        <name>WSGetVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overloaded functions to get data through WSTP </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="59" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="59" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1aeb763b40119f6183fca076ae0bcd5716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSGetVariable</definition>
+        <argsstring>(WSLINK WSlink, float *val)</argsstring>
+        <name>WSGetVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="60" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="60" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a3a310e8efd417fd7b49b568672e30124" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSGetVariable</definition>
+        <argsstring>(WSLINK WSlink, double *val)</argsstring>
+        <name>WSGetVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="61" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="61" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a644efaa8fd7ed4ad5228895cf3db3060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSGetVariable</definition>
+        <argsstring>(WSLINK WSlink, bool *val)</argsstring>
+        <name>WSGetVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="62" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="62" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a2bea6b078901454ee311686fc82ad80b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSGetVariable</definition>
+        <argsstring>(WSLINK WSlink, char *val)</argsstring>
+        <name>WSGetVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="63" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="63" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1ac5864ba1282925e7b597c25d999f7386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSGetVariable</definition>
+        <argsstring>(WSLINK WSlink, str *val)</argsstring>
+        <name>WSGetVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>str *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="64" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="64" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a2a254de57e5dbdbafdfce481721cd637" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int Gambit::Backends::WSGetVariable</definition>
+        <argsstring>(WSLINK WSlink, std::vector&lt; T &gt; *val)</argsstring>
+        <name>WSGetVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; T &gt; *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="65" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" bodystart="65" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1adab80a1445573d4b91f61b4caa9b2008" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSPutVariable</definition>
+        <argsstring>(WSLINK WSlink, int val)</argsstring>
+        <name>WSPutVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overloaded functions to put data through WSTP </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="83" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="83" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a3b6d66d84887871f08f79f2f66090d04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSPutVariable</definition>
+        <argsstring>(WSLINK WSlink, float val)</argsstring>
+        <name>WSPutVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="84" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="84" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a0c36c4ec36ebd1d0354da6768cf8a9d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSPutVariable</definition>
+        <argsstring>(WSLINK WSlink, double val)</argsstring>
+        <name>WSPutVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="85" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="85" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a327ba4f60e525e316ebb6ceeaa66911e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSPutVariable</definition>
+        <argsstring>(WSLINK WSlink, bool val)</argsstring>
+        <name>WSPutVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="86" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="86" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a833d6e79edd33d086dd6fe053189e31d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSPutVariable</definition>
+        <argsstring>(WSLINK WSlink, char val)</argsstring>
+        <name>WSPutVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="87" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="87" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1af615ee711208a439b9b146afc6b30604" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSPutVariable</definition>
+        <argsstring>(WSLINK WSlink, str val)</argsstring>
+        <name>WSPutVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="88" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="88" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1af563896856a372813738919bab496375" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int Gambit::Backends::WSPutVariable</definition>
+        <argsstring>(WSLINK WSlink, std::vector&lt; T &gt; val)</argsstring>
+        <name>WSPutVariable</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; T &gt;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="89" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" bodystart="89" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a51f88b77200db448726c2bde5c49ba6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Backends::WSPutVariables</definition>
+        <argsstring>(WSLINK)</argsstring>
+        <name>WSPutVariables</name>
+        <param>
+          <type>WSLINK</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="98" column="9" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="98" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1af073aabdb5e80e6ebb9a0b8fb190e755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int Gambit::Backends::WSPutVariables</definition>
+        <argsstring>(WSLINK WSlink, T last)</argsstring>
+        <name>WSPutVariables</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="100" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a577045f4d3de259eb4397b48f0330cf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T1</type>
+          </param>
+          <param>
+            <type>typename T2</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Others</declname>
+            <defname>Others</defname>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int Gambit::Backends::WSPutVariables</definition>
+        <argsstring>(WSLINK WSlink, T1 first, T2 second, Others... args)</argsstring>
+        <name>WSPutVariables</name>
+        <param>
+          <type>WSLINK</type>
+          <declname>WSlink</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>T2</type>
+          <declname>second</declname>
+        </param>
+        <param>
+          <type>Others...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="105" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" bodystart="105" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="Backends_2include_2gambit_2Backends_2ini__functions_8hpp_1a6df8ca3c422718f946a19f3803d10bca" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* Gambit::Backends::voidFptr) ()</definition>
+        <argsstring>)()</argsstring>
+        <name>voidFptr</name>
+        <briefdescription>
+<para>Simplify pointers to void functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/ini_functions.hpp" line="76" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/ini_functions.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="backend__singleton_8hpp_1a264796b6ef039cf36db1bc86c28aa4a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structGambit_1_1Backends_1_1backend__info" kindref="compound">backend_info</ref> &amp;</type>
+        <definition>backend_info &amp; Gambit::Backends::backendInfo</definition>
+        <argsstring>()</argsstring>
+        <name>backendInfo</name>
+        <briefdescription>
+<para>Backend info accessor function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_singleton.cpp" line="26" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/src/backend_singleton.cpp" bodystart="26" bodyend="30" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_singleton.hpp" declline="29" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="LibFortran__1__0_8hpp_1a58bb6c3649358aee33fee89f0575b8cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>namespace</type>
+        <definition>namespace Gambit::Backends::CAT_3</definition>
+        <argsstring>(BACKENDNAME, _, SAFE_VERSION)</argsstring>
+        <name>CAT_3</name>
+        <param>
+          <type>BACKENDNAME</type>
+        </param>
+        <param>
+          <type>_</type>
+        </param>
+        <param>
+          <type>SAFE_VERSION</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/frontends/LibFortran_1_0.hpp" line="52" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/frontends/LibFortran_1_0.hpp" bodystart="43" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="Backends_2include_2gambit_2Backends_2ini__functions_8hpp_1a11945281f174483ba738408298b0b118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Gambit::Backends::load_backend_symbol</definition>
+        <argsstring>(const std::vector&lt; str &gt; &amp;symbol_names, str be, str ver)</argsstring>
+        <name>load_backend_symbol</name>
+        <param>
+          <type>const std::vector&lt; str &gt; &amp;</type>
+          <declname>symbol_names</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>be</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>ver</declname>
+        </param>
+        <briefdescription>
+<para>Get the pointer to the backend function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/ini_functions.hpp" line="88" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/ini_functions.hpp" bodystart="88" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="Backends_2include_2gambit_2Backends_2ini__functions_8hpp_1ada838fa2cf54b45a2355c69b7084a580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Gambit::Backends::handover_factory_pointer</definition>
+        <argsstring>(str be, str ver, str name, str barename, str args, const std::vector&lt; str &gt; &amp;symbol_names, T factory, T missing_backend, T missing_factory)</argsstring>
+        <name>handover_factory_pointer</name>
+        <param>
+          <type>str</type>
+          <declname>be</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>ver</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>barename</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; str &gt; &amp;</type>
+          <declname>symbol_names</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>factory</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>missing_backend</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>missing_factory</declname>
+        </param>
+        <briefdescription>
+<para>Provide the factory pointer to a BOSSed type&apos;s wrapper constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/ini_functions.hpp" line="129" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/ini_functions.hpp" bodystart="129" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1a2a776e79cc9337ef42acf083230d923e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Backends::math_error</definition>
+        <argsstring>(WSLINK, const str &amp;, const str &amp;)</argsstring>
+        <name>math_error</name>
+        <param>
+          <type>WSLINK</type>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+        </param>
+        <briefdescription>
+<para>Helper function to raise an appropriate warning or error in case of problems. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="35" column="10" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" declline="35" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="mathematica__helpers_8hpp_1ada3b206bb2f2871174d15371e105944f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool Gambit::Backends::is_numeric</definition>
+        <argsstring>()</argsstring>
+        <name>is_numeric</name>
+        <briefdescription>
+<para>Helper function that indicates if a type is numerical or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" line="39" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/mathematica_helpers.hpp" bodystart="39" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_info.hpp" line="66" column="1"/>
+  </compounddef>
+</doxygen>

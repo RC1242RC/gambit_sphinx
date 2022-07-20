@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1DarkBit_1_1AxionInterpolator" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::DarkBit::AxionInterpolator</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1af93fbf26edbbb22bb03ff4b85d596b22" prot="private" static="no" mutable="no">
+        <type>gsl_interp_accel *</type>
+        <definition>gsl_interp_accel* Gambit::DarkBit::AxionInterpolator::acc</definition>
+        <argsstring></argsstring>
+        <name>acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="108" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1a74d167d384a58765978d1b1dbe8396d0" prot="private" static="no" mutable="no">
+        <type>gsl_spline *</type>
+        <definition>gsl_spline* Gambit::DarkBit::AxionInterpolator::spline</definition>
+        <argsstring></argsstring>
+        <name>spline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="109" column="20" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1a279c5ccbd286551faffe7cd615e27148" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::AxionInterpolator::lo</definition>
+        <argsstring></argsstring>
+        <name>lo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="111" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1ac100f1280b746c534e3a991b26006946" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::AxionInterpolator::up</definition>
+        <argsstring></argsstring>
+        <name>up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="112" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1a31573edfd46b240265e376566985774b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::AxionInterpolator::AxionInterpolator</definition>
+        <argsstring>()</argsstring>
+        <name>AxionInterpolator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="89" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="116" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1a2dff03b0a6d8622ee2f696dd1f950330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::AxionInterpolator::AxionInterpolator</definition>
+        <argsstring>(const std::vector&lt; double &gt; x, const std::vector&lt; double &gt; y, InterpolationOptions1D type=InterpolationOptions1D::linear)</argsstring>
+        <name>AxionInterpolator</name>
+        <param>
+          <type>const std::vector&lt; double &gt;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="Axions_8cpp_1a15f8b86d8e39700e02f4a2bbcc3d489a" kindref="member">InterpolationOptions1D</ref></type>
+          <declname>type</declname>
+          <defval>InterpolationOptions1D::linear</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="90" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1aa04abbacae17c467c41ab1f74f15ffd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::AxionInterpolator::AxionInterpolator</definition>
+        <argsstring>(std::string file, InterpolationOptions1D type=InterpolationOptions1D::linear)</argsstring>
+        <name>AxionInterpolator</name>
+        <param>
+          <type>std::string</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="Axions_8cpp_1a15f8b86d8e39700e02f4a2bbcc3d489a" kindref="member">InterpolationOptions1D</ref></type>
+          <declname>type</declname>
+          <defval>InterpolationOptions1D::linear</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="91" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="165" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1a9ebe13bbfc85fbce818ac56956c8065f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1AxionInterpolator" kindref="compound">AxionInterpolator</ref> &amp;</type>
+        <definition>AxionInterpolator &amp; Gambit::DarkBit::AxionInterpolator::operator=</definition>
+        <argsstring>(AxionInterpolator &amp;&amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classGambit_1_1DarkBit_1_1AxionInterpolator" kindref="compound">AxionInterpolator</ref> &amp;&amp;</type>
+          <defname>interp</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="92" column="27" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="168" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1a70d54649ef2dafb48f821929df64209a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::AxionInterpolator::~AxionInterpolator</definition>
+        <argsstring>()</argsstring>
+        <name>~AxionInterpolator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="94" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="181" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1adf391820008be89f99188e2835e918f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::AxionInterpolator::AxionInterpolator</definition>
+        <argsstring>(const AxionInterpolator &amp;)=delete</argsstring>
+        <name>AxionInterpolator</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1AxionInterpolator" kindref="compound">AxionInterpolator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="96" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1a6a12bc0d0620cc8e567fd1edba1f0625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1AxionInterpolator" kindref="compound">AxionInterpolator</ref></type>
+        <definition>AxionInterpolator Gambit::DarkBit::AxionInterpolator::operator=</definition>
+        <argsstring>(const AxionInterpolator &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1AxionInterpolator" kindref="compound">AxionInterpolator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="97" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1afad747dd22b0c774d51053e994ce24fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::AxionInterpolator::interpolate</definition>
+        <argsstring>(double x)</argsstring>
+        <name>interpolate</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="99" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="188" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1a9b16f4a5db75074bbda5ed385c16c5c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::AxionInterpolator::lower</definition>
+        <argsstring>()</argsstring>
+        <name>lower</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="101" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="191" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1a00afb63fe93909214078a70ed599cf49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::AxionInterpolator::upper</definition>
+        <argsstring>()</argsstring>
+        <name>upper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="102" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="192" bodyend="192"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1aee45c7fead29797caf74a5f477661deb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::AxionInterpolator::init</definition>
+        <argsstring>(std::string file, InterpolationOptions1D type)</argsstring>
+        <name>init</name>
+        <param>
+          <type>std::string</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type><ref refid="Axions_8cpp_1a15f8b86d8e39700e02f4a2bbcc3d489a" kindref="member">InterpolationOptions1D</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="105" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="149" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1AxionInterpolator_1a0b5c4029f9c5bcbef19d81fcef22c294" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::AxionInterpolator::init</definition>
+        <argsstring>(const std::vector&lt; double &gt; x, const std::vector&lt; double &gt; y, InterpolationOptions1D type)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const std::vector&lt; double &gt;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="Axions_8cpp_1a15f8b86d8e39700e02f4a2bbcc3d489a" kindref="member">InterpolationOptions1D</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="106" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="123" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="86" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="85" bodyend="113"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1af93fbf26edbbb22bb03ff4b85d596b22" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>acc</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1a31573edfd46b240265e376566985774b" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>AxionInterpolator</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1a2dff03b0a6d8622ee2f696dd1f950330" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>AxionInterpolator</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1aa04abbacae17c467c41ab1f74f15ffd2" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>AxionInterpolator</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1adf391820008be89f99188e2835e918f0" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>AxionInterpolator</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1aee45c7fead29797caf74a5f477661deb" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>init</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1a0b5c4029f9c5bcbef19d81fcef22c294" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>init</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1afad747dd22b0c774d51053e994ce24fa" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>interpolate</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1a279c5ccbd286551faffe7cd615e27148" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>lo</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1a9b16f4a5db75074bbda5ed385c16c5c7" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>lower</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1a9ebe13bbfc85fbce818ac56956c8065f" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>operator=</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1a6a12bc0d0620cc8e567fd1edba1f0625" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>operator=</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1a74d167d384a58765978d1b1dbe8396d0" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>spline</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1ac100f1280b746c534e3a991b26006946" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>up</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1a00afb63fe93909214078a70ed599cf49" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>upper</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1AxionInterpolator_1a70d54649ef2dafb48f821929df64209a" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::AxionInterpolator</scope><name>~AxionInterpolator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

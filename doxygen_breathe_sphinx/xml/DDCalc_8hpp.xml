@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="DDCalc_8hpp" kind="file" language="C++">
+    <compoundname>DDCalc.hpp</compoundname>
+    <includes local="no">map</includes>
+    <includedby refid="DDCalc_8cpp" local="yes">DDCalc.cpp</includedby>
+    <includedby refid="DirectDM__2__2__0_8cpp" local="yes">DirectDM_2_2_0.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>DDCalc.hpp</label>
+        <link refid="DDCalc_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>DDCalc.cpp</label>
+        <link refid="DDCalc_8cpp"/>
+      </node>
+      <node id="3">
+        <label>DirectDM_2_2_0.cpp</label>
+        <link refid="DirectDM__2__2__0_8cpp"/>
+      </node>
+      <node id="1">
+        <label>DDCalc.hpp</label>
+        <link refid="DDCalc_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classGambit_1_1safe__ptr" prot="public">Gambit::safe_ptr</innerclass>
+    <innerclass refid="classGambit_1_1Models_1_1safe__param__map" prot="public">Gambit::Models::safe_param_map</innerclass>
+    <innerclass refid="structGambit_1_1DM__nucleon__couplings" prot="public">Gambit::DM_nucleon_couplings</innerclass>
+    <innerclass refid="structGambit_1_1NREO__DM__nucleon__couplings" prot="public">Gambit::NREO_DM_nucleon_couplings</innerclass>
+    <innerclass refid="structGambit_1_1DD__coupling__container" prot="public">Gambit::DD_coupling_container</innerclass>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1Models">Gambit::Models</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Helper types for DDCalc backend.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Pat Scott <ulink url="mailto:p.scott@imperial.ac.uk">p.scott@imperial.ac.uk</ulink> </para>
+</simplesect>
+<simplesect kind="date"><para>2016 May</para>
+</simplesect>
+<simplesect kind="author"><para>Ben Farmer (<ulink url="mailto:b.farmer@imperial.ac.uk">b.farmer@imperial.ac.uk</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2019 Jul</para>
+</simplesect>
+<simplesect kind="author"><para>Felix Kahlhofer (<ulink url="mailto:kahlhoefer@physik.rwth-aachen.de">kahlhoefer@physik.rwth-aachen.de</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2020 May</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__DDCalc_types_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__DDCalc_types_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Forward<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ModelParameters;</highlight></codeline>
+<codeline lineno="35" refid="classGambit_1_1safe__ptr" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGambit_1_1safe__ptr" kindref="compound">safe_ptr</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classGambit_1_1Models_1_1safe__param__map" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Models<sp/>{<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGambit_1_1Models_1_1safe__param__map" kindref="compound">safe_param_map</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Container<sp/>for<sp/>SI/SD<sp/>DM-nucleon<sp/>couplings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structGambit_1_1DM__nucleon__couplings" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1DM__nucleon__couplings" kindref="compound">DM_nucleon_couplings</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gps;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gns;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gpa;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gna;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structGambit_1_1NREO__DM__nucleon__couplings" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1NREO__DM__nucleon__couplings" kindref="compound">NREO_DM_nucleon_couplings</ref></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Various<sp/>constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1NREO__DM__nucleon__couplings_1a10fdfcde695eff1dc127c3f3ad90ca13" kindref="member">NREO_DM_nucleon_couplings</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1NREO__DM__nucleon__couplings_1a10fdfcde695eff1dc127c3f3ad90ca13" kindref="member">NREO_DM_nucleon_couplings</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CPT);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1NREO__DM__nucleon__couplings_1a10fdfcde695eff1dc127c3f3ad90ca13" kindref="member">NREO_DM_nucleon_couplings</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ModelParameters&amp;);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1NREO__DM__nucleon__couplings_1a10fdfcde695eff1dc127c3f3ad90ca13" kindref="member">NREO_DM_nucleon_couplings</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1Models_1_1safe__param__map" kindref="compound">Models::safe_param_map</ref>&lt;<ref refid="classGambit_1_1safe__ptr" kindref="compound">safe_ptr&lt;const double&gt;</ref>&gt;&amp;);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>operator<sp/>basis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CPTbasis<sp/>=<sp/>1<sp/>for<sp/>NREFT_CPT<sp/>basis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CPTbasis<sp/>=<sp/>0<sp/>for<sp/>NREffectiveTheory<sp/>basis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CPTbasis;</highlight></codeline>
+<codeline lineno="61" refid="structGambit_1_1NREO__DM__nucleon__couplings_1ae05b288831f5b50ae5f31905a4684fdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;int,double&gt;<sp/><ref refid="structGambit_1_1NREO__DM__nucleon__couplings_1ae05b288831f5b50ae5f31905a4684fdc" kindref="member">c0</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;int,double&gt;<sp/>c1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="structGambit_1_1DD__coupling__container" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1DD__coupling__container" kindref="compound">DD_coupling_container</ref></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coeff_structure;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Simple<sp/>integer<sp/>to<sp/>determine<sp/>which<sp/>WIMP<sp/>type<sp/>to<sp/>initialise.<sp/>Possible<sp/>choices<sp/>are</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>=<sp/>1:<sp/>Spin-independent/spin-dependent<sp/>interactions<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>=<sp/>2:<sp/>NREFT_CPT<sp/>from<sp/>arXiv:1708.02678</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>=<sp/>3:<sp/>NREffectiveTheory<sp/>from<sp/>arXiv:1505.03117</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DM__nucleon__couplings" kindref="compound">DM_nucleon_couplings</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DM_nucleon_coeffs;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SI/SD<sp/>DM-nucleon<sp/>couplings<sp/>(relevant<sp/>for<sp/>int<sp/>=<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1NREO__DM__nucleon__couplings" kindref="compound">NREO_DM_nucleon_couplings</ref><sp/><sp/><sp/><sp/><sp/>DD_nonrel_WCs;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Effective<sp/>non-relativistic<sp/>DM-nucleon<sp/>Wilson<sp/>coefficients<sp/>(relevant<sp/>for<sp/>int<sp/>=<sp/>2,<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined<sp/>__DDCalc_types_hpp__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/DDCalc.hpp"/>
+  </compounddef>
+</doxygen>

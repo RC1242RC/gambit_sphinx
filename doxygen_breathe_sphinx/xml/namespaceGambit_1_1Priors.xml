@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceGambit_1_1Priors" kind="namespace" language="C++">
+    <compoundname>Gambit::Priors</compoundname>
+    <innerclass refid="structGambit_1_1Priors_1_1arccosprior" prot="public">Gambit::Priors::arccosprior</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1BasePrior" prot="public">Gambit::Priors::BasePrior</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1Cauchy" prot="public">Gambit::Priors::Cauchy</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1CompositePrior" prot="public">Gambit::Priors::CompositePrior</innerclass>
+    <innerclass refid="structGambit_1_1Priors_1_1cosprior" prot="public">Gambit::Priors::cosprior</innerclass>
+    <innerclass refid="structGambit_1_1Priors_1_1cotprior" prot="public">Gambit::Priors::cotprior</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1DoubleLogFlatJoin" prot="public">Gambit::Priors::DoubleLogFlatJoin</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1Dummy" prot="public">Gambit::Priors::Dummy</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1FixedPrior" prot="public">Gambit::Priors::FixedPrior</innerclass>
+    <innerclass refid="structGambit_1_1Priors_1_1flatprior" prot="public">Gambit::Priors::flatprior</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1Gaussian" prot="public">Gambit::Priors::Gaussian</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1LogNormal" prot="public">Gambit::Priors::LogNormal</innerclass>
+    <innerclass refid="structGambit_1_1Priors_1_1logprior" prot="public">Gambit::Priors::logprior</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1MultiPriors" prot="public">Gambit::Priors::MultiPriors</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1None" prot="public">Gambit::Priors::None</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1Plugin" prot="public">Gambit::Priors::Plugin</innerclass>
+    <innerclass refid="classGambit_1_1Priors_1_1RangePrior1D" prot="public">Gambit::Priors::RangePrior1D</innerclass>
+    <innerclass refid="structGambit_1_1Priors_1_1sinprior" prot="public">Gambit::Priors::sinprior</innerclass>
+    <innerclass refid="structGambit_1_1Priors_1_1tanprior" prot="public">Gambit::Priors::tanprior</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="priors_8hpp_1a206c5cbd7b3cfe788f2a41a560a1ed74" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Gambit::Priors::gambit_registry</definition>
+        <argsstring></argsstring>
+        <name>gambit_registry</name>
+        <initializer>{ 
+            typedef <ref refid="classGambit_1_1Priors_1_1BasePrior" kindref="compound">BasePrior</ref>* create_prior_function(const std::vector&lt;std::string&gt; &amp;, const Options &amp;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors.hpp" line="40" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="priors_8hpp_1ada5f519033776e4479010d9cbeb7dd3e" prot="public" static="no" mutable="no">
+        <type>reg_elem&lt; create_prior_function &gt;</type>
+        <definition>reg_elem&lt;create_prior_function&gt; Gambit::Priors::prior_creators</definition>
+        <argsstring></argsstring>
+        <name>prior_creators</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors.hpp" line="43" column="23" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/priors.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="composite_8cpp_1a6945555f3d4b817e40ea035cecb0fbcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Gambit::Priors::expand_dots</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;param_names_in)</argsstring>
+        <name>expand_dots</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>param_names_in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/priors/composite.cpp" line="59" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/priors/composite.cpp" bodystart="59" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/base_prior.hpp" line="36" column="1"/>
+  </compounddef>
+</doxygen>

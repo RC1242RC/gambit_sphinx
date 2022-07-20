@@ -76,7 +76,7 @@
         <label>gambit/Utils/util_macros.hpp</label>
       </node>
       <node id="1">
-        <label>ColliderBit/src/LHC_likelihoods.cpp</label>
+        <label>LHC_likelihoods.cpp</label>
         <link refid="LHC__likelihoods_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ColliderBit/src/LHC_likelihoods.cpp" line="55" column="9" bodyfile="ColliderBit/src/LHC_likelihoods.cpp" bodystart="55" bodyend="-1"/>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/LHC_likelihoods.cpp" line="55" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/LHC_likelihoods.cpp" bodystart="55" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -258,7 +258,7 @@
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>n;<sp/>++j)</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>the<sp/>multivariate<sp/>Gaussian<sp/>bit<sp/>(j<sp/>=<sp/>nuisance)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pnorm_j<sp/>=<sp/>-pow(unit_nuisances(j),<sp/>2)/2.;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pnorm_j<sp/>=<sp/>-<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(unit_nuisances(j),<sp/>2)/2.;</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loglike_tot<sp/>+=<sp/>pnorm_j;</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
 <codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then<sp/>the<sp/>Poisson<sp/>bit<sp/>(j<sp/>=<sp/>SR)</highlight></codeline>
@@ -1171,6 +1171,6 @@
 <codeline lineno="1078"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1079"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="ColliderBit/src/LHC_likelihoods.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/LHC_likelihoods.cpp"/>
   </compounddef>
 </doxygen>

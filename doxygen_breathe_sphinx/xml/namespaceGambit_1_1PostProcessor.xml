@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceGambit_1_1PostProcessor" kind="namespace" language="C++">
+    <compoundname>Gambit::PostProcessor</compoundname>
+    <innerclass refid="classGambit_1_1PostProcessor_1_1PPDriver" prot="public">Gambit::PostProcessor::PPDriver</innerclass>
+    <innerclass refid="structGambit_1_1PostProcessor_1_1PPOptions" prot="public">Gambit::PostProcessor::PPOptions</innerclass>
+      <sectiondef kind="user-defined">
+      <memberdef kind="variable" id="postprocessor__2_80_80_2postprocessor_8hpp_1a471b2b967315725ddae2b1cdbd09265b" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structChunk" kindref="compound">Chunk</ref></type>
+        <definition>const Chunk Gambit::PostProcessor::stopchunk</definition>
+        <argsstring></argsstring>
+        <name>stopchunk</name>
+        <initializer>= <ref refid="structChunk" kindref="compound">Chunk</ref>(0,0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="57" column="19" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="postprocessor__2_80_80_2postprocessor_8hpp_1a32aa88d7555a8f824e32251dd8f0bc76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ChunkSet</type>
+        <definition>ChunkSet Gambit::PostProcessor::get_done_points</definition>
+        <argsstring>(Gambit::Printers::BaseBaseReader &amp;filebase)</argsstring>
+        <name>get_done_points</name>
+        <param>
+          <type>Gambit::Printers::BaseBaseReader &amp;</type>
+          <declname>filebase</declname>
+        </param>
+        <briefdescription>
+<para>Read through resume data files and reconstruct which chunks of points have already been processed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Read through any pre-existing output and reconstruct which chunks of points have already been processed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_2.0.0/postprocessor_object.cpp" line="79" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_2.0.0/postprocessor_object.cpp" bodystart="79" bodyend="141" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" declline="51" declcolumn="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="postprocessor__1_80_80_2postprocessor_8hpp_1adc65ece2c51950df31c5bade6682639d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::PostProcessor::point_done</definition>
+        <argsstring>(const ChunkSet done_chunks, size_t index)</argsstring>
+        <name>point_done</name>
+        <param>
+          <type>const ChunkSet</type>
+          <declname>done_chunks</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Helper functions for performing resume related tasks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Answer queries as to whether a given dataset index has been postprocessed in a previous run or not </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" line="34" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="34" bodyend="47" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" declline="34" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="postprocessor__1_80_80_2postprocessor_8hpp_1a3d5c46cef8d3ba0cb3c10ea5bbeab020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structChunk" kindref="compound">Chunk</ref></type>
+        <definition>Chunk Gambit::PostProcessor::get_effective_chunk</definition>
+        <argsstring>(const std::size_t total_length, const unsigned int rank, const unsigned int numtasks)</argsstring>
+        <name>get_effective_chunk</name>
+        <param>
+          <type>const std::size_t</type>
+          <declname>total_length</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>numtasks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get &apos;effective&apos; start and end positions for a processing batch i.e. simply divides up an integer into the most even parts possible over a given number of processes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" line="52" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="52" bodyend="72" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" declline="39" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="postprocessor__1_80_80_2postprocessor_8hpp_1a6d80c31a0678307ede88992762a709e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structChunk" kindref="compound">Chunk</ref></type>
+        <definition>Chunk Gambit::PostProcessor::get_my_chunk</definition>
+        <argsstring>(const std::size_t dset_length, const ChunkSet &amp;done_chunks, const int rank, const int numtasks)</argsstring>
+        <name>get_my_chunk</name>
+        <param>
+          <type>const std::size_t</type>
+          <declname>dset_length</declname>
+        </param>
+        <param>
+          <type>const ChunkSet &amp;</type>
+          <declname>done_chunks</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>numtasks</declname>
+        </param>
+        <briefdescription>
+<para>Compute start/end indices for a given rank process, given previous &quot;done_chunk&quot; data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>First compute number of points left to process</para>
+<para>First compute number of points left to process</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" line="75" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="75" bodyend="251" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" declline="42" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="postprocessor__1_80_80_2postprocessor_8hpp_1a7eed02ed0dbe30df880dc76f20d3eb57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ChunkSet</type>
+        <definition>ChunkSet Gambit::PostProcessor::get_done_points</definition>
+        <argsstring>(const std::string &amp;filebase)</argsstring>
+        <name>get_done_points</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filebase</declname>
+        </param>
+        <briefdescription>
+<para>Read through resume data files and reconstruct which chunks of points have already been processed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" line="254" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="254" bodyend="313" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" declline="45" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="postprocessor__1_80_80_2postprocessor_8hpp_1ab2172c8c024291f034b4acfdb5101a62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ChunkSet</type>
+        <definition>ChunkSet Gambit::PostProcessor::merge_chunks</definition>
+        <argsstring>(const ChunkSet &amp;)</argsstring>
+        <name>merge_chunks</name>
+        <param>
+          <type>const ChunkSet &amp;</type>
+          <defname>input_chunks</defname>
+        </param>
+        <briefdescription>
+<para>Simplify a ChunkSet by merging chunks which overlap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Simplify a ChunkSet by merging chunks which overlap (or are directly adjacent). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" line="316" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="316" bodyend="367" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" declline="48" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="postprocessor__1_80_80_2postprocessor_8hpp_1a959ce7be380c5963fc3acb6d7842b379" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::PostProcessor::record_done_points</definition>
+        <argsstring>(const ChunkSet &amp;done_chunks, const Chunk &amp;mydone, const std::string &amp;filebase, unsigned int rank, unsigned int size)</argsstring>
+        <name>record_done_points</name>
+        <param>
+          <type>const ChunkSet &amp;</type>
+          <declname>done_chunks</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structChunk" kindref="compound">Chunk</ref> &amp;</type>
+          <declname>mydone</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filebase</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write resume data files These specify which chunks of points have been processed during this run </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" line="371" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="371" bodyend="438" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" declline="52" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="30" column="1"/>
+  </compounddef>
+</doxygen>

@@ -171,7 +171,7 @@
         <label>gambit/Utils/begin_ignore_warnings_eigen.hpp</label>
       </node>
       <node id="1">
-        <label>ColliderBit/src/analyses/Analysis_ATLAS_13TeV_RJ3L_lowmass_36invfb.cpp</label>
+        <label>Analysis_ATLAS_13TeV_RJ3L_lowmass_36invfb.cpp</label>
         <link refid="Analysis__ATLAS__13TeV__RJ3L__lowmass__36invfb_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -201,6 +201,8 @@
       </node>
     </incdepgraph>
     <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__lowmass__36invfb" prot="public">Gambit::ColliderBit::Analysis_ATLAS_13TeV_RJ3L_lowmass_36invfb</innerclass>
+    <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__2Lep2Jets__36invfb" prot="public">Gambit::ColliderBit::Analysis_ATLAS_13TeV_RJ3L_2Lep2Jets_36invfb</innerclass>
+    <innerclass refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__3Lep__36invfb" prot="public">Gambit::ColliderBit::Analysis_ATLAS_13TeV_RJ3L_3Lep_36invfb</innerclass>
     <innernamespace refid="namespaceGambit">Gambit</innernamespace>
     <innernamespace refid="namespaceGambit_1_1ColliderBit">Gambit::ColliderBit</innernamespace>
     <briefdescription>
@@ -2354,32 +2356,32 @@
 <codeline lineno="2165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Derived<sp/>analysis<sp/>class<sp/>for<sp/>the<sp/>RJ3L_lowmass<sp/>SRs</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Analysis_ATLAS_13TeV_RJ3L_2Lep2Jets_36invfb<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__lowmass__36invfb" kindref="compound">Analysis_ATLAS_13TeV_RJ3L_lowmass_36invfb</ref><sp/>{</highlight></codeline>
+<codeline lineno="2168" refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__2Lep2Jets__36invfb" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__2Lep2Jets__36invfb" kindref="compound">Analysis_ATLAS_13TeV_RJ3L_2Lep2Jets_36invfb</ref><sp/>:<sp/>public<sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__lowmass__36invfb" kindref="compound">Analysis_ATLAS_13TeV_RJ3L_lowmass_36invfb</ref><sp/>{</highlight></codeline>
 <codeline lineno="2169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="2170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Analysis_ATLAS_13TeV_RJ3L_2Lep2Jets_36invfb()<sp/>{</highlight></codeline>
+<codeline lineno="2170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__2Lep2Jets__36invfb" kindref="compound">Analysis_ATLAS_13TeV_RJ3L_2Lep2Jets_36invfb</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="2171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_analysis_name(</highlight><highlight class="stringliteral">&quot;ATLAS_13TeV_RJ3L_2Lep2Jets_36invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="2172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="2173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>collect_results()<sp/>{</highlight></codeline>
-<codeline lineno="2174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;2L2JHIGH&quot;</highlight><highlight class="normal">),<sp/>0,<sp/><sp/>{1.9,<sp/>0.8}));</highlight></codeline>
-<codeline lineno="2175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;2L2JINT&quot;</highlight><highlight class="normal">),<sp/><sp/>1,<sp/><sp/>{2.4,<sp/>0.9}));</highlight></codeline>
-<codeline lineno="2176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;2L2JLOW&quot;</highlight><highlight class="normal">),<sp/><sp/>19,<sp/>{8.4,<sp/>5.8}));</highlight></codeline>
-<codeline lineno="2177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;2L2JCOMP&quot;</highlight><highlight class="normal">),<sp/>11,<sp/>{2.7,<sp/>2.7}));</highlight></codeline>
+<codeline lineno="2174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;2L2JHIGH&quot;</highlight><highlight class="normal">),<sp/>0,<sp/><sp/>{1.9,<sp/>0.8}));</highlight></codeline>
+<codeline lineno="2175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;2L2JINT&quot;</highlight><highlight class="normal">),<sp/><sp/>1,<sp/><sp/>{2.4,<sp/>0.9}));</highlight></codeline>
+<codeline lineno="2176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;2L2JLOW&quot;</highlight><highlight class="normal">),<sp/><sp/>19,<sp/>{8.4,<sp/>5.8}));</highlight></codeline>
+<codeline lineno="2177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;2L2JCOMP&quot;</highlight><highlight class="normal">),<sp/>11,<sp/>{2.7,<sp/>2.7}));</highlight></codeline>
 <codeline lineno="2178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="2179"><highlight class="normal"></highlight></codeline>
 <codeline lineno="2180"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="2181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Factory<sp/>fn</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Analysis_8hpp_1a50d7854582501458d42e174bfe160f9d" kindref="member">DEFINE_ANALYSIS_FACTORY</ref>(ATLAS_13TeV_RJ3L_2Lep2Jets_36invfb)</highlight></codeline>
 <codeline lineno="2183"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Analysis_ATLAS_13TeV_RJ3L_3Lep_36invfb<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Analysis_ATLAS_13TeV_RJ3L_lowmass_36invfb<sp/>{</highlight></codeline>
+<codeline lineno="2184" refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__3Lep__36invfb" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__3Lep__36invfb" kindref="compound">Analysis_ATLAS_13TeV_RJ3L_3Lep_36invfb</ref><sp/>:<sp/>public<sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__lowmass__36invfb" kindref="compound">Analysis_ATLAS_13TeV_RJ3L_lowmass_36invfb</ref><sp/>{</highlight></codeline>
 <codeline lineno="2185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="2186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Analysis_ATLAS_13TeV_RJ3L_3Lep_36invfb()<sp/>{</highlight></codeline>
+<codeline lineno="2186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1ColliderBit_1_1Analysis__ATLAS__13TeV__RJ3L__3Lep__36invfb" kindref="compound">Analysis_ATLAS_13TeV_RJ3L_3Lep_36invfb</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="2187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_analysis_name(</highlight><highlight class="stringliteral">&quot;ATLAS_13TeV_RJ3L_3Lep_36invfb&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="2188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="2189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>collect_results()<sp/>{</highlight></codeline>
-<codeline lineno="2190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;3LHIGH&quot;</highlight><highlight class="normal">),<sp/><sp/><sp/>2,<sp/><sp/>{1.1,<sp/>0.5}));</highlight></codeline>
-<codeline lineno="2191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;3LINT&quot;</highlight><highlight class="normal">),<sp/><sp/><sp/><sp/>1,<sp/><sp/>{2.3,<sp/>0.5}));</highlight></codeline>
-<codeline lineno="2192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;3LLOW&quot;</highlight><highlight class="normal">),<sp/><sp/><sp/><sp/>20,<sp/>{10.,<sp/>2.0}));</highlight></codeline>
-<codeline lineno="2193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(SignalRegionData(_counters.at(</highlight><highlight class="stringliteral">&quot;3LCOMP&quot;</highlight><highlight class="normal">),<sp/><sp/><sp/>12,<sp/>{3.9,<sp/>1.0}));</highlight></codeline>
+<codeline lineno="2190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;3LHIGH&quot;</highlight><highlight class="normal">),<sp/><sp/><sp/>2,<sp/><sp/>{1.1,<sp/>0.5}));</highlight></codeline>
+<codeline lineno="2191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;3LINT&quot;</highlight><highlight class="normal">),<sp/><sp/><sp/><sp/>1,<sp/><sp/>{2.3,<sp/>0.5}));</highlight></codeline>
+<codeline lineno="2192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;3LLOW&quot;</highlight><highlight class="normal">),<sp/><sp/><sp/><sp/>20,<sp/>{10.,<sp/>2.0}));</highlight></codeline>
+<codeline lineno="2193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_result(<ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData" kindref="compound">SignalRegionData</ref>(_counters.at(</highlight><highlight class="stringliteral">&quot;3LCOMP&quot;</highlight><highlight class="normal">),<sp/><sp/><sp/>12,<sp/>{3.9,<sp/>1.0}));</highlight></codeline>
 <codeline lineno="2194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="2195"><highlight class="normal"></highlight></codeline>
 <codeline lineno="2196"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
@@ -2393,6 +2395,6 @@
 <codeline lineno="2204"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2205"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="ColliderBit/src/analyses/Analysis_ATLAS_13TeV_RJ3L_lowmass_36invfb.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_13TeV_RJ3L_lowmass_36invfb.cpp"/>
   </compounddef>
 </doxygen>

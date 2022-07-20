@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structGambit_1_1DarkBit_1_1TH__Channel" kind="struct" language="C++" prot="public">
+    <compoundname>Gambit::DarkBit::TH_Channel</compoundname>
+    <includes refid="ProcessCatalog_8hpp" local="no">ProcessCatalog.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGambit_1_1DarkBit_1_1TH__Channel_1a514e949b3a3d7187ae177f5d188f60e0" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Gambit::DarkBit::TH_Channel::finalStateIDs</definition>
+        <argsstring></argsstring>
+        <name>finalStateIDs</name>
+        <briefdescription>
+<para>Final state identifiers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="109" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1DarkBit_1_1TH__Channel_1a5ecd054d1fe54facd68d3cb996dc16e0" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Gambit::DarkBit::TH_Channel::nFinalStates</definition>
+        <argsstring></argsstring>
+        <name>nFinalStates</name>
+        <briefdescription>
+<para>Number of final state particles in this channel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="112" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1DarkBit_1_1TH__Channel_1a7dca592a70775e96bea6acca3774d5a1" prot="public" static="no" mutable="no">
+        <type>daFunk::Funk</type>
+        <definition>daFunk::Funk Gambit::DarkBit::TH_Channel::genRate</definition>
+        <argsstring></argsstring>
+        <name>genRate</name>
+        <initializer>= daFunk::zero(&quot;dummyArgument&quot;)</initializer>
+        <briefdescription>
+<para>Energy dependence of final state particles. Includes v_rel (&quot;v&quot;) as last argument in case of annihilation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="115" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1TH__Channel_1a9997cc44b9346b3679167942b86d7338" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::TH_Channel::TH_Channel</definition>
+        <argsstring>(std::vector&lt; str &gt; finalStateIDs, daFunk::Funk genRate)</argsstring>
+        <name>TH_Channel</name>
+        <param>
+          <type>std::vector&lt; str &gt;</type>
+          <declname>finalStateIDs</declname>
+        </param>
+        <param>
+          <type>daFunk::Funk</type>
+          <declname>genRate</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="91" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/ProcessCatalog.cpp" bodystart="38" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1TH__Channel_1ada3f70b06d1dcf1536e4936c0b1a691e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::TH_Channel::printChannel</definition>
+        <argsstring>() const</argsstring>
+        <name>printChannel</name>
+        <briefdescription>
+<para>Print information about this channel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="94" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/ProcessCatalog.cpp" bodystart="49" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1TH__Channel_1a97c78c051dd780d07a818afce7da5af7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DarkBit::TH_Channel::channelContains</definition>
+        <argsstring>(str p) const</argsstring>
+        <name>channelContains</name>
+        <param>
+          <type>str</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Indicate whether or not the final states of this channel contain a specific particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="97" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/ProcessCatalog.cpp" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1TH__Channel_1a0564eebf6324e507b2804e93052199e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DarkBit::TH_Channel::isChannel</definition>
+        <argsstring>(str, str, str=&quot;&quot;, str=&quot;&quot;) const</argsstring>
+        <name>isChannel</name>
+        <param>
+          <type>str</type>
+          <defname>p0</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>p1</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>p2</defname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>p3</defname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Indicate whether or not this channel is the one defined by some specific final states. Particle name version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="100" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/ProcessCatalog.cpp" bodystart="71" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="structGambit_1_1DarkBit_1_1TH__Channel_1abc74f3150099ab077fe50efec6c456a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DarkBit::TH_Channel::isChannel</definition>
+        <argsstring>(std::vector&lt; str &gt;) const</argsstring>
+        <name>isChannel</name>
+        <param>
+          <type>std::vector&lt; str &gt;</type>
+          <defname>particles</defname>
+        </param>
+        <briefdescription>
+<para>Indicate whether or not this channel is the one defined by some specific final states. Particle vector version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="103" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/ProcessCatalog.cpp" bodystart="83" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>All data on a single annihilation or decay channel, e.g. chi --&gt; gamma gamma, chi chi --&gt; mu+ mu- </para>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" line="87" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/ProcessCatalog.hpp" bodystart="86" bodyend="116"/>
+    <listofallmembers>
+      <member refid="structGambit_1_1DarkBit_1_1TH__Channel_1a97c78c051dd780d07a818afce7da5af7" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_Channel</scope><name>channelContains</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__Channel_1a514e949b3a3d7187ae177f5d188f60e0" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_Channel</scope><name>finalStateIDs</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__Channel_1a7dca592a70775e96bea6acca3774d5a1" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_Channel</scope><name>genRate</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__Channel_1a0564eebf6324e507b2804e93052199e8" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_Channel</scope><name>isChannel</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__Channel_1abc74f3150099ab077fe50efec6c456a0" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_Channel</scope><name>isChannel</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__Channel_1a5ecd054d1fe54facd68d3cb996dc16e0" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_Channel</scope><name>nFinalStates</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__Channel_1ada3f70b06d1dcf1536e4936c0b1a691e" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_Channel</scope><name>printChannel</name></member>
+      <member refid="structGambit_1_1DarkBit_1_1TH__Channel_1a9997cc44b9346b3679167942b86d7338" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::TH_Channel</scope><name>TH_Channel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

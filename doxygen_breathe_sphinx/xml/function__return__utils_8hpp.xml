@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="function__return__utils_8hpp" kind="file" language="C++">
+    <compoundname>function_return_utils.hpp</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="function__return__utils_8hpp_1ad388a2fa0e3b8559dfacc85f37996fa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type>U *</type>
+        <definition>U* pointer_returner</definition>
+        <argsstring>(V *ptr)</argsstring>
+        <name>pointer_returner</name>
+        <param>
+          <type>V *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/function_return_utils.hpp" line="6" column="3" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_source_files/function_return_utils.cpp" bodystart="5" bodyend="18" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/function_return_utils.hpp" declline="6" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="function__return__utils_8hpp_1a696fbfa817682ca1d57ed1a4af91d32e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type>U &amp;</type>
+        <definition>U&amp; reference_returner</definition>
+        <argsstring>(V *ptr)</argsstring>
+        <name>reference_returner</name>
+        <param>
+          <type>V *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/function_return_utils.hpp" line="10" column="3" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_source_files/function_return_utils.cpp" bodystart="23" bodyend="36" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/function_return_utils.hpp" declline="10" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="function__return__utils_8hpp_1a59562ed9433b92b26f86c9d460a4e138" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type>U &amp;</type>
+        <definition>U&amp; reference_returner</definition>
+        <argsstring>(const V *ptr)</argsstring>
+        <name>reference_returner</name>
+        <param>
+          <type>const V *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/function_return_utils.hpp" line="14" column="3" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_source_files/function_return_utils.cpp" bodystart="40" bodyend="53" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/function_return_utils.hpp" declline="14" declcolumn="3"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__FUNCTION_RETURN_UTILS_HPP__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FUNCTION_RETURN_UTILS_HPP__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>used<sp/>to<sp/>return<sp/>pointer-to-wrapper</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>U,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">U*<sp/>pointer_returner(V*<sp/>ptr);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>used<sp/>to<sp/>return<sp/>reference-to-wrapper</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>U,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">U&amp;<sp/>reference_returner(V*<sp/>ptr);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>of<sp/>the<sp/>above<sp/>function<sp/>taking<sp/>a<sp/>const<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>U,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">U&amp;<sp/>reference_returner(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V*<sp/>ptr);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/common_headers/function_return_utils.hpp"/>
+  </compounddef>
+</doxygen>

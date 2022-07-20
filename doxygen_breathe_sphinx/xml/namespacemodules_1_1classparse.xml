@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacemodules_1_1classparse" kind="namespace" language="Python">
+    <compoundname>modules::classparse</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="classparse_8py_1aeef4a3f5d11e587a939f20b444fcd3cb" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::classparse.template_done</definition>
+        <argsstring></argsstring>
+        <name>template_done</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="23" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classparse_8py_1a2d1c580c9a220236cecedb77c4c461c3" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::classparse.templ_spec_done</definition>
+        <argsstring></argsstring>
+        <name>templ_spec_done</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="24" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classparse_8py_1a339db436af6b8f17b9828f4bb4b966c2" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::classparse.added_parent</definition>
+        <argsstring></argsstring>
+        <name>added_parent</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="25" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classparse_8py_1ac76f5ab206906c99969ed977cf63a43e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::classparse.includes</definition>
+        <argsstring></argsstring>
+        <name>includes</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="27" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="classparse_8py_1a449315267fbde6c02144dd65d2e67d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def modules.classparse.run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="34" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="34" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classparse_8py_1a144d4b556e2f1f694626afd6e9677b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def modules.classparse.constrAbstractClassHeaderCode</definition>
+        <argsstring>(class_el, class_name, abstr_class_name, namespaces, is_template, has_copy_constructor, construct_assignment_operator, abstr_class_fname, file_for_gambit=False)</argsstring>
+        <name>constrAbstractClassHeaderCode</name>
+        <param>
+          <type>class_el</type>
+          <defname>class_el</defname>
+        </param>
+        <param>
+          <type>class_name</type>
+          <defname>class_name</defname>
+        </param>
+        <param>
+          <type>abstr_class_name</type>
+          <defname>abstr_class_name</defname>
+        </param>
+        <param>
+          <type>namespaces</type>
+          <defname>namespaces</defname>
+        </param>
+        <param>
+          <type>is_template</type>
+          <defname>is_template</defname>
+        </param>
+        <param>
+          <type>has_copy_constructor</type>
+          <defname>has_copy_constructor</defname>
+        </param>
+        <param>
+          <type>construct_assignment_operator</type>
+          <defname>construct_assignment_operator</defname>
+        </param>
+        <param>
+          <type>abstr_class_fname</type>
+          <defname>abstr_class_fname</defname>
+        </param>
+        <param>
+          <type>file_for_gambit</type>
+          <defname>file_for_gambit</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="246" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="246" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="classparse_8py_1add62be7890250dab73fd7ab380709e78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def modules.classparse.addAbsClassToInheritanceList</definition>
+        <argsstring>(class_el, class_name, abstr_class_name, is_template, original_file_name, original_file_content_nocomments)</argsstring>
+        <name>addAbsClassToInheritanceList</name>
+        <param>
+          <type>class_el</type>
+          <defname>class_el</defname>
+        </param>
+        <param>
+          <type>class_name</type>
+          <defname>class_name</defname>
+        </param>
+        <param>
+          <type>abstr_class_name</type>
+          <defname>abstr_class_name</defname>
+        </param>
+        <param>
+          <type>is_template</type>
+          <defname>is_template</defname>
+        </param>
+        <param>
+          <type>original_file_name</type>
+          <defname>original_file_name</defname>
+        </param>
+        <param>
+          <type>original_file_content_nocomments</type>
+          <defname>original_file_content_nocomments</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="307" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="307" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="classparse_8py_1ab4b0cbe25dba6687d67bc7b84a5a1c11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def modules.classparse.addIncludesToOriginalClassFile</definition>
+        <argsstring>(class_el, namespaces, is_template, original_file_name, original_file_content_nocomments, original_file_content, short_abstr_class_fname)</argsstring>
+        <name>addIncludesToOriginalClassFile</name>
+        <param>
+          <type>class_el</type>
+          <defname>class_el</defname>
+        </param>
+        <param>
+          <type>namespaces</type>
+          <defname>namespaces</defname>
+        </param>
+        <param>
+          <type>is_template</type>
+          <defname>is_template</defname>
+        </param>
+        <param>
+          <type>original_file_name</type>
+          <defname>original_file_name</defname>
+        </param>
+        <param>
+          <type>original_file_content_nocomments</type>
+          <defname>original_file_content_nocomments</defname>
+        </param>
+        <param>
+          <type>original_file_content</type>
+          <defname>original_file_content</defname>
+        </param>
+        <param>
+          <type>short_abstr_class_fname</type>
+          <defname>short_abstr_class_fname</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="386" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="386" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="classparse_8py_1adfae23c5297bae439a8dfc32ea441f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def modules.classparse.generateClassMemberInterface</definition>
+        <argsstring>(class_el, class_name, abstr_class_name, namespaces, original_file_name, original_file_content_nocomments, original_class_file_el, extras_src_file_name, has_copy_constructor, construct_assignment_operator)</argsstring>
+        <name>generateClassMemberInterface</name>
+        <param>
+          <type>class_el</type>
+          <defname>class_el</defname>
+        </param>
+        <param>
+          <type>class_name</type>
+          <defname>class_name</defname>
+        </param>
+        <param>
+          <type>abstr_class_name</type>
+          <defname>abstr_class_name</defname>
+        </param>
+        <param>
+          <type>namespaces</type>
+          <defname>namespaces</defname>
+        </param>
+        <param>
+          <type>original_file_name</type>
+          <defname>original_file_name</defname>
+        </param>
+        <param>
+          <type>original_file_content_nocomments</type>
+          <defname>original_file_content_nocomments</defname>
+        </param>
+        <param>
+          <type>original_class_file_el</type>
+          <defname>original_class_file_el</defname>
+        </param>
+        <param>
+          <type>extras_src_file_name</type>
+          <defname>extras_src_file_name</defname>
+        </param>
+        <param>
+          <type>has_copy_constructor</type>
+          <defname>has_copy_constructor</defname>
+        </param>
+        <param>
+          <type>construct_assignment_operator</type>
+          <defname>construct_assignment_operator</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="456" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="456" bodyend="656"/>
+      </memberdef>
+      <memberdef kind="function" id="classparse_8py_1a21f7d4d4cbecfd96f04bf9c2253d727d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def modules.classparse.generateFactoryFunctions</definition>
+        <argsstring>(class_el, class_name, is_template)</argsstring>
+        <name>generateFactoryFunctions</name>
+        <param>
+          <type>class_el</type>
+          <defname>class_el</defname>
+        </param>
+        <param>
+          <type>class_name</type>
+          <defname>class_name</defname>
+        </param>
+        <param>
+          <type>is_template</type>
+          <defname>is_template</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="657" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="657" bodyend="698"/>
+      </memberdef>
+      <memberdef kind="function" id="classparse_8py_1aeae9a3d27253b1ad7c560b806e2379a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def modules.classparse.generateWrapperHeader</definition>
+        <argsstring>(class_el, class_name, abstr_class_name, namespaces, short_abstr_class_fname, construct_assignment_operator, has_copy_constructor, copy_constructor_id)</argsstring>
+        <name>generateWrapperHeader</name>
+        <param>
+          <type>class_el</type>
+          <defname>class_el</defname>
+        </param>
+        <param>
+          <type>class_name</type>
+          <defname>class_name</defname>
+        </param>
+        <param>
+          <type>abstr_class_name</type>
+          <defname>abstr_class_name</defname>
+        </param>
+        <param>
+          <type>namespaces</type>
+          <defname>namespaces</defname>
+        </param>
+        <param>
+          <type>short_abstr_class_fname</type>
+          <defname>short_abstr_class_fname</defname>
+        </param>
+        <param>
+          <type>construct_assignment_operator</type>
+          <defname>construct_assignment_operator</defname>
+        </param>
+        <param>
+          <type>has_copy_constructor</type>
+          <defname>has_copy_constructor</defname>
+        </param>
+        <param>
+          <type>copy_constructor_id</type>
+          <defname>copy_constructor_id</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="699" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="699" bodyend="746"/>
+      </memberdef>
+      <memberdef kind="function" id="classparse_8py_1ae299d43c5a3181cb38bdecdc65496369" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def modules.classparse.constrWrapperUtils</definition>
+        <argsstring>(class_name)</argsstring>
+        <name>constrWrapperUtils</name>
+        <param>
+          <type>class_name</type>
+          <defname>class_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="747" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="747" bodyend="849"/>
+      </memberdef>
+      <memberdef kind="function" id="classparse_8py_1a5c3f2f925e0c15e6ae2f9d7b174d5528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def modules.classparse.addAbstractTypedefs</definition>
+        <argsstring>(abstr_class_name, namespaces)</argsstring>
+        <name>addAbstractTypedefs</name>
+        <param>
+          <type>abstr_class_name</type>
+          <defname>abstr_class_name</defname>
+        </param>
+        <param>
+          <type>namespaces</type>
+          <defname>namespaces</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="850" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="850" bodyend="883"/>
+      </memberdef>
+      <memberdef kind="function" id="classparse_8py_1a1550e1b775fd21addf7d06f52c01f724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def modules.classparse.addWrapperTypedefs</definition>
+        <argsstring>(class_name, namespaces)</argsstring>
+        <name>addWrapperTypedefs</name>
+        <param>
+          <type>class_name</type>
+          <defname>class_name</defname>
+        </param>
+        <param>
+          <type>namespaces</type>
+          <defname>namespaces</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="884" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" bodystart="884" bodyend="916"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/classparse.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

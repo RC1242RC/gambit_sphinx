@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1ModelHierarchy" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::ModelHierarchy</compoundname>
+    <includes refid="modelgraph_8hpp" local="no">modelgraph.hpp</includes>
+    <innerclass refid="classGambit_1_1ModelHierarchy_1_1colorWriter" prot="private">Gambit::ModelHierarchy::colorWriter</innerclass>
+    <innerclass refid="structGambit_1_1ModelHierarchy_1_1edge__color__t" prot="private">Gambit::ModelHierarchy::edge_color_t</innerclass>
+    <innerclass refid="classGambit_1_1ModelHierarchy_1_1labelWriter" prot="private">Gambit::ModelHierarchy::labelWriter</innerclass>
+      <sectiondef kind="user-defined">
+      <memberdef kind="typedef" id="classGambit_1_1ModelHierarchy_1a96c11fdb48279a4e57b9ae4bc00ba8a5" prot="private" static="no">
+        <type>boost::property&lt; edge_color_t, std::string &gt;</type>
+        <definition>typedef boost::property&lt;edge_color_t, std::string&gt; Gambit::ModelHierarchy::EdgeColor</definition>
+        <argsstring></argsstring>
+        <name>EdgeColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Typedefs for central boost (model) graph </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="43" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classGambit_1_1ModelHierarchy_1a99da25e57428151a2f4aa4f25981b664" prot="private" static="no">
+        <type>boost::adjacency_list&lt; boost::vecS, boost::vecS, boost::bidirectionalS, functor *, EdgeColor &gt;</type>
+        <definition>typedef boost::adjacency_list&lt;boost::vecS, boost::vecS, boost::bidirectionalS, functor*, EdgeColor&gt; Gambit::ModelHierarchy::ModelGraphType</definition>
+        <argsstring></argsstring>
+        <name>ModelGraphType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="44" column="35" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classGambit_1_1ModelHierarchy_1aa98f94e327ed86bf5d163dcdfe0bf143" prot="private" static="no">
+        <type>boost::graph_traits&lt; ModelGraphType &gt;::vertex_descriptor</type>
+        <definition>typedef boost::graph_traits&lt;ModelGraphType&gt;::vertex_descriptor Gambit::ModelHierarchy::ModelVertexID</definition>
+        <argsstring></argsstring>
+        <name>ModelVertexID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="45" column="53" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classGambit_1_1ModelHierarchy_1a692bcc453bf6c7ffb88f08a5d5b7403a" prot="private" static="no">
+        <type>boost::graph_traits&lt; ModelGraphType &gt;::edge_descriptor</type>
+        <definition>typedef boost::graph_traits&lt;ModelGraphType&gt;::edge_descriptor Gambit::ModelHierarchy::ModelEdgeID</definition>
+        <argsstring></argsstring>
+        <name>ModelEdgeID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="46" column="51" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classGambit_1_1ModelHierarchy_1a39ab1f6fe8905cacb306f6171713a8ef" prot="private" static="no">
+        <type>boost::property_map&lt; ModelGraphType, boost::vertex_index_t &gt;::type</type>
+        <definition>typedef boost::property_map&lt;ModelGraphType,boost::vertex_index_t&gt;::type Gambit::ModelHierarchy::ModelIndexMap</definition>
+        <argsstring></argsstring>
+        <name>ModelIndexMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="47" column="40" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classGambit_1_1ModelHierarchy_1a73a40c91ff8f2acd0743715465d1b5d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ModelHierarchy::addFunctorsToGraph</definition>
+        <argsstring>(const primodel_vec &amp;)</argsstring>
+        <name>addFunctorsToGraph</name>
+        <param>
+          <type>const primodel_vec &amp;</type>
+          <defname>primaryModelFunctors</defname>
+        </param>
+        <briefdescription>
+<para>Add model functors (vertices) to model hierarchy graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add model functors to the modelGraph. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="101" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/modelgraph.cpp" bodystart="137" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1ModelHierarchy_1a3f3046f81a2fd23cdda1a57628dad3b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::ModelHierarchy::makeGraph</definition>
+        <argsstring>(const primodel_vec &amp;)</argsstring>
+        <name>makeGraph</name>
+        <param>
+          <type>const primodel_vec &amp;</type>
+          <defname>primaryModelFunctors</defname>
+        </param>
+        <briefdescription>
+<para>Add edges (relationships) to model hierarchy graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Figure out relationships between primary model functors <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="104" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/modelgraph.cpp" bodystart="57" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1ModelHierarchy_1a19e37dd5366d23d937f98d2f58d090fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::ModelHierarchy::ModelHierarchy</definition>
+        <argsstring>(const Models::ModelFunctorClaw &amp;, const primodel_vec &amp;, str, bool)</argsstring>
+        <name>ModelHierarchy</name>
+        <param>
+          <type>const Models::ModelFunctorClaw &amp;</type>
+          <defname>claw</defname>
+        </param>
+        <param>
+          <type>const primodel_vec &amp;</type>
+          <defname>pmv</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>file</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <defname>talky</defname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classGambit_1_1ModelHierarchy" kindref="compound">ModelHierarchy</ref> method definitions Creates a graph of the model hierarchy for visualisation purposes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="109" column="7" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/modelgraph.cpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classGambit_1_1ModelHierarchy_1ad39c0017e4a762855df005ea1c1d47d3" prot="private" static="no">
+        <type>std::vector&lt; primary_model_functor * &gt;</type>
+        <definition>typedef std::vector&lt;primary_model_functor*&gt; Gambit::ModelHierarchy::primodel_vec</definition>
+        <argsstring></argsstring>
+        <name>primodel_vec</name>
+        <briefdescription>
+<para>Shorthand for vector of pointers to primary model functors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="51" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1ModelHierarchy_1a15b8ac3a15ca4a037cdbef8a7e54be27" prot="private" static="no" mutable="no">
+        <type>const Models::ModelFunctorClaw *</type>
+        <definition>const Models::ModelFunctorClaw* Gambit::ModelHierarchy::boundClaw</definition>
+        <argsstring></argsstring>
+        <name>boundClaw</name>
+        <briefdescription>
+<para>The model claw that provides all the model info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="89" column="38" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1ModelHierarchy_1a3912068de97d2a20c4200953ce1737d6" prot="private" static="no" mutable="no">
+        <type>str</type>
+        <definition>str Gambit::ModelHierarchy::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+<para>Output filename. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="92" column="11" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1ModelHierarchy_1aacd568cf6de320d21101db3de6c84631" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::ModelHierarchy::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <briefdescription>
+<para>Turn on verbose operation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="95" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1ModelHierarchy_1a97dd10d467a90f57b654f16bab111426" prot="private" static="no" mutable="no">
+        <type>ModelGraphType</type>
+        <definition>ModelGraphType Gambit::ModelHierarchy::modelGraph</definition>
+        <argsstring></argsstring>
+        <name>modelGraph</name>
+        <briefdescription>
+<para>The central boost graph object for the model hierarchy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="98" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Model hierarchy tree class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" line="37" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/modelgraph.hpp" bodystart="36" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1ModelHierarchy_1a73a40c91ff8f2acd0743715465d1b5d1" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>addFunctorsToGraph</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1a15b8ac3a15ca4a037cdbef8a7e54be27" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>boundClaw</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1a96c11fdb48279a4e57b9ae4bc00ba8a5" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>EdgeColor</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1a3912068de97d2a20c4200953ce1737d6" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>filename</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1a3f3046f81a2fd23cdda1a57628dad3b7" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>makeGraph</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1a692bcc453bf6c7ffb88f08a5d5b7403a" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>ModelEdgeID</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1a97dd10d467a90f57b654f16bab111426" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>modelGraph</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1a99da25e57428151a2f4aa4f25981b664" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>ModelGraphType</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1a19e37dd5366d23d937f98d2f58d090fd" prot="public" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>ModelHierarchy</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1a39ab1f6fe8905cacb306f6171713a8ef" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>ModelIndexMap</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1aa98f94e327ed86bf5d163dcdfe0bf143" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>ModelVertexID</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1ad39c0017e4a762855df005ea1c1d47d3" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>primodel_vec</name></member>
+      <member refid="classGambit_1_1ModelHierarchy_1aacd568cf6de320d21101db3de6c84631" prot="private" virt="non-virtual"><scope>Gambit::ModelHierarchy</scope><name>verbose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

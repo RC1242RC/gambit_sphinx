@@ -7,7 +7,7 @@
     </briefdescription>
     <detaileddescription>
 <para><variablelist>
-<varlistentry><term>Member <ref refid="SUSY__extras_8hpp_1a7cbe782d42e2bc696e4f85cf8af5c69c" kindref="member">BACKEND_REQ</ref>  (prospino_run,(libprospino), map_str_dbl,(const PID_pair &amp;, const Options &amp;)) BACKEND_REQ(prospino_read_slha1_input</term></varlistentry>
+<varlistentry><term>Member <ref refid="SUSY__extras_8hpp_1ac4868b56ac0efaa91a49d7c8c761ba79" kindref="member">BACKEND_REQ</ref>  (prospino_run,(libprospino), map_str_dbl,(const PID_pair &amp;, const Options &amp;)) BACKEND_REQ(prospino_read_slha1_input</term></varlistentry>
 <listitem><para><anchor id="todo_1_todo000039"/>Extend to also allow models ColliderBit_SLHA_file_model, ColliderBit_SLHA_scan_model  </para>
 </listitem>
 <varlistentry><term>Member <ref refid="classGambit_1_1ColliderBit_1_1Analysis_1aaece33bab954d82337af28138e893bcf" kindref="member">Gambit::ColliderBit::Analysis::add</ref>  (<ref refid="classGambit_1_1ColliderBit_1_1Analysis" kindref="compound">Analysis</ref> *other)</term></varlistentry>
@@ -142,11 +142,11 @@
 <varlistentry><term>Member <ref refid="structGambit_1_1ColliderBit_1_1Cutflows_1a7fcf067fd2e9497a59a59947a6383b2b" kindref="member">Gambit::ColliderBit::Cutflows::normalize</ref>  (double norm, size_t icut=0)</term></varlistentry>
 <listitem><para><anchor id="todo_1_todo000007"/>Provide a version that takes a vector of norms?  </para>
 </listitem>
-<varlistentry><term>Member <ref refid="Utils_8hpp_1a2413a535901135a74d4d20f101c78abd" kindref="member">Gambit::ColliderBit::filter_reject</ref>  (const JetPtrs &amp;jets, std::function&lt; bool(const Jet *)&gt; rejfn, bool do_delete=true)</term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000041"/>Optimise by only copying those which are selected (filter_select is canonical)  </para>
-</listitem>
 <varlistentry><term>Member <ref refid="Utils_8hpp_1a1a018b09cbd8d1f85e2af56b717a5f6e" kindref="member">Gambit::ColliderBit::filter_reject</ref>  (const ParticlePtrs &amp;particles, std::function&lt; bool(const Particle *)&gt; rejfn, bool do_delete=true)</term></varlistentry>
 <listitem><para><anchor id="todo_1_todo000040"/>Optimise by only copying those which are selected (filter_select is canonical)  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="Utils_8hpp_1a2413a535901135a74d4d20f101c78abd" kindref="member">Gambit::ColliderBit::filter_reject</ref>  (const JetPtrs &amp;jets, std::function&lt; bool(const Jet *)&gt; rejfn, bool do_delete=true)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000041"/>Optimise by only copying those which are selected (filter_select is canonical)  </para>
 </listitem>
 <varlistentry><term>Member <ref refid="Py8Utils_8hpp_1afe3f3167e3fd6c6a40c811daf8049a9e" kindref="member">Gambit::ColliderBit::fromBottom</ref>  (int n, const EventT &amp;evt)</term></varlistentry>
 <listitem><para><anchor id="todo_1_todo000034"/>Rewrite using the Pythia &gt; 8.176 particle-based methods </para>
@@ -181,6 +181,9 @@
 </listitem>
 <varlistentry><term>Member <ref refid="structGambit_1_1ColliderBit_1_1SignalRegionData_1a80c806d8e0fb934d1463dc44ddd1c14a" kindref="member">Gambit::ColliderBit::SignalRegionData::check</ref>  () const</term></varlistentry>
 <listitem><para><anchor id="todo_1_todo000003"/>Add SR consistency checks  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="SpecBit__MSSM_8cpp_1a292d0ddb744f2550fcab1623d5b6d660" kindref="member">Gambit::SpecBit::get_MSSM_spectrum_from_SLHAstruct</ref>  (Spectrum &amp;result)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000097"/>FIXME this needs to be fixed <ndash/> is it needed any more? Where is this GAMBIT block supposed to be written?  </para>
 </listitem>
 <varlistentry><term>Module <ref refid="namespaceGambit_1_1ColliderBit_1amgrp0060d87a760568155e81ae3c4014d6ad" kindref="member">Random booleans sampled from efficiency maps</ref>  </term></varlistentry>
 <listitem><para><anchor id="todo_1_todo000042"/>Provide random selection functors from const, 1D map, 2D map, and eff functor  </para>

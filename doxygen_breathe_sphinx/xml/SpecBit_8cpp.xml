@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="SpecBit_8cpp" kind="file" language="C++">
+    <compoundname>SpecBit.cpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">sstream</includes>
+    <includes local="yes">gambit/Elements/gambit_module_headers.hpp</includes>
+    <includes local="yes">gambit/SpecBit/SpecBit_rollcall.hpp</includes>
+    <includes local="yes">flexiblesusy/src/lowe.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>gambit/Elements/gambit_module_headers.hpp</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>sstream</label>
+      </node>
+      <node id="1">
+        <label>SpecBit.cpp</label>
+        <link refid="SpecBit_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>flexiblesusy/src/lowe.h</label>
+      </node>
+      <node id="5">
+        <label>gambit/SpecBit/SpecBit_rollcall.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1SpecBit">Gambit::SpecBit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Functions of module SpecBit</para>
+<para>SpecBit module functions shared by several models, or otherwise generic.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Ben Farmer (<ulink url="mailto:ben.farmer@gmail.com">ben.farmer@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2015 Aug</para>
+</simplesect>
+<simplesect kind="author"><para>Tomas Gonzalo (<ulink url="mailto:tomas.gonzalo@monash.edu">tomas.gonzalo@monash.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2020 Jul</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/gambit_module_headers.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/SpecBit/SpecBit_rollcall.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>QedQcd<sp/>header<sp/>from<sp/>SoftSUSY<sp/>(via<sp/>FlexibleSUSY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;flexiblesusy/src/lowe.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SpecBit</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">LogTags;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>check<sp/>if<sp/>a<sp/>model<sp/>is<sp/>currently<sp/>being<sp/>scanned:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bool<sp/>Pipes::&lt;fname&gt;::ModelInUse(str<sp/>model_name)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>=======================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>These<sp/>are<sp/>not<sp/>known<sp/>to<sp/>Gambit,<sp/>but<sp/>they<sp/>do<sp/>basically<sp/>all<sp/>the<sp/>real<sp/>work.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>The<sp/>Gambit<sp/>module<sp/>functions<sp/>merely<sp/>wrap<sp/>the<sp/>functions<sp/>here<sp/>and<sp/>hook</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>them<sp/>up<sp/>to<sp/>their<sp/>dependencies,<sp/>and<sp/>input<sp/>parameters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="SpecBit__helpers_8hpp_1ac442b10d4430a2ba56914473d1e972f7" kindref="member">setup_QedQcd</ref>(softsusy::QedQcd&amp;<sp/>oneset<sp/></highlight><highlight class="comment">/*output*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>sminputs<sp/></highlight><highlight class="comment">/*input*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>pole<sp/>masses<sp/>(to<sp/>be<sp/>treated<sp/>specially)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setPoleMt(sminputs.mT);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//oneset.setPoleMb(...);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setPoleMtau(sminputs.mTau);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setMbMb(sminputs.mBmB);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setMass(softsusy::mDown,<sp/><sp/><sp/><sp/>sminputs.mD);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setMass(softsusy::mUp,<sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mU);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setMass(softsusy::mStrange,<sp/>sminputs.mS);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setMass(softsusy::mCharm,<sp/><sp/><sp/>sminputs.mCmC);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setAlpha(softsusy::ALPHA,<sp/>1./sminputs.alphainv);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setAlpha(softsusy::ALPHAS,<sp/>sminputs.alphaS);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setMass(softsusy::mElectron,<sp/>sminputs.mE);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setMass(softsusy::mMuon,<sp/><sp/><sp/><sp/><sp/>sminputs.mMu);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oneset.setPoleMZ(sminputs.mZ);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="SpecBit__helpers_8hpp_1a2f0b4e6889c2679c95f00d9941d829d4" kindref="member">has_neutralino_LSP</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum&amp;<sp/>result)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>msqd<sp/><sp/>=<sp/>result.get(Par::Pole_Mass,<sp/>1000001,<sp/>0);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>msqu<sp/><sp/>=<sp/>result.get(Par::Pole_Mass,<sp/>1000002,<sp/>0);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>msl<sp/><sp/><sp/>=<sp/>result.get(Par::Pole_Mass,<sp/>1000011,<sp/>0);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>msneu<sp/>=<sp/>result.get(Par::Pole_Mass,<sp/>1000012,<sp/>0);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mglui<sp/>=<sp/>result.get(Par::Pole_Mass,<sp/>1000021,<sp/>0);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mchi0<sp/>=<sp/>std::abs(result.get(Par::Pole_Mass,<sp/>1000022,<sp/>0));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mchip<sp/>=<sp/>std::abs(result.get(Par::Pole_Mass,<sp/>1000024,<sp/>0));</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mchi0<sp/>&lt;<sp/>mchip<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mchi0<sp/>&lt;<sp/>mglui<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mchi0<sp/>&lt;<sp/>msl<sp/><sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mchi0<sp/>&lt;<sp/>msneu<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mchi0<sp/>&lt;<sp/>msqu<sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mchi0<sp/>&lt;<sp/>msqd;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="SpecBit__helpers_8hpp_1a2f0b4e6889c2679c95f00d9941d829d4" kindref="member">has_neutralino_LSP</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum*<sp/>result)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="SpecBit__helpers_8hpp_1a2f0b4e6889c2679c95f00d9941d829d4" kindref="member">has_neutralino_LSP</ref>(*result);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>=======================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>These<sp/>are<sp/>wrapped<sp/>up<sp/>in<sp/>Gambit<sp/>functor<sp/>objects<sp/>according<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>instructions<sp/>in<sp/>the<sp/>rollcall<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Effectively<sp/>just<sp/>changes<sp/>these<sp/>model<sp/>parameters<sp/>into<sp/>a<sp/>more<sp/>convenient<sp/>form.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>But<sp/>also<sp/>opens<sp/>up<sp/>the<sp/>possibility<sp/>of<sp/>rebuilding<sp/>this<sp/>struct<sp/>from<sp/>some<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>parameterisation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="SpecBit_8cpp_1a1047e94813ffee79e3e976837cc12647" kindref="member">get_SMINPUTS</ref>(SMInputs<sp/>&amp;result)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">myPipe<sp/>=<sp/>Pipes::get_SMINPUTS;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SMInputs<sp/>sminputs;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>values<sp/>from<sp/>Params<sp/>pipe</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(as<sp/>defined<sp/>in<sp/>SLHA2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(myPipe::ModelInUse(</highlight><highlight class="stringliteral">&quot;StandardModel_SLHA2&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.alphainv<sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;alphainv&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.GF<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;GF&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.alphaS<sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;alphaS&quot;</highlight><highlight class="normal"><sp/><sp/>];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mZ&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mE&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mMu<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mMu&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mTau<sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mTau&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mNu1<sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mNu1&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mNu2<sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mNu2&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mNu3<sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mNu3&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mD<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mD&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mU<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mU&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mS&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mCmC<sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mCmC&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mBmB<sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mBmB&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mT&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mNu1<sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mNu1&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mNu2<sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mNu2&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mNu3<sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;mNu3&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>];</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CKM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.CKM.lambda<sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;CKM_lambda&quot;</highlight><highlight class="normal"><sp/>];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.CKM.A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;CKM_A&quot;</highlight><highlight class="normal"><sp/>];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.CKM.rhobar<sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;CKM_rhobar&quot;</highlight><highlight class="normal"><sp/>];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.CKM.etabar<sp/><sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;CKM_etabar&quot;</highlight><highlight class="normal"><sp/>];</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PMNS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.PMNS.theta12<sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;theta12&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.PMNS.theta23<sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;theta23&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.PMNS.theta13<sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;theta13&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.PMNS.delta13<sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;delta13&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.PMNS.alpha1<sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;alpha1&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.PMNS.alpha2<sp/><sp/>=<sp/>*myPipe::Param[</highlight><highlight class="stringliteral">&quot;alpha2&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>W<sp/>mass.<sp/><sp/>Stick<sp/>with<sp/>the<sp/>observed<sp/>value<sp/>(set<sp/>in<sp/>the<sp/>default<sp/>constructor)<sp/>unless<sp/>instructed<sp/>otherwise.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(myPipe::runOptions-&gt;getValueOrDef&lt;bool&gt;(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;enforce_tree_level_MW&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>MW<sp/>from<sp/>alpha,<sp/>mZ<sp/>and<sp/>G_F,<sp/>assuming<sp/>the<sp/>tree-level<sp/>relation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pionroot2<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a9617ce9ea7d587dcf3839f2ddd03de0b" kindref="member">pi</ref><sp/>*<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(2,-0.5);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cosW2<sp/>=<sp/>0.5<sp/>+<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(0.25<sp/>-<sp/>pionroot2<sp/>/<sp/>(sminputs.alphainv<sp/>*<sp/>sminputs.GF<sp/>*<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(sminputs.mZ,2.0)),<sp/>0.5);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sminputs.mW<sp/>=<sp/>sminputs.mZ<sp/>*<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(cosW2,0.5);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>errmsg;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errmsg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>mapping<sp/>Standard<sp/>Model<sp/>parameters<sp/>to<sp/>SMINPUTS<sp/>capabilities!&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errmsg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Perhaps<sp/>you<sp/>have<sp/>added<sp/>a<sp/>new<sp/>model<sp/>to<sp/>the<sp/>ALLOWED_MODELS<sp/>of<sp/>this<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errmsg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;module<sp/>function<sp/>but<sp/>have<sp/>not<sp/>added<sp/>a<sp/>corresponding<sp/>case<sp/>in<sp/>the<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errmsg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;function<sp/>source<sp/>(here).&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpecBit_error().raise(LOCAL_INFO,errmsg.str());</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>filled<sp/>struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>sminputs;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>SpecBit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>Gambit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/SpecBit.cpp"/>
+  </compounddef>
+</doxygen>

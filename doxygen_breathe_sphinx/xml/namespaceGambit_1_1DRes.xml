@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceGambit_1_1DRes" kind="namespace" language="C++">
+    <compoundname>Gambit::DRes</compoundname>
+    <innerclass refid="classGambit_1_1DRes_1_1DependencyResolver" prot="public">Gambit::DRes::DependencyResolver</innerclass>
+    <innerclass refid="classGambit_1_1DRes_1_1edgeWriter" prot="public">Gambit::DRes::edgeWriter</innerclass>
+    <innerclass refid="classGambit_1_1DRes_1_1labelWriter" prot="public">Gambit::DRes::labelWriter</innerclass>
+    <innerclass refid="structGambit_1_1DRes_1_1OutputVertexInfo" prot="public">Gambit::DRes::OutputVertexInfo</innerclass>
+    <innerclass refid="structGambit_1_1DRes_1_1QueueEntry" prot="public">Gambit::DRes::QueueEntry</innerclass>
+    <innerclass refid="structGambit_1_1DRes_1_1Rule" prot="public">Gambit::DRes::Rule</innerclass>
+      <sectiondef kind="user-defined">
+      <memberdef kind="typedef" id="depresolver_8hpp_1ab3908c48a2c52ebf5d116d230ac62499" prot="public" static="no">
+        <type>adjacency_list&lt; vecS, vecS, bidirectionalS, functor *, vecS &gt;</type>
+        <definition>typedef adjacency_list&lt;vecS, vecS, bidirectionalS, functor*, vecS&gt; Gambit::DRes::MasterGraphType</definition>
+        <argsstring></argsstring>
+        <name>MasterGraphType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Typedefs for central boost graph </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" line="61" column="28" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="depresolver_8hpp_1a4824e49fa86cbde026f7045cd0367d2c" prot="public" static="no">
+        <type>graph_traits&lt; <ref refid="depresolver_8hpp_1ab3908c48a2c52ebf5d116d230ac62499" kindref="member">MasterGraphType</ref> &gt;::vertex_descriptor</type>
+        <definition>typedef graph_traits&lt;MasterGraphType&gt;::vertex_descriptor Gambit::DRes::VertexID</definition>
+        <argsstring></argsstring>
+        <name>VertexID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" line="62" column="46" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="depresolver_8hpp_1a2035665129c5dc1bce4bf64bd17e5b68" prot="public" static="no">
+        <type>graph_traits&lt; <ref refid="depresolver_8hpp_1ab3908c48a2c52ebf5d116d230ac62499" kindref="member">MasterGraphType</ref> &gt;::edge_descriptor</type>
+        <definition>typedef graph_traits&lt;MasterGraphType&gt;::edge_descriptor Gambit::DRes::EdgeID</definition>
+        <argsstring></argsstring>
+        <name>EdgeID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" line="63" column="44" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="depresolver_8hpp_1acd9a8e27be22a48612fb182e83b38af0" prot="public" static="no">
+        <type>property_map&lt; <ref refid="depresolver_8hpp_1ab3908c48a2c52ebf5d116d230ac62499" kindref="member">MasterGraphType</ref>, vertex_index_t &gt;::type</type>
+        <definition>typedef property_map&lt;MasterGraphType,vertex_index_t&gt;::type Gambit::DRes::IndexMap</definition>
+        <argsstring></argsstring>
+        <name>IndexMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" line="64" column="33" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="typedef" id="depresolver_8hpp_1a3d4857306b34e231f8e3bc79c04141f6" prot="public" static="no">
+        <type>std::map&lt; std::string, double * &gt;</type>
+        <definition>typedef std::map&lt;std::string, double *&gt; Gambit::DRes::inputMapType</definition>
+        <argsstring></argsstring>
+        <name>inputMapType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Typedefs for communication channels with the master-likelihood </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" line="69" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="depresolver_8hpp_1af5db49b50d75b4dd70c8b57acf8672f7" prot="public" static="no">
+        <type>std::map&lt; std::string, std::vector&lt; functor * &gt; &gt;</type>
+        <definition>typedef std::map&lt;std::string, std::vector&lt;functor*&gt; &gt; Gambit::DRes::outputMapType</definition>
+        <argsstring></argsstring>
+        <name>outputMapType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" line="70" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="depresolver_8cpp_1a51ab79d137e5e0f392ca518369f86184" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::DRes::use_regex</definition>
+        <argsstring></argsstring>
+        <name>use_regex</name>
+        <briefdescription>
+<para>Global flag for regex use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="245" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="depresolver_8hpp_1ab5506cb4ffac119b2fb27cf08b8227dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DRes::stringComp</definition>
+        <argsstring>(const str &amp;s1, const str &amp;s2, bool with_regex=true)</argsstring>
+        <name>stringComp</name>
+        <param>
+          <type>const str &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const str &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>with_regex</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Check whether s1 (wildcard + regex allowed) matches s2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="259" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="259" bodyend="277" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" declline="112" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8hpp_1ab5b1650d17ba9ceb475c0e0253719d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DRes::typeComp</definition>
+        <argsstring>(str, str, const Utils::type_equivalency &amp;, bool with_regex=true)</argsstring>
+        <name>typeComp</name>
+        <param>
+          <type>str</type>
+          <defname>s1</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <defname>s2</defname>
+        </param>
+        <param>
+          <type>const Utils::type_equivalency &amp;</type>
+          <defname>eq</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>with_regex</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Type comparison taking into account equivalence classes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="280" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="280" bodyend="306" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" declline="115" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="error__handlers_8hpp_1abda0801bcf720c49927e2b62e0678648" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>error &amp;</type>
+        <definition>error &amp; Gambit::DRes::dependency_resolver_error</definition>
+        <argsstring>()</argsstring>
+        <name>dependency_resolver_error</name>
+        <briefdescription>
+<para>Dependency resolver errors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/error_handlers.cpp" line="42" column="11" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/error_handlers.cpp" bodystart="42" bodyend="46" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/error_handlers.hpp" declline="34" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="error__handlers_8hpp_1aef6f186a60427ce462d26acb91a8c9d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>warning &amp;</type>
+        <definition>warning &amp; Gambit::DRes::dependency_resolver_warning</definition>
+        <argsstring>()</argsstring>
+        <name>dependency_resolver_warning</name>
+        <briefdescription>
+<para>Dependency resolver warnings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/error_handlers.cpp" line="49" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/error_handlers.cpp" bodystart="49" bodyend="53" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/error_handlers.hpp" declline="36" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8cpp_1a3f7332ddb4d4d6b4c493d8566ccb4401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DRes::getParentVertices</definition>
+        <argsstring>(const VertexID &amp;vertex, const DRes::MasterGraphType &amp;graph, std::set&lt; VertexID &gt; &amp;myVertexList)</argsstring>
+        <name>getParentVertices</name>
+        <param>
+          <type>const VertexID &amp;</type>
+          <declname>vertex</declname>
+        </param>
+        <param>
+          <type>const <ref refid="depresolver_8hpp_1ab3908c48a2c52ebf5d116d230ac62499" kindref="member">DRes::MasterGraphType</ref> &amp;</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>std::set&lt; VertexID &gt; &amp;</type>
+          <declname>myVertexList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="90" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="90" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8cpp_1ab57d97107b1338f0d7cfaabe74f6abc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; VertexID &gt;</type>
+        <definition>std::vector&lt;VertexID&gt; Gambit::DRes::sortVertices</definition>
+        <argsstring>(const std::set&lt; VertexID &gt; &amp;set, const std::list&lt; VertexID &gt; &amp;topoOrder)</argsstring>
+        <name>sortVertices</name>
+        <param>
+          <type>const std::set&lt; VertexID &gt; &amp;</type>
+          <declname>set</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; VertexID &gt; &amp;</type>
+          <declname>topoOrder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="107" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="107" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8cpp_1a5fc1cd53bf852a39ba23459c2714bb16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; VertexID &gt;</type>
+        <definition>std::vector&lt;VertexID&gt; Gambit::DRes::getSortedParentVertices</definition>
+        <argsstring>(const VertexID &amp;vertex, const DRes::MasterGraphType &amp;graph, const std::list&lt; VertexID &gt; &amp;topoOrder)</argsstring>
+        <name>getSortedParentVertices</name>
+        <param>
+          <type>const VertexID &amp;</type>
+          <declname>vertex</declname>
+        </param>
+        <param>
+          <type>const <ref refid="depresolver_8hpp_1ab3908c48a2c52ebf5d116d230ac62499" kindref="member">DRes::MasterGraphType</ref> &amp;</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; VertexID &gt; &amp;</type>
+          <declname>topoOrder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="120" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="120" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8cpp_1a472ebc8e34eae091013d98c5b2e7ecc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DRes::quantityMatchesIniEntry</definition>
+        <argsstring>(const sspair &amp;quantity, const IniParser::ObservableType &amp;observable, const Utils::type_equivalency &amp;eq)</argsstring>
+        <name>quantityMatchesIniEntry</name>
+        <param>
+          <type>const sspair &amp;</type>
+          <declname>quantity</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1IniParser_1_1Types_1_1Observable" kindref="compound">IniParser::ObservableType</ref> &amp;</type>
+          <declname>observable</declname>
+        </param>
+        <param>
+          <type>const Utils::type_equivalency &amp;</type>
+          <declname>eq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="136" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="136" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8cpp_1af513f92bb2b4fa9336344be7e6f9c259" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DRes::capabilityMatchesIniEntry</definition>
+        <argsstring>(const sspair &amp;quantity, const IniParser::ObservableType &amp;observable)</argsstring>
+        <name>capabilityMatchesIniEntry</name>
+        <param>
+          <type>const sspair &amp;</type>
+          <declname>quantity</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1IniParser_1_1Types_1_1Observable" kindref="compound">IniParser::ObservableType</ref> &amp;</type>
+          <declname>observable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="147" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="147" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8cpp_1aaf9806f74e42bfe7a252708984d364a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DRes::moduleFuncMatchesIniEntry</definition>
+        <argsstring>(functor *f, const IniParser::ObservableType &amp;e, const Utils::type_equivalency &amp;eq)</argsstring>
+        <name>moduleFuncMatchesIniEntry</name>
+        <param>
+          <type>functor *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1IniParser_1_1Types_1_1Observable" kindref="compound">IniParser::ObservableType</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const Utils::type_equivalency &amp;</type>
+          <declname>eq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="157" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="157" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8cpp_1a74bf64a0b0ce8618492dff30aa92b903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DRes::backendFuncMatchesIniEntry</definition>
+        <argsstring>(functor *f, const IniParser::ObservableType &amp;e, const Utils::type_equivalency &amp;eq)</argsstring>
+        <name>backendFuncMatchesIniEntry</name>
+        <param>
+          <type>functor *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1IniParser_1_1Types_1_1Observable" kindref="compound">IniParser::ObservableType</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const Utils::type_equivalency &amp;</type>
+          <declname>eq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="167" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="167" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8cpp_1a68f2b056d2445023b3d65fdee5489550" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::DRes::getEntryLevelForOptions</definition>
+        <argsstring>(const IniParser::ObservableType &amp;e)</argsstring>
+        <name>getEntryLevelForOptions</name>
+        <param>
+          <type>const <ref refid="structGambit_1_1IniParser_1_1Types_1_1Observable" kindref="compound">IniParser::ObservableType</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="177" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="177" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8cpp_1ae408cdd6fc365103c7a5ead9086b2215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DRes::matchesRules</definition>
+        <argsstring>(functor *f, const Rule &amp;rule)</argsstring>
+        <name>matchesRules</name>
+        <param>
+          <type>functor *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1DRes_1_1Rule" kindref="compound">Rule</ref> &amp;</type>
+          <declname>rule</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="189" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="189" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="depresolver_8cpp_1a2ffc441b1398ac98a233e4e021fa6b03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DRes::getTimeEstimate</definition>
+        <argsstring>(const std::set&lt; VertexID &gt; &amp;vertexList, const DRes::MasterGraphType &amp;graph)</argsstring>
+        <name>getTimeEstimate</name>
+        <param>
+          <type>const std::set&lt; VertexID &gt; &amp;</type>
+          <declname>vertexList</declname>
+        </param>
+        <param>
+          <type>const <ref refid="depresolver_8hpp_1ab3908c48a2c52ebf5d116d230ac62499" kindref="member">DRes::MasterGraphType</ref> &amp;</type>
+          <declname>graph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" line="248" column="12" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/src/depresolver.cpp" bodystart="248" bodyend="256"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Core/include/gambit/Core/depresolver.hpp" line="55" column="1"/>
+  </compounddef>
+</doxygen>

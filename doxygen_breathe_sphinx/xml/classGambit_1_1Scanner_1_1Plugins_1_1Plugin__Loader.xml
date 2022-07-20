@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::Scanner::Plugins::Plugin_Loader</compoundname>
+    <includes refid="plugin__loader_8hpp" local="no">plugin_loader.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ab77091e84d3c30cf16cbd9ee52507224" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Gambit::Scanner::Plugins::Plugin_Loader::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="80" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ab3ee1b3d2a932977b17cb783d1df4f4a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt;</type>
+        <definition>std::vector&lt;Plugin_Details&gt; Gambit::Scanner::Plugins::Plugin_Loader::plugins</definition>
+        <argsstring></argsstring>
+        <name>plugins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="81" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a17305783b7e3b26be10825471fa3cd5e" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::map&lt; std::string, std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt; &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::map&lt;std::string, std::vector&lt;Plugin_Details&gt; &gt; &gt; Gambit::Scanner::Plugins::Plugin_Loader::plugin_map</definition>
+        <argsstring></argsstring>
+        <name>plugin_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="82" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a61a29401f7f1360aed38b50a40906e37" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt;</type>
+        <definition>std::vector&lt;Plugin_Details&gt; Gambit::Scanner::Plugins::Plugin_Loader::excluded_plugins</definition>
+        <argsstring></argsstring>
+        <name>excluded_plugins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="83" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a2ce2f388e8603dd52223bb8bc5e4d947" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::map&lt; std::string, std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt; &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::map&lt;std::string, std::vector&lt;Plugin_Details&gt; &gt; &gt; Gambit::Scanner::Plugins::Plugin_Loader::excluded_plugin_map</definition>
+        <argsstring></argsstring>
+        <name>excluded_plugin_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="84" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a6a9832856823d1e4e621636e3b54a382" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt;</type>
+        <definition>std::vector&lt;Plugin_Details&gt; Gambit::Scanner::Plugins::Plugin_Loader::total_plugins</definition>
+        <argsstring></argsstring>
+        <name>total_plugins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="85" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ac4ecdec9701d6eb20b67ab2c10500d9b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::map&lt; std::string, std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt; &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::map&lt;std::string, std::vector&lt;Plugin_Details&gt; &gt; &gt; Gambit::Scanner::Plugins::Plugin_Loader::total_plugin_map</definition>
+        <argsstring></argsstring>
+        <name>total_plugin_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="86" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1adca0d703aca8af92abeff72fd029ce58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt;</type>
+        <definition>std::vector&lt; Plugin_Details &gt; Gambit::Scanner::Plugins::Plugin_Loader::loadExcluded</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>loadExcluded</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>file</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="87" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="144" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ada03276eebdd2211b0128f16ca2418a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Plugins::Plugin_Loader::process</definition>
+        <argsstring>(const std::string &amp;, const std::string &amp;, const std::string &amp;, std::vector&lt; Plugin_Details &gt; &amp;)</argsstring>
+        <name>process</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>libFile</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>plugFile</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>flagFile</defname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt; &amp;</type>
+          <defname>excluded_plugins</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="88" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="117" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a8884c3071d7a2322e79a53dd8afd1475" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader</definition>
+        <argsstring>()</argsstring>
+        <name>Plugin_Loader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="91" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="75" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a0f0d5f25562158101bee1ad544988258" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt;Plugin_Details&gt;&amp; Gambit::Scanner::Plugins::Plugin_Loader::getPluginsVec</definition>
+        <argsstring>() const</argsstring>
+        <name>getPluginsVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="92" column="35" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a449c74f9cc0b1ac10558f2f7fb7f4764" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::map&lt; std::string, std::map&lt; std::string, std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt; &gt; &gt; &amp;</type>
+        <definition>const std::map&lt;std::string, std::map&lt;std::string, std::vector&lt;Plugin_Details&gt; &gt; &gt;&amp; Gambit::Scanner::Plugins::Plugin_Loader::getPluginsMap</definition>
+        <argsstring>() const</argsstring>
+        <name>getPluginsMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="93" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a8b3eeeac09c9b52a862c13e9ecced61c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::Scanner::Plugins::Plugin_Loader::loadLibrary</definition>
+        <argsstring>(const std::string &amp;, const std::string &amp;=&quot;&quot;)</argsstring>
+        <name>loadLibrary</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>p_str</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>plug</defname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="94" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="203" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a5fd07de729bb69b555a759245cc909a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; Gambit::Scanner::Plugins::Plugin_Loader::print_plugin_names</definition>
+        <argsstring>(const std::string &amp;=&quot;&quot;) const</argsstring>
+        <name>print_plugin_names</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>plug_type</defname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="95" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="239" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ac56ce78853e7844980ff91c12000dab5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Gambit::Scanner::Plugins::Plugin_Loader::print_all</definition>
+        <argsstring>(const std::string &amp;plug_type=&quot;&quot;) const</argsstring>
+        <name>print_all</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>plug_type</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="96" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="359" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1adf81540ef72b66f8ef0d3f9219bc55fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Scanner::Plugins::Plugin_Loader::print_all_to_screen</definition>
+        <argsstring>(const std::string &amp;plug_type=&quot;&quot;) const</argsstring>
+        <name>print_all_to_screen</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>plug_type</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="97" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="384" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ad2c23e2cb0989bee3a38aa6a62f47dd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Gambit::Scanner::Plugins::Plugin_Loader::print_plugin</definition>
+        <argsstring>(const std::string &amp;) const</argsstring>
+        <name>print_plugin</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="98" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="394" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1aebd117f7d75e8fb3e1fdf604a7341fad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Gambit::Scanner::Plugins::Plugin_Loader::print_plugin</definition>
+        <argsstring>(const std::string &amp;, const std::string &amp;) const</argsstring>
+        <name>print_plugin</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>type</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>plugin</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="99" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="426" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1adb602cd801f0f4462148850120596ff6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; Gambit::Scanner::Plugins::Plugin_Loader::list_prior_groups</definition>
+        <argsstring>() const</argsstring>
+        <name>list_prior_groups</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="100" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="272" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1aa66bda755ad39b208238273a28d9d2a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Gambit::Scanner::Plugins::Plugin_Loader::print_priors</definition>
+        <argsstring>(const std::string &amp;prior_group=&quot;priors&quot;) const</argsstring>
+        <name>print_priors</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prior_group</declname>
+          <defval>&quot;priors&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="101" column="29" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="288" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ad3cc0b275b6a9a61c2dbdfcfa64ce9cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Scanner::Plugins::Plugin_Loader::print_plugin_to_screen</definition>
+        <argsstring>(const std::string &amp;) const</argsstring>
+        <name>print_plugin_to_screen</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="102" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="443" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1aaa26aa52e4459e9bf829179d01a8385e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Scanner::Plugins::Plugin_Loader::print_plugin_to_screen</definition>
+        <argsstring>(const std::string &amp;, const std::string &amp;) const</argsstring>
+        <name>print_plugin_to_screen</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>type</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="103" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="453" bodyend="461"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1afb569a09de6428315e0588cfdab5ff8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Scanner::Plugins::Plugin_Loader::print_plugin_to_screen</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;) const</argsstring>
+        <name>print_plugin_to_screen</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <defname>names</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="104" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="463" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a660f480de06142fda70b3e9cdc21d2e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &amp;</type>
+        <definition>Plugin_Details &amp; Gambit::Scanner::Plugins::Plugin_Loader::find</definition>
+        <argsstring>(const std::string &amp;, const std::string &amp;, const std::string &amp;, const std::string &amp;) const</argsstring>
+        <name>find</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>type</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>plugin</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>version</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>lib</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="105" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="478" bodyend="521"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>container class for the actual plugins detected by ScannerBit </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" line="78" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" bodystart="77" bodyend="106"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a2ce2f388e8603dd52223bb8bc5e4d947" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>excluded_plugin_map</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a61a29401f7f1360aed38b50a40906e37" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>excluded_plugins</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a660f480de06142fda70b3e9cdc21d2e3" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>find</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a449c74f9cc0b1ac10558f2f7fb7f4764" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>getPluginsMap</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a0f0d5f25562158101bee1ad544988258" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>getPluginsVec</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1adb602cd801f0f4462148850120596ff6" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>list_prior_groups</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1adca0d703aca8af92abeff72fd029ce58" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>loadExcluded</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a8b3eeeac09c9b52a862c13e9ecced61c" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>loadLibrary</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ab77091e84d3c30cf16cbd9ee52507224" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>path</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a8884c3071d7a2322e79a53dd8afd1475" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>Plugin_Loader</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a17305783b7e3b26be10825471fa3cd5e" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>plugin_map</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ab3ee1b3d2a932977b17cb783d1df4f4a" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>plugins</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ac56ce78853e7844980ff91c12000dab5" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>print_all</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1adf81540ef72b66f8ef0d3f9219bc55fa" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>print_all_to_screen</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ad2c23e2cb0989bee3a38aa6a62f47dd7" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>print_plugin</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1aebd117f7d75e8fb3e1fdf604a7341fad" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>print_plugin</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a5fd07de729bb69b555a759245cc909a1" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>print_plugin_names</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ad3cc0b275b6a9a61c2dbdfcfa64ce9cd" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>print_plugin_to_screen</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1aaa26aa52e4459e9bf829179d01a8385e" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>print_plugin_to_screen</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1afb569a09de6428315e0588cfdab5ff8c" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>print_plugin_to_screen</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1aa66bda755ad39b208238273a28d9d2a8" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>print_priors</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ada03276eebdd2211b0128f16ca2418a3" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>process</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1ac4ecdec9701d6eb20b67ab2c10500d9b" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>total_plugin_map</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader_1a6a9832856823d1e4e621636e3b54a382" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Plugins::Plugin_Loader</scope><name>total_plugins</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

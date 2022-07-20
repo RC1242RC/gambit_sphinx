@@ -1,0 +1,838 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1PostProcessor_1_1PPDriver" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::PostProcessor::PPDriver</compoundname>
+    <includes refid="postprocessor__1_80_80_2postprocessor_8hpp" local="no">postprocessor.hpp</includes>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1aa7173c6ceb360dade9aed286d0171b14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::PostProcessor::PPDriver::PPDriver</definition>
+        <argsstring>()</argsstring>
+        <name>PPDriver</name>
+        <briefdescription>
+<para><ref refid="classGambit_1_1PostProcessor_1_1PPDriver" kindref="compound">PPDriver</ref> member function definitions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="90" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="464" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a2ec1224bc9dc3ad984ef5c9e9cbfe61c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::PostProcessor::PPDriver::PPDriver</definition>
+        <argsstring>(Printers::BaseBaseReader *const, Printers::BaseBasePrinter *const, Scanner::like_ptr const, const PPOptions &amp;)</argsstring>
+        <name>PPDriver</name>
+        <param>
+          <type>Printers::BaseBaseReader * const</type>
+          <defname>r</defname>
+        </param>
+        <param>
+          <type>Printers::BaseBasePrinter * const</type>
+          <defname>p</defname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1Scanner_1_1like__ptr" kindref="compound">Scanner::like_ptr</ref> const</type>
+          <defname>l</defname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1PostProcessor_1_1PPOptions" kindref="compound">PPOptions</ref> &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+<para>Real constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="91" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="493" bodyend="547"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a445021c5bffcd25b027e31cf81141a95" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Printers::BaseBaseReader &amp;</type>
+        <definition>Printers::BaseBaseReader &amp; Gambit::PostProcessor::PPDriver::getReader</definition>
+        <argsstring>()</argsstring>
+        <name>getReader</name>
+        <briefdescription>
+<para>Safe accessors for pointer data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Safe(-ish) accessors for pointer data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="104" column="38" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="550" bodyend="559"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a3dc3c08e7abd1076983dee97bbaf8af7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Printers::BaseBasePrinter &amp;</type>
+        <definition>Printers::BaseBasePrinter &amp; Gambit::PostProcessor::PPDriver::getPrinter</definition>
+        <argsstring>()</argsstring>
+        <name>getPrinter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="105" column="39" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="561" bodyend="570"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a65ac3844a22e6f5a52ae51cae67f91e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1Scanner_1_1like__ptr" kindref="compound">Scanner::like_ptr</ref></type>
+        <definition>Scanner::like_ptr Gambit::PostProcessor::PPDriver::getLogLike</definition>
+        <argsstring>()</argsstring>
+        <name>getLogLike</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="106" column="31" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="572" bodyend="582"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1aed0ee75742859e89541ed8e92d86ab8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::PostProcessor::PPDriver::run_main_loop</definition>
+        <argsstring>(const ChunkSet &amp;done_chunks)</argsstring>
+        <name>run_main_loop</name>
+        <param>
+          <type>const ChunkSet &amp;</type>
+          <declname>done_chunks</declname>
+        </param>
+        <briefdescription>
+<para>The main run loop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Retrieve the old parameter values from previous output</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="93" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="880" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1ae3ac8c74804d439782d58055f4c35f5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::PostProcessor::PPDriver::get_ModelParameters</definition>
+        <argsstring>(std::unordered_map&lt; std::string, double &gt; &amp;outputMap)</argsstring>
+        <name>get_ModelParameters</name>
+        <param>
+          <type>std::unordered_map&lt; std::string, double &gt; &amp;</type>
+          <declname>outputMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Debugging; show what was actually retrieved from the output file</para>
+<para>Debugging; show what was actually retrieved from the output file</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="94" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="1261" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a631a83e3f5c427b56ef63c52e97803a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::PostProcessor::PPDriver::run_main_loop</definition>
+        <argsstring>(const Chunk &amp;mychunks)</argsstring>
+        <name>run_main_loop</name>
+        <param>
+          <type>const <ref refid="structChunk" kindref="compound">Chunk</ref> &amp;</type>
+          <declname>mychunks</declname>
+        </param>
+        <briefdescription>
+<para>The main run loop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Retrieve the old parameter values from previous output</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="104" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_2.0.0/postprocessor_object.cpp" bodystart="623" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1ad74dd6bb7d2c0c2c598bec217f241281" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>static const int Gambit::PostProcessor::PPDriver::REDIST_REQ</definition>
+        <argsstring></argsstring>
+        <name>REDIST_REQ</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="100" column="30" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a8a2ae8856d4e48a669f91fb9e8c46853" prot="private" static="no" mutable="no">
+        <type>Printers::BaseBaseReader *</type>
+        <definition>Printers::BaseBaseReader * Gambit::PostProcessor::PPDriver::reader</definition>
+        <argsstring></argsstring>
+        <name>reader</name>
+        <briefdescription>
+<para>The reader object in use for the scan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="109" column="38" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a5ab01737b0690da821110717e0f73001" prot="private" static="no" mutable="no">
+        <type>Printers::BaseBasePrinter *</type>
+        <definition>Printers::BaseBasePrinter * Gambit::PostProcessor::PPDriver::printer</definition>
+        <argsstring></argsstring>
+        <name>printer</name>
+        <briefdescription>
+<para>The printer for the primary output stream of the scan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="112" column="39" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1ae559988a739d20b6b1fa5a9b058994f8" prot="private" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1Scanner_1_1like__ptr" kindref="compound">Scanner::like_ptr</ref></type>
+        <definition>Scanner::like_ptr Gambit::PostProcessor::PPDriver::LogLike</definition>
+        <argsstring></argsstring>
+        <name>LogLike</name>
+        <briefdescription>
+<para>The likelihood container plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="115" column="31" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a293e3c930dae377d71c669871b50c7e4" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; Gambit::PostProcessor::PPDriver::new_params</definition>
+        <argsstring></argsstring>
+        <name>new_params</name>
+        <briefdescription>
+<para>Names of new output to be printed, i.e. output labels not present in the input file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="118" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1aa0be3fe10dce72378f4e4d88e12ab1d6" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; std::string &gt; &gt;</type>
+        <definition>std::map&lt; std::string, std::vector&lt; std::string &gt; &gt; Gambit::PostProcessor::PPDriver::req_models</definition>
+        <argsstring></argsstring>
+        <name>req_models</name>
+        <briefdescription>
+<para>Models required by the scan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="121" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a590413c62c3c53d21571a79443ad9e1d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt;</type>
+        <definition>std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; Gambit::PostProcessor::PPDriver::longname</definition>
+        <argsstring></argsstring>
+        <name>longname</name>
+        <briefdescription>
+<para>Map to retrieve the &quot;model::parameter&quot; version of the parameter name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="124" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a357ecb205c9ddcc0c1a0fbe5d11a2bae" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; Gambit::PostProcessor::PPDriver::all_params</definition>
+        <argsstring></argsstring>
+        <name>all_params</name>
+        <briefdescription>
+<para>Names of all output that the primary printer knows about at startup (things GAMBIT plans to print from the likelihood loop) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="127" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a6a44222e79cb321d64eb1824b77e92a7" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; Gambit::PostProcessor::PPDriver::data_labels</definition>
+        <argsstring></argsstring>
+        <name>data_labels</name>
+        <briefdescription>
+<para>Labels of all output datasets. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="130" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a600122c6cf8fb3feb650885a35c07063" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt; std::string &gt; Gambit::PostProcessor::PPDriver::data_labels_copy</definition>
+        <argsstring></argsstring>
+        <name>data_labels_copy</name>
+        <briefdescription>
+<para>Labels of output datasets to be copied. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="133" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a8e720e0896c8e2a5f73a23f037ca5aa3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; Gambit::PostProcessor::PPDriver::add_to_logl</definition>
+        <argsstring></argsstring>
+        <name>add_to_logl</name>
+        <briefdescription>
+<para>List of likelihoods in old output to be added to the newly computed likelihood. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="136" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a7d7c99fc622132906f0ab4db297b54ff" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; Gambit::PostProcessor::PPDriver::subtract_from_logl</definition>
+        <argsstring></argsstring>
+        <name>subtract_from_logl</name>
+        <briefdescription>
+<para>List of likelihoods in old output to be subtracted from the newly computed likelihood. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="139" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a1bae5888656aa2fae22cc479af3a0e85" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; Gambit::PostProcessor::PPDriver::renaming_scheme</definition>
+        <argsstring></argsstring>
+        <name>renaming_scheme</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Map for renaming old datasets in the new output Keys are &quot;in_label&quot;, values are &quot;out_label&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="143" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a74c4f04acfa06140b2a189224230a48d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, double &gt;</type>
+        <definition>std::map&lt; std::string, double &gt; Gambit::PostProcessor::PPDriver::cut_less_than</definition>
+        <argsstring></argsstring>
+        <name>cut_less_than</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cut maps, for selecting only points in the input datasets which pass certain criteria. Keys are &quot;in_label&quot;, values are the cut boundaries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="148" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1ab7f4fa4be2b300d20899d6888140a48d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, double &gt;</type>
+        <definition>std::map&lt; std::string, double &gt; Gambit::PostProcessor::PPDriver::cut_greater_than</definition>
+        <argsstring></argsstring>
+        <name>cut_greater_than</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="149" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a6b6a7aeb18481f9329c823a6d24edb6e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::PostProcessor::PPDriver::discard_points_outside_cuts</definition>
+        <argsstring></argsstring>
+        <name>discard_points_outside_cuts</name>
+        <briefdescription>
+<para>Flag to throw away points that don&apos;t pass the cuts (rather than copying them un-processed) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="152" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a830725e82909ac8cb2cc9b7be2c7d76f" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t Gambit::PostProcessor::PPDriver::update_interval</definition>
+        <argsstring></argsstring>
+        <name>update_interval</name>
+        <briefdescription>
+<para>Number of iterations between progress reports. &apos;0&apos; means no updates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="155" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a41c79ba680f21b8c47585d2137ac0beb" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::PostProcessor::PPDriver::discard_old_logl</definition>
+        <argsstring></argsstring>
+        <name>discard_old_logl</name>
+        <briefdescription>
+<para>Allow old likelihood components to be overwritten by newly calculated values? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="158" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1aeb8e1b2b029bf59450bcfd8c9ac7dbcd" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Gambit::PostProcessor::PPDriver::logl_purpose_name</definition>
+        <argsstring></argsstring>
+        <name>logl_purpose_name</name>
+        <briefdescription>
+<para>Label assigned to the output of the likelihood container. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="161" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a5e00e9f4c844f2ed8c1afd091082a14f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Gambit::PostProcessor::PPDriver::reweighted_loglike_name</definition>
+        <argsstring></argsstring>
+        <name>reweighted_loglike_name</name>
+        <briefdescription>
+<para>The label to assign to the results of add_to_like and subtract_from_like operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="164" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a87e1943859c3828566d6e271c56538b3" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Gambit::PostProcessor::PPDriver::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <briefdescription>
+<para>Path to save resume files. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="167" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1abc23ea4dfcaa7d30949b2733515af650" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Gambit::PostProcessor::PPDriver::numtasks</definition>
+        <argsstring></argsstring>
+        <name>numtasks</name>
+        <briefdescription>
+<para>MPI variables (set manually rather than inferred, to allow for &quot;virtual rank&quot; settings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="170" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a23400d514bc758d1a32b24db38f8e2f8" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Gambit::PostProcessor::PPDriver::rank</definition>
+        <argsstring></argsstring>
+        <name>rank</name>
+        <briefdescription>
+<para>MPI variables (set manually rather than inferred, to allow for &quot;virtual rank&quot; settings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="171" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1af61a50b9788d5ac4428429e8591119a0" prot="private" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long Gambit::PostProcessor::PPDriver::total_length</definition>
+        <argsstring></argsstring>
+        <name>total_length</name>
+        <briefdescription>
+<para>Total length of input dataset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="139" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a4a66ed41a6b4cc236fea5afbb3906fb2" prot="private" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long Gambit::PostProcessor::PPDriver::next_point</definition>
+        <argsstring></argsstring>
+        <name>next_point</name>
+        <briefdescription>
+<para>Next point scheduled to be distributed for processing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="142" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1aee684bd3d43d5e5a89dbb7f190876b6c" prot="private" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long Gambit::PostProcessor::PPDriver::chunksize</definition>
+        <argsstring></argsstring>
+        <name>chunksize</name>
+        <briefdescription>
+<para>Size of chunks to distribute to worker processes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="145" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1a465a122b3ea9cf4694079ef4ed58b669" prot="private" static="no" mutable="no">
+        <type>ChunkSet</type>
+        <definition>ChunkSet Gambit::PostProcessor::PPDriver::done_chunks</definition>
+        <argsstring></argsstring>
+        <name>done_chunks</name>
+        <briefdescription>
+<para>Chunks describing the points that can be auto-skipped (because they have been processed previously) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="148" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1PostProcessor_1_1PPDriver_1ad1908c057978f19c1f7a8ec39ad30492" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::PostProcessor::PPDriver::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <briefdescription>
+<para>If true, create lots of log messages explaining exactly what the postprocessor is doing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="200" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1aa6db47b71be13a9f86f856dab87e4626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::PostProcessor::PPDriver::check_settings</definition>
+        <argsstring>()</argsstring>
+        <name>check_settings</name>
+        <briefdescription>
+<para>Check postprocessor settings for consistency and general validity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Check if any of the output names selected in the renaming scheme are already claimed by functor output etc. Also check if the requested input label actually exists in the input dataset And check if the selected output name clashes with another input name that isn&apos;t selected for renaming</para>
+<para>Check if any of the output names selected in the renaming scheme are already claimed by functor output etc. Also check if the requested input label actually exists in the input dataset And check if the selected output name clashes with another input name that isn&apos;t selected for renaming</para>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="92" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="616" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a7bc551ea711d25abb314c6d6e5a0f7fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::PostProcessor::PPDriver::check_for_redistribution_request</definition>
+        <argsstring>()</argsstring>
+        <name>check_for_redistribution_request</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="95" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="585" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a0cdd41cca71308fea1dd3873f3220234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::PostProcessor::PPDriver::send_redistribution_request</definition>
+        <argsstring>()</argsstring>
+        <name>send_redistribution_request</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="96" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="594" bodyend="601"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a2b1c14f22f8c4c82ea12ff896dc5f280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::PostProcessor::PPDriver::clear_redistribution_requests</definition>
+        <argsstring>()</argsstring>
+        <name>clear_redistribution_requests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="97" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_1.0.0/postprocessor_object.cpp" bodystart="603" bodyend="613"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1aa7173c6ceb360dade9aed286d0171b14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::PostProcessor::PPDriver::PPDriver</definition>
+        <argsstring>()</argsstring>
+        <name>PPDriver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="101" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a2ec1224bc9dc3ad984ef5c9e9cbfe61c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::PostProcessor::PPDriver::PPDriver</definition>
+        <argsstring>(Printers::BaseBaseReader *const, Printers::BaseBasePrinter *const, Scanner::like_ptr const, const PPOptions &amp;)</argsstring>
+        <name>PPDriver</name>
+        <param>
+          <type>Printers::BaseBaseReader * const</type>
+        </param>
+        <param>
+          <type>Printers::BaseBasePrinter * const</type>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1Scanner_1_1like__ptr" kindref="compound">Scanner::like_ptr</ref> const</type>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1PostProcessor_1_1PPOptions" kindref="compound">PPOptions</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="102" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1aa6db47b71be13a9f86f856dab87e4626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::PostProcessor::PPDriver::check_settings</definition>
+        <argsstring>()</argsstring>
+        <name>check_settings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="103" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1ae3ac8c74804d439782d58055f4c35f5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::PostProcessor::PPDriver::get_ModelParameters</definition>
+        <argsstring>(std::unordered_map&lt; std::string, double &gt; &amp;outputMap)</argsstring>
+        <name>get_ModelParameters</name>
+        <param>
+          <type>std::unordered_map&lt; std::string, double &gt; &amp;</type>
+          <declname>outputMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="105" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1adb42576fc31040b8c657d0f31c5b5107" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structChunk" kindref="compound">Chunk</ref></type>
+        <definition>Chunk Gambit::PostProcessor::PPDriver::get_new_chunk</definition>
+        <argsstring>()</argsstring>
+        <name>get_new_chunk</name>
+        <briefdescription>
+<para>Compute start/end indices for a given rank process, given previous &quot;done_chunk&quot; data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="106" column="19" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_2.0.0/postprocessor_object.cpp" bodystart="1150" bodyend="1222"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1ab6b72bef3409fe4c1b72b20d61715530" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::PostProcessor::PPDriver::set_done_chunks</definition>
+        <argsstring>(const ChunkSet &amp;done_chunks)</argsstring>
+        <name>set_done_chunks</name>
+        <param>
+          <type>const ChunkSet &amp;</type>
+          <declname>done_chunks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="107" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_2.0.0/postprocessor_object.cpp" bodystart="1144" bodyend="1147"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a59304f1b6084df72ecad026e3eadc55d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long long</type>
+        <definition>unsigned long long Gambit::PostProcessor::PPDriver::next_point_index</definition>
+        <argsstring>()</argsstring>
+        <name>next_point_index</name>
+        <briefdescription>
+<para>Return index of next point to be distributed for processing (mainly to track progress) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="108" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_2.0.0/postprocessor_object.cpp" bodystart="1225" bodyend="1228"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1add13262ea688552b130763a850d854dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long long</type>
+        <definition>unsigned long long Gambit::PostProcessor::PPDriver::get_total_length</definition>
+        <argsstring>()</argsstring>
+        <name>get_total_length</name>
+        <briefdescription>
+<para>Return total length of input dataset (mainly to track progress) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="109" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scanners/postprocessor_2.0.0/postprocessor_object.cpp" bodystart="1231" bodyend="1234"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1ad849300f1c791d00eb199f85924becfa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Printers::BaseBaseReader &amp;</type>
+        <definition>Printers::BaseBaseReader&amp; Gambit::PostProcessor::PPDriver::getReader</definition>
+        <argsstring>()</argsstring>
+        <name>getReader</name>
+        <briefdescription>
+<para>Safe accessors for pointer data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="116" column="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a761ff257cc2a21778bd0496b7d766044" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Printers::BaseBasePrinter &amp;</type>
+        <definition>Printers::BaseBasePrinter&amp; Gambit::PostProcessor::PPDriver::getPrinter</definition>
+        <argsstring>()</argsstring>
+        <name>getPrinter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="117" column="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1PostProcessor_1_1PPDriver_1a65ac3844a22e6f5a52ae51cae67f91e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1Scanner_1_1like__ptr" kindref="compound">Scanner::like_ptr</ref></type>
+        <definition>Scanner::like_ptr Gambit::PostProcessor::PPDriver::getLogLike</definition>
+        <argsstring>()</argsstring>
+        <name>getLogLike</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_2.0.0/postprocessor.hpp" line="118" column="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Driver class to handle the actual postprocessing tasks. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" line="88" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scanners/postprocessor_1.0.0/postprocessor.hpp" bodystart="87" bodyend="175"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a8e720e0896c8e2a5f73a23f037ca5aa3" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>add_to_logl</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a357ecb205c9ddcc0c1a0fbe5d11a2bae" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>all_params</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a7bc551ea711d25abb314c6d6e5a0f7fb" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>check_for_redistribution_request</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1aa6db47b71be13a9f86f856dab87e4626" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>check_settings</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1aa6db47b71be13a9f86f856dab87e4626" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>check_settings</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1aee684bd3d43d5e5a89dbb7f190876b6c" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>chunksize</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a2b1c14f22f8c4c82ea12ff896dc5f280" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>clear_redistribution_requests</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1ab7f4fa4be2b300d20899d6888140a48d" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>cut_greater_than</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a74c4f04acfa06140b2a189224230a48d" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>cut_less_than</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a6a44222e79cb321d64eb1824b77e92a7" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>data_labels</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a600122c6cf8fb3feb650885a35c07063" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>data_labels_copy</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a41c79ba680f21b8c47585d2137ac0beb" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>discard_old_logl</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a6b6a7aeb18481f9329c823a6d24edb6e" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>discard_points_outside_cuts</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a465a122b3ea9cf4694079ef4ed58b669" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>done_chunks</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1ae3ac8c74804d439782d58055f4c35f5c" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>get_ModelParameters</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1ae3ac8c74804d439782d58055f4c35f5c" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>get_ModelParameters</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1adb42576fc31040b8c657d0f31c5b5107" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>get_new_chunk</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1add13262ea688552b130763a850d854dd" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>get_total_length</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a65ac3844a22e6f5a52ae51cae67f91e7" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>getLogLike</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a65ac3844a22e6f5a52ae51cae67f91e7" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>getLogLike</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a3dc3c08e7abd1076983dee97bbaf8af7" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>getPrinter</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a761ff257cc2a21778bd0496b7d766044" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>getPrinter</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a445021c5bffcd25b027e31cf81141a95" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>getReader</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1ad849300f1c791d00eb199f85924becfa" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>getReader</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1aeb8e1b2b029bf59450bcfd8c9ac7dbcd" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>logl_purpose_name</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1ae559988a739d20b6b1fa5a9b058994f8" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>LogLike</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a590413c62c3c53d21571a79443ad9e1d" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>longname</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a293e3c930dae377d71c669871b50c7e4" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>new_params</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a4a66ed41a6b4cc236fea5afbb3906fb2" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>next_point</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a59304f1b6084df72ecad026e3eadc55d" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>next_point_index</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1abc23ea4dfcaa7d30949b2733515af650" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>numtasks</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1aa7173c6ceb360dade9aed286d0171b14" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>PPDriver</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a2ec1224bc9dc3ad984ef5c9e9cbfe61c" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>PPDriver</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1aa7173c6ceb360dade9aed286d0171b14" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>PPDriver</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a2ec1224bc9dc3ad984ef5c9e9cbfe61c" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>PPDriver</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a5ab01737b0690da821110717e0f73001" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>printer</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a23400d514bc758d1a32b24db38f8e2f8" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>rank</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a8a2ae8856d4e48a669f91fb9e8c46853" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>reader</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1ad74dd6bb7d2c0c2c598bec217f241281" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>REDIST_REQ</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a1bae5888656aa2fae22cc479af3a0e85" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>renaming_scheme</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1aa0be3fe10dce72378f4e4d88e12ab1d6" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>req_models</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a5e00e9f4c844f2ed8c1afd091082a14f" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>reweighted_loglike_name</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a87e1943859c3828566d6e271c56538b3" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>root</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1aed0ee75742859e89541ed8e92d86ab8d" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>run_main_loop</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a631a83e3f5c427b56ef63c52e97803a4" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>run_main_loop</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a0cdd41cca71308fea1dd3873f3220234" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>send_redistribution_request</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1ab6b72bef3409fe4c1b72b20d61715530" prot="public" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>set_done_chunks</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a7d7c99fc622132906f0ab4db297b54ff" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>subtract_from_logl</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1af61a50b9788d5ac4428429e8591119a0" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>total_length</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1a830725e82909ac8cb2cc9b7be2c7d76f" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>update_interval</name></member>
+      <member refid="classGambit_1_1PostProcessor_1_1PPDriver_1ad1908c057978f19c1f7a8ec39ad30492" prot="private" virt="non-virtual"><scope>Gambit::PostProcessor::PPDriver</scope><name>verbose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -122,7 +122,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>ColliderBit/src/analyses/Analysis_ATLAS_13TeV_1LEPStop_36invfb.cpp</label>
+        <label>Analysis_ATLAS_13TeV_1LEPStop_36invfb.cpp</label>
         <link refid="Analysis__ATLAS__13TeV__1LEPStop__36invfb_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -987,11 +987,11 @@
 <codeline lineno="767"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(j<sp/>==<sp/>bJet1<sp/>||<sp/>j<sp/>==<sp/>bJet2)<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="768"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>mostBjetLike.size()<sp/>&amp;&amp;<sp/>k<sp/>&lt;<sp/>2;<sp/>++k)</highlight></codeline>
 <codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f<sp/>=<sp/>pow((signalJets[i]-&gt;mom()<sp/>+<sp/>signalJets[j]-&gt;mom()<sp/>+<sp/>mostBjetLike[k]-&gt;mom()).m()<sp/>-<sp/>mTop,<sp/>2)<sp/>/</highlight></codeline>
-<codeline lineno="771"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(pow((signalJets[i]-&gt;mom()<sp/>+<sp/>signalJets[j]-&gt;mom()<sp/>+<sp/>mostBjetLike[k]-&gt;mom()).m(),<sp/>2)<sp/>*</highlight></codeline>
-<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(pow(signalJER[i],<sp/>2)<sp/>+<sp/>pow(signalJER[j],<sp/>2)<sp/>+<sp/>pow(signalBJER[k],<sp/>2)))<sp/>+</highlight></codeline>
-<codeline lineno="773"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pow((signalJets[i]-&gt;mom()<sp/>+<sp/>signalJets[j]-&gt;mom()).m()<sp/>-<sp/>mW,<sp/>2)<sp/>/</highlight></codeline>
-<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(pow((signalJets[i]-&gt;mom()<sp/>+<sp/>signalJets[j]-&gt;mom()).m(),<sp/>2)<sp/>*<sp/>(pow(signalJER[i],<sp/>2)<sp/>+<sp/>pow(signalJER[j],<sp/>2)));</highlight></codeline>
+<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>((signalJets[i]-&gt;mom()<sp/>+<sp/>signalJets[j]-&gt;mom()<sp/>+<sp/>mostBjetLike[k]-&gt;mom()).m()<sp/>-<sp/>mTop,<sp/>2)<sp/>/</highlight></codeline>
+<codeline lineno="771"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>((signalJets[i]-&gt;mom()<sp/>+<sp/>signalJets[j]-&gt;mom()<sp/>+<sp/>mostBjetLike[k]-&gt;mom()).m(),<sp/>2)<sp/>*</highlight></codeline>
+<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(signalJER[i],<sp/>2)<sp/>+<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(signalJER[j],<sp/>2)<sp/>+<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(signalBJER[k],<sp/>2)))<sp/>+</highlight></codeline>
+<codeline lineno="773"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>((signalJets[i]-&gt;mom()<sp/>+<sp/>signalJets[j]-&gt;mom()).m()<sp/>-<sp/>mW,<sp/>2)<sp/>/</highlight></codeline>
+<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>((signalJets[i]-&gt;mom()<sp/>+<sp/>signalJets[j]-&gt;mom()).m(),<sp/>2)<sp/>*<sp/>(<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(signalJER[i],<sp/>2)<sp/>+<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(signalJER[j],<sp/>2)));</highlight></codeline>
 <codeline lineno="775"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(f<sp/>&lt;<sp/>chi2min)</highlight></codeline>
 <codeline lineno="776"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="777"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chi2min<sp/>=<sp/>f;</highlight></codeline>
@@ -1643,6 +1643,6 @@
 <codeline lineno="1425"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1426"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="ColliderBit/src/analyses/Analysis_ATLAS_13TeV_1LEPStop_36invfb.cpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/src/analyses/Analysis_ATLAS_13TeV_1LEPStop_36invfb.cpp"/>
   </compounddef>
 </doxygen>

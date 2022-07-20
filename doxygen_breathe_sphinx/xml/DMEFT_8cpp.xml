@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="DMEFT_8cpp" kind="file" language="C++">
+    <compoundname>DMEFT.cpp</compoundname>
+    <includes local="yes">boost/make_shared.hpp</includes>
+    <includes local="yes">gambit/Elements/gambit_module_headers.hpp</includes>
+    <includes local="yes">gambit/DarkBit/DarkBit_rollcall.hpp</includes>
+    <includes local="yes">gambit/Utils/ascii_table_reader.hpp</includes>
+    <includes refid="DarkBit__utils_8hpp" local="yes">gambit/DarkBit/DarkBit_utils.hpp</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>gambit/Elements/gambit_module_headers.hpp</label>
+      </node>
+      <node id="1">
+        <label>DMEFT.cpp</label>
+        <link refid="DMEFT_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>gambit/DarkBit/DarkBit_rollcall.hpp</label>
+      </node>
+      <node id="11">
+        <label>gambit/Elements/daFunk.hpp</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="10">
+        <label>gambit/cmake/cmake_variables.hpp</label>
+      </node>
+      <node id="5">
+        <label>gambit/Utils/ascii_table_reader.hpp</label>
+      </node>
+      <node id="6">
+        <label>gambit/DarkBit/DarkBit_utils.hpp</label>
+        <link refid="DarkBit__utils_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>gambit/Utils/util_types.hpp</label>
+      </node>
+      <node id="2">
+        <label>boost/make_shared.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classGambit_1_1DarkBit_1_1DMEFT" prot="public">Gambit::DarkBit::DMEFT</innerclass>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1DarkBit">Gambit::DarkBit</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="DMEFT_8cpp_1a302187f8cea1d9db96ad663af098f41e" prot="public" static="no">
+        <name>getSMmass</name>
+        <param><defname>Name</defname></param>
+        <param><defname>spinX2</defname></param>
+        <initializer>catalog.particleProperties.insert(std::pair&lt;string, TH_ParticleProperty&gt; (Name, TH_ParticleProperty(SM.get(Par::Pole_Mass,Name), spinX2)));</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/DMEFT.cpp" line="85" column="15"/>
+      </memberdef>
+      <memberdef kind="define" id="DMEFT_8cpp_1a5cfd88c7fb3e3b8b9d35eb54806de6da" prot="public" static="no">
+        <name>addParticle</name>
+        <param><defname>Name</defname></param>
+        <param><defname>Mass</defname></param>
+        <param><defname>spinX2</defname></param>
+        <initializer>catalog.particleProperties.insert(std::pair&lt;string, TH_ParticleProperty&gt; (Name, TH_ParticleProperty(Mass, spinX2)));</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/DMEFT.cpp" line="86" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Implementation of DMEFT DarkBit routines.</para>
+<para>Authors (add name and date if you modify): <linebreak/>
+ *** Automatically created by GUM *** <linebreak/>
+</para>
+<para><simplesect kind="author"><para>The GAMBIT Collaboration <linebreak/>
+ </para>
+</simplesect>
+<simplesect kind="date"><para>12:32PM on October 15, 2019</para>
+</simplesect>
+<simplesect kind="author"><para>Sanjay Bloor (<ulink url="mailto:sanjay.bloor12@imperial.ac.uk">sanjay.bloor12@imperial.ac.uk</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>Oct 2019</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/make_shared.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/gambit_module_headers.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/DarkBit/DarkBit_rollcall.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/ascii_table_reader.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DarkBit__utils_8hpp" kindref="compound">gambit/DarkBit/DarkBit_utils.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DarkBit</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31" refid="classGambit_1_1DarkBit_1_1DMEFT" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGambit_1_1DarkBit_1_1DMEFT" kindref="compound">DMEFT</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1DarkBit_1_1DMEFT_1afc63aecd7af0cead7dc0ba8e0193c474" kindref="member">DMEFT</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>~<ref refid="classGambit_1_1DarkBit_1_1DMEFT" kindref="compound">DMEFT</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Annihilation<sp/>cross-section.<sp/>sigmav<sp/>is<sp/>a<sp/>pointer<sp/>to<sp/>a<sp/>CalcHEP<sp/>backend<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1DarkBit_1_1DMEFT_1a58bdd28de9b71ea12461d1d8aa7d5f0f" kindref="member">sv</ref>(str<sp/>channel,<sp/>DecayTable&amp;<sp/>tbl,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(*sigmav)(str&amp;,<sp/>std::vector&lt;str&gt;&amp;,<sp/>std::vector&lt;str&gt;&amp;,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DecayTable&amp;),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v_rel)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>GeV2tocm3s1<sp/>=<sp/>gev2cm2*s2cm;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CalcHEP<sp/>args</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>model<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;DMEFT&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>CalcHEP<sp/>model<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;str&gt;<sp/>in<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;chi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;chi~&quot;</highlight><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>In<sp/>states:<sp/>DM+DMbar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;str&gt;<sp/>out;<sp/></highlight><highlight class="comment">//<sp/>Out<sp/>states</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;dbar_1,<sp/>d_1&quot;</highlight><highlight class="normal">)<sp/>out<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;d~&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;d&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ubar_1,<sp/>u_1&quot;</highlight><highlight class="normal">)<sp/>out<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;u~&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;u&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;dbar_2,<sp/>d_2&quot;</highlight><highlight class="normal">)<sp/>out<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;s~&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ubar_2,<sp/>u_2&quot;</highlight><highlight class="normal">)<sp/>out<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;c~&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;c&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;dbar_3,<sp/>d_3&quot;</highlight><highlight class="normal">)<sp/>out<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;b~&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ubar_3,<sp/>u_3&quot;</highlight><highlight class="normal">)<sp/>out<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;t~&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;t&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;g,<sp/>g&quot;</highlight><highlight class="normal">)<sp/>out<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>the<sp/>channel<sp/>has<sp/>been<sp/>filled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(out.size()<sp/>&gt;<sp/>1)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sigmav(model,<sp/>in,<sp/>out,<sp/>v_rel,<sp/>tbl)*GeV2tocm3s1;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TH_ProcessCatalog_DMEFT(<ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog" kindref="compound">DarkBit::TH_ProcessCatalog</ref><sp/>&amp;result)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">Pipes::TH_ProcessCatalog_DMEFT;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::vector;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>WIMP<sp/>and<sp/>conjugate<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>chi<sp/>=<sp/>Dep::WIMP_properties-&gt;name;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>chib<sp/>=<sp/>Dep::WIMP_properties-&gt;conjugate;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>empty<sp/>catalog,<sp/>main<sp/>annihilation<sp/>process</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog" kindref="compound">TH_ProcessCatalog</ref><sp/>catalog;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Process" kindref="compound">TH_Process</ref><sp/>process_ann(chi,<sp/>chib);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Explicitly<sp/>state<sp/>that<sp/>Dirac<sp/>DM<sp/>is<sp/>not<sp/>self-conjugate<sp/>to<sp/>add<sp/>extra<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>factors<sp/>of<sp/>1/2<sp/>where<sp/>necessary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>process_ann.isSelfConj<sp/>=<sp/>Dep::WIMP_properties-&gt;sc;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Import<sp/>particle<sp/>masses<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convenience<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>getSMmass(Name,<sp/>spinX2)<sp/>catalog.particleProperties.insert(std::pair&lt;string,<sp/>TH_ParticleProperty&gt;<sp/>(Name,<sp/>TH_ParticleProperty(SM.get(Par::Pole_Mass,Name),<sp/>spinX2)));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>addParticle(Name,<sp/>Mass,<sp/>spinX2)<sp/>catalog.particleProperties.insert(std::pair&lt;string,<sp/>TH_ParticleProperty&gt;<sp/>(Name,<sp/>TH_ParticleProperty(Mass,<sp/>spinX2)));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Import<sp/>Spectrum<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum&amp;<sp/>spec<sp/>=<sp/>*Dep::DMEFT_spectrum;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SubSpectrum&amp;<sp/>SM<sp/>=<sp/>spec.get_LE();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>SMI<sp/><sp/><sp/>=<sp/>spec.get_SMInputs();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>SM<sp/>pole<sp/>masses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(</highlight><highlight class="stringliteral">&quot;e-_1&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;e+_1&quot;,<sp/><sp/><sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;e-_2&quot;,<sp/><sp/><sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;e+_2&quot;,<sp/><sp/><sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;e-_3&quot;,<sp/><sp/><sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;e+_3&quot;,<sp/><sp/><sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;Z0&quot;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;W+&quot;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;W-&quot;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;g&quot;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;gamma&quot;,<sp/><sp/><sp/><sp/>2)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;u_3&quot;,<sp/><sp/><sp/><sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;ubar_3&quot;,<sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;d_3&quot;,<sp/><sp/><sp/><sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getSMmass(&quot;dbar_3&quot;,<sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pole<sp/>masses<sp/>not<sp/>available<sp/>for<sp/>the<sp/>light<sp/>quarks.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;u_1&quot;<sp/><sp/><sp/>,<sp/>SMI.mU,<sp/><sp/>1)<sp/></highlight><highlight class="comment">//<sp/>mu(2<sp/>GeV)^MS-bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;ubar_1&quot;,<sp/>SMI.mU,<sp/><sp/>1)<sp/></highlight><highlight class="comment">//<sp/>mu(2<sp/>GeV)^MS-bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;d_1&quot;<sp/><sp/><sp/>,<sp/>SMI.mD,<sp/><sp/>1)<sp/></highlight><highlight class="comment">//<sp/>md(2<sp/>GeV)^MS-bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;dbar_1&quot;,<sp/>SMI.mD,<sp/><sp/>1)<sp/></highlight><highlight class="comment">//<sp/>md(2<sp/>GeV)^MS-bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;u_2&quot;<sp/><sp/><sp/>,<sp/>SMI.mCmC,1)<sp/></highlight><highlight class="comment">//<sp/>mc(mc)^MS-bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;ubar_2&quot;,<sp/>SMI.mCmC,1)<sp/></highlight><highlight class="comment">//<sp/>mc(mc)^MS-bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;d_2&quot;<sp/><sp/><sp/>,<sp/>SMI.mS,<sp/><sp/>1)<sp/></highlight><highlight class="comment">//<sp/>ms(2<sp/>GeV)^MS-bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;dbar_2&quot;,<sp/>SMI.mS,<sp/><sp/>1)<sp/></highlight><highlight class="comment">//<sp/>ms(2<sp/>GeV)^MS-bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Masses<sp/>for<sp/>neutrino<sp/>flavour<sp/>eigenstates.<sp/>Set<sp/>to<sp/>zero.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(presently<sp/>not<sp/>required)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;nu_e&quot;,<sp/><sp/><sp/><sp/><sp/>0.0,<sp/>1)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;nubar_e&quot;,<sp/><sp/>0.0,<sp/>1)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;nu_mu&quot;,<sp/><sp/><sp/><sp/>0.0,<sp/>1)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;nubar_mu&quot;,<sp/>0.0,<sp/>1)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;nu_tau&quot;,<sp/><sp/><sp/>0.0,<sp/>1)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;nubar_tau&quot;,0.0,<sp/>1)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Meson<sp/>masses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;pi0&quot;,<sp/><sp/><sp/>meson_masses.pi0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;pi+&quot;,<sp/><sp/><sp/>meson_masses.pi_plus,<sp/><sp/><sp/>0)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;pi-&quot;,<sp/><sp/><sp/>meson_masses.pi_minus,<sp/><sp/>0)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;eta&quot;,<sp/><sp/><sp/>meson_masses.eta,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;rho0&quot;,<sp/><sp/>meson_masses.rho0,<sp/><sp/><sp/><sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;rho+&quot;,<sp/><sp/>meson_masses.rho_plus,<sp/><sp/>1)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;rho-&quot;,<sp/><sp/>meson_masses.rho_minus,<sp/>1)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;omega&quot;,<sp/>meson_masses.omega,<sp/><sp/><sp/><sp/><sp/>1)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DMEFT-specific<sp/>masses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mchi<sp/>=<sp/>spec.get(Par::Pole_Mass,<sp/>&quot;chi&quot;);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(chi,<sp/>mchi,<sp/>1);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(chib,<sp/>mchi,<sp/>1);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addParticle(&quot;h0_1&quot;,<sp/>spec.get(Par::Pole_Mass,<sp/>&quot;h0_1&quot;),<sp/>0);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>rid<sp/>of<sp/>convenience<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#undef<sp/>getSMmass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#undef<sp/>addParticle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Import<sp/>decay<sp/>table<sp/>from<sp/>DecayBit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>DecayTable<sp/>tbl<sp/>=<sp/>*Dep::decay_rates;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>of<sp/>imported<sp/>decays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::set&lt;string&gt;<sp/>importedDecays;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Minimum<sp/>branching<sp/>ratio<sp/>to<sp/>include</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>minBranching<sp/>=<sp/>runOptions-&gt;getValueOrDef&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;(0.0,<sp/></highlight><highlight class="stringliteral">&quot;ProcessCatalog_MinBranching&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Import<sp/>relevant<sp/>decays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>DarkBit_utils::ImportDecays;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>excludeDecays<sp/>=<sp/>daFunk::vec&lt;std::string&gt;(</highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;W+&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;W-&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;u_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ubar_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e+_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e-_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e+_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e-_3&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ImportDecays(</highlight><highlight class="stringliteral">&quot;h0_1&quot;</highlight><highlight class="normal">,<sp/>catalog,<sp/>importedDecays,<sp/>&amp;tbl,<sp/>minBranching,<sp/>excludeDecays);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Instantiate<sp/>new<sp/>DMEFT<sp/>object.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pc<sp/>=<sp/>boost::make_shared&lt;DMEFT&gt;();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Populate<sp/>annihilation<sp/>channel<sp/>list<sp/>and<sp/>add<sp/>thresholds<sp/>to<sp/>threshold<sp/>list.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>process_ann.resonances_thresholds.threshold_energy.push_back(2*mchi);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>channels<sp/>=<sp/></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>daFunk::vec&lt;string&gt;(</highlight><highlight class="stringliteral">&quot;dbar_1,<sp/>d_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ubar_1,<sp/>u_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_2,<sp/>d_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ubar_2,<sp/>u_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_3,<sp/>d_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ubar_3,<sp/>u_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;g,<sp/>g&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p1<sp/>=<sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>daFunk::vec&lt;string&gt;(</highlight><highlight class="stringliteral">&quot;dbar_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ubar_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ubar_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;dbar_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ubar_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p2<sp/>=<sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>daFunk::vec&lt;string&gt;(</highlight><highlight class="stringliteral">&quot;d_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;u_1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;d_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;u_2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;d_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;u_3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>channels.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mtot_final<sp/>=<sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catalog.<ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a681f0593cd152e9b894f975fde28332c" kindref="member">getParticleProperty</ref>(p1[i]).<ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty_1a4ef18f5f6563ce01addefb10eea03275" kindref="member">mass</ref><sp/>+<sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catalog.<ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a681f0593cd152e9b894f975fde28332c" kindref="member">getParticleProperty</ref>(p2[i]).<ref refid="structGambit_1_1DarkBit_1_1TH__ParticleProperty_1a4ef18f5f6563ce01addefb10eea03275" kindref="member">mass</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mchi*2<sp/>&gt;<sp/>mtot_final*0.5)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>daFunk::Funk<sp/>kinematicFunction<sp/>=<sp/>daFunk::funcM(pc,<sp/>&amp;<ref refid="classGambit_1_1DarkBit_1_1DMEFT_1a58bdd28de9b71ea12461d1d8aa7d5f0f" kindref="member">DMEFT::sv</ref>,<sp/>channels[i],<sp/>tbl,<sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BEreq::CH_Sigma_V.pointer(),<sp/>daFunk::var(</highlight><highlight class="stringliteral">&quot;v&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGambit_1_1DarkBit_1_1TH__Channel" kindref="compound">TH_Channel</ref><sp/>new_channel(daFunk::vec&lt;string&gt;(p1[i],<sp/>p2[i]),<sp/>kinematicFunction);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process_ann.channelList.push_back(new_channel);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mchi*2<sp/>&gt;<sp/>mtot_final)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>process_ann.resonances_thresholds.threshold_energy.push_back(mtot_final);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>catalog.<ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a2a46dd0bf203f704fb53ad9ddffe140d" kindref="member">processList</ref>.push_back(process_ann);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>catalog.<ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog_1a74c913ee5231a7bb201c9f4e891a9510" kindref="member">validate</ref>();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>catalog;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>function<sp/>TH_ProcessCatalog</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DarkMatter_ID_DMEFT(std::string&amp;<sp/>result){<sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;chi&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DarkMatterConj_ID_DMEFT(std::string&amp;<sp/>result){<sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;chi~&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="DMEFT_8cpp_1a96414f3f3e02c5597731daa1ef59a183" kindref="member">DD_rel_WCs_flavscheme_DMEFT</ref>(map_str_dbl&amp;<sp/>result)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">Pipes::DD_rel_WCs_flavscheme_DMEFT;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Spectrum&amp;<sp/>spec<sp/>=<sp/>*Dep::DMEFT_spectrum;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>sminputs<sp/>=<sp/>*Dep::SMINPUTS;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>our<sp/>model<sp/>the<sp/>Wilson<sp/>coefficients<sp/>are<sp/>dimensionless</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Lambda<sp/>=<sp/>spec.get(Par::mass1,<sp/></highlight><highlight class="stringliteral">&quot;Lambda&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C51<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C51&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C52<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C52&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C61<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C61&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C62<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C62&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C63<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C63&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C64<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C64&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C71<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C71&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C72<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C72&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C73<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C73&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C74<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C74&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C75<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C75&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C76<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C76&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C77<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C77&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C78<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C78&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C79<sp/><sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C79&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C710<sp/>=<sp/>spec.get(Par::dimensionless,<sp/></highlight><highlight class="stringliteral">&quot;C710&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>So<sp/>we<sp/>need<sp/>to<sp/>rescale<sp/>them<sp/>by<sp/>the<sp/>appropriate<sp/>scale</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C51&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C51/Lambda;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C52&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C52/Lambda;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Gluon<sp/>operators<sp/>--<sp/>universal,<sp/>do<sp/>not<sp/>depend<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>quark<sp/>flavour.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C71&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C71/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C72&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C72/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C73&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C73/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C74&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C74/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>terms<sp/>have<sp/>a<sp/>fermion<sp/>bilinear<sp/>so,<sp/>in<sp/>theory,<sp/>can<sp/>have<sp/>a<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>different<sp/>WC<sp/>for<sp/>each.<sp/>We<sp/>take<sp/>these<sp/>to<sp/>be<sp/>universal<sp/>i.e.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>C_{dim}{tag}(f)<sp/>==<sp/>C_{dim}{tag}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Also<sp/>only<sp/>considering<sp/>interactions<sp/>with<sp/>*quarks<sp/>and<sp/>gluons*<sp/>--<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>leptons,<sp/>so<sp/>C_{7}{tag}(tau,<sp/>mu,<sp/>e)<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C61d&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C61/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C61u&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C61/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C61s&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C61/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C61c&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C61/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C61b&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C61/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C62d&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C62/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C62u&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C62/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C62s&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C62/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C62c&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C62/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C62b&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C62/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C63d&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C63/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C63u&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C63/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C63s&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C63/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C63c&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C63/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C63b&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C63/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C64d&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C64/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C64u&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C64/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C64s&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C64/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C64c&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C64/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C64b&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C64/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C75d&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C75/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C75u&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C75/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C75s&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C75/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C75c&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C75/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C75b&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C75/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C76d&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C76/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C76u&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C76/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C76s&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C76/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C76c&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C76/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C76b&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C76/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C77d&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C77/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C77u&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C77/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C77s&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C77/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C77c&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C77/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C77b&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C77/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C78d&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C78/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C78u&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C78/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C78s&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C78/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C78c&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C78/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C78b&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C78/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C79d&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C79/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C79u&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C79/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C79s&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C79/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C79c&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C79/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C79b&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>C79/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C710d&quot;</highlight><highlight class="normal">]<sp/>=<sp/>C710/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C710u&quot;</highlight><highlight class="normal">]<sp/>=<sp/>C710/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C710s&quot;</highlight><highlight class="normal">]<sp/>=<sp/>C710/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C710c&quot;</highlight><highlight class="normal">]<sp/>=<sp/>C710/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C710b&quot;</highlight><highlight class="normal">]<sp/>=<sp/>C710/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>the<sp/>running<sp/>top<sp/>mass<sp/>at<sp/>Q=mt,<sp/>which<sp/>is<sp/>an<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mtatmt<sp/>=<sp/>spec.get(Par::mass1,</highlight><highlight class="stringliteral">&quot;mtrun&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>Lambda<sp/>&gt;<sp/>m_t(m_t)<sp/>then<sp/>we<sp/>include<sp/>corrections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Lambda<sp/>&gt;<sp/>mtatmt)</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1.<sp/>Loop<sp/>induced<sp/>coupling<sp/>to<sp/>dim-5<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>operators<sp/>to<sp/>dim-7,<sp/>see:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>https://arxiv.org/pdf/1302.4454.pdf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lamovermt2<sp/>=<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.)/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(mtatmt,<sp/>2.);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prefactor<sp/>=<sp/>-4/lamovermt2*log(lamovermt2);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C51&quot;</highlight><highlight class="normal">]<sp/>+=<sp/>prefactor*C79/Lambda;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C52&quot;</highlight><highlight class="normal">]<sp/>+=<sp/>prefactor*C710/Lambda;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2.<sp/>Threshold<sp/>effects<sp/>from</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>integrating<sp/>out<sp/>the<sp/>top<sp/>quark</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C71&quot;</highlight><highlight class="normal">]<sp/>-=<sp/>C75/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C72&quot;</highlight><highlight class="normal">]<sp/>-=<sp/>C76/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C73&quot;</highlight><highlight class="normal">]<sp/>+=<sp/>C77/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C74&quot;</highlight><highlight class="normal">]<sp/>+=<sp/>C78/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>3.);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3.<sp/>Mixing<sp/>of<sp/>O_3^6<sp/>into<sp/>O_1^6,<sp/>see:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>https://arxiv.org/pdf/1402.1173.pdf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>tree<sp/>level<sp/>relations<sp/>for<sp/>sw2<sp/>and<sp/>vev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sw2<sp/>=<sp/>1<sp/>-<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(sminputs.mW,2)<sp/>/<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(sminputs.mZ,2);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vev<sp/>=<sp/>1.0<sp/>/<sp/>sqrt(sqrt(2)*sminputs.GF);<sp/></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prefactoru<sp/>=<sp/>(8.*sw2-3.)/2.<sp/>*<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(mtatmt/(2.*vev*pi),<sp/>2.)<sp/>*<sp/>log(1/lamovermt2);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prefactord<sp/>=<sp/>(3.-4.*sw2)/2.<sp/>*<sp/><ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(mtatmt/(2.*vev*pi),<sp/>2.)<sp/>*<sp/>log(1/lamovermt2);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C61u<sp/>=<sp/>C61/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.)<sp/>+<sp/>prefactoru<sp/>*<sp/>C63/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C61d<sp/>=<sp/>C61/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.)<sp/>+<sp/>prefactord<sp/>*<sp/>C63/<ref refid="scanner__utils_8hpp_1a40cbcd2cdb26318cca622e0584a8d67f" kindref="member">pow</ref>(Lambda,<sp/>2.);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>bit<sp/>is<sp/>intended<sp/>to<sp/>make<sp/>it<sp/>easier<sp/>for<sp/>the<sp/>scanner<sp/>to<sp/>find<sp/>points<sp/>for<sp/>which<sp/>direct<sp/>detection<sp/>constraints<sp/>are<sp/>satisfied</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>by<sp/>adding<sp/>a<sp/>flavour-independent<sp/>term<sp/>to<sp/>C61u<sp/>and<sp/>C61d<sp/>such<sp/>that<sp/>the<sp/>resulting<sp/>couplings<sp/>are<sp/>Xe-phobic<sp/>(f_n<sp/>/<sp/>f_p<sp/>=<sp/>-0.7).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>step<sp/>should<sp/>be<sp/>commented<sp/>out<sp/>if<sp/>C61<sp/>is<sp/>not<sp/>varied<sp/>in<sp/>the<sp/>scans.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>IVratio<sp/>=<sp/>-1.125;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C61uIV<sp/>=<sp/>IVratio/(IVratio-1.)*(C61u-C61d);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C61dIV<sp/>=<sp/>1./(IVratio-1.)*(C61u-C61d);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C61d&quot;</highlight><highlight class="normal">]<sp/>=<sp/>C61dIV;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result[</highlight><highlight class="stringliteral">&quot;C61u&quot;</highlight><highlight class="normal">]<sp/>=<sp/>C61uIV;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>DD_rel_WCs_flavscheme_DMEFT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//namespace<sp/>DarkBit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="362"><highlight class="normal">}<sp/></highlight><highlight class="comment">//namespace<sp/>Gambit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/DMEFT.cpp"/>
+  </compounddef>
+</doxygen>

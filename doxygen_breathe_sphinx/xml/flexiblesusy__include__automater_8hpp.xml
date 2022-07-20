@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="flexiblesusy__include__automater_8hpp" kind="file" language="C++">
+    <compoundname>flexiblesusy_include_automater.hpp</compoundname>
+    <includedby refid="model__files__and__boxes_8hpp" local="yes">model_files_and_boxes.hpp</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>SpecBit_MDM.cpp</label>
+        <link refid="SpecBit__MDM_8cpp"/>
+      </node>
+      <node id="2">
+        <label>model_files_and_boxes.hpp</label>
+        <link refid="model__files__and__boxes_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SpecBit_ScalarSingletDM.cpp</label>
+        <link refid="SpecBit__ScalarSingletDM_8cpp"/>
+      </node>
+      <node id="4">
+        <label>SpecBit_externaltests.hpp</label>
+        <link refid="SpecBit__externaltests_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SpecBit_MSSM.cpp</label>
+        <link refid="SpecBit__MSSM_8cpp"/>
+      </node>
+      <node id="3">
+        <label>SpecBit_tests.cpp</label>
+        <link refid="examples_2SpecBit__tests_8cpp"/>
+      </node>
+      <node id="1">
+        <label>flexiblesusy_include_automater.hpp</label>
+        <link refid="flexiblesusy__include__automater_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="flexiblesusy__include__automater_8hpp_1ab965ff6d71425b1ae929185ce59aea37" prot="public" static="no">
+        <name>BUILD_THIS</name>
+        <initializer>CAT_3(FS_MODEL_,<ref refid="model__files__and__boxes_8hpp_1af38ae5ba34b48af0f0480a431874bc84" kindref="member">MODELNAME</ref>,_IS_BUILT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>We need to decide if we are going to do anything by checking whether GAMBIT was in fact configured to build FlexibleSUSY with whatever model is defined in MODELNAME. Fortunately there is a preprocessor variable defined by CMake which lists these for us. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/flexiblesusy_include_automater.hpp" line="31" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/flexiblesusy_include_automater.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This file is part of a trick to perform tedious includes of FlexibleSUSY headers required to use particular models.</para>
+<para>It doesn&apos;t have include guards on purpose, because in order to use it one has to include it several times, with model name macros defined differently.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Ben Farmer (<ulink url="mailto:ben.farmer@gmail.com">ben.farmer@gmail.com</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2015 Jan</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="flexiblesusy__include__automater_8hpp_1ab965ff6d71425b1ae929185ce59aea37" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUILD_THIS<sp/>CAT_3(FS_MODEL_,MODELNAME,_IS_BUILT)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if(BUILD_THIS)<sp/>//<sp/>If<sp/>the<sp/>model<sp/>wasn&apos;t<sp/>built<sp/>then<sp/>don&apos;t<sp/>try<sp/>to<sp/>include<sp/>any<sp/>of<sp/>these<sp/>files!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_FILE(TAIL)<sp/>STRINGIFY(<sp/>CAT_3(MODELNAME,_,TAIL)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>INCLUDE_FILE(input_parameters.hpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>INCLUDE_FILE(slha_io.hpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>INCLUDE_FILE(CAT(ALGORITHM1l,_spectrum_generator.hpp))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>INCLUDE_FILE(CAT(ALGORITHM1l,_model.hpp))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>INCLUDE_FILE(model_slha.hpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>INCLUDE_FILE(physical.hpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>INCLUDE_FILE(info.hpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">MAKE_INTERFACE</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>INCLUDE_FILE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BUILD_THIS</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/flexiblesusy_include_automater.hpp"/>
+  </compounddef>
+</doxygen>

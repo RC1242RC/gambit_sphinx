@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1DarkBit_1_1HESS__Interpolator" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::DarkBit::HESS_Interpolator</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1HESS__Interpolator_1a40382d4423f7758482739904aa83b8b8" prot="public" static="no" mutable="no">
+        <type>ASCIItableReader</type>
+        <definition>ASCIItableReader Gambit::DarkBit::HESS_Interpolator::interp_lnL</definition>
+        <argsstring></argsstring>
+        <name>interp_lnL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="381" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1HESS__Interpolator_1afe4c5606d80a3931a103af192689c9f0" prot="private" static="no" mutable="no">
+        <type>gsl_interp_accel *</type>
+        <definition>gsl_interp_accel* Gambit::DarkBit::HESS_Interpolator::acc[17]</definition>
+        <argsstring>[17]</argsstring>
+        <name>acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="385" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1HESS__Interpolator_1a37ff8be9929878c7e78ebd61fee19f04" prot="private" static="no" mutable="no">
+        <type>gsl_spline *</type>
+        <definition>gsl_spline* Gambit::DarkBit::HESS_Interpolator::spline[17]</definition>
+        <argsstring>[17]</argsstring>
+        <name>spline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="386" column="20" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1HESS__Interpolator_1a2f5abbf2bf1d03cadc0abe69771aeb36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::HESS_Interpolator::HESS_Interpolator</definition>
+        <argsstring>(std::string file)</argsstring>
+        <name>HESS_Interpolator</name>
+        <param>
+          <type>std::string</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="374" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="390" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1HESS__Interpolator_1ac3fdb1398e1b3a528af654bddd13b136" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::HESS_Interpolator::~HESS_Interpolator</definition>
+        <argsstring>()</argsstring>
+        <name>~HESS_Interpolator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="376" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="412" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1HESS__Interpolator_1ae078f3d4d38e2d9789236782e76cf908" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::HESS_Interpolator::HESS_Interpolator</definition>
+        <argsstring>(const HESS_Interpolator &amp;)=delete</argsstring>
+        <name>HESS_Interpolator</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1HESS__Interpolator" kindref="compound">HESS_Interpolator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="378" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1HESS__Interpolator_1ae460712999a37de5119f757cedfa3fd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1HESS__Interpolator" kindref="compound">HESS_Interpolator</ref></type>
+        <definition>HESS_Interpolator Gambit::DarkBit::HESS_Interpolator::operator=</definition>
+        <argsstring>(const HESS_Interpolator &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1HESS__Interpolator" kindref="compound">HESS_Interpolator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="379" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1HESS__Interpolator_1a3ba1fbc38fac77dbc2caa6ae00b9f46e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::HESS_Interpolator::lnL</definition>
+        <argsstring>(double epsilon, double gamma)</argsstring>
+        <name>lnL</name>
+        <param>
+          <type>double</type>
+          <declname>epsilon</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>gamma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="383" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="421" bodyend="489"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" line="371" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/Axions.cpp" bodystart="370" bodyend="387"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1DarkBit_1_1HESS__Interpolator_1afe4c5606d80a3931a103af192689c9f0" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::HESS_Interpolator</scope><name>acc</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1HESS__Interpolator_1a2f5abbf2bf1d03cadc0abe69771aeb36" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::HESS_Interpolator</scope><name>HESS_Interpolator</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1HESS__Interpolator_1ae078f3d4d38e2d9789236782e76cf908" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::HESS_Interpolator</scope><name>HESS_Interpolator</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1HESS__Interpolator_1a40382d4423f7758482739904aa83b8b8" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::HESS_Interpolator</scope><name>interp_lnL</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1HESS__Interpolator_1a3ba1fbc38fac77dbc2caa6ae00b9f46e" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::HESS_Interpolator</scope><name>lnL</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1HESS__Interpolator_1ae460712999a37de5119f757cedfa3fd9" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::HESS_Interpolator</scope><name>operator=</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1HESS__Interpolator_1a37ff8be9929878c7e78ebd61fee19f04" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::HESS_Interpolator</scope><name>spline</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1HESS__Interpolator_1ac3fdb1398e1b3a528af654bddd13b136" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::HESS_Interpolator</scope><name>~HESS_Interpolator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

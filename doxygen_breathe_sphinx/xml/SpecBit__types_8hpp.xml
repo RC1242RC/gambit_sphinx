@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="SpecBit__types_8hpp" kind="file" language="C++">
+    <compoundname>SpecBit_types.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">gambit/Utils/util_types.hpp</includes>
+    <includedby refid="SpecBit__types_8cpp" local="yes">SpecBit_types.cpp</includedby>
+    <includedby refid="SpecBit__VS_8cpp" local="yes">SpecBit_VS.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>SpecBit_types.hpp</label>
+        <link refid="SpecBit__types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>gambit/Utils/util_types.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>SpecBit_VS.cpp</label>
+        <link refid="SpecBit__VS_8cpp"/>
+      </node>
+      <node id="2">
+        <label>SpecBit_types.cpp</label>
+        <link refid="SpecBit__types_8cpp"/>
+      </node>
+      <node id="1">
+        <label>SpecBit_types.hpp</label>
+        <link refid="SpecBit__types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structGambit_1_1SpecBit_1_1SpectrumEntry" prot="public">Gambit::SpecBit::SpectrumEntry</innerclass>
+    <innerclass refid="classGambit_1_1SpecBit_1_1SpectrumEntriesForVevacious" prot="public">Gambit::SpecBit::SpectrumEntriesForVevacious</innerclass>
+    <innerclass refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer" prot="public">Gambit::SpecBit::VevaciousResultContainer</innerclass>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1SpecBit">Gambit::SpecBit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Type definition header for module SpecBit.</para>
+<para>Compile-time registration of type definitions required for the rest of the code to communicate with SpecBit.</para>
+<para>Add to this if you want to define a new type for the functions in SpecBit to return, but you don&apos;t expect that type to be needed by any other modules.</para>
+<para><hruler/>
+</para>
+<para>Authors (add name and date if you modify):</para>
+<para><simplesect kind="author"><para>Janina Renk (<ulink url="mailto:janina.renk@fysik.su.se">janina.renk@fysik.su.se</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2019 July, Dec</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__SpecBit_types_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SpecBit_types_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/util_types.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SpecBit</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>vector<sp/>of<sp/>&lt;int,double&gt;<sp/>pairs<sp/>is<sp/>the<sp/>type<sp/>the<sp/>routine<sp/>&apos;ReadLhaBlock&apos;<sp/>of<sp/>vevacious<sp/>uses<sp/>to<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>passed<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;int,double&gt;&gt;<sp/>vec_pair_int_dbl;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>spectrum<sp/>entry<sp/>type<sp/>storing<sp/>all<sp/>information<sp/>necessary<sp/>for<sp/>the<sp/>vevacious<sp/>function<sp/>&apos;ReadLhaBlock&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>=&gt;<sp/>store<sp/>name,<sp/>parameters<sp/>&amp;<sp/>dimension<sp/>of<sp/>an<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structGambit_1_1SpecBit_1_1SpectrumEntry" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1SpecBit_1_1SpectrumEntry" kindref="compound">SpectrumEntry</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>name;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec_pair_int_dbl<sp/><ref refid="structGambit_1_1parameters" kindref="compound">parameters</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimension;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>typdef<sp/>to<sp/>avoid<sp/>having<sp/>to<sp/>use<sp/>&apos;struct<sp/>SpectrumEntry&apos;<sp/>every<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGambit_1_1SpecBit_1_1SpectrumEntry" kindref="compound">SpectrumEntry</ref><sp/><ref refid="structGambit_1_1SpecBit_1_1SpectrumEntry" kindref="compound">SpectrumEntry</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="SpecBit__types_8hpp_1ae713578ca9fde57b954348eda35afa4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;std::string,SpectrumEntry&gt;<sp/><ref refid="SpecBit__types_8hpp_1ae713578ca9fde57b954348eda35afa4a" kindref="member">map_str_SpectrumEntry</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classGambit_1_1SpecBit_1_1SpectrumEntriesForVevacious" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGambit_1_1SpecBit_1_1SpectrumEntriesForVevacious" kindref="compound">SpectrumEntriesForVevacious</ref></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1SpecBit_1_1SpectrumEntriesForVevacious" kindref="compound">SpectrumEntriesForVevacious</ref>(){};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>setter<sp/>functions<sp/>for<sp/>scale,<sp/>inputPath<sp/>and<sp/>input<sp/>Filenames</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_scale<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>inScale)<sp/>{scale<sp/>=<sp/>inScale;};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_inputPath<sp/>(std::string<sp/>inPath)<sp/>{inputPath<sp/>=<sp/>inPath;};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_inputFilename<sp/>(std::string<sp/>inFile)<sp/>{inputFilename<sp/>=<sp/>inFile;};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>getter<sp/>functions<sp/>for<sp/>scale,<sp/>inputPath<sp/>and<sp/>input<sp/>Filenames</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_scale<sp/>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>scale;};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>get_inputFilename<sp/>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inputFilename;};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>get_inputPath<sp/>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inputPath;};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>adds<sp/>an<sp/>entry<sp/>to<sp/>the<sp/>spec_entry_map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1SpectrumEntriesForVevacious_1ac096c6fe422f87f83494f51dfe7c1962" kindref="member">add_entry</ref><sp/>(std::string<sp/>name,<sp/>vec_pair_int_dbl<sp/>vec,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimension);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>spec_entry_map<sp/>-&gt;<sp/>iterate<sp/>through<sp/>it<sp/>to<sp/>pass<sp/>all<sp/>entries<sp/>to<sp/>vevacious</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="SpecBit__types_8hpp_1ae713578ca9fde57b954348eda35afa4a" kindref="member">map_str_SpectrumEntry</ref><sp/>get_spec_entry_map()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>spec_entry_map;};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>inputFilename;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>inputPath;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="SpecBit__types_8hpp_1ae713578ca9fde57b954348eda35afa4a" kindref="member">map_str_SpectrumEntry</ref><sp/>spec_entry_map;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Class<sp/>that<sp/>stores<sp/>the<sp/>results<sp/>computed<sp/>by<sp/>vevacious<sp/>that<sp/>will<sp/>be</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/><sp/>needed<sp/>by<sp/>other<sp/>capabilites<sp/>in<sp/>GAMBIT<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer" kindref="compound">VevaciousResultContainer</ref></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>constructor<sp/>initialises<sp/>every<sp/>member<sp/>to<sp/>-1<sp/>to<sp/>avoid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>problems<sp/>when<sp/>printing<sp/>results<sp/>when<sp/>vevacious<sp/>did<sp/>not<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer" kindref="compound">VevaciousResultContainer</ref>(){};</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>all<sp/>maps<sp/>and<sp/>set<sp/>value<sp/>of<sp/>lifetime<sp/>and<sp/>thermalProbability<sp/>to<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a6164e63e6ffd634a33c8d0a94425e74d" kindref="member">clear_results</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>str<sp/>panic_vaccum,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pathFinder_number);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>setter<sp/>functions<sp/>for<sp/>results<sp/>lifetime,<sp/>thermal<sp/>probability<sp/>&amp;<sp/>bounce<sp/>action<sp/>vectors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>straightPathGoodEnough<sp/>checks<sp/>wethere<sp/>the<sp/>action<sp/>of<sp/>drawing<sp/>a<sp/>straigh<sp/>path<sp/>between<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>physical<sp/>&amp;<sp/>panic<sp/>vacuum<sp/>is<sp/>already<sp/>below<sp/>the<sp/>action<sp/>threshold.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a4bf0e0095555de41a785868ffaeba24d" kindref="member">set_results</ref><sp/>(str<sp/>panic_vaccum,<sp/>str<sp/>name,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1VevaciousResultContainer_1a4da3859b3801d98e20dde7ef98f3d52a" kindref="member">add_straightPathGoodEnough</ref>(str<sp/>panic_vacuum);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>map<sp/>containing<sp/>results<sp/>for<sp/>nearest/global<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_str_dbl<sp/>get_nearest_results()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result_map[</highlight><highlight class="stringliteral">&quot;nearest&quot;</highlight><highlight class="normal">];}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_str_dbl<sp/>get_global_results()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result_map[</highlight><highlight class="stringliteral">&quot;global&quot;</highlight><highlight class="normal">];}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>width,<sp/>lifetime<sp/>for<sp/>nearest/global<sp/>minimum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_width(str<sp/>panic_vacuum)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result_map[panic_vacuum][</highlight><highlight class="stringliteral">&quot;width&quot;</highlight><highlight class="normal">];<sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_lifetime(str<sp/>panic_vaccum)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result_map[panic_vaccum][</highlight><highlight class="stringliteral">&quot;lifetime&quot;</highlight><highlight class="normal">];<sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>thermal<sp/>probability<sp/>and<sp/>width<sp/>for<sp/>nearest/global<sp/>minimum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_thermalProbability(str<sp/>panic_vaccum)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result_map[panic_vaccum][</highlight><highlight class="stringliteral">&quot;thermalProbability&quot;</highlight><highlight class="normal">];<sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_thermalWidth(str<sp/>panic_vacuum)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result_map[panic_vacuum][</highlight><highlight class="stringliteral">&quot;thermalWidth&quot;</highlight><highlight class="normal">];<sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_str_map_str_dbl<sp/>result_map;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>defined<sp/>__SpecBit_types_hpp__</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/SpecBit_types.hpp"/>
+  </compounddef>
+</doxygen>

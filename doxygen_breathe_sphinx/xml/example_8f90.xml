@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="example_8f90" kind="file" language="Fortran">
+    <compoundname>example.f90</compoundname>
+    <innernamespace refid="namespacem1">m1</innernamespace>
+    <innernamespace refid="namespacema">ma</innernamespace>
+    <innernamespace refid="namespacemb">mb</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="example_8f90_1a13d0a7cd3eb0120c5da084a3377eb2d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>integer function</type>
+        <definition>integer function two</definition>
+        <argsstring>()</argsstring>
+        <name>two</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/example/example.f90" line="16" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/example/example.f90" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="example_8f90_1ac44f933ad976285d4ece0411116899b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>character *8 function</type>
+        <definition>character*8 function text</definition>
+        <argsstring>()</argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/example/example.f90" line="21" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/example/example.f90" bodystart="22" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">!<sp/>Dummy<sp/>Fortran<sp/>file<sp/>to<sp/>test<sp/>CBGB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">module</highlight><highlight class="normal"><sp/>m1</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">integer</highlight><highlight class="normal"><sp/>i1,i2(2),i3(3)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">character*8</highlight><highlight class="normal"><sp/>str</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">common</highlight><highlight class="normal"><sp/>/dummy_block/<sp/>i1,i2,i3,str</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">contains</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">integer<sp/></highlight><highlight class="keyword">function<sp/></highlight><highlight class="normal">one()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>one<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">end<sp/>function<sp/></highlight><highlight class="normal">one</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">end<sp/>module<sp/></highlight><highlight class="normal">m1</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">integer<sp/></highlight><highlight class="keyword">function<sp/></highlight><highlight class="normal">two()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>two<sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">end<sp/>function<sp/></highlight><highlight class="normal">two</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">CHARACTER*8<sp/></highlight><highlight class="keyword">function<sp/></highlight><highlight class="normal">text()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>text<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ABCDEFGH&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">end<sp/>function<sp/></highlight><highlight class="normal">text</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">module</highlight><highlight class="normal"><sp/>ma</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">contains</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">CHARACTER*4<sp/></highlight><highlight class="keyword">function<sp/></highlight><highlight class="normal">text()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>text<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;abcd&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">end<sp/>function<sp/></highlight><highlight class="normal">text</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">end<sp/>module<sp/></highlight><highlight class="normal">ma</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">module</highlight><highlight class="normal"><sp/>mb</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">contains</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">CHARACTER*6<sp/></highlight><highlight class="keyword">function<sp/></highlight><highlight class="normal">text()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>text<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;abcdef&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">end<sp/>function<sp/></highlight><highlight class="normal">text</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">end<sp/>module<sp/></highlight><highlight class="normal">mb</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/example/example.f90"/>
+  </compounddef>
+</doxygen>

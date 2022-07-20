@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1Scanner_1_1Scan__Manager" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::Scanner::Scan_Manager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Scan__Manager_1a727cfcb6a10fc9ef1b49647500499d90" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classGambit_1_1Scanner_1_1Factory__Base" kindref="compound">Factory_Base</ref> *</type>
+        <definition>const Factory_Base* Gambit::Scanner::Scan_Manager::factory</definition>
+        <argsstring></argsstring>
+        <name>factory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" line="42" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Scan__Manager_1a0df08925c283d86f5238e937228b97eb" prot="private" static="no" mutable="no">
+        <type>Options</type>
+        <definition>Options Gambit::Scanner::Scan_Manager::options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" line="43" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Scan__Manager_1acc2fbc35f650c496f2395f3745ee1487" prot="private" static="no" mutable="no">
+        <type><ref refid="classGambit_1_1Priors_1_1CompositePrior" kindref="compound">Priors::CompositePrior</ref> *</type>
+        <definition>Priors::CompositePrior* Gambit::Scanner::Scan_Manager::prior</definition>
+        <argsstring></argsstring>
+        <name>prior</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" line="44" column="36" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Scan__Manager_1af01bba748fe28e6f1ef0c7f0958f2c2a" prot="private" static="no" mutable="no">
+        <type><ref refid="printer__interface_8hpp_1ae767584d510b4dcaa3b82278ab1ecbd7" kindref="member">printer_interface</ref> *</type>
+        <definition>printer_interface* Gambit::Scanner::Scan_Manager::printerInterface</definition>
+        <argsstring></argsstring>
+        <name>printerInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" line="45" column="31" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1Scanner_1_1Scan__Manager_1afa71edb48c0cb1367a5cd7f1371faa00" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gambit::Scanner::Scan_Manager::has_local_factory</definition>
+        <argsstring></argsstring>
+        <name>has_local_factory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" line="47" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Scan__Manager_1a8292ec052fb7dd51c990ab27503a6497" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Scanner::Scan_Manager::Scan_Manager</definition>
+        <argsstring>(const YAML::Node &amp;node, printer_interface *, const Factory_Base *factory=0)</argsstring>
+        <name>Scan_Manager</name>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="printer__interface_8hpp_1ae767584d510b4dcaa3b82278ab1ecbd7" kindref="member">printer_interface</ref> *</type>
+          <defname>printerInterface</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1Scanner_1_1Factory__Base" kindref="compound">Factory_Base</ref> *</type>
+          <declname>factory</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" line="50" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scan.cpp" bodystart="50" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Scan__Manager_1a35b39d8564a4981d22003158fcd32c44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::Scanner::Scan_Manager::~Scan_Manager</definition>
+        <argsstring>()</argsstring>
+        <name>~Scan_Manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" line="51" column="13" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scan.cpp" bodystart="212" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1Scanner_1_1Scan__Manager_1a8348320e90ee92bed5d69e2f30f85dd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gambit::Scanner::Scan_Manager::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" line="52" column="17" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/scan.cpp" bodystart="133" bodyend="210"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" line="40" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/scan.hpp" bodystart="39" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1Scanner_1_1Scan__Manager_1a727cfcb6a10fc9ef1b49647500499d90" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Scan_Manager</scope><name>factory</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Scan__Manager_1afa71edb48c0cb1367a5cd7f1371faa00" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Scan_Manager</scope><name>has_local_factory</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Scan__Manager_1a0df08925c283d86f5238e937228b97eb" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Scan_Manager</scope><name>options</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Scan__Manager_1af01bba748fe28e6f1ef0c7f0958f2c2a" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Scan_Manager</scope><name>printerInterface</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Scan__Manager_1acc2fbc35f650c496f2395f3745ee1487" prot="private" virt="non-virtual"><scope>Gambit::Scanner::Scan_Manager</scope><name>prior</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Scan__Manager_1a8348320e90ee92bed5d69e2f30f85dd9" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Scan_Manager</scope><name>Run</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Scan__Manager_1a8292ec052fb7dd51c990ab27503a6497" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Scan_Manager</scope><name>Scan_Manager</name></member>
+      <member refid="classGambit_1_1Scanner_1_1Scan__Manager_1a35b39d8564a4981d22003158fcd32c44" prot="public" virt="non-virtual"><scope>Gambit::Scanner::Scan_Manager</scope><name>~Scan_Manager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structGambit_1_1DD__coupling__container" kind="struct" language="C++" prot="public">
+    <compoundname>Gambit::DD_coupling_container</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGambit_1_1DD__coupling__container_1ae6f672ef20cdee9c3c98e12b85d63bab" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Gambit::DD_coupling_container::coeff_structure</definition>
+        <argsstring></argsstring>
+        <name>coeff_structure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/DDCalc.hpp" line="67" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/DDCalc.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1DD__coupling__container_1abcbb8e442208b3f0374859b11f371456" prot="public" static="no" mutable="no">
+        <type><ref refid="structGambit_1_1DM__nucleon__couplings" kindref="compound">DM_nucleon_couplings</ref></type>
+        <definition>DM_nucleon_couplings Gambit::DD_coupling_container::DM_nucleon_coeffs</definition>
+        <argsstring></argsstring>
+        <name>DM_nucleon_coeffs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/DDCalc.hpp" line="71" column="35" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/DDCalc.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGambit_1_1DD__coupling__container_1af447907556d30c690a4fe4ece781ce5a" prot="public" static="no" mutable="no">
+        <type><ref refid="structGambit_1_1NREO__DM__nucleon__couplings" kindref="compound">NREO_DM_nucleon_couplings</ref></type>
+        <definition>NREO_DM_nucleon_couplings Gambit::DD_coupling_container::DD_nonrel_WCs</definition>
+        <argsstring></argsstring>
+        <name>DD_nonrel_WCs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/DDCalc.hpp" line="72" column="35" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/DDCalc.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Gambit::NREO_DM_nucleon_couplings</label>
+        <link refid="structGambit_1_1NREO__DM__nucleon__couplings"/>
+      </node>
+      <node id="1">
+        <label>Gambit::DD_coupling_container</label>
+        <link refid="structGambit_1_1DD__coupling__container"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>DD_nonrel_WCs</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>DM_nucleon_coeffs</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Gambit::DM_nucleon_couplings</label>
+        <link refid="structGambit_1_1DM__nucleon__couplings"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/DDCalc.hpp" line="66" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/DDCalc.hpp" bodystart="65" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structGambit_1_1DD__coupling__container_1ae6f672ef20cdee9c3c98e12b85d63bab" prot="public" virt="non-virtual"><scope>Gambit::DD_coupling_container</scope><name>coeff_structure</name></member>
+      <member refid="structGambit_1_1DD__coupling__container_1af447907556d30c690a4fe4ece781ce5a" prot="public" virt="non-virtual"><scope>Gambit::DD_coupling_container</scope><name>DD_nonrel_WCs</name></member>
+      <member refid="structGambit_1_1DD__coupling__container_1abcbb8e442208b3f0374859b11f371456" prot="public" virt="non-virtual"><scope>Gambit::DD_coupling_container</scope><name>DM_nucleon_coeffs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

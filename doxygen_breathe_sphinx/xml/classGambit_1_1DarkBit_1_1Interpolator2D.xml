@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1DarkBit_1_1Interpolator2D" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::DarkBit::Interpolator2D</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1Interpolator2D_1a8c3dce72a07d5c0adb5103639d15083d" prot="private" static="no" mutable="no">
+        <type>gsl_interp_accel *</type>
+        <definition>gsl_interp_accel* Gambit::DarkBit::Interpolator2D::x_acc</definition>
+        <argsstring></argsstring>
+        <name>x_acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="54" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1Interpolator2D_1aac651e6ca4ed505e2ad8ce1c29bdce99" prot="private" static="no" mutable="no">
+        <type>gsl_interp_accel *</type>
+        <definition>gsl_interp_accel* Gambit::DarkBit::Interpolator2D::y_acc</definition>
+        <argsstring></argsstring>
+        <name>y_acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="55" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1Interpolator2D_1a0aec7c3430f454bdee90b349da103de1" prot="private" static="no" mutable="no">
+        <type>gsl_spline2d *</type>
+        <definition>gsl_spline2d* Gambit::DarkBit::Interpolator2D::spline</definition>
+        <argsstring></argsstring>
+        <name>spline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="56" column="22" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1Interpolator2D_1a3b70668bb7dba9c05738ad25f3709883" prot="private" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double* Gambit::DarkBit::Interpolator2D::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="57" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1Interpolator2D_1af09008daf68d245b58ff3f29eb047eb3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::Interpolator2D::x_lo</definition>
+        <argsstring></argsstring>
+        <name>x_lo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="59" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1Interpolator2D_1a8dd1ece6b9c01631bcb447c9cf9a3af8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::Interpolator2D::y_lo</definition>
+        <argsstring></argsstring>
+        <name>y_lo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="59" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1Interpolator2D_1af6158b847b5bd7670e615151ff8eeecd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::Interpolator2D::x_up</definition>
+        <argsstring></argsstring>
+        <name>x_up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="59" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1Interpolator2D_1a838beed752b67390309f01ff8b956fc6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::Interpolator2D::y_up</definition>
+        <argsstring></argsstring>
+        <name>y_up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="59" column="31" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1Interpolator2D_1a727224de202bac1177d45993426dfc43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::Interpolator2D::Interpolator2D</definition>
+        <argsstring>()</argsstring>
+        <name>Interpolator2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="38" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/PPPC.cpp" bodystart="105" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1Interpolator2D_1a437769e5e1f348b5a751a2b4da5a2ceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::Interpolator2D::Interpolator2D</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;xin, const std::vector&lt; double &gt; &amp;yin, const std::vector&lt; double &gt; &amp;zin)</argsstring>
+        <name>Interpolator2D</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>xin</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>yin</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>zin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="39" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/PPPC.cpp" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1Interpolator2D_1ac37061e471430a820ee41b786ed5400a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1Interpolator2D" kindref="compound">Interpolator2D</ref> &amp;</type>
+        <definition>Interpolator2D &amp; Gambit::DarkBit::Interpolator2D::operator=</definition>
+        <argsstring>(Interpolator2D &amp;&amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classGambit_1_1DarkBit_1_1Interpolator2D" kindref="compound">Interpolator2D</ref> &amp;&amp;</type>
+          <defname>interp</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="40" column="24" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/PPPC.cpp" bodystart="27" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1Interpolator2D_1aea22b3e38ff3f148c070e3174c5b65e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::Interpolator2D::~Interpolator2D</definition>
+        <argsstring>()</argsstring>
+        <name>~Interpolator2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="42" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/PPPC.cpp" bodystart="44" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1Interpolator2D_1ac235986ff35fd35582a1b6825262a04d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::Interpolator2D::Interpolator2D</definition>
+        <argsstring>(const Interpolator2D &amp;)=delete</argsstring>
+        <name>Interpolator2D</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1Interpolator2D" kindref="compound">Interpolator2D</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="44" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1Interpolator2D_1ac903095ae44993e973c426c62a5cb5b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGambit_1_1DarkBit_1_1Interpolator2D" kindref="compound">Interpolator2D</ref></type>
+        <definition>Interpolator2D Gambit::DarkBit::Interpolator2D::operator=</definition>
+        <argsstring>(const Interpolator2D &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1Interpolator2D" kindref="compound">Interpolator2D</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="45" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1Interpolator2D_1a46520716eebf41b9b4e404aaddd72a52" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::Interpolator2D::interpolate</definition>
+        <argsstring>(double x, double y) const</argsstring>
+        <name>interpolate</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="47" column="16" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/PPPC.cpp" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1Interpolator2D_1afe9962e932e58a2656c1734009fdcc8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DarkBit::Interpolator2D::is_inside_box</definition>
+        <argsstring>(double x, double y) const</argsstring>
+        <name>is_inside_box</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="49" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/PPPC.cpp" bodystart="122" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1Interpolator2D_1a7e3b22e42f3d9912950eba2454e0f56b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::Interpolator2D::init</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;xin, const std::vector&lt; double &gt; &amp;yin, const std::vector&lt; double &gt; &amp;zin)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>xin</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>yin</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>zin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="52" column="14" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/PPPC.cpp" bodystart="53" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" line="36" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/PPPC.hpp" bodystart="35" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1a7e3b22e42f3d9912950eba2454e0f56b" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>init</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1a46520716eebf41b9b4e404aaddd72a52" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>interpolate</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1a727224de202bac1177d45993426dfc43" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>Interpolator2D</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1a437769e5e1f348b5a751a2b4da5a2ceb" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>Interpolator2D</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1ac235986ff35fd35582a1b6825262a04d" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>Interpolator2D</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1afe9962e932e58a2656c1734009fdcc8b" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>is_inside_box</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1ac37061e471430a820ee41b786ed5400a" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>operator=</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1ac903095ae44993e973c426c62a5cb5b9" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>operator=</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1a0aec7c3430f454bdee90b349da103de1" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>spline</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1a8c3dce72a07d5c0adb5103639d15083d" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>x_acc</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1af09008daf68d245b58ff3f29eb047eb3" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>x_lo</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1af6158b847b5bd7670e615151ff8eeecd" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>x_up</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1aac651e6ca4ed505e2ad8ce1c29bdce99" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>y_acc</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1a8dd1ece6b9c01631bcb447c9cf9a3af8" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>y_lo</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1a838beed752b67390309f01ff8b956fc6" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>y_up</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1a3b70668bb7dba9c05738ad25f3709883" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>z</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1Interpolator2D_1aea22b3e38ff3f148c070e3174c5b65e9" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::Interpolator2D</scope><name>~Interpolator2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

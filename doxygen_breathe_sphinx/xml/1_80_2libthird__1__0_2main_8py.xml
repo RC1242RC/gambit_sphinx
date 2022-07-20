@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="1_80_2libthird__1__0_2main_8py" kind="file" language="Python">
+    <compoundname>1.0/libthird_1_0/main.py</compoundname>
+    <innernamespace refid="namespacelibthird__1__0_1_1main">libthird_1_0::main</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#<sp/>A<sp/>dummy<sp/>python<sp/>library<sp/>for<sp/>testing<sp/>GAMBIT<sp/>backend<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Mimics<sp/>the<sp/>functionality<sp/>of<sp/>libfirst</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">#<sp/>\author<sp/>Pat<sp/>Scott</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#<sp/>\date<sp/>2017-12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Some<sp/>global<sp/>variables:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">array_length<sp/>=<sp/>10</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">someInt<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">someDouble<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">someVector<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">isInitialized<sp/>=<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">prefix<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;libthird<sp/>1.0:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Some<sp/>functions:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">#<sp/>&apos;initialization&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">initialize(a):</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>someInt</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>someArray</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>isInitialized</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>prefix,<sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>function<sp/>&apos;initialize&apos;.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>someInt<sp/>=<sp/>a</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>someArray<sp/>=<sp/>np.array([2.0*x<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>x<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(array_length)])</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>someVector.append(1.5)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>someVector.append(1.6)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>isInitialized<sp/>=<sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>prefix,<sp/></highlight><highlight class="stringliteral">&quot;Initialization<sp/>done.<sp/>Variable<sp/>&apos;someInt&apos;<sp/>set<sp/>to:<sp/>&quot;</highlight><highlight class="normal">,<sp/>someInt</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">#<sp/>&apos;calculation&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">someFunction():</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>someDouble</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>prefix,<sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>function<sp/>&apos;someFunction&apos;.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isInitialized):</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>prefix,<sp/></highlight><highlight class="stringliteral">&quot;Will<sp/>now<sp/>perform<sp/>a<sp/>calculation...&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>someDouble<sp/>=<sp/>3.1415*someInt</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>prefix,<sp/></highlight><highlight class="stringliteral">&quot;Result<sp/>stored<sp/>in<sp/>variable<sp/>&apos;someDouble&apos;<sp/>is:<sp/>&quot;</highlight><highlight class="normal">,<sp/>someDouble</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/>prefix,<sp/></highlight><highlight class="stringliteral">&quot;Not<sp/>initialized.<sp/>Cannot<sp/>perform<sp/>calculation.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">#<sp/>return<sp/>&apos;result&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">returnResult():</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;I&apos;m<sp/>returnResult()<sp/>from<sp/>libthird.py,<sp/>and<sp/>I&apos;m<sp/>feeling<sp/>well.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>someDouble</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/examples/libthird/1.0/libthird_1_0/main.py"/>
+  </compounddef>
+</doxygen>

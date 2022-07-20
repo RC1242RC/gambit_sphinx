@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="infomsg_8py" kind="file" language="Python">
+    <compoundname>infomsg.py</compoundname>
+    <innerclass refid="classmodules_1_1infomsg_1_1InfoMessage" prot="public">modules::infomsg::InfoMessage</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1ClassNotLoadable" prot="public">modules::infomsg::ClassNotLoadable</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1ClassAlreadyDone" prot="public">modules::infomsg::ClassAlreadyDone</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1FunctionAlreadyDone" prot="public">modules::infomsg::FunctionAlreadyDone</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1ParentClassIgnored" prot="public">modules::infomsg::ParentClassIgnored</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1IgnoredFunction" prot="public">modules::infomsg::IgnoredFunction</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1IgnoredMemberFunction" prot="public">modules::infomsg::IgnoredMemberFunction</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1IgnoredMemberVariable" prot="public">modules::infomsg::IgnoredMemberVariable</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1NoIncludeStatementGenerated" prot="public">modules::infomsg::NoIncludeStatementGenerated</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1TypeNotAccepted" prot="public">modules::infomsg::TypeNotAccepted</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1NoFactoryFunctions" prot="public">modules::infomsg::NoFactoryFunctions</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1NoPointerCopyAndAssignmentFunctions" prot="public">modules::infomsg::NoPointerCopyAndAssignmentFunctions</innerclass>
+    <innerclass refid="classmodules_1_1infomsg_1_1NoLoadedTypesEntry" prot="public">modules::infomsg::NoLoadedTypesEntry</innerclass>
+    <innernamespace refid="namespacemodules_1_1infomsg">modules::infomsg</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>__future__<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>print_function</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/><ref refid="namespacemodules_1_1gb" kindref="compound">modules.gb</ref><sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>gb</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#<sp/>======<sp/>Module-level<sp/>globals<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Set<sp/>of<sp/>currently<sp/>active<sp/>message<sp/>types,<sp/>used<sp/>by<sp/>the<sp/>function<sp/>clearInfoMessages.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">active_msg_types<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">#<sp/>======<sp/>END:<sp/>Module-level<sp/>globals<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">#<sp/>======<sp/>Info<sp/>message<sp/>base<sp/>class<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classmodules_1_1infomsg_1_1InfoMessage" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>(object):</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Base<sp/>class<sp/>for<sp/>BOSS<sp/>info<sp/>messages.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self):</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>active_msg_types</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>active_msg_types.add(self.__class__)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1InfoMessage_1a26bafd01244b439b76bc15cd28f64b6c" kindref="member">printMessage</ref>(self):</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="31"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Print<sp/>the<sp/>info<sp/>message<sp/>of<sp/>the<sp/>child<sp/>class</highlight></codeline>
+<codeline lineno="32"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>add<sp/>the<sp/>message<sp/>tag<sp/>to<sp/>the<sp/>list<sp/>of</highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tags<sp/>done.</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>self.tag<sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>self.__class__.tags_done:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.__class__.tags_done.add(self.tag)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/>-<sp/>&apos;</highlight><highlight class="normal"><sp/>+<sp/>self.msg)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">#<sp/>======<sp/>END:<sp/>Info<sp/>message<sp/>base<sp/>class<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">#<sp/>======<sp/>List<sp/>of<sp/>info<sp/>message<sp/>classes<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classmodules_1_1infomsg_1_1ClassNotLoadable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1ClassNotLoadable" kindref="compound">ClassNotLoadable</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;yellow&apos;</highlight><highlight class="normal">]<sp/>+<sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>class<sp/>&apos;%s&apos;<sp/>is<sp/>not<sp/>loadable.&quot;</highlight><highlight class="normal"><sp/>+<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;end&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1ClassNotLoadable_1a980c3c7026085899148bef9e2e67d009" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1ClassNotLoadable_1aa1d8692ce416fe8d7abed1bbd6045bfd" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1ClassNotLoadable_1aa1d8692ce416fe8d7abed1bbd6045bfd" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classmodules_1_1infomsg_1_1ClassAlreadyDone" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1ClassAlreadyDone" kindref="compound">ClassAlreadyDone</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Class<sp/>&apos;%s&apos;<sp/>is<sp/>already<sp/>done.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1ClassAlreadyDone_1a93dd53d2149f8414c134cee8f216a660" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1ClassAlreadyDone_1a3646169e5af8d6a9c308cd61c6fc2162" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1ClassAlreadyDone_1a3646169e5af8d6a9c308cd61c6fc2162" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classmodules_1_1infomsg_1_1FunctionAlreadyDone" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1FunctionAlreadyDone" kindref="compound">FunctionAlreadyDone</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Function<sp/>&apos;%s&apos;<sp/>is<sp/>already<sp/>done.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1FunctionAlreadyDone_1abf6bd9f97331960c517e54f89cf7786b" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1FunctionAlreadyDone_1a872e73c3f2f45ea6c4d6e8f541aec23a" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1FunctionAlreadyDone_1a872e73c3f2f45ea6c4d6e8f541aec23a" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classmodules_1_1infomsg_1_1ParentClassIgnored" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1ParentClassIgnored" kindref="compound">ParentClassIgnored</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;yellow&apos;</highlight><highlight class="normal">]<sp/>+<sp/><sp/></highlight><highlight class="stringliteral">&quot;In<sp/>class<sp/>&apos;%s&apos;,<sp/>the<sp/>parent<sp/>class<sp/>&apos;%s&apos;<sp/>is<sp/>ignored.&quot;</highlight><highlight class="normal"><sp/>+<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;end&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>parent_class,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1ParentClassIgnored_1aa597dca5cd0cf8c54aac82d787483d9a" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1ParentClassIgnored_1aaa898764d5bc340928f111d029db6f73" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag,<sp/>parent_class)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1ParentClassIgnored_1aaa898764d5bc340928f111d029db6f73" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classmodules_1_1infomsg_1_1IgnoredFunction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1IgnoredFunction" kindref="compound">IgnoredFunction</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;yellow&apos;</highlight><highlight class="normal">]<sp/>+<sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>function<sp/>&apos;%s&apos;<sp/>is<sp/>ignored.&quot;</highlight><highlight class="normal"><sp/>+<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;end&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1IgnoredFunction_1a5f9bb4352bc26172eca7ec30e9d3388c" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1IgnoredFunction_1a5d5321a2496bd6007eab5d3c5e00abc4" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1IgnoredFunction_1a5d5321a2496bd6007eab5d3c5e00abc4" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classmodules_1_1infomsg_1_1IgnoredMemberFunction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1IgnoredMemberFunction" kindref="compound">IgnoredMemberFunction</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;yellow&apos;</highlight><highlight class="normal">]<sp/>+<sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>member<sp/>function<sp/>&apos;%s&apos;<sp/>is<sp/>ignored.&quot;</highlight><highlight class="normal"><sp/>+<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;end&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1IgnoredMemberFunction_1a7f88e59bd02bf8fbe0fdb61895f740bd" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1IgnoredMemberFunction_1a639e0a69c4327263292dfaab9760601f" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1IgnoredMemberFunction_1a639e0a69c4327263292dfaab9760601f" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classmodules_1_1infomsg_1_1IgnoredMemberVariable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1IgnoredMemberVariable" kindref="compound">IgnoredMemberVariable</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;yellow&apos;</highlight><highlight class="normal">]<sp/>+<sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>member<sp/>variable<sp/>&apos;%s&apos;<sp/>is<sp/>ignored.&quot;</highlight><highlight class="normal"><sp/>+<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;end&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1IgnoredMemberVariable_1a18ddfd8b659664f37c9ee7b10d2a41f6" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1IgnoredMemberVariable_1a7416e359990246ac1c54ceb7d58ab68f" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1IgnoredMemberVariable_1a7416e359990246ac1c54ceb7d58ab68f" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="classmodules_1_1infomsg_1_1NoIncludeStatementGenerated" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1NoIncludeStatementGenerated" kindref="compound">NoIncludeStatementGenerated</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;yellow&apos;</highlight><highlight class="normal">]<sp/>+<sp/><sp/></highlight><highlight class="stringliteral">&quot;No<sp/>header<sp/>file<sp/>include<sp/>statement<sp/>generated<sp/>for<sp/>the<sp/>type<sp/>&apos;%s&apos;.&quot;</highlight><highlight class="normal"><sp/>+<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;end&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoIncludeStatementGenerated_1a9ce5974a1d11638b0b7d6cee90f90844" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoIncludeStatementGenerated_1aab446bb902ec2c90482eee8da198920c" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoIncludeStatementGenerated_1aab446bb902ec2c90482eee8da198920c" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="classmodules_1_1infomsg_1_1TypeNotAccepted" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1TypeNotAccepted" kindref="compound">TypeNotAccepted</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;yellow&apos;</highlight><highlight class="normal">]<sp/>+<sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>type<sp/>&apos;%s&apos;<sp/>is<sp/>not<sp/>accepted.&quot;</highlight><highlight class="normal"><sp/>+<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;end&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1TypeNotAccepted_1a2ccf171dfc2d7bbdd402e569cba24749" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1TypeNotAccepted_1a811dafd53d78644e0f5728a56fbef8d8" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1TypeNotAccepted_1a811dafd53d78644e0f5728a56fbef8d8" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="classmodules_1_1infomsg_1_1NoFactoryFunctions" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1NoFactoryFunctions" kindref="compound">NoFactoryFunctions</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;yellow&apos;</highlight><highlight class="normal">]<sp/>+<sp/><sp/></highlight><highlight class="stringliteral">&quot;No<sp/>factory<sp/>functions<sp/>generated<sp/>for<sp/>class<sp/>&apos;%s&apos;.&quot;</highlight><highlight class="normal"><sp/>+<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;end&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoFactoryFunctions_1ab032b9d7db7fe6b2ffa32d0afe18f85e" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoFactoryFunctions_1a340275727c2a2733157a3d878d9ea947" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoFactoryFunctions_1a340275727c2a2733157a3d878d9ea947" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="classmodules_1_1infomsg_1_1NoPointerCopyAndAssignmentFunctions" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1NoPointerCopyAndAssignmentFunctions" kindref="compound">NoPointerCopyAndAssignmentFunctions</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;yellow&apos;</highlight><highlight class="normal">]<sp/>+<sp/><sp/></highlight><highlight class="stringliteral">&quot;No<sp/>pointer-based<sp/>copy<sp/>constructor<sp/>or<sp/>assignment<sp/>functions<sp/>generated<sp/>for<sp/>class<sp/>&apos;%s&apos;.&quot;</highlight><highlight class="normal"><sp/>+<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;end&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoPointerCopyAndAssignmentFunctions_1a1fc769b5bf9cec39bb22ac6facb8dc0a" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoPointerCopyAndAssignmentFunctions_1ac67c89a426c435a05629ace2c2812211" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoPointerCopyAndAssignmentFunctions_1ac67c89a426c435a05629ace2c2812211" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="classmodules_1_1infomsg_1_1NoLoadedTypesEntry" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmodules_1_1infomsg_1_1NoLoadedTypesEntry" kindref="compound">NoLoadedTypesEntry</ref>(<ref refid="classmodules_1_1infomsg_1_1InfoMessage" kindref="compound">InfoMessage</ref>):</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;yellow&apos;</highlight><highlight class="normal">]<sp/>+<sp/><sp/></highlight><highlight class="stringliteral">&quot;No<sp/>entry<sp/>in<sp/>loaded_types.hpp<sp/>generated<sp/>for<sp/>class<sp/>&apos;%s&apos;.&quot;</highlight><highlight class="normal"><sp/>+<sp/>gb.textmods[</highlight><highlight class="stringliteral">&apos;end&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>tags_done<sp/>=<sp/>set()</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>tag,<sp/>reason=&apos;&apos;):</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoLoadedTypesEntry_1a92faa66724bb6a93082e08ccae656158" kindref="member">tag</ref><sp/>=<sp/>tag</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoLoadedTypesEntry_1a3daf547ffb574b88a01db0f187d38db6" kindref="member">msg</ref><sp/>=<sp/>self.__class__.msg<sp/>%<sp/>(tag)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bool(reason):<sp/>self.<ref refid="classmodules_1_1infomsg_1_1NoLoadedTypesEntry_1a3daf547ffb574b88a01db0f187d38db6" kindref="member">msg</ref><sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(%s)&quot;</highlight><highlight class="normal"><sp/>%<sp/>reason</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InfoMessage.__init__(self)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">#<sp/>======<sp/>END:<sp/>List<sp/>of<sp/>info<sp/>message<sp/>classes<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="comment">#<sp/>======<sp/>clearInfoMessages<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">clearInfoMessages():</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="198"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Loop<sp/>through<sp/>all<sp/>active<sp/>message<sp/>types<sp/>and<sp/>clear<sp/>the<sp/>class-wide</highlight></codeline>
+<codeline lineno="199"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>set<sp/>of<sp/>tags<sp/>done.<sp/>This<sp/>will<sp/>allow<sp/>the<sp/>info<sp/>message<sp/>to<sp/>be<sp/>printed</highlight></codeline>
+<codeline lineno="200"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>again<sp/>for<sp/>the<sp/>given<sp/>tag.</highlight></codeline>
+<codeline lineno="201"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>active_msg_types</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>info_msg_type<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>active_msg_types:</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info_msg_type.tags_done.clear()</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>active_msg_types.clear()</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment">#<sp/>======<sp/>END:<sp/>clearInfoMessages<sp/>========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/infomsg.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1018 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacemodules_1_1gb" kind="namespace" language="Python">
+    <compoundname>modules::gb</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a3f797e23b663ed945eab413c6054b73f" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.gambit_backend_namespace</definition>
+        <argsstring></argsstring>
+        <name>gambit_backend_namespace</name>
+        <initializer>=  &apos;CAT_3(BACKENDNAME,_,SAFE_VERSION)&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="17" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ac0632db7fac3f35694a864246e6f9244" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.gambit_backend_safeversion</definition>
+        <argsstring></argsstring>
+        <name>gambit_backend_safeversion</name>
+        <initializer>=  cfg.gambit_backend_version.replace(&apos;.&apos;,&apos;_&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="18" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a21aa608015269c958aec3ac784690807" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.gambit_backend_name_full</definition>
+        <argsstring></argsstring>
+        <name>gambit_backend_name_full</name>
+        <initializer>=  cfg.gambit_backend_name + &apos;_&apos; + gambit_backend_safeversion</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="19" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ae7ac3dff770aba7193fe8418fa07ef0e" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.boss_dir</definition>
+        <argsstring></argsstring>
+        <name>boss_dir</name>
+        <initializer>=  os.path.dirname(os.path.abspath(__file__))+&apos;/..&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="21" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a06813f3d06726141f3be5f26fce474b1" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.boss_temp_dir</definition>
+        <argsstring></argsstring>
+        <name>boss_temp_dir</name>
+        <initializer>=  &apos;BOSS_temp/&apos; + gambit_backend_name_full</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="22" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a51fffbb8114f31af51ac80d0098929c9" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.boss_output_dir</definition>
+        <argsstring></argsstring>
+        <name>boss_output_dir</name>
+        <initializer>=  &apos;BOSS_output/&apos; + gambit_backend_name_full</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="23" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ae0621a8fdf10c95b910001ad6916ef63" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool modules::gb.has_castxml_system</definition>
+        <argsstring></argsstring>
+        <name>has_castxml_system</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="25" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a81cc0e363cfaab14b420a1d6ef7e7306" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool modules::gb.has_castxml_local</definition>
+        <argsstring></argsstring>
+        <name>has_castxml_local</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="26" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ae1aa57bd640f001f72ed7bc7e5b544d4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool modules::gb.debug_mode</definition>
+        <argsstring></argsstring>
+        <name>debug_mode</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="30" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1aab468ffd9a6c78deaa460d22d350bfbb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.new_code</definition>
+        <argsstring></argsstring>
+        <name>new_code</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="32" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ac3469b9fe91ee9c9fb48d73b39a9f9b7" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.xml_file_name</definition>
+        <argsstring></argsstring>
+        <name>xml_file_name</name>
+        <initializer>=  &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="33" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a99d4eb28036f4ae6a1e11d65f9202905" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.id_dict</definition>
+        <argsstring></argsstring>
+        <name>id_dict</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="35" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a3cb0e96b0293b753129d27ba23fbc0b9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.all_id_dict</definition>
+        <argsstring></argsstring>
+        <name>all_id_dict</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="36" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a9a2e5bc33121013e8ac37c7fe4bd5957" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.name_dict</definition>
+        <argsstring></argsstring>
+        <name>name_dict</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="37" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1aa458d6fe55a0356d899ecd5d9573d293" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.all_name_dict</definition>
+        <argsstring></argsstring>
+        <name>all_name_dict</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="38" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ad937d70453cd8335afab7d31b880cc5e" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::gb.parents_of_loaded_classes</definition>
+        <argsstring></argsstring>
+        <name>parents_of_loaded_classes</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="40" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a3bceef4da59cdfe614c7d6265480189d" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::gb.contains_pure_virtual_members</definition>
+        <argsstring></argsstring>
+        <name>contains_pure_virtual_members</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="41" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a745f474577900ce011c506c15d75ba93" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.file_dict</definition>
+        <argsstring></argsstring>
+        <name>file_dict</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="43" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ae94d616774eefb7bd6a62a9815544eb8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.std_types_dict</definition>
+        <argsstring></argsstring>
+        <name>std_types_dict</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="44" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a51916b7c26693cb3a49893b43d3cbe45" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.typedef_dict</definition>
+        <argsstring></argsstring>
+        <name>typedef_dict</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="45" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a31fc3f0bb376b3bb08a3e910465b1e39" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.loaded_classes_in_xml</definition>
+        <argsstring></argsstring>
+        <name>loaded_classes_in_xml</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="46" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a9a5c3d925999a5ed592b90a5eb6c5367" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.func_dict</definition>
+        <argsstring></argsstring>
+        <name>func_dict</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="47" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a198c9a2f699c07af859008d73717c024" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.new_header_files</definition>
+        <argsstring></argsstring>
+        <name>new_header_files</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="48" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1af6c7ac0eb91098f480f1ba5e8297e88f" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::gb.accepted_types</definition>
+        <argsstring></argsstring>
+        <name>accepted_types</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="49" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1af71c1d605ec382295a7efb264faa1c63" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::gb.std_headers_used</definition>
+        <argsstring></argsstring>
+        <name>std_headers_used</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="50" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a92e6b2c5e34bb39ec8e627160bdc9705" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.original_file_paths</definition>
+        <argsstring></argsstring>
+        <name>original_file_paths</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="51" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a5e9fdec24a77d24dbb608f44eef5538f" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::gb.std_include_paths</definition>
+        <argsstring></argsstring>
+        <name>std_include_paths</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="52" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a30d11923538dfaced607ba5b0ac5a5f0" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::gb.functions_done</definition>
+        <argsstring></argsstring>
+        <name>functions_done</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="54" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1abd0b91580ec3e7e595a4655478ce688a" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::gb.classes_done</definition>
+        <argsstring></argsstring>
+        <name>classes_done</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="55" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1add8cc6a49db6ed5416ef633082e9125f" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::gb.wr_func_names</definition>
+        <argsstring></argsstring>
+        <name>wr_func_names</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="56" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a6b082f3c4b5631a50c429a227a5706a7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.factory_info</definition>
+        <argsstring></argsstring>
+        <name>factory_info</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="58" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a91508a84fc1910c4b58fdd534f6a6444" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.class_factory_file_dict</definition>
+        <argsstring></argsstring>
+        <name>class_factory_file_dict</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="59" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a14ff9d003999dd87618f7cd25178909f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.function_file_dict</definition>
+        <argsstring></argsstring>
+        <name>function_file_dict</name>
+        <initializer>=  OrderedDict()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="61" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a4f449f299fbfb932e8b150bae6400555" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int modules::gb.symbol_name_counter</definition>
+        <argsstring></argsstring>
+        <name>symbol_name_counter</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="63" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a5635a66259b13c695f7d4557727bfbba" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int modules::gb.function_name_counter</definition>
+        <argsstring></argsstring>
+        <name>function_name_counter</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="64" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a471ae1194b0a2c2aed5a4f0fb9993a91" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.backend_types_basedir</definition>
+        <argsstring></argsstring>
+        <name>backend_types_basedir</name>
+        <initializer>=  &apos;backend_types&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="68" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a7b03dcbc7b29fe1c3d35e7c2ed506bbe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.backend_types_dir_complete</definition>
+        <argsstring></argsstring>
+        <name>backend_types_dir_complete</name>
+        <initializer>=  os.path.join(boss_output_dir, backend_types_basedir, gambit_backend_name_full)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="69" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1aa3dcd7fafc8d99f7688aab88a06741d3" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.for_gambit_basedir</definition>
+        <argsstring></argsstring>
+        <name>for_gambit_basedir</name>
+        <initializer>=  &apos;for_gambit&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="71" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a211d459292339efe218ae6aea23b685a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.for_gambit_backend_types_dir_complete</definition>
+        <argsstring></argsstring>
+        <name>for_gambit_backend_types_dir_complete</name>
+        <initializer>=  os.path.join(boss_output_dir, for_gambit_basedir, backend_types_basedir, gambit_backend_name_full)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="72" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1af232871ce16143b92ee92c1abf2a685d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.frontend_base_dir</definition>
+        <argsstring></argsstring>
+        <name>frontend_base_dir</name>
+        <initializer>=  &apos;frontends&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="74" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a76b83532e59806826c89dfc0779fdcae" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.frontend_dir_complete</definition>
+        <argsstring></argsstring>
+        <name>frontend_dir_complete</name>
+        <initializer>=  os.path.join(boss_output_dir, frontend_base_dir)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="75" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a06e7b440d3598717120859d6d12367a8" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.gambit_backend_incl_dir</definition>
+        <argsstring></argsstring>
+        <name>gambit_backend_incl_dir</name>
+        <initializer>=  &apos;gambit/Backends/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="77" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ac1b1bbdc1230103b244f15cded457982" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.gambit_utils_incl_dir</definition>
+        <argsstring></argsstring>
+        <name>gambit_utils_incl_dir</name>
+        <initializer>=  &apos;gambit/Utils/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="78" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1acf3609660e7fd2948a9ce29cc6ef037e" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.code_suffix</definition>
+        <argsstring></argsstring>
+        <name>code_suffix</name>
+        <initializer>=  &apos;__BOSS&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="80" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1aeb4f37ff1930331e73215789e1e888d1" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.abstr_class_prefix</definition>
+        <argsstring></argsstring>
+        <name>abstr_class_prefix</name>
+        <initializer>=  &apos;Abstract_&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="81" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a6e5d005a31d161c1544f5d4019150b08" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.wrapper_class_prefix</definition>
+        <argsstring></argsstring>
+        <name>wrapper_class_prefix</name>
+        <initializer>=  &apos;Wrapper_&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="82" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a44bd2fbd8c86e44e772b6653d1b2d0e2" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.abstr_header_prefix</definition>
+        <argsstring></argsstring>
+        <name>abstr_header_prefix</name>
+        <initializer>=  &apos;abstract_&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="84" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1af412f30641f32d0995c8ff14bf2e0e0b" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.wrapper_header_prefix</definition>
+        <argsstring></argsstring>
+        <name>wrapper_header_prefix</name>
+        <initializer>=  &apos;wrapper_&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="85" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a2af0979622165312e2f3d4b1d5b656a6" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.general_src_file_prefix</definition>
+        <argsstring></argsstring>
+        <name>general_src_file_prefix</name>
+        <initializer>=  &apos;BOSS_&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="86" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a69a047192ace21acbd02d4b63e68aa8d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.factory_file_prefix</definition>
+        <argsstring></argsstring>
+        <name>factory_file_prefix</name>
+        <initializer>=  general_src_file_prefix + &apos;factory_&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="87" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1af120a64e45197fbe375b5bd5572fb391" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.function_files_prefix</definition>
+        <argsstring></argsstring>
+        <name>function_files_prefix</name>
+        <initializer>=  general_src_file_prefix + &apos;func_&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="88" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1aa78bc8d4a6306b939edb5a7506646f91" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.func_return_utils_fname</definition>
+        <argsstring></argsstring>
+        <name>func_return_utils_fname</name>
+        <initializer>=  general_src_file_prefix + &apos;function_return_utils&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="89" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ad40df02984de8da85a3b458e35dbc7b7" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.wrapper_utils_fname</definition>
+        <argsstring></argsstring>
+        <name>wrapper_utils_fname</name>
+        <initializer>=  general_src_file_prefix + &apos;wrapperutils&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="90" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ae3680071922e44e5058a872bed285827" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.frwd_decls_abs_fname</definition>
+        <argsstring></argsstring>
+        <name>frwd_decls_abs_fname</name>
+        <initializer>=  &apos;forward_decls_abstract_classes&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="91" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1af4eacb31c05b9e46e876330918d422af" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.frwd_decls_wrp_fname</definition>
+        <argsstring></argsstring>
+        <name>frwd_decls_wrp_fname</name>
+        <initializer>=  &apos;forward_decls_wrapper_classes&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="92" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ad6f09ce6596d6b6da49cbaa2bdcad1e5" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.wrapper_typedefs_fname</definition>
+        <argsstring></argsstring>
+        <name>wrapper_typedefs_fname</name>
+        <initializer>=  &apos;wrappertypedefs&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="93" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a20daa500b4a9d7ec78788241d6c831f4" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.abstract_typedefs_fname</definition>
+        <argsstring></argsstring>
+        <name>abstract_typedefs_fname</name>
+        <initializer>=  &apos;abstracttypedefs&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="94" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1ab78945c1f72691b6d2ee8a08d8154fb9" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.enum_decls_wrp_fname</definition>
+        <argsstring></argsstring>
+        <name>enum_decls_wrp_fname</name>
+        <initializer>=  &apos;enum_decl_copies&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="95" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1aca400d34f638c7bb238362875a940fdb" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.frontend_fname</definition>
+        <argsstring></argsstring>
+        <name>frontend_fname</name>
+        <initializer>=  gambit_backend_name_full + &apos;.hpp&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="97" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a97e14a5aebd826426641aaa488f94889" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>modules::gb.frontend_path</definition>
+        <argsstring></argsstring>
+        <name>frontend_path</name>
+        <initializer>=  os.path.join(frontend_dir_complete, frontend_fname)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="98" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a3aa5a80407bc07a9b6c72aa36fb372dd" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary modules::gb.textmods</definition>
+        <argsstring></argsstring>
+        <name>textmods</name>
+        <initializer>=  {
+    &apos;blue&apos;      : &apos;\033[34m&apos;,
+    &apos;green&apos;     : &apos;\033[32m&apos;,
+    &apos;yellow&apos;    : &apos;\033[33m&apos;,
+    &apos;red&apos;       : &apos;\033[31m&apos;,
+    &apos;magenta&apos;   : &apos;\033[35m&apos;,
+    &apos;cyan&apos;      : &apos;\033[36m&apos;,
+    &apos;white&apos;     : &apos;\033[37m&apos;,
+    &apos;bold&apos;      : &apos;\033[1m&apos;,
+    &apos;underline&apos; : &apos;\033[4m&apos;,
+    &apos;end&apos;       : &apos;\033[0m&apos;,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="101" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a3dfe707102cadd885c87b58ca00756b6" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary modules::gb.operator_names</definition>
+        <argsstring></argsstring>
+        <name>operator_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="116" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="BOSS_2modules_2gb_8py_1a81ceeba958d7652eb2f4f090c4170247" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary modules::gb.std_headers</definition>
+        <argsstring></argsstring>
+        <name>std_headers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="161" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="CBGB_2modules_2gb_8py_1a15dffca515b83326aa3714a26d263818" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.output_file_path_be_types</definition>
+        <argsstring></argsstring>
+        <name>output_file_path_be_types</name>
+        <initializer>=  &apos;backend_types_header_code.hpp&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/modules/gb.py" line="9" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/modules/gb.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="CBGB_2modules_2gb_8py_1a7cebc3299b43cf4cc6324e457a8742e8" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string modules::gb.output_file_path_frontend</definition>
+        <argsstring></argsstring>
+        <name>output_file_path_frontend</name>
+        <initializer>=  &apos;frontend_header_code.hpp&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/modules/gb.py" line="10" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/modules/gb.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="CBGB_2modules_2gb_8py_1adc4e1cfcd5c0d8decfe920296bd0aa3a" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list modules::gb.alphabet</definition>
+        <argsstring></argsstring>
+        <name>alphabet</name>
+        <initializer>=  [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;,&apos;f&apos;,&apos;g&apos;,&apos;h&apos;,&apos;i&apos;,&apos;j&apos;,&apos;k&apos;,&apos;l&apos;,&apos;m&apos;,&apos;n&apos;,&apos;o&apos;,&apos;p&apos;,&apos;q&apos;,&apos;r&apos;,&apos;s&apos;,&apos;t&apos;,&apos;u&apos;,&apos;v&apos;,&apos;w&apos;,&apos;x&apos;,&apos;y&apos;,&apos;z&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/modules/gb.py" line="12" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/modules/gb.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="CBGB_2modules_2gb_8py_1a3d94a2b3d9bd8ecfdf2b9493c74bf442" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary modules::gb.type_translation_dict</definition>
+        <argsstring></argsstring>
+        <name>type_translation_dict</name>
+        <initializer>=  {
+                          &apos;character&apos;        : &apos;Fcharacter&apos;,
+                          &apos;complex&apos;          : &apos;Fcomplex&apos;,
+                          &apos;complex*8&apos;        : &apos;Fcomplex8&apos;,
+                          &apos;complex*16&apos;       : &apos;Fcomplex16&apos;,
+                          &apos;doublecomplex&apos;    : &apos;Fdouble_complex&apos;,
+                          &apos;doubleprecision&apos;  : &apos;Fdouble&apos;,
+                          &apos;integer&apos;          : &apos;Finteger&apos;,
+                          &apos;integer*2&apos;        : &apos;Finteger2&apos;,
+                          &apos;integer*4&apos;        : &apos;Finteger4&apos;,
+                          &apos;integer*8&apos;        : &apos;Finteger8&apos;,
+                          &apos;logical&apos;          : &apos;Flogical&apos;,
+                          &apos;logical*1&apos;        : &apos;Flogical1&apos;,
+                          &apos;real&apos;             : &apos;Freal&apos;,
+                          &apos;real*4&apos;           : &apos;Freal4&apos;,
+                          &apos;real*8&apos;           : &apos;Freal8&apos;,
+                          &apos;real*16&apos;          : &apos;Freal16&apos;,
+                        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/modules/gb.py" line="16" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/modules/gb.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="CBGB_2modules_2gb_8py_1ae55ec451365ee442daeca1db40b89bb5" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary modules::gb.default_implicit_types</definition>
+        <argsstring></argsstring>
+        <name>default_implicit_types</name>
+        <initializer>=  { 
+                           &apos;a&apos;: (&apos;real&apos;,1),
+                           &apos;b&apos;: (&apos;real&apos;,1),
+                           &apos;c&apos;: (&apos;real&apos;,1),
+                           &apos;d&apos;: (&apos;real&apos;,1),
+                           &apos;e&apos;: (&apos;real&apos;,1),
+                           &apos;f&apos;: (&apos;real&apos;,1),
+                           &apos;g&apos;: (&apos;real&apos;,1),
+                           &apos;h&apos;: (&apos;real&apos;,1),
+                           &apos;i&apos;: (&apos;integer&apos;,1),
+                           &apos;j&apos;: (&apos;integer&apos;,1),
+                           &apos;k&apos;: (&apos;integer&apos;,1),
+                           &apos;l&apos;: (&apos;integer&apos;,1),
+                           &apos;m&apos;: (&apos;integer&apos;,1),
+                           &apos;n&apos;: (&apos;integer&apos;,1),
+                           &apos;o&apos;: (&apos;real&apos;,1),
+                           &apos;p&apos;: (&apos;real&apos;,1),
+                           &apos;q&apos;: (&apos;real&apos;,1),
+                           &apos;r&apos;: (&apos;real&apos;,1),
+                           &apos;s&apos;: (&apos;real&apos;,1),
+                           &apos;t&apos;: (&apos;real&apos;,1),
+                           &apos;u&apos;: (&apos;real&apos;,1),
+                           &apos;v&apos;: (&apos;real&apos;,1),
+                           &apos;w&apos;: (&apos;real&apos;,1),
+                           &apos;x&apos;: (&apos;real&apos;,1),
+                           &apos;y&apos;: (&apos;real&apos;,1),
+                           &apos;z&apos;: (&apos;real&apos;,1)
+                         }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/modules/gb.py" line="37" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/CBGB/modules/gb.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/scripts/BOSS/modules/gb.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

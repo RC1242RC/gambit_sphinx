@@ -1,0 +1,5 @@
+var structGambit_1_1Scanner_1_1____find__variadic__type__convert_____3_01true_00_01Tc_00_01T1_00_01T_8_8_8_01_4 =
+[
+    [ "func_type", "structGambit_1_1Scanner_1_1____find__variadic__type__convert_____3_01true_00_01Tc_00_01T1_00_01T_8_8_8_01_4.html#ad8f96f15de6cfae49061cea645491862", null ],
+    [ "ret_type", "structGambit_1_1Scanner_1_1____find__variadic__type__convert_____3_01true_00_01Tc_00_01T1_00_01T_8_8_8_01_4.html#a0434652d3f153b4ad2065457c9b8e519", null ]
+];

@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="QedQcdWrapper_8hpp" kind="file" language="C++">
+    <compoundname>QedQcdWrapper.hpp</compoundname>
+    <includes local="yes">gambit/Elements/sminputs.hpp</includes>
+    <includes local="yes">gambit/Elements/spec.hpp</includes>
+    <includes local="yes">gambit/Models/SpectrumContents/RegisteredSpectra.hpp</includes>
+    <includes local="yes">lowe.h</includes>
+    <includedby refid="QedQcdWrapper_8cpp" local="yes">QedQcdWrapper.cpp</includedby>
+    <includedby refid="SpecBit__DiracSingletDM_8cpp" local="yes">SpecBit_DiracSingletDM.cpp</includedby>
+    <includedby refid="SpecBit__DMEFT_8cpp" local="yes">SpecBit_DMEFT.cpp</includedby>
+    <includedby refid="SpecBit__MajoranaSingletDM_8cpp" local="yes">SpecBit_MajoranaSingletDM.cpp</includedby>
+    <includedby refid="SpecBit__MDM_8cpp" local="yes">SpecBit_MDM.cpp</includedby>
+    <includedby refid="SpecBit__MSSM_8cpp" local="yes">SpecBit_MSSM.cpp</includedby>
+    <includedby refid="SpecBit__ScalarSingletDM_8cpp" local="yes">SpecBit_ScalarSingletDM.cpp</includedby>
+    <includedby refid="SpecBit__SM_8cpp" local="yes">SpecBit_SM.cpp</includedby>
+    <includedby refid="SpecBit__VectorSingletDM_8cpp" local="yes">SpecBit_VectorSingletDM.cpp</includedby>
+    <includedby refid="SpecBit__VS_8cpp" local="yes">SpecBit_VS.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>gambit/Models/SpectrumContents/RegisteredSpectra.hpp</label>
+      </node>
+      <node id="5">
+        <label>lowe.h</label>
+      </node>
+      <node id="3">
+        <label>gambit/Elements/spec.hpp</label>
+      </node>
+      <node id="1">
+        <label>QedQcdWrapper.hpp</label>
+        <link refid="QedQcdWrapper_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gambit/Elements/sminputs.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>SpecBit_VS.cpp</label>
+        <link refid="SpecBit__VS_8cpp"/>
+      </node>
+      <node id="6">
+        <label>SpecBit_MDM.cpp</label>
+        <link refid="SpecBit__MDM_8cpp"/>
+      </node>
+      <node id="5">
+        <label>SpecBit_MajoranaSingletDM.cpp</label>
+        <link refid="SpecBit__MajoranaSingletDM_8cpp"/>
+      </node>
+      <node id="8">
+        <label>SpecBit_ScalarSingletDM.cpp</label>
+        <link refid="SpecBit__ScalarSingletDM_8cpp"/>
+      </node>
+      <node id="2">
+        <label>QedQcdWrapper.cpp</label>
+        <link refid="QedQcdWrapper_8cpp"/>
+      </node>
+      <node id="10">
+        <label>SpecBit_VectorSingletDM.cpp</label>
+        <link refid="SpecBit__VectorSingletDM_8cpp"/>
+      </node>
+      <node id="3">
+        <label>SpecBit_DiracSingletDM.cpp</label>
+        <link refid="SpecBit__DiracSingletDM_8cpp"/>
+      </node>
+      <node id="7">
+        <label>SpecBit_MSSM.cpp</label>
+        <link refid="SpecBit__MSSM_8cpp"/>
+      </node>
+      <node id="9">
+        <label>SpecBit_SM.cpp</label>
+        <link refid="SpecBit__SM_8cpp"/>
+      </node>
+      <node id="1">
+        <label>QedQcdWrapper.hpp</label>
+        <link refid="QedQcdWrapper_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SpecBit_DMEFT.cpp</label>
+        <link refid="SpecBit__DMEFT_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structGambit_1_1SpecTraits_3_01SpecBit_1_1QedQcdWrapper_01_4" prot="public">Gambit::SpecTraits&lt; SpecBit::QedQcdWrapper &gt;</innerclass>
+    <innerclass refid="classGambit_1_1SpecBit_1_1QedQcdWrapper" prot="public">Gambit::SpecBit::QedQcdWrapper</innerclass>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1SpecBit">Gambit::SpecBit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to wrap the QedQcd object used by SoftSUSY and FlexibleSUSY in a <ref refid="namespaceGambit" kindref="compound">Gambit</ref> SubSpectrum object. This is to enable access to the parameters of the SM defined as a low-energy effective theory (as opposed to correspending information defined in a UV model). Parameters defined this way are often used as input to a physics calculator.</para>
+<para>This is one of the simplest wrappers possible, so it is useful as a guide for designing other SubSpectrum wrappers. To assist this, code is documented with the following markings to distinguish pieces that are essential for all wrappers from those which are specific to this wrapper: /<zwj/>***<zwj/>/ - Required by all wrappers. /*O*<zwj/>/ - Optional (e.g. unused maps fillers can be left undeclared) /*P*<zwj/>/ - Required if map fillers are protected, which is sensible.</para>
+<para><hruler/>
+</para>
+<para>Authors:</para>
+<para><simplesect kind="author"><para>Ben Farmer (<ulink url="mailto:benjamin.farmer@fysik.su.se">benjamin.farmer@fysik.su.se</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2015 Mar</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__QedQcdWrapper_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__QedQcdWrapper_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/sminputs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/spec.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Models/SpectrumContents/RegisteredSpectra.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>a<sp/>horrible<sp/>hack<sp/>to<sp/>suppress<sp/>the<sp/>millions<sp/>of<sp/>warnings<sp/>that<sp/>get<sp/>generated<sp/>by<sp/>flexiblesusy.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>It<sp/>basically<sp/>kills<sp/>all<sp/>warnings<sp/>from<sp/>the<sp/>entire<sp/>remainder<sp/>of<sp/>this<sp/>header.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>GCC<sp/>system_header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lowe.h&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SpecBit</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QedQcdWrapper;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="51" refid="structGambit_1_1SpecTraits_3_01SpecBit_1_1QedQcdWrapper_01_4" refkind="compound"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">SpecTraits&lt;SpecBit::QedQcdWrapper&gt;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/>name()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;QedQcdWrapper&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>SpectrumContents::SM<sp/>Contents;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>softsusy::QedQcd<sp/>Model;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>SMInputs<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Input;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SpecBit</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61" refid="classGambit_1_1SpecBit_1_1QedQcdWrapper" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper" kindref="compound">QedQcdWrapper</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Spec&lt;QedQcdWrapper&gt;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Keep<sp/>copies<sp/>of<sp/>Model<sp/>and<sp/>Input<sp/>objects<sp/>internally</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Model<sp/>qedqcd;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Input<sp/>sminputs;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructors/destructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1ac2cf2e7b7f82d75514cb54f5dfb1223c" kindref="member">QedQcdWrapper</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1ac2cf2e7b7f82d75514cb54f5dfb1223c" kindref="member">QedQcdWrapper</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1ad64056aed16aaed976bbe159d823f8d9" kindref="member">~QedQcdWrapper</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>to<sp/>interface<sp/>Model<sp/>and<sp/>Input<sp/>objects<sp/>with<sp/>the<sp/>base<sp/>&apos;Spec&apos;<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Model&amp;<sp/>get_Model()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>qedqcd;<sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Input&amp;<sp/>get_Input()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sminputs;<sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Model&amp;<sp/>get_Model()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>qedqcd;<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Input&amp;<sp/>get_Input()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sminputs;<sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1a5ca0b22201354c66013865bc17f9095e" kindref="member">get_numbers_stable_particles</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">/***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1a23971be82522088c0a9c103094a9abc4" kindref="member">add_to_SLHAea</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>SLHAstruct&amp;<sp/>slha)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1a75ec41831d260ccdb5d1fbb34fcade20" kindref="member">GetScale</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1a4fc95e683f112d87ef94481cf7271f9a" kindref="member">SetScale</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale);<sp/><sp/></highlight><highlight class="comment">/***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1a94301713237c60855bc33444b2a90ef8" kindref="member">RunToScaleOverride</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1a9ff766798d257b6ae9e8e08608d08d99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1a9ff766798d257b6ae9e8e08608d08d99" kindref="member">hardup</ref>;<sp/></highlight><highlight class="comment">//<sp/>Be<sp/>careful<sp/>of<sp/>order<sp/>in<sp/>constructor!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>softup;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>softlow;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>hardlow;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>hard_upper()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1a9ff766798d257b6ae9e8e08608d08d99" kindref="member">hardup</ref>;}<sp/></highlight><highlight class="comment">/*O*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>soft_upper()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>softup;}<sp/></highlight><highlight class="comment">/*O*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>soft_lower()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>softlow;}</highlight><highlight class="comment">/*O*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>hard_lower()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hardlow;}</highlight><highlight class="comment">/*O*/</highlight></codeline>
+<codeline lineno="101"></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>GetterMaps<sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1affab2781176aad96cf7f0882ad898cad" kindref="member">fill_getter_maps</ref>();<sp/></highlight><highlight class="comment">/*O*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SetterMaps<sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1a528430adf23019978385c72a76bcee89" kindref="member">fill_setter_maps</ref>();<sp/></highlight><highlight class="comment">/*O*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>SpecBit<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>Gambit<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/include/gambit/SpecBit/QedQcdWrapper.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,27 @@
+var structGambit_1_1sd__neut3body__type =
+[
+    [ "brchcbs", "structGambit_1_1sd__neut3body__type.html#a50ec52b749b6f77a6c70f7b3883a1a11", null ],
+    [ "brchelne", "structGambit_1_1sd__neut3body__type.html#a4bd03f0f925391790f7dc66ebf2a69f3", null ],
+    [ "brchmunmu", "structGambit_1_1sd__neut3body__type.html#ab897d0be6d1fd02c5d5d43e575d33e4a", null ],
+    [ "brchtauntau", "structGambit_1_1sd__neut3body__type.html#a77552c93e2c80a42a1a8f64a89d4844c", null ],
+    [ "brchtbb", "structGambit_1_1sd__neut3body__type.html#a26b71d78c3803a6bc9c7a629c3dbf94f", null ],
+    [ "brchubd", "structGambit_1_1sd__neut3body__type.html#ac9b2b035964ed2654339713891a3ad96", null ],
+    [ "brglbot", "structGambit_1_1sd__neut3body__type.html#af23c5b530aa2069bc748104c65740d36", null ],
+    [ "brglch", "structGambit_1_1sd__neut3body__type.html#a02047da1158e328edce25a997a0227b4", null ],
+    [ "brgldo", "structGambit_1_1sd__neut3body__type.html#ae11f39af4bf6adb6d1bacc06fb7db4ba", null ],
+    [ "brglst", "structGambit_1_1sd__neut3body__type.html#a51fe41c19706c92932677d089c900d6b", null ],
+    [ "brgltop", "structGambit_1_1sd__neut3body__type.html#a663e149ee247efd494156073df456e3d", null ],
+    [ "brglup", "structGambit_1_1sd__neut3body__type.html#a6b5b139bb6a2c00dbc73063d07256b69", null ],
+    [ "brneutbot", "structGambit_1_1sd__neut3body__type.html#a1fc08b6e7931318ae6845b5811670c17", null ],
+    [ "brneutch", "structGambit_1_1sd__neut3body__type.html#a231cd096bb348184e94c6b876f06532b", null ],
+    [ "brneutdow", "structGambit_1_1sd__neut3body__type.html#ae8469b85ec49f4c315aba0f051d2051c", null ],
+    [ "brneutel", "structGambit_1_1sd__neut3body__type.html#a2c86ba518cf1f7f65b22605f8f75f1fc", null ],
+    [ "brneutmu", "structGambit_1_1sd__neut3body__type.html#ab2b807bbb4aad3ebc656109fa5c1a730", null ],
+    [ "brneutnue", "structGambit_1_1sd__neut3body__type.html#aeb05ddd479b97fc23484965c27094d02", null ],
+    [ "brneutnumu", "structGambit_1_1sd__neut3body__type.html#a7e12069d0fd145de7f8bb7d46cf878f0", null ],
+    [ "brneutnutau", "structGambit_1_1sd__neut3body__type.html#af2e10a7ea1aeceb225fb217cb515c284", null ],
+    [ "brneutst", "structGambit_1_1sd__neut3body__type.html#abfc906fb00622f8be76a73c1230b7830", null ],
+    [ "brneuttau", "structGambit_1_1sd__neut3body__type.html#ac3671ac95ed89e3b38b78bc66f56fc00", null ],
+    [ "brneuttop", "structGambit_1_1sd__neut3body__type.html#a33be0107f03e72f6f0afe237cfdcd5e7", null ],
+    [ "brneutup", "structGambit_1_1sd__neut3body__type.html#a65c9c4dd12df31f4ff405cb03ed4614e", null ]
+];

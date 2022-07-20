@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable" kind="class" language="C++" prot="public">
+    <compoundname>Gambit::DarkBit::DecayChain::DecayTable</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a6fff1a82bcb27db137e98a19ba3beae9" prot="private" static="no" mutable="no">
+        <type>unordered_map&lt; string, <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTableEntry" kindref="compound">DecayTableEntry</ref> &gt;</type>
+        <definition>unordered_map&lt;string,DecayTableEntry&gt; Gambit::DarkBit::DecayChain::DecayTable::table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="235" column="35" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a6207d617eebe5b67b8bf3836fa1094c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::DecayChain::DecayTable::DecayTable</definition>
+        <argsstring>(const TH_ProcessCatalog &amp;cat, const SimYieldTable &amp;tab, set&lt; string &gt; disabledList)</argsstring>
+        <name>DecayTable</name>
+        <param>
+          <type>const <ref refid="structGambit_1_1DarkBit_1_1TH__ProcessCatalog" kindref="compound">TH_ProcessCatalog</ref> &amp;</type>
+          <declname>cat</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classGambit_1_1DarkBit_1_1SimYieldTable" kindref="compound">SimYieldTable</ref> &amp;</type>
+          <declname>tab</declname>
+        </param>
+        <param>
+          <type>set&lt; string &gt;</type>
+          <declname>disabledList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="222" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="496" bodyend="602"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1ac6013be89646cc3b812ff3c8fdce3877" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gambit::DarkBit::DecayChain::DecayTable::DecayTable</definition>
+        <argsstring>()</argsstring>
+        <name>DecayTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="223" column="21" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" bodystart="223" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a0dad9556593da97aef5ff313dc75d816" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DarkBit::DecayChain::DecayTable::hasEntry</definition>
+        <argsstring>(string) const</argsstring>
+        <name>hasEntry</name>
+        <param>
+          <type>string</type>
+          <defname>index</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="224" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="603" bodyend="606"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1ac755e440f2dab82e87f12968ec57bd05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::DecayChain::DecayTable::addEntry</definition>
+        <argsstring>(string pID, double m, bool stable)</argsstring>
+        <name>addEntry</name>
+        <param>
+          <type>string</type>
+          <declname>pID</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>stable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="226" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="607" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a6ada811eac03761e1ef7eadd7ca20274" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::DecayChain::DecayTable::addEntry</definition>
+        <argsstring>(string pID, DecayTableEntry entry)</argsstring>
+        <name>addEntry</name>
+        <param>
+          <type>string</type>
+          <declname>pID</declname>
+        </param>
+        <param>
+          <type><ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTableEntry" kindref="compound">DecayTableEntry</ref></type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="227" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="612" bodyend="615"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1ab0e810882849779aec8929186978c557" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::DarkBit::DecayChain::DecayTable::randomDecay</definition>
+        <argsstring>(string pID, const TH_Channel *&amp;decay) const</argsstring>
+        <name>randomDecay</name>
+        <param>
+          <type>string</type>
+          <declname>pID</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1DarkBit_1_1TH__Channel" kindref="compound">TH_Channel</ref> *&amp;</type>
+          <declname>decay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="228" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="616" bodyend="629"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a9035d1693f65e7fe47734f4fb90fdf3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTableEntry" kindref="compound">DecayTableEntry</ref> &amp;</type>
+        <definition>const DecayTableEntry &amp; Gambit::DarkBit::DecayChain::DecayTable::operator[]</definition>
+        <argsstring>(string i) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>string</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="229" column="43" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="630" bodyend="643"/>
+      </memberdef>
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a2f42a4cd8f09cc4e4181adb0b933fc44" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gambit::DarkBit::DecayChain::DecayTable::printTable</definition>
+        <argsstring>() const</argsstring>
+        <name>printTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="233" column="26" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="648" bodyend="696"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a0277ab40ed6e10c0ae784b96af1108ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gambit::DarkBit::DecayChain::DecayTable::getWidth</definition>
+        <argsstring>(const TH_Channel *ch)</argsstring>
+        <name>getWidth</name>
+        <param>
+          <type>const <ref refid="structGambit_1_1DarkBit_1_1TH__Channel" kindref="compound">TH_Channel</ref> *</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="231" column="35" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/src/decay_chain.cpp" bodystart="644" bodyend="647"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" line="220" column="1" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/DarkBit/include/gambit/DarkBit/decay_chain.hpp" bodystart="219" bodyend="236"/>
+    <listofallmembers>
+      <member refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1ac755e440f2dab82e87f12968ec57bd05" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::DecayChain::DecayTable</scope><name>addEntry</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a6ada811eac03761e1ef7eadd7ca20274" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::DecayChain::DecayTable</scope><name>addEntry</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a6207d617eebe5b67b8bf3836fa1094c2" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::DecayChain::DecayTable</scope><name>DecayTable</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1ac6013be89646cc3b812ff3c8fdce3877" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::DecayChain::DecayTable</scope><name>DecayTable</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a0277ab40ed6e10c0ae784b96af1108ea" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::DecayChain::DecayTable</scope><name>getWidth</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a0dad9556593da97aef5ff313dc75d816" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::DecayChain::DecayTable</scope><name>hasEntry</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a9035d1693f65e7fe47734f4fb90fdf3d" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::DecayChain::DecayTable</scope><name>operator[]</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a2f42a4cd8f09cc4e4181adb0b933fc44" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::DecayChain::DecayTable</scope><name>printTable</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1ab0e810882849779aec8929186978c557" prot="public" virt="non-virtual"><scope>Gambit::DarkBit::DecayChain::DecayTable</scope><name>randomDecay</name></member>
+      <member refid="classGambit_1_1DarkBit_1_1DecayChain_1_1DecayTable_1a6fff1a82bcb27db137e98a19ba3beae9" prot="private" virt="non-virtual"><scope>Gambit::DarkBit::DecayChain::DecayTable</scope><name>table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

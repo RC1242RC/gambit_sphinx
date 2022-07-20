@@ -1,0 +1,612 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="include_2gambit_2Backends_2backend__types_2gm2calc__1__2__0_2identification_8hpp" kind="file" language="C++">
+    <compoundname>include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp</compoundname>
+    <includes local="yes">gambit/Utils/cats.hpp</includes>
+    <includedby refid="gm2calc__1__2__0_2forward__decls__abstract__classes_8hpp" local="yes">forward_decls_abstract_classes.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2forward__decls__wrapper__classes_8hpp" local="yes">forward_decls_wrapper_classes.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__Error_8hpp" local="yes">abstract_Error.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__Error__decl_8hpp" local="yes">wrapper_Error_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__EInvalidInput_8hpp" local="yes">abstract_EInvalidInput.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__EPhysicalProblem_8hpp" local="yes">abstract_EPhysicalProblem.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__EReadError_8hpp" local="yes">abstract_EReadError.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__ESetupError_8hpp" local="yes">abstract_ESetupError.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell__physical_8hpp" local="yes">abstract_MSSMNoFV_onshell_physical.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__physical__decl_8hpp" local="yes">wrapper_MSSMNoFV_onshell_physical_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell__problems_8hpp" local="yes">abstract_MSSMNoFV_onshell_problems.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__problems__decl_8hpp" local="yes">wrapper_MSSMNoFV_onshell_problems_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell__susy__parameters_8hpp" local="yes">abstract_MSSMNoFV_onshell_susy_parameters.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__susy__parameters__decl_8hpp" local="yes">wrapper_MSSMNoFV_onshell_susy_parameters_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell__soft__parameters_8hpp" local="yes">abstract_MSSMNoFV_onshell_soft_parameters.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__soft__parameters__decl_8hpp" local="yes">wrapper_MSSMNoFV_onshell_soft_parameters_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell__mass__eigenstates_8hpp" local="yes">abstract_MSSMNoFV_onshell_mass_eigenstates.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__mass__eigenstates__decl_8hpp" local="yes">wrapper_MSSMNoFV_onshell_mass_eigenstates_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell_8hpp" local="yes">abstract_MSSMNoFV_onshell.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__susy__parameters__def_8hpp" local="yes">wrapper_MSSMNoFV_onshell_susy_parameters_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__decl_8hpp" local="yes">wrapper_MSSMNoFV_onshell_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__def_8hpp" local="yes">wrapper_MSSMNoFV_onshell_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__mass__eigenstates__def_8hpp" local="yes">wrapper_MSSMNoFV_onshell_mass_eigenstates_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__problems__def_8hpp" local="yes">wrapper_MSSMNoFV_onshell_problems_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__physical__def_8hpp" local="yes">wrapper_MSSMNoFV_onshell_physical_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__soft__parameters__def_8hpp" local="yes">wrapper_MSSMNoFV_onshell_soft_parameters_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__Error__def_8hpp" local="yes">wrapper_Error_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__ESetupError__decl_8hpp" local="yes">wrapper_ESetupError_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__ESetupError__def_8hpp" local="yes">wrapper_ESetupError_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__EInvalidInput__decl_8hpp" local="yes">wrapper_EInvalidInput_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__EInvalidInput__def_8hpp" local="yes">wrapper_EInvalidInput_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__EPhysicalProblem__decl_8hpp" local="yes">wrapper_EPhysicalProblem_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__EPhysicalProblem__def_8hpp" local="yes">wrapper_EPhysicalProblem_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__EReadError__decl_8hpp" local="yes">wrapper_EReadError_decl.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2wrapper__EReadError__def_8hpp" local="yes">wrapper_EReadError_def.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_2loaded__types_8hpp" local="yes">loaded_types.hpp</includedby>
+    <includedby refid="gm2calc__1__2__0_8hpp" local="yes">gm2calc_1_2_0.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>identification.hpp</label>
+        <link refid="include_2gambit_2Backends_2backend__types_2gm2calc__1__2__0_2identification_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gambit/Utils/cats.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="43">
+        <label>wrapper_MSSMNoFV_onshell_physical_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__physical__def_8hpp_source"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>abstract_MSSMNoFV_onshell_problems.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell__problems_8hpp_source"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>abstract_MSSMNoFV_onshell.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell_8hpp_source"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>wrapper_MSSMNoFV_onshell_soft_parameters_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__soft__parameters__def_8hpp_source"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>wrapper_Error_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__Error__decl_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>abstract_MSSMNoFV_onshell_physical.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell__physical_8hpp_source"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>wrapper_MSSMNoFV_onshell_mass_eigenstates.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__mass__eigenstates_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>wrapper_MSSMNoFV_onshell_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__def_8hpp_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>forward_decls_abstract_classes.hpp</label>
+        <link refid="gm2calc__1__2__0_2forward__decls__abstract__classes_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>identification.hpp</label>
+        <link refid="include_2gambit_2Backends_2backend__types_2gm2calc__1__2__0_2identification_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>wrapper_ESetupError_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__ESetupError__def_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>wrapper_MSSMNoFV_onshell_soft_parameters.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__soft__parameters_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>wrapper_EInvalidInput_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__EInvalidInput__decl_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>wrapper_EReadError_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__EReadError__def_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>forward_decls_wrapper_classes.hpp</label>
+        <link refid="gm2calc__1__2__0_2forward__decls__wrapper__classes_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>wrapper_Error_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__Error__def_8hpp_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>wrapper_MSSMNoFV_onshell_mass_eigenstates_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__mass__eigenstates__def_8hpp_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>wrapper_EInvalidInput_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__EInvalidInput__def_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>wrapper_MSSMNoFV_onshell.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>wrapper_MSSMNoFV_onshell_problems.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__problems_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>wrapper_MSSMNoFV_onshell_problems_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__problems__decl_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>wrapper_Error.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__Error_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>wrapper_MSSMNoFV_onshell_problems_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__problems__def_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>wrapper_MSSMNoFV_onshell_susy_parameters_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__susy__parameters__def_8hpp_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>loaded_types.hpp</label>
+        <link refid="gm2calc__1__2__0_2loaded__types_8hpp_source"/>
+      </node>
+      <node id="47">
+        <label>wrapper_EPhysicalProblem_def.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__EPhysicalProblem__def_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>wrapper_MSSMNoFV_onshell_physical.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__physical_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>wrapper_MSSMNoFV_onshell_physical_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__physical__decl_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>wrapper_ESetupError.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__ESetupError_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>wrapper_MSSMNoFV_onshell_mass_eigenstates_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__mass__eigenstates__decl_8hpp_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>wrapper_MSSMNoFV_onshell_susy_parameters_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__susy__parameters__decl_8hpp_source"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>abstract_EPhysicalProblem.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__EPhysicalProblem_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>abstract_EReadError.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__EReadError_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>wrapper_EReadError_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__EReadError__decl_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>gm2calc_1_2_0.hpp</label>
+        <link refid="gm2calc__1__2__0_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>abstract_Error.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__Error_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>abstract_MSSMNoFV_onshell_susy_parameters.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell__susy__parameters_8hpp_source"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>abstract_MSSMNoFV_onshell_soft_parameters.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell__soft__parameters_8hpp_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>wrapper_EReadError.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__EReadError_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>wrapper_MSSMNoFV_onshell_soft_parameters_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__soft__parameters__decl_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>abstract_ESetupError.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__ESetupError_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>wrapper_EPhysicalProblem_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__EPhysicalProblem__decl_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>wrapper_EPhysicalProblem.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__EPhysicalProblem_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>wrapper_ESetupError_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__ESetupError__decl_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>wrapper_EInvalidInput.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__EInvalidInput_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>wrapper_MSSMNoFV_onshell_decl.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__decl_8hpp_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>abstract_EInvalidInput.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__EInvalidInput_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>wrapper_MSSMNoFV_onshell_susy_parameters.hpp</label>
+        <link refid="gm2calc__1__2__0_2wrapper__MSSMNoFV__onshell__susy__parameters_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>abstract_MSSMNoFV_onshell_mass_eigenstates.hpp</label>
+        <link refid="gm2calc__1__2__0_2abstract__MSSMNoFV__onshell__mass__eigenstates_8hpp_source"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="include_2gambit_2Backends_2backend__types_2gm2calc__1__2__0_2identification_8hpp_1a7f7848301604c58c8962207acd75ff6e" prot="public" static="no">
+        <name>BACKENDNAME</name>
+        <initializer>gm2calc</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" line="5" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="include_2gambit_2Backends_2backend__types_2gm2calc__1__2__0_2identification_8hpp_1a339bf682af9659de270251e5d18011be" prot="public" static="no">
+        <name>BACKENDLANG</name>
+        <initializer>CXX</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" line="6" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="include_2gambit_2Backends_2backend__types_2gm2calc__1__2__0_2identification_8hpp_1a1c6d5de492ac61ad29aec7aa9a436bbf" prot="public" static="no">
+        <name>VERSION</name>
+        <initializer>1.2.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" line="7" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="include_2gambit_2Backends_2backend__types_2gm2calc__1__2__0_2identification_8hpp_1a8d5a383ba38225163529bfcb55b74444" prot="public" static="no">
+        <name>SAFE_VERSION</name>
+        <initializer>1_2_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" line="8" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="include_2gambit_2Backends_2backend__types_2gm2calc__1__2__0_2identification_8hpp_1a62a0f8a0b822f31ff84bc8252b33e7c8" prot="public" static="no">
+        <name>REFERENCE</name>
+        <initializer>Athron:2015rva</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" line="9" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="include_2gambit_2Backends_2backend__types_2gm2calc__1__2__0_2identification_8hpp_1a900e11efb7801ca7e60f040bde5915e8" prot="public" static="no">
+        <name>DO_CLASSLOADING</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" line="12" column="10" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Identify<sp/>backend<sp/>and<sp/>set<sp/>macro<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/cats.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BACKENDNAME<sp/>gm2calc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BACKENDLANG<sp/>CXX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VERSION<sp/>1.2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAFE_VERSION<sp/>1_2_0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REFERENCE<sp/>Athron:2015rva</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>DO_CLASSLOADING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DO_CLASSLOADING<sp/>1</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/include/gambit/Backends/backend_types/gm2calc_1_2_0/identification.hpp"/>
+  </compounddef>
+</doxygen>

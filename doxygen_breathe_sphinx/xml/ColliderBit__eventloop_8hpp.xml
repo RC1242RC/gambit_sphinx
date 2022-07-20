@@ -5,25 +5,25 @@
     <includes local="yes">gambit/Elements/gambit_module_headers.hpp</includes>
     <includes local="yes">gambit/ColliderBit/ColliderBit_rollcall.hpp</includes>
     <includes refid="ColliderBit__eventloop__utils_8hpp" local="yes">gambit/ColliderBit/ColliderBit_eventloop_utils.hpp</includes>
-    <includedby refid="generateEventPy8Collider_8hpp" local="yes">ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp</includedby>
-    <includedby refid="getPy8Collider_8hpp" local="yes">ColliderBit/include/gambit/ColliderBit/getPy8Collider.hpp</includedby>
-    <includedby refid="collider__event__weights_8cpp" local="yes">ColliderBit/src/collider_event_weights.cpp</includedby>
-    <includedby refid="ColliderBit__eventloop_8cpp" local="yes">ColliderBit/src/ColliderBit_eventloop.cpp</includedby>
-    <includedby refid="getActiveProcessCodes_8cpp" local="yes">ColliderBit/src/getActiveProcessCodes.cpp</includedby>
-    <includedby refid="getAnalysisContainer_8cpp" local="yes">ColliderBit/src/getAnalysisContainer.cpp</includedby>
-    <includedby refid="getBuckFast_8cpp" local="yes">ColliderBit/src/getBuckFast.cpp</includedby>
-    <includedby refid="getHepMCEvent_8cpp" local="yes">ColliderBit/src/getHepMCEvent.cpp</includedby>
-    <includedby refid="getLHEvent_8cpp" local="yes">ColliderBit/src/getLHEvent.cpp</includedby>
-    <includedby refid="getxsec_8cpp" local="yes">ColliderBit/src/getxsec.cpp</includedby>
-    <includedby refid="process__code__PID__pair__mapping_8cpp" local="yes">ColliderBit/src/process_code_PID_pair_mapping.cpp</includedby>
-    <includedby refid="runAnalyses_8cpp" local="yes">ColliderBit/src/runAnalyses.cpp</includedby>
-    <includedby refid="smearEvent_8cpp" local="yes">ColliderBit/src/smearEvent.cpp</includedby>
+    <includedby refid="generateEventPy8Collider_8hpp" local="yes">generateEventPy8Collider.hpp</includedby>
+    <includedby refid="getPy8Collider_8hpp" local="yes">getPy8Collider.hpp</includedby>
+    <includedby refid="collider__event__weights_8cpp" local="yes">collider_event_weights.cpp</includedby>
+    <includedby refid="ColliderBit__eventloop_8cpp" local="yes">ColliderBit_eventloop.cpp</includedby>
+    <includedby refid="getActiveProcessCodes_8cpp" local="yes">getActiveProcessCodes.cpp</includedby>
+    <includedby refid="getAnalysisContainer_8cpp" local="yes">getAnalysisContainer.cpp</includedby>
+    <includedby refid="getBuckFast_8cpp" local="yes">getBuckFast.cpp</includedby>
+    <includedby refid="getHepMCEvent_8cpp" local="yes">getHepMCEvent.cpp</includedby>
+    <includedby refid="getLHEvent_8cpp" local="yes">getLHEvent.cpp</includedby>
+    <includedby refid="getxsec_8cpp" local="yes">getxsec.cpp</includedby>
+    <includedby refid="process__code__PID__pair__mapping_8cpp" local="yes">process_code_PID_pair_mapping.cpp</includedby>
+    <includedby refid="runAnalyses_8cpp" local="yes">runAnalyses.cpp</includedby>
+    <includedby refid="smearEvent_8cpp" local="yes">smearEvent.cpp</includedby>
     <incdepgraph>
       <node id="2">
         <label>gambit/Elements/gambit_module_headers.hpp</label>
       </node>
       <node id="1">
-        <label>ColliderBit/include/gambit/ColliderBit/ColliderBit_eventloop.hpp</label>
+        <label>ColliderBit_eventloop.hpp</label>
         <link refid="ColliderBit__eventloop_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -52,19 +52,19 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="16">
-        <label>ColliderBit/src/smearEvent.cpp</label>
+        <label>smearEvent.cpp</label>
         <link refid="smearEvent_8cpp"/>
       </node>
       <node id="9">
-        <label>ColliderBit/src/getAnalysisContainer.cpp</label>
+        <label>getAnalysisContainer.cpp</label>
         <link refid="getAnalysisContainer_8cpp"/>
       </node>
       <node id="3">
-        <label>ColliderBit/src/models/SUSY.cpp</label>
+        <label>SUSY.cpp</label>
         <link refid="SUSY_8cpp"/>
       </node>
       <node id="1">
-        <label>ColliderBit/include/gambit/ColliderBit/ColliderBit_eventloop.hpp</label>
+        <label>ColliderBit_eventloop.hpp</label>
         <link refid="ColliderBit__eventloop_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -94,19 +94,19 @@
         </childnode>
       </node>
       <node id="4">
-        <label>ColliderBit/src/models/SUSY_extras.cpp</label>
+        <label>SUSY_extras.cpp</label>
         <link refid="SUSY__extras_8cpp"/>
       </node>
       <node id="11">
-        <label>ColliderBit/src/getHepMCEvent.cpp</label>
+        <label>getHepMCEvent.cpp</label>
         <link refid="getHepMCEvent_8cpp"/>
       </node>
       <node id="10">
-        <label>ColliderBit/src/getBuckFast.cpp</label>
+        <label>getBuckFast.cpp</label>
         <link refid="getBuckFast_8cpp"/>
       </node>
       <node id="5">
-        <label>ColliderBit/include/gambit/ColliderBit/getPy8Collider.hpp</label>
+        <label>getPy8Collider.hpp</label>
         <link refid="getPy8Collider_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -114,31 +114,31 @@
         </childnode>
       </node>
       <node id="8">
-        <label>ColliderBit/src/getActiveProcessCodes.cpp</label>
+        <label>getActiveProcessCodes.cpp</label>
         <link refid="getActiveProcessCodes_8cpp"/>
       </node>
       <node id="12">
-        <label>ColliderBit/src/getLHEvent.cpp</label>
+        <label>getLHEvent.cpp</label>
         <link refid="getLHEvent_8cpp"/>
       </node>
       <node id="13">
-        <label>ColliderBit/src/getxsec.cpp</label>
+        <label>getxsec.cpp</label>
         <link refid="getxsec_8cpp"/>
       </node>
       <node id="14">
-        <label>ColliderBit/src/process_code_PID_pair_mapping.cpp</label>
+        <label>process_code_PID_pair_mapping.cpp</label>
         <link refid="process__code__PID__pair__mapping_8cpp"/>
       </node>
       <node id="7">
-        <label>ColliderBit/src/ColliderBit_eventloop.cpp</label>
+        <label>ColliderBit_eventloop.cpp</label>
         <link refid="ColliderBit__eventloop_8cpp"/>
       </node>
       <node id="15">
-        <label>ColliderBit/src/runAnalyses.cpp</label>
+        <label>runAnalyses.cpp</label>
         <link refid="runAnalyses_8cpp"/>
       </node>
       <node id="2">
-        <label>ColliderBit/include/gambit/ColliderBit/generateEventPy8Collider.hpp</label>
+        <label>generateEventPy8Collider.hpp</label>
         <link refid="generateEventPy8Collider_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -146,7 +146,7 @@
         </childnode>
       </node>
       <node id="6">
-        <label>ColliderBit/src/collider_event_weights.cpp</label>
+        <label>collider_event_weights.cpp</label>
         <link refid="collider__event__weights_8cpp"/>
       </node>
     </invincdepgraph>
@@ -198,6 +198,6 @@
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/ColliderBit/ColliderBit_rollcall.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ColliderBit__eventloop__utils_8hpp" kindref="compound">gambit/ColliderBit/ColliderBit_eventloop_utils.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="ColliderBit/include/gambit/ColliderBit/ColliderBit_eventloop.hpp"/>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ColliderBit/include/gambit/ColliderBit/ColliderBit_eventloop.hpp"/>
   </compounddef>
 </doxygen>

@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceGambit_1_1Scanner_1_1Plugins" kind="namespace" language="C++">
+    <compoundname>Gambit::Scanner::Plugins</compoundname>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1____plugin__resume____" prot="public">Gambit::Scanner::Plugins::__plugin_resume__</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1____plugin__resume__base____" prot="public">Gambit::Scanner::Plugins::__plugin_resume_base__</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1classFactory" prot="public">Gambit::Scanner::Plugins::classFactory</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1factoryBase" prot="public">Gambit::Scanner::Plugins::factoryBase</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1funcFactory" prot="public">Gambit::Scanner::Plugins::funcFactory</innerclass>
+    <innerclass refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" prot="public">Gambit::Scanner::Plugins::Plugin_Details</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details__Ref" prot="public">Gambit::Scanner::Plugins::Plugin_Details_Ref</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface" prot="public">Gambit::Scanner::Plugins::Plugin_Interface</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface_3_01ret_07args_8_8_8_08_4" prot="public">Gambit::Scanner::Plugins::Plugin_Interface&lt; ret(args...)&gt;</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Base" prot="public">Gambit::Scanner::Plugins::Plugin_Interface_Base</innerclass>
+    <innerclass refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Interface__Details" prot="public">Gambit::Scanner::Plugins::Plugin_Interface_Details</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Loader" prot="public">Gambit::Scanner::Plugins::Plugin_Loader</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Main__Interface__Base" prot="public">Gambit::Scanner::Plugins::Plugin_Main_Interface_Base</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1Plugin__Main__Interface__Base_3_01ret_07args_8_8_8_08_4" prot="public">Gambit::Scanner::Plugins::Plugin_Main_Interface_Base&lt; ret(args...)&gt;</innerclass>
+    <innerclass refid="structGambit_1_1Scanner_1_1Plugins_1_1pluginData" prot="public">Gambit::Scanner::Plugins::pluginData</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1pluginInfo" prot="public">Gambit::Scanner::Plugins::pluginInfo</innerclass>
+    <innerclass refid="structGambit_1_1Scanner_1_1Plugins_1_1Proto__Plugin__Details" prot="public">Gambit::Scanner::Plugins::Proto_Plugin_Details</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompare" prot="public">Gambit::Scanner::Plugins::VersionCompare</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBase" prot="public">Gambit::Scanner::Plugins::VersionCompareBase</innerclass>
+    <innerclass refid="classGambit_1_1Scanner_1_1Plugins_1_1VersionCompareBottom" prot="public">Gambit::Scanner::Plugins::VersionCompareBottom</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="plugin__loader_8hpp_1af4c80001cbb89e6ca052032307e1f0c1" prot="public" static="no" mutable="no">
+        <type>EXPORT_SYMBOLS <ref refid="classGambit_1_1Scanner_1_1Plugins_1_1pluginInfo" kindref="compound">pluginInfo</ref></type>
+        <definition>pluginInfo Gambit::Scanner::Plugins::plugin_info</definition>
+        <argsstring></argsstring>
+        <name>plugin_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access Functor for plugin info. This will manage all the plugins including stored and writing resume info. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" line="706" column="24" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="706" bodyend="-1" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_loader.hpp" declline="257" declcolumn="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="plugin__details_8hpp_1a98ee3d04e652bb49c264563feadeab16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::Scanner::Plugins::operator==</definition>
+        <argsstring>(const Plugin_Details &amp;plug1, const Plugin_Details &amp;plug2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &amp;</type>
+          <declname>plug1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &amp;</type>
+          <declname>plug2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_details.hpp" line="99" column="25" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_details.hpp" bodystart="99" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="plugin__details_8hpp_1ae82b372a4d43bc016476b5af384e57d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::Scanner::Plugins::Plugin_Version_Supersedes</definition>
+        <argsstring>(const Plugin_Details &amp;plug1, const Plugin_Details &amp;plug2)</argsstring>
+        <name>Plugin_Version_Supersedes</name>
+        <param>
+          <type>const <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &amp;</type>
+          <declname>plug1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &amp;</type>
+          <declname>plug2</declname>
+        </param>
+        <briefdescription>
+<para>compares the user defined plugin version to the actual plugin version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_details.cpp" line="465" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_details.cpp" bodystart="465" bodyend="494" declfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_details.hpp" declline="152" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="plugin__interface_8hpp_1ad32016123c4a711cbfd7b724023ebea9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::map&lt; type_index, void * &gt; &amp;</type>
+        <definition>const std::map&lt;type_index, void *&gt;&amp; Gambit::Scanner::Plugins::error_map_return</definition>
+        <argsstring>()</argsstring>
+        <name>error_map_return</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_interface.hpp" line="46" column="35" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_interface.hpp" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="plugin__loader_8cpp_1a5b902005e6cd78c8ad58de3c0ef236e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Gambit::Scanner::Plugins::print_plugins</definition>
+        <argsstring>(std::map&lt; std::string, std::map&lt; std::string, std::vector&lt; Plugin_Details &gt; &gt; &gt;::const_iterator plugins)</argsstring>
+        <name>print_plugins</name>
+        <param>
+          <type>std::map&lt; std::string, std::map&lt; std::string, std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt; &gt; &gt;::const_iterator</type>
+          <declname>plugins</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" line="52" column="32" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="52" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="plugin__loader_8cpp_1a78bf7e2014076d27876a7f6903dc4bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gambit::Scanner::Plugins::is_new_plugin</definition>
+        <argsstring>(std::map&lt; str, std::map&lt; str, std::vector&lt; Plugin_Details &gt;&gt;&gt; &amp;pmap, Plugin_Details &amp;cand)</argsstring>
+        <name>is_new_plugin</name>
+        <param>
+          <type>std::map&lt; str, std::map&lt; str, std::vector&lt; <ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &gt;&gt;&gt; &amp;</type>
+          <declname>pmap</declname>
+        </param>
+        <param>
+          <type><ref refid="structGambit_1_1Scanner_1_1Plugins_1_1Plugin__Details" kindref="compound">Plugin_Details</ref> &amp;</type>
+          <declname>cand</declname>
+        </param>
+        <briefdescription>
+<para>Check a plugin map and return a flag indicating if a candidate plugin is already in the map or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" line="104" column="18" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/src/plugin_loader.cpp" bodystart="104" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/ScannerBit/include/gambit/ScannerBit/plugin_comparators.hpp" line="36" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="QedQcdWrapper_8cpp" kind="file" language="C++">
+    <compoundname>QedQcdWrapper.cpp</compoundname>
+    <includes local="yes">gambit/Elements/sminputs.hpp</includes>
+    <includes local="yes">gambit/Elements/spectrum.hpp</includes>
+    <includes local="yes">gambit/Elements/slhaea_spec_helpers.hpp</includes>
+    <includes refid="QedQcdWrapper_8hpp" local="yes">gambit/SpecBit/QedQcdWrapper.hpp</includes>
+    <includes local="yes">gambit/Utils/util_functions.hpp</includes>
+    <includes local="no">boost/preprocessor/tuple/to_seq.hpp</includes>
+    <includes local="no">boost/preprocessor/seq/elem.hpp</includes>
+    <includes local="no">boost/preprocessor/seq/for_each_product.hpp</includes>
+    <includes local="yes">lowe.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>gambit/Elements/spectrum.hpp</label>
+      </node>
+      <node id="10">
+        <label>boost/preprocessor/tuple/to_seq.hpp</label>
+      </node>
+      <node id="7">
+        <label>gambit/Models/SpectrumContents/RegisteredSpectra.hpp</label>
+      </node>
+      <node id="8">
+        <label>lowe.h</label>
+      </node>
+      <node id="11">
+        <label>boost/preprocessor/seq/elem.hpp</label>
+      </node>
+      <node id="1">
+        <label>QedQcdWrapper.cpp</label>
+        <link refid="QedQcdWrapper_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>gambit/Elements/slhaea_spec_helpers.hpp</label>
+      </node>
+      <node id="9">
+        <label>gambit/Utils/util_functions.hpp</label>
+      </node>
+      <node id="6">
+        <label>gambit/Elements/spec.hpp</label>
+      </node>
+      <node id="12">
+        <label>boost/preprocessor/seq/for_each_product.hpp</label>
+      </node>
+      <node id="5">
+        <label>gambit/SpecBit/QedQcdWrapper.hpp</label>
+        <link refid="QedQcdWrapper_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gambit/Elements/sminputs.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceGambit">Gambit</innernamespace>
+    <innernamespace refid="namespaceGambit_1_1SpecBit">Gambit::SpecBit</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="QedQcdWrapper_8cpp_1a73e9f559fb3172a23dbd2b7e1dc9c63c" prot="public" static="no">
+        <name>addtomap_EL</name>
+        <param><defname>r</defname></param>
+        <param><defname>PRODUCT</defname></param>
+        <initializer>{                                                                       \
+   str key      = BOOST_PP_SEQ_ELEM(0,PRODUCT); /* string map key */    \
+   tmp_map[key] = BOOST_PP_SEQ_ELEM(1,PRODUCT); /* function pointer */  \
+}</initializer>
+        <briefdescription>
+<para>TODO: wrap using BOSS at some point, i.e. get this from FlexibleSUSY or SoftSUSY. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to help assign the same function pointers to multiple string keys </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/QedQcdWrapper.cpp" line="38" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/QedQcdWrapper.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="QedQcdWrapper_8cpp_1ab87b0911757e38b4902aa4a2d62a2064" prot="public" static="no">
+        <name>addtomap</name>
+        <param><defname>__KEYS</defname></param>
+        <param><defname>FPTR</defname></param>
+        <initializer>BOOST_PP_SEQ_FOR_EACH_PRODUCT(<ref refid="QedQcdWrapper_8cpp_1a73e9f559fb3172a23dbd2b7e1dc9c63c" kindref="member">addtomap_EL</ref>, (BOOST_PP_TUPLE_TO_SEQ(__KEYS))((FPTR)) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/QedQcdWrapper.cpp" line="44" column="9" bodyfile="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/QedQcdWrapper.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to wrap the QedQcd object used by SoftSUSY and FlexibleSUSY in a <ref refid="namespaceGambit" kindref="compound">Gambit</ref> SubSpectrum object. This is to enable access to the parameters of the SM defined as a low-energy effective theory (as opposed to correspending information defined in a UV model). Parameters defined this way are often used as input to a physics calculator.</para>
+<para><hruler/>
+</para>
+<para>Authors:</para>
+<para><simplesect kind="author"><para>Ben Farmer (<ulink url="mailto:benjamin.farmer@fysik.su.se">benjamin.farmer@fysik.su.se</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2015 Mar</para>
+</simplesect>
+<hruler/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/><sp/>GAMBIT:<sp/>Global<sp/>and<sp/>Modular<sp/>BSM<sp/>Inference<sp/>Tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>*********************************************</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/sminputs.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/spectrum.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Elements/slhaea_spec_helpers.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="QedQcdWrapper_8hpp" kindref="compound">gambit/SpecBit/QedQcdWrapper.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gambit/Utils/util_functions.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/preprocessor/tuple/to_seq.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/preprocessor/seq/elem.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/preprocessor/seq/for_each_product.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lowe.h&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="comment">//<sp/>Relies<sp/>on<sp/>&quot;tmp_map&quot;<sp/>being<sp/>used<sp/>as<sp/>the<sp/>variable<sp/>name<sp/>for<sp/>the<sp/>temporary<sp/>maps</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>inside<sp/>the<sp/>fill_map<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>addtomap_EL(r,<sp/>PRODUCT)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/>str<sp/>key<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>BOOST_PP_SEQ_ELEM(0,PRODUCT);<sp/></highlight><highlight class="comment">/*<sp/>string<sp/>map<sp/>key<sp/>*/</highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/>tmp_map[key]<sp/>=<sp/>BOOST_PP_SEQ_ELEM(1,PRODUCT);<sp/></highlight><highlight class="comment">/*<sp/>function<sp/>pointer<sp/>*/</highlight><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor">}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>addtomap(__KEYS,FPTR)<sp/>BOOST_PP_SEQ_FOR_EACH_PRODUCT(addtomap_EL,<sp/>(BOOST_PP_TUPLE_TO_SEQ(__KEYS))((FPTR))<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceGambit" kindref="compound">Gambit</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SpecBit</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGambit_1_1SpecBit_1_1QedQcdWrapper_1ac2cf2e7b7f82d75514cb54f5dfb1223c" kindref="member">QedQcdWrapper::QedQcdWrapper</ref>()</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>qedqcd()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>sminputs()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QedQcdWrapper::QedQcdWrapper(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>input)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>qedqcd(model)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>sminputs(input)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>hardup(get(Par::Pole_Mass,</highlight><highlight class="stringliteral">&quot;u_3&quot;</highlight><highlight class="normal">))<sp/></highlight><highlight class="comment">//<sp/>QedQcd<sp/>object<sp/>will<sp/>throw<sp/>an<sp/>error<sp/>if<sp/>we<sp/>try<sp/>to<sp/>run<sp/>above<sp/>this,<sp/>so<sp/>set<sp/>this<sp/>as<sp/>the<sp/>limit<sp/>/***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>softup(get(Par::Pole_Mass,</highlight><highlight class="stringliteral">&quot;u_3&quot;</highlight><highlight class="normal">))<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>top<sp/>quark<sp/>pole<sp/>mass<sp/>as<sp/>soft<sp/>upper<sp/>limit<sp/>of<sp/><sp/>/***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>softlow(2)<sp/></highlight><highlight class="comment">//<sp/>(GeV)<sp/>QedQcd<sp/>object<sp/>sets<sp/>beta<sp/>functions<sp/>to<sp/>zero<sp/>below<sp/>here<sp/>anyway</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>hardlow(2)<sp/></highlight><highlight class="comment">//<sp/>(GeV)<sp/>QedQcd<sp/>object<sp/>sets<sp/>beta<sp/>functions<sp/>to<sp/>zero<sp/>below<sp/>here<sp/>anyway</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QedQcdWrapper::~QedQcdWrapper()<sp/>{}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>QedQcdWrapper::get_numbers_stable_particles()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;}</highlight></codeline>
+<codeline lineno="79"></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>QedQcdWrapper::add_to_SLHAea(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>SLHAstruct&amp;<sp/>slha)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="82"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>we<sp/>assume<sp/>that<sp/>all<sp/>SMINPUTS<sp/>defined<sp/>in<sp/>SLHA2<sp/>are<sp/>provided<sp/>by<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SMINPUTS<sp/>object,<sp/>so<sp/>we<sp/>don&apos;t<sp/>bother<sp/>repeating<sp/>them<sp/>here.<sp/><sp/>We<sp/>also<sp/>assume</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>that<sp/>the<sp/>HE<sp/>spectrum<sp/>is<sp/>going<sp/>to<sp/>provide<sp/>the<sp/>gauge<sp/>couplings,<sp/>so<sp/>we<sp/>don&apos;t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bother<sp/>with<sp/>those<sp/>either.<sp/><sp/>We<sp/>ignore<sp/>the<sp/>first<sp/>parameter,<sp/>as<sp/>it<sp/>doesn&apos;t<sp/>matter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>we&apos;re<sp/>helping<sp/>make<sp/>an<sp/>SLHA1<sp/>or<sp/>SLHA2<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>b<sp/>pole<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SLHAea_add_from_subspec(slha,<sp/>LOCAL_INFO,<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>Par::Pole_Mass,</highlight><highlight class="stringliteral">&quot;d_3&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;MASS&quot;</highlight><highlight class="normal">,5,</highlight><highlight class="stringliteral">&quot;#<sp/>mb<sp/>(pole)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>QedQcdWrapper::RunToScaleOverride(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>end_scale)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tol<sp/>=<sp/>1.0e-5;<sp/></highlight><highlight class="comment">//<sp/>Value<sp/>used<sp/>internally<sp/>in<sp/>QedQcd<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>begin_scale<sp/>=<sp/>GetScale();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qedqcd.run(begin_scale,<sp/>end_scale,<sp/>tol);<sp/><sp/></highlight><highlight class="comment">//<sp/>Run<sp/>masses<sp/>and<sp/>couplings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>QedQcdWrapper::GetScale()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>qedqcd.get_scale();<sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>QedQcdWrapper::SetScale(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale)<sp/>{<sp/>qedqcd.set_scale(scale);<sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="QedQcdWrapper_8cpp_1a79e28334792df2a8d346396283a0ee9f" kindref="member">get_mUp</ref><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayMass(softsusy::mUp);<sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_mCharm<sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayMass(softsusy::mCharm);<sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_mTop<sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayMass(softsusy::mTop);<sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_mDown<sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayMass(softsusy::mDown);<sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_mStrange<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayMass(softsusy::mStrange);<sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_mBottom<sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayMass(softsusy::mBottom);<sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_mElectron(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayMass(softsusy::mElectron);<sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_mMuon<sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayMass(softsusy::mMuon);<sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_mTau<sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayMass(softsusy::mTau);<sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Might<sp/>as<sp/>well<sp/>add<sp/>photon<sp/>and<sp/>gluon<sp/>for<sp/>good<sp/>measure,<sp/>someone<sp/>might<sp/>need<sp/>them<sp/>for<sp/>a<sp/>loop<sp/>or<sp/>something.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_mPhoton<sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.;<sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_mGluon<sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.;<sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>often<sp/>people<sp/>want<sp/>1/alpha,<sp/>but<sp/>here<sp/>we<sp/>return<sp/>alpha<sp/>itself</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Might<sp/>want<sp/>to<sp/>change<sp/>these<sp/>to<sp/>g1,g3,<sp/>to<sp/>be<sp/>consistent<sp/>with<sp/>MSSMSpec</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="QedQcdWrapper_8cpp_1add915505d1cc9da124d277f48cb830b2" kindref="member">get_alpha</ref><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayAlpha(softsusy::ALPHA);<sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_alphaS<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;<sp/>model)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model.displayAlpha(softsusy::ALPHAS);<sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>alpha1<sp/>is<sp/>in<sp/>the<sp/>GUT<sp/>normalisation.<sp/>sinth<sp/>=<sp/>sin^2<sp/>thetaW(Q)<sp/>in<sp/>MSbar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>scheme</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>it<sp/>computes<sp/>that<sp/>couplings<sp/>at<sp/>scale<sp/>&quot;m2&quot;.<sp/>I<sp/>think<sp/>other<sp/>quantities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>are<sp/>taken<sp/>as<sp/>calculated<sp/>more<sp/>accurately<sp/>at<sp/>some<sp/>initial<sp/>scale,<sp/>and<sp/>then<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>simple<sp/>1-loop<sp/>computation<sp/>is<sp/>used<sp/>just<sp/>to<sp/>get<sp/>these<sp/>couplings<sp/>at<sp/>a<sp/>nearby</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>scale<sp/>m2.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="QedQcdWrapper_8cpp_1a65020b7cc8d83acf24247896db7360e6" kindref="member">get_a1</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd&amp;)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>need<sp/>sin^2<sp/>thetaW(Q)<sp/>for<sp/>this;<sp/>i.e.<sp/>I<sp/>think<sp/>it<sp/>is<sp/>supposed<sp/>to<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>supplied<sp/>at<sp/>whatever<sp/>scale<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>parameters<sp/>are<sp/>currently</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>defined<sp/>at.<sp/>Not<sp/>sure<sp/>how<sp/>to<sp/>handle<sp/>this.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//QedQcd::getGaugeMu(const<sp/>double<sp/>m2,<sp/>const<sp/>double<sp/>sinth)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Note:<sp/>model<sp/>object<sp/>not<sp/>needed<sp/>for<sp/>these,<sp/>but<sp/>required<sp/>by<sp/>function<sp/>signature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="QedQcdWrapper_8cpp_1a4d318ea3ac3c072963f7edc0c3546dc0" kindref="member">get_Pole_mElectron</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>inputs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inputs.mE;<sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_Pole_mMuon<sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>inputs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inputs.mMu;<sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_Pole_mNu1<sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>inputs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inputs.mNu1;<sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_Pole_mNu2<sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>inputs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inputs.mNu2;<sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_Pole_mNu3<sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;<sp/>inputs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inputs.mNu3;<sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>good<sp/>measure.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_Pole_mPhoton<sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.;<sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_Pole_mGluon<sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SMInputs&amp;)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.;<sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_sinthW2_pole(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>softsusy::QedQcd<sp/>&amp;qedqcd)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(1<sp/>-<sp/>Utils::sqr(qedqcd.displayPoleMW())<sp/>/<sp/>Utils::sqr(qedqcd.displayPoleMZ()));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filler<sp/>function<sp/>for<sp/>getter<sp/>function<sp/>pointer<sp/>maps</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QedQcdWrapper::GetterMaps<sp/>QedQcdWrapper::fill_getter_maps()</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetterMaps<sp/>map_collection;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>utilising<sp/>the<sp/>&quot;extraM&quot;<sp/>function<sp/>signature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(Zero<sp/>index,<sp/>model<sp/>object<sp/>as<sp/>argument)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>scope<sp/>so<sp/>we<sp/>can<sp/>reuse<sp/>the<sp/>name<sp/>&apos;tmp_map&apos;<sp/>several<sp/>times,<sp/>so<sp/>that<sp/>our<sp/>macro<sp/>works.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>could<sp/>make<sp/>a<sp/>better<sp/>macro,<sp/>or<sp/>an<sp/>actual<sp/>function,<sp/>but<sp/>I&apos;m<sp/>in<sp/>a<sp/>hurry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTget::fmap0_extraM<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;u_1&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;<ref refid="QedQcdWrapper_8cpp_1a79e28334792df2a8d346396283a0ee9f" kindref="member">get_mUp</ref>;<sp/></highlight><highlight class="comment">//<sp/>u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;u_2&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_mCharm;<sp/></highlight><highlight class="comment">//<sp/>c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;u_3&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_mTop;<sp/></highlight><highlight class="comment">//<sp/>t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;d_1&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_mDown;<sp/></highlight><highlight class="comment">//<sp/>d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;d_2&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_mStrange;<sp/></highlight><highlight class="comment">//<sp/>s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;d_3&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_mBottom;<sp/></highlight><highlight class="comment">//<sp/>b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;e-_1&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>&amp;get_mElectron;<sp/></highlight><highlight class="comment">//<sp/>e-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;e-_2&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_mMuon;<sp/></highlight><highlight class="comment">//<sp/>mu-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;e-_3&quot;</highlight><highlight class="normal">]=<sp/>&amp;get_mTau;<sp/></highlight><highlight class="comment">//<sp/>tau-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;gamma&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_mPhoton;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/>=<sp/>&amp;get_mGluon;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_collection[Par::mass1].map0_extraM<sp/>=<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>utilising<sp/>the<sp/>&quot;extraM&quot;<sp/>function<sp/>signature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(Zero<sp/>index,<sp/>model<sp/>object<sp/>as<sp/>argument)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTget::fmap0_extraM<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;alpha&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>&amp;<ref refid="QedQcdWrapper_8cpp_1add915505d1cc9da124d277f48cb830b2" kindref="member">get_alpha</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;alphaS&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_alphaS;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_collection[Par::dimensionless].map0_extraM<sp/>=<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>utilising<sp/>the<sp/>plain-vanilla<sp/>function<sp/>signature<sp/>(&quot;fmap&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(Zero-argument<sp/>member<sp/>functions<sp/>of<sp/>model<sp/>object)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>String<sp/>names<sp/>correspond<sp/>to<sp/>those<sp/>defined<sp/>in<sp/>particle_database.cpp.<sp/>If</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>there<sp/>is<sp/>a<sp/>mismatch,<sp/>please<sp/>change<sp/>the<sp/>ones<sp/>here!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTget::fmap0<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>&amp;softsusy::QedQcd::displayPoleMZ;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;W+&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>&amp;softsusy::QedQcd::displayPoleMW;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;u_3&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;softsusy::QedQcd::displayPoleMt;<sp/></highlight><highlight class="comment">//<sp/>t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;Pole&quot;<sp/>for<sp/>b<sp/>quark<sp/>is<sp/>quoted<sp/>in<sp/>SoftSUSY<sp/>(lowe.h)<sp/>documentation,<sp/>so<sp/>I<sp/>guess<sp/>this<sp/>is<sp/>an<sp/>approximation;<sp/>need<sp/>to<sp/>check<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;d_3&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;softsusy::QedQcd::displayPoleMb;<sp/></highlight><highlight class="comment">//<sp/>b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;e-_3&quot;</highlight><highlight class="normal">]=<sp/>&amp;softsusy::QedQcd::displayPoleMtau;<sp/></highlight><highlight class="comment">//<sp/>tau</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Nearest<sp/>flavour<sp/>&apos;aliases&apos;<sp/>for<sp/>the<sp/>SM<sp/>mass<sp/>eigenstates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;t&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;softsusy::QedQcd::displayPoleMt;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;softsusy::QedQcd::displayPoleMb;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;tau-&quot;</highlight><highlight class="normal">]=<sp/>&amp;softsusy::QedQcd::displayPoleMtau;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_collection[Par::Pole_Mass].map0<sp/>=<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTget::fmap0_extraI<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;e-_1&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;<ref refid="QedQcdWrapper_8cpp_1a4d318ea3ac3c072963f7edc0c3546dc0" kindref="member">get_Pole_mElectron</ref>;<sp/></highlight><highlight class="comment">//<sp/>e-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;e-_2&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_Pole_mMuon;<sp/></highlight><highlight class="comment">//<sp/>mu-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;nu_1&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_Pole_mNu1;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;nu_2&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_Pole_mNu2;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;nu_3&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_Pole_mNu3;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Nearest<sp/>flavour<sp/>&apos;aliases&apos;<sp/>for<sp/>the<sp/>SM<sp/>mass<sp/>eigenstates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;e-&quot;</highlight><highlight class="normal">]<sp/><sp/>=<sp/>&amp;<ref refid="QedQcdWrapper_8cpp_1a4d318ea3ac3c072963f7edc0c3546dc0" kindref="member">get_Pole_mElectron</ref>;<sp/></highlight><highlight class="comment">//<sp/>e-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;mu-&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_Pole_mMuon;<sp/></highlight><highlight class="comment">//<sp/>mu-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;gamma&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_Pole_mPhoton;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/>=<sp/>&amp;get_Pole_mGluon;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_collection[Par::Pole_Mass].map0_extraI<sp/>=<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>utilising<sp/>the<sp/>&quot;extraM&quot;<sp/>function<sp/>signature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(Zero<sp/>index,<sp/>model<sp/>object<sp/>as<sp/>argument)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTget::fmap0_extraM<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;sinW2&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;get_sinthW2_pole;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_collection[Par::Pole_Mixing].map0_extraM<sp/>=<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>map_collection;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="QedQcdWrapper_8cpp_1a4f103e6ca0e4e0ae0d04dc495e04f8fb" kindref="member">set_Pole_mElectron</ref>(SMInputs&amp;<sp/>inputs,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>set_value)<sp/>{<sp/>inputs.mE<sp/>=<sp/>set_value;<sp/>}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filler<sp/>function<sp/>for<sp/>setter<sp/>function<sp/>pointer<sp/>maps</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>QedQcdWrapper::SetterMaps<sp/>QedQcdWrapper::fill_setter_maps()</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetterMaps<sp/>map_collection;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>utilising<sp/>the<sp/>plain-vanilla<sp/>function<sp/>signature<sp/>(&quot;fmap&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(Zero-argument<sp/>member<sp/>functions<sp/>of<sp/>model<sp/>object)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTset::fmap0<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>something<sp/>like<sp/>this,<sp/>though<sp/>the<sp/>demo<sp/>function<sp/>here<sp/>is<sp/>a<sp/>getter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>a<sp/>setter<sp/>so<sp/>you<sp/>can&apos;t<sp/>use<sp/>that<sp/>one<sp/>of<sp/>course<sp/>:).<sp/>If<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>function<sp/>signature<sp/>doesn&apos;t<sp/>match<sp/>what<sp/>you<sp/>need<sp/>I<sp/>can<sp/>change<sp/>it,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>otherwise<sp/>need<sp/>to<sp/>use<sp/>one<sp/>of<sp/>the<sp/>&quot;extra&quot;<sp/>map<sp/>fillers,<sp/>see<sp/>e.g.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>below<sp/>(there<sp/>is<sp/>also<sp/>one<sp/>that<sp/>takes<sp/>the<sp/>model<sp/>object<sp/>as<sp/>an</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>input,<sp/>as<sp/>in<sp/>the<sp/>getter<sp/>case)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;Z0&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;softsusy::QedQcd::setPoleMZ;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;W+&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;softsusy::QedQcd::setPoleMW;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_collection[Par::Pole_Mass].map0<sp/>=<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MTset::fmap0_extraI<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_map[</highlight><highlight class="stringliteral">&quot;e-_1&quot;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;<ref refid="QedQcdWrapper_8cpp_1a4f103e6ca0e4e0ae0d04dc495e04f8fb" kindref="member">set_Pole_mElectron</ref>;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map_collection[Par::Pole_Mass].map0_extraI<sp/>=<sp/>tmp_map;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>map_collection;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>SpecBit<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>Gambit<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/SpecBit/src/QedQcdWrapper.cpp"/>
+  </compounddef>
+</doxygen>

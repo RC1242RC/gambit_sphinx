@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="create__SDSSDR7__fid_8py" kind="file" language="Python">
+    <compoundname>create_SDSSDR7_fid.py</compoundname>
+    <innernamespace refid="namespacecreate__SDSSDR7__fid">create_SDSSDR7_fid</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>math</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>scipy.integrate</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>scipy.interpolate</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">#<sp/>global<sp/>variable<sp/>to<sp/>detect<sp/>python<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#<sp/>needed<sp/>to<sp/>avoid<sp/>compatibility<sp/>issues<sp/>below</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">PYTHON3<sp/>=<sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>sys.version_info[0]<sp/>&lt;<sp/>3:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>PYTHON3<sp/>=<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;&apos;&apos;</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/>Script<sp/>to<sp/>compute<sp/>the<sp/>spectra<sp/>of<sp/>the<sp/>fiducial<sp/>cosmology<sp/>needed<sp/>for<sp/>the<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral"><sp/><sp/>MontePython<sp/>SDSS<sp/>DR7<sp/>LRG<sp/>likelihood.<sp/>The<sp/>file<sp/>containing<sp/>the<sp/>fiducial<sp/>spectra</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral"><sp/><sp/>is<sp/>saved<sp/>as<sp/>Backends/installed/class/&lt;version&gt;/sdss_lrgDR7_fiducialmodel.dat</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/>All<sp/>routines<sp/>taken<sp/>and<sp/>adopted<sp/>from<sp/>MontePython.<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"><sp/><sp/>Why<sp/>do<sp/>we<sp/>need<sp/>this?<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>In<sp/>MontePython,<sp/>this<sp/>file<sp/>is<sp/>created<sp/>if<sp/>it<sp/>does<sp/>not<sp/>exist<sp/>in<sp/>the<sp/>MP<sp/>data<sp/>folder.<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>However,<sp/>the<sp/>results<sp/>depend<sp/>on<sp/>the<sp/>treatment<sp/>of<sp/>the<sp/>non<sp/>linearities.<sp/>Hence,<sp/>it<sp/>is<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>not<sp/>guaranteed<sp/>to<sp/>be<sp/>(CLASS)<sp/>version<sp/>independent.<sp/>To<sp/>ensure<sp/>this<sp/>for<sp/>the<sp/>use<sp/>with</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>GAMBIT,<sp/>we<sp/>execute<sp/>this<sp/>script<sp/>after<sp/>the<sp/>build<sp/>step<sp/>of<sp/>each<sp/>CLASS<sp/>version<sp/>and<sp/>save</highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>the<sp/>resulting<sp/>spectra<sp/>in<sp/>the<sp/>installation<sp/>folder<sp/>of<sp/>the<sp/>respective<sp/>CLASS<sp/>version.<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>When<sp/>running<sp/>MontePython,<sp/>we<sp/>pass<sp/>the<sp/>path<sp/>to<sp/>the<sp/>CLASS<sp/>version<sp/>that<sp/>is<sp/>used<sp/>for</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>the<sp/>current<sp/>GAMBIT<sp/>run.<sp/>Therefore,<sp/>we<sp/>avoid<sp/>all<sp/>potential<sp/>inconsistencies<sp/>related<sp/>to<sp/>the<sp/>use</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>of<sp/>different<sp/>CLASS<sp/>versions<sp/>for<sp/>the<sp/>computation<sp/>of<sp/>the<sp/>likelihood<sp/>and<sp/>the<sp/>calculation</highlight></codeline>
+<codeline lineno="29"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>of<sp/>the<sp/>fiducial<sp/>spectra.</highlight></codeline>
+<codeline lineno="30"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="31"><highlight class="stringliteral"><sp/><sp/>This<sp/>script<sp/>also<sp/>fixes<sp/>some<sp/>compatibility<sp/>issues<sp/>with<sp/>python3.<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"><sp/><sp/>author:<sp/>Janina<sp/>Renk,<sp/>janina.renk@fysik.su.se</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>July<sp/>2020</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral">&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">remove_bao(k_in,pk_in):</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;&apos;From<sp/>MontePython<sp/>3.3.0,<sp/>minor<sp/>changes<sp/>to<sp/>work<sp/>as<sp/>stand-alone<sp/>function</highlight></codeline>
+<codeline lineno="39"><highlight class="stringliteral"><sp/><sp/>&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>De-wiggling<sp/>routine<sp/>by<sp/>Mario<sp/>Ballardini</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>This<sp/>k<sp/>range<sp/>has<sp/>to<sp/>contain<sp/>the<sp/>BAO<sp/>features:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>k_ref=[2.8e-2,<sp/>4.5e-1]</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Get<sp/>interpolating<sp/>function<sp/>for<sp/>input<sp/>P(k)<sp/>in<sp/>log-log<sp/>space:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>_interp_pk<sp/>=<sp/>scipy.interpolate.interp1d(<sp/>np.log(k_in),<sp/>np.log(pk_in),</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kind=</highlight><highlight class="stringliteral">&apos;quadratic&apos;</highlight><highlight class="normal">,<sp/>bounds_error=</highlight><highlight class="keyword">False</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>interp_pk<sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x:<sp/>np.exp(_interp_pk(np.log(x)))</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Spline<sp/>all<sp/>(log-log)<sp/>points<sp/>outside<sp/>k_ref<sp/>range:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>idxs<sp/>=<sp/>np.where(np.logical_or(k_in<sp/>&lt;=<sp/>k_ref[0],<sp/>k_in<sp/>&gt;=<sp/>k_ref[1]))</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>_pk_smooth<sp/>=<sp/>scipy.interpolate.UnivariateSpline(<sp/>np.log(k_in[idxs]),</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>np.log(pk_in[idxs]),<sp/>k=3,<sp/>s=0<sp/>)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>pk_smooth<sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x:<sp/>np.exp(_pk_smooth(np.log(x)))</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Find<sp/>second<sp/>derivative<sp/>of<sp/>each<sp/>spline:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>fwiggle<sp/>=<sp/>scipy.interpolate.UnivariateSpline(k_in,<sp/>pk_in<sp/>/<sp/>pk_smooth(k_in),<sp/>k=3,<sp/>s=0)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>derivs<sp/>=<sp/>np.array([fwiggle.derivatives(_k)<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>_k<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>k_in]).T</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>d2<sp/>=<sp/>scipy.interpolate.UnivariateSpline(k_in,<sp/>derivs[2],<sp/>k=3,<sp/>s=1.0)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Find<sp/>maxima<sp/>and<sp/>minima<sp/>of<sp/>the<sp/>gradient<sp/>(zeros<sp/>of<sp/>2nd<sp/>deriv.),<sp/>then<sp/>put<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>low-order<sp/>spline<sp/>through<sp/>zeros<sp/>to<sp/>subtract<sp/>smooth<sp/>trend<sp/>from<sp/>wiggles<sp/>fn.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>wzeros<sp/>=<sp/>d2.roots()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>wzeros<sp/>=<sp/>wzeros[np.where(np.logical_and(wzeros<sp/>&gt;=<sp/>k_ref[0],<sp/>wzeros<sp/>&lt;=<sp/>k_ref[1]))]</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>wzeros<sp/>=<sp/>np.concatenate((wzeros,<sp/>[k_ref[1],]))</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>wtrend<sp/>=<sp/>scipy.interpolate.UnivariateSpline(wzeros,<sp/>fwiggle(wzeros),<sp/>k=3,<sp/>s=0)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Construct<sp/>smooth<sp/>no-BAO:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>idxs<sp/>=<sp/>np.where(np.logical_and(k_in<sp/>&gt;<sp/>k_ref[0],<sp/>k_in<sp/>&lt;<sp/>k_ref[1]))</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>pk_nobao<sp/>=<sp/>pk_smooth(k_in)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>pk_nobao[idxs]<sp/>*=<sp/>wtrend(k_in[idxs])</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Construct<sp/>interpolating<sp/>functions:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>ipk<sp/>=<sp/>scipy.interpolate.interp1d(<sp/>k_in,<sp/>pk_nobao,<sp/>kind=</highlight><highlight class="stringliteral">&apos;linear&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bounds_error=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,<sp/>fill_value=0.<sp/>)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>pk_nobao<sp/>=<sp/>ipk(k_in)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pk_nobao</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">get_flat_fid(cosmo,kh,z,sigma2bao,h):</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;&apos;From<sp/>MontePython<sp/>3.3.0,<sp/>minor<sp/>changes<sp/>to<sp/>work<sp/>as<sp/>stand-alone<sp/>function</highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral"><sp/><sp/>&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>SDSS<sp/>DR7<sp/>LRG<sp/>specific<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Compute<sp/>fiducial<sp/>properties<sp/>for<sp/>a<sp/>flat<sp/>fiducial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>with<sp/>Omega_m<sp/>=<sp/>0.25,<sp/>Omega_L<sp/>=<sp/>0.75,<sp/>h<sp/>=<sp/>0.701</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>k<sp/>=<sp/>kh*h</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>P(k)<sp/>*with*<sp/>wiggles,<sp/>both<sp/>linear<sp/>and<sp/>nonlinear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>Plin<sp/>=<sp/>np.zeros(len(k),<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>Pnl<sp/>=<sp/>np.zeros(len(k),<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>P(k)<sp/>*without*<sp/>wiggles,<sp/>both<sp/>linear<sp/>and<sp/>nonlinear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>Psmooth<sp/>=<sp/>np.zeros(len(k),<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>Psmooth_nl<sp/>=<sp/>np.zeros(len(k),<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Damping<sp/>function<sp/>and<sp/>smeared<sp/>P(k)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>fdamp<sp/>=<sp/>np.zeros([len(k),<sp/>len(z)],<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>Psmear<sp/>=<sp/>np.zeros([len(k),<sp/>len(z)],<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Ratio<sp/>of<sp/>smoothened<sp/>non-linear<sp/>to<sp/>linear<sp/>P(k)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>fidnlratio<sp/>=<sp/>np.zeros([len(k),<sp/>len(z)],<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Loop<sp/>over<sp/>each<sp/>redshift<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>j<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(len(z)):</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Compute<sp/>Pk<sp/>*with*<sp/>wiggles,<sp/>both<sp/>linear<sp/>and<sp/>nonlinear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Get<sp/>P(k)<sp/>at<sp/>right<sp/>values<sp/>of<sp/>k<sp/>in<sp/>Mpc**3,<sp/>convert<sp/>it<sp/>to<sp/>(Mpc/h)^3<sp/>and<sp/>rescale<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Get<sp/>values<sp/>of<sp/>P(k)<sp/>in<sp/>Mpc**3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(len(k)):</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Plin[i]<sp/>=<sp/>cosmo.pk_lin(k[i],<sp/>z[j])</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pnl[i]<sp/>=<sp/>cosmo.pk(k[i],<sp/>z[j])</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Get<sp/>rescaled<sp/>values<sp/>of<sp/>P(k)<sp/>in<sp/>(Mpc/h)**3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>Plin<sp/>*=<sp/>h**3<sp/></highlight><highlight class="comment">#(h/scaling)**3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>Pnl<sp/>*=<sp/>h**3<sp/></highlight><highlight class="comment">#(h/scaling)**3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Compute<sp/>Pk<sp/>*without*<sp/>wiggles,<sp/>both<sp/>linear<sp/>and<sp/>nonlinear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>Psmooth<sp/>=<sp/>remove_bao(kh,Plin)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>Psmooth_nl<sp/>=<sp/>remove_bao(kh,Pnl)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Apply<sp/>Gaussian<sp/>damping<sp/>due<sp/>to<sp/>non-linearities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>fdamp[:,j]<sp/>=<sp/>np.exp(-0.5*sigma2bao[j]*kh**2)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>Psmear[:,j]<sp/>=<sp/>Plin*fdamp[:,j]+Psmooth*(1.0-fdamp[:,j])</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Take<sp/>ratio<sp/>of<sp/>smoothened<sp/>non-linear<sp/>to<sp/>linear<sp/>P(k)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>fidnlratio[:,j]<sp/>=<sp/>Psmooth_nl/Psmooth</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Polynomials<sp/>to<sp/>shape<sp/>small<sp/>scale<sp/>behaviour<sp/>from<sp/>N-body<sp/>sims</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>kdata=kh</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>fidpolyNEAR=np.zeros(np.size(kdata))</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>fidpolyNEAR[kdata&lt;=0.194055]<sp/>=<sp/>(1.0<sp/>-<sp/>0.680886*kdata[kdata&lt;=0.194055]<sp/>+<sp/>6.48151*kdata[kdata&lt;=0.194055]**2)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>fidpolyNEAR[kdata&gt;0.194055]<sp/>=<sp/>(1.0<sp/>-<sp/>2.13627*kdata[kdata&gt;0.194055]<sp/>+<sp/>21.0537*kdata[kdata&gt;0.194055]**2<sp/>-<sp/>50.1167*kdata[kdata&gt;0.194055]**3<sp/>+<sp/>36.8155*kdata[kdata&gt;0.194055]**4)*1.04482</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>fidpolyMID=np.zeros(np.size(kdata))</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>fidpolyMID[kdata&lt;=0.19431]<sp/>=<sp/>(1.0<sp/>-<sp/>0.530799*kdata[kdata&lt;=0.19431]<sp/>+<sp/>6.31822*kdata[kdata&lt;=0.19431]**2)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>fidpolyMID[kdata&gt;0.19431]<sp/>=<sp/>(1.0<sp/>-<sp/>1.97873*kdata[kdata&gt;0.19431]<sp/>+<sp/>20.8551*kdata[kdata&gt;0.19431]**2<sp/>-<sp/>50.0376*kdata[kdata&gt;0.19431]**3<sp/>+<sp/>36.4056*kdata[kdata&gt;0.19431]**4)*1.04384</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>fidpolyFAR=np.zeros(np.size(kdata))</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>fidpolyFAR[kdata&lt;=0.19148]<sp/>=<sp/>(1.0<sp/>-<sp/>0.475028*kdata[kdata&lt;=0.19148]<sp/>+<sp/>6.69004*kdata[kdata&lt;=0.19148]**2)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>fidpolyFAR[kdata&gt;0.19148]<sp/>=<sp/>(1.0<sp/>-<sp/>1.84891*kdata[kdata&gt;0.19148]<sp/>+<sp/>21.3479*kdata[kdata&gt;0.19148]**2<sp/>-<sp/>52.4846*kdata[kdata&gt;0.19148]**3<sp/>+<sp/>38.9541*kdata[kdata&gt;0.19148]**4)*1.03753</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>fidNEAR=np.interp(kh,kdata,fidpolyNEAR)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>fidMID=np.interp(kh,kdata,fidpolyMID)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>fidFAR=np.interp(kh,kdata,fidpolyFAR)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fidnlratio,<sp/>fidNEAR,<sp/>fidMID,<sp/>fidFAR</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">sdss_lrgDR7_fiducial_setup(path,cosmo,h):</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;&apos;<sp/>From<sp/>MontePython<sp/>3.3.0,<sp/>minor<sp/>changes<sp/>to<sp/>work<sp/>as<sp/>stand-alone<sp/>function</highlight></codeline>
+<codeline lineno="134"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>fix<sp/>of<sp/>use<sp/>with<sp/>python3</highlight></codeline>
+<codeline lineno="135"><highlight class="stringliteral"><sp/><sp/>&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>update<sp/>in<sp/>numpy&apos;s<sp/>logspace<sp/>function<sp/>breaks<sp/>python3<sp/>compatibility,<sp/>fixed<sp/>by<sp/>using</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>goemspace<sp/>function,<sp/>giving<sp/>same<sp/>result<sp/>as<sp/>old<sp/>logspace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>PYTHON3:</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>kh<sp/>=<sp/>np.geomspace(1e-3,1,num=int((math.log(1.0)-math.log(1e-3))/0.01)+1)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>kh<sp/>=<sp/>np.logspace(math.log(1e-3),math.log(1.0),num=(math.log(1.0)-math.log(1e-3))/0.01+1,base=math.exp(1.0))</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Rescale<sp/>the<sp/>scaling<sp/>factor<sp/>by<sp/>the<sp/>fiducial<sp/>value<sp/>for<sp/>h<sp/>divided<sp/>by<sp/>the<sp/>sampled<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>h=0.701<sp/>was<sp/>used<sp/>for<sp/>the<sp/>N-body<sp/>calibration<sp/>simulations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#scaling<sp/>=<sp/>scaling<sp/>*<sp/>(0.701/h)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>k<sp/>=<sp/>kh*h<sp/></highlight><highlight class="comment">#<sp/>k<sp/>in<sp/>1/Mpc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Define<sp/>redshift<sp/>bins<sp/>and<sp/>associated<sp/>bao<sp/>2<sp/>sigma<sp/>value<sp/>[NEAR,<sp/>MID,<sp/>FAR]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>z<sp/>=<sp/>np.array([0.235,<sp/>0.342,<sp/>0.421])</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>sigma2bao<sp/>=<sp/>np.array([86.9988,<sp/>85.1374,<sp/>84.5958])</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Initialize<sp/>arrays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Analytical<sp/>growth<sp/>factor<sp/>for<sp/>each<sp/>redshift<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>D_growth<sp/>=<sp/>np.zeros(len(z))</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>P(k)<sp/>*with*<sp/>wiggles,<sp/>both<sp/>linear<sp/>and<sp/>nonlinear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>Plin<sp/>=<sp/>np.zeros(len(k),<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>Pnl<sp/>=<sp/>np.zeros(len(k),<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>P(k)<sp/>*without*<sp/>wiggles,<sp/>both<sp/>linear<sp/>and<sp/>nonlinear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>Psmooth<sp/>=<sp/>np.zeros(len(k),<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>Psmooth_nl<sp/>=<sp/>np.zeros(len(k),<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Damping<sp/>function<sp/>and<sp/>smeared<sp/>P(k)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>fdamp<sp/>=<sp/>np.zeros([len(k),<sp/>len(z)],<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>Psmear<sp/>=<sp/>np.zeros([len(k),<sp/>len(z)],<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Ratio<sp/>of<sp/>smoothened<sp/>non-linear<sp/>to<sp/>linear<sp/>P(k)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>nlratio<sp/>=<sp/>np.zeros([len(k),<sp/>len(z)],<sp/></highlight><highlight class="stringliteral">&apos;float64&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Loop<sp/>over<sp/>each<sp/>redshift<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>j<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(len(z)):</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Compute<sp/>growth<sp/>factor<sp/>at<sp/>each<sp/>redshift</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>This<sp/>growth<sp/>factor<sp/>is<sp/>normalized<sp/>by<sp/>the<sp/>growth<sp/>factor<sp/>today</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>D_growth[j]<sp/>=<sp/>cosmo.scale_independent_growth_factor(z[j])</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Compute<sp/>Pk<sp/>*with*<sp/>wiggles,<sp/>both<sp/>linear<sp/>and<sp/>nonlinear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Get<sp/>P(k)<sp/>at<sp/>right<sp/>values<sp/>of<sp/>k<sp/>in<sp/>Mpc**3,<sp/>convert<sp/>it<sp/>to<sp/>(Mpc/h)^3<sp/>and<sp/>rescale<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Get<sp/>values<sp/>of<sp/>P(k)<sp/>in<sp/>Mpc**3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(len(k)):</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Plin[i]<sp/>=<sp/>cosmo.pk_lin(k[i],<sp/>z[j])</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pnl[i]<sp/>=<sp/>cosmo.pk(k[i],<sp/>z[j])</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Get<sp/>rescaled<sp/>values<sp/>of<sp/>P(k)<sp/>in<sp/>(Mpc/h)**3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Plin<sp/>*=<sp/>h**3<sp/></highlight><highlight class="comment">#(h/scaling)**3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Pnl<sp/>*=<sp/>h**3<sp/></highlight><highlight class="comment">#(h/scaling)**3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Compute<sp/>Pk<sp/>*without*<sp/>wiggles,<sp/>both<sp/>linear<sp/>and<sp/>nonlinear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Psmooth<sp/>=<sp/>remove_bao(kh,Plin)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Psmooth_nl<sp/>=<sp/>remove_bao(kh,Pnl)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Apply<sp/>Gaussian<sp/>damping<sp/>due<sp/>to<sp/>non-linearities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fdamp[:,j]<sp/>=<sp/>np.exp(-0.5*sigma2bao[j]*kh**2)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Psmear[:,j]<sp/>=<sp/>Plin*fdamp[:,j]+Psmooth*(1.0-fdamp[:,j])</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Take<sp/>ratio<sp/>of<sp/>smoothened<sp/>non-linear<sp/>to<sp/>linear<sp/>P(k)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nlratio[:,j]<sp/>=<sp/>Psmooth_nl/Psmooth</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fidnlratio,<sp/>fidNEAR,<sp/>fidMID,<sp/>fidFAR<sp/>=<sp/>get_flat_fid(cosmo,kh,z,sigma2bao,h)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(&apos;sdss_lrgDR7:<sp/>Creating<sp/>fiducial<sp/>file<sp/>with<sp/>Omega_b<sp/>=<sp/>0.25,<sp/>Omega_L<sp/>=<sp/>0.75,<sp/>h<sp/>=<sp/>0.701&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(&apos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Required<sp/>for<sp/>non-linear<sp/>modeling&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Save<sp/>non-linear<sp/>corrections<sp/>from<sp/>N-body<sp/>sims<sp/>for<sp/>each<sp/>redshift<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arr=np.zeros((np.size(kh),7))</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arr[:,0]=kh</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arr[:,1]=fidNEAR</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arr[:,2]=fidMID</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arr[:,3]=fidFAR</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Save<sp/>non-linear<sp/>corrections<sp/>from<sp/>halofit<sp/>for<sp/>each<sp/>redshift<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arr[:,4:7]=fidnlratio</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>np.savetxt(path+</highlight><highlight class="stringliteral">&apos;/sdss_lrgDR7_fiducialmodel.dat&apos;</highlight><highlight class="normal">,arr)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(&apos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Fiducial<sp/>created&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__main__&quot;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>set<sp/>output<sp/>path<sp/>where<sp/>file<sp/>with<sp/>fiducial<sp/>spectra<sp/>will<sp/>be<sp/>saved</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>depending<sp/>on<sp/>which<sp/>CLASS<sp/>version<sp/>is<sp/>being<sp/>installed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>path_to_classy<sp/>=<sp/>sys.argv[1]</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>classy_version<sp/>=<sp/>sys.argv[2]</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>initialise<sp/>variable<sp/>cosmo.<sp/>Will<sp/>be<sp/>overwritten<sp/>with<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>instance<sp/>of<sp/>CLASS&apos;es<sp/>python<sp/>wrapper.<sp/>Need<sp/>to<sp/>do<sp/>it<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>like<sp/>this<sp/>with<sp/>overwriting<sp/>to<sp/>keep<sp/>this<sp/>script<sp/>in-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>dependent<sp/>of<sp/>the<sp/>CLASS<sp/>version<sp/>that<sp/>is<sp/>used.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>cosmo<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>sys.path.insert(0,path_to_classy+</highlight><highlight class="stringliteral">&quot;/lib/&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;from<sp/>classy_&quot;</highlight><highlight class="normal">+classy_version+</highlight><highlight class="stringliteral">&quot;<sp/>import<sp/>Class&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>exec(</highlight><highlight class="stringliteral">&quot;from<sp/>classy_&quot;</highlight><highlight class="normal">+classy_version+</highlight><highlight class="stringliteral">&quot;<sp/>import<sp/>Class&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/>exec(</highlight><highlight class="stringliteral">&quot;cosmo<sp/>=<sp/>Class()&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>set<sp/>run<sp/>arguments<sp/>for<sp/>fiducial<sp/>cosmology<sp/>and<sp/>call<sp/>CLASS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/>h<sp/>=<sp/>0.701</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>cosmo_arguments<sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;P_k_max_h/Mpc&apos;</highlight><highlight class="normal">:<sp/>1.5,<sp/></highlight><highlight class="stringliteral">&apos;ln10^{10}A_s&apos;</highlight><highlight class="normal">:<sp/>3.0,<sp/></highlight><highlight class="stringliteral">&apos;N_ur&apos;</highlight><highlight class="normal">:<sp/>3.04,<sp/></highlight><highlight class="stringliteral">&apos;h&apos;</highlight><highlight class="normal">:<sp/>h,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;omega_b&apos;</highlight><highlight class="normal">:<sp/>0.035*0.701**2,<sp/></highlight><highlight class="stringliteral">&apos;non<sp/>linear&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&apos;<sp/>halofit<sp/>&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;YHe&apos;</highlight><highlight class="normal">:<sp/>0.24,<sp/></highlight><highlight class="stringliteral">&apos;k_pivot&apos;</highlight><highlight class="normal">:<sp/>0.05,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;n_s&apos;</highlight><highlight class="normal">:<sp/>0.96,<sp/></highlight><highlight class="stringliteral">&apos;tau_reio&apos;</highlight><highlight class="normal">:<sp/>0.084,<sp/></highlight><highlight class="stringliteral">&apos;z_max_pk&apos;</highlight><highlight class="normal">:<sp/>0.5,<sp/></highlight><highlight class="stringliteral">&apos;output&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&apos;<sp/>mPk<sp/>&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;omega_cdm&apos;</highlight><highlight class="normal">:<sp/>0.215*0.701**2,<sp/></highlight><highlight class="stringliteral">&apos;T_cmb&apos;</highlight><highlight class="normal">:<sp/>2.726}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>cosmo.set(cosmo_arguments)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>cosmo.compute([</highlight><highlight class="stringliteral">&apos;lensing&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>call<sp/>routines<sp/>to<sp/>write<sp/>file<sp/>with<sp/>spectra<sp/>of<sp/>fiducial<sp/>model</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/>sdss_lrgDR7_fiducial_setup(path_to_classy,cosmo,h)</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/gambit_sphinx/gambit_sphinx/Backends/patches/classy/create_SDSSDR7_fid.py"/>
+  </compounddef>
+</doxygen>
