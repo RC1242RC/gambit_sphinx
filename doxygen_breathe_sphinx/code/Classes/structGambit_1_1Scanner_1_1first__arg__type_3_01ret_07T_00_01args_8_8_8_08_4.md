@@ -40,4 +40,4 @@ typedef T Gambit::Scanner::first_arg_type< ret(T, args...)>::type;
 
 -------------------------------
 
-Updated on 2022-07-20 at 17:14:06 +0000
+Updated on 2022-07-20 at 17:18:44 +0000

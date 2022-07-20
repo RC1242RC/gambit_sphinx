@@ -477,4 +477,4 @@ Read single SLHA file and replace some entries for use with model ColliderBit_SL
 
 -------------------------------
 
-Updated on 2022-07-20 at 17:14:07 +0000
+Updated on 2022-07-20 at 17:18:46 +0000

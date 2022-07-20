@@ -66,4 +66,4 @@ Cast operator from [python_variable](/documentation/code/classes/classgambit_1_1
 
 -------------------------------
 
-Updated on 2022-07-20 at 17:14:04 +0000
+Updated on 2022-07-20 at 17:18:43 +0000
