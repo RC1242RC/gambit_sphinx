@@ -49,16 +49,19 @@ jobs:
       #    && ./bootstrap.sh
       #    && ./b2 install
 
+      #- name: Install doxybook2
+      #  run: mkdir db
+      #    && cd db
+      #    && git clone https://github.com/matusnovak/doxybook2.git
+      #    && cd doxybook2
+      #    && vcpkg install --triplet x64-linux $(cat vcpkg.txt)
+      #    && mkdir build
+      #    && cmake -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_TOOLCHAIN_FILE=/usr/local/share/vcpkg/scripts/buildsystems/vcpkg.cmake ..
+      #    && cmake --build ./build --config MinSizeRel
+      #    && cd
+
       - name: Install doxybook2
-        run: mkdir db
-          && cd db
-          && git clone https://github.com/matusnovak/doxybook2.git
-          && cd doxybook2
-          && vcpkg install --triplet x64-linux $(cat vcpkg.txt)
-          && mkdir build
-          && cmake -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_TOOLCHAIN_FILE=/usr/local/share/vcpkg/scripts/buildsystems/vcpkg.cmake ..
-          && cmake --build ./build --config MinSizeRel
-          && cd
+        run: curl -s https://api.github.com/repos/matusnovak/doxybook2/releases/latest | jq -r ".assets[] | select(.name | test(\"${linux_amd64}\")) | .browser_download_url"
       
       - name: Generate doxygen xml documentation
         run: cd doxygen_breathe_sphinx 
